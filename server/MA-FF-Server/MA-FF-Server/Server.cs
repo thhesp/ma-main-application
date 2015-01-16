@@ -44,15 +44,15 @@ namespace Server
         {
             server.Start();
             acceptingTask = Task.Run(() => AcceptWebSocketClients(server, cancellation.Token));
+            Log("WS Socket Server started");
         }
 
         public void stop()
         {
-
-            Log("Server stoping");
             server.Stop();
             cancellation.Cancel();
             acceptingTask.Wait();
+            Log("Server stopped");
         }
 
         static async Task AcceptWebSocketClients(WebSocketListener server, CancellationToken token)
@@ -72,7 +72,6 @@ namespace Server
                     Log("Error Accepting client: " + ex.GetType().Name + ": " + ex.Message);
                 }
             }
-            Log("Server Stop accepting clients");
         }
 
 
@@ -104,7 +103,7 @@ namespace Server
             }
         }
 
-        static void Log(String line)
+        public static void Log(String line)
         {
             Console.WriteLine(DateTime.Now.ToString("dd/MM/yyy hh:mm:ss.fff ") + line);
         }

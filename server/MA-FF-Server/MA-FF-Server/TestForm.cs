@@ -26,5 +26,21 @@ namespace Server
         {
             Server.getInstance().stop();
         }
+
+        private void btnDisconnect_Click(object sender, EventArgs e)
+        {
+            EyeTrackingModel.getInstance().disconnect();
+        }
+
+        private void btnConnectLocal_Click(object sender, EventArgs e)
+        {
+            EyeTrackingModel.getInstance().connectLocal();
+        }
+
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+
+            EyeTrackingModel.getInstance().connect(inputIP.Text,inputPort.Text,inputSendIP.Text,inputSendPort.Text);
+        }
     }
 }

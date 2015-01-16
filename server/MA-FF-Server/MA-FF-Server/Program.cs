@@ -26,6 +26,9 @@ namespace Server
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new TestForm());
 
+
+
+
         }
 
     }

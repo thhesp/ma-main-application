@@ -57,6 +57,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TextBoxStreamWriter.cs" />
+    <Compile Include="EyeTrackingController.cs" />
+    <Compile Include="EyeTrackingModel.cs" />
     <Compile Include="Server.cs" />
     <Compile Include="TestForm.cs">
       <SubType>Form</SubType>
