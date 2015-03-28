@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
 
-using Server.Util;
+using WebAnalyzer.Util;
 
 
-namespace Server
+namespace WebAnalyzer.Test.Communication
 {
 
     /// <summary>

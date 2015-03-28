@@ -1,28 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Net;
+using System.Net;   
 using System.Threading;
-using vtortola.WebSockets.Deflate;
 using vtortola.WebSockets;
 
-using Server.Util;
+using WebAnalyzer.Util;
 
-namespace Server
+namespace WebAnalyzer.Server
 {
-    class Server
+    class WebsocketServer
     {
 
-        private static Server instance;
+        private static WebsocketServer instance;
 
-        public static Server getInstance()
+        public static WebsocketServer getInstance()
         {
             if (instance == null)
             {
-                instance = new Server();
+                instance = new WebsocketServer();
             }
 
             return instance;
@@ -33,7 +28,7 @@ namespace Server
         private CancellationTokenSource cancellation;
         private Task acceptingTask;
 
-        private Server()
+        private WebsocketServer()
         {
             cancellation = new CancellationTokenSource();
 

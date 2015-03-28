@@ -1,20 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Windows;
-using System.Windows.Input;
-using System.ComponentModel;
-using System.Data;
-using System.Runtime.InteropServices;
-using System.Threading;
-using System.Runtime.Remoting.Messaging;
-using System.IO;
 
-using EyeTrackingController;
-using Server.Util;
+using WebAnalyzer.Util;
 
-namespace Server
+namespace WebAnalyzer.EyeTracking
 {
 
     /// <summary>
@@ -37,17 +26,17 @@ namespace Server
 
 
 
-        public EyeTrackingController.EyeTrackingController ETDevice;
-        public EyeTrackingController.EyeTrackingController.CalibrationStruct m_CalibrationData;
-        public EyeTrackingController.EyeTrackingController.AccuracyStruct m_AccuracyData;
-        public EyeTrackingController.EyeTrackingController.SampleStruct m_SampleData;
-        public EyeTrackingController.EyeTrackingController.EventStruct m_EventData;
+        public EyeTrackingController ETDevice;
+        public EyeTrackingController.CalibrationStruct m_CalibrationData;
+        public EyeTrackingController.AccuracyStruct m_AccuracyData;
+        public EyeTrackingController.SampleStruct m_SampleData;
+        public EyeTrackingController.EventStruct m_EventData;
 
 
         // callback routine declaration
-        public delegate void CalibrationCallback(EyeTrackingController.EyeTrackingController.CalibrationPointStruct calibrationPointData);
-        public delegate void GetSampleCallback(EyeTrackingController.EyeTrackingController.SampleStruct sampleData);
-        public delegate void GetEventCallback(EyeTrackingController.EyeTrackingController.EventStruct eventData);
+        public delegate void CalibrationCallback(EyeTrackingController.CalibrationPointStruct calibrationPointData);
+        public delegate void GetSampleCallback(EyeTrackingController.SampleStruct sampleData);
+        public delegate void GetEventCallback(EyeTrackingController.EventStruct eventData);
 
         // callback function instances
         CalibrationCallback m_CalibrationCallback;
@@ -58,7 +47,7 @@ namespace Server
 
         private EyeTrackingModel()
         {
-            ETDevice = new EyeTrackingController.EyeTrackingController();
+            ETDevice = new EyeTrackingController();
 
             m_CalibrationCallback = new CalibrationCallback(CalibrationCallbackFunction);
             m_SampleCallback = new GetSampleCallback(GetSampleCallbackFunction);
@@ -141,7 +130,7 @@ namespace Server
         #region CallbackFunctions
 
         // callback functions
-        void GetSampleCallbackFunction(EyeTrackingController.EyeTrackingController.SampleStruct sampleData)
+        void GetSampleCallbackFunction(EyeTrackingController.SampleStruct sampleData)
         {
            String data = "Data from SampleCallback - timestamp: " + sampleData.timestamp.ToString() +
                 " - GazeRX: " + sampleData.rightEye.gazeX.ToString() +
@@ -157,7 +146,7 @@ namespace Server
         }
 
 
-        void GetEventCallbackFunction(EyeTrackingController.EyeTrackingController.EventStruct eventData)
+        void GetEventCallbackFunction(EyeTrackingController.EventStruct eventData)
         {
             String data = "Data from EventCallback - eye: " + eventData.eye.ToString() +
                 " Event: " + eventData.eventType + " startTime: " + eventData.startTime.ToString() +
@@ -167,7 +156,7 @@ namespace Server
             Logger.Log(data);
         }
 
-        void CalibrationCallbackFunction(EyeTrackingController.EyeTrackingController.CalibrationPointStruct calibrationPointData)
+        void CalibrationCallbackFunction(EyeTrackingController.CalibrationPointStruct calibrationPointData)
         {
             String data = "Data from CalibrationCallback - Number:" + calibrationPointData.number + " PosX:" + calibrationPointData.positionx + " PosY:" + calibrationPointData.positiony;
 

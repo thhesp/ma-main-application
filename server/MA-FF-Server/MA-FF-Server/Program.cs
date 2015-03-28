@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 
-using Server.Test.Communication;
+using WebAnalyzer.Test.Communication;
 
-namespace Server
+namespace WebAnalyzer
 {
 
 

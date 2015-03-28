@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Server.Test.Communication
+namespace WebAnalyzer.Test.Communication
 {
     class CommunicationTest
     {

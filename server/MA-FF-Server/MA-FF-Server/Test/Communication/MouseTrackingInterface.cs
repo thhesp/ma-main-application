@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Server.Util;
+using WebAnalyzer.Util;
 
-namespace Server.Test.Communication
+namespace WebAnalyzer.Test.Communication
 {
     class MouseTrackingInterface
     {

@@ -7,10 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 
-using Server.Util;
-using Server.Test.Communication;
+using WebAnalyzer.Util;
 
-namespace Server
+namespace WebAnalyzer.Test.Communication
 {
     partial class MouseTracker
     {

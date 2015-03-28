@@ -4,7 +4,7 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Threading;
 
-namespace EyeTrackingController
+namespace WebAnalyzer.EyeTracking
 {
 
     public class EyeTrackingController

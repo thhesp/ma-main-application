@@ -1,9 +1,8 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 using System.IO;
 using System.Windows.Forms;
 
-namespace Server
+namespace WebAnalyzer.Util
 {
     public class TextBoxStreamWriter : TextWriter
     {
