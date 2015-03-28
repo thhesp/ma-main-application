@@ -57,14 +57,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TextBoxStreamWriter.cs" />
-    <Compile Include="EyeTrackingController.cs" />
-    <Compile Include="EyeTrackingModel.cs" />
-    <Compile Include="Server.cs" />
-    <Compile Include="TestForm.cs">
+    <Compile Include="Test\Communication\CommunicationTest.cs" />
+    <Compile Include="Test\Communication\MouseTrackingInterface.cs" />
+    <Compile Include="Test\Communication\MouseModel.cs" />
+    <Compile Include="Test\Communication\MouseTracker.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestForm.Designer.cs">
+    <Compile Include="Test\Communication\MouseTracker.Designer.cs">
+      <DependentUpon>MouseTracker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\TextBoxStreamWriter.cs" />
+    <Compile Include="EyeTracking\EyeTrackingController.cs" />
+    <Compile Include="EyeTracking\EyeTrackingModel.cs" />
+    <Compile Include="Util\Logger.cs" />
+    <Compile Include="WebSocketServer\Server.cs" />
+    <Compile Include="UI\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TestForm.Designer.cs">
       <DependentUpon>TestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -79,7 +89,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TestForm.resx">
+    <EmbeddedResource Include="Test\Communication\MouseTracker.resx">
+      <DependentUpon>MouseTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TestForm.resx">
       <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

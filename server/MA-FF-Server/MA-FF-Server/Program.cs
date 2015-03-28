@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net;
-using System.Threading;
-using vtortola.WebSockets.Deflate;
-using vtortola.WebSockets;
+
+using Server.Test.Communication;
 
 namespace Server
 {
@@ -22,10 +17,12 @@ namespace Server
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            /*.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TestForm());
+            //Application.Run(new TestForm());
+            Application.Run(new MouseTracker());*/
 
+            new CommunicationTest();
 
 
 

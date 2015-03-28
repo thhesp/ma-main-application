@@ -9,6 +9,8 @@ using System.Threading;
 using vtortola.WebSockets.Deflate;
 using vtortola.WebSockets;
 
+using Server.Util;
+
 namespace Server
 {
     class Server
@@ -44,7 +46,7 @@ namespace Server
         {
             server.Start();
             acceptingTask = Task.Run(() => AcceptWebSocketClients(server, cancellation.Token));
-            Log("WS Socket Server started");
+            Logger.Log("WS Socket Server started");
         }
 
         public void stop()
@@ -52,7 +54,7 @@ namespace Server
             server.Stop();
             cancellation.Cancel();
             acceptingTask.Wait();
-            Log("Server stopped");
+            Logger.Log("Server stopped");
         }
 
         static async Task AcceptWebSocketClients(WebSocketListener server, CancellationToken token)
@@ -69,7 +71,7 @@ namespace Server
                 catch (Exception aex)
                 {
                     var ex = aex.GetBaseException();
-                    Log("Error Accepting client: " + ex.GetType().Name + ": " + ex.Message);
+                    Logger.Log("Error Accepting client: " + ex.GetType().Name + ": " + ex.Message);
                 }
             }
         }
@@ -93,7 +95,7 @@ namespace Server
             }
             catch (Exception aex)
             {
-                Log("Error Handling connection: " + aex.GetBaseException().Message);
+                Logger.Log("Error Handling connection: " + aex.GetBaseException().Message);
                 try { ws.Close(); }
                 catch { }
             }
@@ -101,11 +103,6 @@ namespace Server
             {
                 ws.Dispose();
             }
-        }
-
-        public static void Log(String line)
-        {
-            Console.WriteLine(DateTime.Now.ToString("dd/MM/yyy hh:mm:ss.fff ") + line);
         }
     }
 }

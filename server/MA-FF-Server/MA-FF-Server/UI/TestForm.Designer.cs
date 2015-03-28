@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 
+using Server.Util;
+
 namespace Server
 {
     partial class TestForm
@@ -180,7 +182,7 @@ namespace Server
             // Redirect the out Console stream
             Console.SetOut(_writer);
 
-            Server.Log("Now redirecting output to the text box");
+            Logger.Log("Now redirecting output to the text box");
 
             // 
             // TestForm

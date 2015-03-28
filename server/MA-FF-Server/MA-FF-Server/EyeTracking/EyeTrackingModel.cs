@@ -10,8 +10,9 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Runtime.Remoting.Messaging;
 using System.IO;
-using EyeTrackingController;
 
+using EyeTrackingController;
+using Server.Util;
 
 namespace Server
 {
@@ -66,7 +67,7 @@ namespace Server
 
         public Boolean connect(String sendip, String sendport, String receiveip, String receiveport)
         {
-            Server.Log("Connect with "+sendip+":"+sendport+" to "+receiveip+":"+receiveport);
+            Logger.Log("Connect with "+sendip+":"+sendport+" to "+receiveip+":"+receiveport);
 
             try
             {
@@ -89,7 +90,7 @@ namespace Server
             }
             catch (Exception exc)
             {
-                Server.Log(exc.Message);
+                Logger.Log(exc.Message);
                 // log error?
                 //logger1.Text = "Exception during iV_Connect: " + exc.Message;
                 return false;
@@ -102,7 +103,7 @@ namespace Server
         /// </summary>
         public int connectLocal()
         {
-            Server.Log("connectLocal");
+            Logger.Log("connectLocal");
 
             int errorID = 0;
             try
@@ -111,7 +112,7 @@ namespace Server
             }
             catch (System.Exception e)
             {
-                Server.Log(e.Message);
+                Logger.Log(e.Message);
             }
             return errorID;
         }
@@ -122,7 +123,7 @@ namespace Server
         /// </summary>
         public int disconnect()
         {
-            Server.Log("disconnect");
+            Logger.Log("disconnect");
 
             int errorID = 0;
             try
@@ -131,7 +132,7 @@ namespace Server
             }
             catch (System.Exception e)
             {
-                Server.Log(e.Message);
+                Logger.Log(e.Message);
             }
 
             return errorID;
@@ -152,7 +153,7 @@ namespace Server
                 " - DistanceR: " + sampleData.rightEye.eyePositionZ.ToString() +
                 " - DistanceL: " + sampleData.leftEye.eyePositionZ.ToString();
 
-           Server.Log(data);
+           Logger.Log(data);
         }
 
 
@@ -163,14 +164,14 @@ namespace Server
                 " End:" + eventData.endTime.ToString() + " duration:" + eventData.duration.ToString() +
                 " PosX:" + eventData.positionX.ToString() + " PosY:" + eventData.positionY.ToString();
 
-            Server.Log(data);
+            Logger.Log(data);
         }
 
         void CalibrationCallbackFunction(EyeTrackingController.EyeTrackingController.CalibrationPointStruct calibrationPointData)
         {
             String data = "Data from CalibrationCallback - Number:" + calibrationPointData.number + " PosX:" + calibrationPointData.positionx + " PosY:" + calibrationPointData.positiony;
 
-            Server.Log(data);
+            Logger.Log(data);
         }
 
         #endregion
