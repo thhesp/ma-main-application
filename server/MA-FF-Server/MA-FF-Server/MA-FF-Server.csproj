@@ -70,7 +70,7 @@
     <Compile Include="EyeTracking\EyeTrackingController.cs" />
     <Compile Include="EyeTracking\EyeTrackingModel.cs" />
     <Compile Include="Util\Logger.cs" />
-    <Compile Include="Server\Server.cs" />
+    <Compile Include="Server\WebsocketServer.cs" />
     <Compile Include="UI\TestForm.cs">
       <SubType>Form</SubType>
     </Compile>

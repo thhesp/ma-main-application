@@ -83,6 +83,7 @@ namespace WebAnalyzer.Server
                     if (msg == null)
                         continue;
                     ws.WriteString(msg + " --- Echo from Server");
+                    Logger.Log("Message from Client: " + msg);
                 }
             }
             catch (TaskCanceledException)
