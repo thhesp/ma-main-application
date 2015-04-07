@@ -73,6 +73,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Server\ConnectionManager.cs" />
+    <Compile Include="Server\MessageHandler\MessageHandler.cs" />
+    <Compile Include="Server\MessageHandler\ConnectionMessageHandler.cs" />
+    <Compile Include="Server\MessageHandler\DataMessageHandler.cs" />
     <Compile Include="Server\WebsocketConnection.cs" />
     <Compile Include="Server\WebsocketConnectionsObserver.cs" />
     <Compile Include="Server\WsExtensions.cs" />

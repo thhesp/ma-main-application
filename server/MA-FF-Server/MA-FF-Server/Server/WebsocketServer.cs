@@ -53,7 +53,7 @@ namespace WebAnalyzer.Server
 
         public void start()
         {
-            WebsocketConnectionsObserver messagesObserver = new WebsocketConnectionsObserver();
+            WebsocketConnectionsObserver messagesObserver = new WebsocketConnectionsObserver(ConnectionManager.getInstance());
 
             server.Start();
 
@@ -79,55 +79,6 @@ namespace WebAnalyzer.Server
             server.Stop();
             cancellation.Cancel();
             Logger.Log("Server stopped");
-        }
-
-        static async Task AcceptWebSocketClients(WebSocketListener server, CancellationToken token)
-        {
-            while (!token.IsCancellationRequested)
-            {
-                try
-                {
-                    var ws = await server.AcceptWebSocketAsync(token).ConfigureAwait(false);
-                    if (ws == null)
-                        continue;
-                    Task.Run(() => HandleConnectionAsync(ws, token));
-                }
-                catch (Exception aex)
-                {
-                    var ex = aex.GetBaseException();
-                    Logger.Log("Error Accepting client: " + ex.GetType().Name + ": " + ex.Message);
-                }
-            }
-        }
-
-
-        static async Task HandleConnectionAsync(WebSocket ws, CancellationToken cancellation)
-        {
-            try
-            {
-                IWebSocketLatencyMeasure l = ws as IWebSocketLatencyMeasure;
-                while (ws.IsConnected && !cancellation.IsCancellationRequested)
-                {
-                    String msg = await ws.ReadStringAsync(cancellation).ConfigureAwait(false);
-                    if (msg == null)
-                        continue;
-                    ws.WriteString(msg + " --- Echo from Server");
-                    Logger.Log("Message from Client: " + msg);
-                }
-            }
-            catch (TaskCanceledException)
-            {
-            }
-            catch (Exception aex)
-            {
-                Logger.Log("Error Handling connection: " + aex.GetBaseException().Message);
-                try { ws.Close(); }
-                catch { }
-            }
-            finally
-            {
-                ws.Dispose();
-            }
         }
     }
 }

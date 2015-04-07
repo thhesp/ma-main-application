@@ -24,6 +24,7 @@ namespace WebAnalyzer.Server
             }
             else
                 return null;
+
         }
 
         public static void WriteDynamic(this WebSocket ws, dynamic data)
