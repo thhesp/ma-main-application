@@ -76,6 +76,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Export\XMLDataExporter.cs" />
+    <Compile Include="Model\AttributeModel.cs" />
+    <Compile Include="Model\ExperimentModel.cs" />
+    <Compile Include="Model\PositionDataModel.cs" />
+    <Compile Include="Model\WebpageModel.cs" />
     <Compile Include="Server\ConnectionManager.cs" />
     <Compile Include="Server\MessageHandler\EchoMessageHandler.cs" />
     <Compile Include="Server\MessageHandler\ConnectionMessageHandler.cs" />
