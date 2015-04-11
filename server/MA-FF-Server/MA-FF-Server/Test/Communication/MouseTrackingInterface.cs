@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using WebAnalyzer.Server;
 using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Test.Communication
@@ -21,6 +22,10 @@ namespace WebAnalyzer.Test.Communication
         public void c_PositionTracked(object sender, PositionEventArgs e)
         {
             Logger.Log("Positiontracked Event: " + e.X + " / " + e.Y);
+
+            Object msg = new { command = "request", timestamp = DateTime.Now.ToString("hh:mm:ss"), x = e.X, y = e.Y };
+
+            ConnectionManager.getInstance().Broadcast(msg);
         }
 
     }

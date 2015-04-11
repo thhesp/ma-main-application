@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using WebAnalyzer.Util;
+
 namespace WebAnalyzer.Server.MessageHandler
 {
     class DataMessageHandler : IObserver<Object>
@@ -32,7 +34,10 @@ namespace WebAnalyzer.Server.MessageHandler
             dynamic msgIn = omsgIn;
 
             // extract data from json object and handle it
-            
+            Logger.Log("Data Message: X: " + msgIn.x + " Y: " + msgIn.y);
+            Logger.Log("Data Message attributes: " + msgIn.data);
+
+
         }
     }
 }
