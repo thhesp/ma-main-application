@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace WebAnalyzer.Model
 {
@@ -17,6 +18,8 @@ namespace WebAnalyzer.Model
             _value = value;
         }
 
+        #region GetterSetterFunctions
+
         public String Name
         {
             get { return _name; }
@@ -29,5 +32,31 @@ namespace WebAnalyzer.Model
             get { return _value; }
             set { _value = value; }
         }
+
+
+        #endregion
+
+        #region XMLFunctions
+
+        public XmlNode ToXML(XmlDocument xmlDoc)
+        {
+            XmlNode attributeNode = xmlDoc.CreateElement("attribute");
+
+            XmlAttribute name = xmlDoc.CreateAttribute("name");
+
+            name.Value = this.Name;
+
+            attributeNode.Attributes.Append(name);
+
+            XmlAttribute value = xmlDoc.CreateAttribute("value");
+
+            value.Value = this.Value;
+
+            attributeNode.Attributes.Append(value);
+
+            return attributeNode;
+        }
+
+        #endregion
     }
 }

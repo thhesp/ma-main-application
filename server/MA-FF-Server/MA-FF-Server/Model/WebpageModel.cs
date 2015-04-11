@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace WebAnalyzer.Model
 {
@@ -17,6 +18,8 @@ namespace WebAnalyzer.Model
             _url = url;
         }
 
+        #region GetterSetterFunctions
+
         public String Url
         {
             get { return _url; }
@@ -28,5 +31,29 @@ namespace WebAnalyzer.Model
             _positionData.Add(data);
         }
 
+        #endregion
+
+        #region XMLFunctions
+
+        public XmlNode ToXML(XmlDocument xmlDoc)
+        {
+            XmlNode webpageNode = xmlDoc.CreateElement("webpage");
+
+            XmlAttribute url = xmlDoc.CreateAttribute("url");
+
+            url.Value = this.Url;
+
+            webpageNode.Attributes.Append(url);
+
+
+            foreach (PositionDataModel data in _positionData)
+            {
+                webpageNode.AppendChild(data.ToXML(xmlDoc));
+            }
+
+            return webpageNode;
+        }
+
+        #endregion
     }
 }

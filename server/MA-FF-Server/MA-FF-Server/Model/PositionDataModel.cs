@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace WebAnalyzer.Model
 {
@@ -25,6 +26,8 @@ namespace WebAnalyzer.Model
             _y = y;
             _timestamp = timestamp;
         }
+
+        #region GetterSetterFunctions
 
         public int X
         {
@@ -76,5 +79,93 @@ namespace WebAnalyzer.Model
 
             _attributes.Add(attrModel);
         }
+
+        
+        #endregion
+
+        #region XMLFunctions
+
+        public XmlNode ToXML(XmlDocument xmlDoc)
+        {
+            XmlNode positionNode = xmlDoc.CreateElement("position");
+
+            //x
+
+            XmlAttribute xPosition = xmlDoc.CreateAttribute("x");
+
+            xPosition.Value = this.X.ToString();
+
+            positionNode.Attributes.Append(xPosition);
+
+            //y
+
+            XmlAttribute yPosition = xmlDoc.CreateAttribute("y");
+
+            xPosition.Value = this.Y.ToString();
+
+            positionNode.Attributes.Append(xPosition);
+
+            //timestamp
+
+            XmlAttribute timestamp = xmlDoc.CreateAttribute("timestamp");
+
+            timestamp.Value = this.Timestamp;
+
+            positionNode.Attributes.Append(timestamp);
+
+            //tag
+
+            XmlAttribute tag = xmlDoc.CreateAttribute("tag");
+
+            tag.Value = this.Tag;
+
+            positionNode.Attributes.Append(tag);
+
+            //id
+
+            XmlAttribute id = xmlDoc.CreateAttribute("id");
+
+            id.Value = this.ID;
+
+            positionNode.Attributes.Append(id);
+
+            //title
+
+
+            XmlAttribute title = xmlDoc.CreateAttribute("title");
+
+            title.Value = this.Title;
+
+            positionNode.Attributes.Append(title);
+
+            //classes
+
+            XmlNode classesNode = xmlDoc.CreateElement("classes");
+
+            foreach (String className in _classes)
+            {
+                XmlNode classNode = xmlDoc.CreateElement("class");
+                classNode.InnerText = className;
+                classesNode.AppendChild(classNode);
+
+            }
+
+            positionNode.AppendChild(classesNode);
+
+            //attributes
+
+            XmlNode attributesNode = xmlDoc.CreateElement("attributes");
+
+            foreach (AttributeModel attribute in _attributes)
+            {
+                attributesNode.AppendChild(attribute.ToXML(xmlDoc));
+            }
+
+            positionNode.AppendChild(attributesNode);
+
+            return positionNode;
+        }
+
+        #endregion
     }
 }
