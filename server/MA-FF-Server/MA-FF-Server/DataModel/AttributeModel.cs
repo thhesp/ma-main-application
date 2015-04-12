@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace WebAnalyzer.Model
+namespace WebAnalyzer.DataModel
 {
     class AttributeModel
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace WebAnalyzer.Model
+namespace WebAnalyzer.DataModel
 {
     class PositionDataModel
     {
@@ -19,6 +19,9 @@ namespace WebAnalyzer.Model
 
         private List<String> _classes = new List<String>();
         private List<AttributeModel> _attributes = new List<AttributeModel>();
+
+
+        private PositionDataModel _nextPosition;
 
         public PositionDataModel(int x, int y, String timestamp)
         {
@@ -66,6 +69,12 @@ namespace WebAnalyzer.Model
         {
             get { return _title; }
             set { _title = value; }
+        }
+
+        public PositionDataModel NextPosition
+        {
+            get { return _nextPosition; }
+            set { _nextPosition = value; }
         }
 
         public void AddClass(String className)

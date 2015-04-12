@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 
 using WebAnalyzer.Test.Communication;
+using WebAnalyzer.Experiment;
 
 namespace WebAnalyzer
 {
@@ -21,6 +22,8 @@ namespace WebAnalyzer
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new TestForm());
             Application.Run(new MouseTracker());*/
+
+            ExperimentController.getInstance().CreateExperiment("test");
 
             new CommunicationTest();
 

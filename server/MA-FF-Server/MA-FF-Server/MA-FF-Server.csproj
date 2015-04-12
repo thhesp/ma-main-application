@@ -7,7 +7,7 @@
     <ProjectGuid>{1B72CD95-C031-48AF-8ABD-33F10CBC005E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Server</RootNamespace>
+    <RootNamespace>WebAnalyzer</RootNamespace>
     <AssemblyName>MA-FF-Server</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -76,11 +76,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Export\XMLDataExporter.cs" />
-    <Compile Include="Model\AttributeModel.cs" />
-    <Compile Include="Model\ExperimentModel.cs" />
-    <Compile Include="Model\PositionDataModel.cs" />
-    <Compile Include="Model\WebpageModel.cs" />
+    <Compile Include="Experiment\ExperimentController.cs" />
+    <Compile Include="Export\ExperimentExporter.cs" />
+    <Compile Include="DataModel\AttributeModel.cs" />
+    <Compile Include="DataModel\ExperimentModel.cs" />
+    <Compile Include="DataModel\PositionDataModel.cs" />
+    <Compile Include="DataModel\WebpageModel.cs" />
     <Compile Include="Server\ConnectionManager.cs" />
     <Compile Include="Server\MessageHandler\EchoMessageHandler.cs" />
     <Compile Include="Server\MessageHandler\ConnectionMessageHandler.cs" />
@@ -110,6 +111,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\Timestamp.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

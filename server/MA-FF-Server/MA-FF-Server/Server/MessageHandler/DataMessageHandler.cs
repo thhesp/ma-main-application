@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using WebAnalyzer.Util;
+using WebAnalyzer.Experiment;
 
 namespace WebAnalyzer.Server.MessageHandler
 {
@@ -37,7 +38,12 @@ namespace WebAnalyzer.Server.MessageHandler
             Logger.Log("Data Message: X: " + msgIn.x + " Y: " + msgIn.y);
             Logger.Log("Data Message attributes: " + msgIn.data);
 
-
+            if(msgIn.x != null && msgIn.y != null)
+            {
+                int x = msgIn.x;
+                int y = msgIn.y;
+                ExperimentController.getInstance().AddPositionData("stackoverflow.com", x, y);
+            }
         }
     }
 }

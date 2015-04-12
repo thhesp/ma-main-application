@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace WebAnalyzer.Model
+namespace WebAnalyzer.DataModel
 {
     class WebpageModel
     {
@@ -55,5 +55,14 @@ namespace WebAnalyzer.Model
         }
 
         #endregion
+
+        public PositionDataModel AddPositionData(int xPosition, int yPosition, String timestamp)
+        {
+            PositionDataModel posModel = new PositionDataModel(xPosition, yPosition, timestamp);
+
+            _positionData.Add(posModel);
+
+            return posModel;
+        }
     }
 }
