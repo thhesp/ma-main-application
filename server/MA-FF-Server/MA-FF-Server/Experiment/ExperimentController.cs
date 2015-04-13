@@ -59,6 +59,11 @@ namespace WebAnalyzer.Experiment
             _experiment.AddPositionData(url, xPosition, yPosition, timestamp);
         }
 
+        public void AddPositionData(String url, PositionDataModel posModel)
+        {
+            _experiment.AddPositionData(url, posModel);
+        }
+
         private void ExportToXML()
         {
             String timestamp = Timestamp.GetUnixTimestamp();

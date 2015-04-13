@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using WebAnalyzer.Util;
 using WebAnalyzer.Experiment;
+using WebAnalyzer.DataModel;
 
 namespace WebAnalyzer.Server.MessageHandler
 {
@@ -42,7 +43,46 @@ namespace WebAnalyzer.Server.MessageHandler
             {
                 int x = msgIn.x;
                 int y = msgIn.y;
-                ExperimentController.getInstance().AddPositionData("stackoverflow.com", x, y);
+
+                String timestamp = Timestamp.GetUnixTimestamp();
+
+                PositionDataModel posModel = new PositionDataModel(x,y,timestamp);
+
+                if (msgIn.id)
+                {
+                    posModel.ID = msgIn.id;
+                }
+                
+                if(msgIn.tag)
+                {
+                    posModel.Tag = msgIn.tag;
+                }
+                
+                if(msgIn.title)
+                {
+                    posModel.Title = msgIn.title;
+                }
+
+                if (msgIn.classes)
+                {
+                    foreach (String className in msgIn.classes)
+                    {
+                        posModel.AddClass(className);
+                    }
+                }
+
+                if(msgIn.attributes)
+                {
+                    foreach(dynamic attr in msgIn.attributes)
+                    {
+                        String name = attr.name;
+                        String value = attr.value;
+
+                        posModel.AddAttribute(name, value);
+                    }
+                }
+
+                ExperimentController.getInstance().AddPositionData("stackoverflow.com", posModel);
             }
         }
     }

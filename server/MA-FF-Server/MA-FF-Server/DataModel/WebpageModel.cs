@@ -64,5 +64,12 @@ namespace WebAnalyzer.DataModel
 
             return posModel;
         }
+
+        public PositionDataModel AddPositionData(PositionDataModel posModel)
+        {
+            _positionData.Add(posModel);
+
+            return posModel;
+        }
     }
 }

@@ -93,6 +93,30 @@ namespace WebAnalyzer.DataModel
             return posModel;
         }
 
+        public PositionDataModel AddPositionData(String url, PositionDataModel posModel)
+        {
+            WebpageModel pageModel = this.GetPageModel(url);
+
+            _lastPage = url;
+            _lastPageModel = pageModel;
+
+            pageModel.AddPositionData(posModel);
+
+            if (_firstExperimentPosition == null)
+            {
+                _firstExperimentPosition = posModel;
+            }
+
+            if (_previousPosition != null)
+            {
+                _previousPosition.NextPosition = posModel;
+            }
+
+            _previousPosition = posModel;
+
+            return posModel;
+        }
+
         private WebpageModel GetPageModel(String url)
         {
             if (_lastPage != null && _lastPage == url && _lastPageModel != null)
