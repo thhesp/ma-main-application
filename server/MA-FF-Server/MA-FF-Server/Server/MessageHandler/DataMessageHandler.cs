@@ -48,39 +48,42 @@ namespace WebAnalyzer.Server.MessageHandler
 
                 PositionDataModel posModel = new PositionDataModel(x,y,timestamp);
 
-                if (msgIn.id)
+                String id = msgIn.id;
+
+                if (id != null)
                 {
-                    posModel.ID = msgIn.id;
+                    posModel.ID = id;
                 }
+
+                String tag = msgIn.tag;
                 
-                if(msgIn.tag)
+                if(tag != null)
                 {
-                    posModel.Tag = msgIn.tag;
-                }
-                
-                if(msgIn.title)
-                {
-                    posModel.Title = msgIn.title;
+                    posModel.Tag = tag;
                 }
 
-                if (msgIn.classes)
+                String title = msgIn.title;
+
+                if(title != null)
                 {
-                    foreach (String className in msgIn.classes)
+                    posModel.Title = title;
+                }
+
+                foreach (String className in msgIn.classes)
+                {
+                    posModel.AddClass(className);
+                }
+
+                foreach (dynamic attr in msgIn.attributes)
+                {
+                    String name = attr.name;
+                    String value = attr.value;
+
+                    if (name != null && value != null)
                     {
-                        posModel.AddClass(className);
-                    }
-                }
-
-                if(msgIn.attributes)
-                {
-                    foreach(dynamic attr in msgIn.attributes)
-                    {
-                        String name = attr.name;
-                        String value = attr.value;
-
                         posModel.AddAttribute(name, value);
                     }
-                }
+               }
 
                 ExperimentController.getInstance().AddPositionData("stackoverflow.com", posModel);
             }

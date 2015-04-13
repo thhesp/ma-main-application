@@ -110,9 +110,9 @@ namespace WebAnalyzer.DataModel
 
             XmlAttribute yPosition = xmlDoc.CreateAttribute("y");
 
-            xPosition.Value = this.Y.ToString();
+            yPosition.Value = this.Y.ToString();
 
-            positionNode.Attributes.Append(xPosition);
+            positionNode.Attributes.Append(yPosition);
 
             //timestamp
 
