@@ -1,0 +1,2 @@
+﻿Vorlage für unidirektionale Websockets mit JSON Nachrichten:
+https://github.com/vtortola/WebSocketListener/tree/master/samples/RxWebSocketChat/RxWebSocketChatServer

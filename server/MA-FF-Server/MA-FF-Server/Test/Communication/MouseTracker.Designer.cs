@@ -75,11 +75,11 @@ namespace WebAnalyzer.Test.Communication
             this.consoleOut.Text = "";
 
             // Instantiate the writer
-            _writer = new TextBoxStreamWriter(consoleOut);
+            //_writer = new TextBoxStreamWriter(consoleOut);
             // Redirect the out Console stream
-            Console.SetOut(_writer);
+            //Console.SetOut(_writer);
 
-            Logger.Log("Now redirecting output to the text box");
+            //Logger.Log("Now redirecting output to the text box");
 
 
             // 
