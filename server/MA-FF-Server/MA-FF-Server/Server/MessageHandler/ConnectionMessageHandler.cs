@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using WebAnalyzer.Util;
+
 namespace WebAnalyzer.Server.MessageHandler
 {
     class ConnectionMessageHandler : IObserver<Object>
@@ -32,11 +34,30 @@ namespace WebAnalyzer.Server.MessageHandler
             dynamic msgIn = omsgIn;
 
             // extract data from json object and handle it
-            _connectionManager.Add(_connection);
+            String command = msgIn.command;
 
-            Object msg = new { command = "connection", message = "Sucessful connection.", timestamp = DateTime.Now.ToString("hh:mm:ss") };
+            if(command.Equals("connectRequest"))
+            {
+                respondToHandshake();
+            }
+            else if(command.Equals("connectComplete"))
+            {
+                completeHandshake();
+            }
+
+        }
+
+        private void respondToHandshake()
+        {
+            Object msg = new { command = "connectionResponse", message = "Establishing Connection...", timestamp = Timestamp.GetUnixTimestamp()};
 
             _connection.Out.OnNext(msg);
+        }
+
+        private void completeHandshake()
+        {
+            _connection.Established = true;
+            _connectionManager.Add(_connection);
         }
     }
 }

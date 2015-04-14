@@ -30,7 +30,10 @@ namespace WebAnalyzer.Server
         {
             foreach (var connection in this)
             {
-                connection.Out.OnNext(message);
+                if(connection.Established)
+                {
+                    connection.Out.OnNext(message);
+                }
             }
         }
 

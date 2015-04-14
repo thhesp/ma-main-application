@@ -84,8 +84,13 @@ namespace WebAnalyzer.Server.MessageHandler
                         posModel.AddAttribute(name, value);
                     }
                }
+                
+                String url = msgIn.url;
 
-                ExperimentController.getInstance().AddPositionData("stackoverflow.com", posModel);
+                if (url != null)
+                {
+                    ExperimentController.getInstance().AddPositionData(url, posModel);
+                }
             }
         }
     }

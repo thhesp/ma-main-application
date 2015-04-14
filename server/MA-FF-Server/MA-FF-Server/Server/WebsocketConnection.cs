@@ -16,9 +16,24 @@ namespace WebAnalyzer.Server
 
         readonly WebSocket _ws;
 
+        private Boolean _established = false;
+
         public WebsocketConnection(WebSocket ws)
         {
             _ws = ws;
+        }
+
+        public Boolean Established
+        {
+            get
+            {
+                return _established;
+            }
+
+            set
+            {
+                _established = value;
+            }
         }
 
 

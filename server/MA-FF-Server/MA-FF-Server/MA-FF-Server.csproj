@@ -86,6 +86,8 @@
     <Compile Include="Server\MessageHandler\EchoMessageHandler.cs" />
     <Compile Include="Server\MessageHandler\ConnectionMessageHandler.cs" />
     <Compile Include="Server\MessageHandler\DataMessageHandler.cs" />
+    <Compile Include="Server\MessageHandler\ErrorMessageHandler.cs" />
+    <Compile Include="Server\MessageHandler\EventMessageHandler.cs" />
     <Compile Include="Server\WebsocketConnection.cs" />
     <Compile Include="Server\WebsocketConnectionsObserver.cs" />
     <Compile Include="Server\WsExtensions.cs" />

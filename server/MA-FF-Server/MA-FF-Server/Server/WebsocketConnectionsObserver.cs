@@ -15,6 +15,14 @@ namespace WebAnalyzer.Server
     {
         ConnectionManager _connectionManager;
 
+        string[] _commands = {
+            "connectionRequest",
+            "connectionComplete",
+            "data",
+            "event",
+            "error"
+        };
+
         public WebsocketConnectionsObserver(ConnectionManager connectionManager)
         {
             _connectionManager = connectionManager;
@@ -38,16 +46,22 @@ namespace WebAnalyzer.Server
             Logger.Log("Message received?");
 
             // connectiong
-            published.Where(msgIn => msgIn.command != null && msgIn.command == "connect")
+            published.Where(msgIn => msgIn.command != null && (msgIn.command == "connectRequest" || msgIn.command == "connectComplete"))
                 .Subscribe(new ConnectionMessageHandler(_connectionManager, connection));
 
             // data
            published.Where(msgIn => msgIn.command != null && msgIn.command == "data")
                .Subscribe(new DataMessageHandler(_connectionManager, connection));
 
-            // fallover
-           published.Where(msgIn => msgIn.command == null || (msgIn.command != "connect" && msgIn.command != "data"))
+            //event
+
+
+            //error
+
+            // fallover ==> echo
+           published.Where(msgIn => msgIn.command == null || Array.IndexOf(_commands, msgIn.command) == -1)
                .Subscribe(new EchoMessageHandler(_connectionManager, connection));
+
         }
     }
 }
