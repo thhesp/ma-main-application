@@ -27,12 +27,21 @@ namespace WebAnalyzer.Server
         {
             get
             {
+
                 return _established;
             }
 
             set
             {
                 _established = value;
+            }
+        }
+
+        public Boolean IsConnected
+        {
+            get 
+            {
+                return _ws.IsConnected;
             }
         }
 

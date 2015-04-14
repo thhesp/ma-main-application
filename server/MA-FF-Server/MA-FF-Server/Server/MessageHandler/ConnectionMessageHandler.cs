@@ -57,7 +57,8 @@ namespace WebAnalyzer.Server.MessageHandler
         private void completeHandshake()
         {
             _connection.Established = true;
-            _connectionManager.Add(_connection);
+
+            _connectionManager.AddWebsocketConnection(_connection);
         }
     }
 }
