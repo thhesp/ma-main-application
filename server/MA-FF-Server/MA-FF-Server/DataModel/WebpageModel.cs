@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
+using WebAnalyzer.Util;
+
 namespace WebAnalyzer.DataModel
 {
     class WebpageModel
@@ -44,7 +46,6 @@ namespace WebAnalyzer.DataModel
             url.Value = this.Url;
 
             webpageNode.Attributes.Append(url);
-
 
             foreach (PositionDataModel data in _positionData)
             {

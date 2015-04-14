@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
+using WebAnalyzer.Util;
+
 namespace WebAnalyzer.DataModel
 {
     class ExperimentModel
@@ -113,6 +115,7 @@ namespace WebAnalyzer.DataModel
             }
 
             _previousPosition = posModel;
+            _lastTimestamp = posModel.DataTimestamp;
 
             return posModel;
         }

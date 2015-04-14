@@ -11,7 +11,9 @@ namespace WebAnalyzer.DataModel
     {
         private int _x;
         private int _y;
-        private String _timestamp;
+        private String _serverTimestamp;
+        private String _clientTimestamp;
+        private String _dataTimestamp;
 
         private String _tag;
         private String _id;
@@ -23,11 +25,11 @@ namespace WebAnalyzer.DataModel
 
         private PositionDataModel _nextPosition;
 
-        public PositionDataModel(int x, int y, String timestamp)
+        public PositionDataModel(int x, int y, String dataTimestamp)
         {
             _x = x;
             _y = y;
-            _timestamp = timestamp;
+            _dataTimestamp = dataTimestamp;
         }
 
         #region GetterSetterFunctions
@@ -45,12 +47,23 @@ namespace WebAnalyzer.DataModel
             set { _y = value;  }
         }
 
-        public String Timestamp
+        public String ServerTimestamp
         {
-            get { return _timestamp; }
-            set { _timestamp = value; }
+            get { return _serverTimestamp; }
+            set { _serverTimestamp = value; }
         }
 
+        public String ClientTimestamp
+        {
+            get { return _clientTimestamp; }
+            set { _clientTimestamp = value; }
+        }
+
+        public String DataTimestamp
+        {
+            get { return _dataTimestamp; }
+            set { _dataTimestamp = value; }
+        }
 
         public String Tag
         {
@@ -114,13 +127,30 @@ namespace WebAnalyzer.DataModel
 
             positionNode.Attributes.Append(yPosition);
 
-            //timestamp
+            //server timestamp
 
-            XmlAttribute timestamp = xmlDoc.CreateAttribute("timestamp");
+            XmlAttribute serverTimestamp = xmlDoc.CreateAttribute("server-timestamp");
 
-            timestamp.Value = this.Timestamp;
+            serverTimestamp.Value = this.ServerTimestamp;
 
-            positionNode.Attributes.Append(timestamp);
+            positionNode.Attributes.Append(serverTimestamp);
+
+            // client timestamp
+
+            XmlAttribute clientTimestamp = xmlDoc.CreateAttribute("client-timestamp");
+
+            clientTimestamp.Value = this.ClientTimestamp;
+
+            positionNode.Attributes.Append(clientTimestamp);
+
+            //data timestamp
+
+            XmlAttribute dataTimestamp = xmlDoc.CreateAttribute("data-timestamp");
+
+            dataTimestamp.Value = this.DataTimestamp;
+
+            positionNode.Attributes.Append(dataTimestamp);
+
 
             //tag
 

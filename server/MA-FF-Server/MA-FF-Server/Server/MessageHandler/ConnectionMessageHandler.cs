@@ -49,7 +49,7 @@ namespace WebAnalyzer.Server.MessageHandler
 
         private void respondToHandshake()
         {
-            Object msg = new { command = "connectionResponse", message = "Establishing Connection...", timestamp = Timestamp.GetUnixTimestamp()};
+            Object msg = new { command = "connectionResponse", message = "Establishing Connection...", timestamp = Timestamp.GetMillisecondsUnixTimestamp() };
 
             _connection.Out.OnNext(msg);
         }

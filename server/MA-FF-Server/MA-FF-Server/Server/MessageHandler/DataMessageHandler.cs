@@ -44,7 +44,7 @@ namespace WebAnalyzer.Server.MessageHandler
                 int x = msgIn.x;
                 int y = msgIn.y;
 
-                String timestamp = Timestamp.GetUnixTimestamp();
+                String timestamp = Timestamp.GetMillisecondsUnixTimestamp();
 
                 PositionDataModel posModel = new PositionDataModel(x,y,timestamp);
 
@@ -84,6 +84,20 @@ namespace WebAnalyzer.Server.MessageHandler
                         posModel.AddAttribute(name, value);
                     }
                }
+
+                String serverTimestamp = msgIn.servertimestamp;
+
+                if(serverTimestamp != null)
+                {
+                    posModel.ServerTimestamp = serverTimestamp;
+                }
+
+                String clientTimestamp = msgIn.clienttimestamp;
+
+                if (clientTimestamp != null)
+                {
+                    posModel.ClientTimestamp = clientTimestamp;
+                }
                 
                 String url = msgIn.url;
 
