@@ -97,12 +97,19 @@ namespace WebAnalyzer.EyeTracking
             int errorID = 0;
             try
             {
+                ETDevice.iV_SetCalibrationCallback(m_CalibrationCallback);
+                ETDevice.iV_SetSampleCallback(m_SampleCallback);
+                ETDevice.iV_SetEventCallback(m_EventCallback);
+
                 errorID = ETDevice.iV_ConnectLocal();
             }
             catch (System.Exception e)
             {
                 Logger.Log(e.Message);
             }
+
+            Logger.Log("ErrorID: " + errorID);
+
             return errorID;
         }
 

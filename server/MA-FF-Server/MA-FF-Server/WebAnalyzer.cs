@@ -1,22 +1,20 @@
 ﻿using System.Windows.Forms;
 
 using WebAnalyzer.Experiment;
+using WebAnalyzer.UI;
 
-namespace WebAnalyzer.Test.Communication
+namespace WebAnalyzer
 {
-    class CommunicationTest
+    class WebAnalyzer
     {
 
-        public CommunicationTest()
+        public WebAnalyzer()
         {
             ExperimentController.getInstance().CreateExperiment("mousetracking-test");
 
-            new MouseTrackingInterface();
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MouseTracker());
-
+            Application.Run(new TestForm());
         }
     }
 }

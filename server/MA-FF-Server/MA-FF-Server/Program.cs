@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 
 using WebAnalyzer.Test.Communication;
+using WebAnalyzer.UI;
 using WebAnalyzer.Experiment;
 
 namespace WebAnalyzer
@@ -18,17 +19,9 @@ namespace WebAnalyzer
         [STAThread]
         static void Main()
         {
-            /*.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new TestForm());
-            Application.Run(new MouseTracker());*/
-
-            ExperimentController.getInstance().CreateExperiment("test");
-
             new CommunicationTest();
 
-
-
+            //new WebAnalyzer();
         }
 
     }
