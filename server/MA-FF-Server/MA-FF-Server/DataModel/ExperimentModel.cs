@@ -115,7 +115,7 @@ namespace WebAnalyzer.DataModel
             }
 
             _previousPosition = posModel;
-            _lastTimestamp = posModel.DataTimestamp;
+            _lastTimestamp = posModel.ServerReceivedTimestamp;
 
             return posModel;
         }

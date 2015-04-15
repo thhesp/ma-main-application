@@ -85,18 +85,26 @@ namespace WebAnalyzer.Server.MessageHandler
                     }
                }
 
-                String serverTimestamp = msgIn.servertimestamp;
+                String serverTimestamp = msgIn.serversent;
 
                 if(serverTimestamp != null)
                 {
-                    posModel.ServerTimestamp = serverTimestamp;
+                    posModel.ServerSentTimestamp = serverTimestamp;
                 }
 
-                String clientTimestamp = msgIn.clienttimestamp;
+                String clientSentTimestamp = msgIn.clientsent;
 
-                if (clientTimestamp != null)
+                if (clientSentTimestamp != null)
                 {
-                    posModel.ClientTimestamp = clientTimestamp;
+                    posModel.ClientSentTimestamp = clientSentTimestamp;
+                }
+
+
+                String clientReceivedTimestamp = msgIn.clientreceived;
+
+                if (clientReceivedTimestamp != null)
+                {
+                    posModel.ClientReceivedTimestamp = clientReceivedTimestamp;
                 }
                 
                 String url = msgIn.url;

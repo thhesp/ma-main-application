@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using WebAnalyzer.Util;
+
 namespace WebAnalyzer.Server
 {
     class ConnectionManager : List<WebsocketConnection>
@@ -40,7 +42,14 @@ namespace WebAnalyzer.Server
             _toRemove.Add(connection);
         }
 
-        public void Broadcast(Object message)
+        public void RequestData(int xPos, int yPos)
+        {
+            Object msg = new { command = "request", x = xPos, y = yPos, serversent = Timestamp.GetMillisecondsUnixTimestamp() };
+
+            this.Broadcast(msg);
+        }
+
+        private void Broadcast(Object message)
         {
             checkConnectionQueues();
 

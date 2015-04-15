@@ -11,9 +11,11 @@ namespace WebAnalyzer.DataModel
     {
         private int _x;
         private int _y;
-        private String _serverTimestamp;
-        private String _clientTimestamp;
-        private String _dataTimestamp;
+        private String _serverSentTimestamp;
+        private String _serverReceivedTimestamp;
+
+        private String _clientSentTimestamp;
+        private String _clientReceivedTimestamp;
 
         private String _tag;
         private String _id;
@@ -25,11 +27,11 @@ namespace WebAnalyzer.DataModel
 
         private PositionDataModel _nextPosition;
 
-        public PositionDataModel(int x, int y, String dataTimestamp)
+        public PositionDataModel(int x, int y, String receivedTimestamp)
         {
             _x = x;
             _y = y;
-            _dataTimestamp = dataTimestamp;
+            _serverReceivedTimestamp = receivedTimestamp;
         }
 
         #region GetterSetterFunctions
@@ -47,22 +49,28 @@ namespace WebAnalyzer.DataModel
             set { _y = value;  }
         }
 
-        public String ServerTimestamp
+        public String ServerSentTimestamp
         {
-            get { return _serverTimestamp; }
-            set { _serverTimestamp = value; }
+            get { return _serverSentTimestamp; }
+            set { _serverSentTimestamp = value; }
         }
 
-        public String ClientTimestamp
+        public String ServerReceivedTimestamp
         {
-            get { return _clientTimestamp; }
-            set { _clientTimestamp = value; }
+            get { return _serverReceivedTimestamp; }
+            set { _serverReceivedTimestamp = value; }
         }
 
-        public String DataTimestamp
+        public String ClientSentTimestamp
         {
-            get { return _dataTimestamp; }
-            set { _dataTimestamp = value; }
+            get { return _clientSentTimestamp; }
+            set { _clientSentTimestamp = value; }
+        }
+
+        public String ClientReceivedTimestamp
+        {
+            get { return _clientReceivedTimestamp; }
+            set { _clientReceivedTimestamp = value; }
         }
 
         public String Tag
@@ -127,30 +135,38 @@ namespace WebAnalyzer.DataModel
 
             positionNode.Attributes.Append(yPosition);
 
-            //server timestamp
+            //server sent timestamp
 
-            XmlAttribute serverTimestamp = xmlDoc.CreateAttribute("server-timestamp");
+            XmlAttribute serverSentTimestamp = xmlDoc.CreateAttribute("server-sent-timestamp");
 
-            serverTimestamp.Value = this.ServerTimestamp;
+            serverSentTimestamp.Value = this.ServerSentTimestamp;
 
-            positionNode.Attributes.Append(serverTimestamp);
+            positionNode.Attributes.Append(serverSentTimestamp);
 
-            // client timestamp
+            // server received timestamp
 
-            XmlAttribute clientTimestamp = xmlDoc.CreateAttribute("client-timestamp");
+            XmlAttribute serverReceivedTimestamp = xmlDoc.CreateAttribute("server-received-timestamp");
 
-            clientTimestamp.Value = this.ClientTimestamp;
+            serverReceivedTimestamp.Value = this.ServerReceivedTimestamp;
 
-            positionNode.Attributes.Append(clientTimestamp);
+            positionNode.Attributes.Append(serverReceivedTimestamp);
 
-            //data timestamp
+            //client sent timestamp
 
-            XmlAttribute dataTimestamp = xmlDoc.CreateAttribute("data-timestamp");
+            XmlAttribute clientSentTimestamp = xmlDoc.CreateAttribute("client-sent-timestamp");
 
-            dataTimestamp.Value = this.DataTimestamp;
+            clientSentTimestamp.Value = this.ClientSentTimestamp;
 
-            positionNode.Attributes.Append(dataTimestamp);
+            positionNode.Attributes.Append(clientSentTimestamp);
 
+
+            //client received timestamp
+
+            XmlAttribute clientReceivedTimestamp = xmlDoc.CreateAttribute("client-received-timestamp");
+
+            clientReceivedTimestamp.Value = this.ClientReceivedTimestamp;
+
+            positionNode.Attributes.Append(clientReceivedTimestamp);
 
             //tag
 

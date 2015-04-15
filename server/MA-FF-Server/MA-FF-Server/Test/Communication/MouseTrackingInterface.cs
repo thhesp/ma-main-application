@@ -23,9 +23,7 @@ namespace WebAnalyzer.Test.Communication
         {
             Logger.Log("Positiontracked Event: " + e.X + " / " + e.Y);
 
-            Object msg = new { command = "request", x = e.X, y = e.Y, servertimestamp = Timestamp.GetMillisecondsUnixTimestamp() };
-
-            ConnectionManager.getInstance().Broadcast(msg);
+            ConnectionManager.getInstance().RequestData(e.X, e.Y);
         }
 
     }
