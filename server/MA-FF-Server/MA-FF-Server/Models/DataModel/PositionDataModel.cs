@@ -5,17 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
+using WebAnalyzer.Models.Base;
+
 namespace WebAnalyzer.Models.DataModel
 {
-    class PositionDataModel
+    class PositionDataModel : BasicData
     {
         private int _x;
         private int _y;
-        private String _serverSentTimestamp;
-        private String _serverReceivedTimestamp;
-
-        private String _clientSentTimestamp;
-        private String _clientReceivedTimestamp;
 
         private String _tag;
         private String _id;
