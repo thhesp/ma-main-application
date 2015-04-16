@@ -7,7 +7,7 @@ using System.Xml;
 
 using WebAnalyzer.Util;
 
-namespace WebAnalyzer.DataModel
+namespace WebAnalyzer.Models.DataModel
 {
     class ExperimentModel
     {

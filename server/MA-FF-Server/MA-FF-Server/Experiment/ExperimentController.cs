@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using WebAnalyzer.Util;
-using WebAnalyzer.DataModel;
+using WebAnalyzer.Models.DataModel;
 using WebAnalyzer.Export;
 
 namespace WebAnalyzer.Experiment
