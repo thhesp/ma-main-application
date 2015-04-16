@@ -8,14 +8,14 @@ using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.Models.EventModel
 {
-    class ClickEvent : BasicData
+    class ScrollEventModel : BasicData
     {
 
         private String _eventTimestamp;
         private int _x;
         private int _y;
 
-        public ClickEvent(int x, int y, String serverReceivedTimestamp)
+        public ScrollEventModel(int x, int y, String serverReceivedTimestamp)
         {
             _x = x;
             _y = y;

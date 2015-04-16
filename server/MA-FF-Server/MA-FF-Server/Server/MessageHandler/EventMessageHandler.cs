@@ -31,7 +31,19 @@ namespace WebAnalyzer.Server.MessageHandler
         {
             dynamic msgIn = omsgIn;
 
+
+
             
+        }
+
+        private void processClickEvent(Object msg)
+        {
+
+        }
+
+        private void processScrollEvent(Object msg)
+        {
+
         }
     }
 }
