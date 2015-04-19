@@ -78,12 +78,13 @@
   <ItemGroup>
     <Compile Include="Experiment\ExperimentController.cs" />
     <Compile Include="Export\ExperimentExporter.cs" />
+    <Compile Include="Models\Base\BasicData.cs" />
     <Compile Include="Models\DataModel\AttributeModel.cs" />
     <Compile Include="Models\DataModel\ExperimentModel.cs" />
     <Compile Include="Models\DataModel\PositionDataModel.cs" />
     <Compile Include="Models\DataModel\WebpageModel.cs" />
-    <Compile Include="Models\EventModel\ClickEvent.cs" />
-    <Compile Include="Models\EventModel\ScrollEvent.cs" />
+    <Compile Include="Models\EventModel\ClickEventModel.cs" />
+    <Compile Include="Models\EventModel\ScrollEventModel.cs" />
     <Compile Include="Server\ConnectionManager.cs" />
     <Compile Include="Server\MessageHandler\EchoMessageHandler.cs" />
     <Compile Include="Server\MessageHandler\ConnectionMessageHandler.cs" />
