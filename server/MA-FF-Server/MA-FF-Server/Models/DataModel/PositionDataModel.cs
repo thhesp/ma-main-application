@@ -14,13 +14,7 @@ namespace WebAnalyzer.Models.DataModel
         private int _x;
         private int _y;
 
-        private String _tag;
-        private String _id;
-        private String _title;
-
-        private List<String> _classes = new List<String>();
-        private List<AttributeModel> _attributes = new List<AttributeModel>();
-
+        private DOMElementModel _element;
 
         private PositionDataModel _nextPosition;
 
@@ -46,68 +40,18 @@ namespace WebAnalyzer.Models.DataModel
             set { _y = value;  }
         }
 
-        public String ServerSentTimestamp
-        {
-            get { return _serverSentTimestamp; }
-            set { _serverSentTimestamp = value; }
-        }
 
-        public String ServerReceivedTimestamp
+        public DOMElementModel Element
         {
-            get { return _serverReceivedTimestamp; }
-            set { _serverReceivedTimestamp = value; }
-        }
-
-        public String ClientSentTimestamp
-        {
-            get { return _clientSentTimestamp; }
-            set { _clientSentTimestamp = value; }
-        }
-
-        public String ClientReceivedTimestamp
-        {
-            get { return _clientReceivedTimestamp; }
-            set { _clientReceivedTimestamp = value; }
-        }
-
-        public String Tag
-        {
-            get { return _tag; }
-            set { _tag = value;  }
-        }
-
-
-        public String ID
-        {
-            get { return _id; }
-            set { _id = value;  }
-        }
-
-        public String Title
-        {
-            get { return _title; }
-            set { _title = value; }
+            get { return _element; }
+            set { _element = value; }
         }
 
         public PositionDataModel NextPosition
         {
             get { return _nextPosition; }
-            set { _nextPosition = value; }
+            set { _nextPosition = value;  }
         }
-
-        public void AddClass(String className)
-        {
-            _classes.Add(className);
-        }
-
-        public void AddAttribute(String name, String value)
-        {
-            AttributeModel attrModel = new AttributeModel(name, value);
-
-            _attributes.Add(attrModel);
-        }
-
-        
         #endregion
 
         #region XMLFunctions
@@ -165,55 +109,10 @@ namespace WebAnalyzer.Models.DataModel
 
             positionNode.Attributes.Append(clientReceivedTimestamp);
 
-            //tag
+            
+            //element data
 
-            XmlAttribute tag = xmlDoc.CreateAttribute("tag");
-
-            tag.Value = this.Tag;
-
-            positionNode.Attributes.Append(tag);
-
-            //id
-
-            XmlAttribute id = xmlDoc.CreateAttribute("id");
-
-            id.Value = this.ID;
-
-            positionNode.Attributes.Append(id);
-
-            //title
-
-
-            XmlAttribute title = xmlDoc.CreateAttribute("title");
-
-            title.Value = this.Title;
-
-            positionNode.Attributes.Append(title);
-
-            //classes
-
-            XmlNode classesNode = xmlDoc.CreateElement("classes");
-
-            foreach (String className in _classes)
-            {
-                XmlNode classNode = xmlDoc.CreateElement("class");
-                classNode.InnerText = className;
-                classesNode.AppendChild(classNode);
-
-            }
-
-            positionNode.AppendChild(classesNode);
-
-            //attributes
-
-            XmlNode attributesNode = xmlDoc.CreateElement("attributes");
-
-            foreach (AttributeModel attribute in _attributes)
-            {
-                attributesNode.AppendChild(attribute.ToXML(xmlDoc));
-            }
-
-            positionNode.AppendChild(attributesNode);
+            positionNode.AppendChild(_element.ToXML(xmlDoc));
 
             return positionNode;
         }
