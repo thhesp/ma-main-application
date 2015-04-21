@@ -22,7 +22,9 @@ namespace WebAnalyzer.Server
             if (message != null)
             {
                 using (var sr = new StreamReader(message, Encoding.UTF8))
+                {
                     return (dynamic)JObject.Load(new JsonTextReader(sr));
+                }
             }
             else
                 return null;
@@ -31,10 +33,15 @@ namespace WebAnalyzer.Server
 
         public static void WriteDynamic(this WebSocket ws, dynamic data)
         {
+            
             JsonSerializer serializer = new JsonSerializer();
             using (var writer = ws.CreateMessageWriter(WebSocketMessageType.Text))
-            using (var sw = new StreamWriter(writer, Encoding.UTF8))
-                serializer.Serialize(sw, data);
+            {
+                using (var sw = new StreamWriter(writer, Encoding.UTF8))
+                {
+                    serializer.Serialize(sw, data);
+                }
+            }       
         }
 
     }

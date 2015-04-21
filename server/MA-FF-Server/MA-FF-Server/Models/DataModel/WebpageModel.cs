@@ -13,11 +13,13 @@ namespace WebAnalyzer.Models.DataModel
     {
 
         private String _url;
+        private String _visitTimestamp;
         private List<PositionDataModel> _positionData = new List<PositionDataModel>();
 
-        public WebpageModel(String url)
+        public WebpageModel(String url, String visitTimestamp)
         {
             _url = url;
+            _visitTimestamp = visitTimestamp;
         }
 
         #region GetterSetterFunctions
@@ -26,6 +28,12 @@ namespace WebAnalyzer.Models.DataModel
         {
             get { return _url; }
             set { _url = value;}
+        }
+
+        public String VisitTimestamp
+        {
+            get { return _visitTimestamp; }
+            set { _visitTimestamp = value; }
         }
 
         public void addPositionData(PositionDataModel data)
@@ -46,6 +54,12 @@ namespace WebAnalyzer.Models.DataModel
             url.Value = this.Url;
 
             webpageNode.Attributes.Append(url);
+
+            XmlAttribute visited = xmlDoc.CreateAttribute("visited");
+
+            visited.Value = this.VisitTimestamp;
+
+            webpageNode.Attributes.Append(visited);
 
             foreach (PositionDataModel data in _positionData)
             {

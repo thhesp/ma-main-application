@@ -41,7 +41,12 @@ namespace WebAnalyzer.Models.DataModel
 
         public void AddWebpage(String url)
         {
-            WebpageModel page = new WebpageModel(url);
+            this.AddWebpage(url, Timestamp.GetMillisecondsUnixTimestamp());
+        }
+
+        public void AddWebpage(String url, String timestamp)
+        {
+            WebpageModel page = new WebpageModel(url, timestamp);
             _visitedPages.Add(page);
         }
 
@@ -60,11 +65,20 @@ namespace WebAnalyzer.Models.DataModel
 
             experimentNode.Attributes.Append(experimentName);
 
+            XmlAttribute visitedWebpagesCount = xmlDoc.CreateAttribute("count-of-visited-pages");
+
+            visitedWebpagesCount.Value = this._visitedPages.Count.ToString();
+
+            experimentNode.Attributes.Append(visitedWebpagesCount);
+
+            XmlNode webpagesNode = xmlDoc.CreateElement("webpages");
 
             foreach(WebpageModel page in _visitedPages)
             {
-                experimentNode.AppendChild(page.ToXML(xmlDoc));
+                webpagesNode.AppendChild(page.ToXML(xmlDoc));
             }
+
+            experimentNode.AppendChild(webpagesNode);
 
             return experimentNode;
         }
@@ -73,7 +87,7 @@ namespace WebAnalyzer.Models.DataModel
 
         public PositionDataModel AddPositionData(String url, int xPosition, int yPosition, String timestamp)
         {
-            WebpageModel pageModel = this.GetPageModel(url);
+            WebpageModel pageModel = this.GetPageModel(url, timestamp);
 
             _lastPage = url;
             _lastPageModel = pageModel;
@@ -97,7 +111,7 @@ namespace WebAnalyzer.Models.DataModel
 
         public PositionDataModel AddPositionData(String url, PositionDataModel posModel)
         {
-            WebpageModel pageModel = this.GetPageModel(url);
+            WebpageModel pageModel = this.GetPageModel(url, posModel.ServerReceivedTimestamp);
 
             _lastPage = url;
             _lastPageModel = pageModel;
@@ -120,38 +134,18 @@ namespace WebAnalyzer.Models.DataModel
             return posModel;
         }
 
-        private WebpageModel GetPageModel(String url)
+        private WebpageModel GetPageModel(String url, String timestamp)
         {
             if (_lastPage != null && _lastPage == url && _lastPageModel != null)
             {
                 return _lastPageModel;
             }
 
-            WebpageModel pageModel = FindPageModel(url);
-
-            if (pageModel != null)
-            {
-                return pageModel;
-            }
-
-            pageModel = new WebpageModel(url);
+            WebpageModel pageModel = new WebpageModel(url, timestamp);
 
             _visitedPages.Add(pageModel);
 
             return pageModel;
-        }
-
-        private WebpageModel FindPageModel(String url)
-        {
-            foreach (WebpageModel pageModel in _visitedPages)
-            {
-                if (pageModel.Url == url)
-                {
-                    return pageModel;
-                }
-            }
-
-            return null;
         }
     }
 }
