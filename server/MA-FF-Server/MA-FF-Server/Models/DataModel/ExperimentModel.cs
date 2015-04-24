@@ -28,7 +28,7 @@ namespace WebAnalyzer.Models.DataModel
 
         public ExperimentModel(String experimentName)
         {
-            _experimentName = experimentName;   
+            _experimentName = experimentName;
         }
         
         #region GetterSetterFunctions
@@ -84,6 +84,11 @@ namespace WebAnalyzer.Models.DataModel
         }
 
         #endregion
+
+        public String GetBaseExperimentLocation()
+        {
+            return Properties.Settings.Default.Datalocation + _experimentName + "\\";
+        }
 
         public PositionDataModel AddPositionData(String url, int xPosition, int yPosition, String timestamp)
         {

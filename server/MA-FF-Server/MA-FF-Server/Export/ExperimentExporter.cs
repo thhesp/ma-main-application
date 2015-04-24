@@ -17,15 +17,26 @@ namespace WebAnalyzer.Export
 
         }
 
-        public Boolean ExportToXML(String filename, ExperimentModel experiment)
+        public Boolean ExportToXML(String dir, String filename, ExperimentModel experiment)
         {
+            this.checkPath(dir);
             XmlDocument xmlDoc = new XmlDocument();
 
             xmlDoc.AppendChild(experiment.ToXML(xmlDoc));
 
-            xmlDoc.Save(filename + ".xml");
+            xmlDoc.Save(dir + filename + ".xml");
 
             return true;
+        }
+
+        private void checkPath(String dir)
+        {
+            bool exists = System.IO.Directory.Exists(dir);
+
+            if (!exists)
+            {
+                System.IO.Directory.CreateDirectory(dir);
+            }
         }
 
 

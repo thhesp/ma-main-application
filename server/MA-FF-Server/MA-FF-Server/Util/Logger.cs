@@ -7,7 +7,7 @@ namespace WebAnalyzer.Util
 
         public static void Log(String line)
         {
-            Console.WriteLine(DateTime.Now.ToString("dd/MM/yyy hh:mm:ss.fff ") + line);
+            Console.WriteLine(Timestamp.GetUnixTimestamp() + ": " + line);
         }
     }
 }

@@ -29,7 +29,7 @@ namespace WebAnalyzer.Experiment
 
         private ExperimentController()
         {
-
+            
         }
 
         public void CreateExperiment(String name)
@@ -70,7 +70,7 @@ namespace WebAnalyzer.Experiment
 
             String filename = timestamp + _experiment.ExperimentName;
 
-            new ExperimentExporter().ExportToXML(filename, _experiment);
+            new ExperimentExporter().ExportToXML(_experiment.GetBaseExperimentLocation(), filename, _experiment);
         }
     }
 }

@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 
-using WebAnalyzer.Test.Communication;
-using WebAnalyzer.UI;
-using WebAnalyzer.Experiment;
-
 namespace WebAnalyzer
 {
 
@@ -19,9 +15,16 @@ namespace WebAnalyzer
         [STAThread]
         static void Main()
         {
-            new CommunicationTest();
 
-            //new WebAnalyzer();
+            if (System.Diagnostics.Debugger.IsAttached)
+            {
+                Properties.Settings.Default.Reset();
+            }
+
+
+            //new CommunicationTest();
+
+            new WebAnalyzer();
         }
 
     }
