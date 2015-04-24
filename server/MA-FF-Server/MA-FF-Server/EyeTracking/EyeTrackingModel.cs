@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 
+using WebAnalyzer.Server;
 using WebAnalyzer.Util;
 
 namespace WebAnalyzer.EyeTracking
@@ -90,11 +91,11 @@ namespace WebAnalyzer.EyeTracking
         /// <summary>
         /// Connect to the Eye Tracking Server.
         /// </summary>
-        public int connectLocal()
+        public Boolean connectLocal()
         {
             Logger.Log("connectLocal");
 
-            int errorID = 0;
+            /*int errorID = 0;
             try
             {
                 ETDevice.iV_SetCalibrationCallback(m_CalibrationCallback);
@@ -108,9 +109,11 @@ namespace WebAnalyzer.EyeTracking
                 Logger.Log(e.Message);
             }
 
-            Logger.Log("ErrorID: " + errorID);
+            Logger.Log("ErrorID: " + errorID);*/
 
-            return errorID;
+
+
+            return connect("127.0.0.1", "4444", "127.0.0.1", "5555");
         }
 
         /// <summary>
@@ -159,6 +162,9 @@ namespace WebAnalyzer.EyeTracking
                 " Event: " + eventData.eventType + " startTime: " + eventData.startTime.ToString() +
                 " End:" + eventData.endTime.ToString() + " duration:" + eventData.duration.ToString() +
                 " PosX:" + eventData.positionX.ToString() + " PosY:" + eventData.positionY.ToString();
+
+            ConnectionManager.getInstance().RequestData(eventData.positionX, eventData.positionY);
+
 
             Logger.Log(data);
         }

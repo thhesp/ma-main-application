@@ -19,9 +19,9 @@ namespace WebAnalyzer
         [STAThread]
         static void Main()
         {
-            new CommunicationTest();
+            //new CommunicationTest();
 
-            //new WebAnalyzer();
+            new WebAnalyzer();
         }
 
     }

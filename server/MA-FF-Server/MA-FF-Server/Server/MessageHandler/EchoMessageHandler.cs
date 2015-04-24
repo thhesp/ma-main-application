@@ -29,7 +29,7 @@ namespace WebAnalyzer.Server.MessageHandler
 
         public void OnNext(Object omsgIn)
         {
-            _connection.Out.OnNext(omsgIn);
+            //_connection.Out.OnNext(omsgIn);
         }
     }
 }

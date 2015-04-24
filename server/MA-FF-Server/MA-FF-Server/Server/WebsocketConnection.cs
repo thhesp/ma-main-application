@@ -79,7 +79,7 @@ namespace WebAnalyzer.Server
             }
             catch (WebSocketException e)
             {
-
+                Logger.Log("Tried writing, while there still was a message been written.");
             }
             
         }
