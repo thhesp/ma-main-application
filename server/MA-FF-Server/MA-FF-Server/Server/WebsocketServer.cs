@@ -71,13 +71,18 @@ namespace WebAnalyzer.Server
                 .DoWhile(() => server.IsStarted && !cancellation.IsCancellationRequested)
                 .Subscribe(messagesObserver);
 
+            ConnectionManager.getInstance().StartMessageThread();
+
             Logger.Log("WS Socket Server started");
         }
 
         public void stop()
         {
+            ConnectionManager.getInstance().StopMessageThread();
+
             server.Stop();
             cancellation.Cancel();
+
             Logger.Log("Server stopped");
         }
     }

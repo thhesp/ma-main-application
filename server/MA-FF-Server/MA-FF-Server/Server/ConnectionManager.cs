@@ -26,7 +26,9 @@ namespace WebAnalyzer.Server
             return instance;
         }
 
-        private static int WORK_DELAY = 50;
+        private static int WORK_DELAY = 15;
+
+        private Boolean _workMessages = false;
 
         private List<WebsocketConnection> _toAdd = new List<WebsocketConnection>();
 
@@ -34,20 +36,22 @@ namespace WebAnalyzer.Server
 
         private ConnectionManager()
         {
+            
+        }
+
+        public void StartMessageThread()
+        {
+            _workMessages = true;
             var o = Observable.Start(() =>
             {
                 //This starts on a background thread.
                 WorkConnectionMessageQueues();
             });
+        }
 
-            /*var observable = Observable.Interval(TimeSpan.FromMilliseconds(ConnectionManager.WORK_DELAY)).TimeInterval();
-
-            using (observable.Subscribe(
-                x => WorkConnectionMessageQueues()))
-            {
-
-            }*/
-
+        public void StopMessageThread()
+        {
+            _workMessages = false;
         }
         public void AddWebsocketConnection(WebsocketConnection connection)
         {
@@ -117,7 +121,7 @@ namespace WebAnalyzer.Server
 
         private void WorkConnectionMessageQueues()
         {
-            while (true)
+            while (_workMessages)
             {
                 Logger.Log("Working through the queues...");
                 foreach (var connection in this)

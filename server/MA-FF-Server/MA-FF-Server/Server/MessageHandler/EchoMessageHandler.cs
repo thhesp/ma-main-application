@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using WebAnalyzer.Util;
+using WebAnalyzer.Models.Base;
+
 namespace WebAnalyzer.Server.MessageHandler
 {
     class EchoMessageHandler : IObserver<Object>
@@ -30,6 +33,9 @@ namespace WebAnalyzer.Server.MessageHandler
         public void OnNext(Object omsgIn)
         {
             //_connection.Out.OnNext(omsgIn);
+
+            Message message = new Message(Timestamp.GetMillisecondsUnixTimestamp(), omsgIn);
+            _connection.EnqueueMessage(message);
         }
     }
 }
