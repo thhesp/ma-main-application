@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 
+using WebAnalyzer.Test.Communication;
+
 namespace WebAnalyzer
 {
 
@@ -22,9 +24,9 @@ namespace WebAnalyzer
             }
 
 
-            //new CommunicationTest();
+            new CommunicationTest();
 
-            new WebAnalyzer();
+            //new WebAnalyzer();
         }
 
     }

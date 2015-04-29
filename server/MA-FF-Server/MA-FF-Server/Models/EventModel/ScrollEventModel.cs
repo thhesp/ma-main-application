@@ -8,7 +8,7 @@ using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.Models.EventModel
 {
-    class ScrollEventModel : BasicData
+    class ScrollEventModel : BasicRawData
     {
 
         private String _eventTimestamp;

@@ -39,6 +39,13 @@ namespace WebAnalyzer.Server
             
         }
 
+        public void ResetConnections()
+        {
+            this.Clear();
+            _toAdd.Clear();
+            _toRemove.Clear();
+        }
+
         public void StartMessageThread()
         {
             _workMessages = true;
@@ -63,18 +70,18 @@ namespace WebAnalyzer.Server
             _toRemove.Add(connection);
         }
 
-        public void RequestData(double xPos, double yPos)
+        public void RequestData(String uniqueId, double xPos, double yPos)
         {
-            Object msg = new { command = "request", x = xPos, y = yPos, serversent = Timestamp.GetMillisecondsUnixTimestamp() };
+            Object msg = new { command = "request", uniqueid = uniqueId, x = xPos, y = yPos, serversent = Timestamp.GetMillisecondsUnixTimestamp() };
 
             Message message = new Message(Timestamp.GetMillisecondsUnixTimestamp(), msg);
 
             this.Broadcast(message);
         }
 
-        public void RequestData(int xPos, int yPos)
+        public void RequestData(String uniqueId, int xPos, int yPos)
         {
-            this.RequestData((double)xPos, (double)yPos);
+            this.RequestData(uniqueId, (double)xPos, (double)yPos);
         }
 
         private void Broadcast(Message message)

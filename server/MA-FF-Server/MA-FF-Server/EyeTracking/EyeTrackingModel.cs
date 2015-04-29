@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 
+using WebAnalyzer.Experiment;
 using WebAnalyzer.Server;
 using WebAnalyzer.Util;
 
@@ -163,7 +164,9 @@ namespace WebAnalyzer.EyeTracking
                 " End:" + eventData.endTime.ToString() + " duration:" + eventData.duration.ToString() +
                 " PosX:" + eventData.positionX.ToString() + " PosY:" + eventData.positionY.ToString();
 
-            ConnectionManager.getInstance().RequestData(eventData.positionX, eventData.positionY);
+
+            String uniqueId = ExperimentController.getInstance().PreparePositionData(eventData.positionX, eventData.positionY, eventData.startTime.ToString(), eventData.endTime.ToString(), eventData.duration.ToString());
+            ConnectionManager.getInstance().RequestData(uniqueId, eventData.positionX, eventData.positionY);
 
 
             Logger.Log(data);

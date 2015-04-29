@@ -37,18 +37,21 @@ namespace WebAnalyzer.Server.MessageHandler
 
             // extract data from json object and handle it
             Logger.Log("Data Message: X: " + msgIn.x + " Y: " + msgIn.y);
-            Logger.Log("Data Message attributes: " + msgIn.data);
+            Logger.Log("Data Message uniqueid: " + msgIn.uniqueid);
 
-            if(msgIn.x != null && msgIn.y != null)
+            if (msgIn.uniqueid != null && msgIn.x != null && msgIn.y != null)
             {
 
                 PositionDataModel posModel = extractPositionData(msgIn);
-                
-                String url = msgIn.url;
 
-                if (url != null)
+                if (posModel != null)
                 {
-                    ExperimentController.getInstance().AddPositionData(url, posModel);
+                    String url = msgIn.url;
+
+                    if (url != null)
+                    {
+                        ExperimentController.getInstance().AssignPositionToWebpage(posModel, url);
+                    }
                 }
             }
         }
@@ -58,35 +61,47 @@ namespace WebAnalyzer.Server.MessageHandler
             int x = msgIn.x;
             int y = msgIn.y;
 
-            String timestamp = Timestamp.GetMillisecondsUnixTimestamp();
+            String serverReceivedtimestamp = Timestamp.GetMillisecondsUnixTimestamp();
 
-            PositionDataModel posModel = new PositionDataModel(x, y, timestamp);
+            String uniqueId = msgIn.uniqueid;
 
-            String serverTimestamp = msgIn.serversent;
+            PositionDataModel posModel = ExperimentController.getInstance().GetPosition(uniqueId);
 
-            if (serverTimestamp != null)
+
+            if (posModel != null)
             {
-                posModel.ServerSentTimestamp = serverTimestamp;
+                posModel.ServerReceivedTimestamp = serverReceivedtimestamp;
+
+                String serverTimestamp = msgIn.serversent;
+
+                if (serverTimestamp != null)
+                {
+                    posModel.ServerSentTimestamp = serverTimestamp;
+                }
+
+                String clientSentTimestamp = msgIn.clientsent;
+
+                if (clientSentTimestamp != null)
+                {
+                    posModel.ClientSentTimestamp = clientSentTimestamp;
+                }
+
+
+                String clientReceivedTimestamp = msgIn.clientreceived;
+
+                if (clientReceivedTimestamp != null)
+                {
+                    posModel.ClientReceivedTimestamp = clientReceivedTimestamp;
+                }
+
+                // get element data 
+
+                posModel.Element = extractElementData(msgIn);
             }
-
-            String clientSentTimestamp = msgIn.clientsent;
-
-            if (clientSentTimestamp != null)
+            else
             {
-                posModel.ClientSentTimestamp = clientSentTimestamp;
+                Logger.Log("Could not get corresponding PositionModel");
             }
-
-
-            String clientReceivedTimestamp = msgIn.clientreceived;
-
-            if (clientReceivedTimestamp != null)
-            {
-                posModel.ClientReceivedTimestamp = clientReceivedTimestamp;
-            }
-
-            // get element data 
-
-            posModel.Element = extractElementData(msgIn);
 
             return posModel;
         }

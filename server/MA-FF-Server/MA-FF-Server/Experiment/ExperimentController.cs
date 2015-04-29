@@ -39,12 +39,14 @@ namespace WebAnalyzer.Experiment
 
         public void StartExperiment()
         {
+            Logger.Log("Start Experiment");
             // start server etc.
             // set listeners
         }
 
         public void StopExperiment()
         {
+            Logger.Log("Stop Experiment");
             // stop server etc.
 
             // export raw data
@@ -52,16 +54,24 @@ namespace WebAnalyzer.Experiment
             this.ExportToXML();
         }
 
-        public void AddPositionData(String url, int xPosition, int yPosition)
+        public String PreparePositionData(double xPosition, double yPosition, String startTime, String endTime, String duration)
         {
-            String timestamp = Timestamp.GetUnixTimestamp();
-
-            _experiment.AddPositionData(url, xPosition, yPosition, timestamp);
+            return _experiment.PreparePositionData(xPosition, yPosition, startTime, endTime, duration);
         }
 
-        public void AddPositionData(String url, PositionDataModel posModel)
+        public Boolean AssignPositionToWebpage(String uniqueId, String url)
         {
-            _experiment.AddPositionData(url, posModel);
+            return _experiment.AssignPositionToWebpage(uniqueId, url);
+        }
+
+        public Boolean AssignPositionToWebpage(PositionDataModel posModel, String url)
+        {
+            return _experiment.AssignPositionToWebpage(posModel, url);
+        }
+
+        public PositionDataModel GetPosition(String uniqueId)
+        {
+            return _experiment.GetPosition(uniqueId);
         }
 
         private void ExportToXML()

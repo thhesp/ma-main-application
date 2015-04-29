@@ -79,11 +79,12 @@
     <Compile Include="Experiment\ExperimentController.cs" />
     <Compile Include="Models\Base\ExperimentSettings.cs" />
     <Compile Include="Export\ExperimentExporter.cs" />
-    <Compile Include="Models\Base\BasicData.cs" />
+    <Compile Include="Models\Base\BasicRawData.cs" />
     <Compile Include="Models\Base\Message.cs" />
     <Compile Include="Models\DataModel\AttributeModel.cs" />
     <Compile Include="Models\DataModel\DOMElementModel.cs" />
     <Compile Include="Models\DataModel\ExperimentModel.cs" />
+    <Compile Include="Models\DataModel\EyeTrackingData.cs" />
     <Compile Include="Models\DataModel\PositionDataModel.cs" />
     <Compile Include="Models\DataModel\WebpageModel.cs" />
     <Compile Include="Models\EventModel\ClickEventModel.cs" />

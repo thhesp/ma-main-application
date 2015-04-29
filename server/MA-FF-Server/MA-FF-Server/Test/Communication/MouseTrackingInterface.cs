@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using WebAnalyzer.Experiment;
 using WebAnalyzer.Server;
 using WebAnalyzer.Util;
 
@@ -23,7 +24,8 @@ namespace WebAnalyzer.Test.Communication
         {
             Logger.Log("Positiontracked Event: " + e.X + " / " + e.Y);
 
-            ConnectionManager.getInstance().RequestData(e.X, e.Y);
+            String uniqueId = ExperimentController.getInstance().PreparePositionData(e.X, e.Y, "???", "???", "???");
+            ConnectionManager.getInstance().RequestData(uniqueId, e.X, e.Y);
         }
 
     }

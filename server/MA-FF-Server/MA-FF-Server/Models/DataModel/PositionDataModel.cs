@@ -9,37 +9,49 @@ using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.Models.DataModel
 {
-    class PositionDataModel : BasicData
+    class PositionDataModel : BasicRawData
     {
-        private int _x;
-        private int _y;
+
+        private String _uniqueId;
+
+        private EyeTrackingData _eyeTrackingData;
 
         private DOMElementModel _element;
 
         private PositionDataModel _nextPosition;
 
-        public PositionDataModel(int x, int y, String receivedTimestamp)
+        public PositionDataModel()
         {
-            _x = x;
-            _y = y;
+            _uniqueId = this.GetUniqueId();
+        }
+
+        public PositionDataModel(double x, double y) : this()
+        {
+            _eyeTrackingData = new EyeTrackingData(x, y);
+        }
+
+        public PositionDataModel(double x, double y, String receivedTimestamp) : this(x,y)
+        {
             _serverReceivedTimestamp = receivedTimestamp;
+        }
+
+        private String GetUniqueId()
+        {
+            return Guid.NewGuid().ToString();
         }
 
         #region GetterSetterFunctions
 
-        public int X
+        public String UniqueId
         {
-            get { return _x; }
-            set { _x = value;  }
+            get { return _uniqueId; }
         }
 
-
-        public int Y
+        public EyeTrackingData EyeTrackingData
         {
-            get { return _y; }
-            set { _y = value;  }
+            get { return _eyeTrackingData; }
+            set { _eyeTrackingData = value; }
         }
-
 
         public DOMElementModel Element
         {
@@ -59,22 +71,6 @@ namespace WebAnalyzer.Models.DataModel
         public XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode positionNode = xmlDoc.CreateElement("position");
-
-            //x
-
-            XmlAttribute xPosition = xmlDoc.CreateAttribute("x");
-
-            xPosition.Value = this.X.ToString();
-
-            positionNode.Attributes.Append(xPosition);
-
-            //y
-
-            XmlAttribute yPosition = xmlDoc.CreateAttribute("y");
-
-            yPosition.Value = this.Y.ToString();
-
-            positionNode.Attributes.Append(yPosition);
 
             //server sent timestamp
 
@@ -109,10 +105,14 @@ namespace WebAnalyzer.Models.DataModel
 
             positionNode.Attributes.Append(clientReceivedTimestamp);
 
-            
+            //eyetracking data
+
+            positionNode.AppendChild(this.EyeTrackingData.ToXML(xmlDoc));
+
+
             //element data
 
-            positionNode.AppendChild(_element.ToXML(xmlDoc));
+            positionNode.AppendChild(this.Element.ToXML(xmlDoc));
 
             return positionNode;
         }

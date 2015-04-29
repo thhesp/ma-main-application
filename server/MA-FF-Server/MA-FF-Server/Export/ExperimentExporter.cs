@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Xml;
 
 using WebAnalyzer.Models.DataModel;
+using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Export
 {
@@ -19,6 +20,8 @@ namespace WebAnalyzer.Export
 
         public Boolean ExportToXML(String dir, String filename, ExperimentModel experiment)
         {
+            Logger.Log("Exporting XML: " + dir + filename + ".xml");
+
             this.checkPath(dir);
             XmlDocument xmlDoc = new XmlDocument();
 

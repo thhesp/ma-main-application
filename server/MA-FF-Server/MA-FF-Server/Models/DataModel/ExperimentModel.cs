@@ -24,11 +24,14 @@ namespace WebAnalyzer.Models.DataModel
         private PositionDataModel _previousPosition;
 
         private List<WebpageModel> _visitedPages = new List<WebpageModel>();
+
+        private Dictionary<String, PositionDataModel> _unassignedPositions;
         
 
         public ExperimentModel(String experimentName)
         {
             _experimentName = experimentName;
+            _unassignedPositions = new Dictionary<String,PositionDataModel>();
         }
         
         #region GetterSetterFunctions
@@ -90,31 +93,64 @@ namespace WebAnalyzer.Models.DataModel
             return Properties.Settings.Default.Datalocation + _experimentName + "\\";
         }
 
-        public PositionDataModel AddPositionData(String url, int xPosition, int yPosition, String timestamp)
+        public PositionDataModel GetPosition(String uniqueId)
         {
-            WebpageModel pageModel = this.GetPageModel(url, timestamp);
-
-            _lastPage = url;
-            _lastPageModel = pageModel;
-
-            PositionDataModel posModel = pageModel.AddPositionData(xPosition, yPosition, timestamp);
-
-            if(_firstExperimentPosition == null)
+            if (_unassignedPositions.ContainsKey(uniqueId))
             {
-                _firstExperimentPosition = posModel;
+                return _unassignedPositions[uniqueId];
             }
 
-            if (_previousPosition != null) 
-            {
-                _previousPosition.NextPosition = posModel;
-            }
+            Logger.Log("No PositionModel could be found: " + uniqueId);
 
-            _previousPosition = posModel;
-
-            return posModel;
+            return null;
         }
 
-        public PositionDataModel AddPositionData(String url, PositionDataModel posModel)
+        public Boolean AssignPositionToWebpage(String uniqueId, String url)
+        {
+            if (!_unassignedPositions.ContainsKey(uniqueId))
+            {
+                return false;
+            }
+
+            this.AddPositionData(url, _unassignedPositions[uniqueId]);
+
+            _unassignedPositions.Remove(uniqueId);
+
+            return true;
+        }
+
+        public Boolean AssignPositionToWebpage(PositionDataModel posModel, String url)
+        {
+            this.AddPositionData(url, posModel);
+
+            if (_unassignedPositions.ContainsKey(posModel.UniqueId))
+            {
+                _unassignedPositions.Remove(posModel.UniqueId);
+            }
+
+            return true;
+        }
+
+        public String PreparePositionData(double xPosition, double yPosition, String startTime, String endTime, String duration)
+        {
+            EyeTrackingData data = new EyeTrackingData(xPosition, yPosition);
+
+            data.StartTime = startTime;
+            data.EndTime = endTime;
+            data.Duration = duration;
+
+            PositionDataModel pos = new PositionDataModel();
+
+            pos.EyeTrackingData = data;
+
+            // add to unassigned position
+
+            _unassignedPositions.Add(pos.UniqueId, pos);
+
+            return pos.UniqueId;
+        }
+
+        private PositionDataModel AddPositionData(String url, PositionDataModel posModel)
         {
             WebpageModel pageModel = this.GetPageModel(url, posModel.ServerReceivedTimestamp);
 
