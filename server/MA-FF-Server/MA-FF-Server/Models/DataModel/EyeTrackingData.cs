@@ -13,6 +13,8 @@ namespace WebAnalyzer.Models.DataModel
         private double _x;
         private double _y;
 
+        private String _callbackTimestamp;
+
         private String _startTime;
         private String _endTime;
         private String _duration;
@@ -21,6 +23,11 @@ namespace WebAnalyzer.Models.DataModel
         {
             _x = x;
             _y = y;
+        }
+
+        public EyeTrackingData(double x, double y, String callbackTimestamp) : this(x,y)
+        {
+            _callbackTimestamp = callbackTimestamp;
         }
 
         #region GetterSetterFunctions
@@ -36,6 +43,12 @@ namespace WebAnalyzer.Models.DataModel
         {
             get { return _y; }
             set { _y = value; }
+        }
+
+        public String CallbackTimestamp
+        {
+            get { return _callbackTimestamp; }
+            set { _callbackTimestamp = value; }
         }
 
         public String StartTime
@@ -79,6 +92,14 @@ namespace WebAnalyzer.Models.DataModel
             yPosition.Value = this.Y.ToString();
 
             eyetrackingDataNode.Attributes.Append(yPosition);
+
+            //callback  timestamp
+
+            XmlAttribute callbackTimestamp = xmlDoc.CreateAttribute("callback");
+
+            callbackTimestamp.Value = this.CallbackTimestamp;
+
+            eyetrackingDataNode.Attributes.Append(callbackTimestamp);
 
             //eyetracking data start timestamp
 

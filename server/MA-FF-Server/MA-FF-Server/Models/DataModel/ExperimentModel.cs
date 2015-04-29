@@ -133,7 +133,9 @@ namespace WebAnalyzer.Models.DataModel
 
         public String PreparePositionData(double xPosition, double yPosition, String startTime, String endTime, String duration)
         {
-            EyeTrackingData data = new EyeTrackingData(xPosition, yPosition);
+            String timestamp = Timestamp.GetMillisecondsUnixTimestamp();
+
+            EyeTrackingData data = new EyeTrackingData(xPosition, yPosition, timestamp);
 
             data.StartTime = startTime;
             data.EndTime = endTime;
