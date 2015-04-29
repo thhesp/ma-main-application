@@ -79,6 +79,7 @@ namespace WebAnalyzer.Server
         public void stop()
         {
             ConnectionManager.getInstance().StopMessageThread();
+            ConnectionManager.getInstance().ResetConnections();
 
             server.Stop();
             cancellation.Cancel();

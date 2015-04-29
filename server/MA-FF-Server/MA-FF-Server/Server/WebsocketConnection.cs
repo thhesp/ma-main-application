@@ -95,9 +95,16 @@ namespace WebAnalyzer.Server
             {
                 // remove first element
                 _messageQueue.Dequeue();
+                if (_messageQueue.Count > 0)
+                {
+                    // get new first element
+                    msg = _messageQueue.ElementAt(0);
+                }
+                else
+                {
+                    break;
+                }
 
-                // get new first element
-                msg = _messageQueue.ElementAt(0);
             }
         }
     }
