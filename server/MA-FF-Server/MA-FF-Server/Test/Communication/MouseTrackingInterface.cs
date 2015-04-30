@@ -24,7 +24,9 @@ namespace WebAnalyzer.Test.Communication
         {
             Logger.Log("Positiontracked Event: " + e.X + " / " + e.Y);
 
-            String uniqueId = ExperimentController.getInstance().PreparePositionData(e.X, e.Y, "???", "???", "???");
+            
+
+            String uniqueId = ExperimentController.getInstance().PrepareGazeData(Timestamp.GetMillisecondsUnixTimestamp(), e.X, e.Y, e.X, e.Y);
             ConnectionManager.getInstance().RequestData(uniqueId, e.X, e.Y);
         }
 

@@ -47,5 +47,6 @@ namespace WebAnalyzer.Models.Base
         }
 
         #endregion
+
     }
 }

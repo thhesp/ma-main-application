@@ -15,10 +15,6 @@ namespace WebAnalyzer.Models.DataModel
 
         private String _callbackTimestamp;
 
-        private String _startTime;
-        private String _endTime;
-        private String _duration;
-
         public EyeTrackingData(double x, double y)
         {
             _x = x;
@@ -49,24 +45,6 @@ namespace WebAnalyzer.Models.DataModel
         {
             get { return _callbackTimestamp; }
             set { _callbackTimestamp = value; }
-        }
-
-        public String StartTime
-        {
-            get { return _startTime; }
-            set { _startTime = value; }
-        }
-
-        public String EndTime
-        {
-            get { return _endTime; }
-            set { _endTime = value; }
-        }
-
-        public String Duration
-        {
-            get { return _duration; }
-            set { _duration = value; }
         }
 
         #endregion
@@ -100,30 +78,6 @@ namespace WebAnalyzer.Models.DataModel
             callbackTimestamp.Value = this.CallbackTimestamp;
 
             eyetrackingDataNode.Attributes.Append(callbackTimestamp);
-
-            //eyetracking data start timestamp
-
-            XmlAttribute startTimestamp = xmlDoc.CreateAttribute("start");
-
-            startTimestamp.Value = this.StartTime;
-
-            eyetrackingDataNode.Attributes.Append(startTimestamp);
-
-            //eyetracking end timestamp
-
-            XmlAttribute endTimestamp = xmlDoc.CreateAttribute("end");
-
-            endTimestamp.Value = this.EndTime;
-
-            eyetrackingDataNode.Attributes.Append(endTimestamp);
-
-            //eyetracking duration
-
-            XmlAttribute duration = xmlDoc.CreateAttribute("duration");
-
-            duration.Value = this.Duration;
-
-            eyetrackingDataNode.Attributes.Append(duration);
 
             return eyetrackingDataNode;
         }

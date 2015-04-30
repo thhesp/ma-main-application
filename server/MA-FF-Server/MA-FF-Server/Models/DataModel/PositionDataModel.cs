@@ -9,20 +9,16 @@ using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.Models.DataModel
 {
-    class PositionDataModel : BasicRawData
+    class PositionDataModel
     {
 
-        private String _uniqueId;
 
         private EyeTrackingData _eyeTrackingData;
 
         private DOMElementModel _element;
 
-        private PositionDataModel _nextPosition;
-
         public PositionDataModel()
         {
-            _uniqueId = this.GetUniqueId();
         }
 
         public PositionDataModel(double x, double y) : this()
@@ -30,22 +26,8 @@ namespace WebAnalyzer.Models.DataModel
             _eyeTrackingData = new EyeTrackingData(x, y);
         }
 
-        public PositionDataModel(double x, double y, String receivedTimestamp) : this(x,y)
-        {
-            _serverReceivedTimestamp = receivedTimestamp;
-        }
-
-        private String GetUniqueId()
-        {
-            return Guid.NewGuid().ToString();
-        }
-
         #region GetterSetterFunctions
 
-        public String UniqueId
-        {
-            get { return _uniqueId; }
-        }
 
         public EyeTrackingData EyeTrackingData
         {
@@ -59,11 +41,6 @@ namespace WebAnalyzer.Models.DataModel
             set { _element = value; }
         }
 
-        public PositionDataModel NextPosition
-        {
-            get { return _nextPosition; }
-            set { _nextPosition = value;  }
-        }
         #endregion
 
         #region XMLFunctions
@@ -72,43 +49,9 @@ namespace WebAnalyzer.Models.DataModel
         {
             XmlNode positionNode = xmlDoc.CreateElement("position");
 
-            //server sent timestamp
-
-            XmlAttribute serverSentTimestamp = xmlDoc.CreateAttribute("server-sent-timestamp");
-
-            serverSentTimestamp.Value = this.ServerSentTimestamp;
-
-            positionNode.Attributes.Append(serverSentTimestamp);
-
-            // server received timestamp
-
-            XmlAttribute serverReceivedTimestamp = xmlDoc.CreateAttribute("server-received-timestamp");
-
-            serverReceivedTimestamp.Value = this.ServerReceivedTimestamp;
-
-            positionNode.Attributes.Append(serverReceivedTimestamp);
-
-            //client sent timestamp
-
-            XmlAttribute clientSentTimestamp = xmlDoc.CreateAttribute("client-sent-timestamp");
-
-            clientSentTimestamp.Value = this.ClientSentTimestamp;
-
-            positionNode.Attributes.Append(clientSentTimestamp);
-
-
-            //client received timestamp
-
-            XmlAttribute clientReceivedTimestamp = xmlDoc.CreateAttribute("client-received-timestamp");
-
-            clientReceivedTimestamp.Value = this.ClientReceivedTimestamp;
-
-            positionNode.Attributes.Append(clientReceivedTimestamp);
-
             //eyetracking data
 
             positionNode.AppendChild(this.EyeTrackingData.ToXML(xmlDoc));
-
 
             //element data
 

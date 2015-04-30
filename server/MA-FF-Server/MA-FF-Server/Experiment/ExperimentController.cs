@@ -54,24 +54,24 @@ namespace WebAnalyzer.Experiment
             this.ExportToXML();
         }
 
-        public String PreparePositionData(double xPosition, double yPosition, String startTime, String endTime, String duration)
+        public String PrepareGazeData(String timestamp, double leftX, double leftY, double rightX, double rightY)
         {
-            return _experiment.PreparePositionData(xPosition, yPosition, startTime, endTime, duration);
+            return _experiment.PrepareGazeData(timestamp, leftX, leftY, rightX, rightY);
         }
 
-        public Boolean AssignPositionToWebpage(String uniqueId, String url)
+        public Boolean AssignGazeToWebpage(String uniqueId, String url)
         {
-            return _experiment.AssignPositionToWebpage(uniqueId, url);
+            return _experiment.AssignGazeToWebpage(uniqueId, url);
         }
 
-        public Boolean AssignPositionToWebpage(PositionDataModel posModel, String url)
+        public Boolean AssignGazeToWebpage(GazeModel gazeModel, String url)
         {
-            return _experiment.AssignPositionToWebpage(posModel, url);
+            return _experiment.AssignGazeToWebpage(gazeModel, url);
         }
 
-        public PositionDataModel GetPosition(String uniqueId)
+        public GazeModel GetGazeModel(String uniqueId)
         {
-            return _experiment.GetPosition(uniqueId);
+            return _experiment.GetGazeModel(uniqueId);
         }
 
         private void ExportToXML()

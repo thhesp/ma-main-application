@@ -36,54 +36,50 @@ namespace WebAnalyzer.Server.MessageHandler
             dynamic msgIn = omsgIn;
 
             // extract data from json object and handle it
-            Logger.Log("Data Message: X: " + msgIn.x + " Y: " + msgIn.y);
             Logger.Log("Data Message uniqueid: " + msgIn.uniqueid);
 
-            if (msgIn.uniqueid != null && msgIn.x != null && msgIn.y != null)
+            if (msgIn.uniqueid != null)
             {
 
-                PositionDataModel posModel = extractPositionData(msgIn);
+                GazeModel gaze = extractGazeData(msgIn);
 
-                if (posModel != null)
+                if (gaze != null)
                 {
                     String url = msgIn.url;
 
                     if (url != null)
                     {
-                        ExperimentController.getInstance().AssignPositionToWebpage(posModel, url);
+                        ExperimentController.getInstance().AssignGazeToWebpage(gaze, url);
                     }
                 }
             }
         }
 
-        private PositionDataModel extractPositionData(dynamic msgIn)
+        private GazeModel extractGazeData(dynamic msgIn)
         {
-            int x = msgIn.x;
-            int y = msgIn.y;
-
-            String serverReceivedtimestamp = Timestamp.GetMillisecondsUnixTimestamp();
+            String serverReceivedTimestamp = Timestamp.GetMillisecondsUnixTimestamp();
 
             String uniqueId = msgIn.uniqueid;
 
-            PositionDataModel posModel = ExperimentController.getInstance().GetPosition(uniqueId);
+            GazeModel gazeModel = ExperimentController.getInstance().GetGazeModel(uniqueId);
 
-
-            if (posModel != null)
+            if (gazeModel != null)
             {
-                posModel.ServerReceivedTimestamp = serverReceivedtimestamp;
+
+                gazeModel.ServerReceivedTimestamp = serverReceivedTimestamp;
 
                 String serverTimestamp = msgIn.serversent;
 
                 if (serverTimestamp != null)
                 {
-                    posModel.ServerSentTimestamp = serverTimestamp;
+                    gazeModel.ServerSentTimestamp = serverTimestamp;
                 }
 
                 String clientSentTimestamp = msgIn.clientsent;
 
                 if (clientSentTimestamp != null)
                 {
-                    posModel.ClientSentTimestamp = clientSentTimestamp;
+                    gazeModel.ClientSentTimestamp = clientSentTimestamp;
                 }
 
 
@@ -91,16 +87,32 @@ namespace WebAnalyzer.Server.MessageHandler
 
                 if (clientReceivedTimestamp != null)
                 {
-                    posModel.ClientReceivedTimestamp = clientReceivedTimestamp;
+                    gazeModel.ClientReceivedTimestamp = clientReceivedTimestamp;
                 }
 
+                gazeModel.LeftEye = extractPositionData(gazeModel.LeftEye, msgIn.left);
+                gazeModel.RightEye = extractPositionData(gazeModel.RightEye, msgIn.right);
+
+            }else{
+                Logger.Log("Could not get corresponding GazeModel");
+            }
+
+
+            return gazeModel;
+        }
+
+        private PositionDataModel extractPositionData(PositionDataModel posModel, dynamic msgIn)
+        {
+
+            Logger.Log("MsgIn: "+ msgIn);
+
+            Logger.Log("Data Message: X: " + msgIn.x + " Y: " + msgIn.y);
+
+            if (posModel != null)
+            {
                 // get element data 
 
                 posModel.Element = extractElementData(msgIn);
-            }
-            else
-            {
-                Logger.Log("Could not get corresponding PositionModel");
             }
 
             return posModel;

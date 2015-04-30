@@ -85,6 +85,7 @@
     <Compile Include="Models\DataModel\DOMElementModel.cs" />
     <Compile Include="Models\DataModel\ExperimentModel.cs" />
     <Compile Include="Models\DataModel\EyeTrackingData.cs" />
+    <Compile Include="Models\DataModel\GazeModel.cs" />
     <Compile Include="Models\DataModel\PositionDataModel.cs" />
     <Compile Include="Models\DataModel\WebpageModel.cs" />
     <Compile Include="Models\EventModel\ClickEventModel.cs" />

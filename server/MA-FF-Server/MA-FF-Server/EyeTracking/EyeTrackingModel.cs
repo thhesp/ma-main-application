@@ -153,6 +153,9 @@ namespace WebAnalyzer.EyeTracking
                 " - DistanceR: " + sampleData.rightEye.eyePositionZ.ToString() +
                 " - DistanceL: " + sampleData.leftEye.eyePositionZ.ToString();
 
+           String uniqueId = ExperimentController.getInstance().PrepareGazeData(sampleData.timestamp.ToString(), sampleData.leftEye.gazeX, sampleData.leftEye.gazeY, sampleData.rightEye.gazeX, sampleData.rightEye.gazeY);
+           ConnectionManager.getInstance().RequestData(uniqueId, sampleData.leftEye.gazeX, sampleData.leftEye.gazeY, sampleData.rightEye.gazeX, sampleData.rightEye.gazeY);
+
            Logger.Log(data);
         }
 
@@ -165,8 +168,8 @@ namespace WebAnalyzer.EyeTracking
                 " PosX:" + eventData.positionX.ToString() + " PosY:" + eventData.positionY.ToString();
 
 
-            String uniqueId = ExperimentController.getInstance().PreparePositionData(eventData.positionX, eventData.positionY, eventData.startTime.ToString(), eventData.endTime.ToString(), eventData.duration.ToString());
-            ConnectionManager.getInstance().RequestData(uniqueId, eventData.positionX, eventData.positionY);
+            /*String uniqueId = ExperimentController.getInstance().PreparePositionData(eventData.positionX, eventData.positionY, eventData.startTime.ToString(), eventData.endTime.ToString(), eventData.duration.ToString());
+            ConnectionManager.getInstance().RequestData(uniqueId, eventData.positionX, eventData.positionY);*/
 
 
             Logger.Log(data);

@@ -18,20 +18,15 @@ namespace WebAnalyzer.Models.DataModel
         private String _lastPage;
         private WebpageModel _lastPageModel;
 
-        private String _lastTimestamp;
-
-        private PositionDataModel _firstExperimentPosition;
-        private PositionDataModel _previousPosition;
-
         private List<WebpageModel> _visitedPages = new List<WebpageModel>();
 
-        private Dictionary<String, PositionDataModel> _unassignedPositions;
+        private Dictionary<String, GazeModel> _unassignedPositions;
         
 
         public ExperimentModel(String experimentName)
         {
             _experimentName = experimentName;
-            _unassignedPositions = new Dictionary<String,PositionDataModel>();
+            _unassignedPositions = new Dictionary<String, GazeModel>();
         }
         
         #region GetterSetterFunctions
@@ -93,88 +88,90 @@ namespace WebAnalyzer.Models.DataModel
             return Properties.Settings.Default.Datalocation + _experimentName + "\\";
         }
 
-        public PositionDataModel GetPosition(String uniqueId)
+        public GazeModel GetGazeModel(String uniqueId)
         {
             if (_unassignedPositions.ContainsKey(uniqueId))
             {
                 return _unassignedPositions[uniqueId];
             }
 
-            Logger.Log("No PositionModel could be found: " + uniqueId);
+            Logger.Log("No GazeModel could be found: " + uniqueId);
 
             return null;
         }
 
-        public Boolean AssignPositionToWebpage(String uniqueId, String url)
+        public Boolean AssignGazeToWebpage(String uniqueId, String url)
         {
             if (!_unassignedPositions.ContainsKey(uniqueId))
             {
                 return false;
             }
 
-            this.AddPositionData(url, _unassignedPositions[uniqueId]);
+            this.AddGazeData(url, _unassignedPositions[uniqueId]);
 
             _unassignedPositions.Remove(uniqueId);
 
             return true;
         }
 
-        public Boolean AssignPositionToWebpage(PositionDataModel posModel, String url)
+        public Boolean AssignGazeToWebpage(GazeModel gazeModel, String url)
         {
-            this.AddPositionData(url, posModel);
+            this.AddGazeData(url, gazeModel);
 
-            if (_unassignedPositions.ContainsKey(posModel.UniqueId))
+            if (_unassignedPositions.ContainsKey(gazeModel.UniqueId))
             {
-                _unassignedPositions.Remove(posModel.UniqueId);
+                _unassignedPositions.Remove(gazeModel.UniqueId);
             }
 
             return true;
         }
 
-        public String PreparePositionData(double xPosition, double yPosition, String startTime, String endTime, String duration)
+        public String PrepareGazeData(String timestamp, double leftX, double leftY, double rightX, double rightY)
         {
-            String timestamp = Timestamp.GetMillisecondsUnixTimestamp();
+            GazeModel gaze = new GazeModel(timestamp);
 
-            EyeTrackingData data = new EyeTrackingData(xPosition, yPosition, timestamp);
+            String receiveTimestamp = Timestamp.GetMillisecondsUnixTimestamp();
 
-            data.StartTime = startTime;
-            data.EndTime = endTime;
-            data.Duration = duration;
+            // left eye
 
-            PositionDataModel pos = new PositionDataModel();
+            EyeTrackingData leftData = new EyeTrackingData(leftX, leftY, receiveTimestamp);
 
-            pos.EyeTrackingData = data;
+            PositionDataModel leftPos = new PositionDataModel();
+
+            leftPos.EyeTrackingData = leftData;
+
+
+            // right eye
+
+            EyeTrackingData rightData = new EyeTrackingData(rightX, rightY, receiveTimestamp);
+
+            PositionDataModel rightPos = new PositionDataModel();
+
+            rightPos.EyeTrackingData = rightData;
+
+            // add to gaze model
+
+            gaze.LeftEye = leftPos;
+
+            gaze.RightEye = rightPos;
 
             // add to unassigned position
 
-            _unassignedPositions.Add(pos.UniqueId, pos);
+            _unassignedPositions.Add(gaze.UniqueId, gaze);
 
-            return pos.UniqueId;
+            return gaze.UniqueId;
         }
 
-        private PositionDataModel AddPositionData(String url, PositionDataModel posModel)
+        private GazeModel AddGazeData(String url, GazeModel gazeModel)
         {
-            WebpageModel pageModel = this.GetPageModel(url, posModel.ServerReceivedTimestamp);
+            WebpageModel pageModel = this.GetPageModel(url, gazeModel.Timestamp);
 
             _lastPage = url;
             _lastPageModel = pageModel;
 
-            pageModel.AddPositionData(posModel);
+            pageModel.AddGazeData(gazeModel);
 
-            if (_firstExperimentPosition == null)
-            {
-                _firstExperimentPosition = posModel;
-            }
-
-            if (_previousPosition != null)
-            {
-                _previousPosition.NextPosition = posModel;
-            }
-
-            _previousPosition = posModel;
-            _lastTimestamp = posModel.ServerReceivedTimestamp;
-
-            return posModel;
+            return gazeModel;
         }
 
         private WebpageModel GetPageModel(String url, String timestamp)

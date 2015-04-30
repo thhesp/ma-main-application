@@ -14,7 +14,7 @@ namespace WebAnalyzer.Models.DataModel
 
         private String _url;
         private String _visitTimestamp;
-        private List<PositionDataModel> _positionData = new List<PositionDataModel>();
+        private List<GazeModel> _positionData = new List<GazeModel>();
 
         public WebpageModel(String url, String visitTimestamp)
         {
@@ -36,7 +36,7 @@ namespace WebAnalyzer.Models.DataModel
             set { _visitTimestamp = value; }
         }
 
-        public void addPositionData(PositionDataModel data)
+        public void AddGazeData(GazeModel data)
         {
             _positionData.Add(data);
         }
@@ -61,7 +61,7 @@ namespace WebAnalyzer.Models.DataModel
 
             webpageNode.Attributes.Append(visited);
 
-            foreach (PositionDataModel data in _positionData)
+            foreach (GazeModel data in _positionData)
             {
                 webpageNode.AppendChild(data.ToXML(xmlDoc));
             }
@@ -70,21 +70,5 @@ namespace WebAnalyzer.Models.DataModel
         }
 
         #endregion
-
-        public PositionDataModel AddPositionData(int xPosition, int yPosition, String timestamp)
-        {
-            PositionDataModel posModel = new PositionDataModel(xPosition, yPosition, timestamp);
-
-            _positionData.Add(posModel);
-
-            return posModel;
-        }
-
-        public PositionDataModel AddPositionData(PositionDataModel posModel)
-        {
-            _positionData.Add(posModel);
-
-            return posModel;
-        }
     }
 }

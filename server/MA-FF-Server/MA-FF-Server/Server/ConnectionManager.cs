@@ -70,9 +70,9 @@ namespace WebAnalyzer.Server
             _toRemove.Add(connection);
         }
 
-        public void RequestData(String uniqueId, double xPos, double yPos)
+        public void RequestData(String uniqueId, double leftX, double leftY, double rightX, double rightY)
         {
-            Object msg = new { command = "request", uniqueid = uniqueId, x = xPos, y = yPos, serversent = Timestamp.GetMillisecondsUnixTimestamp() };
+            Object msg = new { command = "request", uniqueid = uniqueId, serversent = Timestamp.GetMillisecondsUnixTimestamp(), left = new { x = leftX, y = leftY }, right = new { x = rightX, y = leftY } };
 
             Message message = new Message(Timestamp.GetMillisecondsUnixTimestamp(), msg);
 
@@ -81,7 +81,7 @@ namespace WebAnalyzer.Server
 
         public void RequestData(String uniqueId, int xPos, int yPos)
         {
-            this.RequestData(uniqueId, (double)xPos, (double)yPos);
+            this.RequestData(uniqueId, (double)xPos, (double)yPos, (double) xPos, (double) yPos);
         }
 
         private void Broadcast(Message message)
