@@ -26,7 +26,7 @@ namespace WebAnalyzer.Server
             return instance;
         }
 
-        private static int WORK_DELAY = 15;
+        private static int WORK_DELAY = 10;
 
         private Boolean _workMessages = false;
 

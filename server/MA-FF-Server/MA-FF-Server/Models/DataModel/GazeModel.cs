@@ -62,6 +62,15 @@ namespace WebAnalyzer.Models.DataModel
         {
             XmlNode gazeNode = xmlDoc.CreateElement("gaze");
 
+            //timestamp
+
+            XmlAttribute timestamp = xmlDoc.CreateAttribute("timestamp");
+
+            timestamp.Value = this.Timestamp;
+
+            gazeNode.Attributes.Append(timestamp);
+
+
             //server sent timestamp
 
             XmlAttribute serverSentTimestamp = xmlDoc.CreateAttribute("server-sent-timestamp");

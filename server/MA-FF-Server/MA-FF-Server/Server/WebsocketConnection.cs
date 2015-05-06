@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,12 +23,12 @@ namespace WebAnalyzer.Server
 
         private Boolean _established = false;
 
-        private Queue<Message> _messageQueue;
+        private ConcurrentQueue<Message> _messageQueue;
 
         public WebsocketConnection(WebSocket ws)
         {
             _ws = ws;
-            _messageQueue = new Queue<Message>();
+            _messageQueue = new ConcurrentQueue<Message>();
         }
 
         public Boolean Established
@@ -52,7 +53,7 @@ namespace WebAnalyzer.Server
             }
         }
 
-        public Queue<Message> MessageQueue
+        public ConcurrentQueue<Message> MessageQueue
         {
             get { return _messageQueue; }
         }
@@ -75,7 +76,8 @@ namespace WebAnalyzer.Server
             try
             {
                 this.Out.OnNext(msg.MessageObj);
-                _messageQueue.Dequeue();
+                Message outMessage;
+                _messageQueue.TryDequeue(out outMessage);
             }
             catch (WebSocketException e)
             {
@@ -94,7 +96,8 @@ namespace WebAnalyzer.Server
             while ((long.Parse(currentTimestamp) - long.Parse(msg.Timestamp)) > WebsocketConnection.TIMEOUT)
             {
                 // remove first element
-                _messageQueue.Dequeue();
+                Message outMessage;
+                _messageQueue.TryDequeue(out outMessage);
                 if (_messageQueue.Count > 0)
                 {
                     // get new first element

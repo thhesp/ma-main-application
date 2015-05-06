@@ -27,6 +27,8 @@ namespace WebAnalyzer.Experiment
 
         private ExperimentModel _experiment;
 
+        private Boolean _running;
+
         private ExperimentController()
         {
             
@@ -37,9 +39,16 @@ namespace WebAnalyzer.Experiment
             _experiment = new ExperimentModel(name);
         }
 
+        public Boolean Running
+        {
+            get { return _running; }
+            set { _running = value; }
+        }
+
         public void StartExperiment()
         {
             Logger.Log("Start Experiment");
+            _running = true;
             // start server etc.
             // set listeners
         }
@@ -47,6 +56,7 @@ namespace WebAnalyzer.Experiment
         public void StopExperiment()
         {
             Logger.Log("Stop Experiment");
+            _running = false;
             // stop server etc.
 
             // export raw data
@@ -56,7 +66,11 @@ namespace WebAnalyzer.Experiment
 
         public String PrepareGazeData(String timestamp, double leftX, double leftY, double rightX, double rightY)
         {
-            return _experiment.PrepareGazeData(timestamp, leftX, leftY, rightX, rightY);
+            if (this.Running)
+            {
+                return _experiment.PrepareGazeData(timestamp, leftX, leftY, rightX, rightY);
+            }
+            return null;
         }
 
         public Boolean AssignGazeToWebpage(String uniqueId, String url)
