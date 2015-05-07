@@ -83,6 +83,18 @@ namespace WebAnalyzer.Experiment
             return _experiment.AssignGazeToWebpage(gazeModel, url);
         }
 
+        public Boolean DisposeOfGazeData(String uniqueId)
+        {
+            return _experiment.DisposeOfGazeData(uniqueId);
+        }
+
+        public Boolean DisposeOfGazeData(GazeModel gazeModel)
+        {
+            return _experiment.DisposeOfGazeData(gazeModel);
+        }
+
+
+
         public GazeModel GetGazeModel(String uniqueId)
         {
             return _experiment.GetGazeModel(uniqueId);

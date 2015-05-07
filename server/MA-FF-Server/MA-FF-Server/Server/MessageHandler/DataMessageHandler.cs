@@ -41,7 +41,13 @@ namespace WebAnalyzer.Server.MessageHandler
             if (msgIn.uniqueid != null)
             {
 
-                GazeModel gaze = extractGazeData(msgIn);
+                if (CheckForError(msgIn))
+                {
+                    String uniqueId = msgIn.uniqueid;
+                    ExperimentController.getInstance().DisposeOfGazeData(uniqueId);
+                }
+
+                GazeModel gaze = ExtractGazeData(msgIn);
 
                 if (gaze != null)
                 {
@@ -55,7 +61,7 @@ namespace WebAnalyzer.Server.MessageHandler
             }
         }
 
-        private GazeModel extractGazeData(dynamic msgIn)
+        private GazeModel ExtractGazeData(dynamic msgIn)
         {
             String serverReceivedTimestamp = Timestamp.GetMillisecondsUnixTimestamp();
 
@@ -90,8 +96,8 @@ namespace WebAnalyzer.Server.MessageHandler
                     gazeModel.ClientReceivedTimestamp = clientReceivedTimestamp;
                 }
 
-                gazeModel.LeftEye = extractPositionData(gazeModel.LeftEye, msgIn.left);
-                gazeModel.RightEye = extractPositionData(gazeModel.RightEye, msgIn.right);
+                gazeModel.LeftEye = ExtractPositionData(gazeModel.LeftEye, msgIn.left);
+                gazeModel.RightEye = ExtractPositionData(gazeModel.RightEye, msgIn.right);
 
             }else{
                 Logger.Log("Could not get corresponding GazeModel");
@@ -101,7 +107,18 @@ namespace WebAnalyzer.Server.MessageHandler
             return gazeModel;
         }
 
-        private PositionDataModel extractPositionData(PositionDataModel posModel, dynamic msgIn)
+        private Boolean CheckForError(dynamic msgIn)
+        {
+            if ( (msgIn.left.command != null && msgIn.left.command == "error" ) && 
+                ( msgIn.right.command != null && msgIn.right.command == "error" ))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private PositionDataModel ExtractPositionData(PositionDataModel posModel, dynamic msgIn)
         {
 
             Logger.Log("MsgIn: "+ msgIn);
@@ -112,13 +129,13 @@ namespace WebAnalyzer.Server.MessageHandler
             {
                 // get element data 
 
-                posModel.Element = extractElementData(msgIn);
+                posModel.Element = ExtractElementData(msgIn);
             }
 
             return posModel;
         }
 
-        private DOMElementModel extractElementData(dynamic msgIn)
+        private DOMElementModel ExtractElementData(dynamic msgIn)
         {
             DOMElementModel elementModel = new DOMElementModel();
 

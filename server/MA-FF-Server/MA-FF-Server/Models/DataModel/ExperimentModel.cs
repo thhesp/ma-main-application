@@ -116,14 +116,39 @@ namespace WebAnalyzer.Models.DataModel
 
         public Boolean AssignGazeToWebpage(GazeModel gazeModel, String url)
         {
+            if (!_unassignedPositions.ContainsKey(gazeModel.UniqueId))
+            {
+                return false;
+            }
+            
             this.AddGazeData(url, gazeModel);
 
+             _unassignedPositions.Remove(gazeModel.UniqueId);
+
+            return true;
+        }
+
+        public Boolean DisposeOfGazeData(String uniqueId)
+        {
+            if (!_unassignedPositions.ContainsKey(uniqueId))
+            {
+                return false;
+            }
+
+            _unassignedPositions.Remove(uniqueId);
+
+            return true;
+        }
+
+        public Boolean DisposeOfGazeData(GazeModel gazeModel)
+        {
             if (_unassignedPositions.ContainsKey(gazeModel.UniqueId))
             {
                 _unassignedPositions.Remove(gazeModel.UniqueId);
+                return true;
             }
 
-            return true;
+            return false;
         }
 
         public String PrepareGazeData(String timestamp, double leftX, double leftY, double rightX, double rightY)
