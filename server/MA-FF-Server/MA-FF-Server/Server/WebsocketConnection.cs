@@ -65,11 +65,11 @@ namespace WebAnalyzer.Server
 
         public void workMessageQueue()
         {
-            if(!this.Established || !this.IsConnected || _messageQueue.Count == 0)
-                return;
-
             //check if messages are too old and remove them
             removeOldMessages();
+
+            if (!this.Established || !this.IsConnected || _messageQueue.Count == 0)
+                return;
 
             //sent first message (later in try catch block)
             Message msg = _messageQueue.ElementAt(0);
