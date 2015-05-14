@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using vtortola.WebSockets;
-using WebAnalyzer.Models.Base;
+using WebAnalyzer.Models.MessageModel;
 using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Server
@@ -73,9 +73,22 @@ namespace WebAnalyzer.Server
 
             //sent first message (later in try catch block)
             Message msg = _messageQueue.ElementAt(0);
+
             try
             {
-                this.Out.OnNext(msg.MessageObj);
+                if (msg is DataMessage)
+                {
+                    this.Out.OnNext(((DataMessage)msg).MessageObj);
+                }
+                else if (msg is EchoMessage)
+                {
+                    this.Out.OnNext(((EchoMessage)msg).MessageObj);
+                }
+                else
+                {
+                    return;
+                }
+                
                 Message outMessage;
                 _messageQueue.TryDequeue(out outMessage);
             }

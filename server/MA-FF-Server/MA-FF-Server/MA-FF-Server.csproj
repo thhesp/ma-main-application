@@ -80,7 +80,9 @@
     <Compile Include="Models\Base\ExperimentSettings.cs" />
     <Compile Include="Export\ExperimentExporter.cs" />
     <Compile Include="Models\Base\BasicRawData.cs" />
-    <Compile Include="Models\Base\Message.cs" />
+    <Compile Include="Models\MessageModel\DataMessage.cs" />
+    <Compile Include="Models\MessageModel\EchoMessage.cs" />
+    <Compile Include="Models\MessageModel\Message.cs" />
     <Compile Include="Models\DataModel\AttributeModel.cs" />
     <Compile Include="Models\DataModel\DOMElementModel.cs" />
     <Compile Include="Models\DataModel\ExperimentModel.cs" />

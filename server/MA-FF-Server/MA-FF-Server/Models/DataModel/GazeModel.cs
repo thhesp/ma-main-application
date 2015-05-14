@@ -70,6 +70,14 @@ namespace WebAnalyzer.Models.DataModel
 
             gazeNode.Attributes.Append(timestamp);
 
+            // data requested timestamp
+
+            XmlAttribute dataRequestedTimestamp = xmlDoc.CreateAttribute("data-requested-timestamp");
+
+            dataRequestedTimestamp.Value = this.DataRequestedTimestamp;
+
+            gazeNode.Attributes.Append(dataRequestedTimestamp);
+
 
             //server sent timestamp
 

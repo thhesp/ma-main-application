@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using WebAnalyzer.Util;
-using WebAnalyzer.Models.Base;
+using WebAnalyzer.Models.MessageModel;
 
 namespace WebAnalyzer.Server.MessageHandler
 {
@@ -34,7 +34,7 @@ namespace WebAnalyzer.Server.MessageHandler
         {
             //_connection.Out.OnNext(omsgIn);
 
-            Message message = new Message(Timestamp.GetMillisecondsUnixTimestamp(), omsgIn);
+            EchoMessage message = new EchoMessage(Timestamp.GetMillisecondsUnixTimestamp(), omsgIn);
             _connection.EnqueueMessage(message);
         }
     }

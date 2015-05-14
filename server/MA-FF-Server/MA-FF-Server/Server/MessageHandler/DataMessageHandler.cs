@@ -74,6 +74,13 @@ namespace WebAnalyzer.Server.MessageHandler
 
                 gazeModel.ServerReceivedTimestamp = serverReceivedTimestamp;
 
+                String requestedTimestamp = msgIn.datarequest;
+
+                if (requestedTimestamp != null)
+                {
+                    gazeModel.DataRequestedTimestamp = requestedTimestamp;
+                }
+
                 String serverTimestamp = msgIn.serversent;
 
                 if (serverTimestamp != null)

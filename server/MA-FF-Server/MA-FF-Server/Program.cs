@@ -24,9 +24,9 @@ namespace WebAnalyzer
             }
 
 
-            //new CommunicationTest();
+            new CommunicationTest();
 
-            new WebAnalyzer();
+            //new WebAnalyzer();
         }
 
     }

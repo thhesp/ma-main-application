@@ -4,27 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebAnalyzer.Models.Base
+namespace WebAnalyzer.Models.MessageModel
 {
-    public class Message
+    using Util = Util;
+
+    abstract public class Message
     {
         String _timestamp;
-        dynamic _messageObj;
+        
 
-        public Message(String timestamp, dynamic messageObj)
+        public Message(String timestamp)
         {
             _timestamp = timestamp;
-            _messageObj = messageObj;
         }
+
 
         public String Timestamp
         {
             get { return _timestamp; }
         }
 
+
         public dynamic MessageObj
         {
-            get { return _messageObj; }
+            get { return null; }   
         }
     }
 }

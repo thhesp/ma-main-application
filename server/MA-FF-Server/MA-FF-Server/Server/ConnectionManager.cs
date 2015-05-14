@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Reactive.Linq;
 
 using WebAnalyzer.Util;
-using WebAnalyzer.Models.Base;
+using WebAnalyzer.Models.MessageModel;
 
 namespace WebAnalyzer.Server
 {
@@ -72,9 +72,9 @@ namespace WebAnalyzer.Server
 
         public void RequestData(String uniqueId, double leftX, double leftY, double rightX, double rightY)
         {
-            Object msg = new { command = "request", uniqueid = uniqueId, serversent = Timestamp.GetMillisecondsUnixTimestamp(), left = new { x = leftX, y = leftY }, right = new { x = rightX, y = leftY } };
+            DataMessage message = new DataMessage(Timestamp.GetMillisecondsUnixTimestamp());
 
-            Message message = new Message(Timestamp.GetMillisecondsUnixTimestamp(), msg);
+            message.SetMessageData(uniqueId, leftX, leftY, rightX, rightY);
 
             this.Broadcast(message);
         }

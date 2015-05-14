@@ -8,6 +8,8 @@ namespace WebAnalyzer.Models.Base
 {
     class BasicRawData
     {
+        protected String _dataRequestedTimestamp;
+
         protected String _serverSentTimestamp;
         protected String _serverReceivedTimestamp;
 
@@ -21,6 +23,12 @@ namespace WebAnalyzer.Models.Base
         }
 
         #region GetterSetterFunctions
+
+        public String DataRequestedTimestamp
+        {
+            get { return _dataRequestedTimestamp; }
+            set { _dataRequestedTimestamp = value; }
+        }
 
         public String ServerSentTimestamp
         {
