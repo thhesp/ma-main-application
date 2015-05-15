@@ -14,7 +14,7 @@ namespace WebAnalyzer.Server
     public class WebsocketConnection
     {
 
-        private static int TIMEOUT = 2000;
+        private static int TIMEOUT = 500;
 
         public IObservable<dynamic> In { get; set; }
         public IObserver<dynamic> Out { get; set; }
@@ -70,6 +70,8 @@ namespace WebAnalyzer.Server
 
             if (!this.Established || !this.IsConnected || _messageQueue.Count == 0)
                 return;
+
+            Logger.Log("Sent Message... current Message Count: " + _messageQueue.Count);
 
             //sent first message (later in try catch block)
             Message msg = _messageQueue.ElementAt(0);
