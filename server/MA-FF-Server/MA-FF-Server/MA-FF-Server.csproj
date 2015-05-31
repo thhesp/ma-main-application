@@ -113,6 +113,7 @@
     </Compile>
     <Compile Include="ApplicationSettings\AppSettings.cs" />
     <Compile Include="ApplicationSettings\SettingsValidator.cs" />
+    <Compile Include="Util\Statistics.cs" />
     <Compile Include="Util\TextBoxStreamWriter.cs" />
     <Compile Include="EyeTracking\EyeTrackingController.cs" />
     <Compile Include="EyeTracking\EyeTrackingModel.cs" />

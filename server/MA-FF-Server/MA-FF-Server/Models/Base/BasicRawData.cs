@@ -56,5 +56,29 @@ namespace WebAnalyzer.Models.Base
 
         #endregion
 
+
+        
+        #region StatisticsFunctions
+
+        public long DurationFromRequestTillSending()
+        {
+
+            return long.Parse(_serverSentTimestamp) - long.Parse(_dataRequestedTimestamp);
+        }
+
+        public long DurationFromServerSentToReceived()
+        {
+
+            return long.Parse(_serverReceivedTimestamp) - long.Parse(_serverSentTimestamp);
+        }
+
+        public long DurationFromClientReceivedToClientSent()
+        {
+            return long.Parse(_clientSentTimestamp) - long.Parse(_clientReceivedTimestamp);
+        }
+
+        #endregion
+
     }
+
 }

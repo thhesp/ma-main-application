@@ -134,6 +134,35 @@ namespace WebAnalyzer.Models.DataModel
             return gazeNode;
         }
 
+        public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc)
+        {
+            XmlNode gazeNode = xmlDoc.CreateElement("gaze");
+
+            // create & insert statistics?
+
+
+            XmlAttribute durRequestTillSent = xmlDoc.CreateAttribute("duration-from-request-till-sent");
+
+            durRequestTillSent.Value = this.DurationFromRequestTillSending().ToString();
+
+            gazeNode.Attributes.Append(durRequestTillSent);
+
+
+            XmlAttribute durServerSentReceived = xmlDoc.CreateAttribute("duration-from-server-sent-to-received");
+
+            durServerSentReceived.Value = this.DurationFromServerSentToReceived().ToString();
+
+            gazeNode.Attributes.Append(durServerSentReceived);
+
+            XmlAttribute durClientReceivedSent = xmlDoc.CreateAttribute("duration-from-client-received-to-sent");
+
+            durClientReceivedSent.Value = this.DurationFromClientReceivedToClientSent().ToString();
+
+            gazeNode.Attributes.Append(durClientReceivedSent);
+
+            return gazeNode;
+        }
+
         #endregion
     }
 }

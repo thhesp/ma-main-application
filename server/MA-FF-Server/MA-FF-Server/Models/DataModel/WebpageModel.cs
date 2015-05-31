@@ -69,6 +69,127 @@ namespace WebAnalyzer.Models.DataModel
             return webpageNode;
         }
 
+        public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc)
+        {
+            XmlNode webpageNode = xmlDoc.CreateElement("webpage");
+
+            XmlAttribute url = xmlDoc.CreateAttribute("url");
+
+            url.Value = this.Url;
+
+            webpageNode.Attributes.Append(url);
+
+            XmlAttribute visited = xmlDoc.CreateAttribute("visited");
+
+            visited.Value = this.VisitTimestamp;
+
+            // create & insert statistics?
+
+            webpageNode.AppendChild(CreateWebpageStatistics(xmlDoc));
+
+            XmlNode gazesNode = xmlDoc.CreateElement("gazes");
+
+            foreach (GazeModel data in _positionData)
+            {
+                gazesNode.AppendChild(data.GenerateStatisticsXML(xmlDoc));
+            }
+
+            webpageNode.AppendChild(gazesNode);
+
+
+            return webpageNode;
+        }
+
+        private XmlNode CreateWebpageStatistics(XmlDocument xmlDoc)
+        {
+            // sum of statistics?
+            XmlNode statsNode = xmlDoc.CreateElement("webpage-stats");
+
+            XmlNode requestTillSent = xmlDoc.CreateElement("request-till-sent");
+
+            InsertArrayStatistics(xmlDoc, requestTillSent, ArrayOfDurationFromRequestTillSent());
+
+            statsNode.AppendChild(requestTillSent);
+
+            XmlNode serverSentToReceived = xmlDoc.CreateElement("server-sent-to-received");
+
+            InsertArrayStatistics(xmlDoc, serverSentToReceived, ArrayOfDurationFromServerSentToReceived());
+
+            statsNode.AppendChild(serverSentToReceived);
+
+            XmlNode clientReceivedToSent = xmlDoc.CreateElement("client-received-to-sent");
+
+            InsertArrayStatistics(xmlDoc, clientReceivedToSent, ArrayOfDurationFromClientReceivedToClientSent());
+
+            statsNode.AppendChild(clientReceivedToSent);
+
+
+            return statsNode;
+        }
+
+        private void InsertArrayStatistics(XmlDocument xmlDoc, XmlNode node, long[] array)
+        {
+            XmlAttribute mean = xmlDoc.CreateAttribute("mean");
+
+            mean.Value = Statistics.CalculateMean(array).ToString();
+
+            node.Attributes.Append(mean);
+
+            XmlAttribute median = xmlDoc.CreateAttribute("median");
+
+            median.Value = Statistics.CalculateMedian(array).ToString();
+
+            node.Attributes.Append(median);
+
+            XmlAttribute min = xmlDoc.CreateAttribute("min");
+
+            min.Value = Statistics.GetMin(array).ToString();
+
+            node.Attributes.Append(min);
+
+
+            XmlAttribute max = xmlDoc.CreateAttribute("max");
+
+            max.Value = Statistics.GetMax(array).ToString();
+
+            node.Attributes.Append(max);
+
+        }
+
+        public long[] ArrayOfDurationFromRequestTillSent()
+        {
+            long[] durations = new long[_positionData.Count];
+            for (int i = 0; i < _positionData.Count; i++)
+            {
+                durations[i] = _positionData[i].DurationFromRequestTillSending();
+            }
+
+            return durations;
+        }
+
+        public long[] ArrayOfDurationFromServerSentToReceived()
+        {
+            long[] durations = new long[_positionData.Count];
+            for (int i = 0; i < _positionData.Count; i++)
+            {
+                durations[i] = _positionData[i].DurationFromServerSentToReceived();
+            }
+
+            return durations;
+        }
+
+
+        public long[] ArrayOfDurationFromClientReceivedToClientSent()
+        {
+            long[] durations = new long[_positionData.Count];
+            for (int i = 0; i < _positionData.Count; i++)
+            {
+                durations[i] = _positionData[i].DurationFromClientReceivedToClientSent();
+            }
+
+            return durations;
+        }
+
         #endregion
     }
 }

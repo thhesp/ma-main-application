@@ -102,11 +102,7 @@ namespace WebAnalyzer.Experiment
 
         private void ExportToXML()
         {
-            String timestamp = Timestamp.GetUnixTimestamp();
-
-            String filename = timestamp + _experiment.ExperimentName;
-
-            new ExperimentExporter().ExportToXML(_experiment.GetBaseExperimentLocation(), filename, _experiment);
+            ExperimentExporter.ExportToXML(_experiment);
         }
     }
 }

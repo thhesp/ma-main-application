@@ -81,6 +81,132 @@ namespace WebAnalyzer.Models.DataModel
             return experimentNode;
         }
 
+        public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc)
+        {
+            XmlNode statisticsNode = xmlDoc.CreateElement("statistics");
+
+            XmlAttribute experimentName = xmlDoc.CreateAttribute("name");
+
+            experimentName.Value = this.ExperimentName;
+
+            statisticsNode.Attributes.Append(experimentName);
+
+            // create & insert statistics for whole experiment
+
+            XmlAttribute visitedWebpagesCount = xmlDoc.CreateAttribute("count-of-visited-pages");
+
+            visitedWebpagesCount.Value = this._visitedPages.Count.ToString();
+
+            statisticsNode.Attributes.Append(visitedWebpagesCount);
+
+            //???
+            statisticsNode.AppendChild(CreateExperimentStatistics(xmlDoc));
+
+            XmlNode webpagesNode = xmlDoc.CreateElement("webpages");
+
+            foreach (WebpageModel page in _visitedPages)
+            {
+                webpagesNode.AppendChild(page.GenerateStatisticsXML(xmlDoc));
+            }
+
+            statisticsNode.AppendChild(webpagesNode);
+
+            return statisticsNode;
+        }
+
+        private XmlNode CreateExperimentStatistics(XmlDocument xmlDoc) 
+        { 
+            // number of revisited pages?
+            
+            // sum of statistics?
+            XmlNode statsNode = xmlDoc.CreateElement("global-stats");
+
+            XmlNode requestTillSent = xmlDoc.CreateElement("request-till-sent");
+
+            InsertArrayStatistics(xmlDoc, requestTillSent, ArrayOfDurationFromRequestTillSent());
+
+            statsNode.AppendChild(requestTillSent);
+
+            XmlNode serverSentToReceived = xmlDoc.CreateElement("server-sent-to-received");
+
+            InsertArrayStatistics(xmlDoc, serverSentToReceived, ArrayOfDurationFromServerSentToReceived());
+
+            statsNode.AppendChild(serverSentToReceived);
+
+            XmlNode clientReceivedToSent = xmlDoc.CreateElement("client-received-to-sent");
+
+            InsertArrayStatistics(xmlDoc, clientReceivedToSent, ArrayOfDurationFromClientReceivedToClientSent());
+
+            statsNode.AppendChild(clientReceivedToSent);
+
+
+            return statsNode;
+
+        }
+
+        private void InsertArrayStatistics(XmlDocument xmlDoc, XmlNode node, long[] array)
+        {
+            XmlAttribute mean = xmlDoc.CreateAttribute("mean");
+
+            mean.Value = Statistics.CalculateMean(array).ToString();
+
+            node.Attributes.Append(mean);
+
+            XmlAttribute median = xmlDoc.CreateAttribute("median");
+
+            median.Value = Statistics.CalculateMedian(array).ToString();
+
+            node.Attributes.Append(median);
+
+            XmlAttribute min = xmlDoc.CreateAttribute("min");
+
+            min.Value = Statistics.GetMin(array).ToString();
+
+            node.Attributes.Append(min);
+
+
+            XmlAttribute max = xmlDoc.CreateAttribute("max");
+
+            max.Value = Statistics.GetMax(array).ToString();
+
+            node.Attributes.Append(max);
+
+        }
+
+        public long[] ArrayOfDurationFromRequestTillSent()
+        {
+            long[] durations = new long[0];
+            foreach (WebpageModel page in _visitedPages)
+            {
+                durations = durations.Concat(page.ArrayOfDurationFromRequestTillSent()).ToArray();
+            }
+
+            return durations;
+        }
+
+        public long[] ArrayOfDurationFromServerSentToReceived()
+        {
+            long[] durations = new long[0];
+            foreach (WebpageModel page in _visitedPages)
+            {
+                durations = durations.Concat(page.ArrayOfDurationFromServerSentToReceived()).ToArray();
+            }
+
+            return durations;
+        }
+
+
+        public long[] ArrayOfDurationFromClientReceivedToClientSent()
+        {
+            long[] durations = new long[0];
+            foreach (WebpageModel page in _visitedPages)
+            {
+                durations = durations.Concat(page.ArrayOfDurationFromClientReceivedToClientSent()).ToArray();
+            }
+
+            return durations;
+        }
+
         #endregion
 
         public String GetBaseExperimentLocation()
