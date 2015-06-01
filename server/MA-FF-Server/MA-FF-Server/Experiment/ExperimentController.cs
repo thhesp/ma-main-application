@@ -102,7 +102,10 @@ namespace WebAnalyzer.Experiment
 
         private void ExportToXML()
         {
-            ExperimentExporter.ExportToXML(_experiment);
+            if (_experiment.Exportable())
+            {
+                ExperimentExporter.ExportToXML(_experiment);
+            }
         }
     }
 }

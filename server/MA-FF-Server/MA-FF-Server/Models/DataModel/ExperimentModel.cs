@@ -51,6 +51,16 @@ namespace WebAnalyzer.Models.DataModel
 
         #endregion
 
+        public Boolean Exportable()
+        {
+            if(_visitedPages.Count > 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         #region XMLFunctions
 
         public XmlNode ToXML(XmlDocument xmlDoc)
