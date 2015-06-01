@@ -42,9 +42,6 @@ namespace WebAnalyzer.Server
         {
             var published = connection.In.Publish().RefCount();
 
-
-            Logger.Log("Message received?");
-
             // connectiong
             published.Where(msgIn => msgIn.command != null && (msgIn.command == "connectRequest" || msgIn.command == "connectComplete"))
                 .Subscribe(new ConnectionMessageHandler(_connectionManager, connection));

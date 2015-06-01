@@ -33,6 +33,8 @@ namespace WebAnalyzer.Server.MessageHandler
         {
             dynamic msgIn = omsgIn;
 
+            Logger.Log("Message received: " + msgIn);
+
             // extract data from json object and handle it
             String command = msgIn.command;
 

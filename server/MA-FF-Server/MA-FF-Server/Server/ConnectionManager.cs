@@ -130,7 +130,7 @@ namespace WebAnalyzer.Server
         {
             while (_workMessages)
             {
-                Logger.Log("Working through the queues...");
+                //Logger.Log("Working through the queues...");
                 foreach (var connection in this)
                 {
                     connection.workMessageQueue();
