@@ -41,18 +41,21 @@ namespace WebAnalyzer.Server
         private Task acceptingTask;
 
         private WebsocketServer()
-        {
+        {         
+        }
+
+        private void CreateServer(){
             cancellation = new CancellationTokenSource();
 
             server = new WebSocketListener(new IPEndPoint(IPAddress.Any, 8888));
             var rfc6455 = new vtortola.WebSockets.Rfc6455.WebSocketFactoryRfc6455(server);
+            rfc6455.MessageExtensions.RegisterExtension(new WebSocketDeflateExtension());
             server.Standards.RegisterStandard(rfc6455);
-
-            
         }
 
         public void start()
         {
+            CreateServer();
             WebsocketConnectionsObserver messagesObserver = new WebsocketConnectionsObserver(ConnectionManager.getInstance());
 
             server.Start();
@@ -83,6 +86,8 @@ namespace WebAnalyzer.Server
 
             server.Stop();
             cancellation.Cancel();
+
+            server.Dispose();
 
             Logger.Log("Server stopped");
         }

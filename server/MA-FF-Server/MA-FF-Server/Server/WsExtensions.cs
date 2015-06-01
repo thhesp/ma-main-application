@@ -33,7 +33,6 @@ namespace WebAnalyzer.Server
 
         public static void WriteDynamic(this WebSocket ws, dynamic data)
         {
-            
             JsonSerializer serializer = new JsonSerializer();
             using (var writer = ws.CreateMessageWriter(WebSocketMessageType.Text))
             {
