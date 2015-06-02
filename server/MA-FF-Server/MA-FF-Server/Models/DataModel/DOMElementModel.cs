@@ -94,6 +94,16 @@ namespace WebAnalyzer.Models.DataModel
             _classes.Add(className);
         }
 
+        public void AddClasses(String classes)
+        {
+            String[] classesArray = classes.Split(null);
+
+            foreach (String className in classesArray)
+            {
+                AddClass(className);
+            }
+        }
+
         public void AddAttribute(String name, String value)
         {
             AttributeModel attrModel = new AttributeModel(name, value);

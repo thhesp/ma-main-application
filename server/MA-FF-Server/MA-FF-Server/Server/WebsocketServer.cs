@@ -45,9 +45,19 @@ namespace WebAnalyzer.Server
         }
 
         private void CreateServer(){
+            this.CreateServer(8888);
+        }
+
+        private void CreateServer(int port)
+        {
+            if (server != null)
+            {
+                stop();
+            }
+
             cancellation = new CancellationTokenSource();
 
-            server = new WebSocketListener(new IPEndPoint(IPAddress.Any, 8888));
+            server = new WebSocketListener(new IPEndPoint(IPAddress.Any, port));
             var rfc6455 = new vtortola.WebSockets.Rfc6455.WebSocketFactoryRfc6455(server);
             rfc6455.MessageExtensions.RegisterExtension(new WebSocketDeflateExtension());
             server.Standards.RegisterStandard(rfc6455);

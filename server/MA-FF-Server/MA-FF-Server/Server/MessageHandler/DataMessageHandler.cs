@@ -178,13 +178,6 @@ namespace WebAnalyzer.Server.MessageHandler
         {
             DOMElementModel elementModel = new DOMElementModel();
 
-            String id = msgIn.id;
-
-            if (id != null)
-            {
-                elementModel.ID = id;
-            }
-
             String tag = msgIn.tag;
 
             if (tag != null)
@@ -192,15 +185,45 @@ namespace WebAnalyzer.Server.MessageHandler
                 elementModel.Tag = tag;
             }
 
-            String title = msgIn.title;
+            ExtractElementPosition(elementModel, msgIn.element);
+            ExtractElementAttributes(elementModel, msgIn);
 
-            if (title != null)
+            return elementModel;
+        }
+
+        private static void ExtractElementAttributes(DOMElementModel elementModel, dynamic msgIn)
+        {
+            if (msgIn.attributes != null)
             {
-                elementModel.Title = title;
+                foreach (dynamic attr in msgIn.attributes)
+                {
+                    String name = attr.name;
+                    String value = attr.value;
+
+                    if (name != null && value != null)
+                    {
+                        elementModel.AddAttribute(name, value);
+                    }
+
+
+                    if (name == "id")
+                    {
+                        elementModel.ID = value;
+                    }
+                    else if (name == "title")
+                    {
+                        elementModel.Title = value;
+                    }
+                    else if (name == "class")
+                    {
+                        elementModel.AddClasses(value);
+                    }
+                }
             }
+        }
 
-            dynamic element = msgIn.element;
-
+        private void ExtractElementPosition(DOMElementModel elementModel, dynamic element)
+        {
             if (element != null)
             {
                 int left = element.left;
@@ -245,30 +268,6 @@ namespace WebAnalyzer.Server.MessageHandler
                     elementModel.OuterHeight = outerHeight;
                 }
             }
-
-            if (msgIn.classes != null)
-            {
-                foreach (String className in msgIn.classes)
-                {
-                    elementModel.AddClass(className);
-                }
-            }
-
-            if (msgIn.attributes != null)
-            {
-                foreach (dynamic attr in msgIn.attributes)
-                {
-                    String name = attr.name;
-                    String value = attr.value;
-
-                    if (name != null && value != null)
-                    {
-                        elementModel.AddAttribute(name, value);
-                    }
-                }
-            }
-
-            return elementModel;
         }
     }
 }
