@@ -81,7 +81,11 @@ namespace WebAnalyzer.Server
 
         public void RequestData(String uniqueId, int xPos, int yPos)
         {
-            this.RequestData(uniqueId, (double)xPos, (double)yPos, (double) xPos, (double) yPos);
+            SmallDataMessage message = new SmallDataMessage(Timestamp.GetMillisecondsUnixTimestamp());
+
+            message.SetMessageData(uniqueId, xPos, yPos);
+
+            this.Broadcast(message);
         }
 
         private void Broadcast(Message message)

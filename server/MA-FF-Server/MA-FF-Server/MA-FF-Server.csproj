@@ -92,6 +92,7 @@
     <Compile Include="Models\DataModel\WebpageModel.cs" />
     <Compile Include="Models\EventModel\ClickEventModel.cs" />
     <Compile Include="Models\EventModel\ScrollEventModel.cs" />
+    <Compile Include="Models\MessageModel\SmallDataMessage.cs" />
     <Compile Include="Server\ConnectionManager.cs" />
     <Compile Include="Server\MessageHandler\EchoMessageHandler.cs" />
     <Compile Include="Server\MessageHandler\ConnectionMessageHandler.cs" />

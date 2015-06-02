@@ -55,7 +55,7 @@ namespace WebAnalyzer.Test.Communication
 
         public void position()
         {
-            Logger.Log("Mouseposition: " + Cursor.Position.X + " / " + Cursor.Position.Y);
+            //Logger.Log("Mouseposition: " + Cursor.Position.X + " / " + Cursor.Position.Y);
             PositionEventArgs args = new PositionEventArgs();
             args.X = Cursor.Position.X;
             args.Y = Cursor.Position.Y;

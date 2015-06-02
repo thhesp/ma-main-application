@@ -64,6 +64,15 @@ namespace WebAnalyzer.Experiment
             this.ExportToXML();
         }
 
+        public String PrepareGazeData(String timestamp, double x, double y)
+        {
+            if (this.Running)
+            {
+                return _experiment.PrepareGazeData(timestamp, x, y);
+            }
+            return null;
+        }
+
         public String PrepareGazeData(String timestamp, double leftX, double leftY, double rightX, double rightY)
         {
             if (this.Running)

@@ -287,6 +287,11 @@ namespace WebAnalyzer.Models.DataModel
             return false;
         }
 
+        public String PrepareGazeData(String timestamp, double x, double y)
+        {
+            return this.PrepareGazeData(timestamp, x, y, x, y);
+        }
+
         public String PrepareGazeData(String timestamp, double leftX, double leftY, double rightX, double rightY)
         {
             GazeModel gaze = new GazeModel(timestamp);

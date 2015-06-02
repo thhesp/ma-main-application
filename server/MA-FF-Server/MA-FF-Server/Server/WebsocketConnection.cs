@@ -78,7 +78,10 @@ namespace WebAnalyzer.Server
 
             try
             {
-                if (msg is DataMessage)
+                if (msg is SmallDataMessage)
+                {
+                    this.Out.OnNext(((SmallDataMessage)msg).MessageObj);
+                }else if (msg is DataMessage)
                 {
                     this.Out.OnNext(((DataMessage)msg).MessageObj);
                 }
@@ -88,6 +91,7 @@ namespace WebAnalyzer.Server
                 }
                 else
                 {
+                    Logger.Log("Message type unknown!");
                     return;
                 }
                 

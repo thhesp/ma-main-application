@@ -103,9 +103,7 @@ namespace WebAnalyzer.Server.MessageHandler
                     gazeModel.ClientReceivedTimestamp = clientReceivedTimestamp;
                 }
 
-                gazeModel.LeftEye = ExtractPositionData(gazeModel.LeftEye, msgIn.left);
-                gazeModel.RightEye = ExtractPositionData(gazeModel.RightEye, msgIn.right);
-
+                ExtractEyeData(gazeModel, msgIn);
             }else{
                 Logger.Log("Could not get corresponding GazeModel");
             }
@@ -116,13 +114,47 @@ namespace WebAnalyzer.Server.MessageHandler
 
         private Boolean CheckForError(dynamic msgIn)
         {
-            if ( (msgIn.left.command != null && msgIn.left.command == "error" ) && 
+            if (msgIn.command != null && msgIn.command == "error")
+            {
+                return true;
+            }
+
+            if ((msgIn.left != null && msgIn.right != null) &&
+                (msgIn.left.command != null && msgIn.left.command == "error" ) && 
                 ( msgIn.right.command != null && msgIn.right.command == "error" ))
             {
                 return true;
             }
 
             return false;
+        }
+
+        private void ExtractEyeData(GazeModel gazeModel, dynamic msgIn)
+        {
+
+            
+            if (msgIn.left != null && msgIn.right != null)
+            {
+                // "big" message with data for both eyes
+                gazeModel.LeftEye = ExtractPositionData(gazeModel.LeftEye, msgIn.left);
+                gazeModel.RightEye = ExtractPositionData(gazeModel.RightEye, msgIn.right);
+            }
+            else if(msgIn.x != null && msgIn.y != null)
+            {
+                // "small" message with data for one eye
+                DOMElementModel elementModel = ExtractElementData(msgIn);
+
+                if (gazeModel.LeftEye != null)
+                {
+                    gazeModel.LeftEye.Element = elementModel;
+                }
+
+                if (gazeModel.RightEye != null)
+                {
+                    gazeModel.RightEye.Element = elementModel;
+                }
+            }
+
         }
 
         private PositionDataModel ExtractPositionData(PositionDataModel posModel, dynamic msgIn)
