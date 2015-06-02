@@ -154,8 +154,18 @@ namespace WebAnalyzer.EyeTracking
                 " - DistanceL: " + sampleData.leftEye.eyePositionZ.ToString();
 
            String uniqueId = ExperimentController.getInstance().PrepareGazeData(sampleData.timestamp.ToString(), sampleData.leftEye.gazeX, sampleData.leftEye.gazeY, sampleData.rightEye.gazeX, sampleData.rightEye.gazeY);
-           ConnectionManager.getInstance().RequestData(uniqueId, sampleData.leftEye.gazeX, sampleData.leftEye.gazeY, sampleData.rightEye.gazeX, sampleData.rightEye.gazeY);
 
+           if (sampleData.rightEye.gazeX == sampleData.leftEye.gazeX && 
+               sampleData.rightEye.gazeY == sampleData.leftEye.gazeY)
+           {
+               ConnectionManager.getInstance().RequestData(uniqueId, sampleData.leftEye.gazeX, sampleData.leftEye.gazeY);
+           }
+           else
+           {
+               ConnectionManager.getInstance().RequestData(uniqueId, sampleData.leftEye.gazeX, sampleData.leftEye.gazeY, sampleData.rightEye.gazeX, sampleData.rightEye.gazeY);
+           }
+            
+            
            Logger.Log(data);
         }
 

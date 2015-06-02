@@ -79,7 +79,7 @@ namespace WebAnalyzer.Server
             this.Broadcast(message);
         }
 
-        public void RequestData(String uniqueId, int xPos, int yPos)
+        public void RequestData(String uniqueId, double xPos, double yPos)
         {
             SmallDataMessage message = new SmallDataMessage(Timestamp.GetMillisecondsUnixTimestamp());
 
