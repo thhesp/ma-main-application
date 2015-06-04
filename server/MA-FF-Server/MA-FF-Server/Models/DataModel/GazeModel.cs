@@ -31,6 +31,22 @@ namespace WebAnalyzer.Models.DataModel
             return Guid.NewGuid().ToString();
         }
 
+        public PositionDataModel GetEyeData(String eye)
+        {
+
+            //@Todo: extract values to constants
+            if (eye == "left")
+            {
+                return _leftEye;
+            }
+            else if (eye == "right")
+            {
+                return _rightEye;
+            }
+
+            return null;
+        }
+
         #region GetterSetterFunctions
 
         public String UniqueId

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
+using WebAnalyzer.Models.AnalysisModel;
 using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.DataModel
@@ -15,6 +16,10 @@ namespace WebAnalyzer.Models.DataModel
         private String _url;
         private String _visitTimestamp;
         private List<GazeModel> _positionData = new List<GazeModel>();
+
+        /* Fixations */
+        private List<FixationModel> _leftFixationData = new List<FixationModel>();
+        private List<FixationModel> _rightFixationData = new List<FixationModel>();
 
         public WebpageModel(String url, String visitTimestamp)
         {
@@ -188,6 +193,143 @@ namespace WebAnalyzer.Models.DataModel
             }
 
             return durations;
+        }
+
+        public XmlNode GenerateFixationXML(XmlDocument xmlDoc)
+        {
+            ExtractFixations();
+
+            XmlNode webpageNode = xmlDoc.CreateElement("webpage");
+
+            XmlAttribute url = xmlDoc.CreateAttribute("url");
+
+            url.Value = this.Url;
+
+            webpageNode.Attributes.Append(url);
+
+            XmlAttribute visited = xmlDoc.CreateAttribute("visited");
+
+            visited.Value = this.VisitTimestamp;
+
+            // create & insert statistics?
+
+            XmlNode fixationsNode = xmlDoc.CreateElement("fixations");
+
+            XmlNode leftEyeNode = xmlDoc.CreateElement("left-eye");
+
+            foreach (FixationModel data in _leftFixationData)
+            {
+                leftEyeNode.AppendChild(data.ToXML(xmlDoc));
+            }
+
+            fixationsNode.AppendChild(leftEyeNode);
+
+            XmlNode rightEyeNode = xmlDoc.CreateElement("right-eye");
+
+            foreach (FixationModel data in _rightFixationData)
+            {
+                rightEyeNode.AppendChild(data.ToXML(xmlDoc));
+            }
+
+            fixationsNode.AppendChild(rightEyeNode);
+
+            webpageNode.AppendChild(fixationsNode);
+
+
+            return webpageNode;
+        }
+
+        #endregion
+
+
+        #region FixationFunctions
+
+        private void ExtractFixations(double acceptableDeviations)
+        {
+            ExtractEyeFixations("left", acceptableDeviations);
+            ExtractEyeFixations("right", acceptableDeviations);
+
+        }
+
+        private void ExtractEyeFixations(String eye, double acceptableDeviations)
+        {
+            long duration = 0;
+            List<GazeModel> relatedGazes = new List<GazeModel>();
+
+
+            // iniate with first gaze data element
+            PositionDataModel posModel = _positionData[0].GetEyeData(eye);
+
+            double startX = posModel.EyeTrackingData.X - acceptableDeviations;
+            double startY = posModel.EyeTrackingData.Y - acceptableDeviations;
+
+            double endX = posModel.EyeTrackingData.X + acceptableDeviations;
+            double endY = posModel.EyeTrackingData.Y + acceptableDeviations;
+
+            String startTimestamp = _positionData[0].DataRequestedTimestamp;
+
+            relatedGazes.Add(_positionData[0]);
+
+            //start loop with second element
+
+            for (int pos = 1; pos < _positionData.Count; pos++)
+            {
+                // get element with data
+                PositionDataModel currentPos = _positionData[pos].GetEyeData(eye);
+
+                if ((startX <= currentPos.EyeTrackingData.X && endX >= currentPos.EyeTrackingData.X) &&
+                    (startY <= currentPos.EyeTrackingData.Y && endY >= currentPos.EyeTrackingData.Y))
+                {
+                    duration = long.Parse(startTimestamp) - long.Parse(_positionData[pos].DataRequestedTimestamp);
+                    //found related gaze
+                    relatedGazes.Add(_positionData[pos]);
+                }
+                else
+                {
+                    //fixation (if there was one) ends
+                    //@Todo: add constant/ setting for duration min time
+                    if (duration >= 100)
+                    {
+                        //create fixation
+                        FixationModel fixation = new FixationModel(duration, eye);
+
+                        fixation.From(startX, startY);
+                        fixation.To(endX, endY);
+                        fixation.RelatedGazes = relatedGazes;
+
+                        if (eye == "left")
+                        {
+                            _leftFixationData.Add(fixation);
+                        }
+                        else if (eye == "right")
+                        {
+                            _rightFixationData.Add(fixation);
+                        }
+                        
+                    }
+
+                    //clear related gazes
+                    relatedGazes.Clear();
+
+                    // iniate with current gaze element
+                    startX = currentPos.EyeTrackingData.X - acceptableDeviations;
+                    startY = currentPos.EyeTrackingData.Y - acceptableDeviations;
+
+                    endX = currentPos.EyeTrackingData.X + acceptableDeviations;
+                    endY = currentPos.EyeTrackingData.Y + acceptableDeviations;
+
+                    startTimestamp = _positionData[pos].DataRequestedTimestamp;
+
+                    relatedGazes.Add(_positionData[pos]);
+                }
+
+
+            }
+        }
+
+        private void ExtractFixations()
+        {
+            this.ExtractFixations(0);
         }
 
         #endregion

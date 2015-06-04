@@ -217,6 +217,34 @@ namespace WebAnalyzer.Models.DataModel
             return durations;
         }
 
+        public XmlNode GenerateFixationXML(XmlDocument xmlDoc)
+        {
+            XmlNode experimentNode = xmlDoc.CreateElement("experiment");
+
+            XmlAttribute experimentName = xmlDoc.CreateAttribute("name");
+
+            experimentName.Value = this.ExperimentName;
+
+            experimentNode.Attributes.Append(experimentName);
+
+            XmlAttribute visitedWebpagesCount = xmlDoc.CreateAttribute("count-of-visited-pages");
+
+            visitedWebpagesCount.Value = this._visitedPages.Count.ToString();
+
+            experimentNode.Attributes.Append(visitedWebpagesCount);
+
+            XmlNode webpagesNode = xmlDoc.CreateElement("webpages");
+
+            foreach (WebpageModel page in _visitedPages)
+            {
+                webpagesNode.AppendChild(page.GenerateFixationXML(xmlDoc));
+            }
+
+            experimentNode.AppendChild(webpagesNode);
+
+            return experimentNode;
+        }
+
         #endregion
 
         public String GetBaseExperimentLocation()

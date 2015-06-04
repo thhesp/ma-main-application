@@ -18,6 +18,18 @@ namespace WebAnalyzer.Export
 
             String timestamp = Timestamp.GetUnixTimestamp();
 
+
+
+            String filename = ExportDataXML(experiment, dir, timestamp);
+
+            ExportStatisticsXML(experiment, dir, filename);
+            ExportFixationXML(experiment, dir, filename);
+
+            return true;
+        }
+
+        private static string ExportDataXML(ExperimentModel experiment, String dir, String timestamp)
+        {
             String filename = timestamp + experiment.ExperimentName;
 
             Logger.Log("Exporting XML: " + dir + filename + ".xml");
@@ -28,8 +40,11 @@ namespace WebAnalyzer.Export
             xmlDoc.AppendChild(experiment.ToXML(xmlDoc));
 
             xmlDoc.Save(dir + filename + ".xml");
+            return filename;
+        }
 
-
+        private static void ExportStatisticsXML(ExperimentModel experiment, String dir, String filename)
+        {
             String statsFilename = filename + "-stats";
 
             XmlDocument statsDoc = new XmlDocument();
@@ -37,8 +52,17 @@ namespace WebAnalyzer.Export
             statsDoc.AppendChild(experiment.GenerateStatisticsXML(statsDoc));
 
             statsDoc.Save(dir + statsFilename + ".xml");
+        }
 
-            return true;
+        private static void ExportFixationXML(ExperimentModel experiment, String dir, String filename)
+        {
+            String fixationFilename = filename + "-fixations";
+
+            XmlDocument fixationDoc = new XmlDocument();
+
+            fixationDoc.AppendChild(experiment.GenerateFixationXML(fixationDoc));
+
+            fixationDoc.Save(dir + fixationFilename + ".xml");
         }
 
         private static void checkPath(String dir)

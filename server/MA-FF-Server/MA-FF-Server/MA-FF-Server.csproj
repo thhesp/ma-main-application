@@ -77,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Experiment\ExperimentController.cs" />
+    <Compile Include="Models\AnalysisModel\FixationModel.cs" />
     <Compile Include="Models\Base\ExperimentSettings.cs" />
     <Compile Include="Export\ExperimentExporter.cs" />
     <Compile Include="Models\Base\BasicRawData.cs" />
@@ -159,6 +160,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Analysis\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
