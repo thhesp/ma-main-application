@@ -211,11 +211,20 @@ namespace WebAnalyzer.Models.DataModel
 
             visited.Value = this.VisitTimestamp;
 
-            // create & insert statistics?
+            webpageNode.Attributes.Append(visited);
+
+
+            // insert fixations
 
             XmlNode fixationsNode = xmlDoc.CreateElement("fixations");
 
             XmlNode leftEyeNode = xmlDoc.CreateElement("left-eye");
+
+            XmlAttribute leftFixationsCount = xmlDoc.CreateAttribute("count-of-fixations");
+
+            leftFixationsCount.Value = _leftFixationData.Count.ToString();
+
+            leftEyeNode.Attributes.Append(leftFixationsCount);
 
             foreach (FixationModel data in _leftFixationData)
             {
@@ -225,6 +234,12 @@ namespace WebAnalyzer.Models.DataModel
             fixationsNode.AppendChild(leftEyeNode);
 
             XmlNode rightEyeNode = xmlDoc.CreateElement("right-eye");
+
+            XmlAttribute rightFixationsCount = xmlDoc.CreateAttribute("count-of-fixations");
+
+            rightFixationsCount.Value = _rightFixationData.Count.ToString();
+
+            rightEyeNode.Attributes.Append(rightFixationsCount);
 
             foreach (FixationModel data in _rightFixationData)
             {
@@ -278,18 +293,16 @@ namespace WebAnalyzer.Models.DataModel
                 PositionDataModel currentPos = _positionData[pos].GetEyeData(eye);
 
                 if ((startX <= currentPos.EyeTrackingData.X && endX >= currentPos.EyeTrackingData.X) &&
-                    (startY <= currentPos.EyeTrackingData.Y && endY >= currentPos.EyeTrackingData.Y))
-                {
-                    duration = long.Parse(startTimestamp) - long.Parse(_positionData[pos].DataRequestedTimestamp);
+                    (startY <= currentPos.EyeTrackingData.Y && endY >= currentPos.EyeTrackingData.Y)) {
+                    Logger.Log("Possible fixation found...");
+                    duration = long.Parse(_positionData[pos].DataRequestedTimestamp) - long.Parse(startTimestamp);
                     //found related gaze
                     relatedGazes.Add(_positionData[pos]);
-                }
-                else
-                {
+                } else {
                     //fixation (if there was one) ends
                     //@Todo: add constant/ setting for duration min time
-                    if (duration >= 100)
-                    {
+                    if (duration >= 100) {
+                        Logger.Log("Saving fixation...");
                         //create fixation
                         FixationModel fixation = new FixationModel(duration, eye);
 
@@ -297,19 +310,21 @@ namespace WebAnalyzer.Models.DataModel
                         fixation.To(endX, endY);
                         fixation.RelatedGazes = relatedGazes;
 
-                        if (eye == "left")
-                        {
+                        if (eye == "left") {
                             _leftFixationData.Add(fixation);
                         }
-                        else if (eye == "right")
-                        {
+                        else if (eye == "right") {
                             _rightFixationData.Add(fixation);
                         }
-                        
+
+                    } else {
+                        Logger.Log("Fixation to short :(");
                     }
 
+
+                    Logger.Log("Cleaning up after previous Fixation and checking for a new one.");
                     //clear related gazes
-                    relatedGazes.Clear();
+                    relatedGazes = new List<GazeModel>();
 
                     // iniate with current gaze element
                     startX = currentPos.EyeTrackingData.X - acceptableDeviations;
@@ -320,10 +335,37 @@ namespace WebAnalyzer.Models.DataModel
 
                     startTimestamp = _positionData[pos].DataRequestedTimestamp;
 
+                    duration = 0;
+
                     relatedGazes.Add(_positionData[pos]);
                 }
+            }
 
+            //clear up a possible ending fixation
 
+            if (duration >= 100)
+            {
+                Logger.Log("Saving last fixation...");
+                //create fixation
+                FixationModel fixation = new FixationModel(duration, eye);
+
+                fixation.From(startX, startY);
+                fixation.To(endX, endY);
+                fixation.RelatedGazes = relatedGazes;
+
+                if (eye == "left")
+                {
+                    _leftFixationData.Add(fixation);
+                }
+                else if (eye == "right")
+                {
+                    _rightFixationData.Add(fixation);
+                }
+
+            }
+            else
+            {
+                Logger.Log("Last fixation to short :(");
             }
         }
 
