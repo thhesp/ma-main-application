@@ -49,10 +49,13 @@ namespace WebAnalyzer.Server
         public void StartMessageThread()
         {
             _workMessages = true;
-            var o = Observable.Start(() =>
-            {
-                //This starts on a background thread.
-                WorkConnectionMessageQueues();
+            var period = TimeSpan.FromMilliseconds(WORK_DELAY);
+            var observable = Observable.Interval(period);
+
+            observable.Subscribe(i => {
+                if(_workMessages){
+                    WorkConnectionMessageQueues();
+                }
             });
         }
 
@@ -132,14 +135,10 @@ namespace WebAnalyzer.Server
 
         private void WorkConnectionMessageQueues()
         {
-            while (_workMessages)
+            //Logger.Log("Working through queues... ");
+            foreach (var connection in this)
             {
-                //Logger.Log("Working through the queues...");
-                foreach (var connection in this)
-                {
-                    connection.workMessageQueue();
-                }
-                Thread.Sleep(ConnectionManager.WORK_DELAY);
+                connection.workMessageQueue();
             }
         }
     }
