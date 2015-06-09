@@ -148,14 +148,14 @@ namespace WebAnalyzer.Models.DataModel
 
             XmlAttribute min = xmlDoc.CreateAttribute("min");
 
-            min.Value = Statistics.GetMin(array).ToString();
+            min.Value = array.Min().ToString();
 
             node.Attributes.Append(min);
 
 
             XmlAttribute max = xmlDoc.CreateAttribute("max");
 
-            max.Value = Statistics.GetMax(array).ToString();
+            max.Value = array.Max().ToString();
 
             node.Attributes.Append(max);
 

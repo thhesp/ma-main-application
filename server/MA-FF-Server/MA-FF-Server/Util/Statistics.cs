@@ -38,17 +38,5 @@ namespace WebAnalyzer.Util
 
             return 0;
         }
-
-        public static long GetMin(long[] values)
-        {
-            return values.Min();
-        }
-
-        public static long GetMax(long[] values)
-        {
-            return values.Max();
-        }
-
-
     }
 }
