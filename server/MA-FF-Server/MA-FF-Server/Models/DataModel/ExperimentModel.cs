@@ -9,7 +9,7 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.DataModel
 {
-    class ExperimentModel
+    public class ExperimentModel
     {
 
         private String _experimentName;

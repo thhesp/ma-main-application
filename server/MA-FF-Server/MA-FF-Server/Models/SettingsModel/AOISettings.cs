@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebAnalyzer.Models.Base
+namespace WebAnalyzer.Models.SettingsModel
 {
-    class ExperimentSettings
+    public class AOISettings
     {
+
+        private String _identifier;
+
+
     }
 }
