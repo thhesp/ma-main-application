@@ -37,7 +37,7 @@ namespace WebAnalyzer.Models.DataModel
         public String Tag
         {
             get { return _tag; }
-            set { _tag = value; }
+            set { _tag = value.ToLower(); }
         }
 
 
@@ -104,11 +104,21 @@ namespace WebAnalyzer.Models.DataModel
             }
         }
 
+        public List<String> GetClasses()
+        {
+            return _classes;
+        }
+
         public void AddAttribute(String name, String value)
         {
             AttributeModel attrModel = new AttributeModel(name, value);
 
             _attributes.Add(attrModel);
+        }
+
+        public List<AttributeModel> GetAttributes()
+        {
+            return _attributes;
         }
 
         #endregion
