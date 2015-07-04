@@ -15,6 +15,24 @@ namespace WebAnalyzer.Models.SettingsModel
 
         private List<AOISettings> _aois = new List<AOISettings>();
 
+        public DomainSettings(String domain)
+        {
+            _domain = domain;
+        }
 
+        public List<AOISettings> GetAOIs()
+        {
+            return _aois;
+        }
+
+        public void AddAOI(AOISettings aoi)
+        {
+            _aois.Add(aoi);
+        }
+
+        public void DeleteRule(AOISettings aoi)
+        {
+            _aois.Remove(aoi);
+        }
     }
 }
