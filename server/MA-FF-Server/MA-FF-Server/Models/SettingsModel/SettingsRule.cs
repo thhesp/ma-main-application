@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using WebAnalyzer.Models.DataModel;
+using WebAnalyzer.Models.SettingsModel.ExpressionTree;
 
 namespace WebAnalyzer.Models.SettingsModel
 {
@@ -17,7 +18,7 @@ namespace WebAnalyzer.Models.SettingsModel
 
         private Boolean _caseSensitive;
 
-        private RuleElement[] _expression;
+        private Node _ruleRoot;
 
         public String Tag
         {
@@ -47,60 +48,14 @@ namespace WebAnalyzer.Models.SettingsModel
         {
             if (CaseSensitive)
             {
-                return ElementFitsRuleCaseSensitive(el);
+                return _ruleRoot.EvaluateCaseSensitive(el);
             }
             else
             {
-                return ElementFitsRuleCaseInsensitive(el);
+                return _ruleRoot.Evaluate(el);
             }
         }
 
-        private Boolean ElementFitsRuleCaseSensitive(DOMElementModel el)
-        {
-            
-            if (Tag != null && !Tag.Equals(el.Tag))
-            {
-                return false;
-            }
-
-            if (ID != null && ID != el.ID)
-            {
-                return false;
-            }
-
-            if (Class != null && !el.GetClasses().Contains(Class))
-            {
-                return false;
-            }
-
-
-            return true;
-        }
-
-        private Boolean ElementFitsRuleCaseInsensitive(DOMElementModel el)
-        {
-            if (Tag != null && Tag.ToLower() != el.Tag.ToLower())
-            {
-                return false;
-            }
-
-            if (ID != null && ID.ToLower() != el.ID.ToLower())
-            {
-                return false;
-            }
-
-            if (Class != null)
-            {
-                foreach (String elClass in el.GetClasses())
-                {
-                    if(Class.ToLower() == elClass.ToLower()){
-                        return true;
-                    }
-                }
-            }
-
-            return true;
-        }
-
+       
     }
 }
