@@ -16,7 +16,7 @@ namespace WebAnalyzer.Models.Base
         private String _identifier;
 
         /* demographic data */
-        private int _sex;
+        private SEX_TYPES _sex;
         private int _birthYear;
         private String _education;
 
@@ -32,7 +32,7 @@ namespace WebAnalyzer.Models.Base
             set { _identifier = value; }
         }
 
-        public int Sex
+        public SEX_TYPES Sex
         {
             get { return _sex; }
             set { _sex = value; }
