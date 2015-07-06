@@ -9,7 +9,7 @@ using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.Models.DataModel
 {
-    class PositionDataModel
+    public class PositionDataModel
     {
 
 

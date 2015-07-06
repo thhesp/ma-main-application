@@ -7,7 +7,7 @@ using System.Xml;
 
 namespace WebAnalyzer.Models.DataModel
 {
-    class AttributeModel
+    public class AttributeModel
     {
         private String _name;
         private String _value;

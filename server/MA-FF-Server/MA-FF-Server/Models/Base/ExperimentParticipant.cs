@@ -11,7 +11,7 @@ namespace WebAnalyzer.Models.Base
     public class ExperimentParticipant
     {
 
-        public static enum SEX_TYPES { Male, Female, Undecided };
+        public enum SEX_TYPES { Male, Female, Undecided };
 
         private String _identifier;
 

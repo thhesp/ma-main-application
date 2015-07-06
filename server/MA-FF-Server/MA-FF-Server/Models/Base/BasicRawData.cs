@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebAnalyzer.Models.Base
 {
-    class BasicRawData
+    public class BasicRawData
     {
         protected String _dataRequestedTimestamp;
 

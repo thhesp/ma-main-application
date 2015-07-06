@@ -11,7 +11,7 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
     public class ValueNode : Node
     {
 
-        public static enum TYPES { Tag, Class, ID };
+        public enum TYPES { Tag, Class, ID };
 
         private String _value;
         private TYPES _type;

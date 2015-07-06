@@ -8,7 +8,7 @@ using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.Models.DataModel
 {
-    class GazeModel : BasicRawData
+    public class GazeModel : BasicRawData
     {
         
         private String _uniqueId;

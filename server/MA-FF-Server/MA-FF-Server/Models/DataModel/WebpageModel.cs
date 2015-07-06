@@ -10,7 +10,7 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.DataModel
 {
-    class WebpageModel
+    public class WebpageModel
     {
 
         private String _url;

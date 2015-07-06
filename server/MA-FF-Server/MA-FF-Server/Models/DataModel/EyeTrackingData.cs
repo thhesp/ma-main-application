@@ -7,7 +7,7 @@ using System.Xml;
 
 namespace WebAnalyzer.Models.DataModel
 {
-    class EyeTrackingData
+    public class EyeTrackingData
     {
 
         private double _x;

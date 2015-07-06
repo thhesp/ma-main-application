@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WebAnalyzer.Models.DataModel
 {
-    class DOMElementModel
+    public class DOMElementModel
     {
 
         private String _tag;
