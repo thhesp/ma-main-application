@@ -12,6 +12,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using WebAnalyzer.UI.InteractionObjects;
+using WebAnalyzer.Util;
+
 namespace WebAnalyzer.UI
 {
     public partial class HTMLUI : Form
@@ -26,9 +29,21 @@ namespace WebAnalyzer.UI
         private void Browser_Load(object sender, EventArgs e)
         {
             Cef.Initialize();
-            string page = string.Format("{0}UI/HTMLResources/html/index.html", GetAppLocation());
+
+            string page = string.Format("{0}UI/HTMLResources/html/main/index.html", Utilities.GetAppLocation());
+            myBrowser = new ChromiumWebBrowser(page);
+
+            TestObject test = new TestObject();
+            test.SetChromeBrowser(myBrowser);
+
+            // Register the JavaScriptInteractionObj class with JS
+            myBrowser.RegisterJsObject("testObj", test);
+
+            
             Console.WriteLine(page);
-             myBrowser = new ChromiumWebBrowser(page);
+
+            myBrowser.Load(page);
+            
             //ChromiumWebBrowser myBrowser = new ChromiumWebBrowser("http://www.maps.google.com");
             this.Controls.Add(myBrowser);
 
@@ -40,11 +55,6 @@ namespace WebAnalyzer.UI
         private void Browser_Closing(object sender, FormClosingEventArgs e)
         {
             Cef.Shutdown();
-        }
-
-        public static string GetAppLocation()
-        {
-            return AppDomain.CurrentDomain.BaseDirectory;
         }
 
         protected override void WndProc(ref Message m)

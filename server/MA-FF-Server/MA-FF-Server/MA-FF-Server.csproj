@@ -175,6 +175,7 @@
     <Compile Include="UI\HTMLUI.Designer.cs">
       <DependentUpon>HTMLUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\InteractionObjects\TestObject.cs" />
     <Compile Include="Util\Statistics.cs" />
     <Compile Include="Util\TextBoxStreamWriter.cs" />
     <Compile Include="EyeTracking\EyeTrackingController.cs" />
@@ -238,6 +239,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Analysis\" />
+    <Folder Include="UI\HTMLResources\html\popup\" />
     <Folder Include="UI\HTMLResources\js\src\" />
   </ItemGroup>
   <ItemGroup>
@@ -253,7 +255,19 @@
     <Content Include="UI\HTMLResources\css\index.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UI\HTMLResources\html\index.html">
+    <Content Include="UI\HTMLResources\html\main\experiment_settings.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HTMLResources\html\main\export.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HTMLResources\html\main\analyse.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HTMLResources\html\main\participants.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HTMLResources\html\main\index.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UI\HTMLResources\js\lib\bootstrap.min.js">
