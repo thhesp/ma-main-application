@@ -68,5 +68,15 @@ namespace WebAnalyzer.UI
                 myBrowser.ShowDevTools();
             }
         }
+
+        private void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            Logger.Log("Keydown?");
+            if (e.KeyCode == Keys.F12)
+            {
+                Logger.Log("Show dev tools");
+                myBrowser.ShowDevTools();
+            }
+        }
     }
 }

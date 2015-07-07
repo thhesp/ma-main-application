@@ -35,10 +35,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 391);
+            this.KeyPreview = true;
+            this.MaximizeBox = false;
             this.Name = "HTMLUI";
+            this.ShowIcon = false;
             this.Text = "HTMLUI";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Browser_Closing);
             this.Load += new System.EventHandler(this.Browser_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_KeyDown);
             this.ResumeLayout(false);
 
         }
