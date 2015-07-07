@@ -19,11 +19,11 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Übersicht</a></li>
-                    <li><a href="./participants.html">Teilnehmerverwaltung</a></li>
-                    <li><a href="./analyse.html">Analyse</a></li>
-                    <li><a href="./export.html">Export</a></li>
-                    <li><a href="./experiment_settings.html">Experiment Einstellungen</a></li>
+                    <li class="active"><a onclick="nav.showPage('overview');">Übersicht</a></li>
+                    <li><a onclick="nav.showPage('participants');">Teilnehmerverwaltung</a></li>
+                    <li><a onclick="nav.showPage('analyse');">Analyse</a></li>
+                    <li><a onclick="nav.showPage('export');">Export</a></li>
+                    <li><a onclick="nav.showPage('experiment_settings');">Experiment Einstellungen</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -51,7 +51,7 @@
         function test1() {
             var result = testObj.tenst();
             $("p").append(result);
-
+            testObj.message("Mooooeeeep?");
         }
 
     </script>

@@ -175,6 +175,7 @@
     <Compile Include="UI\HTMLUI.Designer.cs">
       <DependentUpon>HTMLUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\InteractionObjects\Navigation.cs" />
     <Compile Include="UI\InteractionObjects\TestObject.cs" />
     <Compile Include="Util\Statistics.cs" />
     <Compile Include="Util\TextBoxStreamWriter.cs" />

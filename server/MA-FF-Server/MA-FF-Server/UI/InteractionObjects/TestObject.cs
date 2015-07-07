@@ -7,6 +7,8 @@ using CefSharp;
 using CefSharp.WinForms;
 using Newtonsoft.Json;
 
+using WebAnalyzer.Util;
+
 namespace WebAnalyzer.UI.InteractionObjects
 {
     public class TestObject
@@ -23,6 +25,11 @@ namespace WebAnalyzer.UI.InteractionObjects
         public String tenst()
         {
             return "Tenst";
+        }
+
+        public void message(String msg)
+        {
+            Logger.Log("New Message From Javascript: " + msg);
         }
 
 

@@ -36,8 +36,13 @@ namespace WebAnalyzer.UI
             TestObject test = new TestObject();
             test.SetChromeBrowser(myBrowser);
 
+            Navigation nav = new Navigation();
+            nav.Browser = myBrowser;
+
             // Register the JavaScriptInteractionObj class with JS
             myBrowser.RegisterJsObject("testObj", test);
+
+            myBrowser.RegisterJsObject("nav", nav);
 
             
             Console.WriteLine(page);
