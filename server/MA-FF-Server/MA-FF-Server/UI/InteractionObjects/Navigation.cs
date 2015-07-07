@@ -19,9 +19,12 @@ namespace WebAnalyzer.UI.InteractionObjects
         ChromiumWebBrowser _browser = null;
         Dictionary<string, string> _pages = new Dictionary<string, string>();
 
+        private String _activePage = null;
+
         public Navigation()
         {
             CreatePages();
+            _activePage = _pages.Keys.ElementAt(0);
         }
 
         private void CreatePages()
@@ -39,6 +42,7 @@ namespace WebAnalyzer.UI.InteractionObjects
             Logger.Log("Show page: " + page);
             if (Browser != null && _pages.ContainsKey(page))
             {
+                _activePage = page;
                 String file = _pages[page];
                 String pagePath = string.Format(BASE_PATH + file, Utilities.GetAppLocation());
 
@@ -51,6 +55,11 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             get { return _browser; }
             set { _browser = value; }
+        }
+
+        public String getActivePage()
+        {
+            return _activePage;
         }
     }
 }
