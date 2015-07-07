@@ -1,3 +1,14 @@
 ﻿header{
-    height: 120px;
+    height: 110px;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+div.content {
+    position: absolute;
+    top: 110px;
+    z-index: 1;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
