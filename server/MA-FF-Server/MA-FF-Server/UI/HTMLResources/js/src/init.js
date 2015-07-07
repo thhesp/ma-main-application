@@ -1,0 +1,1 @@
+﻿$('#experiment-name').text(experimentObj.getName());

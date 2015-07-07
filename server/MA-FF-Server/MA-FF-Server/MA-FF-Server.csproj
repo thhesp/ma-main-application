@@ -175,6 +175,7 @@
     <Compile Include="UI\HTMLUI.Designer.cs">
       <DependentUpon>HTMLUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\InteractionObjects\ExperimentObject.cs" />
     <Compile Include="UI\InteractionObjects\Navigation.cs" />
     <Compile Include="UI\InteractionObjects\TestObject.cs" />
     <Compile Include="Util\Statistics.cs" />
@@ -242,7 +243,6 @@
   <ItemGroup>
     <Folder Include="Analysis\" />
     <Folder Include="UI\HTMLResources\html\popup\" />
-    <Folder Include="UI\HTMLResources\js\src\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="UI\HTMLResources\fonts\glyphicons-halflings-regular.svg">
@@ -276,6 +276,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UI\HTMLResources\js\lib\jquery-2.1.4.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HTMLResources\js\src\init.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -39,10 +39,15 @@ namespace WebAnalyzer.UI
             Navigation nav = new Navigation();
             nav.Browser = myBrowser;
 
+            ExperimentObject exp = new ExperimentObject("test experiment");
+            
+
             // Register the JavaScriptInteractionObj class with JS
             myBrowser.RegisterJsObject("testObj", test);
 
             myBrowser.RegisterJsObject("nav", nav);
+
+            myBrowser.RegisterJsObject("experimentObj", exp);
 
             
             Console.WriteLine(page);
