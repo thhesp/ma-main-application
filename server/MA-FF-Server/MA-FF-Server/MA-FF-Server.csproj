@@ -119,6 +119,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\MainController.cs" />
     <Compile Include="Experiment\ExperimentController.cs" />
     <Compile Include="Models\AnalysisModel\FixationModel.cs" />
     <Compile Include="Models\Base\ExperimentParticipant.cs" />
@@ -167,17 +168,23 @@
     </Compile>
     <Compile Include="ApplicationSettings\AppSettings.cs" />
     <Compile Include="ApplicationSettings\SettingsValidator.cs" />
-    <Compile Include="Test\UI\HTMLUITest.cs" />
     <Compile Include="UI\ChromeDevTools.cs" />
+    <Compile Include="UI\ExperimentWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ExperimentWizard.Designer.cs">
+      <DependentUpon>ExperimentWizard.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\HTMLUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\HTMLUI.Designer.cs">
       <DependentUpon>HTMLUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\InteractionObjects\BaseInteractionObject.cs" />
     <Compile Include="UI\InteractionObjects\ExperimentObject.cs" />
+    <Compile Include="UI\InteractionObjects\ExperimentWizardObj.cs" />
     <Compile Include="UI\InteractionObjects\Navigation.cs" />
-    <Compile Include="UI\InteractionObjects\TestObject.cs" />
     <Compile Include="Util\Statistics.cs" />
     <Compile Include="Util\TextBoxStreamWriter.cs" />
     <Compile Include="EyeTracking\EyeTrackingController.cs" />
@@ -207,6 +214,9 @@
     </Compile>
     <EmbeddedResource Include="Test\Communication\MouseTracker.resx">
       <DependentUpon>MouseTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ExperimentWizard.resx">
+      <DependentUpon>ExperimentWizard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\HTMLUI.resx">
       <DependentUpon>HTMLUI.cs</DependentUpon>
@@ -242,7 +252,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Analysis\" />
-    <Folder Include="UI\HTMLResources\html\popup\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="UI\HTMLResources\fonts\glyphicons-halflings-regular.svg">
@@ -270,6 +279,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UI\HTMLResources\html\main\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HTMLResources\html\popup\experiment_wizard.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UI\HTMLResources\js\lib\bootstrap.min.js">

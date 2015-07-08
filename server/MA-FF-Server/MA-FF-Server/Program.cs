@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 
 using WebAnalyzer.Test.Communication;
-using WebAnalyzer.Test.UI;
 
 namespace WebAnalyzer
 {
@@ -24,11 +23,11 @@ namespace WebAnalyzer
                 Properties.Settings.Default.Reset();
             }
 
-            new HTMLUITest();
+            //new HTMLUITest();
 
             //new CommunicationTest();
 
-            //new WebAnalyzer();
+            new WebAnalyzer();
         }
 
     }

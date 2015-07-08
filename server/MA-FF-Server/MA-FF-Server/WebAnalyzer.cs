@@ -4,6 +4,7 @@ using WebAnalyzer.Experiment;
 using WebAnalyzer.UI;
 using WebAnalyzer.ApplicationSettings;
 using WebAnalyzer.Util;
+using WebAnalyzer.Controller;
 
 namespace WebAnalyzer
 {
@@ -12,13 +13,12 @@ namespace WebAnalyzer
 
         public WebAnalyzer()
         {
-            checkFirstStartup();
-            validateSettings();
-            createExperiment();
-            renderForm();
+            CheckFirstStartup();
+            ValidateSettings();
+            InitializeMainController();
         }
 
-        private void checkFirstStartup()
+        private void CheckFirstStartup()
         {
             if (Properties.Settings.Default.FirstStart)
             {
@@ -27,7 +27,7 @@ namespace WebAnalyzer
             }
         }
 
-        private void validateSettings()
+        private void ValidateSettings()
         {
             bool validate = SettingsValidator.Validate();
 
@@ -42,7 +42,13 @@ namespace WebAnalyzer
             
         }
 
-        private void createExperiment()
+        private void InitializeMainController()
+        {
+            MainController main = new MainController();
+            main.Start();
+        }
+
+        private void CreateExperiment()
         {
             ExperimentController.getInstance().CreateExperiment("eyetracking-test");
         }
