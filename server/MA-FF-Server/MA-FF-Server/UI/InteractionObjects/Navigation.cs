@@ -11,12 +11,11 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.UI.InteractionObjects
 {
-    public class Navigation
+    public class Navigation : BaseInteractionObject
     {
 
         private static String BASE_PATH = "{0}UI/HTMLResources/html/main/";
 
-        ChromiumWebBrowser _browser = null;
         Dictionary<string, string> _pages = new Dictionary<string, string>();
 
         private String _activePage = null;
@@ -49,12 +48,6 @@ namespace WebAnalyzer.UI.InteractionObjects
                 Browser.Load(pagePath);
             }
             
-        }
-
-        public ChromiumWebBrowser Browser
-        {
-            get { return _browser; }
-            set { _browser = value; }
         }
 
         public String getActivePage()

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebAnalyzer.UI.InteractionObjects
 {
-    public class ExperimentObject
+    public class ExperimentObject : BaseInteractionObject
     {
 
         private String _name;
