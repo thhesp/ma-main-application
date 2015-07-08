@@ -17,11 +17,11 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.UI
 {
-    public partial class HTMLUI : Form
+    public partial class ExperimentWizard : Form
     {
         ChromiumWebBrowser myBrowser = null;
 
-        public HTMLUI()
+        public ExperimentWizard()
         {
             InitializeComponent();
         }
@@ -30,23 +30,14 @@ namespace WebAnalyzer.UI
         {
             Cef.Initialize();
 
-            string page = string.Format("{0}UI/HTMLResources/html/main/index.html", Utilities.GetAppLocation());
+            string page = string.Format("{0}UI/HTMLResources/html/popup/experiment_wizard.html", Utilities.GetAppLocation());
             myBrowser = new ChromiumWebBrowser(page);
 
-            Navigation nav = new Navigation();
-            nav.Browser = myBrowser;
-
-            ExperimentObject exp = new ExperimentObject("test experiment");
-            
+            ExperimentWizardObj expWizard = new ExperimentWizardObj();
+            expWizard.Browser = myBrowser;
 
             // Register the JavaScriptInteractionObj class with JS
-
-            myBrowser.RegisterJsObject("nav", nav);
-
-            myBrowser.RegisterJsObject("experimentObj", exp);
-
-            
-            Console.WriteLine(page);
+            myBrowser.RegisterJsObject("expWizard", expWizard);
 
             myBrowser.Load(page);
             
