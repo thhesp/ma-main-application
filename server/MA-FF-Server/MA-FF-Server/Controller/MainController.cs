@@ -30,7 +30,7 @@ namespace WebAnalyzer.Controller
 
         private void MainUIFinishedLoading(object sender, EventArgs e)
         {
-            //ShowExperimentWizard();
+            ShowExperimentWizard();
         }
 
         private void ShowExperimentWizard()

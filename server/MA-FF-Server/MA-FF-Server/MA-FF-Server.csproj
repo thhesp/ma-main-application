@@ -234,6 +234,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="UI\HTMLResources\fonts\fontawesome-webfont.eot" />
+    <None Include="UI\HTMLResources\fonts\fontawesome-webfont.ttf" />
+    <None Include="UI\HTMLResources\fonts\fontawesome-webfont.woff" />
+    <None Include="UI\HTMLResources\fonts\fontawesome-webfont.woff2" />
+    <None Include="UI\HTMLResources\fonts\FontAwesome.otf" />
     <None Include="UI\HTMLResources\fonts\glyphicons-halflings-regular.eot">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -254,6 +259,8 @@
     <Folder Include="Analysis\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="UI\HTMLResources\css\font-awesome.min.css" />
+    <Content Include="UI\HTMLResources\fonts\fontawesome-webfont.svg" />
     <Content Include="UI\HTMLResources\fonts\glyphicons-halflings-regular.svg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -281,7 +288,10 @@
     <Content Include="UI\HTMLResources\html\main\index.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="UI\HTMLResources\html\popup\experiment_wizard.html">
+    <Content Include="UI\HTMLResources\html\popup\experiment_wizard\create_experiment.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HTMLResources\html\popup\experiment_wizard\index.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UI\HTMLResources\js\lib\bootstrap.min.js">

@@ -30,7 +30,7 @@ namespace WebAnalyzer.UI
         {
             Cef.Initialize();
 
-            string page = string.Format("{0}UI/HTMLResources/html/popup/experiment_wizard.html", Utilities.GetAppLocation());
+            string page = string.Format("{0}UI/HTMLResources/html/popup/experiment_wizard/index.html", Utilities.GetAppLocation());
             myBrowser = new ChromiumWebBrowser(page);
 
             ExperimentWizardObj expWizard = new ExperimentWizardObj();
