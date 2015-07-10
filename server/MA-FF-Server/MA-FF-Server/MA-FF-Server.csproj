@@ -120,14 +120,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\LoadController.cs" />
     <Compile Include="Controller\MainController.cs" />
     <Compile Include="Experiment\ExperimentController.cs" />
     <Compile Include="Models\AnalysisModel\FixationModel.cs" />
+    <Compile Include="Models\Base\ExperimentModel.cs" />
     <Compile Include="Models\Base\ExperimentParticipant.cs" />
     <Compile Include="Models\SettingsModel\AOISettings.cs" />
     <Compile Include="Models\SettingsModel\DomainSettings.cs" />
     <Compile Include="Models\SettingsModel\ExperimentSettings.cs" />
-    <Compile Include="Export\ExperimentExporter.cs" />
+    <Compile Include="Controller\ExportController.cs" />
     <Compile Include="Models\Base\BasicRawData.cs" />
     <Compile Include="Models\MessageModel\DataMessage.cs" />
     <Compile Include="Models\MessageModel\EchoMessage.cs" />
@@ -186,6 +188,7 @@
     <Compile Include="UI\InteractionObjects\ExperimentObject.cs" />
     <Compile Include="UI\InteractionObjects\ExperimentWizardObj.cs" />
     <Compile Include="UI\InteractionObjects\Navigation.cs" />
+    <Compile Include="Util\FileIO.cs" />
     <Compile Include="Util\Statistics.cs" />
     <Compile Include="Util\TextBoxStreamWriter.cs" />
     <Compile Include="EyeTracking\EyeTrackingController.cs" />
@@ -258,6 +261,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Analysis\" />
+    <Folder Include="Export\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="UI\HTMLResources\css\font-awesome.min.css" />

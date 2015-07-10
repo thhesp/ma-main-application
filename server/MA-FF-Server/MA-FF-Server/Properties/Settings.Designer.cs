@@ -55,5 +55,32 @@ namespace WebAnalyzer.Properties {
                 this["FirstStart"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("experiment.xml")]
+        public string ExperimentFilename {
+            get {
+                return ((string)(this["ExperimentFilename"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("settings.xml")]
+        public string SettingsFilename {
+            get {
+                return ((string)(this["SettingsFilename"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("participants.xml")]
+        public string ParticipantsFilename {
+            get {
+                return ((string)(this["ParticipantsFilename"]));
+            }
+        }
     }
 }

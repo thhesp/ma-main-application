@@ -113,7 +113,7 @@ namespace WebAnalyzer.Experiment
         {
             if (_experiment.Exportable())
             {
-                ExperimentExporter.ExportToXML(_experiment);
+                ExportController.ExportToXML(_experiment);
             }
         }
     }

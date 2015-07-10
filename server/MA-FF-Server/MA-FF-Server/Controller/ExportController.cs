@@ -10,7 +10,7 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Export
 {
-    class ExperimentExporter
+    public class ExportController
     {
         public static Boolean ExportToXML(ExperimentModel experiment)
         {
@@ -34,7 +34,7 @@ namespace WebAnalyzer.Export
 
             Logger.Log("Exporting XML: " + dir + filename + ".xml");
 
-            ExperimentExporter.checkPath(dir);
+            FileIO.CheckPath(dir);
             XmlDocument xmlDoc = new XmlDocument();
 
             xmlDoc.AppendChild(experiment.ToXML(xmlDoc));
@@ -63,16 +63,6 @@ namespace WebAnalyzer.Export
             fixationDoc.AppendChild(experiment.GenerateFixationXML(fixationDoc));
 
             fixationDoc.Save(dir + fixationFilename + ".xml");
-        }
-
-        private static void checkPath(String dir)
-        {
-            bool exists = System.IO.Directory.Exists(dir);
-
-            if (!exists)
-            {
-                System.IO.Directory.CreateDirectory(dir);
-            }
         }
 
 
