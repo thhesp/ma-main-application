@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using WebAnalyzer.Models.DataModel;
 using WebAnalyzer.Models.SettingsModel.ExpressionTree;
+using System.Xml;
 
 namespace WebAnalyzer.Models.SettingsModel
 {
@@ -15,6 +16,12 @@ namespace WebAnalyzer.Models.SettingsModel
         private Boolean _caseSensitive;
 
         private Node _ruleRoot;
+
+        public Node RuleRoot
+        {
+            get { return _ruleRoot; }
+            set { _ruleRoot = value; }
+        }
 
         public Boolean CaseSensitive
         {
@@ -26,14 +33,30 @@ namespace WebAnalyzer.Models.SettingsModel
         {
             if (CaseSensitive)
             {
-                return _ruleRoot.EvaluateCaseSensitive(el);
+                return RuleRoot.EvaluateCaseSensitive(el);
             }
             else
             {
-                return _ruleRoot.Evaluate(el);
+                return RuleRoot.Evaluate(el);
             }
         }
 
-       
+
+        public XmlNode ToXML(XmlDocument xmlDoc)
+        {
+            XmlNode rule = xmlDoc.CreateElement("rule");
+
+
+            return rule;
+        }
+
+        public static SettingsRule LoadFromXML(XmlNode ruleNode)
+        {
+
+            SettingsRule rule = new SettingsRule();
+
+           
+            return rule;
+        }
     }
 }

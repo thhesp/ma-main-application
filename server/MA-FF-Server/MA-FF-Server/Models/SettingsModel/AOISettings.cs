@@ -51,6 +51,17 @@ namespace WebAnalyzer.Models.SettingsModel
         {
             XmlNode aoi = xmlDoc.CreateElement("aoi-setting");
 
+            XmlAttribute identifier = xmlDoc.CreateAttribute("identifier");
+
+            identifier.Value = Identifier;
+
+            aoi.Attributes.Append(identifier);
+
+            foreach (SettingsRule rule in _rules)
+            {
+                aoi.AppendChild(rule.ToXML(xmlDoc));
+            }
+
 
             return aoi;
         }
@@ -59,6 +70,25 @@ namespace WebAnalyzer.Models.SettingsModel
         {
             AOISettings aoi = new AOISettings();
 
+            foreach (XmlAttribute attr in aoiNode.Attributes)
+            {
+                switch (attr.Name)
+                {
+                    case "identifier":
+                        aoi.Identifier = attr.Value;
+                        break;
+                }
+            }
+
+            foreach (XmlNode child in aoiNode.ChildNodes)
+            {
+                SettingsRule rule = SettingsRule.LoadFromXML(child);
+
+                if (rule != null)
+                {
+                    aoi.AddRule(rule);
+                }
+            }
 
             return aoi;
         }

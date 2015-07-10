@@ -58,6 +58,18 @@ namespace WebAnalyzer.Models.SettingsModel
         {
             XmlNode domain = xmlDoc.CreateElement("domain-setting");
 
+            XmlAttribute domainName = xmlDoc.CreateAttribute("domain");
+
+            domainName.Value = Domain;
+
+            domain.Attributes.Append(domainName);
+
+            XmlAttribute includeSubdomains = xmlDoc.CreateAttribute("include-subdomains");
+
+            includeSubdomains.Value = IncludesSubdomains.ToString();
+
+            domain.Attributes.Append(includeSubdomains);
+
             foreach (AOISettings aoiSettings in _aois)
             {
                 domain.AppendChild(aoiSettings.ToXML(xmlDoc));
@@ -71,6 +83,19 @@ namespace WebAnalyzer.Models.SettingsModel
         {
 
             DomainSettings domain = new DomainSettings();
+
+            foreach (XmlAttribute attr in domainNode.Attributes)
+            {
+                switch (attr.Name)
+                {
+                    case "domain":
+                        domain.Domain = attr.Value;
+                        break;
+                    case "include-subdomains":
+                        //domain.IncludesSubdomains = attr.Value;
+                        break;
+                }
+            }
 
             foreach (XmlNode child in domainNode.ChildNodes)
             {
