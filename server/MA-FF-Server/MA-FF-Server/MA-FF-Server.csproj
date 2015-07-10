@@ -261,7 +261,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Analysis\" />
-    <Folder Include="Export\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="UI\HTMLResources\css\font-awesome.min.css" />

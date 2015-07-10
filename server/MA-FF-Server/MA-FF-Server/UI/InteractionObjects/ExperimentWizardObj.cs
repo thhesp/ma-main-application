@@ -8,6 +8,9 @@ using System.IO;
 using System.Threading;
 using WebAnalyzer.Util;
 
+using WebAnalyzer.Models.Base;
+using WebAnalyzer.Controller;
+
 namespace WebAnalyzer.UI.InteractionObjects
 {
     public class ExperimentWizardObj : BaseInteractionObject
@@ -28,6 +31,10 @@ namespace WebAnalyzer.UI.InteractionObjects
         public void createExperiment(String name)
         {
             Logger.Log("Create experiment with name: " + name);
+
+            ExperimentModel exp = ExperimentModel.CreateExperiment(name);
+
+            ExportController.SaveExperiment(exp);
         }
 
         public void createExperimentWithImport(String name, String importExp, Boolean importAOI, Boolean importParticipants)
@@ -48,6 +55,10 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             String path = SelectFolderDialog();
             Logger.Log(path);
+
+            ExperimentModel experiment = LoadController.LoadExperiment(path);
+
+            Logger.Log(experiment.ExperimentName);
         }
 
         private String SelectFolderDialog()
@@ -58,9 +69,13 @@ namespace WebAnalyzer.UI.InteractionObjects
             var t = new Thread((ThreadStart)(() =>
             {
                 FolderBrowserDialog fbd = new FolderBrowserDialog();
+                Logger.Log("Default path: " + Properties.Settings.Default.Datalocation);
+                fbd.RootFolder = System.Environment.SpecialFolder.MyDocuments;
                 fbd.SelectedPath = Properties.Settings.Default.Datalocation;
-                fbd.RootFolder = System.Environment.SpecialFolder.MyComputer;
-                fbd.ShowNewFolderButton = true;
+
+                Logger.Log("SelectedPath: " + fbd.SelectedPath);
+
+                fbd.ShowNewFolderButton = false;
                 if (fbd.ShowDialog() == DialogResult.Cancel)
                     return;
 

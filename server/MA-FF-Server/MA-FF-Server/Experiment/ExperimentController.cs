@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using WebAnalyzer.Util;
 using WebAnalyzer.Models.DataModel;
-using WebAnalyzer.Export;
+using WebAnalyzer.Controller;
 
 namespace WebAnalyzer.Experiment
 {
@@ -113,7 +113,7 @@ namespace WebAnalyzer.Experiment
         {
             if (_experiment.Exportable())
             {
-                ExportController.ExportToXML(_experiment);
+                //ExportController.ExportToXML(_experiment);
             }
         }
     }

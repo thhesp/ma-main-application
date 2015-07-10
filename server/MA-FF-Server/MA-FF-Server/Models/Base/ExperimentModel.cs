@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Xml;
 
 using WebAnalyzer.Models.SettingsModel;
+using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.Base
 {
@@ -17,7 +18,7 @@ namespace WebAnalyzer.Models.Base
 
         private List<ExperimentParticipant> _participants = new List<ExperimentParticipant>();
 
-        private ExperimentSettings _settings;
+        private ExperimentSettings _settings = new ExperimentSettings();
 
         public ExperimentModel(String experimentName)
         {
@@ -86,8 +87,14 @@ namespace WebAnalyzer.Models.Base
         public static ExperimentModel LoadFromXML(XmlDocument doc)
         {
             ExperimentModel experiment = new ExperimentModel();
+            XmlNode expNode = doc.DocumentElement.SelectSingleNode("/experiment");
 
-            XmlNode expNode = doc.DocumentElement.SelectSingleNode("experiment");
+            if (expNode == null)
+            {
+                Logger.Log("No Experiment Node found.");
+                return null;
+            }
+            /*
 
             foreach(XmlAttribute attr in expNode.Attributes){
                 switch (attr.Name)
@@ -99,7 +106,17 @@ namespace WebAnalyzer.Models.Base
                         experiment.CreatedAt = DateTime.Parse(attr.Value);
                         break;
                 }
-            }
+            }*/
+
+            experiment.ExperimentName = expNode.Attributes["name"].Value;
+            experiment.CreatedAt = DateTime.Parse(expNode.Attributes["created-at"].Value);
+
+            return experiment;
+        }
+
+        public static ExperimentModel CreateExperiment(String name)
+        {
+            ExperimentModel experiment = new ExperimentModel(name);
 
             return experiment;
         }

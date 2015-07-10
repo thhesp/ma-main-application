@@ -5,13 +5,73 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-using WebAnalyzer.Models.DataModel;
+using WebAnalyzer.Models.Base;
 using WebAnalyzer.Util;
+using WebAnalyzer.Models.SettingsModel;
 
-namespace WebAnalyzer.Export
+namespace WebAnalyzer.Controller
 {
     public class ExportController
     {
+
+        public static Boolean SaveExperiment(ExperimentModel experiment)
+        {
+            String dir = experiment.GetBaseExperimentLocation();
+
+            FileIO.CheckPath(dir);
+            XmlDocument xmlDoc = new XmlDocument();
+
+            xmlDoc.AppendChild(experiment.ToXML(xmlDoc));
+
+            xmlDoc.Save(dir + Properties.Settings.Default.ExperimentFilename);
+
+            if (experiment.Settings != null)
+            {
+                SaveExperimentSettings(dir, experiment.Settings);
+            }
+
+            if (experiment.Particpants != null)
+            {
+                SaveExperimentParticipants(dir, experiment.Particpants);
+            }
+            
+
+            return true;
+        }
+
+        private static Boolean SaveExperimentSettings(String baseDir, ExperimentSettings settings)
+        {
+            FileIO.CheckPath(baseDir);
+            XmlDocument xmlDoc = new XmlDocument();
+
+            xmlDoc.AppendChild(settings.ToXML(xmlDoc));
+
+            xmlDoc.Save(baseDir + Properties.Settings.Default.SettingsFilename);
+
+            return true;
+        }
+
+        private static Boolean SaveExperimentParticipants(String baseDir, List<ExperimentParticipant> participants)
+        {
+            FileIO.CheckPath(baseDir);
+            XmlDocument xmlDoc = new XmlDocument();
+
+            XmlNode participantsNode = xmlDoc.CreateElement("participants");
+
+            foreach (ExperimentParticipant participant in participants)
+            {
+                participantsNode.AppendChild(participant.ToXML(xmlDoc));
+            }
+
+            xmlDoc.AppendChild(participantsNode);
+
+            xmlDoc.Save(baseDir + Properties.Settings.Default.ParticipantsFilename);
+
+            return true;
+        }
+
+
+        /*
         public static Boolean ExportToXML(ExperimentModel experiment)
         {
             String dir = experiment.GetBaseExperimentLocation();
@@ -65,6 +125,6 @@ namespace WebAnalyzer.Export
             fixationDoc.Save(dir + fixationFilename + ".xml");
         }
 
-
+        */
     }
 }

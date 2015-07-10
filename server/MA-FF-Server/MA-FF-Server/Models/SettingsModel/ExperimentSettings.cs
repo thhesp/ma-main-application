@@ -50,7 +50,12 @@ namespace WebAnalyzer.Models.SettingsModel
         {
             ExperimentSettings settings = new ExperimentSettings();
 
-            XmlNode settingsNode = doc.DocumentElement.SelectSingleNode("settings");
+            XmlNode settingsNode = doc.DocumentElement.SelectSingleNode("/settings");
+
+            if (settingsNode == null)
+            {
+                return null;
+            }
 
             foreach (XmlNode child in settingsNode.ChildNodes)
             {
