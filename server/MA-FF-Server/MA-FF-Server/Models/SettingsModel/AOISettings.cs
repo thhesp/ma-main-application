@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Xml;
+
 namespace WebAnalyzer.Models.SettingsModel
 {
     public class AOISettings
@@ -12,6 +14,11 @@ namespace WebAnalyzer.Models.SettingsModel
         private String _identifier;
 
         private List<SettingsRule> _rules = new List<SettingsRule>();
+
+        public AOISettings()
+        {
+
+        }
 
         public AOISettings(String identifier)
         {
@@ -39,5 +46,21 @@ namespace WebAnalyzer.Models.SettingsModel
             _rules.Remove(rule);
         }
 
+
+        public XmlNode ToXML(XmlDocument xmlDoc)
+        {
+            XmlNode aoi = xmlDoc.CreateElement("aoi-setting");
+
+
+            return aoi;
+        }
+
+        public static AOISettings LoadFromXML(XmlNode aoiNode)
+        {
+            AOISettings aoi = new AOISettings();
+
+
+            return aoi;
+        }
     }
 }

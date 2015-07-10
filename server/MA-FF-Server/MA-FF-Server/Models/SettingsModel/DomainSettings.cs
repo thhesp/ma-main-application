@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Xml;
+
 namespace WebAnalyzer.Models.SettingsModel
 {
     public class DomainSettings
@@ -14,6 +16,23 @@ namespace WebAnalyzer.Models.SettingsModel
         private Boolean _includesSubdomains;
 
         private List<AOISettings> _aois = new List<AOISettings>();
+
+        public DomainSettings()
+        {
+
+        }
+
+        public String Domain
+        {
+            get { return _domain; }
+            set { _domain = value; }
+        }
+
+        public Boolean IncludesSubdomains
+        {
+            get { return _includesSubdomains; }
+            set { _includesSubdomains = value;  }
+        }
 
         public DomainSettings(String domain)
         {
@@ -33,6 +52,37 @@ namespace WebAnalyzer.Models.SettingsModel
         public void DeleteRule(AOISettings aoi)
         {
             _aois.Remove(aoi);
+        }
+
+        public XmlNode ToXML(XmlDocument xmlDoc)
+        {
+            XmlNode domain = xmlDoc.CreateElement("domain-setting");
+
+            foreach (AOISettings aoiSettings in _aois)
+            {
+                domain.AppendChild(aoiSettings.ToXML(xmlDoc));
+            }
+
+
+            return domain;
+        }
+
+        public static DomainSettings LoadFromXML(XmlNode domainNode)
+        {
+
+            DomainSettings domain = new DomainSettings();
+
+            foreach (XmlNode child in domainNode.ChildNodes)
+            {
+                AOISettings aoi = AOISettings.LoadFromXML(child);
+
+                if (aoi != null)
+                {
+                    domain.AddAOI(aoi);
+                }
+            }
+
+            return domain;
         }
     }
 }
