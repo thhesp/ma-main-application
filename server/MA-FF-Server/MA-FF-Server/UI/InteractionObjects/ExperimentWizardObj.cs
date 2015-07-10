@@ -19,14 +19,38 @@ namespace WebAnalyzer.UI.InteractionObjects
             Browser.Back();
         }
 
-        public void createExperiment()
+        public void loadCreateExperimentScreen()
         {
             string page = string.Format("{0}UI/HTMLResources/html/popup/experiment_wizard/create_experiment.html", Utilities.GetAppLocation());
             Browser.Load(page);
         }
 
+        public void createExperiment(String name)
+        {
+            Logger.Log("Create experiment with name: " + name);
+        }
+
+        public void createExperimentWithImport(String name, String importExp, Boolean importAOI, Boolean importParticipants)
+        {
+            Logger.Log("Create experiment with name: " + name);
+
+            Logger.Log("Import from: " + importExp);
+        }
+
+        public String selectExperimentToImportData()
+        {
+            String path = SelectFolderDialog();
+
+            return path;
+        }
 
         public void selectExperimentToLoad()
+        {
+            String path = SelectFolderDialog();
+            Logger.Log(path);
+        }
+
+        private String SelectFolderDialog()
         {
             // done in a new thread (kinda is a hack) because of the STAThread problem.
             //http://stackoverflow.com/questions/6860153/exception-when-using-folderbrowserdialog
@@ -46,7 +70,7 @@ namespace WebAnalyzer.UI.InteractionObjects
             t.SetApartmentState(ApartmentState.STA);
             t.Start();
             t.Join();
-            Logger.Log(selectedPath);
+            return selectedPath;
         }
     }
 }

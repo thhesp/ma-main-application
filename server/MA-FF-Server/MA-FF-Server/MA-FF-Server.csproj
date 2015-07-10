@@ -304,6 +304,9 @@
     <Content Include="UI\HTMLResources\js\src\init.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="UI\HTMLResources\js\src\create_experiment.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UI\HTMLResources\js\src\nav.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

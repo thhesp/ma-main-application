@@ -6,25 +6,40 @@
         <link rel="stylesheet" type="text/css" media="screen" href="../../../css/index.css">
     </head>
     <body>
-        <div class="content">
+        <div class="header">
+            <h1>WebAnalyzer</h1>
+        </div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <button type="button">Experiment erstellen</button>
+                        <label>Experimentname:</label>
+                        <input id="experiment-name" type="text" placeholder="Experimentname"/>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <button type="button" onclick="expWizard.back()">Zurück</button>
+                        <label><input id="import-values" type="checkbox" value="true">Daten aus bestehendem Experiment importieren</label>
+                        <div class="indented-controls">
+                            <button id="import-experiment-button" type="button" class="btn btn-default">Experiment auswählen: </button>
+                            <label id="import-experiment"></label>
+                            <br/>
+
+                            <label><input id="import-aoi" type="checkbox" value="true">AOI Einstellungen importieren</label><br />
+                            <label><input id="import-participants" type="checkbox" value="true">Testpersonen importieren</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button id="back-button" type="button" class="btn btn-default">Zurück</button>
+                        <button id="create-experiment-button" type="button" class="btn btn-default">Experiment erstellen</button>
                     </div>
                 </div>
             </div><!-- /.container -->
-        </div>
-        <script type="text/javascript">
-
-        </script>
 
         <script type="text/javascript" src="../../../js/lib/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="../../../js/lib/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="../../../js/src/create_experiment.js"></script>
     </body>
 </html>
