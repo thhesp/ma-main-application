@@ -69,7 +69,7 @@ namespace WebAnalyzer.Controller
             {
                 //import data
                 if (e.ImportParticipants)
-                    currentExperiment.Particpants = LoadController.LoadParticipants(e.ImportExperimentPath);
+                    currentExperiment.Participants = LoadController.LoadParticipants(e.ImportExperimentPath);
 
                 if (e.ImportSettings)
                     currentExperiment.Settings = LoadController.LoadSettings(e.ImportExperimentPath);
@@ -127,7 +127,7 @@ namespace WebAnalyzer.Controller
         private void On_CreateParticipant(object source, CreateParticipantEvent e)
         {
             Logger.Log("create participant?");
-            currentExperiment.Particpants.Add(e.Participant);
+            currentExperiment.Participants.Add(e.Participant);
 
         }
 

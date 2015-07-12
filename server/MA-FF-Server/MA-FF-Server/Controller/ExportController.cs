@@ -30,9 +30,9 @@ namespace WebAnalyzer.Controller
                 SaveExperimentSettings(dir, experiment.Settings);
             }
 
-            if (experiment.Particpants != null)
+            if (experiment.Participants != null)
             {
-                SaveExperimentParticipants(dir, experiment.Particpants);
+                SaveExperimentParticipants(dir, experiment.Participants);
             }
             
 
@@ -68,9 +68,9 @@ namespace WebAnalyzer.Controller
             String dir = experiment.GetBaseExperimentLocation();
 
             FileIO.CheckPath(dir);
-            if (experiment.Particpants != null)
+            if (experiment.Participants != null)
             {
-                return SaveExperimentParticipants(dir, experiment.Particpants);
+                return SaveExperimentParticipants(dir, experiment.Participants);
             }
 
             return true;

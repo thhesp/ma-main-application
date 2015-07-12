@@ -26,7 +26,7 @@ namespace WebAnalyzer.Controller
 
                 if (experiment != null)
                 {
-                    experiment.Particpants = LoadParticipants(path);
+                    experiment.Participants = LoadParticipants(path);
                     experiment.Settings = LoadSettings(path);
                 }
 

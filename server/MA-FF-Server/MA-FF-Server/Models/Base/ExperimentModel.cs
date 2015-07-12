@@ -42,7 +42,7 @@ namespace WebAnalyzer.Models.Base
             set { _createdAt = value; }
         }
 
-        public List<ExperimentParticipant> Particpants
+        public List<ExperimentParticipant> Participants
         {
             get { return _participants; }
             set { _participants = value; }
