@@ -8,6 +8,7 @@ using CefSharp;
 using CefSharp.WinForms;
 
 using WebAnalyzer.Util;
+using WebAnalyzer.Events;
 
 namespace WebAnalyzer.UI.InteractionObjects
 {
@@ -15,6 +16,8 @@ namespace WebAnalyzer.UI.InteractionObjects
     {
 
         private static String BASE_PATH = "{0}UI/HTMLResources/html/main/";
+
+        public event EditParticipantEventHandler EditParticipant;
 
         Dictionary<string, string> _pages = new Dictionary<string, string>();
 
@@ -53,6 +56,16 @@ namespace WebAnalyzer.UI.InteractionObjects
         public String getActivePage()
         {
             return _activePage;
+        }
+
+        public void createParticipant()
+        {
+            Logger.Log("Create participant?");
+            EditParticipant(this, new EditParticipantEvent(true));
+        }
+
+        public void editParticipant(String identifier){
+            EditParticipant(this, new EditParticipantEvent(identifier));
         }
     }
 }

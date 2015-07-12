@@ -123,6 +123,8 @@
     <Compile Include="Controller\LoadController.cs" />
     <Compile Include="Controller\MainController.cs" />
     <Compile Include="Events\CreateExperimentEvent.cs" />
+    <Compile Include="Events\CreateParticipantEvent.cs" />
+    <Compile Include="Events\EditParticipantEvent.cs" />
     <Compile Include="Events\LoadExperimentEvent.cs" />
     <Compile Include="Experiment\ExperimentController.cs" />
     <Compile Include="Models\AnalysisModel\FixationModel.cs" />
@@ -174,10 +176,17 @@
     <Compile Include="ApplicationSettings\AppSettings.cs" />
     <Compile Include="ApplicationSettings\SettingsValidator.cs" />
     <Compile Include="UI\ChromeDevTools.cs" />
-    <Compile Include="UI\ExperimentWizard.cs">
+    <Compile Include="UI\InteractionObjects\ParticipantControl.cs" />
+    <Compile Include="UI\Popup\EditParticipantForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\ExperimentWizard.Designer.cs">
+    <Compile Include="UI\Popup\EditParticipantForm.Designer.cs">
+      <DependentUpon>EditParticipantForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Popup\ExperimentWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Popup\ExperimentWizard.Designer.cs">
       <DependentUpon>ExperimentWizard.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\HTMLUI.cs">
@@ -221,7 +230,10 @@
     <EmbeddedResource Include="Test\Communication\MouseTracker.resx">
       <DependentUpon>MouseTracker.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\ExperimentWizard.resx">
+    <EmbeddedResource Include="UI\Popup\EditParticipantForm.resx">
+      <DependentUpon>EditParticipantForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Popup\ExperimentWizard.resx">
       <DependentUpon>ExperimentWizard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\HTMLUI.resx">
@@ -263,6 +275,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Analysis\" />
+    <Folder Include="UI\HTMLResources\html\popup\settings\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="UI\HTMLResources\css\font-awesome.min.css" />
@@ -300,10 +313,16 @@
     <Content Include="UI\HTMLResources\html\popup\experiment_wizard\index.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="UI\HTMLResources\html\popup\participant\edit.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UI\HTMLResources\js\lib\bootstrap.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UI\HTMLResources\js\lib\jquery-2.1.4.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HTMLResources\js\src\edit_participant.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UI\HTMLResources\js\src\init.js">

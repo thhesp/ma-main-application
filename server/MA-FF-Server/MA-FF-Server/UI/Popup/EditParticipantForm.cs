@@ -15,68 +15,39 @@ using System.Windows.Forms;
 using WebAnalyzer.UI.InteractionObjects;
 using WebAnalyzer.Util;
 using WebAnalyzer.Events;
+using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.UI
 {
-    public partial class HTMLUI : Form
+    public partial class EditParticipantForm : Form
     {
         private ChromiumWebBrowser myBrowser = null;
-        private ExperimentObject _exp = null;
+        private ExperimentParticipant _participant = null;
+        private Boolean _create = false;
 
-        public event EditParticipantEventHandler EditParticipant;
+        public event CreateParticipantEventHandler CreateParticipant;
 
-        public HTMLUI()
+        public EditParticipantForm(ExperimentParticipant participant, Boolean create)
         {
+            _participant = participant;
+            _create = create;
             InitializeComponent();
-        }
-
-        public void SetExperimentData(String name){
-            _exp.Name = name;
-        }
-
-        public void ReloadPage()
-        {
-            if (myBrowser != null)
-            {
-                myBrowser.Reload();
-                Logger.Log("Reloading???");
-            }
-        }
-
-        private void CreateBrowser(String page){
-            myBrowser = new ChromiumWebBrowser(page);
-
-            if(_exp != null){
-                _exp.Browser = myBrowser;
-                myBrowser.RegisterJsObject("experimentObj", _exp);
-                ReloadPage();
-            }
-        }
-
-        private void CreateNav(){
-            Navigation nav = new Navigation();
-            nav.Browser = myBrowser;
-
-            nav.EditParticipant += this.EditParticipant;
-            myBrowser.RegisterJsObject("nav", nav);
-        }
-
-        private void CreateExperimentObj()
-        {
-            _exp = new ExperimentObject("");
-            _exp.Browser = myBrowser;
-            myBrowser.RegisterJsObject("experimentObj", _exp);
         }
 
         private void Browser_Load(object sender, EventArgs e)
         {
-            Cef.Initialize();
+            //Cef.Initialize();
 
-            string page = string.Format("{0}UI/HTMLResources/html/main/index.html", Utilities.GetAppLocation());
-            CreateBrowser(page);
+            string page = string.Format("{0}UI/HTMLResources/html/popup/participant/edit.html", Utilities.GetAppLocation());
+            myBrowser = new ChromiumWebBrowser(page);
 
-            CreateNav();
-            CreateExperimentObj();
+            ParticipantControl control = new ParticipantControl(this, _participant);
+            control.Browser = myBrowser;
+            control.CreateParticipant += this.CreateParticipant;
+
+            myBrowser.RegisterJsObject("control", control);
+
+            myBrowser.RegisterJsObject("newParticipant", _create);
 
             myBrowser.Load(page);
             
@@ -85,11 +56,12 @@ namespace WebAnalyzer.UI
 
             // chromdev tools
             ChromeDevTools.CreateSysMenu(this);
+
         }
 
         private void Browser_Closing(object sender, FormClosingEventArgs e)
         {
-            Cef.Shutdown();
+            //Cef.Shutdown();
         }
 
         protected override void WndProc(ref Message m)
@@ -114,4 +86,5 @@ namespace WebAnalyzer.UI
             }
         }
     }
+
 }

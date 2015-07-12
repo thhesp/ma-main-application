@@ -34,6 +34,9 @@ namespace WebAnalyzer.Controller
 
             mainUI = new HTMLUI();
             mainUI.Shown += new System.EventHandler(this.MainUIFinishedLoading);
+
+            mainUI.EditParticipant += On_EditParticpant;
+
             Application.Run(mainUI);
         }
 
@@ -101,7 +104,46 @@ namespace WebAnalyzer.Controller
                 // close the form on the forms thread
                 experimentWizard.DialogResult = DialogResult.OK;
             });
-            
+        }
+
+        private void On_EditParticpant(object source, EditParticipantEvent e)
+        {
+            Logger.Log("edit participant?");
+            if (e.CreateNew)
+            {
+                // create new participant
+                ExperimentParticipant par = new ExperimentParticipant();
+                ShowEditParticipantForm(par, true);
+
+            }
+            else
+            {
+                //load participant
+                ExperimentParticipant par = new ExperimentParticipant();
+                ShowEditParticipantForm(par, false);
+            }
+        }
+
+        private void On_CreateParticipant(object source, CreateParticipantEvent e)
+        {
+            Logger.Log("create participant?");
+            currentExperiment.Particpants.Add(e.Participant);
+
+        }
+
+        private void ShowEditParticipantForm(ExperimentParticipant particpant, Boolean createNew)
+        {
+            Logger.Log("Show edit participant?");
+            EditParticipantForm editParticpant = new EditParticipantForm(particpant, createNew);
+
+            editParticpant.CreateParticipant += On_CreateParticipant;
+
+            if (editParticpant.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                
+                ExportController.SaveExperiment(currentExperiment);
+                Logger.Log("Save edit participant");
+            }
         }
     }
 }
