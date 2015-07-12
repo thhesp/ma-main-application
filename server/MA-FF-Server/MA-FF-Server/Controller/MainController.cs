@@ -141,7 +141,7 @@ namespace WebAnalyzer.Controller
             if (editParticpant.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 
-                ExportController.SaveExperiment(currentExperiment);
+                ExportController.SaveExperimentParticipants(currentExperiment);
                 Logger.Log("Save edit participant");
             }
         }

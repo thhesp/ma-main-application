@@ -39,9 +39,21 @@ namespace WebAnalyzer.Controller
             return true;
         }
 
+        public static Boolean SaveExperimentSettings(ExperimentModel experiment)
+        {
+            String dir = experiment.GetBaseExperimentLocation();
+
+            FileIO.CheckPath(dir);
+            if (experiment.Settings != null)
+            {
+                return SaveExperimentSettings(dir, experiment.Settings);
+            }
+
+            return true;
+        }
+
         private static Boolean SaveExperimentSettings(String baseDir, ExperimentSettings settings)
         {
-            FileIO.CheckPath(baseDir);
             XmlDocument xmlDoc = new XmlDocument();
 
             xmlDoc.AppendChild(settings.ToXML(xmlDoc));
@@ -51,9 +63,21 @@ namespace WebAnalyzer.Controller
             return true;
         }
 
+        public static Boolean SaveExperimentParticipants(ExperimentModel experiment)
+        {
+            String dir = experiment.GetBaseExperimentLocation();
+
+            FileIO.CheckPath(dir);
+            if (experiment.Particpants != null)
+            {
+                return SaveExperimentParticipants(dir, experiment.Particpants);
+            }
+
+            return true;
+        }
+
         private static Boolean SaveExperimentParticipants(String baseDir, List<ExperimentParticipant> participants)
         {
-            FileIO.CheckPath(baseDir);
             XmlDocument xmlDoc = new XmlDocument();
 
             XmlNode participantsNode = xmlDoc.CreateElement("participants");
