@@ -18,5 +18,11 @@ namespace WebAnalyzer.UI.InteractionObjects
         public String getName(){
             return _name;
         }
+
+        public String Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
     }
 }

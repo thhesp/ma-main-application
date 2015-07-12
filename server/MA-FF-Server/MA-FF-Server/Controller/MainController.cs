@@ -10,12 +10,17 @@ using WebAnalyzer.Util;
 using WebAnalyzer.Events;
 
 using WebAnalyzer.Models.Base;
+using WebAnalyzer.UI.InteractionObjects;
 
 
 namespace WebAnalyzer.Controller
 {
     public class MainController
     {
+        private ExperimentModel currentExperiment;
+
+        private HTMLUI mainUI;
+        private ExperimentWizard experimentWizard;
 
         public void Start()
         {
@@ -27,7 +32,7 @@ namespace WebAnalyzer.Controller
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            HTMLUI mainUI = new HTMLUI();
+            mainUI = new HTMLUI();
             mainUI.Shown += new System.EventHandler(this.MainUIFinishedLoading);
             Application.Run(mainUI);
         }
@@ -41,13 +46,13 @@ namespace WebAnalyzer.Controller
         private void ShowExperimentWizard()
         {
             Logger.Log("Show experiment wizard?");
-            ExperimentWizard experimentWizard = new ExperimentWizard();
+            experimentWizard = new ExperimentWizard();
             experimentWizard.CreateExperiment += On_CreateExperiment;
             experimentWizard.LoadExperiment += On_LoadExperiment;
 
             if (experimentWizard.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                MessageBox.Show("user pressed ok");
+                
             }
         }
 
@@ -55,29 +60,48 @@ namespace WebAnalyzer.Controller
         {
             Logger.Log("On create experiment event");
 
-            ExperimentModel experiment = ExperimentModel.CreateExperiment(e.Name);
+            currentExperiment = ExperimentModel.CreateExperiment(e.Name);
 
             if (e.ImportData)
             {
                 //import data
                 if (e.ImportParticipants)
-                    experiment.Particpants = LoadController.LoadParticipants(e.ImportExperimentPath);
+                    currentExperiment.Particpants = LoadController.LoadParticipants(e.ImportExperimentPath);
 
                 if (e.ImportSettings)
-                    experiment.Settings = LoadController.LoadSettings(e.ImportExperimentPath);
+                    currentExperiment.Settings = LoadController.LoadSettings(e.ImportExperimentPath);
 
             }
 
-            ExportController.SaveExperiment(experiment);
+            ExportController.SaveExperiment(currentExperiment);
+            SetExpiermentData(currentExperiment);
+            CloseExperimentWizard();
         }
 
         private void On_LoadExperiment(object source, LoadExperimentEvent e)
         {
             Logger.Log("On load experiment event");
 
-            ExperimentModel experiment = LoadController.LoadExperiment(e.Path);
+            currentExperiment = LoadController.LoadExperiment(e.Path);
 
-            Logger.Log(experiment.ExperimentName);
+            SetExpiermentData(currentExperiment);
+            CloseExperimentWizard();
+        }
+
+        private void SetExpiermentData(ExperimentModel experiment)
+        {
+            mainUI.SetExperimentData(experiment.ExperimentName);
+            mainUI.ReloadPage();
+        }
+
+        private void CloseExperimentWizard()
+        {
+            experimentWizard.Invoke((MethodInvoker)delegate
+            {
+                // close the form on the forms thread
+                experimentWizard.DialogResult = DialogResult.OK;
+            });
+            
         }
     }
 }

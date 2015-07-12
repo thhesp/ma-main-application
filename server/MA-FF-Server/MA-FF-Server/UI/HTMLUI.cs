@@ -19,11 +19,48 @@ namespace WebAnalyzer.UI
 {
     public partial class HTMLUI : Form
     {
-        ChromiumWebBrowser myBrowser = null;
+        private ChromiumWebBrowser myBrowser = null;
+        private ExperimentObject _exp = null;
 
         public HTMLUI()
         {
             InitializeComponent();
+        }
+
+        public void SetExperimentData(String name){
+            _exp.Name = name;
+        }
+
+        public void ReloadPage()
+        {
+            if (myBrowser != null)
+            {
+                myBrowser.Reload();
+                Logger.Log("Reloading???");
+            }
+        }
+
+        private void CreateBrowser(String page){
+            myBrowser = new ChromiumWebBrowser(page);
+
+            if(_exp != null){
+                _exp.Browser = myBrowser;
+                myBrowser.RegisterJsObject("experimentObj", _exp);
+                ReloadPage();
+            }
+        }
+
+        private void CreateNav(){
+            Navigation nav = new Navigation();
+            nav.Browser = myBrowser;
+            myBrowser.RegisterJsObject("nav", nav);
+        }
+
+        private void CreateExperimentObj()
+        {
+            _exp = new ExperimentObject("");
+            _exp.Browser = myBrowser;
+            myBrowser.RegisterJsObject("experimentObj", _exp);
         }
 
         private void Browser_Load(object sender, EventArgs e)
@@ -31,22 +68,10 @@ namespace WebAnalyzer.UI
             Cef.Initialize();
 
             string page = string.Format("{0}UI/HTMLResources/html/main/index.html", Utilities.GetAppLocation());
-            myBrowser = new ChromiumWebBrowser(page);
+            CreateBrowser(page);
 
-            Navigation nav = new Navigation();
-            nav.Browser = myBrowser;
-
-            ExperimentObject exp = new ExperimentObject("test experiment");
-            
-
-            // Register the JavaScriptInteractionObj class with JS
-
-            myBrowser.RegisterJsObject("nav", nav);
-
-            myBrowser.RegisterJsObject("experimentObj", exp);
-
-            
-            Console.WriteLine(page);
+            CreateNav();
+            CreateExperimentObj();
 
             myBrowser.Load(page);
             
@@ -55,7 +80,6 @@ namespace WebAnalyzer.UI
 
             // chromdev tools
             ChromeDevTools.CreateSysMenu(this);
-
         }
 
         private void Browser_Closing(object sender, FormClosingEventArgs e)

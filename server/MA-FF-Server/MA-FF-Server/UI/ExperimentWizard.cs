@@ -33,7 +33,7 @@ namespace WebAnalyzer.UI
 
         private void Browser_Load(object sender, EventArgs e)
         {
-            Cef.Initialize();
+            //Cef.Initialize();
 
             string page = string.Format("{0}UI/HTMLResources/html/popup/experiment_wizard/index.html", Utilities.GetAppLocation());
             myBrowser = new ChromiumWebBrowser(page);
@@ -59,7 +59,7 @@ namespace WebAnalyzer.UI
 
         private void Browser_Closing(object sender, FormClosingEventArgs e)
         {
-            Cef.Shutdown();
+            //Cef.Shutdown();
         }
 
         protected override void WndProc(ref Message m)
