@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $('#import-experiment-button').attr('disabled', true);
-    $('#import-aoi').attr('disabled', true);
+    $('#import-settings').attr('disabled', true);
     $('#import-participants').attr('disabled', true);
     $('#import-experiment').text("");
 });
@@ -8,12 +8,12 @@
 $('#import-values').change(function () {
     if (!this.checked) {
         $('#import-experiment-button').attr('disabled', true);
-        $('#import-aoi').attr('disabled', true);
+        $('#import-settings').attr('disabled', true);
         $('#import-participants').attr('disabled', true);
         $('#import-experiment').text("");
     } else {
         $('#import-experiment-button').attr('disabled', false);
-        $('#import-aoi').attr('disabled', false);
+        $('#import-settings').attr('disabled', false);
         $('#import-participants').attr('disabled', false);
     }
 });
@@ -31,13 +31,13 @@ $('#create-experiment-button').click(function () {
 
     if ($('#import-values').prop('checked')) {
         var path = $('#import-experiment').text();
-        var importAOI = $('#import-aoi').prop('checked');
+        var importSettings = $('#import-settings').prop('checked');
         var importParticipants = $('#import-participants').prop('checked');
 
-        console.log("importAOI: ", importAOI);
+        console.log("importSettings: ", importSettings);
         console.log("importParticipants: ", importParticipants);
 
-        expWizard.createExperimentWithImport(name, path, importAOI, importParticipants);
+        expWizard.createExperimentWithImport(name, path, importSettings, importParticipants);
     } else {
         expWizard.createExperiment(name);
     }

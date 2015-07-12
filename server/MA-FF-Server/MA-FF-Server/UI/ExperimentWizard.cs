@@ -14,12 +14,17 @@ using System.Windows.Forms;
 
 using WebAnalyzer.UI.InteractionObjects;
 using WebAnalyzer.Util;
+using WebAnalyzer.Events;
 
 namespace WebAnalyzer.UI
 {
     public partial class ExperimentWizard : Form
     {
-        ChromiumWebBrowser myBrowser = null;
+        private ChromiumWebBrowser myBrowser = null;
+
+        public event CreateExperimentEventHandler CreateExperiment;
+        public event LoadExperimentEventHandler LoadExperiment;
+
 
         public ExperimentWizard()
         {
@@ -35,6 +40,9 @@ namespace WebAnalyzer.UI
 
             ExperimentWizardObj expWizard = new ExperimentWizardObj();
             expWizard.Browser = myBrowser;
+
+            expWizard.CreateExperiment += this.CreateExperiment;
+            expWizard.LoadExperiment += this.LoadExperiment;
 
             // Register the JavaScriptInteractionObj class with JS
             myBrowser.RegisterJsObject("expWizard", expWizard);
@@ -76,4 +84,5 @@ namespace WebAnalyzer.UI
             }
         }
     }
+
 }

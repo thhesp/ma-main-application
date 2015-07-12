@@ -10,12 +10,15 @@ using WebAnalyzer.Util;
 
 using WebAnalyzer.Models.Base;
 using WebAnalyzer.Controller;
+using WebAnalyzer.Events;
 
 namespace WebAnalyzer.UI.InteractionObjects
 {
     public class ExperimentWizardObj : BaseInteractionObject
     {
 
+        public event CreateExperimentEventHandler CreateExperiment;
+        public event LoadExperimentEventHandler LoadExperiment;
 
         public void back()
         {
@@ -32,16 +35,20 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             Logger.Log("Create experiment with name: " + name);
 
-            ExperimentModel exp = ExperimentModel.CreateExperiment(name);
-
-            ExportController.SaveExperiment(exp);
+            CreateExperiment(this, new CreateExperimentEvent(name));
         }
 
-        public void createExperimentWithImport(String name, String importExp, Boolean importAOI, Boolean importParticipants)
+        public void createExperimentWithImport(String name, String importExp, Boolean importSettings, Boolean importParticipants)
         {
             Logger.Log("Create experiment with name: " + name);
 
             Logger.Log("Import from: " + importExp);
+
+            CreateExperimentEvent eventData = new CreateExperimentEvent(name);
+
+            eventData.SetImportData(importExp, importParticipants, importSettings);
+
+            CreateExperiment(this, eventData);
         }
 
         public String selectExperimentToImportData()
@@ -55,10 +62,11 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             String path = SelectFolderDialog();
             Logger.Log(path);
+            if (path != null)
+            {
+                LoadExperiment(this, new LoadExperimentEvent(path));
+            }
 
-            ExperimentModel experiment = LoadController.LoadExperiment(path);
-
-            Logger.Log(experiment.ExperimentName);
         }
 
         private String SelectFolderDialog()
@@ -77,7 +85,11 @@ namespace WebAnalyzer.UI.InteractionObjects
 
                 fbd.ShowNewFolderButton = false;
                 if (fbd.ShowDialog() == DialogResult.Cancel)
+                {
+                    selectedPath = null;
                     return;
+                }
+                    
 
                 selectedPath = fbd.SelectedPath;
             }));
