@@ -11,27 +11,31 @@ namespace WebAnalyzer.Events
     public class EditParticipantEvent : EventArgs
     {
 
-        private String _identifier;
-        private Boolean _createNew;
+        public enum EDIT_TYPES { Create = 0, Edit = 1, Copy = 2, Delete = 3 };
 
-        public EditParticipantEvent(String identifier)
+        private String _uid;
+
+        private EDIT_TYPES _type;
+
+        public EditParticipantEvent(EDIT_TYPES type, String uid)
         {
-            _identifier = identifier;
+            _uid = uid;
+            _type = type;
         }
 
-        public EditParticipantEvent(Boolean createNew)
+        public EditParticipantEvent(EDIT_TYPES type)
         {
-            _createNew = createNew;
+            _type = type;
         }
 
-        public String Identifier
+        public String UID
         {   
-            get {return _identifier; }
+            get {return _uid; }
         }
 
-        public Boolean CreateNew
+        public EDIT_TYPES Type
         {
-            get { return _createNew; }
+            get { return _type; }
         }
     }
 }

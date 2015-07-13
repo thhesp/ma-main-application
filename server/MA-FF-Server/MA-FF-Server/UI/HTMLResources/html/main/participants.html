@@ -64,10 +64,30 @@
         var participantArray = experimentObj.participantArray();
 
         for (var i = 0; i < participantArray.length; i++) {
-            var html = "<tr><td>" + participantArray[i] + "</td><td><i class='fa fa-pencil-square-o'></i></td><td><i class='fa fa-files-o'></i></td><td><i class='fa fa-times'></i></td></tr>";
+            var html = "<tr uid='" + participantArray[i] + "'><td>" + participantArray[i] + "</td><td><i class='edit fa fa-pencil-square-o'></i></td><td><i class='copy fa fa-files-o'></i></td><td><i class='delete fa fa-times'></i></td></tr>";
             $('#participants-table').append(html);
         }
 
+        $('#participants-table .edit').click(function () {
+            var uid = $(this).closest('tr').attr('uid');
+
+            console.log('edit clicked: ', uid);
+            nav.editParticipant(uid);
+        });
+
+        $('#participants-table .copy').click(function () {
+            var uid = $(this).closest('tr').attr('uid');
+
+            console.log('copy clicked: ', uid);
+            nav.copyParticipant(uid);
+        });
+
+        $('#participants-table .delete').click(function () {
+            var uid = $(this).closest('tr').attr('uid');
+
+            console.log('delete clicked: ', uid);
+            nav.deleteParticipant(uid);
+        });
 
     </script>
 

@@ -66,6 +66,20 @@ namespace WebAnalyzer.Models.Base
             return participantArray;
         }
 
+        public ExperimentParticipant GetParticipantByUID(String uid)
+        {
+            foreach (ExperimentParticipant par in Participants)
+            {
+                if (par.Identifier.Equals(uid))
+                {
+                    return par;
+                }
+
+            }
+
+            return null;
+        }
+
         public String GetBaseExperimentLocation()
         {
             return Properties.Settings.Default.Datalocation + _experimentName + "\\";

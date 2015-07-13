@@ -19,10 +19,18 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         private ExperimentParticipant _participant;
 
-        public ParticipantControl(EditParticipantForm form, ExperimentParticipant par)
+        private Boolean _create;
+
+        public ParticipantControl(EditParticipantForm form, ExperimentParticipant par, Boolean create)
         {
             _form = form;
             _participant = par;
+            _create = create;
+        }
+
+        public Boolean creatingNewParticipant()
+        {
+            return _create;
         }
 
         public void saveParticipant()

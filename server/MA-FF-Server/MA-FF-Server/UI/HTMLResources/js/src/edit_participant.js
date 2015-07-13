@@ -1,4 +1,4 @@
-﻿if(!newParticipant){
+﻿if(!control.creatingNewParticipant()){
     console.log("initialize data...");
 
     $('#identifier').val(control.getIdentifier());

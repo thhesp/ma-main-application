@@ -114,18 +114,23 @@ namespace WebAnalyzer.Controller
         private void On_EditParticpant(object source, EditParticipantEvent e)
         {
             Logger.Log("edit participant?");
-            if (e.CreateNew)
+            switch (e.Type)
             {
-                // create new participant
-                ExperimentParticipant par = new ExperimentParticipant();
-                ShowEditParticipantForm(par, true);
+                case EditParticipantEvent.EDIT_TYPES.Edit:
+                    ExperimentParticipant par = currentExperiment.GetParticipantByUID(e.UID);
+                    ShowEditParticipantForm(par, false);
+                    break;
+                case EditParticipantEvent.EDIT_TYPES.Create:
+                    ExperimentParticipant newPar = new ExperimentParticipant();
+                    ShowEditParticipantForm(newPar, true);
+                    break;
+                case EditParticipantEvent.EDIT_TYPES.Copy:
+                    //ExperimentParticipant par = currentExperiment.GetParticipantByUID(uid);
+                    break;
+                case EditParticipantEvent.EDIT_TYPES.Delete:
+                    //ExperimentParticipant par = currentExperiment.GetParticipantByUID(uid);
+                    break;
 
-            }
-            else
-            {
-                //load participant
-                ExperimentParticipant par = new ExperimentParticipant();
-                ShowEditParticipantForm(par, false);
             }
         }
 

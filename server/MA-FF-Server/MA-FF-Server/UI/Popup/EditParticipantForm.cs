@@ -41,13 +41,11 @@ namespace WebAnalyzer.UI
             string page = string.Format("{0}UI/HTMLResources/html/popup/participant/edit.html", Utilities.GetAppLocation());
             myBrowser = new ChromiumWebBrowser(page);
 
-            ParticipantControl control = new ParticipantControl(this, _participant);
+            ParticipantControl control = new ParticipantControl(this, _participant, _create);
             control.Browser = myBrowser;
             control.CreateParticipant += this.CreateParticipant;
 
             myBrowser.RegisterJsObject("control", control);
-
-            myBrowser.RegisterJsObject("newParticipant", _create);
 
             myBrowser.Load(page);
             

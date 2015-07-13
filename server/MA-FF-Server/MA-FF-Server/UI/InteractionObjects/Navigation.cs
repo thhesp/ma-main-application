@@ -61,11 +61,21 @@ namespace WebAnalyzer.UI.InteractionObjects
         public void createParticipant()
         {
             Logger.Log("Create participant?");
-            EditParticipant(this, new EditParticipantEvent(true));
+            EditParticipant(this, new EditParticipantEvent(EditParticipantEvent.EDIT_TYPES.Create));
         }
 
-        public void editParticipant(String identifier){
-            EditParticipant(this, new EditParticipantEvent(identifier));
+        public void editParticipant(String uid){
+            EditParticipant(this, new EditParticipantEvent(EditParticipantEvent.EDIT_TYPES.Edit, uid));
+        }
+
+        public void copyParticipant(String uid)
+        {
+            EditParticipant(this, new EditParticipantEvent(EditParticipantEvent.EDIT_TYPES.Copy, uid));
+        }
+
+        public void deleteParticipant(String uid)
+        {
+            EditParticipant(this, new EditParticipantEvent(EditParticipantEvent.EDIT_TYPES.Delete, uid));
         }
     }
 }
