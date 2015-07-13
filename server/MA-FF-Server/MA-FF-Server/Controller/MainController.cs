@@ -97,6 +97,11 @@ namespace WebAnalyzer.Controller
             mainUI.ReloadPage();
         }
 
+        private void RefreshMainUI()
+        {
+            SetExpiermentData(currentExperiment);
+        }
+
         private void CloseExperimentWizard()
         {
             experimentWizard.Invoke((MethodInvoker)delegate
@@ -143,6 +148,8 @@ namespace WebAnalyzer.Controller
                 
                 ExportController.SaveExperimentParticipants(currentExperiment);
                 Logger.Log("Save edit participant");
+                //refresh participants
+                RefreshMainUI();
             }
         }
     }
