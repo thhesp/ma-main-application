@@ -74,5 +74,36 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             return _participant.Education;
         }
+
+        public String getSex()
+        {
+            switch (_participant.Sex)
+            {
+                case ExperimentParticipant.SEX_TYPES.Male:
+                    return "male";
+                case ExperimentParticipant.SEX_TYPES.Female:
+                    return "female";
+                case ExperimentParticipant.SEX_TYPES.Undecided:
+                    return "undecided";
+            }
+
+            return "";
+        }
+
+        public void setSex(String sex)
+        {
+            switch (sex)
+            {
+                case "male":
+                    _participant.Sex = ExperimentParticipant.SEX_TYPES.Male;
+                    break;
+                case "female":
+                    _participant.Sex = ExperimentParticipant.SEX_TYPES.Female;
+                    break;
+                case "undecided":
+                    _participant.Sex = ExperimentParticipant.SEX_TYPES.Undecided;
+                    break;
+            }
+        }
     }
 }
