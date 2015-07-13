@@ -11,6 +11,8 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         private String _name;
 
+        private String[] _participants;
+
         public ExperimentObject(String name){
             _name = name;
         }
@@ -23,6 +25,17 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             get { return _name; }
             set { _name = value; }
+        }
+
+        public String[] participantArray()
+        {
+            return Participants;
+        }
+
+        public String[] Participants
+        {
+            get { return _participants; }
+            set { _participants = value; }
         }
     }
 }

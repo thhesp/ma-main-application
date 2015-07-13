@@ -54,6 +54,18 @@ namespace WebAnalyzer.Models.Base
             set { _settings = value; }
         }
 
+        public String[] GetParticipantArray()
+        {
+            String[] participantArray = new String[Participants.Count];
+
+            for (int i = 0; i < Participants.Count; i++)
+            {
+                participantArray[i] = Participants[i].Identifier;
+            }
+
+            return participantArray;
+        }
+
         public String GetBaseExperimentLocation()
         {
             return Properties.Settings.Default.Datalocation + _experimentName + "\\";

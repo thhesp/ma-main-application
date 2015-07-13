@@ -3,6 +3,7 @@
 <head>
     <title>Index</title>
     <link rel="stylesheet" type="text/css" media="screen" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../../css/index.css">
 </head>
 <body>
@@ -47,13 +48,8 @@
                                 <th>Delete</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Eve</td>
-                                <td>Jackson</td>
-                                <td>94</td>
-                                <td>94</td>
-                            </tr>
+                        <tbody id="participants-table">
+                            
                         </tbody>
                     </table> 
                 </div>
@@ -61,9 +57,21 @@
         </div><!-- /.container -->
     </div>
     <footer></footer>
-
     <script type="text/javascript" src="../../js/lib/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="../../js/lib/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        var participantArray = experimentObj.participantArray();
+
+        for (var i = 0; i < participantArray.length; i++) {
+            var html = "<tr><td>" + participantArray[i] + "</td><td><i class='fa fa-pencil-square-o'></i></td><td><i class='fa fa-files-o'></i></td><td><i class='fa fa-times'></i></td></tr>";
+            $('#participants-table').append(html);
+        }
+
+
+    </script>
+
+
 
     <script type="text/javascript" src="../../js/src/nav.js"></script>
     <script type="text/javascript" src="../../js/src/init.js"></script>

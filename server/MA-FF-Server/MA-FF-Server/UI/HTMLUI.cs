@@ -30,8 +30,9 @@ namespace WebAnalyzer.UI
             InitializeComponent();
         }
 
-        public void SetExperimentData(String name){
+        public void SetExperimentData(String name, String[] participants){
             _exp.Name = name;
+            _exp.Participants = participants;
         }
 
         public void ReloadPage()
