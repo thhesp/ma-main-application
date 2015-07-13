@@ -31,6 +31,11 @@ namespace WebAnalyzer.Models.Base
         /* other data */
         private DateTime _createdAt;
 
+        public ExperimentParticipant()
+        {
+            _createdAt = DateTime.Now;
+        }
+
         public String Identifier
         {
             get { return _identifier; }
@@ -59,6 +64,12 @@ namespace WebAnalyzer.Models.Base
         {
             get { return _createdAt; }
             set { _createdAt = value; }
+        }
+
+        public Dictionary<String, String> ExtraData
+        {
+            get { return _variableData; }
+            set { _variableData = value; }
         }
 
         public void AddExtraData(String key, String value)
@@ -171,6 +182,18 @@ namespace WebAnalyzer.Models.Base
         }
 
 
+        public static ExperimentParticipant Copy(ExperimentParticipant orig)
+        {
+            ExperimentParticipant copy = new ExperimentParticipant();
 
+            copy.Identifier = "Kopie - " + orig.Identifier;
+            copy.BirthYear = orig.BirthYear;
+            copy.Education = orig.Education;
+            copy.Sex = orig.Sex;
+
+            copy.ExtraData = orig.ExtraData;
+
+            return copy;
+        }
     }
 }

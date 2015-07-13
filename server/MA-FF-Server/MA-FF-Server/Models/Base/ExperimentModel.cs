@@ -23,11 +23,12 @@ namespace WebAnalyzer.Models.Base
         public ExperimentModel(String experimentName)
         {
             _experimentName = experimentName;
+            _createdAt = DateTime.Now;
         }
 
         public ExperimentModel()
         {
-
+            _createdAt = DateTime.Now;
         }
 
         public String ExperimentName

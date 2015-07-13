@@ -125,12 +125,18 @@ namespace WebAnalyzer.Controller
                     ShowEditParticipantForm(newPar, true);
                     break;
                 case EditParticipantEvent.EDIT_TYPES.Copy:
-                    //ExperimentParticipant par = currentExperiment.GetParticipantByUID(uid);
+                    ExperimentParticipant orig = currentExperiment.GetParticipantByUID(e.UID);
+                    ExperimentParticipant copy = ExperimentParticipant.Copy(orig);
+                    currentExperiment.Participants.Add(copy);
+                    ExportController.SaveExperimentParticipants(currentExperiment);
+                    RefreshMainUI();
                     break;
                 case EditParticipantEvent.EDIT_TYPES.Delete:
-                    //ExperimentParticipant par = currentExperiment.GetParticipantByUID(uid);
+                    ExperimentParticipant toDeletePar = currentExperiment.GetParticipantByUID(e.UID);
+                    currentExperiment.Participants.Remove(toDeletePar);
+                    ExportController.SaveExperimentParticipants(currentExperiment);
+                    RefreshMainUI();
                     break;
-
             }
         }
 
