@@ -35,7 +35,10 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         public void saveParticipant()
         {
-            CreateParticipant(this, new CreateParticipantEvent(_participant));
+            if (_create)
+            {
+                CreateParticipant(this, new CreateParticipantEvent(_participant));
+            }
 
             _form.Invoke((MethodInvoker)delegate
             {
@@ -112,6 +115,22 @@ namespace WebAnalyzer.UI.InteractionObjects
                     _participant.Sex = ExperimentParticipant.SEX_TYPES.Undecided;
                     break;
             }
+        }
+
+        public String[] getExtraDataKeys()
+        {
+            return _participant.ExtraData.Keys.ToArray();
+        }
+
+        public String[] getExtraDataValues()
+        {
+            return _participant.ExtraData.Values.ToArray();
+        }
+
+        public void addExtraData(String key, String value)
+        {
+            if(key != null & value != null)
+                _participant.AddExtraData(key, value);
         }
     }
 }

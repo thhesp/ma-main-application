@@ -74,7 +74,15 @@ namespace WebAnalyzer.Models.Base
 
         public void AddExtraData(String key, String value)
         {
-            _variableData.Add(key, value);
+            if (!_variableData.ContainsKey(key))
+            {
+                _variableData.Add(key, value);
+            }
+            else
+            {
+                _variableData[key] = value;
+            }
+                
         }
 
         public Dictionary<String, String> GetExtraData()
@@ -134,7 +142,7 @@ namespace WebAnalyzer.Models.Base
             {
                 XmlNode attribute = xmlDoc.CreateElement(key);
 
-                attribute.Value = _variableData[key];
+                attribute.InnerText = _variableData[key];
 
                 extraAttributes.AppendChild(attribute);
             }
@@ -174,7 +182,7 @@ namespace WebAnalyzer.Models.Base
             {
                 foreach (XmlNode attribute in attributes.ChildNodes)
                 {
-                    participant.AddExtraData(attribute.Name, attribute.Value);
+                    participant.AddExtraData(attribute.Name, attribute.InnerText);
                 }
             }
 
