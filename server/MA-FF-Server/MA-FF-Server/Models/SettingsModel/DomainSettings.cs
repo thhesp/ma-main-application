@@ -122,7 +122,7 @@ namespace WebAnalyzer.Models.SettingsModel
                         domain.Domain = attr.Value;
                         break;
                     case "include-subdomains":
-                        //domain.IncludesSubdomains = attr.Value;
+                        domain.IncludesSubdomains = Boolean.Parse(attr.Value);
                         break;
                 }
             }
