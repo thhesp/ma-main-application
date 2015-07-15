@@ -181,36 +181,39 @@ namespace WebAnalyzer.Controller
 
         private void ShowEditParticipantForm(ExperimentParticipant particpant, Boolean createNew)
         {
-            Logger.Log("Show edit participant?");
-            EditParticipantForm editParticpant = new EditParticipantForm(particpant, createNew);
-
-            editParticpant.CreateParticipant += On_CreateParticipant;
-
-            if (editParticpant.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            mainUI.BeginInvoke((Action)delegate
             {
-                editParticpant.Dispose();
-                ExportController.SaveExperimentParticipants(currentExperiment);
-                Logger.Log("Save edit participant");
-                //refresh participants
-                RefreshMainUI();
-            }
+                Logger.Log("Show edit participant?");
+                EditParticipantForm editParticpant = new EditParticipantForm(particpant, createNew);
+
+                editParticpant.CreateParticipant += On_CreateParticipant;
+
+                if (editParticpant.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    ExportController.SaveExperimentParticipants(currentExperiment);
+                    Logger.Log("Save edit participant");
+                    //refresh participants
+                    RefreshMainUI();
+                }
+            });
         }
 
         private void ShowEditDomainSettingForm(DomainSettings setting, Boolean createNew)
         {
-            Logger.Log("Show edit domain setting?");
-            EditDomainSettingForm editSetting = new EditDomainSettingForm(setting, createNew);
-
-            editSetting.CreateDomainSetting += On_CreateDomainSetting;
-
-            if (editSetting.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            mainUI.BeginInvoke((Action)delegate
             {
-                editSetting.Dispose();
-                ExportController.SaveExperimentSettings(currentExperiment);
-                Logger.Log("Save edit domain setting");
-                //refresh participants
-                RefreshMainUI();
-            }
+                Logger.Log("Show edit domain setting?");
+                EditDomainSettingForm editSetting = new EditDomainSettingForm(setting, createNew);
+                editSetting.CreateDomainSetting += On_CreateDomainSetting;
+
+                if (editSetting.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    Logger.Log("Save edit domain setting");
+                    ExportController.SaveExperimentSettings(currentExperiment);
+                    //refresh participants
+                    RefreshMainUI();
+                }
+            });
         }
 
         

@@ -25,6 +25,9 @@ namespace WebAnalyzer.UI
         private DomainSettings _setting = null;
         private Boolean _create = false;
 
+
+        DomainSettingControl control = null;
+
         public event CreateDomainSettingEventHandler CreateDomainSetting;
 
         public EditDomainSettingForm(DomainSettings setting, Boolean create)
@@ -41,7 +44,7 @@ namespace WebAnalyzer.UI
             string page = string.Format("{0}UI/HTMLResources/html/popup/settings/domain_edit.html", Utilities.GetAppLocation());
             myBrowser = new ChromiumWebBrowser(page);
 
-            DomainSettingControl control = new DomainSettingControl(this, _setting, _create);
+            control = new DomainSettingControl(this, _setting, _create);
             control.Browser = myBrowser;
             control.CreateDomainSetting += this.CreateDomainSetting;
 
@@ -59,6 +62,7 @@ namespace WebAnalyzer.UI
 
         private void Browser_Closing(object sender, FormClosingEventArgs e)
         {
+
             //Cef.Shutdown();
         }
 
