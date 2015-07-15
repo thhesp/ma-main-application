@@ -58,7 +58,7 @@ namespace WebAnalyzer.Controller
 
             if (experimentWizard.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                
+                experimentWizard.Dispose();
             }
         }
 
@@ -188,7 +188,7 @@ namespace WebAnalyzer.Controller
 
             if (editParticpant.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                
+                editParticpant.Dispose();
                 ExportController.SaveExperimentParticipants(currentExperiment);
                 Logger.Log("Save edit participant");
                 //refresh participants
@@ -201,11 +201,11 @@ namespace WebAnalyzer.Controller
             Logger.Log("Show edit domain setting?");
             EditDomainSettingForm editSetting = new EditDomainSettingForm(setting, createNew);
 
-            //editSetting.CreateDomainSetting += On_CreateDomainSetting;
+            editSetting.CreateDomainSetting += On_CreateDomainSetting;
 
             if (editSetting.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-
+                editSetting.Dispose();
                 ExportController.SaveExperimentSettings(currentExperiment);
                 Logger.Log("Save edit domain setting");
                 //refresh participants
@@ -213,13 +213,13 @@ namespace WebAnalyzer.Controller
             }
         }
 
-        /*
-        private void On_CreateDomainSetting(object source, CreateParticipantEvent e)
+        
+        private void On_CreateDomainSetting(object source, CreateDomainSettingEvent e)
         {
-            Logger.Log("create participant?");
-            currentExperiment.Participants.Add(e.Participant);
+            Logger.Log("create domain setting?");
+            currentExperiment.Settings.Domains.Add(e.Domain);
 
         }
-         */
+         
     }
 }

@@ -25,7 +25,7 @@ namespace WebAnalyzer.UI
         private DomainSettings _setting = null;
         private Boolean _create = false;
 
-        public event CreateParticipantEventHandler CreateParticipant;
+        public event CreateDomainSettingEventHandler CreateDomainSetting;
 
         public EditDomainSettingForm(DomainSettings setting, Boolean create)
         {
@@ -41,15 +41,15 @@ namespace WebAnalyzer.UI
             string page = string.Format("{0}UI/HTMLResources/html/popup/settings/domain_edit.html", Utilities.GetAppLocation());
             myBrowser = new ChromiumWebBrowser(page);
 
-            /*ParticipantControl control = new ParticipantControl(this, _participant, _create);
+            DomainSettingControl control = new DomainSettingControl(this, _setting, _create);
             control.Browser = myBrowser;
-            control.CreateParticipant += this.CreateParticipant;
+            control.CreateDomainSetting += this.CreateDomainSetting;
 
-            myBrowser.RegisterJsObject("control", control);*/
+            myBrowser.RegisterJsObject("control", control);
 
             myBrowser.Load(page);
-            
-            //ChromiumWebBrowser myBrowser = new ChromiumWebBrowser("http://www.maps.google.com");
+
+
             this.Controls.Add(myBrowser);
 
             // chromdev tools

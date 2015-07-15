@@ -123,6 +123,7 @@
     <Compile Include="Controller\LoadController.cs" />
     <Compile Include="Controller\MainController.cs" />
     <Compile Include="Events\CreateExperimentEvent.cs" />
+    <Compile Include="Events\CreateDomainSettingEvent.cs" />
     <Compile Include="Events\CreateParticipantEvent.cs" />
     <Compile Include="Events\EditSettingEvent.cs" />
     <Compile Include="Events\EditParticipantEvent.cs" />
@@ -177,6 +178,7 @@
     <Compile Include="ApplicationSettings\AppSettings.cs" />
     <Compile Include="ApplicationSettings\SettingsValidator.cs" />
     <Compile Include="UI\ChromeDevTools.cs" />
+    <Compile Include="UI\InteractionObjects\DomainSettingControl.cs" />
     <Compile Include="UI\InteractionObjects\ParticipantControl.cs" />
     <Compile Include="UI\Popup\EditDomainSettingForm.cs">
       <SubType>Form</SubType>

@@ -45,6 +45,30 @@ namespace WebAnalyzer.Models.SettingsModel
             set { _aois = value; }
         }
 
+        public String[] GetAOIIdentifiers()
+        {
+            String[] aoiIdentifiers = new String[AOIS.Count];
+
+            for (int i = 0; i < AOIS.Count; i++)
+            {
+                aoiIdentifiers[i] = AOIS[i].Identifier;
+            }
+
+            return aoiIdentifiers;
+        }
+
+        public String[] GetAOIUIDs()
+        {
+            String[] aoiUID = new String[AOIS.Count];
+
+            for (int i = 0; i < AOIS.Count; i++)
+            {
+                aoiUID[i] = AOIS[i].Identifier;
+            }
+
+            return aoiUID;
+        }
+
         public List<AOISettings> GetAOIs()
         {
             return _aois;
