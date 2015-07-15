@@ -1,9 +1,7 @@
 ﻿if (!control.creatingNewDomainSetting()) {
     console.log("initialize data...");
 
-    $('#domain').val(control.getDomain());
-
-    $('#include-subdomains').prop("checked", control.getIncludeSubdomains());
+    $('#identifier').val(control.getIdentifier());
 
     var identifiers = control.getAOIIdentifiers();
     var uids = control.getAOIUIDs();
@@ -34,10 +32,9 @@
 $('#save-button').click(function () {
     console.log('save domain setting...');
 
-    control.setDomain($('#domain').val());
-    control.setIncludeSubdomains($('#include-subdomains').prop("checked"));
+    control.setIdentifier($('#identifier').val());
 
-    control.saveDomainSetting();
+    control.saveAOISetting();
 });
 
 $('#cancel-button').click(function () {
@@ -48,5 +45,4 @@ $('#cancel-button').click(function () {
 
 $('#add-aoi').click(function () {
     //show window
-    control.createAOI();
 });

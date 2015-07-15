@@ -19,18 +19,18 @@ using WebAnalyzer.Models.SettingsModel;
 
 namespace WebAnalyzer.UI
 {
-    public partial class EditDomainSettingForm : Form
+    public partial class EditAOISettingForm : Form
     {
         private ChromiumWebBrowser myBrowser = null;
-        private DomainSettings _setting = null;
+        private AOISettings _setting = null;
         private Boolean _create = false;
 
 
-        private DomainSettingControl control = null;
+        private AOISettingControl control = null;
 
-        public event CreateDomainSettingEventHandler CreateDomainSetting;
+        public event CreateAOISettingEventHandler CreateAOISetting;
 
-        public EditDomainSettingForm(DomainSettings setting, Boolean create)
+        public EditAOISettingForm(AOISettings setting, Boolean create)
         {
             _setting = setting;
             _create = create;
@@ -41,12 +41,12 @@ namespace WebAnalyzer.UI
         {
             //Cef.Initialize();
 
-            string page = string.Format("{0}UI/HTMLResources/html/popup/settings/domain_edit.html", Utilities.GetAppLocation());
+            string page = string.Format("{0}UI/HTMLResources/html/popup/settings/aoi_edit.html", Utilities.GetAppLocation());
             myBrowser = new ChromiumWebBrowser(page);
 
-            control = new DomainSettingControl(this, _setting, _create);
+            control = new AOISettingControl(this, _setting, _create);
             control.Browser = myBrowser;
-            control.CreateDomainSetting += this.CreateDomainSetting;
+            control.CreateAOISetting += this.CreateAOISetting;
 
             myBrowser.RegisterJsObject("control", control);
 

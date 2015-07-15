@@ -87,5 +87,37 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             return _setting.GetAOIUIDs();
         }
+
+        public void editAOI()
+        {
+            AOISettings aoi = new AOISettings();
+            ShowEditAOISettingForm(aoi, true);
+        }
+
+        public void createAOI()
+        {
+            AOISettings aoi = new AOISettings();
+            ShowEditAOISettingForm(aoi, true);
+        }
+
+        private void ShowEditAOISettingForm(AOISettings setting, Boolean createNew)
+        {
+            _form.BeginInvoke((Action)delegate
+            {
+                EditAOISettingForm editSetting = new EditAOISettingForm(setting, createNew);
+                editSetting.CreateAOISetting += On_CreateAOISetting;
+
+                if (editSetting.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    //refresh participants
+                }
+            });
+        }
+
+        private void On_CreateAOISetting(object source, CreateAOISettingEvent e)
+        {
+            //currentExperiment.Settings.Domains.Add(e.Domain);
+
+        }
     }
 }

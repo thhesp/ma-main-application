@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="../../../css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="../../../css/index.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <label>AOI Bezeichnung:</label>
+                    <input id="identifier" type="text" placeholder="" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Regeln:</label>
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Regel????</th>
+                                <th>Edit</th>
+                                <th>Copy</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rule-table"></tbody>
+                    </table>
+
+                    <div class="centered">
+                        <i id="add-rule" class='fa fa-plus-circle'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="cancel-button" type="button" class="btn btn-default">Abbrechen</button>
+                    <button id="save-button" type="button" class="btn btn-default">Speichern</button>
+                </div>
+            </div>
+        </div><!-- /.container -->
+
+        <script type="text/javascript" src="../../../js/lib/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../../../js/lib/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="../../../js/src/edit_aoi.js"></script>
+    </body>
+</html>
