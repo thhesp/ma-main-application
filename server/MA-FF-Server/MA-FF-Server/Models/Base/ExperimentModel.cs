@@ -67,6 +67,16 @@ namespace WebAnalyzer.Models.Base
             return participantArray;
         }
 
+        public String[] GetDomainSettingArray()
+        {
+            return Settings.GetDomainUIDs();
+        }
+
+        public DomainSettings GetDomainSettingByUid(String uid)
+        {
+            return Settings.GetDomainSettingByUid(uid);
+        }
+
         public ExperimentParticipant GetParticipantByUID(String uid)
         {
             foreach (ExperimentParticipant par in Participants)

@@ -24,15 +24,17 @@ namespace WebAnalyzer.UI
         private ExperimentObject _exp = null;
 
         public event EditParticipantEventHandler EditParticipant;
+        public event EditDomainSettingEventHandler EditDomainSetting;
 
         public HTMLUI()
         {
             InitializeComponent();
         }
 
-        public void SetExperimentData(String name, String[] participants){
+        public void SetExperimentData(String name, String[] participants, String[] settings){
             _exp.Name = name;
             _exp.Participants = participants;
+            _exp.DomainSettings = settings;
         }
 
         public void ReloadPage()
@@ -59,6 +61,7 @@ namespace WebAnalyzer.UI
             nav.Browser = myBrowser;
 
             nav.EditParticipant += this.EditParticipant;
+            nav.EditDomainSetting += this.EditDomainSetting;
             myBrowser.RegisterJsObject("nav", nav);
         }
 

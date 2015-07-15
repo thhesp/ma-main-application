@@ -34,7 +34,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12 centered">
-                    <button type="button" class="btn btn-default">Domain hinzufügen</button>
+                    <button type="button" class="btn btn-default" onclick="nav.createDomainSetting()">Domain hinzufügen</button>
                 </div>
             </div>
             <div class="row">
@@ -48,13 +48,7 @@
                                 <th>Delete</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>www.google.de</td>
-                                <td>asdf</td>
-                                <td>asdf</td>
-                                <td>asdf</td>
-                            </tr>
+                        <tbody id="settings-table">
                         </tbody>
                     </table>
                 </div>
@@ -68,5 +62,38 @@
 
     <script type="text/javascript" src="../../js/src/nav.js"></script>
     <script type="text/javascript" src="../../js/src/init.js"></script>
+
+
+    <script type="text/javascript">
+    var settingsArray = experimentObj.domainSettingsArray();
+
+    for (var i = 0; i < settingsArray.length; i++) {
+        var html = "<tr uid='" + settingsArray[i] + "'><td>" + settingsArray[i] + "</td><td><i class='edit fa fa-pencil-square-o'></i></td><td><i class='copy fa fa-files-o'></i></td><td><i class='delete fa fa-times'></i></td></tr>";
+        $('#settings-table').append(html);
+    }
+
+    $('#settings-table .edit').click(function () {
+        var uid = $(this).closest('tr').attr('uid');
+
+        console.log('edit clicked: ', uid);
+        nav.editDomainSetting(uid);
+    });
+
+    $('#settings-table .copy').click(function () {
+        var uid = $(this).closest('tr').attr('uid');
+
+        console.log('copy clicked: ', uid);
+        nav.copyDomainSetting(uid);
+    });
+
+    $('#settings-table .delete').click(function () {
+        var uid = $(this).closest('tr').attr('uid');
+
+        console.log('delete clicked: ', uid);
+        nav.deleteDomainSetting(uid);
+    });
+
+    </script>
+
 </body>
 </html>

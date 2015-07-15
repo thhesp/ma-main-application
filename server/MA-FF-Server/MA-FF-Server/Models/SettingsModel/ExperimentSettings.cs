@@ -23,6 +23,38 @@ namespace WebAnalyzer.Models.SettingsModel
             return _domains;
         }
 
+        public String[] GetDomainUIDs()
+        {
+            String[] domainIdentifier = new String[Domains.Count];
+
+            for (int i = 0; i < Domains.Count; i++)
+            {
+                domainIdentifier[i] = _domains[i].Domain;
+            }
+
+            return domainIdentifier;
+        }
+
+        public DomainSettings GetDomainSettingByUid(String uid)
+        {
+            foreach (DomainSettings setting in Domains)
+            {
+                if (setting.Domain.Equals(uid))
+                {
+                    return setting;
+                }
+
+            }
+
+            return null;
+        }
+
+        public List<DomainSettings> Domains
+        {
+            get { return _domains; }
+            set { _domains = value; }
+        }
+
         public void AddDomain(DomainSettings domain)
         {
             _domains.Add(domain);

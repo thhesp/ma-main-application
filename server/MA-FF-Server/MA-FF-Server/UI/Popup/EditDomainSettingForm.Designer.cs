@@ -1,6 +1,6 @@
 ﻿namespace WebAnalyzer.UI
 {
-    partial class EditParticipantForm
+    partial class EditDomainSettingForm
     {
         /// <summary>
         /// Required designer variable.
@@ -38,9 +38,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.Name = "Edit Teilnehmer";
+            this.Name = "Edit Domain Setting";
             this.ShowIcon = false;
-            this.Text = "Edit Teilnehmer";
+            this.Text = "Edit Domain Setting";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Browser_Closing);
             this.Load += new System.EventHandler(this.Browser_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_KeyDown);

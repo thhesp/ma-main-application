@@ -124,6 +124,7 @@
     <Compile Include="Controller\MainController.cs" />
     <Compile Include="Events\CreateExperimentEvent.cs" />
     <Compile Include="Events\CreateParticipantEvent.cs" />
+    <Compile Include="Events\EditSettingEvent.cs" />
     <Compile Include="Events\EditParticipantEvent.cs" />
     <Compile Include="Events\LoadExperimentEvent.cs" />
     <Compile Include="Experiment\ExperimentController.cs" />
@@ -177,6 +178,12 @@
     <Compile Include="ApplicationSettings\SettingsValidator.cs" />
     <Compile Include="UI\ChromeDevTools.cs" />
     <Compile Include="UI\InteractionObjects\ParticipantControl.cs" />
+    <Compile Include="UI\Popup\EditDomainSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Popup\EditDomainSettingForm.Designer.cs">
+      <DependentUpon>EditDomainSettingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Popup\EditParticipantForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +236,9 @@
     </Compile>
     <EmbeddedResource Include="Test\Communication\MouseTracker.resx">
       <DependentUpon>MouseTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Popup\EditDomainSettingForm.resx">
+      <DependentUpon>EditDomainSettingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Popup\EditParticipantForm.resx">
       <DependentUpon>EditParticipantForm.cs</DependentUpon>
@@ -285,7 +295,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Analysis\" />
-    <Folder Include="UI\HTMLResources\html\popup\settings\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="UI\HTMLResources\css\font-awesome.min.css">
@@ -330,11 +339,17 @@
     <Content Include="UI\HTMLResources\html\popup\participant\edit.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="UI\HTMLResources\html\popup\settings\domain_edit.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UI\HTMLResources\js\lib\bootstrap.min.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="UI\HTMLResources\js\lib\jquery-2.1.4.min.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HTMLResources\js\src\edit_domain.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UI\HTMLResources\js\src\edit_participant.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

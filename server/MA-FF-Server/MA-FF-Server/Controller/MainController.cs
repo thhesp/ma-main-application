@@ -9,6 +9,8 @@ using WebAnalyzer.ApplicationSettings;
 using WebAnalyzer.Util;
 using WebAnalyzer.Events;
 
+
+using WebAnalyzer.Models.SettingsModel;
 using WebAnalyzer.Models.Base;
 using WebAnalyzer.UI.InteractionObjects;
 
@@ -36,6 +38,7 @@ namespace WebAnalyzer.Controller
             mainUI.Shown += new System.EventHandler(this.MainUIFinishedLoading);
 
             mainUI.EditParticipant += On_EditParticpant;
+            mainUI.EditDomainSetting += On_EditDomainSetting;
 
             Application.Run(mainUI);
         }
@@ -93,7 +96,7 @@ namespace WebAnalyzer.Controller
 
         private void SetExpiermentData(ExperimentModel experiment)
         {
-            mainUI.SetExperimentData(experiment.ExperimentName, experiment.GetParticipantArray());
+            mainUI.SetExperimentData(experiment.ExperimentName, experiment.GetParticipantArray(), experiment.GetDomainSettingArray());
             mainUI.ReloadPage();
         }
 
@@ -140,6 +143,35 @@ namespace WebAnalyzer.Controller
             }
         }
 
+        private void On_EditDomainSetting(object source, EditDomainSettingEvent e)
+        {
+            Logger.Log("edit domain setting?");
+            switch (e.Type)
+            {
+               case EditDomainSettingEvent.EDIT_TYPES.Edit:
+                    DomainSettings setting = currentExperiment.GetDomainSettingByUid(e.UID);
+                    ShowEditDomainSettingForm(setting, false);
+                    break;
+                case EditDomainSettingEvent.EDIT_TYPES.Create:
+                    DomainSettings newSetting = new DomainSettings();
+                    ShowEditDomainSettingForm(newSetting, true);
+                    break;
+                case EditDomainSettingEvent.EDIT_TYPES.Copy:
+                    DomainSettings origSetting = currentExperiment.GetDomainSettingByUid(e.UID);
+                    DomainSettings copy = DomainSettings.Copy(origSetting);
+                    currentExperiment.Settings.Domains.Add(copy);
+                    ExportController.SaveExperimentSettings(currentExperiment);
+                    RefreshMainUI();
+                    break;
+                case EditDomainSettingEvent.EDIT_TYPES.Delete:
+                    DomainSettings toDeleteSetting = currentExperiment.GetDomainSettingByUid(e.UID);
+                    currentExperiment.Settings.Domains.Remove(toDeleteSetting);
+                    ExportController.SaveExperimentSettings(currentExperiment);
+                    RefreshMainUI();
+                    break;
+            }
+        }
+
         private void On_CreateParticipant(object source, CreateParticipantEvent e)
         {
             Logger.Log("create participant?");
@@ -163,5 +195,31 @@ namespace WebAnalyzer.Controller
                 RefreshMainUI();
             }
         }
+
+        private void ShowEditDomainSettingForm(DomainSettings setting, Boolean createNew)
+        {
+            Logger.Log("Show edit domain setting?");
+            EditDomainSettingForm editSetting = new EditDomainSettingForm(setting, createNew);
+
+            //editSetting.CreateDomainSetting += On_CreateDomainSetting;
+
+            if (editSetting.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+
+                ExportController.SaveExperimentSettings(currentExperiment);
+                Logger.Log("Save edit domain setting");
+                //refresh participants
+                RefreshMainUI();
+            }
+        }
+
+        /*
+        private void On_CreateDomainSetting(object source, CreateParticipantEvent e)
+        {
+            Logger.Log("create participant?");
+            currentExperiment.Participants.Add(e.Participant);
+
+        }
+         */
     }
 }

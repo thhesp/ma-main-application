@@ -18,6 +18,7 @@ namespace WebAnalyzer.UI.InteractionObjects
         private static String BASE_PATH = "{0}UI/HTMLResources/html/main/";
 
         public event EditParticipantEventHandler EditParticipant;
+        public event EditDomainSettingEventHandler EditDomainSetting;
 
         Dictionary<string, string> _pages = new Dictionary<string, string>();
 
@@ -76,6 +77,27 @@ namespace WebAnalyzer.UI.InteractionObjects
         public void deleteParticipant(String uid)
         {
             EditParticipant(this, new EditParticipantEvent(EditParticipantEvent.EDIT_TYPES.Delete, uid));
+        }
+
+        public void createDomainSetting()
+        {
+            Logger.Log("Create domain setting?");
+            EditDomainSetting(this, new EditDomainSettingEvent(EditDomainSettingEvent.EDIT_TYPES.Create));
+        }
+
+        public void editDomainSetting(String uid)
+        {
+            EditDomainSetting(this, new EditDomainSettingEvent(EditDomainSettingEvent.EDIT_TYPES.Edit, uid));
+        }
+
+        public void copyDomainSetting(String uid)
+        {
+            EditDomainSetting(this, new EditDomainSettingEvent(EditDomainSettingEvent.EDIT_TYPES.Copy, uid));
+        }
+
+        public void deleteDomainSetting(String uid)
+        {
+            EditDomainSetting(this, new EditDomainSettingEvent(EditDomainSettingEvent.EDIT_TYPES.Delete, uid));
         }
     }
 }

@@ -39,6 +39,12 @@ namespace WebAnalyzer.Models.SettingsModel
             _domain = domain;
         }
 
+        public List<AOISettings> AOIS
+        {
+            get { return _aois; }
+            set { _aois = value; }
+        }
+
         public List<AOISettings> GetAOIs()
         {
             return _aois;
@@ -108,6 +114,17 @@ namespace WebAnalyzer.Models.SettingsModel
             }
 
             return domain;
+        }
+
+        public static DomainSettings Copy(DomainSettings orig)
+        {
+            DomainSettings copy = new DomainSettings();
+
+            copy.Domain = "Kopie - " + orig.Domain;
+            copy.IncludesSubdomains = orig.IncludesSubdomains;
+            copy.AOIS = orig.AOIS;
+
+            return copy;
         }
     }
 }

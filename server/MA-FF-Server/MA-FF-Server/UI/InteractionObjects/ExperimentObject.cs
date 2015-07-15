@@ -13,6 +13,8 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         private String[] _participants;
 
+        private String[] _domainSettings;
+
         public ExperimentObject(String name){
             _name = name;
         }
@@ -32,10 +34,21 @@ namespace WebAnalyzer.UI.InteractionObjects
             return Participants;
         }
 
+        public String[] domainSettingsArray()
+        {
+            return DomainSettings;
+        }
+
         public String[] Participants
         {
             get { return _participants; }
             set { _participants = value; }
+        }
+
+        public String[] DomainSettings
+        {
+            get { return _domainSettings; }
+            set { _domainSettings = value; }
         }
     }
 }
