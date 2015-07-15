@@ -3,7 +3,7 @@
 
     $('#domain').val(control.getDomain());
 
-    $('#include-subdomains').val(control.getIncludeSubdomains());
+    $('#include-subdomains').prop("checked", control.getIncludeSubdomains());
 
     var identifiers = control.getAOIIdentifiers();
     var uids = control.getAOIUIDs();
@@ -35,7 +35,7 @@ $('#save-button').click(function () {
     console.log('save domain setting...');
 
     control.setDomain($('#domain').val());
-    control.setIncludeSubdomains($('#include-subdomains').val() == 'true');
+    control.setIncludeSubdomains($('#include-subdomains').prop("checked"));
 
     control.saveDomainSetting();
 });
