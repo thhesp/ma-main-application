@@ -167,7 +167,7 @@ namespace WebAnalyzer.Models.Base
                         participant.CreatedAt = DateTime.Parse(attr.Value);
                         break;
                     case "sex":
-                        //participant.Sex = attr.Value;
+                        participant.Sex = (SEX_TYPES) Enum.Parse(typeof(SEX_TYPES), attr.Value);
                         break;
                     case "birthyear":
                         participant.BirthYear = int.Parse(attr.Value);

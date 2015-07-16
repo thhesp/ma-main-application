@@ -88,17 +88,7 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         public String getSex()
         {
-            switch (_participant.Sex)
-            {
-                case ExperimentParticipant.SEX_TYPES.Male:
-                    return "male";
-                case ExperimentParticipant.SEX_TYPES.Female:
-                    return "female";
-                case ExperimentParticipant.SEX_TYPES.Undecided:
-                    return "undecided";
-            }
-
-            return "";
+            return _participant.Sex.ToString().ToLower();
         }
 
         public void setSex(String sex)

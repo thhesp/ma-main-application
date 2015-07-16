@@ -75,3 +75,8 @@ $('#add-data').click(function () {
         $(this).closest('tr').remove();
     });
 });
+
+$("#sex input[type='radio']").on('change', function () {
+    $("#sex input[type='radio']").prop('checked', false);
+    $(this).prop('checked', true);
+});
