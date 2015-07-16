@@ -13,12 +13,12 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
     public abstract class Node
     {
 
-        public enum NODE_TYPES { VALUE = 0, NOT = 1, AND = 2, OR = 3, XOR = 4 };
+        public enum NODE_TYPES { NONE = -1, VALUE = 0, NOT = 1, AND = 2, OR = 3, XOR = 4 };
 
         protected Node _leftChild;
         protected Node _rightChild;
 
-        protected NODE_TYPES _type;
+        protected NODE_TYPES _type = NODE_TYPES.NONE;
 
         public Node()
         {
@@ -86,31 +86,58 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
         public static Node LoadFromXML(XmlNode nodeNode)
         {
 
-            NODE_TYPES nodeType;
+            NODE_TYPES nodeType = ExtractNodeType(nodeNode);
 
-            /*foreach (XmlAttribute attr in nodeNode.Attributes)
+            if (nodeType == NODE_TYPES.VALUE)
+            {
+                return ValueNode.LoadFromXML(nodeNode);
+            }
+            else
+            {
+                return CreateNodeFromXML(nodeNode, nodeType);
+            }
+        }
+
+        private static NODE_TYPES ExtractNodeType(XmlNode nodeNode)
+        {
+            foreach (XmlAttribute attr in nodeNode.Attributes)
             {
                 switch (attr.Name)
                 {
                     case "type":
-                        
-                        break;
+                        return (NODE_TYPES)Enum.Parse(typeof(NODE_TYPES), attr.Value);
                 }
             }
 
-            foreach (XmlNode child in nodeNode.ChildNodes)
+            return NODE_TYPES.NONE;
+        }
+
+        private static Node CreateNodeFromXML(XmlNode nodeNode, NODE_TYPES nodeType)
+        {
+            Node leftChild = Node.LoadFromXML(nodeNode.ChildNodes.Item(0));
+
+            if (nodeType == NODE_TYPES.NOT)
             {
-                Node node = Node.LoadFromXML(child);
+                return new NotNode(leftChild);
+            }
+            else
+            {
+                Node rightChild = Node.LoadFromXML(nodeNode.ChildNodes.Item(1));
 
-                if (node != null)
+                switch (nodeType)
                 {
-                    rule.RuleRoot = node;
+                    case NODE_TYPES.AND:
+                        return new AndNode(leftChild, rightChild);
+                    case NODE_TYPES.OR:
+                        return new OrNode(leftChild, rightChild);
+                    case NODE_TYPES.XOR:
+                        return new XorNode(leftChild, rightChild);
                 }
-            }*/
 
+            }
 
             return null;
-        }
+     }
 
         public abstract Boolean Evaluate(DOMElementModel el);
         public abstract Boolean EvaluateCaseSensitive(DOMElementModel el);

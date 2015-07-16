@@ -8,10 +8,10 @@ using WebAnalyzer.Models.DataModel;
 
 namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
 {
-    public class XOrNode : Node
+    public class XorNode : Node
     {
 
-        public XOrNode(Node leftChild, Node rightChild) : base(Node.NODE_TYPES.XOR, leftChild, rightChild)
+        public XorNode(Node leftChild, Node rightChild) : base(Node.NODE_TYPES.XOR, leftChild, rightChild)
         {
 
         }

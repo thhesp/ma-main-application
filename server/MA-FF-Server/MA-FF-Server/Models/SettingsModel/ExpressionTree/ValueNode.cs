@@ -17,6 +17,12 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
         private String _value;
         private VALUE_TYPES _valueType;
 
+        public ValueNode()
+            : base(Node.NODE_TYPES.VALUE)
+        {
+
+        }
+
         public ValueNode(VALUE_TYPES valueType, String value) : base(Node.NODE_TYPES.VALUE)
         {
             _valueType = valueType;
@@ -100,8 +106,22 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
         public static ValueNode LoadFromXML(XmlNode nodeNode)
         {
 
+            ValueNode node = new ValueNode();
 
-            return null;
+            foreach (XmlAttribute attr in nodeNode.Attributes)
+            {
+                switch (attr.Name)
+                {
+                    case "value-type":
+                        node.ValueType = (VALUE_TYPES)Enum.Parse(typeof(VALUE_TYPES), attr.Value);
+                        break;
+                    case "value":
+                        node.Value = attr.Value;
+                        break;
+                }
+            }
+
+            return node;
         }
     }
 }
