@@ -83,6 +83,15 @@ namespace WebAnalyzer.UI
                 myBrowser.ShowDevTools();
             }
         }
+
+        public void ReloadPage()
+        {
+            if (myBrowser != null)
+            {
+                myBrowser.Reload();
+                Logger.Log("Reloading???");
+            }
+        }
     }
 
 }

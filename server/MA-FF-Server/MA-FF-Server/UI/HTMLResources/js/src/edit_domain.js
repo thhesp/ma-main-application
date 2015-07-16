@@ -8,8 +8,12 @@
     var identifiers = control.getAOIIdentifiers();
     var uids = control.getAOIUIDs();
 
+
+    console.log("Identifiers: ", identifiers);
+    console.log("Uids: ", uids);
+
     for (var i = 0; i < identifiers.length; i++) {
-        var html = "<tr uid='" + uids[i] + "><td>" + identifiers[i] + "</td><td><i class='edit fa fa-pencil-square-o'></i></td><td><i class='copy fa fa-files-o'></i></td><td><i class='delete fa fa-times'></i></td></tr>";
+        var html = "<tr uid='" + uids[i] + "'><td>" + identifiers[i] + "</td><td><i class='edit fa fa-pencil-square-o'></i></td><td><i class='copy fa fa-files-o'></i></td><td><i class='delete fa fa-times'></i></td></tr>";
 
         $('#aoi-table').append(html);
     }

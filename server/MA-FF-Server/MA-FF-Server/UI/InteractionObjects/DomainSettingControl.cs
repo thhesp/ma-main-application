@@ -15,6 +15,7 @@ namespace WebAnalyzer.UI.InteractionObjects
     {
 
         public event CreateDomainSettingEventHandler CreateDomainSetting;
+        public event TriggerSaveEventHandler TriggerSave;
 
         private EditDomainSettingForm _form;
 
@@ -109,15 +110,16 @@ namespace WebAnalyzer.UI.InteractionObjects
 
                 if (editSetting.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    //refresh participants
+                    //refresh aois
+                    _form.ReloadPage();
+                    TriggerSave(this, new TriggerSaveEvent(TriggerSaveEvent.SAVE_TYPES.SETTINGS));
                 }
             });
         }
 
         private void On_CreateAOISetting(object source, CreateAOISettingEvent e)
         {
-            //currentExperiment.Settings.Domains.Add(e.Domain);
-
+            _setting.AddAOI(e.AOI);
         }
     }
 }

@@ -126,6 +126,7 @@
     <Compile Include="Events\CreateExperimentEvent.cs" />
     <Compile Include="Events\CreateDomainSettingEvent.cs" />
     <Compile Include="Events\CreateParticipantEvent.cs" />
+    <Compile Include="Events\TriggerSaveEvent.cs" />
     <Compile Include="Events\EditSettingEvent.cs" />
     <Compile Include="Events\EditParticipantEvent.cs" />
     <Compile Include="Events\LoadExperimentEvent.cs" />

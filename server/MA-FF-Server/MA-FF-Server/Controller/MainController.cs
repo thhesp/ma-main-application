@@ -205,6 +205,7 @@ namespace WebAnalyzer.Controller
                 Logger.Log("Show edit domain setting?");
                 EditDomainSettingForm editSetting = new EditDomainSettingForm(setting, createNew);
                 editSetting.CreateDomainSetting += On_CreateDomainSetting;
+                editSetting.TriggerSave += On_TriggerSave;
 
                 if (editSetting.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
@@ -223,6 +224,22 @@ namespace WebAnalyzer.Controller
             currentExperiment.Settings.Domains.Add(e.Domain);
 
         }
-         
+
+
+        private void On_TriggerSave(object source, TriggerSaveEvent e)
+        {
+            switch (e.Type)
+            {
+                case TriggerSaveEvent.SAVE_TYPES.ALL:
+                    ExportController.SaveExperiment(currentExperiment);
+                    break;
+                case TriggerSaveEvent.SAVE_TYPES.PARTICIPANTS:
+                    ExportController.SaveExperimentParticipants(currentExperiment);
+                    break;
+                case TriggerSaveEvent.SAVE_TYPES.SETTINGS:
+                    ExportController.SaveExperimentSettings(currentExperiment);
+                    break;
+            }
+        }
     }
 }

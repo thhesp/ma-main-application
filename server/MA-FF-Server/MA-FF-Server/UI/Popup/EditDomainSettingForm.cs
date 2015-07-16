@@ -29,6 +29,7 @@ namespace WebAnalyzer.UI
         private DomainSettingControl control = null;
 
         public event CreateDomainSettingEventHandler CreateDomainSetting;
+        public event TriggerSaveEventHandler TriggerSave;
 
         public EditDomainSettingForm(DomainSettings setting, Boolean create)
         {
@@ -47,6 +48,7 @@ namespace WebAnalyzer.UI
             control = new DomainSettingControl(this, _setting, _create);
             control.Browser = myBrowser;
             control.CreateDomainSetting += this.CreateDomainSetting;
+            control.TriggerSave += this.TriggerSave;
 
             myBrowser.RegisterJsObject("control", control);
 
@@ -85,6 +87,15 @@ namespace WebAnalyzer.UI
             {
                 Logger.Log("Show dev tools");
                 myBrowser.ShowDevTools();
+            }
+        }
+
+        public void ReloadPage()
+        {
+            if (myBrowser != null)
+            {
+                myBrowser.Reload();
+                Logger.Log("Reloading???");
             }
         }
     }
