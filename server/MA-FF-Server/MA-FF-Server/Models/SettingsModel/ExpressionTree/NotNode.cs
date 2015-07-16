@@ -12,7 +12,7 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
     {
 
         public NotNode(Node child)
-            : base()
+            : base(Node.NODE_TYPES.NOT)
         {
             _leftChild = child;
         }

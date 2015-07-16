@@ -8,23 +8,22 @@ using WebAnalyzer.Models.DataModel;
 
 namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
 {
-    public class AndNode : Node
+    public class XOrNode : Node
     {
-        public AndNode(Node leftChild, Node rightChild)
-            : base(Node.NODE_TYPES.AND, leftChild, rightChild)
+
+        public XOrNode(Node leftChild, Node rightChild) : base(Node.NODE_TYPES.XOR, leftChild, rightChild)
         {
 
         }
 
         public override bool Evaluate(DOMElementModel el)
         {
-            return _leftChild.Evaluate(el) && _rightChild.Evaluate(el);
+            return _leftChild.Evaluate(el) || _rightChild.Evaluate(el);
         }
 
         public override bool EvaluateCaseSensitive(DOMElementModel el)
         {
-            return _leftChild.Evaluate(el) && _rightChild.Evaluate(el);
+            return _leftChild.Evaluate(el) || _rightChild.Evaluate(el);
         }
-
     }
 }

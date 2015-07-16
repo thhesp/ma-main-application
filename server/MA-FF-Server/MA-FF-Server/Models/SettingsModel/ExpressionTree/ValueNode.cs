@@ -5,20 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 
 using WebAnalyzer.Models.DataModel;
+using System.Xml;
 
 namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
 {
     public class ValueNode : Node
     {
 
-        public enum TYPES { Tag, Class, ID };
+        public enum VALUE_TYPES { Tag, Class, ID };
 
         private String _value;
-        private TYPES _type;
+        private VALUE_TYPES _valueType;
 
-        public ValueNode(TYPES type, String value) : base()
+        public ValueNode(VALUE_TYPES valueType, String value) : base(Node.NODE_TYPES.VALUE)
         {
-            _type = type;
+            _valueType = valueType;
             _value = value;
         }
 
@@ -28,24 +29,24 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             set { _value = value; }
         }
 
-        public TYPES Type
+        public VALUE_TYPES ValueType
         {
-            get { return _type; }
-            set { _type = value; }
+            get { return _valueType; }
+            set { _valueType = value; }
         }
 
         public override bool Evaluate(DOMElementModel el)
         {
             String loweredValue = Value.ToLower();
-            if (TYPES.Tag == Type)
+            if (VALUE_TYPES.Tag == ValueType)
             {
                 return el.Tag.ToLower() == loweredValue;
             }
-            else if (TYPES.ID == Type)
+            else if (VALUE_TYPES.ID == ValueType)
             {
                 return  el.ID.ToLower() == loweredValue;
             }
-            else if (TYPES.Class == Type)
+            else if (VALUE_TYPES.Class == ValueType)
             {
                 return el.GetClasses().Contains(loweredValue, StringComparer.OrdinalIgnoreCase);
             }
@@ -55,15 +56,15 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
 
         public override bool EvaluateCaseSensitive(DOMElementModel el)
         {
-            if (TYPES.Tag == Type)
+            if (VALUE_TYPES.Tag == ValueType)
             {
                 return el.Tag == Value;
             }
-            else if (TYPES.ID == Type)
+            else if (VALUE_TYPES.ID == ValueType)
             {
                 return  el.ID == Value;
             }
-            else if (TYPES.Class == Type)
+            else if (VALUE_TYPES.Class == ValueType)
             {
                 return el.GetClasses().Contains(Value);
             }
@@ -71,5 +72,36 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             return false;
         }
 
+        public override XmlNode ToXML(XmlDocument xmlDoc)
+        {
+            XmlNode node = xmlDoc.CreateElement("node");
+
+            XmlAttribute nodeType = xmlDoc.CreateAttribute("type");
+
+            nodeType.Value = NodeType.ToString();
+
+            node.Attributes.Append(nodeType);
+
+            XmlAttribute valueType = xmlDoc.CreateAttribute("value-type");
+
+            valueType.Value = ValueType.ToString();
+
+            node.Attributes.Append(valueType);
+
+            XmlAttribute value = xmlDoc.CreateAttribute("value");
+
+            value.Value = Value.ToString();
+
+            node.Attributes.Append(value);
+
+            return node;
+        }
+
+        public static ValueNode LoadFromXML(XmlNode nodeNode)
+        {
+
+
+            return null;
+        }
     }
 }
