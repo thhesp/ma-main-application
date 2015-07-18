@@ -62,9 +62,10 @@
 
     <script type="text/javascript">
         var participantArray = experimentObj.participantArray();
+        var participantUIDs = experimentObj.participantUIDs();
 
         for (var i = 0; i < participantArray.length; i++) {
-            var html = "<tr uid='" + participantArray[i] + "'><td>" + participantArray[i] + "</td><td><i class='edit fa fa-pencil-square-o'></i></td><td><i class='copy fa fa-files-o'></i></td><td><i class='delete fa fa-times'></i></td></tr>";
+            var html = "<tr uid='" + participantUIDs[i] + "'><td>" + participantArray[i] + "</td><td><i class='edit fa fa-pencil-square-o'></i></td><td><i class='copy fa fa-files-o'></i></td><td><i class='delete fa fa-times'></i></td></tr>";
             $('#participants-table').append(html);
         }
 

@@ -96,7 +96,7 @@ namespace WebAnalyzer.Controller
 
         private void SetExpiermentData(ExperimentModel experiment)
         {
-            mainUI.SetExperimentData(experiment.ExperimentName, experiment.GetParticipantArray(), experiment.GetDomainSettingArray());
+            mainUI.SetExperimentData(experiment);
             mainUI.ReloadPage();
         }
 

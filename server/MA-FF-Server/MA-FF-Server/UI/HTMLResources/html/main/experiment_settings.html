@@ -65,10 +65,11 @@
 
 
     <script type="text/javascript">
-    var settingsArray = experimentObj.domainSettingsArray();
+        var settingsArray = experimentObj.domainSettingsArray();
+        var uidsArray = experimentObj.domainSettingUIDs();
 
     for (var i = 0; i < settingsArray.length; i++) {
-        var html = "<tr uid='" + settingsArray[i] + "'><td>" + settingsArray[i] + "</td><td><i class='edit fa fa-pencil-square-o'></i></td><td><i class='copy fa fa-files-o'></i></td><td><i class='delete fa fa-times'></i></td></tr>";
+        var html = "<tr uid='" + uidsArray[i] + "'><td>" + settingsArray[i] + "</td><td><i class='edit fa fa-pencil-square-o'></i></td><td><i class='copy fa fa-files-o'></i></td><td><i class='delete fa fa-times'></i></td></tr>";
         $('#settings-table').append(html);
     }
 

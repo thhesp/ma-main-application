@@ -15,6 +15,7 @@ using System.Windows.Forms;
 using WebAnalyzer.UI.InteractionObjects;
 using WebAnalyzer.Util;
 using WebAnalyzer.Events;
+using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.UI
 {
@@ -31,10 +32,9 @@ namespace WebAnalyzer.UI
             InitializeComponent();
         }
 
-        public void SetExperimentData(String name, String[] participants, String[] settings){
-            _exp.Name = name;
-            _exp.Participants = participants;
-            _exp.DomainSettings = settings;
+        public void SetExperimentData(ExperimentModel experiment)
+        {
+            _exp.Experiment = experiment;
         }
 
         public void ReloadPage()
@@ -67,7 +67,7 @@ namespace WebAnalyzer.UI
 
         private void CreateExperimentObj()
         {
-            _exp = new ExperimentObject("");
+            _exp = new ExperimentObject();
             _exp.Browser = myBrowser;
             myBrowser.RegisterJsObject("experimentObj", _exp);
         }

@@ -67,7 +67,24 @@ namespace WebAnalyzer.Models.Base
             return participantArray;
         }
 
+        public String[] GetParticipantUIDs()
+        {
+            String[] uidArray = new String[Participants.Count];
+
+            for (int i = 0; i < Participants.Count; i++)
+            {
+                uidArray[i] = Participants[i].UID;
+            }
+
+            return uidArray;
+        }
+
         public String[] GetDomainSettingArray()
+        {
+            return Settings.GetDomainIdentifiers();
+        }
+
+        public String[] GetDomainSettingUIDs()
         {
             return Settings.GetDomainUIDs();
         }
@@ -81,7 +98,7 @@ namespace WebAnalyzer.Models.Base
         {
             foreach (ExperimentParticipant par in Participants)
             {
-                if (par.Identifier.Equals(uid))
+                if (par.UID.Equals(uid))
                 {
                     return par;
                 }

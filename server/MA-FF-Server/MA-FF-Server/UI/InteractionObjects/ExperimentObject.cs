@@ -4,51 +4,62 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using WebAnalyzer.Models.Base;
+
 namespace WebAnalyzer.UI.InteractionObjects
 {
     public class ExperimentObject : BaseInteractionObject
     {
 
-        private String _name;
+        private ExperimentModel _exp;
 
-        private String[] _participants;
 
-        private String[] _domainSettings;
+        public ExperimentObject(){
+        }
 
-        public ExperimentObject(String name){
-            _name = name;
+        public ExperimentModel Experiment
+        {
+            get { return _exp; }
+            set { _exp = value; }
         }
 
         public String getName(){
-            return _name;
-        }
+            if(_exp != null)
+                return _exp.ExperimentName;
 
-        public String Name
-        {
-            get { return _name; }
-            set { _name = value; }
+            return null;
         }
 
         public String[] participantArray()
         {
-            return Participants;
+            if (_exp != null)
+                return _exp.GetParticipantArray();
+
+            return null;
+        }
+
+        public String[] participantUIDs()
+        {
+            if (_exp != null)
+                return _exp.GetParticipantUIDs();
+
+            return null;
         }
 
         public String[] domainSettingsArray()
         {
-            return DomainSettings;
+            if (_exp != null)
+                return _exp.GetDomainSettingArray();
+
+            return null;
         }
 
-        public String[] Participants
+        public String[] domainSettingUIDs()
         {
-            get { return _participants; }
-            set { _participants = value; }
-        }
+            if (_exp != null)
+                return _exp.GetDomainSettingUIDs();
 
-        public String[] DomainSettings
-        {
-            get { return _domainSettings; }
-            set { _domainSettings = value; }
+            return null;
         }
     }
 }

@@ -64,7 +64,7 @@ namespace WebAnalyzer.Models.SettingsModel
 
             for (int i = 0; i < AOIS.Count; i++)
             {
-                aoiUID[i] = AOIS[i].Identifier;
+                aoiUID[i] = AOIS[i].UID;
             }
 
             return aoiUID;
@@ -74,7 +74,7 @@ namespace WebAnalyzer.Models.SettingsModel
         {
             foreach (AOISettings setting in AOIS)
             {
-                if (setting.Identifier.Equals(uid))
+                if (setting.UID.Equals(uid))
                 {
                     return setting;
                 }
