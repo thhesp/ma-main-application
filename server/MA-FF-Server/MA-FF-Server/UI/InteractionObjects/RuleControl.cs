@@ -15,7 +15,6 @@ namespace WebAnalyzer.UI.InteractionObjects
     {
 
         public event CreateRuleEventtHandler CreateRule;
-        public event TriggerSaveEventHandler TriggerSave;
 
         private EditRuleForm _form;
 
@@ -34,6 +33,29 @@ namespace WebAnalyzer.UI.InteractionObjects
         public Boolean creatingNewRule()
         {
             return _create;
+        }
+
+        public void saveRule()
+        {
+            if (_create)
+            {
+                CreateRule(this, new CreateRuleEvent(_rule));
+            }
+
+            _form.Invoke((MethodInvoker)delegate
+            {
+                // close the form on the forms thread
+                _form.DialogResult = DialogResult.OK;
+            });
+        }
+
+        public void cancel()
+        {
+            _form.Invoke((MethodInvoker)delegate
+            {
+                // close the form on the forms thread
+                _form.DialogResult = DialogResult.Abort;
+            });
         }
     }
 }

@@ -39,14 +39,26 @@ namespace WebAnalyzer.Models.SettingsModel
             set { _rules = value; }
         }
 
+        public String[] GetRuleUIDs()
+        {
+            String[] ruleUIDs = new String[Rules.Count];
+
+            for (int i = 0; i < Rules.Count; i++)
+            {
+                ruleUIDs[i] = Rules[i].UID;
+            }
+
+            return ruleUIDs;
+        }
+
         public SettingsRule GetRuleSettingByUid(String uid)
         {
             foreach (SettingsRule rule in Rules)
             {
-                /*if (rule.Identifier.Equals(uid))
+                if (rule.UID.Equals(uid))
                 {
                     return rule;
-                }*/
+                }
 
             }
 

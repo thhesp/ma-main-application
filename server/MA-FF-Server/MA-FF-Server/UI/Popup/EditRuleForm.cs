@@ -29,7 +29,6 @@ namespace WebAnalyzer.UI
         private RuleControl control = null;
 
         public event CreateRuleEventtHandler CreateRule;
-        public event TriggerSaveEventHandler TriggerSave;
 
         public EditRuleForm(SettingsRule rule, Boolean create)
         {
@@ -48,7 +47,6 @@ namespace WebAnalyzer.UI
             control = new RuleControl(this, _rule, _create);
             control.Browser = myBrowser;
             control.CreateRule += this.CreateRule;
-            control.TriggerSave += this.TriggerSave;
 
             myBrowser.RegisterJsObject("control", control);
 

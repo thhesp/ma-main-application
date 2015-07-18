@@ -69,6 +69,11 @@ namespace WebAnalyzer.UI.InteractionObjects
             _setting.Identifier = identifier;
         }
 
+        public String[] getRuleUIDs()
+        {
+            return _setting.GetRuleUIDs();
+        }
+
 
         public void editRule(String uid)
         {
