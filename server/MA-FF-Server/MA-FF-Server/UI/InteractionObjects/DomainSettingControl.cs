@@ -89,16 +89,37 @@ namespace WebAnalyzer.UI.InteractionObjects
             return _setting.GetAOIUIDs();
         }
 
-        public void editAOI()
+        public void editAOI(String uid)
         {
-            AOISettings aoi = new AOISettings();
-            ShowEditAOISettingForm(aoi, true);
+            AOISettings aoi = _setting.GetAOISettingByUid(uid);
+            ShowEditAOISettingForm(aoi, false);
         }
 
         public void createAOI()
         {
             AOISettings aoi = new AOISettings();
             ShowEditAOISettingForm(aoi, true);
+        }
+
+        public void copyAOI(String uid)
+        {
+            AOISettings aoi = _setting.GetAOISettingByUid(uid);
+
+            AOISettings copy = AOISettings.Copy(aoi);
+
+            _setting.AddAOI(copy);
+
+            _form.ReloadPage();
+            TriggerSave(this, new TriggerSaveEvent(TriggerSaveEvent.SAVE_TYPES.SETTINGS));
+        }
+
+        public void deleteAOI(String uid)
+        {
+            AOISettings aoi = _setting.GetAOISettingByUid(uid);
+            _setting.AOIS.Remove(aoi);
+
+            _form.ReloadPage();
+            TriggerSave(this, new TriggerSaveEvent(TriggerSaveEvent.SAVE_TYPES.SETTINGS));
         }
 
         private void ShowEditAOISettingForm(AOISettings setting, Boolean createNew)

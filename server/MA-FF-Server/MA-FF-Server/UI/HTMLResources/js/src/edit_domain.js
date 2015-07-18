@@ -20,18 +20,21 @@
 
     $('#aoi-table .edit').click(function () {
         console.log($(this));
-        
+        var uid = $(this).closest('tr').attr('uid');
+        control.editAOI(uid);
     });
 
 
     $('#aoi-table .copy').click(function () {
         console.log($(this));
-        
+        var uid = $(this).closest('tr').attr('uid');
+        control.copyAOI(uid);
     });
 
     $('#aoi-table .delete').click(function () {
         console.log($(this));
-        $(this).closest('tr').remove();
+        var uid = $(this).closest('tr').attr('uid');
+        control.deleteAOI(uid);
     });
 }
 

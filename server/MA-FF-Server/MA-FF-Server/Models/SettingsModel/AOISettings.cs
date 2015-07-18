@@ -31,6 +31,12 @@ namespace WebAnalyzer.Models.SettingsModel
             set { _identifier = value; }
         }
 
+        public List<SettingsRule> Rules
+        {
+            get { return _rules; }
+            set { _rules = value; }
+        }
+
         public List<SettingsRule> GetRules()
         {
             return _rules;
@@ -91,6 +97,16 @@ namespace WebAnalyzer.Models.SettingsModel
             }
 
             return aoi;
+        }
+
+        public static AOISettings Copy(AOISettings orig)
+        {
+            AOISettings copy = new AOISettings();
+
+            copy.Identifier = "Kopie - " + orig.Identifier;
+            copy.Rules = orig.Rules;
+
+            return copy;
         }
     }
 }

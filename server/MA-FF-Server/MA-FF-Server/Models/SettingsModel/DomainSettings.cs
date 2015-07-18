@@ -69,6 +69,20 @@ namespace WebAnalyzer.Models.SettingsModel
             return aoiUID;
         }
 
+        public AOISettings GetAOISettingByUid(String uid)
+        {
+            foreach (AOISettings setting in AOIS)
+            {
+                if (setting.Identifier.Equals(uid))
+                {
+                    return setting;
+                }
+
+            }
+
+            return null;
+        }
+
         public List<AOISettings> GetAOIs()
         {
             return _aois;
