@@ -1,11 +1,11 @@
 ﻿if (!control.creatingNewRule()) {
-    console.log("initialize data...");
+    console.log("initialize rule data...");
 
     
 }
 
 $('#save-button').click(function () {
-    console.log('save domain setting...');
+    console.log('save rule setting...');
 
     
 
@@ -13,12 +13,14 @@ $('#save-button').click(function () {
 });
 
 $('#cancel-button').click(function () {
-    console.log('cancel domain...');
+    console.log('cancel rule...');
     control.cancel();
 });
 
 
-$('#add-rule').click(function () {
+$('#add-subrule').click(function () {
     //show window
-    control.createRule();
+    var html = "<tr><td><select><option value='not'>NOT</option><option value='and'>AND</option><option value='or'>OR</option></select></td><td><select><option value='tag'>Tag</option><option value='id'>ID</option><option value='class'>Class</option></select></td><td><input class='value' type='text' placeholder='Wert'/></td></tr>";
+
+    $('#rule-table').append(html);
 });
