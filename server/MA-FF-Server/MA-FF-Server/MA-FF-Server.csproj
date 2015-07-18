@@ -122,6 +122,7 @@
   <ItemGroup>
     <Compile Include="Controller\LoadController.cs" />
     <Compile Include="Controller\MainController.cs" />
+    <Compile Include="Events\CreateRuleEvent.cs" />
     <Compile Include="Events\CreateAOISettingEvent.cs" />
     <Compile Include="Events\CreateExperimentEvent.cs" />
     <Compile Include="Events\CreateDomainSettingEvent.cs" />
@@ -134,6 +135,7 @@
     <Compile Include="Models\AnalysisModel\FixationModel.cs" />
     <Compile Include="Models\Base\ExperimentModel.cs" />
     <Compile Include="Models\Base\ExperimentParticipant.cs" />
+    <Compile Include="Models\Base\UIDBase.cs" />
     <Compile Include="Models\SettingsModel\AOISettings.cs" />
     <Compile Include="Models\SettingsModel\DomainSettings.cs" />
     <Compile Include="Models\SettingsModel\ExperimentSettings.cs" />
@@ -181,9 +183,16 @@
     <Compile Include="ApplicationSettings\AppSettings.cs" />
     <Compile Include="ApplicationSettings\SettingsValidator.cs" />
     <Compile Include="UI\ChromeDevTools.cs" />
+    <Compile Include="UI\InteractionObjects\RuleControl.cs" />
     <Compile Include="UI\InteractionObjects\AOISettingControl.cs" />
     <Compile Include="UI\InteractionObjects\DomainSettingControl.cs" />
     <Compile Include="UI\InteractionObjects\ParticipantControl.cs" />
+    <Compile Include="UI\Popup\EditRuleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Popup\EditRuleForm.Designer.cs">
+      <DependentUpon>EditRuleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Popup\EditAOISettingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +257,9 @@
     </Compile>
     <EmbeddedResource Include="Test\Communication\MouseTracker.resx">
       <DependentUpon>MouseTracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Popup\EditRuleForm.resx">
+      <DependentUpon>EditRuleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Popup\EditAOISettingForm.resx">
       <DependentUpon>EditAOISettingForm.cs</DependentUpon>
@@ -355,6 +367,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UI\HTMLResources\html\popup\settings\aoi_edit.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HTMLResources\html\popup\settings\rule_edit.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UI\HTMLResources\html\popup\settings\domain_edit.html">

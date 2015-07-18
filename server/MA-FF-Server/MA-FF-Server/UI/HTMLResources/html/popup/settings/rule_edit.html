@@ -10,28 +10,30 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <label>AOI Bezeichnung:</label>
-                    <input id="identifier" type="text" placeholder="" />
+                    Regel:
                 </div>
             </div>
-
+            <div class="row">
+                <div class="col-md-12">
+                    <label><input id="case-sensitive" type="checkbox" value="true">Groß- und Kleinschreibung beachten</label>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-12">
                     <label>Regeln:</label>
                     <table style="width:100%">
                         <thead>
                             <tr>
-                                <th>Nr.:</th>
-                                <th>Edit</th>
-                                <th>Copy</th>
-                                <th>Delete</th>
+                                <th>NOT/AND/OR?</th>
+                                <th>Typ</th>
+                                <th>Wert</th>
                             </tr>
                         </thead>
                         <tbody id="rule-table"></tbody>
                     </table>
 
                     <div class="centered">
-                        <i id="add-rule" class='fa fa-plus-circle'></i>
+                        <i id="add-subrule" class='fa fa-plus-circle'></i>
                     </div>
                 </div>
             </div>
@@ -47,6 +49,6 @@
         <script type="text/javascript" src="../../../js/lib/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="../../../js/lib/bootstrap.min.js"></script>
 
-        <script type="text/javascript" src="../../../js/src/edit_aoi.js"></script>
+        <script type="text/javascript" src="../../../js/src/edit_rule.js"></script>
     </body>
 </html>

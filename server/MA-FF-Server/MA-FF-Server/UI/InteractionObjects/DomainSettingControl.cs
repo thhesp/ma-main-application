@@ -128,6 +128,7 @@ namespace WebAnalyzer.UI.InteractionObjects
             {
                 EditAOISettingForm editSetting = new EditAOISettingForm(setting, createNew);
                 editSetting.CreateAOISetting += On_CreateAOISetting;
+                editSetting.TriggerSave += TriggerSave;
 
                 if (editSetting.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {

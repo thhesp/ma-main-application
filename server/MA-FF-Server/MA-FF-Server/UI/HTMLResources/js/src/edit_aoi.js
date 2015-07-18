@@ -1,4 +1,4 @@
-﻿if (!control.creatingNewDomainSetting()) {
+﻿if (!control.creatingNewAOISetting()) {
     console.log("initialize data...");
 
     $('#identifier').val(control.getIdentifier());
@@ -20,4 +20,6 @@ $('#cancel-button').click(function () {
 
 $('#add-rule').click(function () {
     //show window
+
+
 });

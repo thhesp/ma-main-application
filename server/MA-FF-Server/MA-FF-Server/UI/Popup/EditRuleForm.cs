@@ -19,21 +19,21 @@ using WebAnalyzer.Models.SettingsModel;
 
 namespace WebAnalyzer.UI
 {
-    public partial class EditAOISettingForm : Form
+    public partial class EditRuleForm : Form
     {
         private ChromiumWebBrowser myBrowser = null;
-        private AOISettings _setting = null;
+        private SettingsRule _rule = null;
         private Boolean _create = false;
 
 
-        private AOISettingControl control = null;
+        private RuleControl control = null;
 
-        public event CreateAOISettingEventHandler CreateAOISetting;
+        public event CreateRuleEventtHandler CreateRule;
         public event TriggerSaveEventHandler TriggerSave;
 
-        public EditAOISettingForm(AOISettings setting, Boolean create)
+        public EditRuleForm(SettingsRule rule, Boolean create)
         {
-            _setting = setting;
+            _rule = rule;
             _create = create;
             InitializeComponent();
         }
@@ -42,12 +42,12 @@ namespace WebAnalyzer.UI
         {
             //Cef.Initialize();
 
-            string page = string.Format("{0}UI/HTMLResources/html/popup/settings/aoi_edit.html", Utilities.GetAppLocation());
+            string page = string.Format("{0}UI/HTMLResources/html/popup/settings/rule_edit.html", Utilities.GetAppLocation());
             myBrowser = new ChromiumWebBrowser(page);
 
-            control = new AOISettingControl(this, _setting, _create);
+            control = new RuleControl(this, _rule, _create);
             control.Browser = myBrowser;
-            control.CreateAOISetting += this.CreateAOISetting;
+            control.CreateRule += this.CreateRule;
             control.TriggerSave += this.TriggerSave;
 
             myBrowser.RegisterJsObject("control", control);
