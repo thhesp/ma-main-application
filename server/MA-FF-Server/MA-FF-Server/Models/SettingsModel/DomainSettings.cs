@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Xml;
+using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.Models.SettingsModel
 {
-    public class DomainSettings
+    public class DomainSettings : UIDBase
     {
 
         private String _domain;
@@ -17,7 +18,7 @@ namespace WebAnalyzer.Models.SettingsModel
 
         private List<AOISettings> _aois = new List<AOISettings>();
 
-        public DomainSettings()
+        public DomainSettings() : base()
         {
 
         }

@@ -7,15 +7,22 @@ using System.Threading.Tasks;
 using WebAnalyzer.Models.DataModel;
 using WebAnalyzer.Models.SettingsModel.ExpressionTree;
 using System.Xml;
+using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.Models.SettingsModel
 {
-    public class SettingsRule
+    public class SettingsRule : UIDBase
     {
 
         private Boolean _caseSensitive;
 
         private Node _ruleRoot;
+
+        public SettingsRule()
+            : base()
+        {
+
+        }
 
         public Node RuleRoot
         {
@@ -87,6 +94,16 @@ namespace WebAnalyzer.Models.SettingsModel
 
            
             return rule;
+        }
+
+        public static SettingsRule Copy(SettingsRule orig)
+        {
+            SettingsRule copy = new SettingsRule();
+
+            copy.CaseSensitive = orig.CaseSensitive;
+            copy.RuleRoot = orig.RuleRoot;
+
+            return copy;
         }
     }
 }

@@ -6,21 +6,23 @@ using System.Threading.Tasks;
 
 using System.Xml;
 
+using WebAnalyzer.Models.Base;
+
 namespace WebAnalyzer.Models.SettingsModel
 {
-    public class AOISettings
+    public class AOISettings : UIDBase
     {
 
         private String _identifier;
 
         private List<SettingsRule> _rules = new List<SettingsRule>();
 
-        public AOISettings()
+        public AOISettings() : base()
         {
 
         }
 
-        public AOISettings(String identifier)
+        public AOISettings(String identifier) : base()
         {
             _identifier = identifier;
         }
@@ -35,6 +37,20 @@ namespace WebAnalyzer.Models.SettingsModel
         {
             get { return _rules; }
             set { _rules = value; }
+        }
+
+        public SettingsRule GetRuleSettingByUid(String uid)
+        {
+            foreach (SettingsRule rule in Rules)
+            {
+                /*if (rule.Identifier.Equals(uid))
+                {
+                    return rule;
+                }*/
+
+            }
+
+            return null;
         }
 
         public List<SettingsRule> GetRules()

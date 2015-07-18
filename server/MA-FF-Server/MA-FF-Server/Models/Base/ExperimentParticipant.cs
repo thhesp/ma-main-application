@@ -10,7 +10,7 @@ using System.Xml;
 
 namespace WebAnalyzer.Models.Base
 {
-    public class ExperimentParticipant
+    public class ExperimentParticipant : UIDBase
     {
 
         public enum SEX_TYPES { Male = 0, Female = 1, Undecided = 2 };
@@ -31,7 +31,7 @@ namespace WebAnalyzer.Models.Base
         /* other data */
         private DateTime _createdAt;
 
-        public ExperimentParticipant()
+        public ExperimentParticipant() : base()
         {
             _createdAt = DateTime.Now;
         }
