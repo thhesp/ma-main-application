@@ -20,7 +20,8 @@ $('#cancel-button').click(function () {
 
 $('#add-subrule').click(function () {
     //show window
-    var html = "<tr><td><select><option value='not'>NOT</option><option value='and'>AND</option><option value='or'>OR</option></select></td><td><select><option value='tag'>Tag</option><option value='id'>ID</option><option value='class'>Class</option></select></td><td><input class='value' type='text' placeholder='Wert'/></td></tr>";
+    //var html = "<tr><td><select><option value='not'>NOT</option><option value='and'>AND</option><option value='or'>OR</option></select></td><td><select><option value='tag'>Tag</option><option value='id'>ID</option><option value='class'>Class</option></select></td><td><input class='value' type='text' placeholder='Wert'/></td></tr>";
 
-    $('#rule-table').append(html);
+    var template = $('#subrule-template tr')[0].outerHTML
+    $("#rule-table").html(_.template(template));
 });

@@ -48,8 +48,33 @@
             </div>
         </div><!-- /.container -->
 
+        <div class="template">
+            <table id ="subrule-template">
+                <tr>
+                    <td>
+                        <select>
+                            <option value='not'>NOT</option>
+                            <option value='and'>AND</option>
+                            <option value='or'>OR</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select>
+                            <option value='tag'>Tag</option>
+                            <option value='id'>ID</option>
+                            <option value='class'>Class</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input class='value' type='text' placeholder='Wert' />
+                    </td>
+                </tr>
+            </table>
+        </div>
+
         <script type="text/javascript" src="../../../js/lib/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="../../../js/lib/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../../js/lib/underscore.min.js"></script>
 
         <script type="text/javascript" src="../../../js/src/edit_rule.js"></script>
     </body>

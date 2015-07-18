@@ -378,6 +378,9 @@
     <Content Include="UI\HTMLResources\js\lib\bootstrap.min.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UI\HTMLResources\js\lib\underscore.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UI\HTMLResources\js\lib\jquery-2.1.4.min.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

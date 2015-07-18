@@ -13,6 +13,10 @@ div.content {
     margin-bottom: 20px;
 }
 
+.template {
+    display: none;
+}
+
 
 
 .row {
