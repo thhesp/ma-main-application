@@ -49,9 +49,28 @@
             </div>
         </div><!-- /.container -->
 
-        <script type="text/javascript" src="../../../js/lib/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript" src="../../../js/lib/bootstrap.min.js"></script>
 
-        <script type="text/javascript" src="../../../js/src/edit_domain.js"></script>
-    </body>
+        <script type="text/template" id="aoi-template" class="template">
+                <tr uid="<%= uid %>">
+                    <td>
+                        <%= identifier %>
+                    </td>
+                    <td>
+                        <i class='edit fa fa-pencil-square-o'></i>
+                    </td>
+                    <td>
+                        <i class='copy fa fa-files-o'></i>
+                    </td>
+                    <td>
+                        <i class='delete fa fa-times'></i>
+                    </td>
+                </tr>
+        </script>
+
+            <script type="text/javascript" src="../../../js/lib/jquery-2.1.4.min.js"></script>
+            <script type="text/javascript" src="../../../js/lib/bootstrap.min.js"></script>
+            <script type="text/javascript" src="../../../js/lib/underscore.min.js"></script>
+
+            <script type="text/javascript" src="../../../js/src/edit_domain.js"></script>
+</body>
 </html>
