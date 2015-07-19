@@ -57,16 +57,36 @@
         </div><!-- /.container -->
     </div>
     <footer></footer>
+
+    <script type="text/template" id="participant-template" class="template">
+        <tr uid="<%= uid %>">
+            <td>
+                <%= identifier %>
+            </td>
+            <td>
+                <i class='edit fa fa-pencil-square-o'></i>
+            </td>
+            <td>
+                <i class='copy fa fa-files-o'></i>
+            </td>
+            <td>
+                <i class='delete fa fa-times'></i>
+            </td>
+        </tr>
+    </script>
+
     <script type="text/javascript" src="../../js/lib/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="../../js/lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/lib/underscore.min.js"></script>
 
     <script type="text/javascript">
         var participantArray = experimentObj.participantArray();
         var participantUIDs = experimentObj.participantUIDs();
 
+        var template = _.template($('script#participant-template').html());
+
         for (var i = 0; i < participantArray.length; i++) {
-            var html = "<tr uid='" + participantUIDs[i] + "'><td>" + participantArray[i] + "</td><td><i class='edit fa fa-pencil-square-o'></i></td><td><i class='copy fa fa-files-o'></i></td><td><i class='delete fa fa-times'></i></td></tr>";
-            $('#participants-table').append(html);
+            $("#participants-table").append(template({ uid: participantUIDs[i], identifier: participantArray[i] }));
         }
 
         $('#participants-table .edit').click(function () {

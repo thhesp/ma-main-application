@@ -57,8 +57,26 @@
     </div>
     <footer></footer>
 
+    <script type="text/template" id="domains-template" class="template">
+        <tr uid="<%= uid %>">
+            <td>
+                <%= domain %>
+            </td>
+            <td>
+                <i class='edit fa fa-pencil-square-o'></i>
+            </td>
+            <td>
+                <i class='copy fa fa-files-o'></i>
+            </td>
+            <td>
+                <i class='delete fa fa-times'></i>
+            </td>
+        </tr>
+    </script>
+
     <script type="text/javascript" src="../../js/lib/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="../../js/lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/lib/underscore.min.js"></script>
 
     <script type="text/javascript" src="../../js/src/nav.js"></script>
     <script type="text/javascript" src="../../js/src/init.js"></script>
@@ -68,9 +86,10 @@
         var settingsArray = experimentObj.domainSettingsArray();
         var uidsArray = experimentObj.domainSettingUIDs();
 
+        var template = _.template($('script#domains-template').html());
+
     for (var i = 0; i < settingsArray.length; i++) {
-        var html = "<tr uid='" + uidsArray[i] + "'><td>" + settingsArray[i] + "</td><td><i class='edit fa fa-pencil-square-o'></i></td><td><i class='copy fa fa-files-o'></i></td><td><i class='delete fa fa-times'></i></td></tr>";
-        $('#settings-table').append(html);
+        $("#settings-table").append(template({ uid: uidsArray[i], domain: settingsArray[i] }));
     }
 
     $('#settings-table .edit').click(function () {
