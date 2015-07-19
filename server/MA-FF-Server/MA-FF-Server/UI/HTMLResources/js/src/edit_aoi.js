@@ -5,10 +5,10 @@
 
     var uids = control.getRuleUIDs();
 
-    for (var i = 0; i < uids.length; i++) {
-        var html = "<tr uid='" + uids[i] + "'><td>" + i + "</td><td><i class='edit fa fa-pencil-square-o'></i></td><td><i class='copy fa fa-files-o'></i></td><td><i class='delete fa fa-times'></i></td></tr>";
+    var template = _.template($('script#aoi-template').html());
 
-        $('#rule-table').append(html);
+    for (var i = 0; i < uids.length; i++) {
+        $("#rule-table").append(template({ uid: uids[i], number: i }));
     }
 
     $('#rule-table .edit').click(function () {
