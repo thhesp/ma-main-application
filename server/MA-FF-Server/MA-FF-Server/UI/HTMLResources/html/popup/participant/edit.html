@@ -65,8 +65,23 @@
             </div>
         </div><!-- /.container -->
 
+        <script type="text/template" id="extra-data-template" class="template">
+            <tr>
+                <td>
+                    <input class='key' type='text' placeholder='Bezeichnung' value="<%= key %>"/>
+                </td>
+                <td>
+                    <input class='value' type='text' placeholder='Wert' value="<%= value %>"/>
+                </td>
+                <td>
+                    <i class='delete fa fa-times'></i>
+                </td>
+            </tr>
+        </script>
+
         <script type="text/javascript" src="../../../js/lib/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="../../../js/lib/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../../js/lib/underscore.min.js"></script>
 
         <script type="text/javascript" src="../../../js/src/edit_participant.js"></script>
     </body>

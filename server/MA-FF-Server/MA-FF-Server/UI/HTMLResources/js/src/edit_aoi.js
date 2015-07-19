@@ -5,7 +5,7 @@
 
     var uids = control.getRuleUIDs();
 
-    var template = _.template($('script#aoi-template').html());
+    var template = _.template($('script#rule-template').html());
 
     for (var i = 0; i < uids.length; i++) {
         $("#rule-table").append(template({ uid: uids[i], number: i }));

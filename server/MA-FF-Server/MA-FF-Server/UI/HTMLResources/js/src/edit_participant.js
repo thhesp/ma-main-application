@@ -12,10 +12,10 @@
     var keys = control.getExtraDataKeys();
     var values = control.getExtraDataValues();
 
-    for(var i = 0; i < keys.length; i++){
-        var html = "<tr'><td><input class='key' type='text' placeholder='Bezeichnung' value='" + keys[i] + "'/></td><td><input class='value' type='text' placeholder='Wert' value='" + values[i] + "'/></td><td><i class='delete fa fa-times'></i></td></tr>";
+    var template = _.template($('script#extra-data-template').html());
 
-        $('#extra-data-table').append(html);
+    for(var i = 0; i < keys.length; i++){
+        $("#extra-data-table").append(template({ key: keys[i], value: values[i] }));
     }
 
     $('#extra-data-table .delete').click(function () {
@@ -64,9 +64,9 @@ $('#cancel-button').click(function () {
 
 
 $('#add-data').click(function () {
-    var html = "<tr'><td><input class='key' type='text' placeholder='Bezeichnung' /></td><td><input class='value' type='text' placeholder='Wert' /></td><td><i class='delete fa fa-times'></i></td></tr>";
+    var template = _.template($('script#extra-data-template').html());
 
-    $('#extra-data-table').append(html);
+    $("#extra-data-table").append(template({ key: '', value: '' }));
 
     $("#extra-data-table .delete").off("click", "**");
 
