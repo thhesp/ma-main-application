@@ -22,20 +22,81 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <label>Regeln:</label>
+                    <label>TAG:</label>
                     <table style="width:100%">
                         <thead>
                             <tr>
                                 <th>NOT/AND/OR?</th>
-                                <th>Typ</th>
                                 <th>Wert</th>
                             </tr>
                         </thead>
-                        <tbody id="rule-table"></tbody>
+                        <tbody id="tag-rule-table"></tbody>
                     </table>
 
                     <div class="centered">
-                        <i id="add-subrule" class='fa fa-plus-circle'></i>
+                        <i id="add-tag-subrule" class='fa fa-plus-circle'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="centered">
+                        <select>
+                            <option value='and'>AND</option>
+                            <option value='or'>OR</option>
+                            <option value='andnot'>AND NOT</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                 <div class="col-md-12">
+                    <label>ID:</label>
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>NOT/AND/OR?</th>
+                                <th>Wert</th>
+                            </tr>
+                        </thead>
+                        <tbody id="id-rule-table"></tbody>
+                    </table>
+
+                    <div class="centered">
+                        <i id="add-id-subrule" class='fa fa-plus-circle'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="centered">
+                        <select>
+                            <option value='and'>AND</option>
+                            <option value='or'>OR</option>
+                            <option value='andnot'>AND NOT</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <label>Class:</label>
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>NOT/AND/OR?</th>
+                                <th>Wert</th>
+                            </tr>
+                        </thead>
+                        <tbody id="class-rule-table"></tbody>
+                    </table>
+
+                    <div class="centered">
+                        <i id="add-class-subrule" class='fa fa-plus-circle'></i>
                     </div>
                 </div>
             </div>
@@ -53,16 +114,12 @@
                 <tr>
                     <td>
                         <select>
-                            <option value='not'>NOT</option>
-                            <option value='and'>AND</option>
-                            <option value='or'>OR</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select>
-                            <option value='tag'>Tag</option>
-                            <option value='id'>ID</option>
-                            <option value='class'>Class</option>
+                            <option value='none' class='disable-nth' disabled></option>
+                            <option value='not' class='disable-nth' disabled>NOT</option>
+                            <option value='and' class='disable-first'>AND</option>
+                            <option value='andnot' class='disable-first'>AND NOT</option>
+                            <option value='or' class='disable-first'>OR</option>
+                            <option value='ornot' class='disable-first'>OR NOT</option>
                         </select>
                     </td>
                     <td>

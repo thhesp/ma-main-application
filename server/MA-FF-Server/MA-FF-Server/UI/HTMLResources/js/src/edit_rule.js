@@ -18,10 +18,52 @@ $('#cancel-button').click(function () {
 });
 
 
-$('#add-subrule').click(function () {
+$('#add-tag-subrule').click(function () {
     //show window
-    //var html = "<tr><td><select><option value='not'>NOT</option><option value='and'>AND</option><option value='or'>OR</option></select></td><td><select><option value='tag'>Tag</option><option value='id'>ID</option><option value='class'>Class</option></select></td><td><input class='value' type='text' placeholder='Wert'/></td></tr>";
+    var template = $('#subrule-template tr')[0].outerHTML;
+    $("#tag-rule-table").append(_.template(template));
 
-    var template = $('#subrule-template tr')[0].outerHTML
-    $("#rule-table").append(_.template(template));
+    disableOptions($('#tag-rule-table'));
+
+    if ($("#tag-rule-table tr").length == 1) {
+        $("#tag-rule-table tr:first select").val('none');
+    }
 });
+
+$('#add-id-subrule').click(function () {
+    //show window
+    var template = $('#subrule-template tr')[0].outerHTML;
+    $("#id-rule-table").append(_.template(template));
+
+    disableOptions($('#id-rule-table'));
+
+    if ($("#id-rule-table tr").length == 1) {
+        $("#id-rule-table tr:first select").val('none');
+    }
+});
+
+$('#add-class-subrule').click(function () {
+    //show window
+    var template = $('#subrule-template tr')[0].outerHTML;
+    $("#class-rule-table").append(_.template(template));
+
+    disableOptions($('#class-rule-table'));
+
+    if ($("#class-rule-table tr").length == 1) {
+        $("#class-rule-table tr:first select").val('none');
+    }
+});
+
+function disableOptions(el) {
+    var $el = $(el);
+
+    $el.find('option').removeAttr('disabled');
+
+    var firstSelect = $($el.children('tr:first')).find('select');
+
+    firstSelect.find('option.disable-first').attr('disabled', 'true');
+
+    var laterSelects = $($el.children('tr:not(:first)')).find('select');
+
+    laterSelects.find('option.disable-nth').attr('disabled', 'true');
+};
