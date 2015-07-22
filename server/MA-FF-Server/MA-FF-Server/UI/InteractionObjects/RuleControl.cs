@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 using WebAnalyzer.Models.SettingsModel;
 using System.Windows.Forms;
+using WebAnalyzer.Util;
+using WebAnalyzer.Models.SettingsModel.ExpressionTree;
 
 using WebAnalyzer.Events;
 
@@ -22,13 +24,15 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         private Boolean _create;
 
+        private TreeGenerator _generator;
+
         public RuleControl(EditRuleForm form, SettingsRule rule, Boolean create)
         {
             _form = form;
             _rule = rule;
             _create = create;
+            _generator = new TreeGenerator();
         }
-
 
         public Boolean creatingNewRule()
         {
@@ -37,6 +41,7 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         public void saveRule()
         {
+            //_rule.RuleRoot = _generator.generate();
             if (_create)
             {
                 CreateRule(this, new CreateRuleEvent(_rule));
@@ -56,6 +61,41 @@ namespace WebAnalyzer.UI.InteractionObjects
                 // close the form on the forms thread
                 _form.DialogResult = DialogResult.Abort;
             });
+        }
+
+        public Boolean getCaseSensitive()
+        {
+            return _rule.CaseSensitive;
+        }
+
+        public void setCaseSensitive(Boolean caseSensitive)
+        {
+            _rule.CaseSensitive = caseSensitive;
+        }
+
+        public void addTagConstraint(String type, String value)
+        {
+            Logger.Log("Tag Constraint: " + type + " - " + value);
+        }
+
+        public void addIDConstraint(String type, String value)
+        {
+            Logger.Log("ID Constraint: " + type + " - " + value);
+        }
+
+        public void addClassConstraint(String type, String value)
+        {
+            Logger.Log("Class Constraint: " + type + " - " + value);
+        }
+
+        public void setFirstSelect(String value)
+        {
+
+        }
+
+        public void setSecondSelect(String value)
+        {
+
         }
     }
 }

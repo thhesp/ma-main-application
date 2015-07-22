@@ -22,11 +22,11 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <label>TAG:</label>
+                    <label>Der <b>HTML-Tag</b> des DOM-Elements ist</label>
                     <table style="width:100%">
                         <thead>
                             <tr>
-                                <th>NOT/AND/OR?</th>
+                                <th></th>
                                 <th>Wert</th>
                             </tr>
                         </thead>
@@ -42,10 +42,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="centered">
-                        <select>
-                            <option value='and'>AND</option>
-                            <option value='or'>OR</option>
-                            <option value='andnot'>AND NOT</option>
+                        <select id="first-select">
+                            <option value='and'>und</option>
+                            <option value='or'>oder</option>
+                            <option value='andnot'>und nicht</option>
                         </select>
                     </div>
                 </div>
@@ -53,11 +53,11 @@
 
             <div class="row">
                  <div class="col-md-12">
-                    <label>ID:</label>
+                    <label>Die <b>ID</b> des DOM-Elements ist</label>
                     <table style="width:100%">
                         <thead>
                             <tr>
-                                <th>NOT/AND/OR?</th>
+                                <th></th>
                                 <th>Wert</th>
                             </tr>
                         </thead>
@@ -73,10 +73,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="centered">
-                        <select>
-                            <option value='and'>AND</option>
-                            <option value='or'>OR</option>
-                            <option value='andnot'>AND NOT</option>
+                        <select id="second-select">
+                            <option value='and'>und</option>
+                            <option value='or'>oder</option>
+                            <option value='andnot'>und nicht</option>
                         </select>
                     </div>
                 </div>
@@ -84,11 +84,12 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <label>Class:</label>
+                    <label>Die <b>Klassen</b> des DOM-Elements sind</label>
+
                     <table style="width:100%">
                         <thead>
                             <tr>
-                                <th>NOT/AND/OR?</th>
+                                <th></th>
                                 <th>Wert</th>
                             </tr>
                         </thead>
@@ -115,11 +116,11 @@
                     <td>
                         <select>
                             <option value='none' class='disable-nth' disabled></option>
-                            <option value='not' class='disable-nth' disabled>NOT</option>
-                            <option value='and' class='disable-first'>AND</option>
-                            <option value='andnot' class='disable-first'>AND NOT</option>
-                            <option value='or' class='disable-first'>OR</option>
-                            <option value='ornot' class='disable-first'>OR NOT</option>
+                            <option value='not' class='disable-nth' disabled>nicht</option>
+                            <option value='and' class='disable-first disable-singular'>und</option>
+                            <option value='andnot' class='disable-first disable-singular'>und nicht</option>
+                            <option value='or' class='disable-first'>oder</option>
+                            <option value='ornot' class='disable-first'>oder nicht</option>
                         </select>
                     </td>
                     <td>

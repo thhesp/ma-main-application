@@ -157,6 +157,7 @@
     <Compile Include="Models\SettingsModel\ExpressionTree\Node.cs" />
     <Compile Include="Models\SettingsModel\ExpressionTree\AndNode.cs" />
     <Compile Include="Models\SettingsModel\ExpressionTree\NotNode.cs" />
+    <Compile Include="Models\SettingsModel\ExpressionTree\TreeGenerator.cs" />
     <Compile Include="Models\SettingsModel\ExpressionTree\XorNode.cs" />
     <Compile Include="Models\SettingsModel\ExpressionTree\OrNode.cs" />
     <Compile Include="Models\SettingsModel\ExpressionTree\ValueNode.cs" />
