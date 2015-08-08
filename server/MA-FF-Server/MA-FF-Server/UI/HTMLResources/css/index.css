@@ -59,3 +59,13 @@ div.content {
 #save-button{
     float: right;
 }
+
+/* rule tables */
+
+td > table {
+    margin-left: 2.5%;
+    border: solid;
+    border-width: 2px;
+    width: 90%;
+    margin-right: -2.5%;
+}
