@@ -73,29 +73,5 @@ namespace WebAnalyzer.UI.InteractionObjects
             _rule.CaseSensitive = caseSensitive;
         }
 
-        public void addTagConstraint(String type, String value)
-        {
-            Logger.Log("Tag Constraint: " + type + " - " + value);
-        }
-
-        public void addIDConstraint(String type, String value)
-        {
-            Logger.Log("ID Constraint: " + type + " - " + value);
-        }
-
-        public void addClassConstraint(String type, String value)
-        {
-            Logger.Log("Class Constraint: " + type + " - " + value);
-        }
-
-        public void setFirstSelect(String value)
-        {
-
-        }
-
-        public void setSecondSelect(String value)
-        {
-
-        }
     }
 }

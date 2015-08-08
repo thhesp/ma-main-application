@@ -30,15 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // ExperimentWizard
+            // EditRuleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 374);
+            this.ClientSize = new System.Drawing.Size(690, 374);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.Name = "Edit AOI Setting";
+            this.Name = "EditRuleForm";
             this.ShowIcon = false;
             this.Text = "Edit AOI Setting";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Browser_Closing);

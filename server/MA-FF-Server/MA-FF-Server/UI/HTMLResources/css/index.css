@@ -62,10 +62,17 @@ div.content {
 
 /* rule tables */
 
-td > table {
-    margin-left: 2.5%;
+td.inner-table {
+    padding: 2.5%;
     border: solid;
     border-width: 2px;
-    width: 90%;
-    margin-right: -2.5%;
+    margin: 2px;
+}
+
+#inner-rules {
+    margin-left: 5px;
+}
+
+thead.condition-head {
+    margin-bottom: 5px;
 }

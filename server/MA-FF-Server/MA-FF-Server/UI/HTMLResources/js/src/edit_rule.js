@@ -9,18 +9,6 @@ $('#save-button').click(function () {
 
     control.setCaseSensitive($('#case-sensitive').prop("checked"));
 
-    $('#tag-rule-table tr').each(function(){
-        control.addTagConstraint($(this).find('select').val(), $(this).find('input.value').val());
-    });
-
-    $('#id-rule-table tr').each(function () {
-        control.addIDConstraint($(this).find('select').val(), $(this).find('input.value').val());
-    });
-
-    $('#class-rule-table tr').each(function () {
-        control.addClassConstraint($(this).find('select').val(), $(this).find('input.value').val());
-    });
-
     //control.saveRule();
 });
 
@@ -29,61 +17,74 @@ $('#cancel-button').click(function () {
     control.cancel();
 });
 
+$('.delete').click(onDelete);
 
-$('#add-tag-subrule').click(function () {
-    //show window
-    var template = $('#subrule-template tr')[0].outerHTML;
-    $("#tag-rule-table").append(_.template(template));
+$('.main-table.add-condition').click(function () {
+    //add condition
+    var template = $('#condition-template tr')[0].outerHTML;
+    $("#inner-rules").append(_.template(template));
 
-    disableOptions($('#tag-rule-table'), true);
+    $("#inner-rules .delete").off("click", "**");
 
-    if ($("#tag-rule-table tr").length == 1) {
-        $("#tag-rule-table tr:first select").val('none');
-    } else {
-        $("#tag-rule-table tr:first select").val('or');
-    }
+    $('#inner-rules .delete').click(onDelete);
+
+    $("#inner-rules .add-condition").off("click", "**");
+    $("#inner-rules .add-value").off("click", "**");
+
+    $("#inner-rules .add-condition").click(onAddCondition);
+
+    $("#inner-rules .add-value").click(onAddValue);
 });
 
-$('#add-id-subrule').click(function () {
-    //show window
-    var template = $('#subrule-template tr')[0].outerHTML;
-    $("#id-rule-table").append(_.template(template));
+$('.main-table.add-value').click(function () {
+    //add value
+    var template = $('#value-template tr')[0].outerHTML;
+    $("#inner-rules").append(_.template(template));
 
-    disableOptions($('#id-rule-table'), true);
+    $("#inner-rules .delete").off("click", "**");
 
-    if ($("#id-rule-table tr").length == 1) {
-        $("#id-rule-table tr:first select").val('none');
-    } else {
-        $("#id-rule-table tr:first select").val('or');
-    }
+    $('#inner-rules .delete').click(onDelete);
 });
 
-$('#add-class-subrule').click(function () {
-    //show window
-    var template = $('#subrule-template tr')[0].outerHTML;
-    $("#class-rule-table").append(_.template(template));
 
-    disableOptions($('#class-rule-table'));
+function onAddCondition(event) {
+    event.stopImmediatePropagation();
+    var tbody = ($($(this).closest('td')).find('tbody')[0]);
 
-    if ($("#class-rule-table tr").length == 1) {
-        $("#class-rule-table tr:first select").val('none');
-    }
-});
+    console.log("tbody: ", tbody);
 
-function disableOptions(el, singular) {
-    var $el = $(el);
 
-    $el.find('option').removeAttr('disabled');
+    //add condition
+    var template = $('#condition-template tr')[0].outerHTML;
+    $(tbody).append(_.template(template));
 
-    var firstSelect = $($el.children('tr:first')).find('select');
+    $("#inner-rules .delete").off("click", "**");
 
-    firstSelect.find('option.disable-first').attr('disabled', 'true');
+    $('#inner-rules .delete').click(onDelete);
 
-    var laterSelects = $($el.children('tr:not(:first)')).find('select');
+    $("#inner-rules .add-condition").off("click", "**");
+    $("#inner-rules .add-value").off("click", "**");
 
-    laterSelects.find('option.disable-nth').attr('disabled', 'true');
+    $("#inner-rules .add-condition").click(onAddCondition);
 
-    if (singular != undefined && singular == true) {
-        $el.find('option.disable-singular').attr('disabled', 'true');
-    }
-};
+    $("#inner-rules .add-value").click(onAddValue);
+}
+
+
+function onAddValue(event) {
+    event.stopImmediatePropagation();
+    var tbody = ($($(this).closest('td')).find('tbody')[0]);
+
+    console.log("tbody: ", tbody);
+
+    var template = $('#value-template tr')[0].outerHTML;
+    $(tbody).append(_.template(template));
+
+    $("#inner-rules .delete").off("click", "**");
+
+    $('#inner-rules .delete').click(onDelete);
+}
+
+function onDelete() {
+    $(this).closest('tr').remove();
+}

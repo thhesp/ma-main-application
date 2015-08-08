@@ -22,85 +22,28 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <label>Der <b>HTML-Tag</b> des DOM-Elements ist</label>
-                    <table style="width:100%">
-                        <thead>
+                    <table id="main-table" style="width:100%">
+                        <thead class="condition-head">
                             <tr>
+                                <th>
+                                    <select>
+                                        <option value='all'>Alle</option>
+                                        <option value='one'>Eine</option>
+                                    </select>
+                                    dieser Bedingungen muss/müssen erfüllt sein:
+                                </th>
                                 <th></th>
-                                <th>Wert</th>
                             </tr>
                         </thead>
-                        <tbody id="tag-rule-table"></tbody>
+                        <tbody id="inner-rules"></tbody>
                     </table>
-
                     <div class="centered">
-                        <i id="add-tag-subrule" class='fa fa-plus-circle'></i>
+                        <i class='fa fa-plus-circle add-condition main-table'> Bedingung hinzufügen</i><br />
+                        <i class='fa fa-plus-circle add-value main-table'> Wert hinzufügen</i>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="centered">
-                        <select id="first-select">
-                            <option value='and'>und</option>
-                            <option value='or'>oder</option>
-                            <option value='andnot'>und nicht</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                 <div class="col-md-12">
-                    <label>Die <b>ID</b> des DOM-Elements ist</label>
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Wert</th>
-                            </tr>
-                        </thead>
-                        <tbody id="id-rule-table"></tbody>
-                    </table>
-
-                    <div class="centered">
-                        <i id="add-id-subrule" class='fa fa-plus-circle'></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="centered">
-                        <select id="second-select">
-                            <option value='and'>und</option>
-                            <option value='or'>oder</option>
-                            <option value='andnot'>und nicht</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <label>Die <b>Klassen</b> des DOM-Elements sind</label>
-
-                    <table style="width:100%">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Wert</th>
-                            </tr>
-                        </thead>
-                        <tbody id="class-rule-table"></tbody>
-                    </table>
-
-                    <div class="centered">
-                        <i id="add-class-subrule" class='fa fa-plus-circle'></i>
-                    </div>
-                </div>
-            </div>
 
             <div class="row">
                 <div class="col-md-12">
@@ -109,80 +52,50 @@
                 </div>
             </div>
         </div><!-- /.container -->
-
-        <div class="container">
-            <div class="row">
-                <table style="width:100%">
-                    <thead>
-                        <tr>
-                            <th>Table</th>
-                            <th>Löschen</th>
-                        </tr>
-                    </thead>
-                    <tbody id="id-rule-table">
-                        <tr>
-                            <td>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Table inner</th>
-                                            <th>Löschen inner</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="inner-rule-table">
-                                        <tr>
-                                            <td>
-                                                <table>
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Type</th>
-                                                            <th>Value</th>
-                                                            <th>Löschen</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody id="value-rule-table">
-                                                        <tr>
-                                                            <td>Type 3...</td>
-                                                            <td>Value 3...</td>
-                                                            <td>Löschen 3...</td>
-                                                        </tr>
-
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td>
-                                                Löschen 2.....
-                                            </td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td>
-                                Löschen 1.....
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
+        <div class="template">
+            <table id="value-template">
+                <tr class="type-row">
+                    <td>
+                        <select class="type-select">
+                            <option value='tag'>Tag</option>
+                            <option value='id'>ID</option>
+                            <option value='class'>Class</option>
+                        </select>
+                        <input class='value' type='text' placeholder='Wert' />
+                    </td>
+                    <td class="centered">
+                        <i class='delete fa fa-times'></i>
+                    </td>
+                </tr>
+            </table>
         </div>
 
         <div class="template">
-            <table id ="subrule-template">
+            <table id ="condition-template">
                 <tr>
-                    <td>
-                        <select>
-                            <option value='none' class='disable-nth' disabled></option>
-                            <option value='not' class='disable-nth' disabled>nicht</option>
-                            <option value='and' class='disable-first disable-singular'>und</option>
-                            <option value='andnot' class='disable-first disable-singular'>und nicht</option>
-                            <option value='or' class='disable-first'>oder</option>
-                            <option value='ornot' class='disable-first'>oder nicht</option>
-                        </select>
+                    <td class="inner-table">
+                        <table>
+                            <thead class="condition-head">
+                                <tr>
+                                    <th>
+                                        <select>
+                                            <option value='all'>Alle</option>
+                                            <option value='one'>Eine</option>
+                                        </select>
+                                        dieser Bedingungen muss/müssen erfüllt sein:
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <div class="centered">
+                            <i class='fa fa-plus-circle add-condition'> Bedingung hinzufügen</i><br />
+                            <i class='fa fa-plus-circle add-value'> Wert hinzufügen</i>
+                        </div>
                     </td>
-                    <td>
-                        <input class='value' type='text' placeholder='Wert' />
+                    <td class="centered">
+                        <i class='delete fa fa-times'></i>
                     </td>
                 </tr>
             </table>
