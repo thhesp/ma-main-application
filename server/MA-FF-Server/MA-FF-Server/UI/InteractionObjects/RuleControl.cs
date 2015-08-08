@@ -73,5 +73,33 @@ namespace WebAnalyzer.UI.InteractionObjects
             _rule.CaseSensitive = caseSensitive;
         }
 
+        public void createRuleRoot(String type)
+        {
+            Logger.Log("Ruleroot type: " + type);
+            setRuleRoot(CreateNode(type));
+        }
+
+        public Node CreateNode(String type)
+        {
+            switch (type)
+            {
+                case "and":
+                    return new AndNode();
+                case "or":
+                    return new OrNode();
+                case "not":
+                    return new NotNode();
+                case "value":
+                    return new ValueNode();
+            }
+
+            return null;
+        }
+
+        public void setRuleRoot(Node root)
+        {
+            _rule.RuleRoot = root;
+        }
+
     }
 }

@@ -11,6 +11,13 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
     public class NotNode : Node
     {
 
+
+        public NotNode()
+            : base(Node.NODE_TYPES.NOT)
+        {
+            
+        }
+
         public NotNode(Node child)
             : base(Node.NODE_TYPES.NOT)
         {

@@ -10,6 +10,13 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
 {
     public class AndNode : Node
     {
+
+        public AndNode()
+            : base(Node.NODE_TYPES.AND)
+        {
+
+        }
+
         public AndNode(List<Node> children)
             : base(Node.NODE_TYPES.AND, children)
         {

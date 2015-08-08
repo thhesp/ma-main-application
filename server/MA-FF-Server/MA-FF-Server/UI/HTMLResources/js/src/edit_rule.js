@@ -9,7 +9,9 @@ $('#save-button').click(function () {
 
     control.setCaseSensitive($('#case-sensitive').prop("checked"));
 
-    //control.saveRule();
+    control.createRuleRoot($("#rule-root").val());
+
+    control.saveRule();
 });
 
 $('#cancel-button').click(function () {

@@ -91,12 +91,15 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
 
         private static NODE_TYPES ExtractNodeType(XmlNode nodeNode)
         {
-            foreach (XmlAttribute attr in nodeNode.Attributes)
+            if (nodeNode != null)
             {
-                switch (attr.Name)
+                foreach (XmlAttribute attr in nodeNode.Attributes)
                 {
-                    case "type":
-                        return (NODE_TYPES)Enum.Parse(typeof(NODE_TYPES), attr.Value);
+                    switch (attr.Name)
+                    {
+                        case "type":
+                            return (NODE_TYPES)Enum.Parse(typeof(NODE_TYPES), attr.Value);
+                    }
                 }
             }
 
@@ -105,31 +108,34 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
 
         private static Node CreateNodeFromXML(XmlNode nodeNode, NODE_TYPES nodeType)
         {
-            List<Node> childrenNodes = new List<Node>();
-
-            foreach (XmlNode children in nodeNode.ChildNodes)
+            if (nodeNode != null && nodeNode.ChildNodes != null)
             {
-                childrenNodes.Add(Node.LoadFromXML(children));
-            }
+                List<Node> childrenNodes = new List<Node>();
 
-            if (nodeType == NODE_TYPES.NOT)
-            {
-                return new NotNode(childrenNodes[0]);
-            }
-            else
-            {
-                Node rightChild = Node.LoadFromXML(nodeNode.ChildNodes.Item(1));
-
-                switch (nodeType)
+                foreach (XmlNode children in nodeNode.ChildNodes)
                 {
-                    case NODE_TYPES.AND:
-                        return new AndNode(childrenNodes);
-                    case NODE_TYPES.OR:
-                        return new OrNode(childrenNodes);
+                    childrenNodes.Add(Node.LoadFromXML(children));
                 }
 
-            }
+                if (nodeType == NODE_TYPES.NOT)
+                {
+                    return new NotNode(childrenNodes[0]);
+                }
+                else
+                {
+                    Node rightChild = Node.LoadFromXML(nodeNode.ChildNodes.Item(1));
 
+                    switch (nodeType)
+                    {
+                        case NODE_TYPES.AND:
+                            return new AndNode(childrenNodes);
+                        case NODE_TYPES.OR:
+                            return new OrNode(childrenNodes);
+                    }
+
+                }
+            }
+            
             return null;
      }
 

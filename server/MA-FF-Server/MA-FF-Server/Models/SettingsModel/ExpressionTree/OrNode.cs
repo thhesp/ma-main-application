@@ -11,6 +11,12 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
     public class OrNode : Node
     {
 
+        public OrNode()
+            : base(Node.NODE_TYPES.OR)
+        {
+
+        }
+
         public OrNode(List<Node> children)
             : base(Node.NODE_TYPES.OR, children)
         {
