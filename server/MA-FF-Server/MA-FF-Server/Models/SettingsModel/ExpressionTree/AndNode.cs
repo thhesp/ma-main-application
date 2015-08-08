@@ -10,20 +10,36 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
 {
     public class AndNode : Node
     {
-        public AndNode(Node leftChild, Node rightChild)
-            : base(Node.NODE_TYPES.AND, leftChild, rightChild)
+        public AndNode(List<Node> children)
+            : base(Node.NODE_TYPES.AND, children)
         {
 
         }
 
         public override bool Evaluate(DOMElementModel el)
         {
-            return _leftChild.Evaluate(el) && _rightChild.Evaluate(el);
+            foreach (Node child in Children)
+            {
+                if (!child.Evaluate(el))
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         public override bool EvaluateCaseSensitive(DOMElementModel el)
         {
-            return _leftChild.Evaluate(el) && _rightChild.Evaluate(el);
+            foreach (Node child in Children)
+            {
+                if (!child.EvaluateCaseSensitive(el))
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
     }

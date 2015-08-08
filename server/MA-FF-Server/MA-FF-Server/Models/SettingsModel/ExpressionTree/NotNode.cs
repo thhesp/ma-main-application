@@ -14,17 +14,17 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
         public NotNode(Node child)
             : base(Node.NODE_TYPES.NOT)
         {
-            _leftChild = child;
+            _children.Add(child);
         }
 
         public override bool Evaluate(DOMElementModel el)
         {
-            return !_leftChild.Evaluate(el); ;
+            return !_children[0].Evaluate(el);
         }
 
         public override bool EvaluateCaseSensitive(DOMElementModel el)
         {
-            return !_leftChild.Evaluate(el); ;
+            return !_children[0].EvaluateCaseSensitive(el);
         }
     }
 }

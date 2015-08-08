@@ -13,10 +13,9 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
     public abstract class Node
     {
 
-        public enum NODE_TYPES { NONE = -1, VALUE = 0, NOT = 1, AND = 2, OR = 3, XOR = 4 };
+        public enum NODE_TYPES { NONE = -1, VALUE = 0, NOT = 1, AND = 2, OR = 3};
 
-        protected Node _leftChild;
-        protected Node _rightChild;
+        protected List<Node> _children = new List<Node>();
 
         protected NODE_TYPES _type = NODE_TYPES.NONE;
 
@@ -30,17 +29,20 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             _type = type;
         }
 
-        public Node(Node leftChild, Node rightChild)
+        public Node(Node child)
         {
-            _leftChild = leftChild;
-            _rightChild = rightChild;
+            _children.Add(child);
         }
 
-        public Node(NODE_TYPES type, Node leftChild, Node rightChild)
+        public Node(List<Node> children)
+        {
+            _children = children;
+        }
+
+        public Node(NODE_TYPES type, List<Node> children)
         {
             _type = type;
-            _leftChild = leftChild;
-            _rightChild = rightChild;
+            _children = children;
         }
 
         public NODE_TYPES NodeType{
@@ -48,16 +50,10 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             set { _type = value; }
         }
 
-        public Node LeftChild
+        public List<Node> Children
         {
-            get { return _leftChild; }
-            set { _leftChild = value; }
-        }
-
-        public Node RightChild
-        {
-            get { return _rightChild; }
-            set { _rightChild = value; }
+            get { return _children; }
+            set { _children = value; }
         }
 
         public virtual XmlNode ToXML(XmlDocument xmlDoc)
@@ -70,14 +66,9 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
 
             node.Attributes.Append(nodeType);
 
-            if (LeftChild != null)
+            foreach (Node child in _children)
             {
-                node.AppendChild(LeftChild.ToXML(xmlDoc));
-            }
-
-            if (RightChild != null)
-            {
-                node.AppendChild(RightChild.ToXML(xmlDoc));
+                node.AppendChild(child.ToXML(xmlDoc));
             }
 
             return node;
@@ -114,11 +105,16 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
 
         private static Node CreateNodeFromXML(XmlNode nodeNode, NODE_TYPES nodeType)
         {
-            Node leftChild = Node.LoadFromXML(nodeNode.ChildNodes.Item(0));
+            List<Node> childrenNodes = new List<Node>();
+
+            foreach (XmlNode children in nodeNode.ChildNodes)
+            {
+                childrenNodes.Add(Node.LoadFromXML(children));
+            }
 
             if (nodeType == NODE_TYPES.NOT)
             {
-                return new NotNode(leftChild);
+                return new NotNode(childrenNodes[0]);
             }
             else
             {
@@ -127,11 +123,9 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
                 switch (nodeType)
                 {
                     case NODE_TYPES.AND:
-                        return new AndNode(leftChild, rightChild);
+                        return new AndNode(childrenNodes);
                     case NODE_TYPES.OR:
-                        return new OrNode(leftChild, rightChild);
-                    case NODE_TYPES.XOR:
-                        return new XorNode(leftChild, rightChild);
+                        return new OrNode(childrenNodes);
                 }
 
             }
