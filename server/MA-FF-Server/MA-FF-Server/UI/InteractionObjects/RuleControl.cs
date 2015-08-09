@@ -73,10 +73,61 @@ namespace WebAnalyzer.UI.InteractionObjects
             _rule.CaseSensitive = caseSensitive;
         }
 
-        public void createRuleRoot(String type)
+        public String createRuleRoot(String type)
         {
             Logger.Log("Ruleroot type: " + type);
-            setRuleRoot(CreateNode(type));
+            return setRuleRoot(CreateNode(type));
+        }
+
+        public String addConditionNodeToParent(String parentUID, String type)
+        {
+            Node child = CreateNode(type);
+
+            if (child != null)
+            {
+                Node parent = _rule.RuleRoot.FindNode(parentUID);
+
+                if (parent != null)
+                {
+                    parent.Children.Add(child);
+
+                    return child.UID;
+                }
+                
+            }
+
+            return null;
+        }
+
+        public void addValueNodeToParent(String parentUID, String valueType, String value)
+        {
+            Node child = new ValueNode(GetValueType(valueType), value);
+
+            if (child != null)
+            {
+                Node parent = _rule.RuleRoot.FindNode(parentUID);
+
+                if (parent != null)
+                {
+                    parent.Children.Add(child);
+                }
+
+            }
+        }
+
+        public ValueNode.VALUE_TYPES GetValueType(String valueType)
+        {
+            switch (valueType)
+            {
+                case "tag":
+                    return ValueNode.VALUE_TYPES.Tag;
+                case "id":
+                    return ValueNode.VALUE_TYPES.ID;
+                case "class":
+                    return ValueNode.VALUE_TYPES.Class;
+            }
+
+            return ValueNode.VALUE_TYPES.Tag;
         }
 
         public Node CreateNode(String type)
@@ -89,16 +140,16 @@ namespace WebAnalyzer.UI.InteractionObjects
                     return new OrNode();
                 case "not":
                     return new NotNode();
-                case "value":
-                    return new ValueNode();
             }
 
             return null;
         }
 
-        public void setRuleRoot(Node root)
+        public String setRuleRoot(Node root)
         {
             _rule.RuleRoot = root;
+
+            return root.UID;
         }
 
     }

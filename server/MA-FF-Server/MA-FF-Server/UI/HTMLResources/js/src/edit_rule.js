@@ -9,7 +9,11 @@ $('#save-button').click(function () {
 
     control.setCaseSensitive($('#case-sensitive').prop("checked"));
 
-    control.createRuleRoot($("#rule-root").val());
+    var rootUid = control.createRuleRoot($("#rule-root").val());
+
+    $('#main-table').attr("uid", rootUid);
+
+    extractTreeData();
 
     control.saveRule();
 });
@@ -89,4 +93,44 @@ function onAddValue(event) {
 
 function onDelete() {
     $(this).closest('tr').remove();
+}
+
+function extractTreeData() {
+    
+    extractConditions();
+    extractValues();
+}
+
+function extractConditions() {
+    // add conditions
+    var conditions = $('#inner-rules .inner-condition-table');
+
+    for (var i = 0; i < conditions.length; i++) {
+
+        var parentUID = $($(conditions[i]).closest('table')).attr('uid');
+
+        var conditionType = $($(conditions[i]).find('select.condition-select')).val();
+
+        var innerTable = $(conditions[i]).find('table');
+
+        var uid = control.addConditionNodeToParent(parentUID, conditionType);
+
+        $(innerTable).attr("uid", uid);
+
+    }
+}
+
+function extractValues() {
+    // add values
+    var values = $('#inner-rules .value-cell');
+
+    for (var i = 0; i < values.length; i++) {
+        var parentUID = $($(values[i]).closest('table')).attr('uid');
+
+        var valueType = $($(values[i]).find('select.value-type-select')).val();
+
+        var value = $($(values[i]).find('input.value')).val();
+
+        control.addValueNodeToParent(parentUID, valueType, value);
+    }
 }
