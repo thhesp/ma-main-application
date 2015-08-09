@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 using System.Xml;
 
+using WebAnalyzer.Models.Base;
 using WebAnalyzer.Models.DataModel;
 
 namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
 {
-    public abstract class Node
+    public abstract class Node : UIDBase
     {
 
         public enum NODE_TYPES { NONE = -1, VALUE = 0, NOT = 1, AND = 2, OR = 3};
@@ -19,27 +20,31 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
 
         protected NODE_TYPES _type = NODE_TYPES.NONE;
 
-        public Node()
+        public Node() : base()
         {
 
         }
 
         public Node(NODE_TYPES type)
+            : base()
         {
             _type = type;
         }
 
         public Node(Node child)
+            : base()
         {
             _children.Add(child);
         }
 
         public Node(List<Node> children)
+            : base()
         {
             _children = children;
         }
 
         public Node(NODE_TYPES type, List<Node> children)
+            : base()
         {
             _type = type;
             _children = children;
@@ -54,6 +59,26 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
         {
             get { return _children; }
             set { _children = value; }
+        }
+
+        public Node FindNode(String uid)
+        {
+            if (this.UID == uid)
+            {
+                return this;
+            }
+
+            foreach (Node child in _children)
+            {
+                Node node = child.FindNode(uid);
+
+                if (node != null)
+                {
+                    return node;
+                }
+            }
+
+            return null;
         }
 
         public virtual XmlNode ToXML(XmlDocument xmlDoc)
