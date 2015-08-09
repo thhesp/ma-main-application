@@ -79,6 +79,87 @@ namespace WebAnalyzer.UI.InteractionObjects
             return setRuleRoot(CreateNode(type));
         }
 
+        public String getRootUID()
+        {
+            return _rule.RuleRoot.UID;
+        }
+
+        public String getRootType()
+        {
+            if (_rule.RuleRoot is AndNode)
+            {
+                return "and";
+            }
+            else if (_rule.RuleRoot is OrNode)
+            {
+                return "or";
+            }
+
+            return "";
+        }
+
+        public String[] getChildUIDs(String parentUID)
+        {
+            Node node = _rule.RuleRoot.FindNode(parentUID);
+
+            String[] childrenUIDS = new String[node.Children.Count];
+
+            for (int i = 0; i < node.Children.Count; i++)
+            {
+                childrenUIDS[i] = node.Children[i].UID;
+            }
+
+            Logger.Log("Children for " + parentUID + " : " + childrenUIDS);
+
+            return childrenUIDS;
+        }
+
+        public String getNodeType(String uid)
+        {
+            Node node = _rule.RuleRoot.FindNode(uid);
+
+            if (node is AndNode)
+            {
+                return "and";
+            }
+            else if (node is OrNode)
+            {
+                return "or";
+            }
+            else if (node is NotNode)
+            {
+                return "not";
+            }
+            else if (node is ValueNode)
+            {
+                return "value";
+            }
+
+            return "";
+        }
+
+        public String[] getValueNodeData(String uid)
+        {
+            String[] data = new String[2];
+            
+            Node node = _rule.RuleRoot.FindNode(uid);
+
+            if(node is ValueNode){
+
+                ValueNode valNode = (ValueNode) node;
+
+                data[0] = valNode.ValueType.ToString().ToLower();
+                data[1] = valNode.Value;
+
+                Logger.Log("NodeData: " + data);
+
+                return data;
+
+            }
+
+            return null;
+        }
+
         public String addConditionNodeToParent(String parentUID, String type)
         {
             Node child = CreateNode(type);

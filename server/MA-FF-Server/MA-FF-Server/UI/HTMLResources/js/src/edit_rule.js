@@ -2,6 +2,23 @@
     console.log("initialize rule data...");
 
     $('#case-sensitive').prop("checked", control.getCaseSensitive());
+
+    // root
+    $('#main-table').attr("uid", control.getRootUID());
+    $("#rule-root").val(control.getRootType());
+
+    buildHTMLForChildNodes(control.getRootUID());
+
+    $("#inner-rules .delete").off("click", "**");
+
+    $('#inner-rules .delete').click(onDelete);
+
+    $("#inner-rules .add-condition").off("click", "**");
+    $("#inner-rules .add-value").off("click", "**");
+
+    $("#inner-rules .add-condition").click(onAddCondition);
+
+    $("#inner-rules .add-value").click(onAddValue);
 }
 
 $('#save-button').click(function () {
@@ -27,8 +44,8 @@ $('.delete').click(onDelete);
 
 $('.main-table.add-condition').click(function () {
     //add condition
-    var template = $('#condition-template tr')[0].outerHTML;
-    $("#inner-rules").append(_.template(template));
+    var template = _.template($('#condition-template tr')[0].outerHTML);
+    $("#inner-rules").append(template({ uid: "" }));
 
     $("#inner-rules .delete").off("click", "**");
 
@@ -44,8 +61,8 @@ $('.main-table.add-condition').click(function () {
 
 $('.main-table.add-value').click(function () {
     //add value
-    var template = $('#value-template tr')[0].outerHTML;
-    $("#inner-rules").append(_.template(template));
+    var template = _.template($('#value-template tr')[0].outerHTML);
+    $("#inner-rules").append(template({ uid: "" }));
 
     $("#inner-rules .delete").off("click", "**");
 
@@ -61,8 +78,8 @@ function onAddCondition(event) {
 
 
     //add condition
-    var template = $('#condition-template tr')[0].outerHTML;
-    $(tbody).append(_.template(template));
+    var template = _.template($('#condition-template tr')[0].outerHTML);
+    $(tbody).append(template({ uid: "" }));
 
     $("#inner-rules .delete").off("click", "**");
 
@@ -83,8 +100,8 @@ function onAddValue(event) {
 
     console.log("tbody: ", tbody);
 
-    var template = $('#value-template tr')[0].outerHTML;
-    $(tbody).append(_.template(template));
+    var template = _.template($('#value-template tr')[0].outerHTML);
+    $(tbody).append(template({ uid: "" }));
 
     $("#inner-rules .delete").off("click", "**");
 
@@ -142,4 +159,66 @@ function extractValues() {
             control.addValueNodeToParent(parentUID, valueType, value);
         }
     }
+}
+
+function buildHTMLForChildNodes(parentUid) {
+    var childUIDS = control.getChildUIDs(parentUid);
+
+    var conditionTemplate = _.template($('#condition-template tr')[0].outerHTML);
+
+    var valueTemplate = _.template($('#value-template tr')[0].outerHTML);
+
+    var parentTable = $("table[uid=" + parentUid + "] tbody");
+
+    for (var i = 0; i < childUIDS.length; i++) {
+        var childUID = childUIDS[i];
+        
+        var nodeType = control.getNodeType(childUID);
+
+        console.log("NodeType: ", nodeType);
+
+        if ("and" == nodeType || "or" == nodeType) {
+            //add condition
+            $(parentTable).append(conditionTemplate({ uid: childUID }));
+            $("table[uid=" + childUID + "] thead select.condition-select").val(nodeType);
+
+            buildHTMLForChildNodes(childUID);
+        } else if ("not" == nodeType) {
+            console.log("not found!");
+
+            var valueChild = control.getChildUIDs(childUID);
+
+            console.log("not children: ", valueChild);
+
+            if (valueChild.length > 0) {
+                var nodeType = control.getNodeType(valueChild[0]);
+
+                if ("value" == nodeType) {
+                    var nodeData = control.getValueNodeData(valueChild[0]);
+
+                    console.log(nodeData);
+
+                    $(parentTable).append(valueTemplate({ uid: valueChild[0] }));
+
+                    $("tr[uid=" + valueChild[0] + "] .value-condition-select").val("not");
+
+                    $("tr[uid=" + valueChild[0] + "] .value-type-select").val(nodeData[0]);
+
+                    $("tr[uid=" + valueChild[0] + "] .value").val(nodeData[1]);
+                }
+            }
+
+        } else if ("value" == nodeType) {
+            var nodeData = control.getValueNodeData(childUID);
+
+            console.log(nodeData);
+
+            $(parentTable).append(valueTemplate({ uid: childUID }));
+
+            $("tr[uid=" + childUID + "] .value-type-select").val(nodeData[0]);
+
+            $("tr[uid=" + childUID + "] .value").val(nodeData[1]);
+        }
+    }
+
 }
