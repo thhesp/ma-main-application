@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    Regel:
+                    <h2>Regel:</h2>
                 </div>
             </div>
             <div class="row">
@@ -56,10 +56,16 @@
             <table id="value-template">
                 <tr>
                     <td class="value-cell">
+                        Das Element
+                        <select class="value-condition-select">
+                            <option value='none'> besitzt </option>
+                            <option value='not'> besitzt nicht </option>
+                        </select>
+
                         <select class="value-type-select">
-                            <option value='tag'>Tag</option>
-                            <option value='id'>ID</option>
-                            <option value='class'>Class</option>
+                            <option value='tag'> diesen Tag </option>
+                            <option value='id'> diese ID </option>
+                            <option value='class'> diese Klasse </option>
                         </select>
                         <input class='value' type='text' placeholder='Wert' />
                     </td>

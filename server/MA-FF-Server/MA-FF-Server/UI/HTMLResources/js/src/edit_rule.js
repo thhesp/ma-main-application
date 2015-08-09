@@ -127,10 +127,19 @@ function extractValues() {
     for (var i = 0; i < values.length; i++) {
         var parentUID = $($(values[i]).closest('table')).attr('uid');
 
+        var valueCondition = $($(values[i]).find('select.value-condition-select')).val();
+
         var valueType = $($(values[i]).find('select.value-type-select')).val();
 
         var value = $($(values[i]).find('input.value')).val();
 
-        control.addValueNodeToParent(parentUID, valueType, value);
+        if (valueCondition == "not") {
+            //create not node and put it inbetween
+            var nodeNodeUID = control.addConditionNodeToParent(parentUID, "not");
+
+            control.addValueNodeToParent(nodeNodeUID, valueType, value);
+        } else {
+            control.addValueNodeToParent(parentUID, valueType, value);
+        }
     }
 }
