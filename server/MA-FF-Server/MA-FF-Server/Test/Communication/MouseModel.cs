@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Timers;
 using System.Windows.Forms;
 
 using WebAnalyzer.Util;
+using WebAnalyzer.Events;
 
 
 namespace WebAnalyzer.Test.Communication
@@ -13,30 +15,20 @@ namespace WebAnalyzer.Test.Communication
     public class MouseModel
     {
 
-        private static MouseModel instance;
+        private System.Timers.Timer timer;
 
-        private Timer timer;
+        public event PrepareGazeEventHandler PrepareGaze;
 
-
-        public static MouseModel getInstance()
-        {
-            if (instance == null)
-            {
-                instance = new MouseModel();
-            }
-
-            return instance;
-        }
-
-        private MouseModel()
+        public MouseModel()
         {
             initTimer();
         }
 
         private void initTimer()
         {
-            this.timer = new Timer();
-            this.timer.Tick += new EventHandler(timer_Tick);
+            this.timer = new System.Timers.Timer();
+            this.timer.Enabled = true;
+            this.timer.Elapsed += new ElapsedEventHandler(timer_Tick);
             this.timer.Interval = 100;
         }
 
@@ -53,39 +45,15 @@ namespace WebAnalyzer.Test.Communication
             this.timer.Stop();
         }
 
-        public void position()
+        private void position()
         {
             //Logger.Log("Mouseposition: " + Cursor.Position.X + " / " + Cursor.Position.Y);
-            PositionEventArgs args = new PositionEventArgs();
-            args.X = Cursor.Position.X;
-            args.Y = Cursor.Position.Y;
-            OnPositionTracked(args);
+            PrepareGaze(this, new PrepareGazeDataEvent(Cursor.Position.X, Cursor.Position.Y, Cursor.Position.X, Cursor.Position.Y));
         }
 
-        #region CallbackFunctions
-
-        private void timer_Tick(object sender, EventArgs e)
+        private void timer_Tick(object sender, ElapsedEventArgs e)
         {
             position();
         }
-
-        protected virtual void OnPositionTracked(PositionEventArgs e)
-        {
-            EventHandler<PositionEventArgs> handler = PositionTracked;
-            if (handler != null)
-            {
-                handler(this, e);
-            }
-        }
-
-        #endregion
-
-        public event EventHandler<PositionEventArgs> PositionTracked;
-    }
-
-    public class PositionEventArgs : EventArgs
-    {
-        public int X { get; set; }
-        public int Y { get; set; }
     }
 }

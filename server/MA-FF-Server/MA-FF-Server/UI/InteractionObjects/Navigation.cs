@@ -19,6 +19,7 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         public event EditParticipantEventHandler EditParticipant;
         public event EditDomainSettingEventHandler EditDomainSetting;
+        public event TestrunEventHandler Testrun;
 
         Dictionary<string, string> _pages = new Dictionary<string, string>();
 
@@ -98,6 +99,16 @@ namespace WebAnalyzer.UI.InteractionObjects
         public void deleteDomainSetting(String uid)
         {
             EditDomainSetting(this, new EditDomainSettingEvent(EditDomainSettingEvent.EDIT_TYPES.Delete, uid));
+        }
+
+        public void startTestrun()
+        {
+            Testrun(this, new TestrunEvent(TestrunEvent.EVENT_TYPE.Start));
+        }
+
+        public void stopTestrun()
+        {
+            Testrun(this, new TestrunEvent(TestrunEvent.EVENT_TYPE.Stop));
         }
     }
 }

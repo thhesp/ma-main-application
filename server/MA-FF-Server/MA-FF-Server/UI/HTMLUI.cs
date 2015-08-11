@@ -26,6 +26,7 @@ namespace WebAnalyzer.UI
 
         public event EditParticipantEventHandler EditParticipant;
         public event EditDomainSettingEventHandler EditDomainSetting;
+        public event TestrunEventHandler Testrun;
 
         public HTMLUI()
         {
@@ -62,6 +63,7 @@ namespace WebAnalyzer.UI
 
             nav.EditParticipant += this.EditParticipant;
             nav.EditDomainSetting += this.EditDomainSetting;
+            nav.Testrun += this.Testrun;
             myBrowser.RegisterJsObject("nav", nav);
         }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WebAnalyzer.Util
 {
-    class Timestamp
+    public class Timestamp
     {
 
         public static String GetUnixTimestamp(){

@@ -5,6 +5,8 @@ using WebAnalyzer.Experiment;
 using WebAnalyzer.Server;
 using WebAnalyzer.Util;
 
+using WebAnalyzer.Events;
+
 namespace WebAnalyzer.EyeTracking
 {
 
@@ -13,19 +15,7 @@ namespace WebAnalyzer.EyeTracking
     /// </summary>
     public class EyeTrackingModel
     {
-
-        private static EyeTrackingModel instance;
-
-        public static EyeTrackingModel getInstance()
-        {
-            if (instance == null)
-            {
-                instance = new EyeTrackingModel();
-            }
-
-            return instance;
-        }
-
+        public event PrepareGazeEventHandler PrepareGaze;
 
 
         public EyeTrackingController ETDevice;
@@ -47,7 +37,7 @@ namespace WebAnalyzer.EyeTracking
 
 
 
-        private EyeTrackingModel()
+        public EyeTrackingModel()
         {
             ETDevice = new EyeTrackingController();
 
@@ -153,7 +143,9 @@ namespace WebAnalyzer.EyeTracking
                 " - DistanceR: " + sampleData.rightEye.eyePositionZ.ToString() +
                 " - DistanceL: " + sampleData.leftEye.eyePositionZ.ToString();
 
-           String uniqueId = ExperimentController.getInstance().PrepareGazeData(sampleData.timestamp.ToString(), sampleData.leftEye.gazeX, sampleData.leftEye.gazeY, sampleData.rightEye.gazeX, sampleData.rightEye.gazeY);
+           PrepareGaze(this, new PrepareGazeDataEvent(sampleData.timestamp.ToString(), sampleData.leftEye.gazeX, sampleData.leftEye.gazeY, sampleData.rightEye.gazeX, sampleData.rightEye.gazeY));
+
+           /*String uniqueId = TestController.getInstance().PrepareGazeData( );
 
            if (sampleData.rightEye.gazeX == sampleData.leftEye.gazeX && 
                sampleData.rightEye.gazeY == sampleData.leftEye.gazeY)
@@ -163,7 +155,7 @@ namespace WebAnalyzer.EyeTracking
            else
            {
                ConnectionManager.getInstance().RequestData(uniqueId, sampleData.leftEye.gazeX, sampleData.leftEye.gazeY, sampleData.rightEye.gazeX, sampleData.rightEye.gazeY);
-           }
+           }*/
             
             
            Logger.Log(data);

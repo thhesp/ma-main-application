@@ -10,33 +10,22 @@ using WebAnalyzer.Controller;
 
 namespace WebAnalyzer.Experiment
 {
-    class ExperimentController
+    class TestController
     {
 
-        private static ExperimentController instance;
-
-        public static ExperimentController getInstance()
-        {
-            if (instance == null)
-            {
-                instance = new ExperimentController();
-            }
-
-            return instance;
-        }
-
-        private ExperimentModel _experiment;
+        private TestModel _test;
 
         private Boolean _running;
 
-        private ExperimentController()
+        public TestController()
         {
-            
+            _test = new TestModel();
         }
 
-        public void CreateExperiment(String name)
+        public TestModel Test
         {
-            _experiment = new ExperimentModel(name);
+            get { return _test; }
+            set { _test = value; }
         }
 
         public Boolean Running
@@ -45,7 +34,7 @@ namespace WebAnalyzer.Experiment
             set { _running = value; }
         }
 
-        public void StartExperiment()
+        public void StartTest()
         {
             Logger.Log("Start Experiment");
             _running = true;
@@ -53,7 +42,7 @@ namespace WebAnalyzer.Experiment
             // set listeners
         }
 
-        public void StopExperiment()
+        public void StopTest()
         {
             Logger.Log("Stop Experiment");
             _running = false;
@@ -68,7 +57,7 @@ namespace WebAnalyzer.Experiment
         {
             if (this.Running)
             {
-                return _experiment.PrepareGazeData(timestamp, x, y);
+                return _test.PrepareGazeData(timestamp, x, y);
             }
             return null;
         }
@@ -77,41 +66,41 @@ namespace WebAnalyzer.Experiment
         {
             if (this.Running)
             {
-                return _experiment.PrepareGazeData(timestamp, leftX, leftY, rightX, rightY);
+                return _test.PrepareGazeData(timestamp, leftX, leftY, rightX, rightY);
             }
             return null;
         }
 
         public Boolean AssignGazeToWebpage(String uniqueId, String url)
         {
-            return _experiment.AssignGazeToWebpage(uniqueId, url);
+            return _test.AssignGazeToWebpage(uniqueId, url);
         }
 
         public Boolean AssignGazeToWebpage(GazeModel gazeModel, String url)
         {
-            return _experiment.AssignGazeToWebpage(gazeModel, url);
+            return _test.AssignGazeToWebpage(gazeModel, url);
         }
 
         public Boolean DisposeOfGazeData(String uniqueId)
         {
-            return _experiment.DisposeOfGazeData(uniqueId);
+            return _test.DisposeOfGazeData(uniqueId);
         }
 
         public Boolean DisposeOfGazeData(GazeModel gazeModel)
         {
-            return _experiment.DisposeOfGazeData(gazeModel);
+            return _test.DisposeOfGazeData(gazeModel);
         }
 
 
 
         public GazeModel GetGazeModel(String uniqueId)
         {
-            return _experiment.GetGazeModel(uniqueId);
+            return _test.GetGazeModel(uniqueId);
         }
 
         private void ExportToXML()
         {
-            if (_experiment.Exportable())
+            if (_test.Exportable())
             {
                 //ExportController.ExportToXML(_experiment);
             }

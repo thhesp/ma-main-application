@@ -17,31 +17,24 @@ using System.Reactive.Subjects;
 using vtortola.WebSockets.Deflate;
 
 using WebAnalyzer.Util;
+using WebAnalyzer.Experiment;
 
 namespace WebAnalyzer.Server
 {
     class WebsocketServer
     {
 
-        private static WebsocketServer instance;
-
-        public static WebsocketServer getInstance()
-        {
-            if (instance == null)
-            {
-                instance = new WebsocketServer();
-            }
-
-            return instance;
-        }
-
+        private ConnectionManager _connManager;
+        private TestController _controller;
 
         private WebSocketListener server;
         private CancellationTokenSource cancellation;
         private Task acceptingTask;
 
-        private WebsocketServer()
-        {         
+        public WebsocketServer(TestController controller)
+        {
+            _connManager = new ConnectionManager();
+            _controller = controller;
         }
 
         private void CreateServer(){
@@ -66,7 +59,7 @@ namespace WebAnalyzer.Server
         public void start()
         {
             CreateServer();
-            WebsocketConnectionsObserver messagesObserver = new WebsocketConnectionsObserver(ConnectionManager.getInstance());
+            WebsocketConnectionsObserver messagesObserver = new WebsocketConnectionsObserver(_controller, _connManager);
 
             server.Start();
 
@@ -84,15 +77,15 @@ namespace WebAnalyzer.Server
                 .DoWhile(() => server.IsStarted && !cancellation.IsCancellationRequested)
                 .Subscribe(messagesObserver);
 
-            ConnectionManager.getInstance().StartMessageThread();
+            _connManager.StartMessageThread();
 
             Logger.Log("WS Socket Server started");
         }
 
         public void stop()
         {
-            ConnectionManager.getInstance().StopMessageThread();
-            ConnectionManager.getInstance().ResetConnections();
+            _connManager.StopMessageThread();
+            _connManager.ResetConnections();
 
             server.Stop();
             cancellation.Cancel();
@@ -100,6 +93,16 @@ namespace WebAnalyzer.Server
             server.Dispose();
 
             Logger.Log("Server stopped");
+        }
+
+        public void RequestData(String uniqueId, double leftX, double leftY, double rightX, double rightY)
+        {
+            _connManager.RequestData(uniqueId, leftX, leftY, rightX, rightY);
+        }
+
+        public void RequestData(String uniqueId, double xPos, double yPos)
+        {
+            _connManager.RequestData(uniqueId, xPos, yPos);
         }
     }
 }

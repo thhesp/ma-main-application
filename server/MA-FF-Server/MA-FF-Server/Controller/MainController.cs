@@ -14,12 +14,25 @@ using WebAnalyzer.Models.SettingsModel;
 using WebAnalyzer.Models.Base;
 using WebAnalyzer.UI.InteractionObjects;
 
+using WebAnalyzer.Experiment;
+using WebAnalyzer.Test.Communication;
+using WebAnalyzer.EyeTracking;
+using WebAnalyzer.Server;
 
 namespace WebAnalyzer.Controller
 {
     public class MainController
     {
+        private static Boolean TESTING = true;
+
         private ExperimentModel currentExperiment;
+
+        private TestController _controller;
+        private EyeTrackingModel _etModel;
+        private WebsocketServer _wsServer;
+
+
+        private MouseModel _debugModel;
 
         private HTMLUI mainUI;
         private ExperimentWizard experimentWizard;
@@ -39,6 +52,7 @@ namespace WebAnalyzer.Controller
 
             mainUI.EditParticipant += On_EditParticpant;
             mainUI.EditDomainSetting += On_EditDomainSetting;
+            mainUI.Testrun += On_TestrunEvent;
 
             Application.Run(mainUI);
         }
@@ -241,5 +255,78 @@ namespace WebAnalyzer.Controller
                     break;
             }
         }
+
+        private void On_TestrunEvent(object source, TestrunEvent e)
+        {
+            switch (e.Type)
+            {
+                case TestrunEvent.EVENT_TYPE.Start:
+                    StartTest();
+                    break;
+                case TestrunEvent.EVENT_TYPE.Stop:
+                    StopTest();
+                    break;
+            }
+        }
+
+        private void StartTest()
+        {
+            Logger.Log("Start Test");
+            _controller = new TestController();
+            _wsServer = new WebsocketServer(_controller);
+            _wsServer.start();
+
+            _controller.StartTest();
+
+            if (TESTING)
+            {
+                _debugModel = new MouseModel();
+
+                _debugModel.PrepareGaze += On_PrepareGazeData;
+
+                _debugModel.startTracking();
+            }
+            else
+            {
+                _etModel = new EyeTrackingModel();
+
+                _etModel.PrepareGaze += On_PrepareGazeData;
+
+                _etModel.connectLocal();
+            }
+
+        }
+
+        private void StopTest()
+        {
+            _controller.StopTest();
+
+            if (TESTING)
+            {
+                _debugModel.stopTracking();
+            }
+            else
+            {
+                _etModel.disconnect();
+            }
+        }
+
+
+        private void On_PrepareGazeData(object source, PrepareGazeDataEvent e)
+        {
+            Logger.Log("Prepare GazeData....");
+
+            String uniqueId = _controller.PrepareGazeData(e.GazeTimestamp, e.LeftX, e.LeftY, e.RightX, e.RightY);
+
+            if (e.LeftX == e.RightX && e.LeftY == e.RightY)
+            {
+                _wsServer.RequestData(uniqueId, e.LeftX, e.LeftY);
+            }
+            else
+            {
+                _wsServer.RequestData(uniqueId, e.LeftX, e.LeftY, e.RightX, e.RightY);
+            }
+        }
+
     }
 }

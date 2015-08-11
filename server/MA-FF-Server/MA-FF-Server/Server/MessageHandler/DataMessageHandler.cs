@@ -14,9 +14,11 @@ namespace WebAnalyzer.Server.MessageHandler
     {
         readonly ConnectionManager _connectionManager;
         readonly WebsocketConnection _connection;
+        readonly TestController _controller;
 
-        public DataMessageHandler(ConnectionManager connectionManager, WebsocketConnection connection)
+        public DataMessageHandler(TestController controller, ConnectionManager connectionManager, WebsocketConnection connection)
         {
+            _controller = controller;
             _connectionManager = connectionManager;
             _connection = connection;
         }
@@ -44,7 +46,7 @@ namespace WebAnalyzer.Server.MessageHandler
                 if (CheckForError(msgIn))
                 {
                     String uniqueId = msgIn.uniqueid;
-                    ExperimentController.getInstance().DisposeOfGazeData(uniqueId);
+                    _controller.DisposeOfGazeData(uniqueId);
                 }
 
                 GazeModel gaze = ExtractGazeData(msgIn);
@@ -55,7 +57,7 @@ namespace WebAnalyzer.Server.MessageHandler
 
                     if (url != null)
                     {
-                        ExperimentController.getInstance().AssignGazeToWebpage(gaze, url);
+                        _controller.AssignGazeToWebpage(gaze, url);
                     }
                 }
             }
@@ -67,7 +69,7 @@ namespace WebAnalyzer.Server.MessageHandler
 
             String uniqueId = msgIn.uniqueid;
 
-            GazeModel gazeModel = ExperimentController.getInstance().GetGazeModel(uniqueId);
+            GazeModel gazeModel = _controller.GetGazeModel(uniqueId);
 
             if (gazeModel != null)
             {

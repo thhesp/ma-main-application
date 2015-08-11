@@ -47,17 +47,5 @@ namespace WebAnalyzer
             MainController main = new MainController();
             main.Start();
         }
-
-        private void CreateExperiment()
-        {
-            ExperimentController.getInstance().CreateExperiment("eyetracking-test");
-        }
-
-        private void renderForm()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TestForm());
-        }
     }
 }

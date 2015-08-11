@@ -9,10 +9,8 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.DataModel
 {
-    public class ExperimentModel
+    public class TestModel
     {
-
-        private String _experimentName;
 
 
         private String _lastPage;
@@ -23,19 +21,12 @@ namespace WebAnalyzer.Models.DataModel
         private Dictionary<String, GazeModel> _unassignedPositions;
         
 
-        public ExperimentModel(String experimentName)
+        public TestModel()
         {
-            _experimentName = experimentName;
             _unassignedPositions = new Dictionary<String, GazeModel>();
         }
         
         #region GetterSetterFunctions
-
-        public String ExperimentName
-        {
-            get { return _experimentName; }
-            set { _experimentName = value; }
-        }
 
         public void AddWebpage(String url)
         {
@@ -67,12 +58,6 @@ namespace WebAnalyzer.Models.DataModel
         {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
 
-            XmlAttribute experimentName = xmlDoc.CreateAttribute("name");
-
-            experimentName.Value = this.ExperimentName;
-
-            experimentNode.Attributes.Append(experimentName);
-
             XmlAttribute visitedWebpagesCount = xmlDoc.CreateAttribute("count-of-visited-pages");
 
             visitedWebpagesCount.Value = this._visitedPages.Count.ToString();
@@ -94,12 +79,6 @@ namespace WebAnalyzer.Models.DataModel
         public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc)
         {
             XmlNode statisticsNode = xmlDoc.CreateElement("statistics");
-
-            XmlAttribute experimentName = xmlDoc.CreateAttribute("name");
-
-            experimentName.Value = this.ExperimentName;
-
-            statisticsNode.Attributes.Append(experimentName);
 
             // create & insert statistics for whole experiment
 
@@ -221,12 +200,6 @@ namespace WebAnalyzer.Models.DataModel
         {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
 
-            XmlAttribute experimentName = xmlDoc.CreateAttribute("name");
-
-            experimentName.Value = this.ExperimentName;
-
-            experimentNode.Attributes.Append(experimentName);
-
             XmlAttribute visitedWebpagesCount = xmlDoc.CreateAttribute("count-of-visited-pages");
 
             visitedWebpagesCount.Value = this._visitedPages.Count.ToString();
@@ -246,11 +219,6 @@ namespace WebAnalyzer.Models.DataModel
         }
 
         #endregion
-
-        public String GetBaseExperimentLocation()
-        {
-            return Properties.Settings.Default.Datalocation + _experimentName + "\\";
-        }
 
         public GazeModel GetGazeModel(String uniqueId)
         {

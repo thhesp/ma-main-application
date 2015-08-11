@@ -13,19 +13,6 @@ namespace WebAnalyzer.Server
 {
     class ConnectionManager : List<WebsocketConnection>
     {
-
-        private static ConnectionManager instance;
-
-        public static ConnectionManager getInstance()
-        {
-            if (instance == null)
-            {
-                instance = new ConnectionManager();
-            }
-
-            return instance;
-        }
-
         private static int WORK_DELAY = 10;
 
         private Boolean _workMessages = false;
@@ -34,7 +21,7 @@ namespace WebAnalyzer.Server
 
         private List<WebsocketConnection> _toRemove = new List<WebsocketConnection>();
 
-        private ConnectionManager()
+        public ConnectionManager()
         {
             
         }
