@@ -8,6 +8,7 @@ using System.Xml;
 using WebAnalyzer.Models.Base;
 using WebAnalyzer.Util;
 using WebAnalyzer.Models.SettingsModel;
+using WebAnalyzer.Models.DataModel;
 
 namespace WebAnalyzer.Controller
 {
@@ -94,6 +95,20 @@ namespace WebAnalyzer.Controller
             return true;
         }
 
+
+        public static Boolean SaveExperimentTestRun(ExperimentModel experiment, ExperimentParticipant currentParticipant, TestModel testrun){
+            String dir = experiment.GetBaseExperimentLocation() + Properties.Settings.Default.TestdataLocation;
+
+            FileIO.CheckPath(dir);
+            XmlDocument xmlDoc = new XmlDocument();
+
+            xmlDoc.AppendChild(testrun.ToXML(xmlDoc));
+
+            xmlDoc.Save(dir + currentParticipant.Identifier);
+            
+
+            return true;
+        }
 
         /*
         public static Boolean ExportToXML(ExperimentModel experiment)

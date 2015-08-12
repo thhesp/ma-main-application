@@ -20,5 +20,8 @@
     <Setting Name="ParticipantsFilename" Type="System.String" Scope="Application">
       <Value Profile="(Default)">participants.xml</Value>
     </Setting>
+    <Setting Name="TestdataLocation" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">data\</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

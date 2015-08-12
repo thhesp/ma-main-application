@@ -309,6 +309,10 @@ namespace WebAnalyzer.Controller
             {
                 _etModel.disconnect();
             }
+
+            ExperimentParticipant currentParticipant = currentExperiment.Participants[0];
+
+            ExportController.SaveExperimentTestRun(currentExperiment, currentParticipant, _controller.Test);
         }
 
 

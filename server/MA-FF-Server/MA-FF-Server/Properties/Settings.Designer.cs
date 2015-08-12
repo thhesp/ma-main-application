@@ -82,5 +82,14 @@ namespace WebAnalyzer.Properties {
                 return ((string)(this["ParticipantsFilename"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("data\\")]
+        public string TestdataLocation {
+            get {
+                return ((string)(this["TestdataLocation"]));
+            }
+        }
     }
 }

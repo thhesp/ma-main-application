@@ -16,6 +16,7 @@ using vtortola.WebSockets;
 using System.Reactive.Subjects;
 using vtortola.WebSockets.Deflate;
 
+using System.Security.Cryptography.X509Certificates;
 using WebAnalyzer.Util;
 using WebAnalyzer.Experiment;
 
@@ -49,8 +50,9 @@ namespace WebAnalyzer.Server
             }
 
             cancellation = new CancellationTokenSource();
-
             server = new WebSocketListener(new IPEndPoint(IPAddress.Any, port));
+
+            //add 
             var rfc6455 = new vtortola.WebSockets.Rfc6455.WebSocketFactoryRfc6455(server);
             rfc6455.MessageExtensions.RegisterExtension(new WebSocketDeflateExtension());
             server.Standards.RegisterStandard(rfc6455);

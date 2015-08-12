@@ -50,7 +50,7 @@ namespace WebAnalyzer.Experiment
 
             // export raw data
 
-            this.ExportToXML();
+            //this.ExportToXML();
         }
 
         public String PrepareGazeData(String timestamp, double x, double y)
@@ -96,14 +96,6 @@ namespace WebAnalyzer.Experiment
         public GazeModel GetGazeModel(String uniqueId)
         {
             return _test.GetGazeModel(uniqueId);
-        }
-
-        private void ExportToXML()
-        {
-            if (_test.Exportable())
-            {
-                //ExportController.ExportToXML(_experiment);
-            }
         }
     }
 }
