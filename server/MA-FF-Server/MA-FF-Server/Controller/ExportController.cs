@@ -98,13 +98,14 @@ namespace WebAnalyzer.Controller
 
         public static Boolean SaveExperimentTestRun(ExperimentModel experiment, ExperimentParticipant currentParticipant, TestModel testrun){
             String dir = experiment.GetBaseExperimentLocation() + Properties.Settings.Default.TestdataLocation;
+            String timestamp = Timestamp.GetUnixTimestamp();
 
             FileIO.CheckPath(dir);
             XmlDocument xmlDoc = new XmlDocument();
 
             xmlDoc.AppendChild(testrun.ToXML(xmlDoc));
 
-            xmlDoc.Save(dir + currentParticipant.Identifier);
+            xmlDoc.Save(dir + currentParticipant.Identifier + "-" + timestamp + ".xml");
             
 
             return true;
