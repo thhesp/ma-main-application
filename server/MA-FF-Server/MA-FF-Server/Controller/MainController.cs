@@ -318,7 +318,6 @@ namespace WebAnalyzer.Controller
 
         private void On_PrepareGazeData(object source, PrepareGazeDataEvent e)
         {
-            Logger.Log("Prepare GazeData....");
 
             String uniqueId = _controller.PrepareGazeData(e.GazeTimestamp, e.LeftX, e.LeftY, e.RightX, e.RightY);
 

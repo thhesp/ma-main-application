@@ -97,7 +97,7 @@ namespace WebAnalyzer.Controller
 
 
         public static Boolean SaveExperimentTestRun(ExperimentModel experiment, ExperimentParticipant currentParticipant, TestModel testrun){
-            String dir = experiment.GetBaseExperimentLocation() + Properties.Settings.Default.TestdataLocation;
+            String dir = experiment.GetBaseExperimentLocation() + Properties.Settings.Default.RawdataLocation;
             String timestamp = Timestamp.GetUnixTimestamp();
 
             FileIO.CheckPath(dir);
@@ -106,65 +106,45 @@ namespace WebAnalyzer.Controller
             xmlDoc.AppendChild(testrun.ToXML(xmlDoc));
 
             xmlDoc.Save(dir + currentParticipant.Identifier + "-" + timestamp + ".xml");
+
+            SaveExperimentFixations(experiment, currentParticipant, testrun);
+            SaveExperimentStatistics(experiment, currentParticipant, testrun);
+
+            return true;
+        }
+
+        public static Boolean SaveExperimentFixations(ExperimentModel experiment, ExperimentParticipant currentParticipant, TestModel testrun){
+        
+            String dir = experiment.GetBaseExperimentLocation() + Properties.Settings.Default.FixdataLocation;
+            String timestamp = Timestamp.GetUnixTimestamp();
+
+            FileIO.CheckPath(dir);
+            XmlDocument xmlDoc = new XmlDocument();
+
+            xmlDoc.AppendChild(testrun.GenerateFixationXML(xmlDoc));
+
+            xmlDoc.Save(dir + currentParticipant.Identifier + "-" + timestamp + ".xml");
             
 
             return true;
         }
 
-        /*
-        public static Boolean ExportToXML(ExperimentModel experiment)
+        public static Boolean SaveExperimentStatistics(ExperimentModel experiment, ExperimentParticipant currentParticipant, TestModel testrun)
         {
-            String dir = experiment.GetBaseExperimentLocation();
 
+            String dir = experiment.GetBaseExperimentLocation() + Properties.Settings.Default.StatisticsLocation;
             String timestamp = Timestamp.GetUnixTimestamp();
-
-
-
-            String filename = ExportDataXML(experiment, dir, timestamp);
-
-            ExportStatisticsXML(experiment, dir, filename);
-            ExportFixationXML(experiment, dir, filename);
-
-            return true;
-        }
-
-        private static string ExportDataXML(ExperimentModel experiment, String dir, String timestamp)
-        {
-            String filename = timestamp + experiment.ExperimentName;
-
-            Logger.Log("Exporting XML: " + dir + filename + ".xml");
 
             FileIO.CheckPath(dir);
             XmlDocument xmlDoc = new XmlDocument();
 
-            xmlDoc.AppendChild(experiment.ToXML(xmlDoc));
+            xmlDoc.AppendChild(testrun.GenerateStatisticsXML(xmlDoc));
 
-            xmlDoc.Save(dir + filename + ".xml");
-            return filename;
+            xmlDoc.Save(dir + currentParticipant.Identifier + "-" + timestamp + ".xml");
+
+
+            return true;
         }
 
-        private static void ExportStatisticsXML(ExperimentModel experiment, String dir, String filename)
-        {
-            String statsFilename = filename + "-stats";
-
-            XmlDocument statsDoc = new XmlDocument();
-
-            statsDoc.AppendChild(experiment.GenerateStatisticsXML(statsDoc));
-
-            statsDoc.Save(dir + statsFilename + ".xml");
-        }
-
-        private static void ExportFixationXML(ExperimentModel experiment, String dir, String filename)
-        {
-            String fixationFilename = filename + "-fixations";
-
-            XmlDocument fixationDoc = new XmlDocument();
-
-            fixationDoc.AppendChild(experiment.GenerateFixationXML(fixationDoc));
-
-            fixationDoc.Save(dir + fixationFilename + ".xml");
-        }
-
-        */
     }
 }

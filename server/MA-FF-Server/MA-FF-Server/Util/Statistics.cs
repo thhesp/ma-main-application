@@ -11,7 +11,10 @@ namespace WebAnalyzer.Util
 
         public static double CalculateMean(long[] values)
         {
-            return values.Average();
+            if(values != null || values.Length != 0)
+                return values.Average();
+
+            return 0;
         }
 
         public static double CalculateMedian(long[] values)

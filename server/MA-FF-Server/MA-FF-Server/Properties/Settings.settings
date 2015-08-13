@@ -20,8 +20,14 @@
     <Setting Name="ParticipantsFilename" Type="System.String" Scope="Application">
       <Value Profile="(Default)">participants.xml</Value>
     </Setting>
-    <Setting Name="TestdataLocation" Type="System.String" Scope="Application">
+    <Setting Name="RawdataLocation" Type="System.String" Scope="Application">
       <Value Profile="(Default)">data\</Value>
+    </Setting>
+    <Setting Name="FixdataLocation" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">fixations\</Value>
+    </Setting>
+    <Setting Name="StatisticsLocation" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">statistics\</Value>
     </Setting>
   </Settings>
 </SettingsFile>
