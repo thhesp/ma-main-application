@@ -11,7 +11,7 @@ namespace WebAnalyzer.Util
 
         public static double CalculateMean(long[] values)
         {
-            if(values != null || values.Length != 0)
+            if(values != null && values.Length != 0)
                 return values.Average();
 
             return 0;
@@ -19,6 +19,9 @@ namespace WebAnalyzer.Util
 
         public static double CalculateMedian(long[] values)
         {
+            if (values == null || values.Length == 0)
+                return 0;
+
             long[] sortedValues = (long[])values.Clone();
             Array.Sort(sortedValues);
 
