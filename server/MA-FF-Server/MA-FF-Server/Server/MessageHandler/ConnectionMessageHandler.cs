@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 using WebAnalyzer.Util;
 
+using WebAnalyzer.Events;
+
 namespace WebAnalyzer.Server.MessageHandler
 {
     class ConnectionMessageHandler : IObserver<Object>
     {
-        readonly ConnectionManager _connectionManager;
+        public event AddConnectionEventHandler AddConnection;
+
         readonly WebsocketConnection _connection;
 
-        public ConnectionMessageHandler(ConnectionManager connectionManager, WebsocketConnection connection)
+        public ConnectionMessageHandler(WebsocketConnection connection)
         {
-            _connectionManager = connectionManager;
             _connection = connection;
         }
 
@@ -60,7 +62,7 @@ namespace WebAnalyzer.Server.MessageHandler
         {
             _connection.Established = true;
 
-            _connectionManager.AddWebsocketConnection(_connection);
+            AddConnection(this, new AddConnectionEvent(_connection));
         }
     }
 }

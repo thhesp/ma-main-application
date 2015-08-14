@@ -6,6 +6,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Reactive.Linq;
 
+using WebAnalyzer.Events;
+
 using WebAnalyzer.Util;
 using WebAnalyzer.Models.MessageModel;
 
@@ -127,6 +129,11 @@ namespace WebAnalyzer.Server
             {
                 connection.workMessageQueue();
             }
+        }
+
+        public void On_AddConnection(object source, AddConnectionEvent e)
+        {
+            this.AddWebsocketConnection(e.Connection);
         }
     }
 }

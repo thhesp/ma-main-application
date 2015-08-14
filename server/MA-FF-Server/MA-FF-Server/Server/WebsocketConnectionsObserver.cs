@@ -45,13 +45,16 @@ namespace WebAnalyzer.Server
         {
             var published = connection.In.Publish().RefCount();
 
+            ConnectionMessageHandler connectMsg = new ConnectionMessageHandler(connection);
+            connectMsg.AddConnection += _connectionManager.On_AddConnection;
+
             // connectiong
             published.Where(msgIn => msgIn.command != null && (msgIn.command == "connectRequest" || msgIn.command == "connectComplete"))
-                .Subscribe(new ConnectionMessageHandler(_connectionManager, connection));
+                .Subscribe(connectMsg);
 
             // data
            published.Where(msgIn => msgIn.command != null && msgIn.command == "data")
-               .Subscribe(new DataMessageHandler(_controller,  connection));
+               .Subscribe(new DataMessageHandler(_controller, connection));
 
             //event
            published.Where(msgIn => msgIn.command != null && msgIn.command == "event")

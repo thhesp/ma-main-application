@@ -12,6 +12,7 @@ namespace WebAnalyzer.Server.MessageHandler
 {
     class DataMessageHandler : IObserver<Object>
     {
+
         readonly WebsocketConnection _connection;
         readonly TestController _controller;
 

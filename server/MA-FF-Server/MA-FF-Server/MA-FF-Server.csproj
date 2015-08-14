@@ -122,6 +122,7 @@
   <ItemGroup>
     <Compile Include="Controller\LoadController.cs" />
     <Compile Include="Controller\MainController.cs" />
+    <Compile Include="Events\AddConnectionEvent.cs" />
     <Compile Include="Events\CreateRuleEvent.cs" />
     <Compile Include="Events\CreateAOISettingEvent.cs" />
     <Compile Include="Events\CreateExperimentEvent.cs" />
