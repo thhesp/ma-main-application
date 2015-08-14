@@ -109,5 +109,89 @@ namespace WebAnalyzer.Properties {
                 return ((string)(this["StatisticsLocation"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("false")]
+        public string UseMouseTracking {
+            get {
+                return ((string)(this["UseMouseTracking"]));
+            }
+            set {
+                this["UseMouseTracking"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("8888")]
+        public string WebsocketPort {
+            get {
+                return ((string)(this["WebsocketPort"]));
+            }
+            set {
+                this["WebsocketPort"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("true")]
+        public string ETConnectLocal {
+            get {
+                return ((string)(this["ETConnectLocal"]));
+            }
+            set {
+                this["ETConnectLocal"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
+        public string ETReceiveIP {
+            get {
+                return ((string)(this["ETReceiveIP"]));
+            }
+            set {
+                this["ETReceiveIP"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5555")]
+        public string ETReceivePort {
+            get {
+                return ((string)(this["ETReceivePort"]));
+            }
+            set {
+                this["ETReceivePort"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
+        public string ETSentIP {
+            get {
+                return ((string)(this["ETSentIP"]));
+            }
+            set {
+                this["ETSentIP"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5555")]
+        public string ETSentPort {
+            get {
+                return ((string)(this["ETSentPort"]));
+            }
+            set {
+                this["ETSentPort"] = value;
+            }
+        }
     }
 }

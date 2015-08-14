@@ -29,5 +29,26 @@
     <Setting Name="StatisticsLocation" Type="System.String" Scope="Application">
       <Value Profile="(Default)">statistics\</Value>
     </Setting>
+    <Setting Name="UseMouseTracking" Type="System.String" Scope="User">
+      <Value Profile="(Default)">false</Value>
+    </Setting>
+    <Setting Name="WebsocketPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">8888</Value>
+    </Setting>
+    <Setting Name="ETConnectLocal" Type="System.String" Scope="User">
+      <Value Profile="(Default)">true</Value>
+    </Setting>
+    <Setting Name="ETReceiveIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="ETReceivePort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5555</Value>
+    </Setting>
+    <Setting Name="ETSentIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="ETSentPort" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5555</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -30,7 +30,6 @@ namespace WebAnalyzer.Server
 
         private WebSocketListener server;
         private CancellationTokenSource cancellation;
-        private Task acceptingTask;
 
         public WebsocketServer(TestController controller)
         {
