@@ -51,15 +51,15 @@ namespace WebAnalyzer.Server
 
             // data
            published.Where(msgIn => msgIn.command != null && msgIn.command == "data")
-               .Subscribe(new DataMessageHandler(_controller,_connectionManager, connection));
+               .Subscribe(new DataMessageHandler(_controller,  connection));
 
             //event
            published.Where(msgIn => msgIn.command != null && msgIn.command == "event")
-              .Subscribe(new DataMessageHandler(_controller, _connectionManager, connection));
+              .Subscribe(new DataMessageHandler(_controller, connection));
 
             //error
            published.Where(msgIn => msgIn.command != null && msgIn.command == "error")
-             .Subscribe(new DataMessageHandler(_controller, _connectionManager, connection));
+             .Subscribe(new DataMessageHandler(_controller, connection));
 
             // fallover ==> echo
            published.Where(msgIn => msgIn.command == null || Array.IndexOf(_commands, msgIn.command) == -1)
