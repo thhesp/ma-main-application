@@ -8,22 +8,31 @@
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <a id="experiment-name" class="navbar-brand" href="#">Project name</a>
-                    </div>
-                    <div id="navbar" class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav">
-                            <li><a id="overview">Übersicht</a></li>
-                            <li><a id="participants">Teilnehmerverwaltung</a></li>
-                            <li><a id="analyse">Analyse</a></li>
-                            <li><a id="export">Export</a></li>
-                            <li><a id="experiment_settings">Experiment Einstellungen</a></li>
-                        </ul>
-                    </div><!--/.nav-collapse -->
+            <nav class="navbar navbar-inverse navbar-fixed-top nav-container">
+                <div class="navbar-header">
+                    <a id="experiment-name" class="navbar-brand" href="#">Project name</a>
                 </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a id="overview">Übersicht</a></li>
+                        <li><a id="participants">Teilnehmerverwaltung</a></li>
+                        <li><a id="analyse">Analyse</a></li>
+                        <li><a id="export">Export</a></li>
+                        <li><a id="experiment_settings">Experiment Einstellungen</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
             </nav>
+            <div class="websocket-server-container centered">
+                <i class="caption">Websocket</i>
+                    <i id="websocket-server-status" class="fa warning fa-3x"></i>
+                </div>
+            <div class="eyetracker-container centered">
+                <i class="caption">EyeTracker</i>
+                <i id="eyetracker-status" class="fa connected fa-3x"></i>
+            </div>
+            <div class="global-settings-container">
+                <i id="application-settings" class="fa fa-cog fa-3x"></i>
+            </div>
         </header>
         <div class="content">
             <div class="container">

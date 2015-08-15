@@ -110,5 +110,10 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             Testrun(this, new TestrunEvent(TestrunEvent.EVENT_TYPE.Stop));
         }
+
+        public void showApplicationSettings()
+        {
+            Logger.Log("Show application settings");
+        }
     }
 }

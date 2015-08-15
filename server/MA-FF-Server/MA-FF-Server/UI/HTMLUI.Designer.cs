@@ -34,7 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 391);
+            this.ClientSize = new System.Drawing.Size(945, 391);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
             this.MaximizeBox = false;
