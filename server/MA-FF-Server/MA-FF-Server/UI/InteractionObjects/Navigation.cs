@@ -20,6 +20,7 @@ namespace WebAnalyzer.UI.InteractionObjects
         public event EditParticipantEventHandler EditParticipant;
         public event EditDomainSettingEventHandler EditDomainSetting;
         public event TestrunEventHandler Testrun;
+        public event EditApplicationSettingsEventHandler EditApplicationSetting;
 
         Dictionary<string, string> _pages = new Dictionary<string, string>();
 
@@ -114,6 +115,7 @@ namespace WebAnalyzer.UI.InteractionObjects
         public void showApplicationSettings()
         {
             Logger.Log("Show application settings");
+            EditApplicationSetting(this, new EditApplicationSettingsEvent());
         }
     }
 }

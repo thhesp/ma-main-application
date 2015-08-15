@@ -128,6 +128,7 @@
     <Compile Include="Events\CreateExperimentEvent.cs" />
     <Compile Include="Events\CreateDomainSettingEvent.cs" />
     <Compile Include="Events\CreateParticipantEvent.cs" />
+    <Compile Include="Events\EditApplicationSettingsEvent.cs" />
     <Compile Include="Events\PrepareGazeDataEvent.cs" />
     <Compile Include="Events\TestrunEvent.cs" />
     <Compile Include="Events\TriggerSaveEvent.cs" />

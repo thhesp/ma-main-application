@@ -53,6 +53,7 @@ namespace WebAnalyzer.Controller
             mainUI.EditParticipant += On_EditParticpant;
             mainUI.EditDomainSetting += On_EditDomainSetting;
             mainUI.Testrun += On_TestrunEvent;
+            mainUI.EditApplicationSetting += On_EditApplicationSettings;
 
             Application.Run(mainUI);
         }
@@ -329,6 +330,23 @@ namespace WebAnalyzer.Controller
             {
                 _wsServer.RequestData(uniqueId, e.LeftX, e.LeftY, e.RightX, e.RightY);
             }
+        }
+
+        private void On_EditApplicationSettings(object source, EditApplicationSettingsEvent e)
+        {
+            mainUI.BeginInvoke((Action)delegate
+            {
+                Logger.Log("Show edit application setting");
+                EditApplicationSettings editSetting = new EditApplicationSettings();
+
+                if (editSetting.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    Logger.Log("Saving application settings");
+                    RefreshMainUI();
+
+                    //refresh other stuff?
+                }
+            });
         }
 
     }

@@ -2,16 +2,56 @@
 <html>
     <head>
         <title>Index</title>
-        <link rel="stylesheet" type="text/css" media="screen" href="../../../css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="../../../css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="../../../css/index.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="../../css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="../../css/index.css">
     </head>
     <body>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <label>Identifier:</label>
-                    <input id="identifier" type="text" placeholder="Identifier" />
+                    <h2>Einstellungen</h2>
+                </div>
+
+                <div class="col-md-12">
+                    <h3>Websocket Einstellungen</h3>
+                </div>
+
+                <div class="col-md-12">
+                    <label>Websocket Port:</label>
+                    <input id="websocket-port" type="text" placeholder="z.B.: 8888" />
+                </div>
+
+                <div class="col-md-12">
+                    <h3>EyeTracking Einstellungen</h3>
+                </div>
+
+                <div class="col-md-12">
+                    <label><input id="use-mouse-tracking" type="checkbox" value="true">MausTracking statt EyeTracking verwenden</label>
+                </div>
+
+                <div class="col-md-12">
+                    <label><input id="connect-local" type="checkbox" value="true">Mit lokalen EyeTracker verbinden</label>
+                </div>
+
+                <div class="col-md-12">
+                    <label>EyeTracker Sent IP:</label>
+                    <input id="et-sent-ip" type="text" placeholder="z.B.: 127.0.0.1" />
+                </div>
+
+                <div class="col-md-12">
+                    <label>EyeTracker Sent Port:</label>
+                    <input id="et-sent-port" type="text" placeholder="z.B.: 4444" />
+                </div>
+
+                <div class="col-md-12">
+                    <label>EyeTracker Receive IP:</label>
+                    <input id="et-receive-ip" type="text" placeholder="z.B.: 127.0.0.1" />
+                </div>
+
+                <div class="col-md-12">
+                    <label>EyeTracker Receive Port:</label>
+                    <input id="et-receive-port" type="text" placeholder="z.B.: 5555" />
                 </div>
             </div>
             
@@ -24,10 +64,10 @@
         </div><!-- /.container -->
 
 
-        <script type="text/javascript" src="../../../js/lib/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript" src="../../../js/lib/bootstrap.min.js"></script>
-        <script type="text/javascript" src="../../../js/lib/underscore.min.js"></script>
+        <script type="text/javascript" src="../../js/lib/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="../../js/lib/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../js/lib/underscore.min.js"></script>
 
-        <script type="text/javascript" src="../../../js/src/edit_application_settings.js"></script>
+        <script type="text/javascript" src="../../js/src/edit_application_settings.js"></script>
     </body>
 </html>
