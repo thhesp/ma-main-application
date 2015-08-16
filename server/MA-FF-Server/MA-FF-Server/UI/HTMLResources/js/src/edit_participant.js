@@ -27,21 +27,58 @@
 $('#save-button').click(function () {
     console.log('save participant...');
 
-    control.setIdentifier($('#identifier').val());
-    control.setBirthyear(parseInt($('#birthyear').val()));
-    control.setEducation($('#education').val());
+    if (validateData()) {
+        control.setIdentifier($('#identifier').val());
+        control.setBirthyear(parseInt($('#birthyear').val()));
+        control.setEducation($('#education').val());
 
-    var sex = $("#sex input[type='radio']:checked").attr('id');
+        var sex = $("#sex input[type='radio']:checked").attr('id');
 
-    control.setSex(sex);
+        control.setSex(sex);
 
-    extractExtraData();
-    
+        extractExtraData();
 
-    console.log(control.getIdentifier(), control.getBirthyear(), control.getEducation());
-    
-    control.saveParticipant();
+
+        console.log(control.getIdentifier(), control.getBirthyear(), control.getEducation());
+
+        control.saveParticipant();
+    }
 });
+
+function validateData() {
+    var valid = true;
+
+    valid = validateExtraData();
+
+    return valid;
+}
+
+function validateExtraData() {
+    var keys = [];
+
+    $('#extra-data-table tr .key').each(function () {
+        $(this).removeClass('invalid');
+        keys.push($(this).val());
+    });
+
+    var duplicates = getDuplicates(keys);
+
+    if (duplicates.length == 0) {
+        return true;
+    } else {
+        console.log('duplicates found', duplicates);
+        //mark duplicates
+        $('#extra-data-table tr .key').each(function () {
+            if (duplicates.indexOf($(this).val()) != -1) {
+                $(this).addClass('invalid');
+            }
+        });
+
+        alert("Bezeichnungen für Zusatzdaten dürfen pro Teilnehmer nur einmal verwendet werden.");
+
+        return false;
+    }
+}
 
 function extractExtraData() {
     console.log("extract extra data...");
@@ -80,3 +117,15 @@ $("#sex input[type='radio']").on('change', function () {
     $("#sex input[type='radio']").prop('checked', false);
     $(this).prop('checked', true);
 });
+
+function getDuplicates(array) {
+    var sorted_arr = array.sort(); 
+    var results = [];
+    for (var i = 0; i < sorted_arr.length - 1; i++) {
+        if (sorted_arr[i + 1] == sorted_arr[i]) {
+            results.push(sorted_arr[i]);
+        }
+    }
+
+    return results;
+}
