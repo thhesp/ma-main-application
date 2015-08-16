@@ -30,7 +30,7 @@
       <Value Profile="(Default)">statistics\</Value>
     </Setting>
     <Setting Name="UseMouseTracking" Type="System.String" Scope="User">
-      <Value Profile="(Default)">false</Value>
+      <Value Profile="(Default)">true</Value>
     </Setting>
     <Setting Name="WebsocketPort" Type="System.String" Scope="User">
       <Value Profile="(Default)">8888</Value>

@@ -12,6 +12,27 @@ $('#et-receive-ip').val(control.getETReceiveIP());
 
 $('#et-receive-port').val(control.getETReceivePort());
 
+// disable & enable stuff
+if ($('#use-mouse-tracking').prop('checked')) {
+    $('#connect-local').attr('disabled', true);
+
+    $('#et-sent-ip').attr('disabled', true);
+
+    $('#et-sent-port').attr('disabled', true);
+
+    $('#et-receive-ip').attr('disabled', true);
+
+    $('#et-receive-port').attr('disabled', true);
+} else if ($('#connect-local').prop('checked')) {
+    $('#et-sent-ip').attr('disabled', true);
+
+    $('#et-sent-port').attr('disabled', true);
+
+    $('#et-receive-ip').attr('disabled', true);
+
+    $('#et-receive-port').attr('disabled', true);
+}
+
 $('#save-button').click(function () {
 
     if (validateData()) {
@@ -23,6 +44,53 @@ $('#save-button').click(function () {
 $('#cancel-button').click(function () {
     console.log('cancel form...');
     control.cancel();
+});
+
+$('#use-mouse-tracking').on('change', function () {
+    if ($(this).prop('checked')) {
+        $('#connect-local').attr('disabled', true);
+
+        $('#et-sent-ip').attr('disabled', true);
+
+        $('#et-sent-port').attr('disabled', true);
+
+        $('#et-receive-ip').attr('disabled', true);
+
+        $('#et-receive-port').attr('disabled', true);
+    } else {
+        $('#connect-local').attr('disabled', false);
+
+        if (!$('#connect-local').prop('checked')) {
+            $('#et-sent-ip').attr('disabled', false);
+
+            $('#et-sent-port').attr('disabled', false);
+
+            $('#et-receive-ip').attr('disabled', false);
+
+            $('#et-receive-port').attr('disabled', false);
+        }
+
+    }
+});
+
+$('#connect-local').on('change', function () {
+    if ($(this).prop('checked')) {
+        $('#et-sent-ip').attr('disabled', true);
+
+        $('#et-sent-port').attr('disabled', true);
+
+        $('#et-receive-ip').attr('disabled', true);
+
+        $('#et-receive-port').attr('disabled', true);
+    } else {
+        $('#et-sent-ip').attr('disabled', false);
+
+        $('#et-sent-port').attr('disabled', false);
+
+        $('#et-receive-ip').attr('disabled', false);
+
+        $('#et-receive-port').attr('disabled', false);
+    }
 });
 
 function validateData() {
