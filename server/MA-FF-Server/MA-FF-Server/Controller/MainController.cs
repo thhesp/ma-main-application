@@ -23,8 +23,6 @@ namespace WebAnalyzer.Controller
 {
     public class MainController
     {
-        private static Boolean TESTING = true;
-
         private ExperimentModel currentExperiment;
 
         private TestController _controller;
@@ -275,11 +273,11 @@ namespace WebAnalyzer.Controller
             Logger.Log("Start Test");
             _controller = new TestController();
             _wsServer = new WebsocketServer(_controller);
-            _wsServer.start();
+            _wsServer.start(int.Parse(Properties.Settings.Default.WebsocketPort));
 
             _controller.StartTest();
-
-            if (TESTING)
+            
+            if (Boolean.Parse(Properties.Settings.Default.UseMouseTracking))
             {
                 _debugModel = new MouseModel();
 
@@ -293,7 +291,16 @@ namespace WebAnalyzer.Controller
 
                 _etModel.PrepareGaze += On_PrepareGazeData;
 
-                _etModel.connectLocal();
+                if (Boolean.Parse(Properties.Settings.Default.ETConnectLocal))
+                {
+                    _etModel.connectLocal();
+                }
+                else
+                {
+                    _etModel.connect(Properties.Settings.Default.ETSentIP, Properties.Settings.Default.ETSentPort, Properties.Settings.Default.ETReceiveIP, Properties.Settings.Default.ETReceivePort);
+                }
+
+                
             }
 
         }
@@ -302,7 +309,7 @@ namespace WebAnalyzer.Controller
         {
             _controller.StopTest();
 
-            if (TESTING)
+            if (Boolean.Parse(Properties.Settings.Default.UseMouseTracking))
             {
                 _debugModel.stopTracking();
             }

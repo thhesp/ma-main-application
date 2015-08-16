@@ -35,6 +35,7 @@ namespace WebAnalyzer.Server
         {
             _connManager = new ConnectionManager();
             _controller = controller;
+            CreateServer();
         }
 
         private void CreateServer(){
@@ -48,6 +49,8 @@ namespace WebAnalyzer.Server
                 stop();
             }
 
+            Logger.Log("Creating Websocket-Server on Port :" + port);
+
             cancellation = new CancellationTokenSource();
             server = new WebSocketListener(new IPEndPoint(IPAddress.Any, port));
 
@@ -60,11 +63,20 @@ namespace WebAnalyzer.Server
         public void start()
         {
             CreateServer();
+            prepareServer();
+        }
+
+        public void start(int port)
+        {
+            CreateServer(port);
+            prepareServer();
+        }
+
+        private void prepareServer()
+        {
             WebsocketConnectionsObserver messagesObserver = new WebsocketConnectionsObserver(_controller, _connManager);
 
             server.Start();
-
-            //acceptingTask = Task.Run(() => AcceptWebSocketClients(server, cancellation.Token));
 
             Observable.FromAsync(server.AcceptWebSocketAsync)
                 .Select(ws => new WebsocketConnection(ws)
@@ -73,7 +85,7 @@ namespace WebAnalyzer.Server
                                                 .DoWhile(() => ws.IsConnected)
                                                 .Where(msg => msg != null),
 
-                    Out = Observer.Create<dynamic>(ws.WriteDynamic) 
+                    Out = Observer.Create<dynamic>(ws.WriteDynamic)
                 })
                 .DoWhile(() => server.IsStarted && !cancellation.IsCancellationRequested)
                 .Subscribe(messagesObserver);
