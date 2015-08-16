@@ -134,3 +134,7 @@ thead.condition-head {
 .warning:before{
     content:"\f071";
 }
+
+input.invalid {
+    border-color: red;
+}
