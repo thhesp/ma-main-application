@@ -11,7 +11,7 @@ namespace WebAnalyzer.Events
     public class TestrunEvent : EventArgs
     {
 
-        public enum EVENT_TYPE { Start = 0, Stop = 1 };
+        public enum EVENT_TYPE { Create = 0,Start = 1, Stop = 2 };
 
         private EVENT_TYPE _type;
 

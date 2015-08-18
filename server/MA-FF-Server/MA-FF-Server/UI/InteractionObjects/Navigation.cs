@@ -102,14 +102,9 @@ namespace WebAnalyzer.UI.InteractionObjects
             EditDomainSetting(this, new EditDomainSettingEvent(EditDomainSettingEvent.EDIT_TYPES.Delete, uid));
         }
 
-        public void startTestrun()
+        public void createTestrun()
         {
-            Testrun(this, new TestrunEvent(TestrunEvent.EVENT_TYPE.Start));
-        }
-
-        public void stopTestrun()
-        {
-            Testrun(this, new TestrunEvent(TestrunEvent.EVENT_TYPE.Stop));
+            Testrun(this, new TestrunEvent(TestrunEvent.EVENT_TYPE.Create));
         }
 
         public void showApplicationSettings()

@@ -180,10 +180,17 @@
     <Compile Include="ApplicationSettings\SettingsValidator.cs" />
     <Compile Include="UI\ChromeDevTools.cs" />
     <Compile Include="UI\InteractionObjects\ApplicationSettingsObj.cs" />
+    <Compile Include="UI\InteractionObjects\TestrunControl.cs" />
     <Compile Include="UI\InteractionObjects\RuleControl.cs" />
     <Compile Include="UI\InteractionObjects\AOISettingControl.cs" />
     <Compile Include="UI\InteractionObjects\DomainSettingControl.cs" />
     <Compile Include="UI\InteractionObjects\ParticipantControl.cs" />
+    <Compile Include="UI\Popup\TestrunForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Popup\TestrunForm.Designer.cs">
+      <DependentUpon>TestrunForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Popup\EditApplicationSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +259,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Popup\TestrunForm.resx">
+      <DependentUpon>TestrunForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Popup\EditApplicationSettings.resx">
       <DependentUpon>EditApplicationSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -351,6 +361,9 @@
     <Content Include="UI\HTMLResources\html\main\index.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="UI\HTMLResources\html\popup\testrun\testrun.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UI\HTMLResources\html\popup\application_settings.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -380,6 +393,9 @@
     </Content>
     <Content Include="UI\HTMLResources\js\lib\jquery-2.1.4.min.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HTMLResources\js\src\testrun.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UI\HTMLResources\js\src\edit_application_settings.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -259,6 +259,9 @@ namespace WebAnalyzer.Controller
         {
             switch (e.Type)
             {
+                case TestrunEvent.EVENT_TYPE.Create:
+                    CreateTestrun();
+                    break;
                 case TestrunEvent.EVENT_TYPE.Start:
                     StartTest();
                     break;
@@ -266,6 +269,21 @@ namespace WebAnalyzer.Controller
                     StopTest();
                     break;
             }
+        }
+
+        private void CreateTestrun()
+        {
+            mainUI.BeginInvoke((Action)delegate
+            {
+                Logger.Log("Show edit application setting");
+                TestrunForm testrun = new TestrunForm();
+                testrun.Testrun += On_TestrunEvent;
+
+                if (testrun.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                   
+                }
+            });
         }
 
         private void StartTest()
@@ -307,6 +325,7 @@ namespace WebAnalyzer.Controller
 
         private void StopTest()
         {
+            Logger.Log("Stop Test");
             _controller.StopTest();
 
             if (Boolean.Parse(Properties.Settings.Default.UseMouseTracking))
