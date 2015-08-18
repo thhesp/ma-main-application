@@ -34,6 +34,7 @@ namespace WebAnalyzer.Controller
 
         private HTMLUI mainUI;
         private ExperimentWizard experimentWizard;
+        private ExperimentParticipant _currentParticipant;
 
         public void Start()
         {
@@ -338,9 +339,7 @@ namespace WebAnalyzer.Controller
                 _etModel.disconnect();
             }
 
-            ExperimentParticipant currentParticipant = currentExperiment.Participants[0];
-
-            ExportController.SaveExperimentTestRun(currentExperiment, currentParticipant, _controller.Test);
+            ExportController.SaveExperimentTestRun(currentExperiment, _currentParticipant, _controller.Test);
         }
 
 
@@ -378,7 +377,7 @@ namespace WebAnalyzer.Controller
 
         private void On_SelectParticipantForTest(object source, SelectParticipantForTestEvent e)
         {
-
+            _currentParticipant = currentExperiment.GetParticipantByUID(e.UID);
         }
 
     }
