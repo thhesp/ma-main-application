@@ -23,7 +23,7 @@ namespace WebAnalyzer.Controller
 {
     public class MainController
     {
-        private ExperimentModel currentExperiment;
+        private ExperimentModel _currentExperiment;
 
         private TestController _controller;
         private EyeTrackingModel _etModel;
@@ -80,21 +80,21 @@ namespace WebAnalyzer.Controller
         {
             Logger.Log("On create experiment event");
 
-            currentExperiment = ExperimentModel.CreateExperiment(e.Name);
+            _currentExperiment = ExperimentModel.CreateExperiment(e.Name);
 
             if (e.ImportData)
             {
                 //import data
                 if (e.ImportParticipants)
-                    currentExperiment.Participants = LoadController.LoadParticipants(e.ImportExperimentPath);
+                    _currentExperiment.Participants = LoadController.LoadParticipants(e.ImportExperimentPath);
 
                 if (e.ImportSettings)
-                    currentExperiment.Settings = LoadController.LoadSettings(e.ImportExperimentPath);
+                    _currentExperiment.Settings = LoadController.LoadSettings(e.ImportExperimentPath);
 
             }
 
-            ExportController.SaveExperiment(currentExperiment);
-            SetExpiermentData(currentExperiment);
+            ExportController.SaveExperiment(_currentExperiment);
+            SetExpiermentData(_currentExperiment);
             CloseExperimentWizard();
         }
 
@@ -102,9 +102,9 @@ namespace WebAnalyzer.Controller
         {
             Logger.Log("On load experiment event");
 
-            currentExperiment = LoadController.LoadExperiment(e.Path);
+            _currentExperiment = LoadController.LoadExperiment(e.Path);
 
-            SetExpiermentData(currentExperiment);
+            SetExpiermentData(_currentExperiment);
             CloseExperimentWizard();
         }
 
@@ -116,7 +116,7 @@ namespace WebAnalyzer.Controller
 
         private void RefreshMainUI()
         {
-            SetExpiermentData(currentExperiment);
+            SetExpiermentData(_currentExperiment);
         }
 
         private void CloseExperimentWizard()
@@ -134,7 +134,7 @@ namespace WebAnalyzer.Controller
             switch (e.Type)
             {
                 case EditParticipantEvent.EDIT_TYPES.Edit:
-                    ExperimentParticipant par = currentExperiment.GetParticipantByUID(e.UID);
+                    ExperimentParticipant par = _currentExperiment.GetParticipantByUID(e.UID);
                     ShowEditParticipantForm(par, false);
                     break;
                 case EditParticipantEvent.EDIT_TYPES.Create:
@@ -142,16 +142,16 @@ namespace WebAnalyzer.Controller
                     ShowEditParticipantForm(newPar, true);
                     break;
                 case EditParticipantEvent.EDIT_TYPES.Copy:
-                    ExperimentParticipant orig = currentExperiment.GetParticipantByUID(e.UID);
+                    ExperimentParticipant orig = _currentExperiment.GetParticipantByUID(e.UID);
                     ExperimentParticipant copy = ExperimentParticipant.Copy(orig);
-                    currentExperiment.Participants.Add(copy);
-                    ExportController.SaveExperimentParticipants(currentExperiment);
+                    _currentExperiment.Participants.Add(copy);
+                    ExportController.SaveExperimentParticipants(_currentExperiment);
                     RefreshMainUI();
                     break;
                 case EditParticipantEvent.EDIT_TYPES.Delete:
-                    ExperimentParticipant toDeletePar = currentExperiment.GetParticipantByUID(e.UID);
-                    currentExperiment.Participants.Remove(toDeletePar);
-                    ExportController.SaveExperimentParticipants(currentExperiment);
+                    ExperimentParticipant toDeletePar = _currentExperiment.GetParticipantByUID(e.UID);
+                    _currentExperiment.Participants.Remove(toDeletePar);
+                    ExportController.SaveExperimentParticipants(_currentExperiment);
                     RefreshMainUI();
                     break;
             }
@@ -163,7 +163,7 @@ namespace WebAnalyzer.Controller
             switch (e.Type)
             {
                case EditDomainSettingEvent.EDIT_TYPES.Edit:
-                    DomainSettings setting = currentExperiment.GetDomainSettingByUid(e.UID);
+                    DomainSettings setting = _currentExperiment.GetDomainSettingByUid(e.UID);
                     ShowEditDomainSettingForm(setting, false);
                     break;
                 case EditDomainSettingEvent.EDIT_TYPES.Create:
@@ -171,16 +171,16 @@ namespace WebAnalyzer.Controller
                     ShowEditDomainSettingForm(newSetting, true);
                     break;
                 case EditDomainSettingEvent.EDIT_TYPES.Copy:
-                    DomainSettings origSetting = currentExperiment.GetDomainSettingByUid(e.UID);
+                    DomainSettings origSetting = _currentExperiment.GetDomainSettingByUid(e.UID);
                     DomainSettings copy = DomainSettings.Copy(origSetting);
-                    currentExperiment.Settings.Domains.Add(copy);
-                    ExportController.SaveExperimentSettings(currentExperiment);
+                    _currentExperiment.Settings.Domains.Add(copy);
+                    ExportController.SaveExperimentSettings(_currentExperiment);
                     RefreshMainUI();
                     break;
                 case EditDomainSettingEvent.EDIT_TYPES.Delete:
-                    DomainSettings toDeleteSetting = currentExperiment.GetDomainSettingByUid(e.UID);
-                    currentExperiment.Settings.Domains.Remove(toDeleteSetting);
-                    ExportController.SaveExperimentSettings(currentExperiment);
+                    DomainSettings toDeleteSetting = _currentExperiment.GetDomainSettingByUid(e.UID);
+                    _currentExperiment.Settings.Domains.Remove(toDeleteSetting);
+                    ExportController.SaveExperimentSettings(_currentExperiment);
                     RefreshMainUI();
                     break;
             }
@@ -189,7 +189,7 @@ namespace WebAnalyzer.Controller
         private void On_CreateParticipant(object source, CreateParticipantEvent e)
         {
             Logger.Log("create participant?");
-            currentExperiment.Participants.Add(e.Participant);
+            _currentExperiment.Participants.Add(e.Participant);
 
         }
 
@@ -204,7 +204,7 @@ namespace WebAnalyzer.Controller
 
                 if (editParticpant.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    ExportController.SaveExperimentParticipants(currentExperiment);
+                    ExportController.SaveExperimentParticipants(_currentExperiment);
                     Logger.Log("Save edit participant");
                     //refresh participants
                     RefreshMainUI();
@@ -224,7 +224,7 @@ namespace WebAnalyzer.Controller
                 if (editSetting.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     Logger.Log("Save edit domain setting");
-                    ExportController.SaveExperimentSettings(currentExperiment);
+                    ExportController.SaveExperimentSettings(_currentExperiment);
                     //refresh participants
                     RefreshMainUI();
                 }
@@ -235,7 +235,7 @@ namespace WebAnalyzer.Controller
         private void On_CreateDomainSetting(object source, CreateDomainSettingEvent e)
         {
             Logger.Log("create domain setting?");
-            currentExperiment.Settings.Domains.Add(e.Domain);
+            _currentExperiment.Settings.Domains.Add(e.Domain);
 
         }
 
@@ -245,13 +245,13 @@ namespace WebAnalyzer.Controller
             switch (e.Type)
             {
                 case TriggerSaveEvent.SAVE_TYPES.ALL:
-                    ExportController.SaveExperiment(currentExperiment);
+                    ExportController.SaveExperiment(_currentExperiment);
                     break;
                 case TriggerSaveEvent.SAVE_TYPES.PARTICIPANTS:
-                    ExportController.SaveExperimentParticipants(currentExperiment);
+                    ExportController.SaveExperimentParticipants(_currentExperiment);
                     break;
                 case TriggerSaveEvent.SAVE_TYPES.SETTINGS:
-                    ExportController.SaveExperimentSettings(currentExperiment);
+                    ExportController.SaveExperimentSettings(_currentExperiment);
                     break;
             }
         }
@@ -277,7 +277,7 @@ namespace WebAnalyzer.Controller
             mainUI.BeginInvoke((Action)delegate
             {
                 Logger.Log("Show edit application setting");
-                TestrunForm testrun = new TestrunForm(currentExperiment);
+                TestrunForm testrun = new TestrunForm(_currentExperiment);
                 testrun.Testrun += On_TestrunEvent;
                 testrun.SelectParticipant += On_SelectParticipantForTest;
 
@@ -339,7 +339,7 @@ namespace WebAnalyzer.Controller
                 _etModel.disconnect();
             }
 
-            ExportController.SaveExperimentTestRun(currentExperiment, _currentParticipant, _controller.Test);
+            ExportController.SaveExperimentTestRun(_currentExperiment, _currentParticipant, _controller.Test);
         }
 
 
@@ -377,7 +377,7 @@ namespace WebAnalyzer.Controller
 
         private void On_SelectParticipantForTest(object source, SelectParticipantForTestEvent e)
         {
-            _currentParticipant = currentExperiment.GetParticipantByUID(e.UID);
+            _currentParticipant = _currentExperiment.GetParticipantByUID(e.UID);
         }
 
     }
