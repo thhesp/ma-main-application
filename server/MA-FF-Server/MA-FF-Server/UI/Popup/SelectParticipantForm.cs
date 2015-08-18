@@ -19,32 +19,28 @@ using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.UI
 {
-    public partial class TestrunForm : Form
+    public partial class SelectParticipantForm : Form
     {
-        private ChromiumWebBrowser myBrowser = null;
-        public event TestrunEventHandler Testrun;
         public event SelectParticipantForTestEventHandler SelectParticipant;
+        private ChromiumWebBrowser myBrowser = null;
 
         private ExperimentModel _experiment;
 
-        public TestrunForm(ExperimentModel experiment)
+        public SelectParticipantForm(ExperimentModel experiment)
         {
             _experiment = experiment;
             InitializeComponent();
         }
 
-
         private void Browser_Load(object sender, EventArgs e)
         {
             //Cef.Initialize();
 
-            string page = string.Format("{0}UI/HTMLResources/html/popup/testrun/testrun.html", Utilities.GetAppLocation());
+            string page = string.Format("{0}UI/HTMLResources/html/popup/testrun/participants.html", Utilities.GetAppLocation());
             myBrowser = new ChromiumWebBrowser(page);
 
-            TestrunControl control = new TestrunControl(this);
-
-            control.Testrun += Testrun;
-
+            SelectParticipantControl control = new SelectParticipantControl(this);
+            control.SelectParticipant += SelectParticipant;
             control.Experiment = _experiment;
 
             control.Browser = myBrowser;
@@ -52,8 +48,8 @@ namespace WebAnalyzer.UI
             myBrowser.RegisterJsObject("control", control);
 
             myBrowser.Load(page);
-            
-            //ChromiumWebBrowser myBrowser = new ChromiumWebBrowser("http://www.maps.google.com");
+
+
             this.Controls.Add(myBrowser);
 
             // chromdev tools
@@ -63,6 +59,7 @@ namespace WebAnalyzer.UI
 
         private void Browser_Closing(object sender, FormClosingEventArgs e)
         {
+
             //Cef.Shutdown();
         }
 

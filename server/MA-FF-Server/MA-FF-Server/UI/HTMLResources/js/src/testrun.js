@@ -1,4 +1,6 @@
-﻿$("#test-control-button").click(function () {
+﻿$("#participant-identifier").text(control.getParticipantIdentifier());
+
+$("#test-control-button").click(function () {
     if(control.testRunning()){
         control.stopTestrun();
         $(this).text("Start Test");
@@ -13,5 +15,5 @@ $('#close-button').click(function() {
 });
 
 $('#select-participant-button').click(function () {
-
+    control.selectParticipant();
 });

@@ -129,6 +129,7 @@
     <Compile Include="Events\CreateDomainSettingEvent.cs" />
     <Compile Include="Events\CreateParticipantEvent.cs" />
     <Compile Include="Events\EditApplicationSettingsEvent.cs" />
+    <Compile Include="Events\SelectParticipantForTestEvent.cs" />
     <Compile Include="Events\PrepareGazeDataEvent.cs" />
     <Compile Include="Events\TestrunEvent.cs" />
     <Compile Include="Events\TriggerSaveEvent.cs" />
@@ -180,11 +181,18 @@
     <Compile Include="ApplicationSettings\SettingsValidator.cs" />
     <Compile Include="UI\ChromeDevTools.cs" />
     <Compile Include="UI\InteractionObjects\ApplicationSettingsObj.cs" />
+    <Compile Include="UI\InteractionObjects\SelectParticipantControl.cs" />
     <Compile Include="UI\InteractionObjects\TestrunControl.cs" />
     <Compile Include="UI\InteractionObjects\RuleControl.cs" />
     <Compile Include="UI\InteractionObjects\AOISettingControl.cs" />
     <Compile Include="UI\InteractionObjects\DomainSettingControl.cs" />
     <Compile Include="UI\InteractionObjects\ParticipantControl.cs" />
+    <Compile Include="UI\Popup\SelectParticipantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Popup\SelectParticipantForm.Designer.cs">
+      <DependentUpon>SelectParticipantForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Popup\TestrunForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +267,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Popup\SelectParticipantForm.resx">
+      <DependentUpon>SelectParticipantForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Popup\TestrunForm.resx">
       <DependentUpon>TestrunForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -359,6 +370,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UI\HTMLResources\html\main\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HTMLResources\html\popup\testrun\participants.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UI\HTMLResources\html\popup\testrun\testrun.html">

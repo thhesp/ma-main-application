@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using WebAnalyzer.Models.SettingsModel;
 using System.Windows.Forms;
 using WebAnalyzer.Util;
-using WebAnalyzer.Models.SettingsModel.ExpressionTree;
+using WebAnalyzer.Models.Base;
 
 using WebAnalyzer.Events;
 
@@ -17,19 +16,33 @@ namespace WebAnalyzer.UI.InteractionObjects
     {
 
         public event TestrunEventHandler Testrun;
+        public event SelectParticipantForTestEventHandler SelectParticipant;
 
         private TestrunForm _form;
+        private ExperimentModel _exp;
 
         private Boolean _running = false;
+
+        private ExperimentParticipant _participant;
 
         public TestrunControl(TestrunForm form)
         {
             _form = form;
         }
 
+        public ExperimentModel Experiment
+        {
+            get { return _exp; }
+            set { _exp = value; }
+        }
 
         public void endTest()
         {
+
+            if (_running)
+            {
+                Testrun(this, new TestrunEvent(TestrunEvent.EVENT_TYPE.Stop));
+            }
 
             _form.Invoke((MethodInvoker)delegate
             {
@@ -41,6 +54,16 @@ namespace WebAnalyzer.UI.InteractionObjects
         public Boolean testRunning()
         {
             return _running;
+        }
+
+        public String getParticipantIdentifier()
+        {
+            if (_participant != null)
+            {
+                return _participant.Identifier;
+            }
+
+            return "";
         }
 
         public void startTestrun()
@@ -57,8 +80,27 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         public void selectParticipant()
         {
+            _form.BeginInvoke((Action)delegate
+            {
+                SelectParticipantForm selectParticipant = new SelectParticipantForm(this.Experiment);
 
+                selectParticipant.SelectParticipant += On_SelectParticipant;
+
+                if (selectParticipant.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    //_form.ReloadPage();
+                    
+                }
+            });
         }
 
+        public void On_SelectParticipant(object source, SelectParticipantForTestEvent e)
+        {
+            Logger.Log("Selected Participant " + e.UID);
+
+            _participant = _exp.GetParticipantByUID(e.UID);
+
+            _form.ReloadPage();
+        }
     }
 }

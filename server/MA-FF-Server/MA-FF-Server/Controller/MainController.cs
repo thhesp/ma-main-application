@@ -276,8 +276,9 @@ namespace WebAnalyzer.Controller
             mainUI.BeginInvoke((Action)delegate
             {
                 Logger.Log("Show edit application setting");
-                TestrunForm testrun = new TestrunForm();
+                TestrunForm testrun = new TestrunForm(currentExperiment);
                 testrun.Testrun += On_TestrunEvent;
+                testrun.SelectParticipant += On_SelectParticipantForTest;
 
                 if (testrun.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
@@ -373,6 +374,11 @@ namespace WebAnalyzer.Controller
                     //refresh other stuff?
                 }
             });
+        }
+
+        private void On_SelectParticipantForTest(object source, SelectParticipantForTestEvent e)
+        {
+
         }
 
     }

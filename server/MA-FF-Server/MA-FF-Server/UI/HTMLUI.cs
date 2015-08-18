@@ -36,7 +36,10 @@ namespace WebAnalyzer.UI
 
         public void SetExperimentData(ExperimentModel experiment)
         {
-            _exp.Experiment = experiment;
+            if (_exp != null)
+            {
+                _exp.Experiment = experiment;
+            }
         }
 
         public void ReloadPage()

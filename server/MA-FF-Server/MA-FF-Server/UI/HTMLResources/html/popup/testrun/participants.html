@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/index.css">
+</head>
+<body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 centered">
+                    <h2>Teilnehmer auswählen</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Identifier</th>
+                            </tr>
+                        </thead>
+                        <tbody id="participants-table">
+                            
+                        </tbody>
+                    </table> 
+                </div>
+            </div>
+        </div><!-- /.container -->
+    <footer></footer>
+
+    <script type="text/template" id="participant-template" class="template">
+        <tr uid="<%= uid %>">
+            <td>
+                <%= identifier %>
+            </td>
+        </tr>
+    </script>
+
+    <script type="text/javascript" src="../../../js/lib/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../../../js/lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../js/lib/underscore.min.js"></script>
+
+    <script type="text/javascript">
+        var participantArray = control.participantArray();
+        var participantUIDs = control.participantUIDs();
+
+        var template = _.template($('script#participant-template').html());
+
+        for (var i = 0; i < participantArray.length; i++) {
+            $("#participants-table").append(template({ uid: participantUIDs[i], identifier: participantArray[i] }));
+        }
+
+        $('#participants-table tr').click(function () {
+            var uid = $(this).attr('uid');
+
+            console.log('clicked: ', uid);
+            control.selectParticipant(uid);
+        });
+    </script>
+</body>
+</html>
