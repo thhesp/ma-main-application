@@ -317,8 +317,8 @@ namespace WebAnalyzer.Controller
                 if (editSetting.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     Logger.Log("Saving application settings");
+                    _testController.RefreshServices();
                     RefreshMainUI();
-
                     //refresh other stuff?
                 }
             });

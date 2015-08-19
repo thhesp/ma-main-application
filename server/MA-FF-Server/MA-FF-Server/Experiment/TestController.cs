@@ -148,12 +148,12 @@ namespace WebAnalyzer.Experiment
             
             _wsServer.stop();
 
-            if (Boolean.Parse(Properties.Settings.Default.UseMouseTracking))
+            if (_debugModel != null)
             {
                 _debugModel.PrepareGaze -= On_PrepareGazeData;
                 _debugModel = null;
             }
-            else
+            if(_etModel != null)
             {
                 _etModel.disconnect();
 
@@ -185,17 +185,18 @@ namespace WebAnalyzer.Experiment
 
             if (Boolean.Parse(Properties.Settings.Default.UseMouseTracking))
             {
-                _debugModel.stopTracking();
+                if (_debugModel != null)
+                {
+                    _debugModel.stopTracking();
+                }
             }
             else
             {
-                _etModel.stopTracking();
-                //_etModel.disconnect();
+                if (_etModel != null)
+                {
+                    _etModel.stopTracking();
+                }
             }
-
-            // export raw data
-
-            //this.ExportToXML();
         }
 
         private void On_PrepareGazeData(object source, PrepareGazeDataEvent e)

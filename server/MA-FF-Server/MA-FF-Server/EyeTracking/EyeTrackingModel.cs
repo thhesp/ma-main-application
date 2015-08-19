@@ -65,7 +65,7 @@ namespace WebAnalyzer.EyeTracking
             }
             catch (Exception exc)
             {
-                Logger.Log(exc.Message);
+                Logger.Log("Exception: " + exc.Message);
                 // log error?
                 //logger1.Text = "Exception during iV_Connect: " + exc.Message;
                 return false;
