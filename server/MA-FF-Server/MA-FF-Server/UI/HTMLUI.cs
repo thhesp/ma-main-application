@@ -42,6 +42,22 @@ namespace WebAnalyzer.UI
             }
         }
 
+        public void SetWSConnectionStatus(ExperimentObject.CONNECTION_STATUS status)
+        {
+            if (_exp != null)
+            {
+                _exp.setWSConnectionStatus(status);
+            }
+        }
+
+        public void SetTrackingConnectionStatus(ExperimentObject.CONNECTION_STATUS status)
+        {
+            if (_exp != null)
+            {
+                _exp.setTrackingConnectionStatus(status);
+            }
+        }
+
         public void ReloadPage()
         {
             if (myBrowser != null)

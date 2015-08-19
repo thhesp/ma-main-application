@@ -85,6 +85,7 @@ namespace WebAnalyzer.UI.InteractionObjects
                 SelectParticipantForm selectParticipant = new SelectParticipantForm(this.Experiment);
 
                 selectParticipant.SelectParticipant += On_SelectParticipant;
+                selectParticipant.SelectParticipant += SelectParticipant;
 
                 if (selectParticipant.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {

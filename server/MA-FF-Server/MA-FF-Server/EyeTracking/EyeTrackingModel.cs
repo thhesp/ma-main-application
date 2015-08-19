@@ -35,8 +35,6 @@ namespace WebAnalyzer.EyeTracking
         GetSampleCallback m_SampleCallback;
         GetEventCallback m_EventCallback;
 
-
-
         public EyeTrackingModel()
         {
             ETDevice = new EyeTrackingController();
@@ -52,10 +50,6 @@ namespace WebAnalyzer.EyeTracking
 
             try
             {
-
-                ETDevice.iV_SetCalibrationCallback(m_CalibrationCallback);
-                ETDevice.iV_SetSampleCallback(m_SampleCallback);
-                ETDevice.iV_SetEventCallback(m_EventCallback);
 
                 int ret = ETDevice.iV_Connect(new StringBuilder(sendip), Convert.ToInt32(sendport), new StringBuilder(receiveip), Convert.ToInt32(receiveport));
 
@@ -128,6 +122,36 @@ namespace WebAnalyzer.EyeTracking
             return errorID;
         }
 
+        public void startTracking()
+        {
+            if (ETDevice != null)
+            {
+                //ETDevice.iV_SetCalibrationCallback(m_CalibrationCallback);
+                ETDevice.iV_SetSampleCallback(m_SampleCallback);
+                //ETDevice.iV_SetEventCallback(m_EventCallback);
+            }
+        }
+
+        public void stopTracking()
+        {
+            if (ETDevice != null)
+            {
+                //ETDevice.iV_SetCalibrationCallback(null);
+                ETDevice.iV_SetSampleCallback(null);
+                //ETDevice.iV_SetEventCallback(null);
+            }
+        }
+
+        public int isConnected()
+        {
+            if (ETDevice != null)
+            {
+                return ETDevice.iV_IsConnected();
+            }
+
+            return 101;
+        }
+
         #region CallbackFunctions
 
         // callback functions
@@ -145,19 +169,6 @@ namespace WebAnalyzer.EyeTracking
 
            PrepareGaze(this, new PrepareGazeDataEvent(sampleData.timestamp.ToString(), sampleData.leftEye.gazeX, sampleData.leftEye.gazeY, sampleData.rightEye.gazeX, sampleData.rightEye.gazeY));
 
-           /*String uniqueId = TestController.getInstance().PrepareGazeData( );
-
-           if (sampleData.rightEye.gazeX == sampleData.leftEye.gazeX && 
-               sampleData.rightEye.gazeY == sampleData.leftEye.gazeY)
-           {
-               ConnectionManager.getInstance().RequestData(uniqueId, sampleData.leftEye.gazeX, sampleData.leftEye.gazeY);
-           }
-           else
-           {
-               ConnectionManager.getInstance().RequestData(uniqueId, sampleData.leftEye.gazeX, sampleData.leftEye.gazeY, sampleData.rightEye.gazeX, sampleData.rightEye.gazeY);
-           }*/
-            
-            
            Logger.Log(data);
         }
 
@@ -168,10 +179,6 @@ namespace WebAnalyzer.EyeTracking
                 " Event: " + eventData.eventType + " startTime: " + eventData.startTime.ToString() +
                 " End:" + eventData.endTime.ToString() + " duration:" + eventData.duration.ToString() +
                 " PosX:" + eventData.positionX.ToString() + " PosY:" + eventData.positionY.ToString();
-
-
-            /*String uniqueId = ExperimentController.getInstance().PreparePositionData(eventData.positionX, eventData.positionY, eventData.startTime.ToString(), eventData.endTime.ToString(), eventData.duration.ToString());
-            ConnectionManager.getInstance().RequestData(uniqueId, eventData.positionX, eventData.positionY);*/
 
 
             Logger.Log(data);

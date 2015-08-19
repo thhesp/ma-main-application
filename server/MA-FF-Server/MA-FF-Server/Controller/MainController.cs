@@ -25,12 +25,7 @@ namespace WebAnalyzer.Controller
     {
         private ExperimentModel _currentExperiment;
 
-        private TestController _controller;
-        private EyeTrackingModel _etModel;
-        private WebsocketServer _wsServer;
-
-
-        private MouseModel _debugModel;
+        private TestController _testController;
 
         private HTMLUI mainUI;
         private ExperimentWizard experimentWizard;
@@ -38,6 +33,8 @@ namespace WebAnalyzer.Controller
 
         public void Start()
         {
+            _testController = new TestController();
+
             ShowMainUI();
         }
 
@@ -105,7 +102,15 @@ namespace WebAnalyzer.Controller
             _currentExperiment = LoadController.LoadExperiment(e.Path);
 
             SetExpiermentData(_currentExperiment);
+            SetConnectionStati();
             CloseExperimentWizard();
+        }
+
+        private void SetConnectionStati()
+        {
+            mainUI.SetWSConnectionStatus(_testController.WSStatus);
+            mainUI.SetTrackingConnectionStatus(_testController.TrackingStatus);
+            mainUI.ReloadPage();
         }
 
         private void SetExpiermentData(ExperimentModel experiment)
@@ -290,72 +295,16 @@ namespace WebAnalyzer.Controller
 
         private void StartTest()
         {
-            Logger.Log("Start Test");
-            _controller = new TestController();
-            _wsServer = new WebsocketServer(_controller);
-            _wsServer.start(int.Parse(Properties.Settings.Default.WebsocketPort));
 
-            _controller.StartTest();
-            
-            if (Boolean.Parse(Properties.Settings.Default.UseMouseTracking))
-            {
-                _debugModel = new MouseModel();
-
-                _debugModel.PrepareGaze += On_PrepareGazeData;
-
-                _debugModel.startTracking();
-            }
-            else
-            {
-                _etModel = new EyeTrackingModel();
-
-                _etModel.PrepareGaze += On_PrepareGazeData;
-
-                if (Boolean.Parse(Properties.Settings.Default.ETConnectLocal))
-                {
-                    _etModel.connectLocal();
-                }
-                else
-                {
-                    _etModel.connect(Properties.Settings.Default.ETSentIP, Properties.Settings.Default.ETSentPort, Properties.Settings.Default.ETReceiveIP, Properties.Settings.Default.ETReceivePort);
-                }
-
-                
-            }
-
+            _testController.StartTest();
         }
 
         private void StopTest()
         {
             Logger.Log("Stop Test");
-            _controller.StopTest();
+            _testController.StopTest();
 
-            if (Boolean.Parse(Properties.Settings.Default.UseMouseTracking))
-            {
-                _debugModel.stopTracking();
-            }
-            else
-            {
-                _etModel.disconnect();
-            }
-
-            ExportController.SaveExperimentTestRun(_currentExperiment, _currentParticipant, _controller.Test);
-        }
-
-
-        private void On_PrepareGazeData(object source, PrepareGazeDataEvent e)
-        {
-
-            String uniqueId = _controller.PrepareGazeData(e.GazeTimestamp, e.LeftX, e.LeftY, e.RightX, e.RightY);
-
-            if (e.LeftX == e.RightX && e.LeftY == e.RightY)
-            {
-                _wsServer.RequestData(uniqueId, e.LeftX, e.LeftY);
-            }
-            else
-            {
-                _wsServer.RequestData(uniqueId, e.LeftX, e.LeftY, e.RightX, e.RightY);
-            }
+            ExportController.SaveExperimentTestRun(_currentExperiment, _currentParticipant, _testController.Test);
         }
 
         private void On_EditApplicationSettings(object source, EditApplicationSettingsEvent e)
@@ -377,6 +326,7 @@ namespace WebAnalyzer.Controller
 
         private void On_SelectParticipantForTest(object source, SelectParticipantForTestEvent e)
         {
+            Logger.Log("Select Participant....");
             _currentParticipant = _currentExperiment.GetParticipantByUID(e.UID);
         }
 

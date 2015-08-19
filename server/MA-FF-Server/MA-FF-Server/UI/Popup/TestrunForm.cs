@@ -44,6 +44,7 @@ namespace WebAnalyzer.UI
             TestrunControl control = new TestrunControl(this);
 
             control.Testrun += Testrun;
+            control.SelectParticipant += SelectParticipant;
 
             control.Experiment = _experiment;
 

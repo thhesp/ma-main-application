@@ -28,13 +28,13 @@ namespace WebAnalyzer.Test.Communication
         {
             this.timer = new System.Timers.Timer();
             this.timer.Enabled = true;
-            this.timer.Elapsed += new ElapsedEventHandler(timer_Tick);
             this.timer.Interval = 100;
         }
 
         public void startTracking()
         {
             Logger.Log("Start MouseTracking");
+            this.timer.Elapsed += new ElapsedEventHandler(timer_Tick);
             this.timer.Start();
         }
 
@@ -42,6 +42,7 @@ namespace WebAnalyzer.Test.Communication
         public void stopTracking()
         {
             Logger.Log("Stop MouseTracking");
+            this.timer.Elapsed -= new ElapsedEventHandler(timer_Tick);
             this.timer.Stop();
         }
 

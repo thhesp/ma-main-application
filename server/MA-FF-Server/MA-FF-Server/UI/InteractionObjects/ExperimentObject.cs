@@ -11,7 +11,13 @@ namespace WebAnalyzer.UI.InteractionObjects
     public class ExperimentObject : BaseInteractionObject
     {
 
+        public enum CONNECTION_STATUS { connected = 0, disconnected = 1, warning = 2};
+
         private ExperimentModel _exp;
+
+        private CONNECTION_STATUS _wsConnection = CONNECTION_STATUS.disconnected;
+
+        private CONNECTION_STATUS _trackingConnection = CONNECTION_STATUS.disconnected;
 
 
         public ExperimentObject(){
@@ -60,6 +66,27 @@ namespace WebAnalyzer.UI.InteractionObjects
                 return _exp.GetDomainSettingUIDs();
 
             return null;
+        }
+
+        public String getWSConnectionStatus()
+        {
+            return _wsConnection.ToString();
+        }
+
+
+        public String getTrackingConnectionStatus()
+        {
+            return _trackingConnection.ToString();
+        }
+
+        public void setWSConnectionStatus(CONNECTION_STATUS status)
+        {
+            _wsConnection = status;
+        }
+
+        public void setTrackingConnectionStatus(CONNECTION_STATUS status)
+        {
+            _trackingConnection = status;
         }
     }
 }
