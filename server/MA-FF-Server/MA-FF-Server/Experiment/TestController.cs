@@ -29,6 +29,8 @@ namespace WebAnalyzer.Experiment
 
         private Boolean _running;
 
+        private Boolean _dataCollected = false;
+
         public TestController()
         {
             _test = new TestModel();
@@ -49,7 +51,11 @@ namespace WebAnalyzer.Experiment
         public Boolean Running
         {
             get { return _running; }
-            set { _running = value; }
+        }
+
+        public Boolean DataCollected
+        {
+            get { return _dataCollected; }
         }
 
         public ExperimentObject.CONNECTION_STATUS WSStatus
@@ -167,6 +173,7 @@ namespace WebAnalyzer.Experiment
         {
             Logger.Log("Start Experiment");
             _running = true;
+            _dataCollected = false;
             // set listeners
             if (Boolean.Parse(Properties.Settings.Default.UseMouseTracking))
             {
@@ -234,11 +241,13 @@ namespace WebAnalyzer.Experiment
 
         public Boolean AssignGazeToWebpage(String uniqueId, String url)
         {
+            _dataCollected = true;
             return _test.AssignGazeToWebpage(uniqueId, url);
         }
 
         public Boolean AssignGazeToWebpage(GazeModel gazeModel, String url)
         {
+            _dataCollected = true;
             return _test.AssignGazeToWebpage(gazeModel, url);
         }
 
@@ -251,8 +260,6 @@ namespace WebAnalyzer.Experiment
         {
             return _test.DisposeOfGazeData(gazeModel);
         }
-
-
 
         public GazeModel GetGazeModel(String uniqueId)
         {

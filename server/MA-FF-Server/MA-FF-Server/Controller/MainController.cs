@@ -303,8 +303,12 @@ namespace WebAnalyzer.Controller
         {
             Logger.Log("Stop Test");
             _testController.StopTest();
-
-            ExportController.SaveExperimentTestRun(_currentExperiment, _currentParticipant, _testController.Test);
+            if (_testController.DataCollected
+                && _currentExperiment != null 
+                && _currentParticipant != null)
+            {
+                ExportController.SaveExperimentTestRun(_currentExperiment, _currentParticipant, _testController.Test);
+            }
         }
 
         private void On_EditApplicationSettings(object source, EditApplicationSettingsEvent e)
