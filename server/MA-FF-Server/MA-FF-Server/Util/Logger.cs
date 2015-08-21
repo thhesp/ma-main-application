@@ -9,7 +9,31 @@ namespace WebAnalyzer.Util
 
         public static void Log(String line, [CallerFilePathAttribute]string filePath = "", [CallerMemberName]string memberName = "")
         {
-            Console.WriteLine(Path.GetFileName(filePath) + " - " + memberName + ";" + Timestamp.GetUnixTimestamp() + ": " + line);
+            getInstance().Log(Path.GetFileName(filePath) + " - " + memberName + ";" + Timestamp.GetUnixTimestamp() + ": " + line);
         }
+
+        public static Logger getInstance()
+        {
+            if (_instance == null)
+            {
+                _instance = new Logger();
+            }
+
+            return _instance;
+        }
+
+        private static Logger _instance;
+
+        private Logger()
+        {
+
+        }
+
+        private void Log(String message)
+        {
+            Console.WriteLine(message);
+        }
+
+
     }
 }

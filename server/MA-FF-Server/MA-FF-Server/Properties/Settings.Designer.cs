@@ -193,5 +193,17 @@ namespace WebAnalyzer.Properties {
                 this["ETSentPort"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(".log\\")]
+        public string LogsLocation {
+            get {
+                return ((string)(this["LogsLocation"]));
+            }
+            set {
+                this["LogsLocation"] = value;
+            }
+        }
     }
 }
