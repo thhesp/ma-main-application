@@ -95,6 +95,7 @@ namespace WebAnalyzer.Controller
                 ExportController.SaveExperiment(_currentExperiment);
                 SetExpiermentData(_currentExperiment);
                 CloseExperimentWizard();
+                Logger.getInstance().ExperimentName = _currentExperiment.ExperimentName;
             }
             else
             {
@@ -114,6 +115,7 @@ namespace WebAnalyzer.Controller
                 SetExpiermentData(_currentExperiment);
                 SetConnectionStati();
                 CloseExperimentWizard();
+                Logger.getInstance().ExperimentName = _currentExperiment.ExperimentName;
             }
             else
             {

@@ -29,10 +29,18 @@ namespace WebAnalyzer.Util
 
         private static Logger _instance;
 
+        private String _experimentName = null;
+
         private Logger()
         {
             checkLogLocation();
             //add logrotation
+        }
+
+        public String ExperimentName
+        {
+            get { return _experimentName; }
+            set { _experimentName = value; }
         }
 
         public void checkLogLocation(){
@@ -41,10 +49,22 @@ namespace WebAnalyzer.Util
 
         private void Log(String message)
         {
-            using (StreamWriter w = File.AppendText(Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "logs.txt"))
+
+            if (_experimentName != null)
             {
-                w.WriteLine(message);
+                using (StreamWriter w = File.AppendText(Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + ExperimentName + "-logs.txt"))
+                {
+                    w.WriteLine(message);
+                }
             }
+            else
+            {
+                using (StreamWriter w = File.AppendText(Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "logs.txt"))
+                {
+                    w.WriteLine(message);
+                }
+            }
+
 
             if (System.Diagnostics.Debugger.IsAttached)
             {
@@ -54,9 +74,20 @@ namespace WebAnalyzer.Util
 
         private void JavascriptLog(String message)
         {
-            using (StreamWriter w = File.AppendText(Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "javascript-logs.txt"))
+
+            if (_experimentName != null)
             {
-                w.WriteLine(message);
+                using (StreamWriter w = File.AppendText(Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + ExperimentName + "-javascript-logs.txt"))
+                {
+                    w.WriteLine(message);
+                }
+            }
+            else
+            {
+                using (StreamWriter w = File.AppendText(Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "javascript-logs.txt"))
+                {
+                    w.WriteLine(message);
+                }
             }
 
             if (System.Diagnostics.Debugger.IsAttached)
