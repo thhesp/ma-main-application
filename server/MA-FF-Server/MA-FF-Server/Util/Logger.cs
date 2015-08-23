@@ -39,6 +39,11 @@ namespace WebAnalyzer.Util
             {
                 w.WriteLine(message);
             }
+
+            if (System.Diagnostics.Debugger.IsAttached)
+            {
+                Console.WriteLine(message);
+            }
         }
 
 
