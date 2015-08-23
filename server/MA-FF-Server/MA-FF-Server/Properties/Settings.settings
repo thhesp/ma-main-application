@@ -51,7 +51,7 @@
       <Value Profile="(Default)">5555</Value>
     </Setting>
     <Setting Name="LogsLocation" Type="System.String" Scope="User">
-      <Value Profile="(Default)">.log\</Value>
+      <Value Profile="(Default)">log\</Value>
     </Setting>
   </Settings>
 </SettingsFile>

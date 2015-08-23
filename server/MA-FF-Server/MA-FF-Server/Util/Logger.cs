@@ -26,12 +26,19 @@ namespace WebAnalyzer.Util
 
         private Logger()
         {
+            checkLogLocation();
+        }
 
+        public void checkLogLocation(){
+            FileIO.CheckPath(Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation, true);
         }
 
         private void Log(String message)
         {
-            Console.WriteLine(message);
+            using (StreamWriter w = File.AppendText(Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "logs.txt"))
+            {
+                w.WriteLine(message);
+            }
         }
 
 
