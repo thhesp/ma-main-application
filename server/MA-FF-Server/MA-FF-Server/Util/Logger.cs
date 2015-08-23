@@ -27,6 +27,7 @@ namespace WebAnalyzer.Util
         private Logger()
         {
             checkLogLocation();
+            //add logrotation
         }
 
         public void checkLogLocation(){

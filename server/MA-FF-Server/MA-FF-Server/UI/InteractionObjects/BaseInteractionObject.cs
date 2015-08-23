@@ -21,5 +21,15 @@ namespace WebAnalyzer.UI.InteractionObjects
             get { return _browser; }
             set { _browser = value; }
         }
+
+        public void DisplayError(String message)
+        {
+            EvaluteJavaScript("alert('" + message + "');");
+        }
+
+        public void EvaluteJavaScript(String script)
+        {
+            Browser.EvaluateScriptAsync(script);
+        }
     }
 }

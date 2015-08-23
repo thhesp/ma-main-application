@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebAnalyzer.UI.InteractionObjects;
 
 namespace WebAnalyzer.Events
 {
-    public delegate void LoadExperimentEventHandler(object sender, LoadExperimentEvent e);
+    public delegate void LoadExperimentEventHandler(ExperimentWizardObj sender, LoadExperimentEvent e);
 
     public class LoadExperimentEvent : EventArgs
     {

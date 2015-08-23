@@ -73,7 +73,7 @@ namespace WebAnalyzer.Controller
             }
         }
 
-        private void On_CreateExperiment(object source, CreateExperimentEvent e)
+        private void On_CreateExperiment(ExperimentWizardObj source, CreateExperimentEvent e)
         {
             Logger.Log("On create experiment event");
 
@@ -98,12 +98,12 @@ namespace WebAnalyzer.Controller
             }
             else
             {
-                //do sth?
+                source.DisplayError("Es existiert bereits ein Experiment mit diesem Namen!");
                 Logger.Log("Experiment does already exist!");
             }
         }
 
-        private void On_LoadExperiment(object source, LoadExperimentEvent e)
+        private void On_LoadExperiment(ExperimentWizardObj source, LoadExperimentEvent e)
         {
             Logger.Log("On load experiment event");
 
@@ -118,6 +118,7 @@ namespace WebAnalyzer.Controller
             else
             {
                 //do sth?
+                source.DisplayError("Der ausgewählte Ordner enthält keine Experimentdaten!");
                 Logger.Log("Experiment does not exist!");
             }
 
