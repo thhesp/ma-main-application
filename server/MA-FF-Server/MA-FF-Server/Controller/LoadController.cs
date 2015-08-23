@@ -14,7 +14,42 @@ namespace WebAnalyzer.Controller
 {
     public static class LoadController
     {
+        public static Boolean ValidateExperimentFolder(String path)
+        {
+            if (System.IO.Directory.Exists(path))
+            {
+                if (!System.IO.File.Exists(path + "\\" + Properties.Settings.Default.ExperimentFilename))
+                {
+                    return false;
+                }
 
+                if (!System.IO.File.Exists(path + "\\" + Properties.Settings.Default.ParticipantsFilename))
+                {
+                    return false;
+                }
+
+                if (!System.IO.File.Exists(path + "\\" + Properties.Settings.Default.SettingsFilename))
+                {
+                    return false;
+                }
+
+                return true;
+            }
+
+            return false;
+        }
+
+        public static Boolean ValidateIfExperimentDoesNotExist(ExperimentModel exp)
+        {
+            String dir = exp.GetBaseExperimentLocation();
+
+            if (ValidateExperimentFolder(dir))
+            {
+                return false;
+            }
+
+            return true;
+        }
 
         public static ExperimentModel LoadExperiment(String path)
         {

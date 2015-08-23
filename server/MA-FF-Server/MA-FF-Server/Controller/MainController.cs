@@ -79,31 +79,49 @@ namespace WebAnalyzer.Controller
 
             _currentExperiment = ExperimentModel.CreateExperiment(e.Name);
 
-            if (e.ImportData)
+            if (LoadController.ValidateIfExperimentDoesNotExist(_currentExperiment))
             {
-                //import data
-                if (e.ImportParticipants)
-                    _currentExperiment.Participants = LoadController.LoadParticipants(e.ImportExperimentPath);
+                if (e.ImportData)
+                {
+                    //import data
+                    if (e.ImportParticipants)
+                        _currentExperiment.Participants = LoadController.LoadParticipants(e.ImportExperimentPath);
 
-                if (e.ImportSettings)
-                    _currentExperiment.Settings = LoadController.LoadSettings(e.ImportExperimentPath);
+                    if (e.ImportSettings)
+                        _currentExperiment.Settings = LoadController.LoadSettings(e.ImportExperimentPath);
 
+                }
+
+                ExportController.SaveExperiment(_currentExperiment);
+                SetExpiermentData(_currentExperiment);
+                CloseExperimentWizard();
             }
-
-            ExportController.SaveExperiment(_currentExperiment);
-            SetExpiermentData(_currentExperiment);
-            CloseExperimentWizard();
+            else
+            {
+                //do sth?
+                Logger.Log("Experiment does already exist!");
+            }
         }
 
         private void On_LoadExperiment(object source, LoadExperimentEvent e)
         {
             Logger.Log("On load experiment event");
 
-            _currentExperiment = LoadController.LoadExperiment(e.Path);
+            if (LoadController.ValidateExperimentFolder(e.Path))
+            {
+                _currentExperiment = LoadController.LoadExperiment(e.Path);
 
-            SetExpiermentData(_currentExperiment);
-            SetConnectionStati();
-            CloseExperimentWizard();
+                SetExpiermentData(_currentExperiment);
+                SetConnectionStati();
+                CloseExperimentWizard();
+            }
+            else
+            {
+                //do sth?
+                Logger.Log("Experiment does not exist!");
+            }
+
+
         }
 
         private void SetConnectionStati()
