@@ -205,5 +205,17 @@ namespace WebAnalyzer.Properties {
                 this["LogsLocation"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public string LogCount {
+            get {
+                return ((string)(this["LogCount"]));
+            }
+            set {
+                this["LogCount"] = value;
+            }
+        }
     }
 }

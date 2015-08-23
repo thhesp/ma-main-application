@@ -53,5 +53,8 @@
     <Setting Name="LogsLocation" Type="System.String" Scope="User">
       <Value Profile="(Default)">log\</Value>
     </Setting>
+    <Setting Name="LogCount" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

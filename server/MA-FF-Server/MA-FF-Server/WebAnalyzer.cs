@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using System;
 
 using WebAnalyzer.Experiment;
 using WebAnalyzer.UI;
@@ -22,7 +23,7 @@ namespace WebAnalyzer
         {
             if (Properties.Settings.Default.FirstStart)
             {
-                Logger.Log("Reset environmental variables since its the first start on this system...");
+                Console.WriteLine("Reset environmental variables since its the first start on this system...");
                 AppSettings.ResetEnvironmentVariables();
             }
         }
@@ -33,11 +34,11 @@ namespace WebAnalyzer
 
             if (validate)
             {
-                Logger.Log("Settings validation successful");
+                Console.WriteLine("Settings validation successful");
             }
             else
             {
-                Logger.Log("Problems while validating...");
+                Console.WriteLine("Problems while validating...");
             }
             
         }

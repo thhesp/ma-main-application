@@ -34,16 +34,122 @@ namespace WebAnalyzer.Util
         private Logger()
         {
             checkLogLocation();
-            //add logrotation
+            rotateLogs();
         }
 
         public String ExperimentName
         {
             get { return _experimentName; }
-            set { _experimentName = value; }
+            set {
+                rotateLogs(value);
+                _experimentName = value;
+            }
         }
 
-        public void checkLogLocation(){
+        private void rotateLogs()
+        {
+            //Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "logs.txt"
+            // Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "javascript-logs.txt"
+            int logCount = int.Parse(Properties.Settings.Default.LogCount);
+            for (int i = logCount; i >= 0; i--)
+            {
+                String sourceLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "logs-" + i + ".txt";
+                String sourceJavascriptLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "javascript-logs-" + i + ".txt";
+
+                if (i == 0)
+                {
+                    sourceLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "logs.txt";
+                    sourceJavascriptLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "javascript-logs.txt";
+                }
+
+
+
+                if (i == logCount)
+                {
+                    //delete
+                    if (File.Exists(sourceLogFile))
+                    {
+                        File.Delete(sourceLogFile);
+                    }
+
+                    if (File.Exists(sourceJavascriptLogFile))
+                    {
+                        File.Delete(sourceJavascriptLogFile);
+                    }
+
+                }
+                else
+                {
+                    String destLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "logs-" + (i+1) + ".txt";
+                    String destJavascriptLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "javascript-logs-" + (i+1) + ".txt";
+
+
+                    if (File.Exists(sourceLogFile))
+                    {
+                        File.Move(sourceLogFile, destLogFile);
+                    }
+
+                    if (File.Exists(sourceJavascriptLogFile))
+                    {
+                        File.Move(sourceJavascriptLogFile, destJavascriptLogFile);
+                    }
+                }
+            }
+        }
+
+        private void rotateLogs(String experimentName)
+        {
+            //Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName +"-logs.txt"
+            // Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName + "-javascript-logs.txt"
+            int logCount = int.Parse(Properties.Settings.Default.LogCount);
+            for (int i = logCount; i >= 0; i--)
+            {
+                String sourceLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName + "-logs-" + i + ".txt";
+                String sourceJavascriptLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName + "-javascript-logs-" + i + ".txt";
+
+                if (i == 0)
+                {
+                    sourceLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName + "-logs.txt";
+                    sourceJavascriptLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName + "-javascript-logs.txt";
+                }
+
+
+
+                if (i == logCount)
+                {
+                    //delete
+                    if (File.Exists(sourceLogFile))
+                    {
+                        File.Delete(sourceLogFile);
+                    }
+
+                    if (File.Exists(sourceJavascriptLogFile))
+                    {
+                        File.Delete(sourceJavascriptLogFile);
+                    }
+
+                }
+                else
+                {
+                    String destLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName + "-logs-" + (i + 1) + ".txt";
+                    String destJavascriptLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName + "-javascript-logs-" + (i + 1) + ".txt";
+
+
+                    if (File.Exists(sourceLogFile))
+                    {
+                        File.Move(sourceLogFile, destLogFile);
+                    }
+
+                    if (File.Exists(sourceJavascriptLogFile))
+                    {
+                        File.Move(sourceJavascriptLogFile, destJavascriptLogFile);
+                    }
+                }
+            }
+
+        }
+
+        private void checkLogLocation(){
             FileIO.CheckPath(Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation, true);
         }
 
