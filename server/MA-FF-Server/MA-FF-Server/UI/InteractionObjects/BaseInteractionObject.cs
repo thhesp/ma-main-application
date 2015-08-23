@@ -31,5 +31,11 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             Browser.EvaluateScriptAsync(script);
         }
+
+        public void javascriptLog(String message)
+        {
+            //EvaluteJavaScript("console.log('" + message + "');");
+            Logger.JavascriptLog(message);
+        }
     }
 }
