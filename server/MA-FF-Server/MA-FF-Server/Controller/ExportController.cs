@@ -98,7 +98,7 @@ namespace WebAnalyzer.Controller
 
         public static Boolean SaveExperimentTestRun(ExperimentModel experiment, ExperimentParticipant currentParticipant, TestModel testrun){
             String dir = experiment.GetBaseExperimentLocation() + Properties.Settings.Default.RawdataLocation;
-            String timestamp = Timestamp.GetUnixTimestamp();
+            String timestamp = Timestamp.GetDateTime();
 
             FileIO.CheckPath(dir);
             XmlDocument xmlDoc = new XmlDocument();
@@ -116,7 +116,7 @@ namespace WebAnalyzer.Controller
         public static Boolean SaveExperimentFixations(ExperimentModel experiment, ExperimentParticipant currentParticipant, TestModel testrun){
         
             String dir = experiment.GetBaseExperimentLocation() + Properties.Settings.Default.FixdataLocation;
-            String timestamp = Timestamp.GetUnixTimestamp();
+            String timestamp = Timestamp.GetDateTime();
 
             FileIO.CheckPath(dir);
             XmlDocument xmlDoc = new XmlDocument();
@@ -133,7 +133,7 @@ namespace WebAnalyzer.Controller
         {
 
             String dir = experiment.GetBaseExperimentLocation() + Properties.Settings.Default.StatisticsLocation;
-            String timestamp = Timestamp.GetUnixTimestamp();
+            String timestamp = Timestamp.GetDateTime();
 
             FileIO.CheckPath(dir);
             XmlDocument xmlDoc = new XmlDocument();

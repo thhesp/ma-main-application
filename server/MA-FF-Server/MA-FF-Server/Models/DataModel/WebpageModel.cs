@@ -294,7 +294,6 @@ namespace WebAnalyzer.Models.DataModel
 
                 if ((startX <= currentPos.EyeTrackingData.X && endX >= currentPos.EyeTrackingData.X) &&
                     (startY <= currentPos.EyeTrackingData.Y && endY >= currentPos.EyeTrackingData.Y)) {
-                    Logger.Log("Possible fixation found...");
                     duration = long.Parse(_positionData[pos].DataRequestedTimestamp) - long.Parse(startTimestamp);
                     //found related gaze
                     relatedGazes.Add(_positionData[pos]);
@@ -302,7 +301,6 @@ namespace WebAnalyzer.Models.DataModel
                     //fixation (if there was one) ends
                     //@Todo: add constant/ setting for duration min time
                     if (duration >= 100) {
-                        Logger.Log("Saving fixation...");
                         //create fixation
                         FixationModel fixation = new FixationModel(duration, eye);
 
@@ -318,11 +316,10 @@ namespace WebAnalyzer.Models.DataModel
                         }
 
                     } else {
-                        Logger.Log("Fixation to short :(");
+                        //Logger.Log("Fixation to short :(");
                     }
 
 
-                    Logger.Log("Cleaning up after previous Fixation and checking for a new one.");
                     //clear related gazes
                     relatedGazes = new List<GazeModel>();
 
@@ -345,7 +342,7 @@ namespace WebAnalyzer.Models.DataModel
 
             if (duration >= 100)
             {
-                Logger.Log("Saving last fixation...");
+                //Logger.Log("Saving last fixation...");
                 //create fixation
                 FixationModel fixation = new FixationModel(duration, eye);
 
@@ -365,7 +362,7 @@ namespace WebAnalyzer.Models.DataModel
             }
             else
             {
-                Logger.Log("Last fixation to short :(");
+                //Logger.Log("Last fixation to short :(");
             }
         }
 

@@ -26,5 +26,10 @@ namespace WebAnalyzer.Util
             return timestamp.ToString();
 
         }
+
+        public static String GetDateTime()
+        {
+            return DateTime.Now.ToString("HHmm-ddMMyyyy");
+        }
     }
 }
