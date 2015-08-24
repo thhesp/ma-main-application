@@ -84,15 +84,17 @@ namespace WebAnalyzer.Server
         {
             checkConnectionQueues();
 
-            foreach (var connection in this)
+            lock (this)
             {
-                if(checkConnection(connection))
+                foreach (var connection in this)
                 {
-                    //connection.Out.OnNext(message);
-
-                    connection.EnqueueMessage(message);
+                    if (checkConnection(connection))
+                    {
+                        connection.EnqueueMessage(message);
+                    }
                 }
             }
+
         }
 
         private void checkConnectionQueues()
@@ -124,10 +126,13 @@ namespace WebAnalyzer.Server
 
         private void WorkConnectionMessageQueues()
         {
-            //Logger.Log("Working through queues... ");
-            foreach (var connection in this)
+            lock (this)
             {
-                connection.workMessageQueue();
+                //Logger.Log("Working through queues... ");
+                foreach (var connection in this)
+                {
+                    connection.workMessageQueue();
+                }
             }
         }
 
