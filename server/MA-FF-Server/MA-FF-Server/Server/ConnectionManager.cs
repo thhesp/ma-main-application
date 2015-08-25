@@ -13,11 +13,13 @@ using WebAnalyzer.Models.MessageModel;
 
 namespace WebAnalyzer.Server
 {
-    class ConnectionManager : List<WebsocketConnection>
+    class ConnectionManager
     {
         private static int WORK_DELAY = 10;
 
         private Boolean _workMessages = false;
+
+        private List<WebsocketConnection> _connections = new List<WebsocketConnection>();
 
         private List<WebsocketConnection> _toAdd = new List<WebsocketConnection>();
 
@@ -30,7 +32,7 @@ namespace WebAnalyzer.Server
 
         public void ResetConnections()
         {
-            this.Clear();
+            _connections.Clear();
             _toAdd.Clear();
             _toRemove.Clear();
         }
@@ -84,9 +86,9 @@ namespace WebAnalyzer.Server
         {
             checkConnectionQueues();
 
-            lock (this)
+            lock (_connections)
             {
-                foreach (var connection in this)
+                foreach (var connection in _connections)
                 {
                     if (checkConnection(connection))
                     {
@@ -99,14 +101,17 @@ namespace WebAnalyzer.Server
 
         private void checkConnectionQueues()
         {
-            foreach(var connection in _toAdd)
+            lock (_connections)
             {
-                this.Add(connection);
-            }
+                foreach (var connection in _toAdd)
+                {
+                    _connections.Add(connection);
+                }
 
-            foreach(var connection in _toRemove)
-            {
-                this.Remove(connection);
+                foreach (var connection in _toRemove)
+                {
+                    _connections.Remove(connection);
+                }
             }
 
             _toAdd.Clear();
@@ -126,10 +131,10 @@ namespace WebAnalyzer.Server
 
         private void WorkConnectionMessageQueues()
         {
-            lock (this)
+            lock (_connections)
             {
                 //Logger.Log("Working through queues... ");
-                foreach (var connection in this)
+                foreach (var connection in _connections)
                 {
                     connection.workMessageQueue();
                 }
