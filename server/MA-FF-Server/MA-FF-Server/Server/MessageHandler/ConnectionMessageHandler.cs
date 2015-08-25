@@ -53,7 +53,7 @@ namespace WebAnalyzer.Server.MessageHandler
 
         private void respondToHandshake()
         {
-            Object msg = new { command = "connectionResponse", message = "Establishing Connection...", timestamp = Timestamp.GetMillisecondsUnixTimestamp() };
+            Object msg = new { command = "connectionResponse" };
 
             _connection.Out.OnNext(msg);
         }
