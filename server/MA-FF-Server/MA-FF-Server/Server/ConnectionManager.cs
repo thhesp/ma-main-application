@@ -131,6 +131,8 @@ namespace WebAnalyzer.Server
 
         private void WorkConnectionMessageQueues()
         {
+            checkConnectionQueues();
+
             lock (_connections)
             {
                 //Logger.Log("Working through queues... ");

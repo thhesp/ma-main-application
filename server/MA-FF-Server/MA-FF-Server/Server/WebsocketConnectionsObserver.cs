@@ -65,9 +65,9 @@ namespace WebAnalyzer.Server
              .Subscribe(new DataMessageHandler(_controller, connection));
 
             // fallover ==> echo
-           published.Where(msgIn => msgIn.command == null || Array.IndexOf(_commands, msgIn.command) == -1)
+           /*published.Where(msgIn => msgIn.command == null || Array.IndexOf(_commands, msgIn.command) == -1)
                .Subscribe(new EchoMessageHandler(_connectionManager, connection));
-
+            */
         }
     }
 }
