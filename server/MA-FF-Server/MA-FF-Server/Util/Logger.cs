@@ -41,6 +41,7 @@ namespace WebAnalyzer.Util
         {
             get { return _experimentName; }
             set {
+                checkExperimentLogLocation(value);
                 rotateLogs(value);
                 _experimentName = value;
             }
@@ -51,18 +52,19 @@ namespace WebAnalyzer.Util
             //Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "logs.txt"
             // Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "javascript-logs.txt"
             int logCount = Properties.Settings.Default.LogCount;
+
+            String baseDir = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation;
+
             for (int i = logCount; i >= 0; i--)
             {
-                String sourceLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "logs-" + i + ".txt";
-                String sourceJavascriptLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "javascript-logs-" + i + ".txt";
+                String sourceLogFile = baseDir + "logs-" + i + ".txt";
+                String sourceJavascriptLogFile = baseDir + "javascript-logs-" + i + ".txt";
 
                 if (i == 0)
                 {
-                    sourceLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "logs.txt";
-                    sourceJavascriptLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "javascript-logs.txt";
+                    sourceLogFile = baseDir + "logs.txt";
+                    sourceJavascriptLogFile = baseDir + "javascript-logs.txt";
                 }
-
-
 
                 if (i == logCount)
                 {
@@ -80,8 +82,8 @@ namespace WebAnalyzer.Util
                 }
                 else
                 {
-                    String destLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "logs-" + (i+1) + ".txt";
-                    String destJavascriptLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "javascript-logs-" + (i+1) + ".txt";
+                    String destLogFile = baseDir + "logs-" + (i + 1) + ".txt";
+                    String destJavascriptLogFile = baseDir + "javascript-logs-" + (i + 1) + ".txt";
 
 
                     if (File.Exists(sourceLogFile))
@@ -102,15 +104,18 @@ namespace WebAnalyzer.Util
             //Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName +"-logs.txt"
             // Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName + "-javascript-logs.txt"
             int logCount = Properties.Settings.Default.LogCount;
+
+            String baseDir = Properties.Settings.Default.Datalocation + experimentName + "\\" + Properties.Settings.Default.LogsLocation;
+
             for (int i = logCount; i >= 0; i--)
             {
-                String sourceLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName + "-logs-" + i + ".txt";
-                String sourceJavascriptLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName + "-javascript-logs-" + i + ".txt";
+                String sourceLogFile = baseDir + "logs-" + i + ".txt";
+                String sourceJavascriptLogFile = baseDir + "javascript-logs-" + i + ".txt";
 
                 if (i == 0)
                 {
-                    sourceLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName + "-logs.txt";
-                    sourceJavascriptLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName + "-javascript-logs.txt";
+                    sourceLogFile = baseDir + "logs.txt";
+                    sourceJavascriptLogFile = baseDir + "javascript-logs.txt";
                 }
 
 
@@ -131,8 +136,8 @@ namespace WebAnalyzer.Util
                 }
                 else
                 {
-                    String destLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName + "-logs-" + (i + 1) + ".txt";
-                    String destJavascriptLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName + "-javascript-logs-" + (i + 1) + ".txt";
+                    String destLogFile = baseDir + "logs-" + (i + 1) + ".txt";
+                    String destJavascriptLogFile = baseDir + "javascript-logs-" + (i + 1) + ".txt";
 
 
                     if (File.Exists(sourceLogFile))
@@ -153,13 +158,18 @@ namespace WebAnalyzer.Util
             FileIO.CheckPath(Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation, true);
         }
 
+        private void checkExperimentLogLocation(String experimentName)
+        {
+            FileIO.CheckPath(Properties.Settings.Default.Datalocation + experimentName + "\\" + Properties.Settings.Default.LogsLocation, true);
+        }
+
         private void Log(String message)
         {
             String filename = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "logs.txt";
 
             if (_experimentName != null)
             {
-                filename = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + ExperimentName + "-logs.txt";
+                filename = Properties.Settings.Default.Datalocation + ExperimentName + "\\" + Properties.Settings.Default.LogsLocation + "logs.txt";
             }
 
             try
@@ -187,7 +197,7 @@ namespace WebAnalyzer.Util
             String filename = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "javascript-logs.txt";
             if (_experimentName != null)
             {
-                filename = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + ExperimentName + "-javascript-logs.txt";
+                filename = Properties.Settings.Default.Datalocation + ExperimentName + "\\" + Properties.Settings.Default.LogsLocation + "javascript-logs.txt";
             }
 
 

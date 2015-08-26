@@ -107,7 +107,7 @@ namespace WebAnalyzer.Controller
 
             xmlDoc.AppendChild(testrun.ToXML(xmlDoc));
 
-            xmlDoc.Save(dir + "/" + timestamp + ".xml");
+            xmlDoc.Save(dir + "\\" + timestamp + ".xml");
 
             SaveExperimentFixations(experiment, currentParticipant, timestamp, testrun);
             SaveExperimentStatistics(experiment, currentParticipant, timestamp, testrun);
@@ -125,7 +125,7 @@ namespace WebAnalyzer.Controller
 
             xmlDoc.AppendChild(testrun.GenerateFixationXML(xmlDoc));
 
-            xmlDoc.Save(dir + "/" + timestamp + ".xml");
+            xmlDoc.Save(dir + "\\" + timestamp + ".xml");
             
 
             return true;
@@ -141,7 +141,7 @@ namespace WebAnalyzer.Controller
 
             xmlDoc.AppendChild(testrun.GenerateStatisticsXML(xmlDoc));
 
-            xmlDoc.Save(dir + "/" + timestamp + ".xml");
+            xmlDoc.Save(dir + "\\" + timestamp + ".xml");
 
 
             return true;
