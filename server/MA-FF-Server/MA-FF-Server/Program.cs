@@ -23,10 +23,6 @@ namespace WebAnalyzer
                 Properties.Settings.Default.Reset();
             }
 
-            //new HTMLUITest();
-
-            //new CommunicationTest();
-
             new WebAnalyzer();
         }
 

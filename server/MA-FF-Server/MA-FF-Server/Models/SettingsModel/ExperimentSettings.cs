@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Xml;
+using WebAnalyzer.Models.DataModel;
 
 namespace WebAnalyzer.Models.SettingsModel
 {
@@ -75,6 +76,21 @@ namespace WebAnalyzer.Models.SettingsModel
         public void DeleteDomain(DomainSettings domain)
         {
             _domains.Remove(domain);
+        }
+
+
+        public DomainSettings GetSettings(WebpageModel webpage)
+        {
+            foreach (DomainSettings setting in Domains)
+            {
+                if (setting.URLFitsSetting(webpage.Url))
+                {
+                    return setting;
+                }
+
+            }
+
+            return null;
         }
 
         public XmlNode ToXML(XmlDocument xmlDoc)

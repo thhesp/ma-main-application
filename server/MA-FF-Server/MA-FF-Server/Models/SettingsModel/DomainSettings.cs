@@ -99,6 +99,30 @@ namespace WebAnalyzer.Models.SettingsModel
             _aois.Remove(aoi);
         }
 
+        public Boolean URLFitsSetting(String url)
+        {
+            Uri urlURI = new Uri(url);
+            string urlHost = urlURI.Host;
+
+            Uri domainURI = new Uri(url);
+            string domainHost = domainURI.Host;
+
+            // check if the url host is the same as the domain host
+            if (urlHost.Equals(domainHost))
+            {
+                return true;
+            }
+
+            //if subdomains are included
+            if (IncludesSubdomains)
+            {
+                //check if url on the same domain
+
+            }
+
+            return false;
+        }
+
         public XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode domain = xmlDoc.CreateElement("domain-setting");
