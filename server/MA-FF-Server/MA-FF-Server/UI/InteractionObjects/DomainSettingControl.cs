@@ -66,6 +66,11 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         public void setDomain(String domain)
         {
+            if (!domain.Contains("http://") && !domain.Contains("https://"))
+            {
+                domain = "http://"+domain;
+            }
+
             _setting.Domain = domain;
         }
 
