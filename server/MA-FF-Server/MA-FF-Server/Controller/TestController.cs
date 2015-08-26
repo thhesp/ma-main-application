@@ -13,7 +13,7 @@ using WebAnalyzer.EyeTracking;
 using WebAnalyzer.Events;
 using WebAnalyzer.UI.InteractionObjects;
 
-namespace WebAnalyzer.Experiment
+namespace WebAnalyzer.Controller
 {
     class TestController
     {

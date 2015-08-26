@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 using System;
 
-using WebAnalyzer.Experiment;
+using WebAnalyzer.Controller;
 using WebAnalyzer.UI;
 using WebAnalyzer.ApplicationSettings;
 using WebAnalyzer.Util;

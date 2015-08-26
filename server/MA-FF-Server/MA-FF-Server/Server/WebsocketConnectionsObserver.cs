@@ -7,7 +7,7 @@ using System.Reactive.Linq;
 
 using WebAnalyzer.Server.MessageHandler;
 using WebAnalyzer.Util;
-using WebAnalyzer.Experiment;
+using WebAnalyzer.Controller;
 
 
 namespace WebAnalyzer.Server

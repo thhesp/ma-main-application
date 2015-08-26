@@ -14,7 +14,6 @@ using WebAnalyzer.Models.SettingsModel;
 using WebAnalyzer.Models.Base;
 using WebAnalyzer.UI.InteractionObjects;
 
-using WebAnalyzer.Experiment;
 using WebAnalyzer.Test.Communication;
 using WebAnalyzer.EyeTracking;
 using WebAnalyzer.Server;
