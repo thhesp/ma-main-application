@@ -155,35 +155,22 @@ namespace WebAnalyzer.Util
 
         private void Log(String message)
         {
-            
+            String filename = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "logs.txt";
+
             if (_experimentName != null)
             {
-                try
-                {
-                    using (StreamWriter w = File.AppendText(Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + ExperimentName + "-logs.txt"))
-                    {
-                        w.WriteLine(message);
-                    }
-                }
-                catch (IOException e)
-                {
-
-                }
-
+                filename = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + ExperimentName + "-logs.txt";
             }
-            else
-            {
-                try
-                {
-                    using (StreamWriter w = File.AppendText(Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "logs.txt"))
-                    {
-                        w.WriteLine(message);
-                    }
-                }
-                catch (IOException e)
-                {
 
+            try
+            {
+                using (StreamWriter w = File.AppendText(filename))
+                {
+                    w.WriteLine(message);
                 }
+            }
+            catch (IOException e)
+            {
 
             }
 
@@ -197,34 +184,22 @@ namespace WebAnalyzer.Util
         private void JavascriptLog(String message)
         {
 
+            String filename = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "javascript-logs.txt";
             if (_experimentName != null)
             {
-                try
-                {
-                    using (StreamWriter w = File.AppendText(Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + ExperimentName + "-javascript-logs.txt"))
-                    {
-                        w.WriteLine(message);
-                    }
-                }
-                catch (IOException e)
-                {
-
-                }
-
+                filename = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + ExperimentName + "-javascript-logs.txt";
             }
-            else
-            {
-                try
-                {
-                    using (StreamWriter w = File.AppendText(Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "javascript-logs.txt"))
-                    {
-                        w.WriteLine(message);
-                    }
-                }
-                catch (IOException e)
-                {
 
+
+            try
+            {
+                using (StreamWriter w = File.AppendText(filename))
+                {
+                    w.WriteLine(message);
                 }
+            }
+            catch (IOException e)
+            {
 
             }
 
