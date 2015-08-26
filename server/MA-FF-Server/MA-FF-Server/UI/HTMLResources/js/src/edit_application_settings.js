@@ -135,7 +135,7 @@ function saveData() {
 
     console.log('save settings...');
 
-    control.setWSPort($('#websocket-port').val());
+    control.setWSPort(parseInt($('#websocket-port').val()));
 
     control.setUseMouseTracking($('#use-mouse-tracking').prop("checked"));
 
@@ -143,11 +143,11 @@ function saveData() {
 
     control.setETSentIP($('#et-sent-ip').val());
 
-    control.setETSentPort($('#et-sent-port').val());
+    control.setETSentPort(parseInt($('#et-sent-port').val()));
 
     control.setETReceiveIP($('#et-receive-ip').val());
 
-    control.setETReceivePort($('#et-receive-port').val());
+    control.setETReceivePort(parseInt($('#et-receive-port').val()));
     
     control.saveSettings();
 }

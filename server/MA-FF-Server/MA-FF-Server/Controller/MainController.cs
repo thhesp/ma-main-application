@@ -113,7 +113,6 @@ namespace WebAnalyzer.Controller
                 _currentExperiment = LoadController.LoadExperiment(e.Path);
 
                 SetExpiermentData(_currentExperiment);
-                SetConnectionStati();
                 CloseExperimentWizard();
                 Logger.getInstance().ExperimentName = _currentExperiment.ExperimentName;
             }
@@ -131,12 +130,12 @@ namespace WebAnalyzer.Controller
         {
             mainUI.SetWSConnectionStatus(_testController.WSStatus);
             mainUI.SetTrackingConnectionStatus(_testController.TrackingStatus);
-            mainUI.ReloadPage();
         }
 
         private void SetExpiermentData(ExperimentModel experiment)
         {
             mainUI.SetExperimentData(experiment);
+            SetConnectionStati();
             mainUI.ReloadPage();
         }
 

@@ -44,7 +44,7 @@ namespace WebAnalyzer.EyeTracking
             m_EventCallback = new GetEventCallback(GetEventCallbackFunction);
         }
 
-        public Boolean connect(String sendip, String sendport, String receiveip, String receiveport)
+        public Boolean connect(String sendip, int sendport, String receiveip, int receiveport)
         {
             Logger.Log("Connect with "+sendip+":"+sendport+" to "+receiveip+":"+receiveport);
 
@@ -98,7 +98,7 @@ namespace WebAnalyzer.EyeTracking
 
 
 
-            return connect("127.0.0.1", "4444", "127.0.0.1", "5555");
+            return connect("127.0.0.1", 4444, "127.0.0.1", 5555);
         }
 
         /// <summary>

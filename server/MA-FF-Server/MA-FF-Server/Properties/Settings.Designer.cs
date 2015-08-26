@@ -112,10 +112,10 @@ namespace WebAnalyzer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("true")]
-        public string UseMouseTracking {
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool UseMouseTracking {
             get {
-                return ((string)(this["UseMouseTracking"]));
+                return ((bool)(this["UseMouseTracking"]));
             }
             set {
                 this["UseMouseTracking"] = value;
@@ -125,9 +125,9 @@ namespace WebAnalyzer.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("8888")]
-        public string WebsocketPort {
+        public int WebsocketPort {
             get {
-                return ((string)(this["WebsocketPort"]));
+                return ((int)(this["WebsocketPort"]));
             }
             set {
                 this["WebsocketPort"] = value;
@@ -136,10 +136,10 @@ namespace WebAnalyzer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("true")]
-        public string ETConnectLocal {
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ETConnectLocal {
             get {
-                return ((string)(this["ETConnectLocal"]));
+                return ((bool)(this["ETConnectLocal"]));
             }
             set {
                 this["ETConnectLocal"] = value;
@@ -161,9 +161,9 @@ namespace WebAnalyzer.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("5555")]
-        public string ETReceivePort {
+        public int ETReceivePort {
             get {
-                return ((string)(this["ETReceivePort"]));
+                return ((int)(this["ETReceivePort"]));
             }
             set {
                 this["ETReceivePort"] = value;
@@ -185,9 +185,9 @@ namespace WebAnalyzer.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("5555")]
-        public string ETSentPort {
+        public int ETSentPort {
             get {
-                return ((string)(this["ETSentPort"]));
+                return ((int)(this["ETSentPort"]));
             }
             set {
                 this["ETSentPort"] = value;
@@ -209,9 +209,9 @@ namespace WebAnalyzer.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("5")]
-        public string LogCount {
+        public int LogCount {
             get {
-                return ((string)(this["LogCount"]));
+                return ((int)(this["LogCount"]));
             }
             set {
                 this["LogCount"] = value;

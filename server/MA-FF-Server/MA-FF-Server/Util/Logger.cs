@@ -50,7 +50,7 @@ namespace WebAnalyzer.Util
         {
             //Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "logs.txt"
             // Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "javascript-logs.txt"
-            int logCount = int.Parse(Properties.Settings.Default.LogCount);
+            int logCount = Properties.Settings.Default.LogCount;
             for (int i = logCount; i >= 0; i--)
             {
                 String sourceLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + "logs-" + i + ".txt";
@@ -101,7 +101,7 @@ namespace WebAnalyzer.Util
         {
             //Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName +"-logs.txt"
             // Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName + "-javascript-logs.txt"
-            int logCount = int.Parse(Properties.Settings.Default.LogCount);
+            int logCount = Properties.Settings.Default.LogCount;
             for (int i = logCount; i >= 0; i--)
             {
                 String sourceLogFile = Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation + experimentName + "-logs-" + i + ".txt";

@@ -22,6 +22,7 @@ namespace WebAnalyzer.Experiment
         private EyeTrackingModel _etModel;
 
         private Boolean _ETWarning = false;
+        private Boolean _WSWarning = false;
 
         private WebsocketServer _wsServer;
 
@@ -63,8 +64,14 @@ namespace WebAnalyzer.Experiment
 
             get
             {
+                if (_WSWarning)
+                {
+                    return ExperimentObject.CONNECTION_STATUS.warning;
+                }
+
                 if (_wsServer != null)
                 {
+
                     return ExperimentObject.CONNECTION_STATUS.connected;
                 }
 
@@ -74,36 +81,41 @@ namespace WebAnalyzer.Experiment
 
         public ExperimentObject.CONNECTION_STATUS TrackingStatus
         {
-
+            
             get
             {
+                return GetTrackingStatus();
+            }
+        }
 
-                if (Boolean.Parse(Properties.Settings.Default.UseMouseTracking))
+        private ExperimentObject.CONNECTION_STATUS GetTrackingStatus()
+        {
+            if (Properties.Settings.Default.UseMouseTracking)
+            {
+                Logger.Log("Get MouseTrackingStatus....");
+                if (_debugModel != null)
                 {
-                    if (_debugModel != null)
-                    {
-                        return ExperimentObject.CONNECTION_STATUS.connected;
-                    }
-
-                    return ExperimentObject.CONNECTION_STATUS.disconnected;
+                    return ExperimentObject.CONNECTION_STATUS.connected;
                 }
-                else
+
+                return ExperimentObject.CONNECTION_STATUS.disconnected;
+            }
+            else
+            {
+                Logger.Log("Get EyeTrackingStatus....");
+                if (_ETWarning)
                 {
-                    if (_etModel != null)
-                    {
-                        if (_ETWarning)
-                        {
-                            return ExperimentObject.CONNECTION_STATUS.warning;
-                        }
-
-                        if (_etModel.isConnected() == 0) // RET_SUCCESS
-                        {
-                            return ExperimentObject.CONNECTION_STATUS.connected;
-                        }
-                    }
-
-                    return ExperimentObject.CONNECTION_STATUS.disconnected;
+                    return ExperimentObject.CONNECTION_STATUS.warning;
                 }
+
+
+                if (_etModel != null
+                    && _etModel.isConnected() == 0) // RET_SUCCESS
+                {
+                    return ExperimentObject.CONNECTION_STATUS.connected;
+                }
+
+                return ExperimentObject.CONNECTION_STATUS.disconnected;
             }
         }
 
@@ -116,11 +128,23 @@ namespace WebAnalyzer.Experiment
         public void PrepareServices()
         {
             Logger.Log("Prepare Services");
-            _wsServer = new WebsocketServer(this);
 
-            _wsServer.start(int.Parse(Properties.Settings.Default.WebsocketPort));
+            try
+            {
 
-            if (Boolean.Parse(Properties.Settings.Default.UseMouseTracking))
+                _wsServer = new WebsocketServer(this);
+
+                _wsServer.start(Properties.Settings.Default.WebsocketPort);
+
+            }
+            catch (Exception e)
+            {
+                Logger.Log("WSException: " + e.Source + "-" + e.Message);
+
+                _WSWarning = true;
+            }
+
+            if (Properties.Settings.Default.UseMouseTracking)
             {
                 _debugModel = new MouseModel();
 
@@ -129,19 +153,32 @@ namespace WebAnalyzer.Experiment
             }
             else
             {
-                _etModel = new EyeTrackingModel();
 
-                _etModel.PrepareGaze += On_PrepareGazeData;
-
-
-                if (Boolean.Parse(Properties.Settings.Default.ETConnectLocal))
+                try
                 {
-                    _ETWarning = _etModel.connectLocal();
+                    _etModel = new EyeTrackingModel();
+
+                    _etModel.PrepareGaze += On_PrepareGazeData;
+
+
+                    if (Properties.Settings.Default.ETConnectLocal)
+                    {
+                        _ETWarning = !_etModel.connectLocal();
+                    }
+                    else
+                    {
+                        _ETWarning = !_etModel.connect(Properties.Settings.Default.ETSentIP, Properties.Settings.Default.ETSentPort, Properties.Settings.Default.ETReceiveIP, Properties.Settings.Default.ETReceivePort);
+                    }
+
+                    Logger.Log("ET_Warning????" + _ETWarning.ToString());
                 }
-                else
+                catch (Exception e)
                 {
-                    _ETWarning = _etModel.connect(Properties.Settings.Default.ETSentIP, Properties.Settings.Default.ETSentPort, Properties.Settings.Default.ETReceiveIP, Properties.Settings.Default.ETReceivePort);
+                    Logger.Log("EyeTrackingException: " + e.Source + "-" + e.Message);
+
+                    _ETWarning = true;
                 }
+
             }
         }
 
@@ -151,7 +188,7 @@ namespace WebAnalyzer.Experiment
             {
                 StopTest();
             }
-            
+
             _wsServer.stop();
 
             if (_debugModel != null)
@@ -159,7 +196,7 @@ namespace WebAnalyzer.Experiment
                 _debugModel.PrepareGaze -= On_PrepareGazeData;
                 _debugModel = null;
             }
-            if(_etModel != null)
+            if (_etModel != null)
             {
                 _etModel.disconnect();
 
@@ -175,11 +212,12 @@ namespace WebAnalyzer.Experiment
             _running = true;
             _dataCollected = false;
             // set listeners
-            if (Boolean.Parse(Properties.Settings.Default.UseMouseTracking))
+            if (Properties.Settings.Default.UseMouseTracking)
             {
                 _debugModel.startTracking();
             }
-            else{
+            else
+            {
                 _etModel.startTracking();
             }
         }
@@ -190,7 +228,7 @@ namespace WebAnalyzer.Experiment
             _running = false;
             // stop server etc.
 
-            if (Boolean.Parse(Properties.Settings.Default.UseMouseTracking))
+            if (Properties.Settings.Default.UseMouseTracking)
             {
                 if (_debugModel != null)
                 {

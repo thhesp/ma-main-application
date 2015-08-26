@@ -16,24 +16,24 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         private Boolean _useMouseTracking;
 
-        private String _wsPort;
+        private int _wsPort;
 
         private Boolean _ETConnectLocal;
         private String _ETSentIP;
-        private String _ETSentPort;
+        private int _ETSentPort;
         private String _ETReceiveIP;
-        private String _ETReceivePort;
+        private int _ETReceivePort;
 
 
         public ApplicationSettingsObj(EditApplicationSettings form)
         {
             _form = form;
 
-            _useMouseTracking = Boolean.Parse(Properties.Settings.Default.UseMouseTracking);
+            _useMouseTracking = Properties.Settings.Default.UseMouseTracking;
 
             _wsPort = Properties.Settings.Default.WebsocketPort;
 
-            _ETConnectLocal = Boolean.Parse(Properties.Settings.Default.ETConnectLocal);
+            _ETConnectLocal = Properties.Settings.Default.ETConnectLocal;
 
             _ETSentIP = Properties.Settings.Default.ETSentIP;
 
@@ -57,11 +57,11 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         private void SaveData()
         {
-            Properties.Settings.Default.UseMouseTracking = _useMouseTracking.ToString();
+            Properties.Settings.Default.UseMouseTracking = _useMouseTracking;
 
             Properties.Settings.Default.WebsocketPort = _wsPort;
 
-            Properties.Settings.Default.ETConnectLocal = _ETConnectLocal.ToString();
+            Properties.Settings.Default.ETConnectLocal = _ETConnectLocal;
 
             Properties.Settings.Default.ETSentIP = _ETSentIP;
 
@@ -103,12 +103,12 @@ namespace WebAnalyzer.UI.InteractionObjects
             return _ETConnectLocal;
         }
 
-        public void setWSPort(String wsPort)
+        public void setWSPort(int wsPort)
         {
             _wsPort = wsPort;
         }
 
-        public String getWSPort()
+        public int getWSPort()
         {
             return _wsPort;
         }
@@ -123,12 +123,12 @@ namespace WebAnalyzer.UI.InteractionObjects
             return _ETSentIP;
         }
 
-        public void setETSentPort(String sentPort)
+        public void setETSentPort(int sentPort)
         {
             _ETSentPort = sentPort;
         }
 
-        public String getETSentPort()
+        public int getETSentPort()
         {
             return _ETSentPort;
         }
@@ -143,12 +143,12 @@ namespace WebAnalyzer.UI.InteractionObjects
             return _ETReceiveIP;
         }
 
-        public void setETReceivePort(String receivePort)
+        public void setETReceivePort(int receivePort)
         {
             _ETReceivePort = receivePort;
         }
 
-        public String getETReceivePort()
+        public int getETReceivePort()
         {
             return _ETReceivePort;
         }
