@@ -85,7 +85,7 @@ namespace WebAnalyzer.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("data\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("data\\{1}\\raw")]
         public string RawdataLocation {
             get {
                 return ((string)(this["RawdataLocation"]));
@@ -94,7 +94,7 @@ namespace WebAnalyzer.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("fixations\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("data\\{1}\\fixations\\")]
         public string FixdataLocation {
             get {
                 return ((string)(this["FixdataLocation"]));
@@ -103,7 +103,7 @@ namespace WebAnalyzer.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("statistics\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("data\\{1}\\statistics\\")]
         public string StatisticsLocation {
             get {
                 return ((string)(this["StatisticsLocation"]));
