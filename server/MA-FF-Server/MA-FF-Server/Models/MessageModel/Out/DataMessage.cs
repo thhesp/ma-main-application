@@ -48,6 +48,45 @@ namespace WebAnalyzer.Models.MessageModel
             return this;
         }
 
+        public String UniqueID
+        {
+            get { return _uniqueId; }
+            set { _uniqueId = value; }
+        }
+
+
+        public String RequestTimestamp
+        {
+            get { return _requestTimestamp; }
+            set { _requestTimestamp = value; }
+        }
+
+
+        public Double LeftX
+        {
+            get { return _leftX; }
+            set { _leftX = value; }
+        }
+
+        public Double LeftY
+        {
+            get { return _leftY; }
+            set { _leftY = value; }
+        }
+
+
+        public Double RightX
+        {
+            get { return _rightX; }
+            set { _rightX = value; }
+        }
+
+        public Double RightY
+        {
+            get { return _rightY; }
+            set { _rightY = value; }
+        }
+
         public string ToJson()
         {
             StringWriter sw = new StringWriter();

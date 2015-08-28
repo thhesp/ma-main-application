@@ -141,13 +141,16 @@
     <Compile Include="Models\Base\ExperimentModel.cs" />
     <Compile Include="Models\Base\ExperimentParticipant.cs" />
     <Compile Include="Models\Base\UIDBase.cs" />
+    <Compile Include="Models\MessageModel\In\ConnectionMessage.cs" />
+    <Compile Include="Models\MessageModel\In\InDataMessage.cs" />
+    <Compile Include="Models\MessageModel\In\InSmallDataMessage.cs" />
     <Compile Include="Models\SettingsModel\AOISettings.cs" />
     <Compile Include="Models\SettingsModel\DomainSettings.cs" />
     <Compile Include="Models\SettingsModel\ExperimentSettings.cs" />
     <Compile Include="Controller\ExportController.cs" />
     <Compile Include="Models\Base\BasicRawData.cs" />
-    <Compile Include="Models\MessageModel\DataMessage.cs" />
-    <Compile Include="Models\MessageModel\EchoMessage.cs" />
+    <Compile Include="Models\MessageModel\Out\DataMessage.cs" />
+    <Compile Include="Models\MessageModel\Out\EchoMessage.cs" />
     <Compile Include="Models\MessageModel\Message.cs" />
     <Compile Include="Models\DataModel\AttributeModel.cs" />
     <Compile Include="Models\DataModel\DOMElementModel.cs" />
@@ -158,7 +161,7 @@
     <Compile Include="Models\DataModel\WebpageModel.cs" />
     <Compile Include="Models\EventModel\ClickEventModel.cs" />
     <Compile Include="Models\EventModel\ScrollEventModel.cs" />
-    <Compile Include="Models\MessageModel\SmallDataMessage.cs" />
+    <Compile Include="Models\MessageModel\Out\SmallDataMessage.cs" />
     <Compile Include="Models\SettingsModel\ExpressionTree\Node.cs" />
     <Compile Include="Models\SettingsModel\ExpressionTree\AndNode.cs" />
     <Compile Include="Models\SettingsModel\ExpressionTree\NotNode.cs" />

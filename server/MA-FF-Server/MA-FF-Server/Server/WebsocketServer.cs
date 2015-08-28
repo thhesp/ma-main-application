@@ -19,6 +19,7 @@ using vtortola.WebSockets.Deflate;
 using System.Security.Cryptography.X509Certificates;
 using WebAnalyzer.Util;
 using WebAnalyzer.Controller;
+using WebAnalyzer.Models.MessageModel;
 
 namespace WebAnalyzer.Server
 {
@@ -81,11 +82,11 @@ namespace WebAnalyzer.Server
             Observable.FromAsync(server.AcceptWebSocketAsync)
                 .Select(ws => new WebsocketConnection(ws)
                 {
-                    In = Observable.FromAsync<dynamic>(ws.ReadDynamicAsync)
+                    In = Observable.FromAsync<Message>(ws.ReadDynamicAsync)
                                                 .DoWhile(() => ws.IsConnected)
                                                 .Where(msg => msg != null),
 
-                    Out = Observer.Create<String>(ws.WriteDynamic)
+                    Out = Observer.Create<String>(ws.WriteString)
                 })
                 .DoWhile(() => server.IsStarted && !cancellation.IsCancellationRequested)
                 .Subscribe(messagesObserver);

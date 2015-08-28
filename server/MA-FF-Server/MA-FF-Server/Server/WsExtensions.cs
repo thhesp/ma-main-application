@@ -10,20 +10,24 @@ using System.Threading.Tasks;
 using vtortola.WebSockets;
 
 using WebAnalyzer.Util;
+using WebAnalyzer.Models.MessageModel;
 
 namespace WebAnalyzer.Server
 {
     public static class WsExtensions
     {
 
-        public static async Task<dynamic> ReadDynamicAsync(this WebSocket ws, CancellationToken cancel)
+        public static async Task<Message> ReadDynamicAsync(this WebSocket ws, CancellationToken cancel)
         {
             var message = await ws.ReadMessageAsync(cancel);
             if (message != null)
             {
                 using (var sr = new StreamReader(message, Encoding.UTF8))
                 {
-                    return (dynamic)JObject.Load(new JsonTextReader(sr));
+
+                    return Message.FromJson(new JsonTextReader(sr));
+
+                    //return (dynamic)JObject.Load(new JsonTextReader(sr));
                 }
             }
             else
@@ -31,16 +35,15 @@ namespace WebAnalyzer.Server
 
         }
 
-        public static void WriteDynamic(this WebSocket ws, String data)
+        public static void WriteString(this WebSocket ws, String data)
         {
-            //JsonSerializer serializer = new JsonSerializer();
             using (var writer = ws.CreateMessageWriter(WebSocketMessageType.Text))
             {
                 using (var sw = new StreamWriter(writer, Encoding.UTF8))
                 {
                     sw.WriteAsync(data);
                 }
-            }       
+            }
         }
 
     }

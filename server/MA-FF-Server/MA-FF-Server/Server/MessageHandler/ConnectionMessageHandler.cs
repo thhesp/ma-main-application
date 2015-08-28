@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using WebAnalyzer.Util;
 
 using WebAnalyzer.Events;
+using WebAnalyzer.Models.MessageModel;
 
 namespace WebAnalyzer.Server.MessageHandler
 {
@@ -33,18 +34,27 @@ namespace WebAnalyzer.Server.MessageHandler
 
         public void OnNext(Object omsgIn)
         {
-            dynamic msgIn = omsgIn;
+            ConnectionMessage msgIn = (ConnectionMessage) omsgIn;
 
             Logger.Log("Message received: " + msgIn);
 
             // extract data from json object and handle it
-            String command = msgIn.command;
+            /*String command = msgIn.command;
 
             if(command.Equals("connectRequest"))
             {
                 respondToHandshake();
             }
             else if(command.Equals("connectComplete"))
+            {
+                completeHandshake();
+            }*/
+
+            if (msgIn.Type == ConnectionMessage.CONNECTION_MESSAGE_TYPE.REQUEST)
+            {
+                respondToHandshake();
+            }
+            else if (msgIn.Type == ConnectionMessage.CONNECTION_MESSAGE_TYPE.COMPLETE)
             {
                 completeHandshake();
             }

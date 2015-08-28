@@ -16,7 +16,7 @@ namespace WebAnalyzer.Server
 
         private static int TIMEOUT = 500;
 
-        public IObservable<dynamic> In { get; set; }
+        public IObservable<Message> In { get; set; }
         public IObserver<String> Out { get; set; }
 
         readonly WebSocket _ws;

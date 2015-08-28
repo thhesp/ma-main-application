@@ -8,6 +8,7 @@ using System.Reactive.Linq;
 using WebAnalyzer.Server.MessageHandler;
 using WebAnalyzer.Util;
 using WebAnalyzer.Controller;
+using WebAnalyzer.Models.MessageModel;
 
 
 namespace WebAnalyzer.Server
@@ -18,8 +19,8 @@ namespace WebAnalyzer.Server
         TestController _controller;
 
         string[] _commands = {
-            "connectionRequest",
-            "connectionComplete",
+            "connectRequest",
+            "connectComplete",
             "data",
             "event",
             "error"
@@ -48,14 +49,13 @@ namespace WebAnalyzer.Server
             ConnectionMessageHandler connectMsg = new ConnectionMessageHandler(connection);
             connectMsg.AddConnection += _connectionManager.On_AddConnection;
 
-            // connectiong
-            published.Where(msgIn => msgIn.command != null && (msgIn.command == "connectRequest" || msgIn.command == "connectComplete"))
-                .Subscribe(connectMsg);
+            published.Where(msgIn => msgIn != null && msgIn is ConnectionMessage)
+               .Subscribe(connectMsg);
 
             // data
-           published.Where(msgIn => msgIn.command != null && msgIn.command == "data")
+            published.Where(msgIn => msgIn != null && (msgIn is InDataMessage ||  msgIn is InSmallDataMessage))
                .Subscribe(new DataMessageHandler(_controller, connection));
-
+            /*
             //event
            published.Where(msgIn => msgIn.command != null && msgIn.command == "event")
               .Subscribe(new DataMessageHandler(_controller, connection));
@@ -63,7 +63,7 @@ namespace WebAnalyzer.Server
             //error
            published.Where(msgIn => msgIn.command != null && msgIn.command == "error")
              .Subscribe(new DataMessageHandler(_controller, connection));
-
+            */
             // fallover ==> echo
            /*published.Where(msgIn => msgIn.command == null || Array.IndexOf(_commands, msgIn.command) == -1)
                .Subscribe(new EchoMessageHandler(_connectionManager, connection));
