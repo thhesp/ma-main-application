@@ -76,10 +76,6 @@ namespace WebAnalyzer.Models.MessageModel
             //@TODO: ERROR checking + complex messages
             String property = string.Empty;
 
-            Boolean attributes = false;
-
-            List<String> attributeList = new List<String>();
-
             Boolean element = false;
 
             DOMElementModel leftElement = new DOMElementModel();
@@ -97,18 +93,20 @@ namespace WebAnalyzer.Models.MessageModel
             {
                 if (reader.Value != null)
                 {
+                    //Console.WriteLine("Token: {0}, Value: {1}", reader.TokenType, reader.Value);
                     //get property ==> name of field
                     if (reader.TokenType == JsonToken.PropertyName)
                     {
                         property = reader.Value.ToString();
+
+                        if (property == "attributes")
+                        {
+                            ExtractAttributes(reader, leftElement);
+                        }
                         continue;
                     }
 
-                    if (attributes && reader.TokenType == JsonToken.String)
-                    {
-                        leftElement.AddAttribute(property, reader.Value.ToString());
-                    }
-                    else if (element && (reader.TokenType == JsonToken.Integer || reader.TokenType == JsonToken.Float))
+                    if (element && (reader.TokenType == JsonToken.Integer || reader.TokenType == JsonToken.Float))
                     {
                         Double value = Double.Parse(reader.Value.ToString());
 
@@ -188,21 +186,9 @@ namespace WebAnalyzer.Models.MessageModel
                 else
                 {
                     // Process tracking the current nested element
-
-                    if (property == "attributes" && reader.TokenType == JsonToken.StartArray)
-                    {
-                        attributes = true;
-                    }
-
                     if (property == "element" && reader.TokenType == JsonToken.StartObject)
                     {
                         element = true;
-                    }
-
-
-                    if (attributes && reader.TokenType == JsonToken.EndArray)
-                    {
-                        attributes = false;
                     }
 
                     if (element && reader.TokenType == JsonToken.EndObject)
@@ -216,12 +202,84 @@ namespace WebAnalyzer.Models.MessageModel
             if (rightElement == null)
             {
                 rightElement = leftElement;
+            }else{
+                msg.Type = InDataMessage.MESSAGE_TYPE.NORMAL;
             }
 
             msg.LeftElement = leftElement;
             msg.RightElement = rightElement;
 
             return msg;
+        }
+
+        private static void ExtractAttributes(JsonTextReader reader, DOMElementModel element){
+
+            String property = "";
+
+            String name = "";
+            String value = "";
+
+            Boolean endObj = false;
+
+            while (reader.Read())
+            {
+                if (reader.Value != null)
+                {
+                    endObj = false;
+                    //Console.WriteLine("In Attributes... Token: {0}, Value: {1}", reader.TokenType, reader.Value);
+
+                    if (reader.TokenType == JsonToken.PropertyName)
+                        property = reader.Value.ToString();
+
+                    if (property == "name" && reader.TokenType == JsonToken.String)
+                    {
+                        name = reader.Value.ToString();
+                    }
+
+
+                    if (property == "value" && reader.TokenType == JsonToken.String)
+                    {
+                        value = reader.Value.ToString();
+                    }
+
+                    if (name != "" && value != "")
+                    {
+                        //Console.WriteLine("Name: {0}, Value: {1}", name, value);
+
+                        element.AddAttribute(name, value);
+
+                        if (name == "id")
+                        {
+                            element.ID = value;
+                        }
+                        else if (name == "title")
+                        {
+                            element.Title = value;
+                        }
+                        else if (name == "class")
+                        {
+                            element.AddClasses(value);
+                        }
+
+                        name = "";
+                        value = "";
+                    }
+                }
+                else
+                {
+                    if (reader.TokenType == JsonToken.EndObject)
+                    {
+                        endObj = true;
+                    }
+
+                    //attributes should end here
+                    if (endObj && reader.TokenType == JsonToken.EndArray)
+                    {
+                        return;
+                    }
+                }
+            }
+
         }
     }
 
