@@ -1,4 +1,6 @@
-﻿(function () {
+﻿/*
+
+(function () {
     var oldLog = console.log;
     console.log = function (message) {
         if (typeof control != 'undefined') {
@@ -11,6 +13,7 @@
         oldLog.apply(console, arguments);
     };
 
+    
     var oldErr = console.err;
     console.err = function (message) {
         if (typeof control != 'undefined') {
@@ -22,7 +25,7 @@
         }
         oldErr.apply(console, arguments);
     };
-
+    
     var oldInfo = console.info;
     console.info = function (message) {
         if (typeof control != 'undefined') {
@@ -47,6 +50,7 @@
         oldAlert.apply(this, arguments);
     };
 
+    
     var oldWindowError = window.onerror;
     window.onerror = function (message, file, line) {
         if (typeof control != 'undefined') {
@@ -58,4 +62,7 @@
         }
         oldWindowError.apply(window, arguments);
     };
+    
 })();
+
+*/

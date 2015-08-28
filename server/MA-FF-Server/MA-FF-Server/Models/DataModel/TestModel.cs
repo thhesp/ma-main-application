@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Xml;
 
 using WebAnalyzer.Util;
+using WebAnalyzer.Models.SettingsModel;
 
 namespace WebAnalyzer.Models.DataModel
 {
@@ -211,6 +212,28 @@ namespace WebAnalyzer.Models.DataModel
             foreach (WebpageModel page in _visitedPages)
             {
                 webpagesNode.AppendChild(page.GenerateFixationXML(xmlDoc));
+            }
+
+            experimentNode.AppendChild(webpagesNode);
+
+            return experimentNode;
+        }
+
+        public XmlNode GenerateAOIXML(ExperimentSettings settings, XmlDocument xmlDoc)
+        {
+            XmlNode experimentNode = xmlDoc.CreateElement("experiment");
+
+            XmlAttribute visitedWebpagesCount = xmlDoc.CreateAttribute("count-of-visited-pages");
+
+            visitedWebpagesCount.Value = this._visitedPages.Count.ToString();
+
+            experimentNode.Attributes.Append(visitedWebpagesCount);
+
+            XmlNode webpagesNode = xmlDoc.CreateElement("webpages");
+
+            foreach (WebpageModel page in _visitedPages)
+            {
+                webpagesNode.AppendChild(page.GenerateAOIXML(settings, xmlDoc));
             }
 
             experimentNode.AppendChild(webpagesNode);

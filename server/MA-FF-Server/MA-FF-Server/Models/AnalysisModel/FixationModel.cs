@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using System.Xml;
 
 using WebAnalyzer.Models.DataModel;
+using WebAnalyzer.Models.SettingsModel;
 
 namespace WebAnalyzer.Models.AnalysisModel
 {
-    class FixationModel
+    public class FixationModel
     {
 
         private long _duration = 0;
@@ -90,14 +91,11 @@ namespace WebAnalyzer.Models.AnalysisModel
         {
             XmlNode fixationNode = xmlDoc.CreateElement("fixation");
 
-
             XmlAttribute duration = xmlDoc.CreateAttribute("duration");
 
             duration.Value = this.Duration.ToString();
 
             fixationNode.Attributes.Append(duration);
-
-
 
             XmlAttribute startX = xmlDoc.CreateAttribute("startX");
 
@@ -134,6 +132,73 @@ namespace WebAnalyzer.Models.AnalysisModel
             fixationNode.AppendChild(gazesNode);
 
             return fixationNode;
+        }
+
+        public XmlNode ToAOIXML(ExperimentSettings settings, WebpageModel page, String eye, XmlDocument xmlDoc)
+        {
+
+            String aoi = ""; ;
+
+            if(eye == "left"){
+                 aoi = settings.GetAOI(page, GetRelatedGazes()[0].LeftEye.Element);
+            }else if(eye == "right"){
+                 aoi = settings.GetAOI(page, GetRelatedGazes()[0].RightEye.Element);
+            }
+
+            if(aoi == ""){
+                return null;
+            }
+
+            XmlNode aoiNode = xmlDoc.CreateElement("aoi");
+
+            XmlAttribute identifier = xmlDoc.CreateAttribute("identifier");
+
+            identifier.Value = aoi;
+
+            aoiNode.Attributes.Append(identifier);
+
+            XmlAttribute duration = xmlDoc.CreateAttribute("duration");
+
+            duration.Value = this.Duration.ToString();
+
+            aoiNode.Attributes.Append(duration);
+
+
+            XmlAttribute startX = xmlDoc.CreateAttribute("startX");
+
+            startX.Value = this.StartX.ToString();
+
+            aoiNode.Attributes.Append(startX);
+
+            XmlAttribute startY = xmlDoc.CreateAttribute("startY");
+
+            startY.Value = this.StartY.ToString();
+
+            aoiNode.Attributes.Append(startY);
+
+            XmlAttribute endX = xmlDoc.CreateAttribute("endX");
+
+            endX.Value = this.EndX.ToString();
+
+            aoiNode.Attributes.Append(endX);
+
+            XmlAttribute endY = xmlDoc.CreateAttribute("endY");
+
+            endY.Value = this.EndY.ToString();
+
+            aoiNode.Attributes.Append(endY);
+
+
+            XmlNode gazesNode = xmlDoc.CreateElement("related-gazes");
+
+            foreach (GazeModel gaze in _relatedGazes)
+            {
+                gazesNode.AppendChild(gaze.ToXML(xmlDoc));
+            }
+
+            aoiNode.AppendChild(gazesNode);
+
+            return aoiNode;
         }
 
         #endregion

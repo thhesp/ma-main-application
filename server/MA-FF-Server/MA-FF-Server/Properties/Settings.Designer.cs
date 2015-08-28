@@ -217,5 +217,17 @@ namespace WebAnalyzer.Properties {
                 this["LogCount"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("data\\{1}\\aoi\\")]
+        public string AOILocation {
+            get {
+                return ((string)(this["AOILocation"]));
+            }
+            set {
+                this["AOILocation"] = value;
+            }
+        }
     }
 }

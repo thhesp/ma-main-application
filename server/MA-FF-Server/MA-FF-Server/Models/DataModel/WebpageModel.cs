@@ -7,6 +7,7 @@ using System.Xml;
 
 using WebAnalyzer.Models.AnalysisModel;
 using WebAnalyzer.Util;
+using WebAnalyzer.Models.SettingsModel;
 
 namespace WebAnalyzer.Models.DataModel
 {
@@ -249,6 +250,76 @@ namespace WebAnalyzer.Models.DataModel
             fixationsNode.AppendChild(rightEyeNode);
 
             webpageNode.AppendChild(fixationsNode);
+
+
+            return webpageNode;
+        }
+
+        public XmlNode GenerateAOIXML(ExperimentSettings settings, XmlDocument xmlDoc)
+        {
+            ExtractFixations();
+
+            XmlNode webpageNode = xmlDoc.CreateElement("webpage");
+
+            XmlAttribute url = xmlDoc.CreateAttribute("url");
+
+            url.Value = this.Url;
+
+            webpageNode.Attributes.Append(url);
+
+            XmlAttribute visited = xmlDoc.CreateAttribute("visited");
+
+            visited.Value = this.VisitTimestamp;
+
+            webpageNode.Attributes.Append(visited);
+
+
+            // insert fixations
+
+            XmlNode aoisNode = xmlDoc.CreateElement("aois");
+
+            XmlNode leftEyeNode = xmlDoc.CreateElement("left-eye");
+
+            XmlAttribute leftFixationsCount = xmlDoc.CreateAttribute("count-of-fixations");
+
+            leftFixationsCount.Value = _leftFixationData.Count.ToString();
+
+            leftEyeNode.Attributes.Append(leftFixationsCount);
+
+            foreach (FixationModel data in _leftFixationData)
+            {
+                XmlNode node = data.ToAOIXML(settings, this, "left", xmlDoc);
+
+                if (node != null)
+                {
+                    leftEyeNode.AppendChild(node);
+                }
+            }
+
+            aoisNode.AppendChild(leftEyeNode);
+
+            XmlNode rightEyeNode = xmlDoc.CreateElement("right-eye");
+
+            XmlAttribute rightFixationsCount = xmlDoc.CreateAttribute("count-of-fixations");
+
+            rightFixationsCount.Value = _rightFixationData.Count.ToString();
+
+            rightEyeNode.Attributes.Append(rightFixationsCount);
+
+            foreach (FixationModel data in _rightFixationData)
+            {
+
+                XmlNode node = data.ToAOIXML(settings, this, "right", xmlDoc);
+
+                if (node != null)
+                {
+                    leftEyeNode.AppendChild(node);
+                }
+            }
+
+            aoisNode.AppendChild(rightEyeNode);
+
+            webpageNode.AppendChild(aoisNode);
 
 
             return webpageNode;

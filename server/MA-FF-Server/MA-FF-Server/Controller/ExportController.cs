@@ -111,6 +111,7 @@ namespace WebAnalyzer.Controller
 
             SaveExperimentFixations(experiment, currentParticipant, timestamp, testrun);
             SaveExperimentStatistics(experiment, currentParticipant, timestamp, testrun);
+            SaveExperimentAOI(experiment, currentParticipant, timestamp, testrun);
 
             return true;
         }
@@ -140,6 +141,22 @@ namespace WebAnalyzer.Controller
             XmlDocument xmlDoc = new XmlDocument();
 
             xmlDoc.AppendChild(testrun.GenerateStatisticsXML(xmlDoc));
+
+            xmlDoc.Save(dir + "\\" + timestamp + ".xml");
+
+
+            return true;
+        }
+
+        public static Boolean SaveExperimentAOI(ExperimentModel experiment, ExperimentParticipant currentParticipant, String timestamp, TestModel testrun)
+        {
+            String dir = experiment.GetBaseExperimentLocation();
+            dir += Properties.Settings.Default.AOILocation.Replace("{1}", currentParticipant.Identifier);
+
+            FileIO.CheckPath(dir);
+            XmlDocument xmlDoc = new XmlDocument();
+
+            xmlDoc.AppendChild(testrun.GenerateAOIXML(experiment.Settings, xmlDoc));
 
             xmlDoc.Save(dir + "\\" + timestamp + ".xml");
 
