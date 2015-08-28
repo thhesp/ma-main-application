@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,30 +41,44 @@ namespace WebAnalyzer.Models.MessageModel
             return this;
         }
 
-        public dynamic MessageObj
+        public string ToJson()
         {
-            get { return CreateMessageObject(); }
-        }
+            StringWriter sw = new StringWriter();
+            JsonTextWriter writer = new JsonTextWriter(sw);
+
+            //{
+            writer.WriteStartObject();
+
+            // "command" : "request"
+            writer.WritePropertyName("command");
+            writer.WriteValue("request");
+
+            // "uniqueid" : 
+            writer.WritePropertyName("uniqueid");
+            writer.WriteValue(_uniqueId);
+
+            // "datarequest" : 
+            writer.WritePropertyName("datarequest");
+            writer.WriteValue(_requestTimestamp);
+
+            // "serversent" : 
+            writer.WritePropertyName("serversent");
+            writer.WriteValue(Util.Timestamp.GetMillisecondsUnixTimestamp());
 
 
-        /*
-         * 
-         * Create Message Object for the transfer
-         * 
-         */
+            // "x" : 
+            writer.WritePropertyName("x");
+            writer.WriteValue(_x);
 
-        private dynamic CreateMessageObject()
-        {
+            // "y" : 
+            writer.WritePropertyName("y");
+            writer.WriteValue(_y);
 
-            return new { 
-                command = "request", 
-                uniqueid = _uniqueId, 
-                datarequest = _requestTimestamp, 
-                serversent = Util.Timestamp.GetMillisecondsUnixTimestamp(), 
-                x = _x, 
-                y = _y
-            };
 
+            // }
+            writer.WriteEndObject();
+
+            return sw.ToString();
         }
     }
 }

@@ -5,7 +5,6 @@ using WebAnalyzer.Controller;
 using WebAnalyzer.UI;
 using WebAnalyzer.ApplicationSettings;
 using WebAnalyzer.Util;
-using WebAnalyzer.Controller;
 
 namespace WebAnalyzer
 {

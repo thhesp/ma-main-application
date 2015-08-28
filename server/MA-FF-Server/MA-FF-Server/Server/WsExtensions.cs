@@ -31,14 +31,14 @@ namespace WebAnalyzer.Server
 
         }
 
-        public static void WriteDynamic(this WebSocket ws, dynamic data)
+        public static void WriteDynamic(this WebSocket ws, String data)
         {
-            JsonSerializer serializer = new JsonSerializer();
+            //JsonSerializer serializer = new JsonSerializer();
             using (var writer = ws.CreateMessageWriter(WebSocketMessageType.Text))
             {
                 using (var sw = new StreamWriter(writer, Encoding.UTF8))
                 {
-                    serializer.Serialize(sw, data);
+                    sw.WriteAsync(data);
                 }
             }       
         }

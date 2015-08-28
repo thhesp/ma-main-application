@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +28,8 @@ namespace WebAnalyzer.Models.MessageModel
 
         String _requestTimestamp;
 
-        public DataMessage(String _timestamp) : base(_timestamp)
+        public DataMessage(String _timestamp)
+            : base(_timestamp)
         {
 
         }
@@ -45,30 +48,68 @@ namespace WebAnalyzer.Models.MessageModel
             return this;
         }
 
-        public dynamic MessageObj
+        public string ToJson()
         {
-            get { return CreateMessageObject(); }
-        }
+            StringWriter sw = new StringWriter();
+            JsonTextWriter writer = new JsonTextWriter(sw);
 
+            //{
+            writer.WriteStartObject();
 
-        /*
-         * 
-         * Create Message Object for the transfer
-         * 
-         */
+            // "command" : "request"
+            writer.WritePropertyName("command");
+            writer.WriteValue("request");
 
-        private dynamic CreateMessageObject()
-        {
+            // "uniqueid" : 
+            writer.WritePropertyName("uniqueid");
+            writer.WriteValue(_uniqueId);
 
-            return new { 
-                command = "request", 
-                uniqueid = _uniqueId, 
-                datarequest = _requestTimestamp, 
-                serversent = Util.Timestamp.GetMillisecondsUnixTimestamp(), 
-                left = new { x = _leftX, y = _leftY }, 
-                right = new { x = _rightX, y = _leftY } 
-            };
+            // "datarequest" : 
+            writer.WritePropertyName("datarequest");
+            writer.WriteValue(_requestTimestamp);
 
+            // "serversent" : 
+            writer.WritePropertyName("serversent");
+            writer.WriteValue(Util.Timestamp.GetMillisecondsUnixTimestamp());
+
+            // "left": x,y
+            writer.WritePropertyName("left");
+
+            //{
+            writer.WriteStartObject();
+
+            // "x" : 
+            writer.WritePropertyName("x");
+            writer.WriteValue(_leftX);
+
+            // "y" : 
+            writer.WritePropertyName("y");
+            writer.WriteValue(_leftY);
+
+            // }
+            writer.WriteEndObject();
+
+            // "right": x,y
+            writer.WritePropertyName("right");
+
+            //{
+            writer.WriteStartObject();
+
+            // "x" : 
+            writer.WritePropertyName("x");
+            writer.WriteValue(_rightX);
+
+            // "y" : 
+            writer.WritePropertyName("y");
+            writer.WriteValue(_rightY);
+
+            // }
+            writer.WriteEndObject();
+
+            // }
+            writer.WriteEndObject();
+
+            return sw.ToString();
         }
     }
 }

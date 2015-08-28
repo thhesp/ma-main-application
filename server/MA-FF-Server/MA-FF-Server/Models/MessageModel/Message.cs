@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace WebAnalyzer.Models.MessageModel
 {
+    using Newtonsoft.Json;
+    using System.IO;
     using Util = Util;
 
     abstract public class Message
@@ -22,12 +24,6 @@ namespace WebAnalyzer.Models.MessageModel
         public String Timestamp
         {
             get { return _timestamp; }
-        }
-
-
-        public dynamic MessageObj
-        {
-            get { return null; }   
         }
     }
 }

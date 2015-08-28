@@ -53,7 +53,9 @@ namespace WebAnalyzer.Server.MessageHandler
 
         private void respondToHandshake()
         {
-            Object msg = new { command = "connectionResponse" };
+            //Object msg = new { command = "connectionResponse" };
+
+            String msg = "{ \"command\":\"connectionResponse\" }";
 
             _connection.Out.OnNext(msg);
         }

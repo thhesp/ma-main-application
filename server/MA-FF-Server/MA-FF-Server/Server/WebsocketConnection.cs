@@ -17,7 +17,7 @@ namespace WebAnalyzer.Server
         private static int TIMEOUT = 500;
 
         public IObservable<dynamic> In { get; set; }
-        public IObserver<dynamic> Out { get; set; }
+        public IObserver<String> Out { get; set; }
 
         readonly WebSocket _ws;
 
@@ -78,16 +78,14 @@ namespace WebAnalyzer.Server
 
             try
             {
+
                 if (msg is SmallDataMessage)
                 {
-                    this.Out.OnNext(((SmallDataMessage)msg).MessageObj);
-                }else if (msg is DataMessage)
-                {
-                    this.Out.OnNext(((DataMessage)msg).MessageObj);
+                    this.Out.OnNext(((SmallDataMessage)msg).ToJson());
                 }
-                else if (msg is EchoMessage)
+                else if (msg is DataMessage)
                 {
-                    this.Out.OnNext(((EchoMessage)msg).MessageObj);
+                    this.Out.OnNext(((DataMessage)msg).ToJson());
                 }
                 else
                 {
@@ -100,7 +98,7 @@ namespace WebAnalyzer.Server
             }
             catch (WebSocketException e)
             {
-                Logger.Log("Tried writing, while there still was a message been written.");
+                Logger.Log("Tried writing, while there still was a message been written: " + e.Message);
             }
             
         }

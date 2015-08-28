@@ -85,7 +85,7 @@ namespace WebAnalyzer.Server
                                                 .DoWhile(() => ws.IsConnected)
                                                 .Where(msg => msg != null),
 
-                    Out = Observer.Create<dynamic>(ws.WriteDynamic)
+                    Out = Observer.Create<String>(ws.WriteDynamic)
                 })
                 .DoWhile(() => server.IsStarted && !cancellation.IsCancellationRequested)
                 .Subscribe(messagesObserver);
