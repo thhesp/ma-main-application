@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using System.Xml;
 
+using WebAnalyzer.Models.DataModel;
 using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.Models.SettingsModel
@@ -80,6 +81,19 @@ namespace WebAnalyzer.Models.SettingsModel
             _rules.Remove(rule);
         }
 
+        public Boolean ElementBelongsToAOI(DOMElementModel el)
+        {
+            foreach (SettingsRule rule in Rules)
+            {
+                if (rule.ElementFitsRule(el))
+                {
+                    return true;
+                }
+
+            }
+
+            return false;
+        }
 
         public XmlNode ToXML(XmlDocument xmlDoc)
         {

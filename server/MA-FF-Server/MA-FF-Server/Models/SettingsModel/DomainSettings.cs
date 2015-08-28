@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using System.Xml;
 using WebAnalyzer.Models.Base;
+using WebAnalyzer.Models.DataModel;
 
 namespace WebAnalyzer.Models.SettingsModel
 {
@@ -117,10 +118,29 @@ namespace WebAnalyzer.Models.SettingsModel
             if (IncludesSubdomains)
             {
                 //check if url on the same domain
-
+                // if it is the top level domain like google.com
+                // subdomains like maps.google.com must contain google.com
+                if (urlHost.Contains(domainHost))
+                {
+                    return true;
+                }
             }
 
             return false;
+        }
+
+        public String GetFittingAOI(DOMElementModel el)
+        {
+            foreach (AOISettings setting in AOIS)
+            {
+                if (setting.ElementBelongsToAOI(el))
+                {
+                    return setting.Identifier;
+                }
+
+            }
+
+            return "";
         }
 
         public XmlNode ToXML(XmlDocument xmlDoc)

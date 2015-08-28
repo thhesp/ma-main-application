@@ -93,6 +93,44 @@ namespace WebAnalyzer.Models.SettingsModel
             return null;
         }
 
+        public DomainSettings GetSettings(String url)
+        {
+            foreach (DomainSettings setting in Domains)
+            {
+                if (setting.URLFitsSetting(url))
+                {
+                    return setting;
+                }
+
+            }
+
+            return null;
+        }
+
+        public String GetAOI(String url, DOMElementModel el)
+        {
+            DomainSettings setting = GetSettings(url);
+
+            if (setting != null)
+            {
+                return setting.GetFittingAOI(el);
+            }
+
+            return "";
+        }
+
+        public String GetAOI(WebpageModel webpage, DOMElementModel el)
+        {
+            DomainSettings setting = GetSettings(webpage);
+
+            if (setting != null)
+            {
+                return setting.GetFittingAOI(el);
+            }
+
+            return "";
+        }
+
         public XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode settings = xmlDoc.CreateElement("settings");
