@@ -53,7 +53,7 @@ namespace WebAnalyzer.Server
                .Subscribe(connectMsg);
 
             // data
-            published.Where(msgIn => msgIn != null && (msgIn is InDataMessage ||  msgIn is InSmallDataMessage))
+            published.Where(msgIn => msgIn != null && msgIn is InDataMessage)
                .Subscribe(new DataMessageHandler(_controller, connection));
             /*
             //event

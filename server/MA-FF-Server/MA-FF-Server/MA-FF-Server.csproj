@@ -143,7 +143,6 @@
     <Compile Include="Models\Base\UIDBase.cs" />
     <Compile Include="Models\MessageModel\In\ConnectionMessage.cs" />
     <Compile Include="Models\MessageModel\In\InDataMessage.cs" />
-    <Compile Include="Models\MessageModel\In\InSmallDataMessage.cs" />
     <Compile Include="Models\SettingsModel\AOISettings.cs" />
     <Compile Include="Models\SettingsModel\DomainSettings.cs" />
     <Compile Include="Models\SettingsModel\ExperimentSettings.cs" />

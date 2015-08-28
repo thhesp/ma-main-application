@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WebAnalyzer.Models.MessageModel
 {
-    class DataMessage : Message
+    public class DataMessage : Message
     {
 
         /* 
@@ -18,15 +18,20 @@ namespace WebAnalyzer.Models.MessageModel
          */
 
 
-        String _uniqueId;
+        private String _uniqueId;
 
-        double _leftX;
-        double _leftY;
+        private double _leftX;
+        private double _leftY;
 
-        double _rightX;
-        double _rightY;
+        private double _rightX;
+        private double _rightY;
 
-        String _requestTimestamp;
+        private String _requestTimestamp;
+
+        public DataMessage()
+        {
+
+        }
 
         public DataMessage(String _timestamp)
             : base(_timestamp)

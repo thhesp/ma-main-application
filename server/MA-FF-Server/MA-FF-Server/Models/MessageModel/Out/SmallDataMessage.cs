@@ -18,12 +18,12 @@ namespace WebAnalyzer.Models.MessageModel
          */
 
 
-        String _uniqueId;
+        private String _uniqueId;
 
-        double _x;
-        double _y;
+        private double _x;
+        private double _y;
 
-        String _requestTimestamp;
+        private String _requestTimestamp;
 
         public SmallDataMessage(String _timestamp) : base(_timestamp)
         {

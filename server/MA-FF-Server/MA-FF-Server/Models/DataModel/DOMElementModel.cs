@@ -14,14 +14,14 @@ namespace WebAnalyzer.Models.DataModel
         private String _id;
         private String _title;
 
-        private int _left;
-        private int _top;
+        private double _left;
+        private double _top;
 
-        private int _width;
-        private int _height;
+        private double _width;
+        private double _height;
 
-        private int _outerWidth;
-        private int _outerHeight;
+        private double _outerWidth;
+        private double _outerHeight;
 
         private List<String> _classes = new List<String>();
         private List<AttributeModel> _attributes = new List<AttributeModel>();
@@ -53,37 +53,37 @@ namespace WebAnalyzer.Models.DataModel
             set { _title = value; }
         }
 
-        public int Left
+        public double Left
         {
             get { return _left; }
             set { _left = value;  }
         }
 
-        public int Top
+        public double Top
         {
             get { return _top; }
             set { _top = value; }
         }
 
-        public int Width
+        public double Width
         {
             get { return _width; }
             set { _width = value; }
         }
 
-        public int Height
+        public double Height
         {
             get { return _height; }
             set { _height = value; }
         }
 
-        public int OuterWidth
+        public double OuterWidth
         {
             get { return _outerWidth; }
             set { _outerWidth = value; }
         }
 
-        public int OuterHeight
+        public double OuterHeight
         {
             get { return _outerHeight; }
             set { _outerHeight = value; }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using WebAnalyzer.Util;
 using WebAnalyzer.Controller;
 using WebAnalyzer.Models.DataModel;
+using WebAnalyzer.Models.MessageModel;
 
 namespace WebAnalyzer.Server.MessageHandler
 {
@@ -29,15 +30,40 @@ namespace WebAnalyzer.Server.MessageHandler
 
         public void OnError(Exception error)
         {
-            Console.WriteLine("Data message : " + error.Message);
+            Console.WriteLine("Datamessage error: " + error.Message);
         }
 
         public void OnNext(Object omsgIn)
         {
-            dynamic msgIn = omsgIn;
+            //dynamic msgIn = omsgIn;
+
+            InDataMessage msgIn = (InDataMessage)omsgIn;
+
+            Logger.Log("Data Message uniqueid: " + msgIn.UniqueID);
+
+            Logger.Log("Data Message Type: " + msgIn.Type);
+
+
+            if (msgIn.UniqueID != null)
+            {
+                if (msgIn.Error)
+                {
+                    _controller.DisposeOfGazeData(msgIn.UniqueID);
+                }
+
+                GazeModel gaze = ExtractGazeData(msgIn);
+
+                if (gaze != null)
+                {
+                    if (msgIn.URL != null)
+                    {
+                        _controller.AssignGazeToWebpage(gaze, msgIn.URL);
+                    }
+                }
+            }
 
             // extract data from json object and handle it
-            Logger.Log("Data Message uniqueid: " + msgIn.uniqueid);
+           /* Logger.Log("Data Message uniqueid: " + msgIn.uniqueid);
 
             if (msgIn.uniqueid != null)
             {
@@ -59,8 +85,41 @@ namespace WebAnalyzer.Server.MessageHandler
                         _controller.AssignGazeToWebpage(gaze, url);
                     }
                 }
-            }
+            }*/
         }
+
+        private GazeModel ExtractGazeData(InDataMessage msgIn)
+        {
+
+            String uniqueId = msgIn.UniqueID;
+
+            GazeModel gazeModel = _controller.GetGazeModel(uniqueId);
+
+            if (gazeModel != null)
+            {
+
+                gazeModel.ServerReceivedTimestamp = msgIn.ServerReceived;
+
+                gazeModel.DataRequestedTimestamp = msgIn.RequestTimestamp;
+
+                gazeModel.ServerSentTimestamp = msgIn.ServerSent;
+
+                gazeModel.ClientSentTimestamp = msgIn.ClientSent;
+
+                gazeModel.ClientReceivedTimestamp = msgIn.ClientReceived;
+
+                gazeModel.LeftEye.Element = msgIn.LeftElement;
+                gazeModel.RightEye.Element = msgIn.RightElement;
+            }
+            else
+            {
+                Logger.Log("Could not get corresponding GazeModel");
+            }
+
+
+            return gazeModel;
+        }
+
 
         private GazeModel ExtractGazeData(dynamic msgIn)
         {

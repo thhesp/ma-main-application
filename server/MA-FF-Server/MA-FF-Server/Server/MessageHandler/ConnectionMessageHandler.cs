@@ -29,7 +29,7 @@ namespace WebAnalyzer.Server.MessageHandler
 
         public void OnError(Exception error)
         {
-            Console.WriteLine("Connection message : " + error.Message);
+            Console.WriteLine("Connectionmessage error: " + error.Message);
         }
 
         public void OnNext(Object omsgIn)

@@ -62,19 +62,32 @@ namespace WebAnalyzer.Models.Base
 
         public long DurationFromRequestTillSending()
         {
+            if (_serverSentTimestamp != null && _dataRequestedTimestamp != null)
+            {
+                return long.Parse(_serverSentTimestamp) - long.Parse(_dataRequestedTimestamp);
+            }
 
-            return long.Parse(_serverSentTimestamp) - long.Parse(_dataRequestedTimestamp);
+            return 0;
         }
 
         public long DurationFromServerSentToReceived()
         {
+            if (_serverReceivedTimestamp != null && _serverSentTimestamp != null)
+            {
+                return long.Parse(_serverReceivedTimestamp) - long.Parse(_serverSentTimestamp);
+            }
 
-            return long.Parse(_serverReceivedTimestamp) - long.Parse(_serverSentTimestamp);
+            return 0;
         }
 
         public long DurationFromClientReceivedToClientSent()
         {
-            return long.Parse(_clientSentTimestamp) - long.Parse(_clientReceivedTimestamp);
+            if (_clientReceivedTimestamp != null && _clientSentTimestamp != null)
+            {
+                return long.Parse(_clientSentTimestamp) - long.Parse(_clientReceivedTimestamp);
+            }
+
+            return 0;
         }
 
         #endregion
