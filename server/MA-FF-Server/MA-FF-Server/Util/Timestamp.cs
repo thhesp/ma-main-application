@@ -29,7 +29,7 @@ namespace WebAnalyzer.Util
 
         public static String GetDateTime()
         {
-            return DateTime.Now.ToString("HHmm-ddMMyyyy");
+            return DateTime.Now.ToString("ddMMyyyy-HHmm");
         }
     }
 }
