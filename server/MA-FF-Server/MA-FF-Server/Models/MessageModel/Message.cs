@@ -81,12 +81,6 @@ namespace WebAnalyzer.Models.MessageModel
             DOMElementModel leftElement = new DOMElementModel();
             DOMElementModel rightElement = null;
 
-            //complex messages
-
-            Boolean left = false;
-            Boolean right = false;
-
-
             InDataMessage msg = new InDataMessage();
 
             while (reader.Read())
@@ -102,6 +96,17 @@ namespace WebAnalyzer.Models.MessageModel
                         if (property == "attributes")
                         {
                             ExtractAttributes(reader, leftElement);
+                        }
+
+                        if (!element && property == "left")
+                        {
+                            ExtractElementData(reader, leftElement);
+                        }
+
+                        if (!element && property == "right")
+                        {
+                            rightElement = new DOMElementModel();
+                            ExtractElementData(reader, rightElement);
                         }
                         continue;
                     }
@@ -280,6 +285,84 @@ namespace WebAnalyzer.Models.MessageModel
                 }
             }
 
+        }
+
+        private static void ExtractElementData(JsonTextReader reader, DOMElementModel element)
+        {
+            String property = string.Empty;
+
+            Boolean elementDataFound = false;
+
+            Boolean elementDataComplete = false;
+
+            while (reader.Read())
+            {
+                if (reader.Value != null)
+                {
+                    //Console.WriteLine("Token: {0}, Value: {1}", reader.TokenType, reader.Value);
+                    //get property ==> name of field
+                    if (reader.TokenType == JsonToken.PropertyName)
+                    {
+                        property = reader.Value.ToString();
+
+                        if (property == "attributes")
+                        {
+                            ExtractAttributes(reader, element);
+                        }
+                        continue;
+                    }
+
+                    if (elementDataFound && (reader.TokenType == JsonToken.Integer || reader.TokenType == JsonToken.Float))
+                    {
+                        Double value = Double.Parse(reader.Value.ToString());
+
+                        switch (property)
+                        {
+                            case "top":
+                                element.Top = value;
+                                break;
+                            case "left":
+                                element.Left = value;
+                                break;
+                            case "width":
+                                element.Width = value;
+                                break;
+                            case "height":
+                                element.Height = value;
+                                break;
+                            case "outerWidth":
+                                element.OuterWidth = value;
+                                break;
+                            case "outerHeight":
+                                element.OuterHeight = value;
+                                break;
+                        }
+                    }
+                    else if (reader.TokenType == JsonToken.String && property == "tag")
+                    {
+                        element.Tag = reader.Value.ToString();
+                    }
+                }
+                else
+                {
+                    // Process tracking the current nested element
+                    if (property == "element" && reader.TokenType == JsonToken.StartObject)
+                    {
+                        elementDataFound = true;
+                    }
+
+                    if (elementDataFound && reader.TokenType == JsonToken.EndObject)
+                    {
+                        elementDataFound = false;
+                        elementDataComplete = true;
+                    }
+
+                    if (elementDataComplete && reader.TokenType == JsonToken.EndObject)
+                    {
+                        return;
+                    }
+                }
+            }
         }
     }
 
