@@ -49,7 +49,7 @@ namespace WebAnalyzer.Models.MessageModel
                     {
                         String messageType = reader.Value.ToString();
 
-                        Logger.Log("MessageType: " + messageType);
+                        //Logger.Log("MessageType: " + messageType);
 
                         switch (messageType)
                         {
@@ -74,7 +74,7 @@ namespace WebAnalyzer.Models.MessageModel
 
         private static ErrorMessage ErrorMessageFromJson(JsonTextReader reader)
         {
-            Logger.Log("Error message found!");
+            //Logger.Log("Error message found!");
 
             String property = string.Empty;
 
@@ -101,7 +101,6 @@ namespace WebAnalyzer.Models.MessageModel
 
         private static InDataMessage DataMessageFromJson(JsonTextReader reader)
         {
-            //@TODO: ERROR checking + complex messages
             String property = string.Empty;
 
             Boolean element = false;
@@ -314,6 +313,8 @@ namespace WebAnalyzer.Models.MessageModel
 
         private static void ExtractElementData(JsonTextReader reader, DOMElementModel element)
         {
+            //@TODO: ERROR checking in complex message?
+
             String property = string.Empty;
 
             Boolean elementDataFound = false;
