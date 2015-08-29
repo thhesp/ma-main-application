@@ -10,7 +10,7 @@ using WebAnalyzer.Models.DataModel;
 
 namespace WebAnalyzer.Models.MessageModel
 {
-    public class InDataMessage : DataMessage
+    public class InDataMessage : Message
     {
         public enum MESSAGE_TYPE { SMALL = 0, NORMAL = 1 };
 
@@ -23,8 +23,6 @@ namespace WebAnalyzer.Models.MessageModel
 
         private MESSAGE_TYPE _type = MESSAGE_TYPE.SMALL;
 
-        private bool _error = false;
-
         private String _serverReceived;
 
         private String _clientReceived;
@@ -34,6 +32,10 @@ namespace WebAnalyzer.Models.MessageModel
         private String _serverSent;
 
         private String _url;
+
+        private String _uniqueId;
+
+        private String _requestTimestamp;
 
         private DOMElementModel _leftElement;
         private DOMElementModel _rightElement;
@@ -55,11 +57,19 @@ namespace WebAnalyzer.Models.MessageModel
             set { _type = value; }
         }
 
-        public Boolean Error
+        public String UniqueID
         {
-            get { return _error; }
-            set { _error = value; }
+            get { return _uniqueId; }
+            set { _uniqueId = value; }
         }
+
+
+        public String RequestTimestamp
+        {
+            get { return _requestTimestamp; }
+            set { _requestTimestamp = value; }
+        }
+
 
         public String URL
         {

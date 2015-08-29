@@ -4,16 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using WebAnalyzer.Models.MessageModel;
+using WebAnalyzer.Controller;
+
 namespace WebAnalyzer.Server.MessageHandler
 {
     class ErrorMessageHandler : IObserver<Object>
     {
-        readonly ConnectionManager _connectionManager;
+        readonly TestController _controller;
         readonly WebsocketConnection _connection;
 
-        public ErrorMessageHandler(ConnectionManager connectionManager, WebsocketConnection connection)
+        public ErrorMessageHandler(TestController controller, WebsocketConnection connection)
         {
-            _connectionManager = connectionManager;
+            _controller = controller;
             _connection = connection;
         }
 
@@ -29,8 +32,12 @@ namespace WebAnalyzer.Server.MessageHandler
 
         public void OnNext(Object omsgIn)
         {
-            dynamic msgIn = omsgIn;
+            ErrorMessage msgIn = (ErrorMessage) omsgIn;
 
+            if (msgIn.UniqueID != null)
+            {
+                _controller.DisposeOfGazeData(msgIn.UniqueID);
+            }
         }
     }
 }

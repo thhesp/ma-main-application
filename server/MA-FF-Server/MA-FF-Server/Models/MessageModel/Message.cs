@@ -58,8 +58,9 @@ namespace WebAnalyzer.Models.MessageModel
                             case "connectComplete":
                                 return new ConnectionMessage(ConnectionMessage.CONNECTION_MESSAGE_TYPE.COMPLETE);
                             case "data":
-
                                 return DataMessageFromJson(reader);
+                            case "error":
+                                return ErrorMessageFromJson(reader);
                             default:
                                 return null;
                         }
@@ -71,7 +72,34 @@ namespace WebAnalyzer.Models.MessageModel
             return null;
         }
 
-        private static Message DataMessageFromJson(JsonTextReader reader)
+        private static ErrorMessage ErrorMessageFromJson(JsonTextReader reader)
+        {
+            Logger.Log("Error message found!");
+
+            String property = string.Empty;
+
+            ErrorMessage msg = new ErrorMessage();
+
+            while (reader.Read())
+            {
+                if (reader.Value != null)
+                {
+                    if (reader.TokenType == JsonToken.PropertyName)
+                        property = reader.Value.ToString();
+
+                    if (property == "uniqueid" && reader.TokenType == JsonToken.String)
+                    {
+                        msg.UniqueID = reader.Value.ToString();
+
+                        return msg;
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        private static InDataMessage DataMessageFromJson(JsonTextReader reader)
         {
             //@TODO: ERROR checking + complex messages
             String property = string.Empty;
@@ -173,12 +201,6 @@ namespace WebAnalyzer.Models.MessageModel
 
                         switch (property)
                         {
-                            case "x":
-                                msg.LeftX = value;
-                                break;
-                            case "y":
-                                msg.LeftY = value;
-                                break;
                             case "clientreceived":
                                 msg.ClientReceived = value.ToString();
                                 break;
@@ -207,7 +229,9 @@ namespace WebAnalyzer.Models.MessageModel
             if (rightElement == null)
             {
                 rightElement = leftElement;
-            }else{
+            }
+            else
+            {
                 msg.Type = InDataMessage.MESSAGE_TYPE.NORMAL;
             }
 
@@ -217,7 +241,8 @@ namespace WebAnalyzer.Models.MessageModel
             return msg;
         }
 
-        private static void ExtractAttributes(JsonTextReader reader, DOMElementModel element){
+        private static void ExtractAttributes(JsonTextReader reader, DOMElementModel element)
+        {
 
             String property = "";
 

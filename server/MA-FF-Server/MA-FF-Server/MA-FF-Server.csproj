@@ -141,6 +141,7 @@
     <Compile Include="Models\Base\ExperimentModel.cs" />
     <Compile Include="Models\Base\ExperimentParticipant.cs" />
     <Compile Include="Models\Base\UIDBase.cs" />
+    <Compile Include="Models\MessageModel\In\ErrorMessage.cs" />
     <Compile Include="Models\MessageModel\In\ConnectionMessage.cs" />
     <Compile Include="Models\MessageModel\In\InDataMessage.cs" />
     <Compile Include="Models\SettingsModel\AOISettings.cs" />
