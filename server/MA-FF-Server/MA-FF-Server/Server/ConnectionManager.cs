@@ -13,10 +13,8 @@ using WebAnalyzer.Models.MessageModel;
 
 namespace WebAnalyzer.Server
 {
-    class ConnectionManager
+    public class ConnectionManager
     {
-        private static int WORK_DELAY = 10;
-
         private Boolean _workMessages = false;
 
         private List<WebsocketConnection> _connections = new List<WebsocketConnection>();
@@ -34,7 +32,7 @@ namespace WebAnalyzer.Server
         public void StartMessageThread()
         {
             _workMessages = true;
-            var period = TimeSpan.FromMilliseconds(WORK_DELAY);
+            var period = TimeSpan.FromMilliseconds(Properties.Settings.Default.WSMessageDelay);
             var observable = Observable.Interval(period);
 
             observable.Subscribe(i => {

@@ -229,5 +229,17 @@ namespace WebAnalyzer.Properties {
                 this["AOILocation"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public int WSMessageDelay {
+            get {
+                return ((int)(this["WSMessageDelay"]));
+            }
+            set {
+                this["WSMessageDelay"] = value;
+            }
+        }
     }
 }
