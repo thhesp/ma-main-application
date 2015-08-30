@@ -12,6 +12,11 @@ namespace WebAnalyzer.Models.DataModel
         private String _name;
         private String _value;
 
+        public AttributeModel()
+        {
+
+        }
+
         public AttributeModel(String name, String value)
         {
             _name = name;
@@ -55,6 +60,26 @@ namespace WebAnalyzer.Models.DataModel
             attributeNode.Attributes.Append(value);
 
             return attributeNode;
+        }
+
+        public static AttributeModel LoadFromXML(XmlNode attrNode)
+        {
+            AttributeModel attrModel = new AttributeModel();
+
+            foreach (XmlAttribute attr in attrNode.Attributes)
+            {
+                switch (attr.Name)
+                {
+                    case "name":
+                        attrModel.Name = attr.Value;
+                        break;
+                    case "value":
+                        attrModel.Value = attr.Value;
+                        break;
+                }
+            }
+
+            return attrModel;
         }
 
         #endregion

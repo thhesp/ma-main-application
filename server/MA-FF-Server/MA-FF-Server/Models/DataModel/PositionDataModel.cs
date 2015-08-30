@@ -60,6 +60,35 @@ namespace WebAnalyzer.Models.DataModel
             return positionNode;
         }
 
+        public static PositionDataModel LoadFromXML(XmlNode posNode)
+        {
+            PositionDataModel posModel = new PositionDataModel();
+
+            foreach (XmlNode child in posNode.ChildNodes)
+            {
+                if (child.Name == "eyetracking-data")
+                {
+                    EyeTrackingData etData = EyeTrackingData.LoadFromXML(child);
+
+                    if (etData != null)
+                    {
+                        posModel.EyeTrackingData = etData;
+                    }
+                }
+                else if (child.Name == "element")
+                {
+                    DOMElementModel domModel = DOMElementModel.LoadFromXML(child);
+
+                    if (domModel != null)
+                    {
+                        posModel.Element = domModel;
+                    }
+                }
+            }
+
+            return posModel;
+        }
+
         #endregion
     }
 }

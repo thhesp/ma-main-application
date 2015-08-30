@@ -233,6 +233,67 @@ namespace WebAnalyzer.Models.DataModel
         }
 
 
+        public static DOMElementModel LoadFromXML(XmlNode elementNode)
+        {
+            DOMElementModel elementModel = new DOMElementModel();
+
+            foreach (XmlAttribute attr in elementNode.Attributes)
+            {
+                switch (attr.Name)
+                {
+                    case "tag":
+                        elementModel.Tag = attr.Value;
+                        break;
+                    case "id":
+                        elementModel.ID = attr.Value;
+                        break;
+                    case "title":
+                        elementModel.Title = attr.Value;
+                        break;
+                    case "left":
+                        elementModel.Left = Double.Parse(attr.Value);
+                        break;
+                    case "top":
+                        elementModel.Top = Double.Parse(attr.Value);
+                        break;
+                    case "width":
+                        elementModel.Width = Double.Parse(attr.Value);
+                        break;
+                    case "height":
+                        elementModel.Height = Double.Parse(attr.Value);
+                        break;
+                    case "outerHeight":
+                        elementModel.OuterHeight = Double.Parse(attr.Value);
+                        break;
+                    case "outerWidth":
+                        elementModel.OuterWidth = Double.Parse(attr.Value);
+                        break;
+                }
+            }
+
+            foreach (XmlNode child in elementNode.ChildNodes)
+            {
+                if (child.Name == "class")
+                {
+                    elementModel.AddClass(child.InnerText);
+                }
+                else if (child.Name == "attributes")
+                {
+                    foreach (XmlNode attrChild in child.ChildNodes)
+                    {
+                        AttributeModel attribute = AttributeModel.LoadFromXML(attrChild);
+
+                        if (attribute != null)
+                        {
+                            elementModel._attributes.Add(attribute);
+                        }
+                    }
+                }
+            }
+
+            return elementModel;
+        }
+
         #endregion
     }
 }

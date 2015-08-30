@@ -90,6 +90,40 @@ namespace WebAnalyzer.Models.DataModel
             return experimentNode;
         }
 
+        public static TestModel LoadFromXML(XmlDocument doc)
+        {
+            TestModel test = new TestModel();
+
+            XmlNode experimentNode = doc.DocumentElement.SelectSingleNode("/experiment");
+
+            if (experimentNode == null)
+            {
+                return null;
+            }
+
+            foreach (XmlAttribute attr in experimentNode.Attributes)
+            {
+                switch (attr.Name)
+                {
+                    case "started":
+                        test.Started = attr.Value;
+                        break;
+                }
+            }
+
+            foreach (XmlNode child in experimentNode.ChildNodes)
+            {
+                WebpageModel page = WebpageModel.LoadFromXML(child);
+
+                if (page != null)
+                {
+                    test._visitedPages.Add(page);
+                }
+            }
+
+            return test;
+        }
+
         public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc)
         {
             XmlNode statisticsNode = xmlDoc.CreateElement("statistics");

@@ -15,13 +15,19 @@ namespace WebAnalyzer.Models.DataModel
 
         private String _callbackTimestamp;
 
+        public EyeTrackingData()
+        {
+
+        }
+
         public EyeTrackingData(double x, double y)
         {
             _x = x;
             _y = y;
         }
 
-        public EyeTrackingData(double x, double y, String callbackTimestamp) : this(x,y)
+        public EyeTrackingData(double x, double y, String callbackTimestamp)
+            : this(x, y)
         {
             _callbackTimestamp = callbackTimestamp;
         }
@@ -82,6 +88,28 @@ namespace WebAnalyzer.Models.DataModel
             return eyetrackingDataNode;
         }
 
+        public static EyeTrackingData LoadFromXML(XmlNode etNode)
+        {
+            EyeTrackingData etData = new EyeTrackingData();
+
+            foreach (XmlAttribute attr in etNode.Attributes)
+            {
+                switch (attr.Name)
+                {
+                    case "x":
+                        etData.X = int.Parse(attr.Value);
+                        break;
+                    case "y":
+                        etData.Y = int.Parse(attr.Value);
+                        break;
+                    case "callback":
+                        etData.CallbackTimestamp = attr.Value;
+                        break;
+                }
+            }
+
+            return etData;
+        }
         #endregion
     }
 }

@@ -25,6 +25,10 @@ namespace WebAnalyzer.Models.DataModel
             _timestamp = timestamp;
         }
 
+        public GazeModel()
+        {
+
+        }
         
         private String GetUniqueId()
         {
@@ -52,11 +56,13 @@ namespace WebAnalyzer.Models.DataModel
         public String UniqueId
         {
             get { return _uniqueId; }
+            set { _uniqueId = value; }
         }
 
         public String Timestamp
         {
             get { return _timestamp; }
+            set { _timestamp = value; }
         }
 
         public PositionDataModel LeftEye
@@ -148,6 +154,60 @@ namespace WebAnalyzer.Models.DataModel
             gazeNode.AppendChild(rightEye);
 
             return gazeNode;
+        }
+
+        public static GazeModel LoadFromXML(XmlNode gazeNode)
+        {
+            GazeModel gaze = new GazeModel();
+
+            foreach (XmlAttribute attr in gazeNode.Attributes)
+            {
+                switch (attr.Name)
+                {
+                    case "timestamp":
+                        gaze.Timestamp = attr.Value;
+                        break;
+                    case "data-requested-timestamp":
+                        gaze.Timestamp = attr.Value;
+                        break;
+                    case "server-sent-timestamp":
+                        gaze.ServerSentTimestamp = attr.Value;
+                        break;
+                    case "server-received-timestamp":
+                        gaze.ServerReceivedTimestamp = attr.Value;
+                        break;
+                    case "client-sent-timestamp":
+                        gaze.ClientSentTimestamp = attr.Value;
+                        break;
+                    case "client-received-timestamp":
+                        gaze.ClientReceivedTimestamp = attr.Value;
+                        break;
+                }
+            }
+
+            foreach (XmlNode child in gazeNode.ChildNodes)
+            {
+                if (child.Name == "left-eye")
+                {
+                    PositionDataModel posModel = PositionDataModel.LoadFromXML(child);
+
+                    if (posModel != null)
+                    {
+                        gaze.LeftEye = posModel;
+                    }
+                }
+                else if (child.Name == "right-eye")
+                {
+                    PositionDataModel posModel = PositionDataModel.LoadFromXML(child);
+
+                    if (posModel != null)
+                    {
+                        gaze.RightEye = posModel;
+                    }
+                }
+            }
+
+            return gaze;
         }
 
         public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc)

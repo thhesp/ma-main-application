@@ -9,6 +9,7 @@ using System.Xml;
 using WebAnalyzer.Models.SettingsModel;
 using WebAnalyzer.Models.Base;
 using WebAnalyzer.Util;
+using WebAnalyzer.Models.DataModel;
 
 namespace WebAnalyzer.Controller
 {
@@ -111,6 +112,19 @@ namespace WebAnalyzer.Controller
                 doc.Load(path + "\\" + Properties.Settings.Default.SettingsFilename);
 
                 return ExperimentSettings.LoadFromXML(doc);
+            }
+            // throw exception?
+            return null;
+        }
+
+        public static TestModel LoadTest(String path)
+        {
+            if (System.IO.Directory.Exists(path))
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(path);
+
+                return TestModel.LoadFromXML(doc);
             }
             // throw exception?
             return null;

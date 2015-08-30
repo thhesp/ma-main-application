@@ -28,6 +28,11 @@ namespace WebAnalyzer.Models.DataModel
             _visitTimestamp = visitTimestamp;
         }
 
+        public WebpageModel()
+        {
+
+        }
+
         #region GetterSetterFunctions
 
         public String Url
@@ -73,6 +78,36 @@ namespace WebAnalyzer.Models.DataModel
             }
 
             return webpageNode;
+        }
+
+        public static WebpageModel LoadFromXML(XmlNode webpageNode)
+        {
+            WebpageModel page = new WebpageModel();
+
+            foreach (XmlAttribute attr in webpageNode.Attributes)
+            {
+                switch (attr.Name)
+                {
+                    case "url":
+                        page.Url = attr.Value;
+                        break;
+                    case "visited":
+                        page.VisitTimestamp = attr.Value;
+                        break;
+                }
+            }
+
+            foreach (XmlNode child in webpageNode.ChildNodes)
+            {
+                GazeModel gaze = GazeModel.LoadFromXML(child);
+
+                if (gaze != null)
+                {
+                    page.AddGazeData(gaze);
+                }
+            }
+
+            return page;
         }
 
         public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc)
