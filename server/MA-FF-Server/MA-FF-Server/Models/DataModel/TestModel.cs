@@ -7,6 +7,7 @@ using System.Xml;
 
 using WebAnalyzer.Util;
 using WebAnalyzer.Models.SettingsModel;
+using WebAnalyzer.Models.AnalysisModel;
 
 namespace WebAnalyzer.Models.DataModel
 {
@@ -221,7 +222,9 @@ namespace WebAnalyzer.Models.DataModel
             long[] durations = new long[0];
             foreach (WebpageModel page in _visitedPages)
             {
-                durations = durations.Concat(page.ArrayOfDurationFromRequestTillSent()).ToArray();
+
+
+                durations = durations.Concat(StatisticsAnalyser.ArrayOfDurationFromRequestTillSent(page.Gazes)).ToArray();
             }
 
             return durations;
@@ -232,7 +235,7 @@ namespace WebAnalyzer.Models.DataModel
             long[] durations = new long[0];
             foreach (WebpageModel page in _visitedPages)
             {
-                durations = durations.Concat(page.ArrayOfDurationFromServerSentToReceived()).ToArray();
+                durations = durations.Concat(StatisticsAnalyser.ArrayOfDurationFromServerSentToReceived(page.Gazes)).ToArray();
             }
 
             return durations;
@@ -244,7 +247,7 @@ namespace WebAnalyzer.Models.DataModel
             long[] durations = new long[0];
             foreach (WebpageModel page in _visitedPages)
             {
-                durations = durations.Concat(page.ArrayOfDurationFromClientReceivedToClientSent()).ToArray();
+                durations = durations.Concat(StatisticsAnalyser.ArrayOfDurationFromClientReceivedToClientSent(page.Gazes)).ToArray();
             }
 
             return durations;
