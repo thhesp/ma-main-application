@@ -13,6 +13,7 @@ namespace WebAnalyzer.Models.DataModel
     public class TestModel
     {
 
+        private String _started;
 
         private String _lastPage;
         private WebpageModel _lastPageModel;
@@ -25,6 +26,12 @@ namespace WebAnalyzer.Models.DataModel
         public TestModel()
         {
             _unassignedPositions = new Dictionary<String, GazeModel>();
+        }
+
+        public String Started
+        {
+            get { return _started; }
+            set { _started = value; }
         }
         
         #region GetterSetterFunctions
@@ -59,6 +66,12 @@ namespace WebAnalyzer.Models.DataModel
         {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
 
+            XmlAttribute started = xmlDoc.CreateAttribute("started");
+
+            started.Value = this.Started;
+
+            experimentNode.Attributes.Append(started);
+
             XmlAttribute visitedWebpagesCount = xmlDoc.CreateAttribute("count-of-visited-pages");
 
             visitedWebpagesCount.Value = this._visitedPages.Count.ToString();
@@ -80,6 +93,12 @@ namespace WebAnalyzer.Models.DataModel
         public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc)
         {
             XmlNode statisticsNode = xmlDoc.CreateElement("statistics");
+
+            XmlAttribute started = xmlDoc.CreateAttribute("started");
+
+            started.Value = this.Started;
+
+            statisticsNode.Attributes.Append(started);
 
             // create & insert statistics for whole experiment
 
@@ -201,6 +220,13 @@ namespace WebAnalyzer.Models.DataModel
         {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
 
+
+            XmlAttribute started = xmlDoc.CreateAttribute("started");
+
+            started.Value = this.Started;
+
+            experimentNode.Attributes.Append(started);
+
             XmlAttribute visitedWebpagesCount = xmlDoc.CreateAttribute("count-of-visited-pages");
 
             visitedWebpagesCount.Value = this._visitedPages.Count.ToString();
@@ -222,6 +248,12 @@ namespace WebAnalyzer.Models.DataModel
         public XmlNode GenerateAOIXML(ExperimentSettings settings, XmlDocument xmlDoc)
         {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
+
+            XmlAttribute started = xmlDoc.CreateAttribute("started");
+
+            started.Value = this.Started;
+
+            experimentNode.Attributes.Append(started);
 
             XmlAttribute visitedWebpagesCount = xmlDoc.CreateAttribute("count-of-visited-pages");
 

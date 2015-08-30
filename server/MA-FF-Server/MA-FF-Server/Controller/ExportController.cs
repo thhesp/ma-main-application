@@ -100,7 +100,7 @@ namespace WebAnalyzer.Controller
             String dir = experiment.GetBaseExperimentLocation();
             dir += Properties.Settings.Default.RawdataLocation.Replace("{1}", currentParticipant.Identifier);
 
-            String timestamp = Timestamp.GetDateTime();
+            String timestamp = Util.Timestamp.GetDateTime(testrun.Started);
 
             FileIO.CheckPath(dir);
             XmlDocument xmlDoc = new XmlDocument();

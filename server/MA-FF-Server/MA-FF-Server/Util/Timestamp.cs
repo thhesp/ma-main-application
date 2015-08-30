@@ -31,5 +31,10 @@ namespace WebAnalyzer.Util
         {
             return DateTime.Now.ToString("ddMMyyyy-HHmm");
         }
+
+        public static String GetDateTime(String date)
+        {
+            return DateTime.Parse(date).ToString("ddMMyyyy-HHmm");
+        }
     }
 }

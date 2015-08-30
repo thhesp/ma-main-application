@@ -211,6 +211,7 @@ namespace WebAnalyzer.Controller
             Logger.Log("Start Experiment");
             _running = true;
             _dataCollected = false;
+            _test.Started = DateTime.Now.ToString();
             // set listeners
             if (Properties.Settings.Default.UseMouseTracking)
             {
