@@ -97,6 +97,8 @@ namespace WebAnalyzer.Server
             {
                 _connections.Add(e.Connection);
             }
+
+            Logger.Log("Current connection count: " + _connections.Count);
         }
     }
 }

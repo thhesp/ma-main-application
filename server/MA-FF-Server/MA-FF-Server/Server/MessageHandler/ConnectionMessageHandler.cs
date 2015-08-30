@@ -36,19 +36,7 @@ namespace WebAnalyzer.Server.MessageHandler
         {
             ConnectionMessage msgIn = (ConnectionMessage) omsgIn;
 
-            Logger.Log("Message received: " + msgIn);
-
-            // extract data from json object and handle it
-            /*String command = msgIn.command;
-
-            if(command.Equals("connectRequest"))
-            {
-                respondToHandshake();
-            }
-            else if(command.Equals("connectComplete"))
-            {
-                completeHandshake();
-            }*/
+            Logger.Log("Connectionmessage received: " + msgIn.Type);
 
             if (msgIn.Type == ConnectionMessage.CONNECTION_MESSAGE_TYPE.REQUEST)
             {
