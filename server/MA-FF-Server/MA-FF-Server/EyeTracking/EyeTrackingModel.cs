@@ -10,30 +10,38 @@ namespace WebAnalyzer.EyeTracking
 {
 
     /// <summary>
-    /// Zusammenfassungsbeschreibung für EyeTrackingModel
+    /// This model contains all functionality necessary for using the ET controller for tests.
     /// </summary>
     public class EyeTrackingModel
     {
+        /// <summary>
+        /// Event which is used for sending data to the test controller.
+        /// </summary>
         public event PrepareGazeEventHandler PrepareGaze;
 
-
-        public EyeTrackingController ETDevice;
-        public EyeTrackingController.CalibrationStruct m_CalibrationData;
-        public EyeTrackingController.AccuracyStruct m_AccuracyData;
-        public EyeTrackingController.SampleStruct m_SampleData;
-        public EyeTrackingController.EventStruct m_EventData;
+        /// <summary>
+        /// Object of the EyeTracking Controller. Used for interacting with the EyeTracker.
+        /// </summary>
+        private EyeTrackingController ETDevice;
+        private EyeTrackingController.CalibrationStruct m_CalibrationData;
+        private EyeTrackingController.AccuracyStruct m_AccuracyData;
+        private EyeTrackingController.SampleStruct m_SampleData;
+        private EyeTrackingController.EventStruct m_EventData;
 
 
         // callback routine declaration
-        public delegate void CalibrationCallback(EyeTrackingController.CalibrationPointStruct calibrationPointData);
-        public delegate void GetSampleCallback(EyeTrackingController.SampleStruct sampleData);
-        public delegate void GetEventCallback(EyeTrackingController.EventStruct eventData);
+        private delegate void CalibrationCallback(EyeTrackingController.CalibrationPointStruct calibrationPointData);
+        private delegate void GetSampleCallback(EyeTrackingController.SampleStruct sampleData);
+        private delegate void GetEventCallback(EyeTrackingController.EventStruct eventData);
 
         // callback function instances
-        CalibrationCallback m_CalibrationCallback;
-        GetSampleCallback m_SampleCallback;
-        GetEventCallback m_EventCallback;
+        private CalibrationCallback m_CalibrationCallback;
+        private GetSampleCallback m_SampleCallback;
+        private GetEventCallback m_EventCallback;
 
+        /// <summary>
+        /// Constructor which sets the ETDevice Object and some Callbacks.
+        /// </summary>
         public EyeTrackingModel()
         {
             ETDevice = new EyeTrackingController();
@@ -43,6 +51,13 @@ namespace WebAnalyzer.EyeTracking
             m_EventCallback = new GetEventCallback(GetEventCallbackFunction);
         }
 
+        /// <summary>
+        /// Method to connect to an EyeTracking Server.
+        /// </summary>
+        /// <param name="sendip">The IP of the device from which the EyeTracker sents data.</param>
+        /// <param name="sendport">The Port over which the EyeTracker sents data.</param>
+        /// <param name="receiveip">The IP of the device from which the EyeTracker receives data.</param>
+        /// <param name="receiveport">The Port over which the EyeTracker receives data.</param>
         public Boolean connect(String sendip, int sendport, String receiveip, int receiveport)
         {
             Logger.Log("Connect with "+sendip+":"+sendport+" to "+receiveip+":"+receiveport);
@@ -73,7 +88,7 @@ namespace WebAnalyzer.EyeTracking
 
 
         /// <summary>
-        /// Connect to the Eye Tracking Server.
+        /// Method to connect to an EyeTracking Server locally.
         /// </summary>
         public Boolean connectLocal()
         {
@@ -121,6 +136,9 @@ namespace WebAnalyzer.EyeTracking
             return errorID;
         }
 
+        /// <summary>
+        /// Starts the Tracking by setting the necessary callbacks.
+        /// </summary>
         public void startTracking()
         {
             if (ETDevice != null)
@@ -131,6 +149,9 @@ namespace WebAnalyzer.EyeTracking
             }
         }
 
+        /// <summary>
+        /// Stops the Tracking by removeing the callbacks.
+        /// </summary>
         public void stopTracking()
         {
             if (ETDevice != null)
@@ -141,6 +162,9 @@ namespace WebAnalyzer.EyeTracking
             }
         }
 
+        /// <summary>
+        /// Checks if the EyeTracking Device is connected.
+        /// </summary>
         public int isConnected()
         {
             if (ETDevice != null)
@@ -153,7 +177,12 @@ namespace WebAnalyzer.EyeTracking
 
         #region CallbackFunctions
 
-        // callback functions
+        /// <summary>
+        /// Callback function for sample Data.
+        /// </summary>
+        /// <remarks>
+        /// The data is for one tracking point.
+        /// </remarks>
         void GetSampleCallbackFunction(EyeTrackingController.SampleStruct sampleData)
         {
            String data = "Data from SampleCallback - timestamp: " + sampleData.timestamp.ToString() +
@@ -171,7 +200,12 @@ namespace WebAnalyzer.EyeTracking
            Logger.Log(data);
         }
 
-
+        /// <summary>
+        /// Callback function for event Data.
+        /// </summary>
+        /// <remarks>
+        /// The data is for mainly fixations.
+        /// </remarks>
         void GetEventCallbackFunction(EyeTrackingController.EventStruct eventData)
         {
             String data = "Data from EventCallback - eye: " + eventData.eye.ToString() +
@@ -183,6 +217,9 @@ namespace WebAnalyzer.EyeTracking
             Logger.Log(data);
         }
 
+        /// <summary>
+        /// Callback function for calibration Data.
+        /// </summary>
         void CalibrationCallbackFunction(EyeTrackingController.CalibrationPointStruct calibrationPointData)
         {
             String data = "Data from CalibrationCallback - Number:" + calibrationPointData.number + " PosX:" + calibrationPointData.positionx + " PosY:" + calibrationPointData.positiony;

@@ -6,7 +6,9 @@ using System.Threading;
 
 namespace WebAnalyzer.EyeTracking
 {
-
+    /// <summary>
+    /// This class contains the functionality to use the iView X API of SMI.
+    /// </summary>
     public class EyeTrackingController
     {
 

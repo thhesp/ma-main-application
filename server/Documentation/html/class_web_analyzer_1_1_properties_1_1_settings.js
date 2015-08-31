@@ -18,6 +18,7 @@ var class_web_analyzer_1_1_properties_1_1_settings =
     [ "FixdataLocation", "class_web_analyzer_1_1_properties_1_1_settings.html#a3c68e95c73b262cd0603f2074f7f81ab", null ],
     [ "LogCount", "class_web_analyzer_1_1_properties_1_1_settings.html#a6dce99dba5be76c9fcb1325e83b60f2d", null ],
     [ "LogsLocation", "class_web_analyzer_1_1_properties_1_1_settings.html#a84fcab51937db2959a8a332f1eec3ce4", null ],
+    [ "MouseTrackingInterval", "class_web_analyzer_1_1_properties_1_1_settings.html#adbf085e7ab78ddf4c493336d7c66c92a", null ],
     [ "ParticipantsFilename", "class_web_analyzer_1_1_properties_1_1_settings.html#a17faca9c89900a15e80dd65589977dc8", null ],
     [ "RawdataLocation", "class_web_analyzer_1_1_properties_1_1_settings.html#a74498d33c881c07d79e0e1f1b0efe308", null ],
     [ "SettingsFilename", "class_web_analyzer_1_1_properties_1_1_settings.html#ad083097d959dff8a09359e19f6524982", null ],

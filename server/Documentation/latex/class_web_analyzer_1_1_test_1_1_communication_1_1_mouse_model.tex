@@ -2,41 +2,39 @@
 \label{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model}\index{Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model@{Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model}}
 
 
-Zusammenfassungsbeschreibung für Eye\+Tracking\+Model  
+Mousemodel used for testing when no eyetracker is available.  
 
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_ad84f4a65000f2e03f7003546d5e63dd2}{Mouse\+Model} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor which initialises the everything needed. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_a6653ac676087ae6e96f00261cc7c61a9}{start\+Tracking} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Function which starts the tracking of the mouse. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_ad60321c25b5ad81d8ccf389498318af2}{stop\+Tracking} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function which stops the tracking of the mouse. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Events}
 \begin{DoxyCompactItemize}
 \item 
 Prepare\+Gaze\+Event\+Handler \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_ad799e6cf6032401ee7d8b1706d7c8a20}{Prepare\+Gaze}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Event which is used for sending data to the test controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_ab5f8535f5bfb5970dcc3b9b21fb575ff}{init\+Timer} ()
-\item 
-void \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_aadaab09f2e3165efbef5ff872f914439}{position} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initialises the timmer and sets the interval. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_abc9a2acb278976c242b6210d701c4900}{timer\+\_\+\+Tick} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, Elapsed\+Event\+Args \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Callback which gets called everytime the timer ends. Sends the data with the Prepare\+Gaze Event to the controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 System.\+Timers.\+Timer \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_a59254b95befed343634d46aff30dd80b}{timer}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Timer to simulate data every x ms. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-Zusammenfassungsbeschreibung für Eye\+Tracking\+Model 
+Mousemodel used for testing when no eyetracker is available. 
 
 
 
@@ -50,6 +48,10 @@ Zusammenfassungsbeschreibung für Eye\+Tracking\+Model
 )}\label{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_ad84f4a65000f2e03f7003546d5e63dd2}
 
 
+Constructor which initialises the everything needed. 
+
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_ab5f8535f5bfb5970dcc3b9b21fb575ff}{}\index{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model@{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model}!init\+Timer@{init\+Timer}}
 \index{init\+Timer@{init\+Timer}!Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model@{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model}}
@@ -58,13 +60,10 @@ Zusammenfassungsbeschreibung für Eye\+Tracking\+Model
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_ab5f8535f5bfb5970dcc3b9b21fb575ff}
-\hypertarget{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_aadaab09f2e3165efbef5ff872f914439}{}\index{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model@{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model}!position@{position}}
-\index{position@{position}!Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model@{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model}}
-\subsubsection[{position()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model.\+position (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_aadaab09f2e3165efbef5ff872f914439}
+
+
+Initialises the timmer and sets the interval. 
+
 \hypertarget{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_a6653ac676087ae6e96f00261cc7c61a9}{}\index{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model@{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model}!start\+Tracking@{start\+Tracking}}
 \index{start\+Tracking@{start\+Tracking}!Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model@{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model}}
 \subsubsection[{start\+Tracking()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model.\+start\+Tracking (
@@ -72,6 +71,10 @@ Zusammenfassungsbeschreibung für Eye\+Tracking\+Model
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_a6653ac676087ae6e96f00261cc7c61a9}
+
+
+Function which starts the tracking of the mouse. 
+
 \hypertarget{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_ad60321c25b5ad81d8ccf389498318af2}{}\index{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model@{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model}!stop\+Tracking@{stop\+Tracking}}
 \index{stop\+Tracking@{stop\+Tracking}!Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model@{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model}}
 \subsubsection[{stop\+Tracking()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model.\+stop\+Tracking (
@@ -79,6 +82,10 @@ Zusammenfassungsbeschreibung für Eye\+Tracking\+Model
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_ad60321c25b5ad81d8ccf389498318af2}
+
+
+Function which stops the tracking of the mouse. 
+
 \hypertarget{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_abc9a2acb278976c242b6210d701c4900}{}\index{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model@{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model}!timer\+\_\+\+Tick@{timer\+\_\+\+Tick}}
 \index{timer\+\_\+\+Tick@{timer\+\_\+\+Tick}!Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model@{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model}}
 \subsubsection[{timer\+\_\+\+Tick(object sender, Elapsed\+Event\+Args e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model.\+timer\+\_\+\+Tick (
@@ -89,16 +96,28 @@ Zusammenfassungsbeschreibung für Eye\+Tracking\+Model
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_abc9a2acb278976c242b6210d701c4900}
 
 
+Callback which gets called everytime the timer ends. Sends the data with the Prepare\+Gaze Event to the controller. 
+
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_a59254b95befed343634d46aff30dd80b}{}\index{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model@{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model}!timer@{timer}}
 \index{timer@{timer}!Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model@{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model}}
 \subsubsection[{timer}]{\setlength{\rightskip}{0pt plus 5cm}System.\+Timers.\+Timer Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model.\+timer\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_a59254b95befed343634d46aff30dd80b}
 
 
+Timer to simulate data every x ms. 
+
+
+
 \subsection{Event Documentation}
 \hypertarget{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_ad799e6cf6032401ee7d8b1706d7c8a20}{}\index{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model@{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model}!Prepare\+Gaze@{Prepare\+Gaze}}
 \index{Prepare\+Gaze@{Prepare\+Gaze}!Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model@{Web\+Analyzer\+::\+Test\+::\+Communication\+::\+Mouse\+Model}}
 \subsubsection[{Prepare\+Gaze}]{\setlength{\rightskip}{0pt plus 5cm}Prepare\+Gaze\+Event\+Handler Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model.\+Prepare\+Gaze}\label{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_ad799e6cf6032401ee7d8b1706d7c8a20}
+
+
+Event which is used for sending data to the test controller. 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

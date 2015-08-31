@@ -20,7 +20,7 @@ namespace WebAnalyzer.Test.Communication
         private System.Timers.Timer timer;
 
         /// <summary>
-        /// Event which is used for sending data to the controller.
+        /// Event which is used for sending data to the test controller.
         /// </summary>
         public event PrepareGazeEventHandler PrepareGaze;
 
