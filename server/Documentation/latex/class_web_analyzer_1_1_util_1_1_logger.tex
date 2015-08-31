@@ -1,46 +1,56 @@
 \hypertarget{class_web_analyzer_1_1_util_1_1_logger}{}\section{Web\+Analyzer.\+Util.\+Logger Class Reference}
 \label{class_web_analyzer_1_1_util_1_1_logger}\index{Web\+Analyzer.\+Util.\+Logger@{Web\+Analyzer.\+Util.\+Logger}}
+
+
+Class for logging purposes.  
+
+
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static void \hyperlink{class_web_analyzer_1_1_util_1_1_logger_aa10868b15bb58d0b47f87e20f3826af4}{Log} (String line, \mbox{[}Caller\+File\+Path\+Attribute\mbox{]}string file\+Path=\char`\"{}\char`\"{}, \mbox{[}Caller\+Member\+Name\mbox{]}string member\+Name=\char`\"{}\char`\"{})
-\item 
+\begin{DoxyCompactList}\small\item\em Should be used for normal logging. \end{DoxyCompactList}\item 
 static void \hyperlink{class_web_analyzer_1_1_util_1_1_logger_a33483911cc1323468e23295904393b67}{Javascript\+Log} (String line, \mbox{[}Caller\+File\+Path\+Attribute\mbox{]}string file\+Path=\char`\"{}\char`\"{}, \mbox{[}Caller\+Member\+Name\mbox{]}string member\+Name=\char`\"{}\char`\"{})
-\item 
+\begin{DoxyCompactList}\small\item\em Should be used for logging the javascript data from the ui \end{DoxyCompactList}\item 
 static \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} \hyperlink{class_web_analyzer_1_1_util_1_1_logger_a9fe9027e12a767e6cd0c3b9cf798dc81}{get\+Instance} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns instance of \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} class \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_util_1_1_logger_ae0228bcd61648d9b38e8aceaaf97024a}{Experiment\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Acces to the Experiment\+Name, so that it can be set, when an Experiment gets loaded. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_util_1_1_logger_aa8818c2a85be10d6ba6df1b6bdc7761c}{Logger} ()
-\item 
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} Constructor. Private so it can only be used with the instance. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_util_1_1_logger_a468f8bcd52d2597c66ab1ca6a3a26147}{rotate\+Logs} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Rotates the normal logs not assigned to an experiment. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_util_1_1_logger_a834e07e3258fe8ff3b1a8b7a3c361862}{rotate\+Logs} (String experiment\+Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Rotates the log files assigned to an experiment. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_util_1_1_logger_a2c1e81bccf2002bf43528787198f7c93}{check\+Log\+Location} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Checks the normal log location. If it does not exist, it gets generated invisible. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_util_1_1_logger_aa043e76883528fa0010f6809be07426a}{check\+Experiment\+Log\+Location} (String experiment\+Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Checks the experiment log location. If it does not exist, it gets generated invisible. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_util_1_1_logger_a8330043b579da4a0112b4694b634516f}{Log} (String message)
-\item 
+\begin{DoxyCompactList}\small\item\em The \char`\"{}real\char`\"{} logging method. Which writes the logging message to the log file. If an experiment name is set, the experiment log file will be used. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_util_1_1_logger_ab9c037396c9c5ab28aac4a9304ef1461}{Javascript\+Log} (String message)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The \char`\"{}real\char`\"{} logging method. Which writes the logging message to the javascript log file. If an experiment name is set, the experiment log file will be used. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_util_1_1_logger_abf60192ad5104e885eb651bfd8f5eb78}{\+\_\+experiment\+Name} = null
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Name of the current experiment. Used for assign logs to an experiment. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} \hyperlink{class_web_analyzer_1_1_util_1_1_logger_a8543413dc13f3636a0c3a717d75ed6b0}{\+\_\+instance}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} class instace for reusing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for logging purposes. 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -53,6 +63,10 @@ static \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} \hyperlink{cla
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_util_1_1_logger_aa8818c2a85be10d6ba6df1b6bdc7761c}
 
 
+\hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} Constructor. Private so it can only be used with the instance. 
+
+When creating a new \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} instance the log location will be checked and the logs will be rotated. 
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_util_1_1_logger_aa043e76883528fa0010f6809be07426a}{}\index{Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}!check\+Experiment\+Log\+Location@{check\+Experiment\+Log\+Location}}
 \index{check\+Experiment\+Log\+Location@{check\+Experiment\+Log\+Location}!Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}}
@@ -61,6 +75,15 @@ static \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} \hyperlink{cla
 \item[{String}]{experiment\+Name}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_util_1_1_logger_aa043e76883528fa0010f6809be07426a}
+
+
+Checks the experiment log location. If it does not exist, it gets generated invisible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em experiment\+Name} & Name of the experiment to which the location belongs.\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_util_1_1_logger_a2c1e81bccf2002bf43528787198f7c93}{}\index{Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}!check\+Log\+Location@{check\+Log\+Location}}
 \index{check\+Log\+Location@{check\+Log\+Location}!Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}}
 \subsubsection[{check\+Log\+Location()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Util.\+Logger.\+check\+Log\+Location (
@@ -68,6 +91,10 @@ static \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} \hyperlink{cla
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_util_1_1_logger_a2c1e81bccf2002bf43528787198f7c93}
+
+
+Checks the normal log location. If it does not exist, it gets generated invisible. 
+
 \hypertarget{class_web_analyzer_1_1_util_1_1_logger_a9fe9027e12a767e6cd0c3b9cf798dc81}{}\index{Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}!get\+Instance@{get\+Instance}}
 \index{get\+Instance@{get\+Instance}!Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}}
 \subsubsection[{get\+Instance()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Logger} Web\+Analyzer.\+Util.\+Logger.\+get\+Instance (
@@ -75,6 +102,10 @@ static \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} \hyperlink{cla
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_util_1_1_logger_a9fe9027e12a767e6cd0c3b9cf798dc81}
+
+
+Returns instance of \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} class 
+
 \hypertarget{class_web_analyzer_1_1_util_1_1_logger_a33483911cc1323468e23295904393b67}{}\index{Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}!Javascript\+Log@{Javascript\+Log}}
 \index{Javascript\+Log@{Javascript\+Log}!Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}}
 \subsubsection[{Javascript\+Log(\+String line, [Caller\+File\+Path\+Attribute]string file\+Path="""", [Caller\+Member\+Name]string member\+Name="""")}]{\setlength{\rightskip}{0pt plus 5cm}static void Web\+Analyzer.\+Util.\+Logger.\+Javascript\+Log (
@@ -84,6 +115,19 @@ static \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} \hyperlink{cla
 \item[{\mbox{[}\+Caller\+Member\+Name\mbox{]} string}]{member\+Name = {\ttfamily \char`\"{}\char`\"{}}}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_util_1_1_logger_a33483911cc1323468e23295904393b67}
+
+
+Should be used for logging the javascript data from the ui 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & Log message\\
+\hline
+{\em file\+Path} & Don\textquotesingle{}t use this parameter. Automatically gets filled with the name of the class/file the log call comes from.\\
+\hline
+{\em member\+Name} & Don\textquotesingle{}t use this parameter. Automatically gets filled with the name of the function the log call comes from.\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_util_1_1_logger_ab9c037396c9c5ab28aac4a9304ef1461}{}\index{Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}!Javascript\+Log@{Javascript\+Log}}
 \index{Javascript\+Log@{Javascript\+Log}!Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}}
 \subsubsection[{Javascript\+Log(\+String message)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Util.\+Logger.\+Javascript\+Log (
@@ -91,6 +135,17 @@ static \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} \hyperlink{cla
 \item[{String}]{message}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_util_1_1_logger_ab9c037396c9c5ab28aac4a9304ef1461}
+
+
+The \char`\"{}real\char`\"{} logging method. Which writes the logging message to the javascript log file. If an experiment name is set, the experiment log file will be used. 
+
+If an Debugger is attached all logs will also be written to the console.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message which should be logged.\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_util_1_1_logger_aa10868b15bb58d0b47f87e20f3826af4}{}\index{Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}!Log@{Log}}
 \index{Log@{Log}!Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}}
 \subsubsection[{Log(\+String line, [Caller\+File\+Path\+Attribute]string file\+Path="""", [Caller\+Member\+Name]string member\+Name="""")}]{\setlength{\rightskip}{0pt plus 5cm}static void Web\+Analyzer.\+Util.\+Logger.\+Log (
@@ -100,6 +155,19 @@ static \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} \hyperlink{cla
 \item[{\mbox{[}\+Caller\+Member\+Name\mbox{]} string}]{member\+Name = {\ttfamily \char`\"{}\char`\"{}}}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_util_1_1_logger_aa10868b15bb58d0b47f87e20f3826af4}
+
+
+Should be used for normal logging. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & Log message\\
+\hline
+{\em file\+Path} & Don\textquotesingle{}t use this parameter. Automatically gets filled with the name of the class/file the log call comes from.\\
+\hline
+{\em member\+Name} & Don\textquotesingle{}t use this parameter. Automatically gets filled with the name of the function the log call comes from.\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_util_1_1_logger_a8330043b579da4a0112b4694b634516f}{}\index{Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}!Log@{Log}}
 \index{Log@{Log}!Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}}
 \subsubsection[{Log(\+String message)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Util.\+Logger.\+Log (
@@ -107,6 +175,17 @@ static \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} \hyperlink{cla
 \item[{String}]{message}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_util_1_1_logger_a8330043b579da4a0112b4694b634516f}
+
+
+The \char`\"{}real\char`\"{} logging method. Which writes the logging message to the log file. If an experiment name is set, the experiment log file will be used. 
+
+If an Debugger is attached all logs will also be written to the console.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message which should be logged.\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_util_1_1_logger_a468f8bcd52d2597c66ab1ca6a3a26147}{}\index{Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}!rotate\+Logs@{rotate\+Logs}}
 \index{rotate\+Logs@{rotate\+Logs}!Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}}
 \subsubsection[{rotate\+Logs()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Util.\+Logger.\+rotate\+Logs (
@@ -114,6 +193,10 @@ static \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} \hyperlink{cla
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_util_1_1_logger_a468f8bcd52d2597c66ab1ca6a3a26147}
+
+
+Rotates the normal logs not assigned to an experiment. 
+
 \hypertarget{class_web_analyzer_1_1_util_1_1_logger_a834e07e3258fe8ff3b1a8b7a3c361862}{}\index{Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}!rotate\+Logs@{rotate\+Logs}}
 \index{rotate\+Logs@{rotate\+Logs}!Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}}
 \subsubsection[{rotate\+Logs(\+String experiment\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Util.\+Logger.\+rotate\+Logs (
@@ -123,13 +206,30 @@ static \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} \hyperlink{cla
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_util_1_1_logger_a834e07e3258fe8ff3b1a8b7a3c361862}
 
 
+Rotates the log files assigned to an experiment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em experiment\+Name} & Name of the experiment for which the logs should be rotated\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_util_1_1_logger_abf60192ad5104e885eb651bfd8f5eb78}{}\index{Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}!\+\_\+experiment\+Name@{\+\_\+experiment\+Name}}
 \index{\+\_\+experiment\+Name@{\+\_\+experiment\+Name}!Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}}
 \subsubsection[{\+\_\+experiment\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Util.\+Logger.\+\_\+experiment\+Name = null\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_util_1_1_logger_abf60192ad5104e885eb651bfd8f5eb78}
+
+
+Name of the current experiment. Used for assign logs to an experiment. 
+
 \hypertarget{class_web_analyzer_1_1_util_1_1_logger_a8543413dc13f3636a0c3a717d75ed6b0}{}\index{Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}!\+\_\+instance@{\+\_\+instance}}
 \index{\+\_\+instance@{\+\_\+instance}!Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}}
 \subsubsection[{\+\_\+instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Logger} Web\+Analyzer.\+Util.\+Logger.\+\_\+instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_web_analyzer_1_1_util_1_1_logger_a8543413dc13f3636a0c3a717d75ed6b0}
+
+
+\hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} class instace for reusing. 
+
 
 
 \subsection{Property Documentation}
@@ -137,6 +237,10 @@ static \hyperlink{class_web_analyzer_1_1_util_1_1_logger}{Logger} \hyperlink{cla
 \index{Experiment\+Name@{Experiment\+Name}!Web\+Analyzer\+::\+Util\+::\+Logger@{Web\+Analyzer\+::\+Util\+::\+Logger}}
 \subsubsection[{Experiment\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Util.\+Logger.\+Experiment\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_util_1_1_logger_ae0228bcd61648d9b38e8aceaaf97024a}
 
+
+Acces to the Experiment\+Name, so that it can be set, when an Experiment gets loaded. 
+
+On setting the name the location will get checked if it exists and logs will be rotated. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

@@ -114,17 +114,25 @@ $(document).ready(function(){initNavTree('class_web_analyzer_1_1_application_set
 <div class="title">WebAnalyzer.ApplicationSettings.AppSettings Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class for handling the settings. Currently only really used on first startup of application.  
+ <a href="class_web_analyzer_1_1_application_settings_1_1_app_settings.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a1f60a3d031a0fa24200c06415d11b3b6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_application_settings_1_1_app_settings.html#a1f60a3d031a0fa24200c06415d11b3b6">ResetEnvironmentVariables</a> ()</td></tr>
+<tr class="memdesc:a1f60a3d031a0fa24200c06415d11b3b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets all the environment variables. Currently thats only the data location.  <a href="#a1f60a3d031a0fa24200c06415d11b3b6">More...</a><br /></td></tr>
 <tr class="separator:a1f60a3d031a0fa24200c06415d11b3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb29103a92e6fbf8bd6be79de2294099"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_application_settings_1_1_app_settings.html#aeb29103a92e6fbf8bd6be79de2294099">ResetDataLocation</a> ()</td></tr>
+<tr class="memdesc:aeb29103a92e6fbf8bd6be79de2294099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the data location by using the MyDocuments folder of the user as a base.  <a href="#aeb29103a92e6fbf8bd6be79de2294099">More...</a><br /></td></tr>
 <tr class="separator:aeb29103a92e6fbf8bd6be79de2294099"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c885c79ecd2a5c3a47acfa26576101a"><td class="memItemLeft" align="right" valign="top">static Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_application_settings_1_1_app_settings.html#a3c885c79ecd2a5c3a47acfa26576101a">SetDatalocation</a> (String <a class="el" href="_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js.html#aa72e0c8a20e6bcc571d3a1c51846e627">path</a>)</td></tr>
+<tr class="memdesc:a3c885c79ecd2a5c3a47acfa26576101a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the data location but checks first if the given path exists.  <a href="#a3c885c79ecd2a5c3a47acfa26576101a">More...</a><br /></td></tr>
 <tr class="separator:a3c885c79ecd2a5c3a47acfa26576101a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class for handling the settings. Currently only really used on first startup of application. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aeb29103a92e6fbf8bd6be79de2294099"></a>
 <div class="memitem">
 <div class="memproto">
@@ -145,6 +153,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Resets the data location by using the MyDocuments folder of the user as a base. </p>
 
 </div>
 </div>
@@ -169,6 +179,9 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Resets all the environment variables. Currently thats only the data location. </p>
+<p>Sets FirstStart to false, propably should do that here, since the name of the method doesn't show it. </p>
+
 </div>
 </div>
 <a class="anchor" id="a3c885c79ecd2a5c3a47acfa26576101a"></a>
@@ -192,6 +205,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets the data location but checks first if the given path exists. </p>
 
 </div>
 </div>

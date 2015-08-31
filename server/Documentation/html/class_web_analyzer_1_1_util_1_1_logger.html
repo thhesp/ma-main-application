@@ -118,49 +118,67 @@ $(document).ready(function(){initNavTree('class_web_analyzer_1_1_util_1_1_logger
 <div class="title">WebAnalyzer.Util.Logger Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class for logging purposes.  
+ <a href="class_web_analyzer_1_1_util_1_1_logger.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aa10868b15bb58d0b47f87e20f3826af4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html#aa10868b15bb58d0b47f87e20f3826af4">Log</a> (String line, [CallerFilePathAttribute]string filePath=&quot;&quot;, [CallerMemberName]string memberName=&quot;&quot;)</td></tr>
+<tr class="memdesc:aa10868b15bb58d0b47f87e20f3826af4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should be used for normal logging.  <a href="#aa10868b15bb58d0b47f87e20f3826af4">More...</a><br /></td></tr>
 <tr class="separator:aa10868b15bb58d0b47f87e20f3826af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33483911cc1323468e23295904393b67"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html#a33483911cc1323468e23295904393b67">JavascriptLog</a> (String line, [CallerFilePathAttribute]string filePath=&quot;&quot;, [CallerMemberName]string memberName=&quot;&quot;)</td></tr>
+<tr class="memdesc:a33483911cc1323468e23295904393b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Should be used for logging the javascript data from the ui  <a href="#a33483911cc1323468e23295904393b67">More...</a><br /></td></tr>
 <tr class="separator:a33483911cc1323468e23295904393b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fe9027e12a767e6cd0c3b9cf798dc81"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html#a9fe9027e12a767e6cd0c3b9cf798dc81">getInstance</a> ()</td></tr>
+<tr class="memdesc:a9fe9027e12a767e6cd0c3b9cf798dc81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns instance of <a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html" title="Class for logging purposes. ">Logger</a> class  <a href="#a9fe9027e12a767e6cd0c3b9cf798dc81">More...</a><br /></td></tr>
 <tr class="separator:a9fe9027e12a767e6cd0c3b9cf798dc81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:ae0228bcd61648d9b38e8aceaaf97024a"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html#ae0228bcd61648d9b38e8aceaaf97024a">ExperimentName</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ae0228bcd61648d9b38e8aceaaf97024a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Acces to the ExperimentName, so that it can be set, when an Experiment gets loaded.  <a href="#ae0228bcd61648d9b38e8aceaaf97024a">More...</a><br /></td></tr>
 <tr class="separator:ae0228bcd61648d9b38e8aceaaf97024a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:aa8818c2a85be10d6ba6df1b6bdc7761c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html#aa8818c2a85be10d6ba6df1b6bdc7761c">Logger</a> ()</td></tr>
+<tr class="memdesc:aa8818c2a85be10d6ba6df1b6bdc7761c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html" title="Class for logging purposes. ">Logger</a> Constructor. Private so it can only be used with the instance.  <a href="#aa8818c2a85be10d6ba6df1b6bdc7761c">More...</a><br /></td></tr>
 <tr class="separator:aa8818c2a85be10d6ba6df1b6bdc7761c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a468f8bcd52d2597c66ab1ca6a3a26147"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html#a468f8bcd52d2597c66ab1ca6a3a26147">rotateLogs</a> ()</td></tr>
+<tr class="memdesc:a468f8bcd52d2597c66ab1ca6a3a26147"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates the normal logs not assigned to an experiment.  <a href="#a468f8bcd52d2597c66ab1ca6a3a26147">More...</a><br /></td></tr>
 <tr class="separator:a468f8bcd52d2597c66ab1ca6a3a26147"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a834e07e3258fe8ff3b1a8b7a3c361862"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html#a834e07e3258fe8ff3b1a8b7a3c361862">rotateLogs</a> (String experimentName)</td></tr>
+<tr class="memdesc:a834e07e3258fe8ff3b1a8b7a3c361862"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates the log files assigned to an experiment.  <a href="#a834e07e3258fe8ff3b1a8b7a3c361862">More...</a><br /></td></tr>
 <tr class="separator:a834e07e3258fe8ff3b1a8b7a3c361862"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c1e81bccf2002bf43528787198f7c93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html#a2c1e81bccf2002bf43528787198f7c93">checkLogLocation</a> ()</td></tr>
+<tr class="memdesc:a2c1e81bccf2002bf43528787198f7c93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the normal log location. If it does not exist, it gets generated invisible.  <a href="#a2c1e81bccf2002bf43528787198f7c93">More...</a><br /></td></tr>
 <tr class="separator:a2c1e81bccf2002bf43528787198f7c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa043e76883528fa0010f6809be07426a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html#aa043e76883528fa0010f6809be07426a">checkExperimentLogLocation</a> (String experimentName)</td></tr>
+<tr class="memdesc:aa043e76883528fa0010f6809be07426a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the experiment log location. If it does not exist, it gets generated invisible.  <a href="#aa043e76883528fa0010f6809be07426a">More...</a><br /></td></tr>
 <tr class="separator:aa043e76883528fa0010f6809be07426a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8330043b579da4a0112b4694b634516f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html#a8330043b579da4a0112b4694b634516f">Log</a> (String message)</td></tr>
+<tr class="memdesc:a8330043b579da4a0112b4694b634516f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The "real" logging method. Which writes the logging message to the log file. If an experiment name is set, the experiment log file will be used.  <a href="#a8330043b579da4a0112b4694b634516f">More...</a><br /></td></tr>
 <tr class="separator:a8330043b579da4a0112b4694b634516f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9c037396c9c5ab28aac4a9304ef1461"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html#ab9c037396c9c5ab28aac4a9304ef1461">JavascriptLog</a> (String message)</td></tr>
+<tr class="memdesc:ab9c037396c9c5ab28aac4a9304ef1461"><td class="mdescLeft">&#160;</td><td class="mdescRight">The "real" logging method. Which writes the logging message to the javascript log file. If an experiment name is set, the experiment log file will be used.  <a href="#ab9c037396c9c5ab28aac4a9304ef1461">More...</a><br /></td></tr>
 <tr class="separator:ab9c037396c9c5ab28aac4a9304ef1461"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:abf60192ad5104e885eb651bfd8f5eb78"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html#abf60192ad5104e885eb651bfd8f5eb78">_experimentName</a> = null</td></tr>
+<tr class="memdesc:abf60192ad5104e885eb651bfd8f5eb78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the current experiment. Used for assign logs to an experiment.  <a href="#abf60192ad5104e885eb651bfd8f5eb78">More...</a><br /></td></tr>
 <tr class="separator:abf60192ad5104e885eb651bfd8f5eb78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a8543413dc13f3636a0c3a717d75ed6b0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html">Logger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html#a8543413dc13f3636a0c3a717d75ed6b0">_instance</a></td></tr>
+<tr class="memdesc:a8543413dc13f3636a0c3a717d75ed6b0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html" title="Class for logging purposes. ">Logger</a> class instace for reusing.  <a href="#a8543413dc13f3636a0c3a717d75ed6b0">More...</a><br /></td></tr>
 <tr class="separator:a8543413dc13f3636a0c3a717d75ed6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class for logging purposes. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa8818c2a85be10d6ba6df1b6bdc7761c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -181,6 +199,9 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html" title="Class for logging purposes. ">Logger</a> Constructor. Private so it can only be used with the instance. </p>
+<p>When creating a new <a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html" title="Class for logging purposes. ">Logger</a> instance the log location will be checked and the logs will be rotated. </p>
 
 </div>
 </div>
@@ -207,6 +228,14 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Checks the experiment log location. If it does not exist, it gets generated invisible. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">experimentName</td><td>Name of the experiment to which the location belongs.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a2c1e81bccf2002bf43528787198f7c93"></a>
@@ -230,6 +259,8 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Checks the normal log location. If it does not exist, it gets generated invisible. </p>
+
 </div>
 </div>
 <a class="anchor" id="a9fe9027e12a767e6cd0c3b9cf798dc81"></a>
@@ -252,6 +283,8 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns instance of <a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html" title="Class for logging purposes. ">Logger</a> class </p>
 
 </div>
 </div>
@@ -293,6 +326,16 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Should be used for logging the javascript data from the ui </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>Log message</td></tr>
+    <tr><td class="paramname">filePath</td><td>Don't use this parameter. Automatically gets filled with the name of the class/file the log call comes from.</td></tr>
+    <tr><td class="paramname">memberName</td><td>Don't use this parameter. Automatically gets filled with the name of the function the log call comes from.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="ab9c037396c9c5ab28aac4a9304ef1461"></a>
@@ -316,6 +359,15 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The "real" logging method. Which writes the logging message to the javascript log file. If an experiment name is set, the experiment log file will be used. </p>
+<p>If an Debugger is attached all logs will also be written to the console.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The message which should be logged.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -357,6 +409,16 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Should be used for normal logging. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>Log message</td></tr>
+    <tr><td class="paramname">filePath</td><td>Don't use this parameter. Automatically gets filled with the name of the class/file the log call comes from.</td></tr>
+    <tr><td class="paramname">memberName</td><td>Don't use this parameter. Automatically gets filled with the name of the function the log call comes from.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a8330043b579da4a0112b4694b634516f"></a>
@@ -381,6 +443,15 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>The "real" logging method. Which writes the logging message to the log file. If an experiment name is set, the experiment log file will be used. </p>
+<p>If an Debugger is attached all logs will also be written to the console.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The message which should be logged.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a468f8bcd52d2597c66ab1ca6a3a26147"></a>
@@ -403,6 +474,8 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Rotates the normal logs not assigned to an experiment. </p>
 
 </div>
 </div>
@@ -428,6 +501,14 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Rotates the log files assigned to an experiment. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">experimentName</td><td>Name of the experiment for which the logs should be rotated</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -449,6 +530,8 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Name of the current experiment. Used for assign logs to an experiment. </p>
+
 </div>
 </div>
 <a class="anchor" id="a8543413dc13f3636a0c3a717d75ed6b0"></a>
@@ -468,6 +551,8 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="class_web_analyzer_1_1_util_1_1_logger.html" title="Class for logging purposes. ">Logger</a> class instace for reusing. </p>
 
 </div>
 </div>
@@ -489,6 +574,9 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Acces to the ExperimentName, so that it can be set, when an Experiment gets loaded. </p>
+<p>On setting the name the location will get checked if it exists and logs will be rotated. </p>
 
 </div>
 </div>

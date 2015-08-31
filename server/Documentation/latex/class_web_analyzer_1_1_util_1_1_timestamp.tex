@@ -1,16 +1,26 @@
 \hypertarget{class_web_analyzer_1_1_util_1_1_timestamp}{}\section{Web\+Analyzer.\+Util.\+Timestamp Class Reference}
 \label{class_web_analyzer_1_1_util_1_1_timestamp}\index{Web\+Analyzer.\+Util.\+Timestamp@{Web\+Analyzer.\+Util.\+Timestamp}}
+
+
+Class for timestamp creation. So that timestamps follow the same format.  
+
+
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static String \hyperlink{class_web_analyzer_1_1_util_1_1_timestamp_a444c15a3477e38b4b34850a0bd601a5d}{Get\+Unix\+Timestamp} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the unix timestamp for the current time. \end{DoxyCompactList}\item 
 static String \hyperlink{class_web_analyzer_1_1_util_1_1_timestamp_ad90708976b5cebb0512e20ba0011dcdf}{Get\+Milliseconds\+Unix\+Timestamp} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns an milliseconds timestamp of the current time. \end{DoxyCompactList}\item 
 static String \hyperlink{class_web_analyzer_1_1_util_1_1_timestamp_a3f8fe9efc6a3f6a811d5b6af7e748ed7}{Get\+Date\+Time} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an date string for the current time. \end{DoxyCompactList}\item 
 static String \hyperlink{class_web_analyzer_1_1_util_1_1_timestamp_a4040173245bf7cca4eb4d2879cdd0671}{Get\+Date\+Time} (String date)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an date string for the given date. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for timestamp creation. So that timestamps follow the same format. 
+
 
 
 \subsection{Member Function Documentation}
@@ -21,6 +31,10 @@ static String \hyperlink{class_web_analyzer_1_1_util_1_1_timestamp_a4040173245bf
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_util_1_1_timestamp_a3f8fe9efc6a3f6a811d5b6af7e748ed7}
+
+
+Creates an date string for the current time. 
+
 \hypertarget{class_web_analyzer_1_1_util_1_1_timestamp_a4040173245bf7cca4eb4d2879cdd0671}{}\index{Web\+Analyzer\+::\+Util\+::\+Timestamp@{Web\+Analyzer\+::\+Util\+::\+Timestamp}!Get\+Date\+Time@{Get\+Date\+Time}}
 \index{Get\+Date\+Time@{Get\+Date\+Time}!Web\+Analyzer\+::\+Util\+::\+Timestamp@{Web\+Analyzer\+::\+Util\+::\+Timestamp}}
 \subsubsection[{Get\+Date\+Time(\+String date)}]{\setlength{\rightskip}{0pt plus 5cm}static String Web\+Analyzer.\+Util.\+Timestamp.\+Get\+Date\+Time (
@@ -28,20 +42,32 @@ static String \hyperlink{class_web_analyzer_1_1_util_1_1_timestamp_a4040173245bf
 \item[{String}]{date}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_util_1_1_timestamp_a4040173245bf7cca4eb4d2879cdd0671}
-\hypertarget{class_web_analyzer_1_1_util_1_1_timestamp_ad90708976b5cebb0512e20ba0011dcdf}{}\index{Web\+Analyzer\+::\+Util\+::\+Timestamp@{Web\+Analyzer\+::\+Util\+::\+Timestamp}!Get\+Milliseconds\+Unix\+Timestamp@{Get\+Milliseconds\+Unix\+Timestamp}}
+
+
+Creates an date string for the given date. 
+
+Not really sure right now if this is needed or if the string could just be reused...\hypertarget{class_web_analyzer_1_1_util_1_1_timestamp_ad90708976b5cebb0512e20ba0011dcdf}{}\index{Web\+Analyzer\+::\+Util\+::\+Timestamp@{Web\+Analyzer\+::\+Util\+::\+Timestamp}!Get\+Milliseconds\+Unix\+Timestamp@{Get\+Milliseconds\+Unix\+Timestamp}}
 \index{Get\+Milliseconds\+Unix\+Timestamp@{Get\+Milliseconds\+Unix\+Timestamp}!Web\+Analyzer\+::\+Util\+::\+Timestamp@{Web\+Analyzer\+::\+Util\+::\+Timestamp}}
 \subsubsection[{Get\+Milliseconds\+Unix\+Timestamp()}]{\setlength{\rightskip}{0pt plus 5cm}static String Web\+Analyzer.\+Util.\+Timestamp.\+Get\+Milliseconds\+Unix\+Timestamp (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_util_1_1_timestamp_ad90708976b5cebb0512e20ba0011dcdf}
-\hypertarget{class_web_analyzer_1_1_util_1_1_timestamp_a444c15a3477e38b4b34850a0bd601a5d}{}\index{Web\+Analyzer\+::\+Util\+::\+Timestamp@{Web\+Analyzer\+::\+Util\+::\+Timestamp}!Get\+Unix\+Timestamp@{Get\+Unix\+Timestamp}}
+
+
+Returns an milliseconds timestamp of the current time. 
+
+Mainly used for the websocket communication because every milliseconds is important.\hypertarget{class_web_analyzer_1_1_util_1_1_timestamp_a444c15a3477e38b4b34850a0bd601a5d}{}\index{Web\+Analyzer\+::\+Util\+::\+Timestamp@{Web\+Analyzer\+::\+Util\+::\+Timestamp}!Get\+Unix\+Timestamp@{Get\+Unix\+Timestamp}}
 \index{Get\+Unix\+Timestamp@{Get\+Unix\+Timestamp}!Web\+Analyzer\+::\+Util\+::\+Timestamp@{Web\+Analyzer\+::\+Util\+::\+Timestamp}}
 \subsubsection[{Get\+Unix\+Timestamp()}]{\setlength{\rightskip}{0pt plus 5cm}static String Web\+Analyzer.\+Util.\+Timestamp.\+Get\+Unix\+Timestamp (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_util_1_1_timestamp_a444c15a3477e38b4b34850a0bd601a5d}
+
+
+Returns the unix timestamp for the current time. 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

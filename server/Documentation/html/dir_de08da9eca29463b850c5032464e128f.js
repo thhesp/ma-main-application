@@ -9,9 +9,6 @@ var dir_de08da9eca29463b850c5032464e128f =
     [ "Statistics.cs", "_statistics_8cs.html", [
       [ "Statistics", "class_web_analyzer_1_1_util_1_1_statistics.html", "class_web_analyzer_1_1_util_1_1_statistics" ]
     ] ],
-    [ "TextBoxStreamWriter.cs", "_text_box_stream_writer_8cs.html", [
-      [ "TextBoxStreamWriter", "class_web_analyzer_1_1_util_1_1_text_box_stream_writer.html", "class_web_analyzer_1_1_util_1_1_text_box_stream_writer" ]
-    ] ],
     [ "Timestamp.cs", "_timestamp_8cs.html", [
       [ "Timestamp", "class_web_analyzer_1_1_util_1_1_timestamp.html", "class_web_analyzer_1_1_util_1_1_timestamp" ]
     ] ],

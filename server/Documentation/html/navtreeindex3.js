@@ -1,6 +1,5 @@
 var NAVTREEINDEX3 =
 {
-"bin_2x86_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__application__settings_8js.html":[2,0,0,1,1,0,0,0,0,1,2],
 "bin_2x86_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__application__settings_8js.html#a0544c3fe466e421738dae463968b70ba":[2,0,0,1,1,0,0,0,0,1,2,10],
 "bin_2x86_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__application__settings_8js.html#a265231624f0719f33f356af9c13f1529":[2,0,0,1,1,0,0,0,0,1,2,3],
 "bin_2x86_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__application__settings_8js.html#a3df9ff5d8d1a95065aaeb73088ccd0dc":[2,0,0,1,1,0,0,0,0,1,2,4],
@@ -249,5 +248,6 @@ var NAVTREEINDEX3 =
 "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller.html#a03c27615c5818dcd7f81461498c43409":[1,0,0,3,0,101],
 "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller.html#a04ec1cade03ec615b060a6fbd14b8d59":[1,0,0,3,0,73],
 "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller.html#a0583c1d3ffba6023fd798aa54506c87c":[1,0,0,3,0,60],
-"class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller.html#a077770ecec95783d919393a0d582c8c0":[1,0,0,3,0,144]
+"class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller.html#a077770ecec95783d919393a0d582c8c0":[1,0,0,3,0,144],
+"class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller.html#a0d0ebafff882207b19b7f17c79fe43b5":[1,0,0,3,0,40]
 };

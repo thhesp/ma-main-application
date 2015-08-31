@@ -254,7 +254,6 @@
     <Compile Include="UI\InteractionObjects\Navigation.cs" />
     <Compile Include="Util\FileIO.cs" />
     <Compile Include="Util\Statistics.cs" />
-    <Compile Include="Util\TextBoxStreamWriter.cs" />
     <Compile Include="EyeTracking\EyeTrackingController.cs" />
     <Compile Include="EyeTracking\EyeTrackingModel.cs" />
     <Compile Include="Util\Logger.cs" />

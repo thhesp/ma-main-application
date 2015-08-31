@@ -102,9 +102,6 @@ var hierarchy =
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.SystemInfoStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_system_info_struct.html", null ],
     [ "WebAnalyzer.Controller.TestController", "class_web_analyzer_1_1_controller_1_1_test_controller.html", null ],
     [ "WebAnalyzer.Models.DataModel.TestModel", "class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model.html", null ],
-    [ "TextWriter", null, [
-      [ "WebAnalyzer.Util.TextBoxStreamWriter", "class_web_analyzer_1_1_util_1_1_text_box_stream_writer.html", null ]
-    ] ],
     [ "WebAnalyzer.Util.Timestamp", "class_web_analyzer_1_1_util_1_1_timestamp.html", null ],
     [ "WebAnalyzer.Models.SettingsModel.ExpressionTree.TreeGenerator", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_tree_generator.html", null ],
     [ "WebAnalyzer.Models.Base.UIDBase", "class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base.html", [

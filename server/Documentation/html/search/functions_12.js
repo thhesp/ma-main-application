@@ -8,7 +8,6 @@ var searchData=
   ['testrunform',['TestrunForm',['../class_web_analyzer_1_1_u_i_1_1_testrun_form.html#a874c60792a2a41b12490c8361336e261',1,'WebAnalyzer::UI::TestrunForm']]],
   ['testrunning',['testRunning',['../class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control.html#ae1dacc2d3e11d88116b3dbf9c45ea403',1,'WebAnalyzer::UI::InteractionObjects::TestrunControl']]],
   ['text',['text',['../bin_2x86_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2testrun_8js.html#aa93cc066bad2a9472ec8fde69713e5af',1,'text(&quot;Stop Test&quot;):&#160;testrun.js'],['../_u_i_2_h_t_m_l_resources_2js_2src_2testrun_8js.html#aa93cc066bad2a9472ec8fde69713e5af',1,'text(&quot;Stop Test&quot;):&#160;testrun.js']]],
-  ['textboxstreamwriter',['TextBoxStreamWriter',['../class_web_analyzer_1_1_util_1_1_text_box_stream_writer.html#a29f45f5d09df83e12f0f5f008493d1f3',1,'WebAnalyzer::Util::TextBoxStreamWriter']]],
   ['timer_5ftick',['timer_Tick',['../class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model.html#abc9a2acb278976c242b6210d701c4900',1,'WebAnalyzer::Test::Communication::MouseModel']]],
   ['to',['To',['../class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model.html#a3a34442019813f39e6acbbb881017808',1,'WebAnalyzer::Models::AnalysisModel::FixationModel']]],
   ['toaoixml',['ToAOIXML',['../class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model.html#a50f39e8bfdf3a716c39f258b25455204',1,'WebAnalyzer::Models::AnalysisModel::FixationModel']]],

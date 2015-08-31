@@ -16,7 +16,7 @@ var searchData=
   ['checkexperimentloglocation',['checkExperimentLogLocation',['../class_web_analyzer_1_1_util_1_1_logger.html#aa043e76883528fa0010f6809be07426a',1,'WebAnalyzer::Util::Logger']]],
   ['checkfirststartup',['CheckFirstStartup',['../class_web_analyzer_1_1_web_analyzer.html#a1c5b48a17d7fd7247691600028e1642d',1,'WebAnalyzer::WebAnalyzer']]],
   ['checkloglocation',['checkLogLocation',['../class_web_analyzer_1_1_util_1_1_logger.html#a2c1e81bccf2002bf43528787198f7c93',1,'WebAnalyzer::Util::Logger']]],
-  ['checkpath',['CheckPath',['../class_web_analyzer_1_1_util_1_1_file_i_o.html#ade732314697d3b6c286da9723fd53672',1,'WebAnalyzer.Util.FileIO.CheckPath(String dir)'],['../class_web_analyzer_1_1_util_1_1_file_i_o.html#a7417c1dbcf653198f7a0da7700e6ce4b',1,'WebAnalyzer.Util.FileIO.CheckPath(String dir, bool invisble)']]],
+  ['checkpath',['CheckPath',['../class_web_analyzer_1_1_util_1_1_file_i_o.html#ade732314697d3b6c286da9723fd53672',1,'WebAnalyzer.Util.FileIO.CheckPath(String dir)'],['../class_web_analyzer_1_1_util_1_1_file_i_o.html#a818d487a79ee8e7dd2b5f76f4e9e71bd',1,'WebAnalyzer.Util.FileIO.CheckPath(String dir, bool invisible)']]],
   ['children',['Children',['../class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node.html#af97835cf31c19c83f0044bbd6f4a9e91',1,'WebAnalyzer::Models::SettingsModel::ExpressionTree::Node']]],
   ['chromedevtools',['ChromeDevTools',['../class_web_analyzer_1_1_u_i_1_1_chrome_dev_tools.html',1,'WebAnalyzer::UI']]],
   ['chromedevtools_2ecs',['ChromeDevTools.cs',['../_chrome_dev_tools_8cs.html',1,'']]],

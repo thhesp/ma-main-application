@@ -1,14 +1,24 @@
 \hypertarget{class_web_analyzer_1_1_application_settings_1_1_app_settings}{}\section{Web\+Analyzer.\+Application\+Settings.\+App\+Settings Class Reference}
 \label{class_web_analyzer_1_1_application_settings_1_1_app_settings}\index{Web\+Analyzer.\+Application\+Settings.\+App\+Settings@{Web\+Analyzer.\+Application\+Settings.\+App\+Settings}}
+
+
+Class for handling the settings. Currently only really used on first startup of application.  
+
+
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static void \hyperlink{class_web_analyzer_1_1_application_settings_1_1_app_settings_a1f60a3d031a0fa24200c06415d11b3b6}{Reset\+Environment\+Variables} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Resets all the environment variables. Currently thats only the data location. \end{DoxyCompactList}\item 
 static void \hyperlink{class_web_analyzer_1_1_application_settings_1_1_app_settings_aeb29103a92e6fbf8bd6be79de2294099}{Reset\+Data\+Location} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Resets the data location by using the My\+Documents folder of the user as a base. \end{DoxyCompactList}\item 
 static Boolean \hyperlink{class_web_analyzer_1_1_application_settings_1_1_app_settings_a3c885c79ecd2a5c3a47acfa26576101a}{Set\+Datalocation} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sets the data location but checks first if the given path exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for handling the settings. Currently only really used on first startup of application. 
+
 
 
 \subsection{Member Function Documentation}
@@ -19,6 +29,10 @@ static Boolean \hyperlink{class_web_analyzer_1_1_application_settings_1_1_app_se
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_application_settings_1_1_app_settings_aeb29103a92e6fbf8bd6be79de2294099}
+
+
+Resets the data location by using the My\+Documents folder of the user as a base. 
+
 \hypertarget{class_web_analyzer_1_1_application_settings_1_1_app_settings_a1f60a3d031a0fa24200c06415d11b3b6}{}\index{Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings@{Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings}!Reset\+Environment\+Variables@{Reset\+Environment\+Variables}}
 \index{Reset\+Environment\+Variables@{Reset\+Environment\+Variables}!Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings@{Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings}}
 \subsubsection[{Reset\+Environment\+Variables()}]{\setlength{\rightskip}{0pt plus 5cm}static void Web\+Analyzer.\+Application\+Settings.\+App\+Settings.\+Reset\+Environment\+Variables (
@@ -26,13 +40,21 @@ static Boolean \hyperlink{class_web_analyzer_1_1_application_settings_1_1_app_se
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_application_settings_1_1_app_settings_a1f60a3d031a0fa24200c06415d11b3b6}
-\hypertarget{class_web_analyzer_1_1_application_settings_1_1_app_settings_a3c885c79ecd2a5c3a47acfa26576101a}{}\index{Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings@{Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings}!Set\+Datalocation@{Set\+Datalocation}}
+
+
+Resets all the environment variables. Currently thats only the data location. 
+
+Sets First\+Start to false, propably should do that here, since the name of the method doesn\textquotesingle{}t show it. \hypertarget{class_web_analyzer_1_1_application_settings_1_1_app_settings_a3c885c79ecd2a5c3a47acfa26576101a}{}\index{Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings@{Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings}!Set\+Datalocation@{Set\+Datalocation}}
 \index{Set\+Datalocation@{Set\+Datalocation}!Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings@{Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings}}
 \subsubsection[{Set\+Datalocation(\+String path)}]{\setlength{\rightskip}{0pt plus 5cm}static Boolean Web\+Analyzer.\+Application\+Settings.\+App\+Settings.\+Set\+Datalocation (
 \begin{DoxyParamCaption}
 \item[{String}]{path}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_application_settings_1_1_app_settings_a3c885c79ecd2a5c3a47acfa26576101a}
+
+
+Sets the data location but checks first if the given path exists. 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

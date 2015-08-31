@@ -114,19 +114,28 @@ $(document).ready(function(){initNavTree('class_web_analyzer_1_1_util_1_1_timest
 <div class="title">WebAnalyzer.Util.Timestamp Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class for timestamp creation. So that timestamps follow the same format.  
+ <a href="class_web_analyzer_1_1_util_1_1_timestamp.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a444c15a3477e38b4b34850a0bd601a5d"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_util_1_1_timestamp.html#a444c15a3477e38b4b34850a0bd601a5d">GetUnixTimestamp</a> ()</td></tr>
+<tr class="memdesc:a444c15a3477e38b4b34850a0bd601a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the unix timestamp for the current time.  <a href="#a444c15a3477e38b4b34850a0bd601a5d">More...</a><br /></td></tr>
 <tr class="separator:a444c15a3477e38b4b34850a0bd601a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad90708976b5cebb0512e20ba0011dcdf"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_util_1_1_timestamp.html#ad90708976b5cebb0512e20ba0011dcdf">GetMillisecondsUnixTimestamp</a> ()</td></tr>
+<tr class="memdesc:ad90708976b5cebb0512e20ba0011dcdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an milliseconds timestamp of the current time.  <a href="#ad90708976b5cebb0512e20ba0011dcdf">More...</a><br /></td></tr>
 <tr class="separator:ad90708976b5cebb0512e20ba0011dcdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f8fe9efc6a3f6a811d5b6af7e748ed7"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_util_1_1_timestamp.html#a3f8fe9efc6a3f6a811d5b6af7e748ed7">GetDateTime</a> ()</td></tr>
+<tr class="memdesc:a3f8fe9efc6a3f6a811d5b6af7e748ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an date string for the current time.  <a href="#a3f8fe9efc6a3f6a811d5b6af7e748ed7">More...</a><br /></td></tr>
 <tr class="separator:a3f8fe9efc6a3f6a811d5b6af7e748ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4040173245bf7cca4eb4d2879cdd0671"><td class="memItemLeft" align="right" valign="top">static String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_util_1_1_timestamp.html#a4040173245bf7cca4eb4d2879cdd0671">GetDateTime</a> (String date)</td></tr>
+<tr class="memdesc:a4040173245bf7cca4eb4d2879cdd0671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an date string for the given date.  <a href="#a4040173245bf7cca4eb4d2879cdd0671">More...</a><br /></td></tr>
 <tr class="separator:a4040173245bf7cca4eb4d2879cdd0671"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class for timestamp creation. So that timestamps follow the same format. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a3f8fe9efc6a3f6a811d5b6af7e748ed7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -147,6 +156,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Creates an date string for the current time. </p>
 
 </div>
 </div>
@@ -172,6 +183,9 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Creates an date string for the given date. </p>
+<p>Not really sure right now if this is needed or if the string could just be reused...</p>
+
 </div>
 </div>
 <a class="anchor" id="ad90708976b5cebb0512e20ba0011dcdf"></a>
@@ -195,6 +209,9 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Returns an milliseconds timestamp of the current time. </p>
+<p>Mainly used for the websocket communication because every milliseconds is important.</p>
+
 </div>
 </div>
 <a class="anchor" id="a444c15a3477e38b4b34850a0bd601a5d"></a>
@@ -217,6 +234,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the unix timestamp for the current time. </p>
 
 </div>
 </div>

@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace WebAnalyzer.Util
 {
+    /// <summary>
+    /// Class for calculating some statistics. Currently mainly used when calculating the duration needed for messages to get processed.
+    /// </summary>
     class Statistics
     {
-
+        /// <summary>
+        /// Calculates the mean of the given array of values.
+        /// </summary>
+        /// <param name="values">Array of long values to be used for calculation.</param>
         public static double CalculateMean(long[] values)
         {
             if(values != null && values.Length != 0)
@@ -17,6 +23,10 @@ namespace WebAnalyzer.Util
             return 0;
         }
 
+        /// <summary>
+        /// Calculates the median of the given array of values.
+        /// </summary>
+        /// <param name="values">Array of long values to be used for calculation.</param>
         public static double CalculateMedian(long[] values)
         {
             if (values == null || values.Length == 0)
@@ -38,6 +48,11 @@ namespace WebAnalyzer.Util
 
         }
 
+        /// <summary>
+        /// Calculates the standard deviation of the given array of values.
+        /// </summary>
+        /// <param name="values">Array of long values to be used for calculation.</param>
+        /// <remarks>Currently does no calculation :x</remarks>
         public static long CalculateStandardDeviation(long[] values)
         {
 

@@ -1,14 +1,24 @@
 \hypertarget{class_web_analyzer_1_1_util_1_1_statistics}{}\section{Web\+Analyzer.\+Util.\+Statistics Class Reference}
 \label{class_web_analyzer_1_1_util_1_1_statistics}\index{Web\+Analyzer.\+Util.\+Statistics@{Web\+Analyzer.\+Util.\+Statistics}}
+
+
+Class for calculating some statistics. Currently mainly used when calculating the duration needed for messages to get processed.  
+
+
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static double \hyperlink{class_web_analyzer_1_1_util_1_1_statistics_a616f8ba6f61eafae6b9dcb1a86c29c54}{Calculate\+Mean} (long\mbox{[}$\,$\mbox{]} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aa593753ecced698b5cfa481d3ae5fcea}{values})
-\item 
+\begin{DoxyCompactList}\small\item\em Calculates the mean of the given array of values. \end{DoxyCompactList}\item 
 static double \hyperlink{class_web_analyzer_1_1_util_1_1_statistics_a0396596f89a8b9e363b1458c963e0313}{Calculate\+Median} (long\mbox{[}$\,$\mbox{]} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aa593753ecced698b5cfa481d3ae5fcea}{values})
-\item 
+\begin{DoxyCompactList}\small\item\em Calculates the median of the given array of values. \end{DoxyCompactList}\item 
 static long \hyperlink{class_web_analyzer_1_1_util_1_1_statistics_aad28ff8d54e3c4a2195c595c50d18231}{Calculate\+Standard\+Deviation} (long\mbox{[}$\,$\mbox{]} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aa593753ecced698b5cfa481d3ae5fcea}{values})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Calculates the standard deviation of the given array of values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for calculating some statistics. Currently mainly used when calculating the duration needed for messages to get processed. 
+
 
 
 \subsection{Member Function Documentation}
@@ -19,6 +29,15 @@ static long \hyperlink{class_web_analyzer_1_1_util_1_1_statistics_aad28ff8d54e3c
 \item[{long\mbox{[}$\,$\mbox{]}}]{values}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_util_1_1_statistics_a616f8ba6f61eafae6b9dcb1a86c29c54}
+
+
+Calculates the mean of the given array of values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & Array of long values to be used for calculation.\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_util_1_1_statistics_a0396596f89a8b9e363b1458c963e0313}{}\index{Web\+Analyzer\+::\+Util\+::\+Statistics@{Web\+Analyzer\+::\+Util\+::\+Statistics}!Calculate\+Median@{Calculate\+Median}}
 \index{Calculate\+Median@{Calculate\+Median}!Web\+Analyzer\+::\+Util\+::\+Statistics@{Web\+Analyzer\+::\+Util\+::\+Statistics}}
 \subsubsection[{Calculate\+Median(long[] values)}]{\setlength{\rightskip}{0pt plus 5cm}static double Web\+Analyzer.\+Util.\+Statistics.\+Calculate\+Median (
@@ -26,6 +45,15 @@ static long \hyperlink{class_web_analyzer_1_1_util_1_1_statistics_aad28ff8d54e3c
 \item[{long\mbox{[}$\,$\mbox{]}}]{values}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_util_1_1_statistics_a0396596f89a8b9e363b1458c963e0313}
+
+
+Calculates the median of the given array of values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & Array of long values to be used for calculation.\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_util_1_1_statistics_aad28ff8d54e3c4a2195c595c50d18231}{}\index{Web\+Analyzer\+::\+Util\+::\+Statistics@{Web\+Analyzer\+::\+Util\+::\+Statistics}!Calculate\+Standard\+Deviation@{Calculate\+Standard\+Deviation}}
 \index{Calculate\+Standard\+Deviation@{Calculate\+Standard\+Deviation}!Web\+Analyzer\+::\+Util\+::\+Statistics@{Web\+Analyzer\+::\+Util\+::\+Statistics}}
 \subsubsection[{Calculate\+Standard\+Deviation(long[] values)}]{\setlength{\rightskip}{0pt plus 5cm}static long Web\+Analyzer.\+Util.\+Statistics.\+Calculate\+Standard\+Deviation (
@@ -34,6 +62,17 @@ static long \hyperlink{class_web_analyzer_1_1_util_1_1_statistics_aad28ff8d54e3c
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_util_1_1_statistics_aad28ff8d54e3c4a2195c595c50d18231}
 
+
+Calculates the standard deviation of the given array of values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em values} & Array of long values to be used for calculation.\\
+\hline
+\end{DoxyParams}
+
+
+Currently does no calculation \+:x
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

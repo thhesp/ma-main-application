@@ -2,7 +2,6 @@ var searchData=
 [
   ['education',['Education',['../class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant.html#aeed3afa47a4a966a0d5c3277348c2846',1,'WebAnalyzer::Models::Base::ExperimentParticipant']]],
   ['element',['Element',['../class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model.html#a4825afc0a1ecf3eeb0876be8611111ba',1,'WebAnalyzer::Models::DataModel::PositionDataModel']]],
-  ['encoding',['Encoding',['../class_web_analyzer_1_1_util_1_1_text_box_stream_writer.html#ac030314a6b1db8711944c33c49c05f6b',1,'WebAnalyzer::Util::TextBoxStreamWriter']]],
   ['endx',['EndX',['../class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model.html#a0b77bda45070dad7347eaa90daf29247',1,'WebAnalyzer::Models::AnalysisModel::FixationModel']]],
   ['endy',['EndY',['../class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model.html#a431705c50a74006b786fbcf7e357567f',1,'WebAnalyzer::Models::AnalysisModel::FixationModel']]],
   ['established',['Established',['../class_web_analyzer_1_1_server_1_1_websocket_connection.html#a913e4dc6584670baea40f5c57a4dedf1',1,'WebAnalyzer::Server::WebsocketConnection']]],
