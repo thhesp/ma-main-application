@@ -66,9 +66,19 @@ namespace WebAnalyzer.Controller
             experimentWizard.CreateExperiment += On_CreateExperiment;
             experimentWizard.LoadExperiment += On_LoadExperiment;
 
-            if (experimentWizard.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            System.Windows.Forms.DialogResult result = experimentWizard.ShowDialog();
+
+            if (result == System.Windows.Forms.DialogResult.OK)
             {
                 experimentWizard.Dispose();
+            }
+            else if (result == System.Windows.Forms.DialogResult.Cancel || result == System.Windows.Forms.DialogResult.Abort)
+            {
+                mainUI.Close();
+            }
+            else
+            {
+                Logger.Log("Experiment Wizard existed with result:  " + result.ToString());
             }
         }
 
