@@ -8,8 +8,24 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer
 {
-    class WebAnalyzer
+    public class WebAnalyzer
     {
+
+        /// <summary>
+        /// Der Haupteinstiegspunkt für die Anwendung.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+
+            if (System.Diagnostics.Debugger.IsAttached)
+            {
+                Properties.Settings.Default.Reset();
+            }
+
+            new WebAnalyzer();
+        }
+
 
         public WebAnalyzer()
         {

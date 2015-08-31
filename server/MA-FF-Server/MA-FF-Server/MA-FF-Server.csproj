@@ -257,7 +257,6 @@
     <Compile Include="EyeTracking\EyeTrackingModel.cs" />
     <Compile Include="Util\Logger.cs" />
     <Compile Include="Server\WebsocketServer.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\Timestamp.cs" />
     <Compile Include="Util\Utilities.cs" />
