@@ -15,11 +15,6 @@ namespace WebAnalyzer.Test.Communication
     public class MouseModel
     {
         /// <summary>
-        /// Interval in milliseconds used for the timer.
-        /// </summary>
-        private static int INTERVAL_IN_MS = 10;
-
-        /// <summary>
         /// Timer to simulate data every x ms.
         /// </summary>
         private System.Timers.Timer timer;
@@ -44,7 +39,7 @@ namespace WebAnalyzer.Test.Communication
         {
             this.timer = new System.Timers.Timer();
             this.timer.Enabled = true;
-            this.timer.Interval = INTERVAL_IN_MS;
+            this.timer.Interval = Properties.Settings.Default.MouseTrackingInterval;
         }
 
         /// <summary>

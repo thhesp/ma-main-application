@@ -241,5 +241,17 @@ namespace WebAnalyzer.Properties {
                 this["WSMessageDelay"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int MouseTrackingInterval {
+            get {
+                return ((int)(this["MouseTrackingInterval"]));
+            }
+            set {
+                this["MouseTrackingInterval"] = value;
+            }
+        }
     }
 }
