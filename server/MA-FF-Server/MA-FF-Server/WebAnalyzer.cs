@@ -8,12 +8,21 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer
 {
+
+
+    /// <summary>
+    /// The main class of the whole application. Used for initializing everything necessary.
+    /// </summary>
     public class WebAnalyzer
     {
 
         /// <summary>
-        /// Der Haupteinstiegspunkt für die Anwendung.
+        /// The main method of the application.
         /// </summary>
+        /// <remarks> 
+        /// If an debugger is attached (by VisualStudio for example) 
+        /// the Settings are resetted to the default values in this method.
+        /// </remarks> 
         [STAThread]
         static void Main()
         {
@@ -27,6 +36,9 @@ namespace WebAnalyzer
         }
 
 
+        /// <summary>
+        /// Constructor for the WebAnalyzer Class.
+        /// </summary>
         public WebAnalyzer()
         {
             CheckFirstStartup();
@@ -34,6 +46,12 @@ namespace WebAnalyzer
             InitializeMainController();
         }
 
+        /// <summary>
+        /// Checks if it's the first run of the application. 
+        /// If it is the environment will set the environment variables to fit the current system.
+        /// </summary>
+        /// <seealso cref="AppSettings.ResetEnvironmentVariables()">
+        /// Contains the code for setting the environment variables. </seealso>
         private void CheckFirstStartup()
         {
             if (Properties.Settings.Default.FirstStart)
@@ -42,6 +60,12 @@ namespace WebAnalyzer
                 AppSettings.ResetEnvironmentVariables();
             }
         }
+
+        /// <summary>
+        /// Validates the settings, so that no problems should arise.
+        /// </summary>
+        /// <seealso cref="SettingsValidator.Validate()">
+        /// Contains the code for validating the settings.</seealso> 
 
         private void ValidateSettings()
         {
@@ -57,6 +81,12 @@ namespace WebAnalyzer
             }
             
         }
+
+        /// <summary>
+        /// Initalizes the main part of the application. The main controller.
+        /// </summary>
+        /// <seealso cref="MainController">
+        /// It is the core of the application.</seealso> 
 
         private void InitializeMainController()
         {

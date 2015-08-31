@@ -181,7 +181,7 @@ namespace WebAnalyzer.Util
             }
             catch (IOException e)
             {
-
+                Console.WriteLine(e.Message);
             }
 
 
@@ -210,7 +210,7 @@ namespace WebAnalyzer.Util
             }
             catch (IOException e)
             {
-
+                Console.WriteLine(e.Message);
             }
 
             if (System.Diagnostics.Debugger.IsAttached)

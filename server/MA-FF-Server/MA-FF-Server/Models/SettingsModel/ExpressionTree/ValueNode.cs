@@ -103,7 +103,7 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             return node;
         }
 
-        public static ValueNode LoadFromXML(XmlNode nodeNode)
+        public static new ValueNode LoadFromXML(XmlNode nodeNode)
         {
 
             ValueNode node = new ValueNode();
