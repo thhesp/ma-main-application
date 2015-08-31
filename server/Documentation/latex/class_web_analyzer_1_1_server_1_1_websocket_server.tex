@@ -1,0 +1,132 @@
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_server}{}\section{Web\+Analyzer.\+Server.\+Websocket\+Server Class Reference}
+\label{class_web_analyzer_1_1_server_1_1_websocket_server}\index{Web\+Analyzer.\+Server.\+Websocket\+Server@{Web\+Analyzer.\+Server.\+Websocket\+Server}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_web_analyzer_1_1_server_1_1_websocket_server_a3fddc08875cc188f4fb799ca4ccfe6ad}{Websocket\+Server} (\hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller}{Test\+Controller} controller)
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_server_a0afc1c5aad274b94fc9b0d461424d161}{start} ()
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_server_ae006161a22122f220e0788cf8894cfb6}{start} (int port)
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_server_a2c5391b6ebe427d2d42d7b601b922e5b}{stop} ()
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_server_acab32c7df617492c47da886956332d9f}{Request\+Data} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af690ff5521d79c7128861033ae80ae17}{unique\+Id}, double left\+X, double left\+Y, double right\+X, double right\+Y)
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_server_aa0ffcc2e38d0a5c7f85e6c50b283718a}{Request\+Data} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af690ff5521d79c7128861033ae80ae17}{unique\+Id}, double x\+Pos, double y\+Pos)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_server_adcca188d89d2ca8762b7e5d979857f28}{Create\+Server} ()
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_server_a6bd50680516243f710b7eb189241b256}{Create\+Server} (int port)
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_server_ad36bdf3fe5b0a9df1c652b67e504561c}{prepare\+Server} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager}{Connection\+Manager} \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_server_ac98422e37a10a6c4fd3900a09b003b5e}{\+\_\+conn\+Manager}
+\item 
+\hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller}{Test\+Controller} \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_server_ae9083f25b4a1b713998b19eb68e35d6e}{\+\_\+controller}
+\item 
+Web\+Socket\+Listener \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_server_abc42c992699d787cfdcb33f9e51140b4}{server}
+\item 
+Cancellation\+Token\+Source \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_server_ac6ff75e9f3bc2200953d755b029e5344}{cancellation}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_server_a3fddc08875cc188f4fb799ca4ccfe6ad}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}!Websocket\+Server@{Websocket\+Server}}
+\index{Websocket\+Server@{Websocket\+Server}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}}
+\subsubsection[{Websocket\+Server(\+Test\+Controller controller)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Server.\+Websocket\+Server.\+Websocket\+Server (
+\begin{DoxyParamCaption}
+\item[{{\bf Test\+Controller}}]{controller}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_server_1_1_websocket_server_a3fddc08875cc188f4fb799ca4ccfe6ad}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_server_adcca188d89d2ca8762b7e5d979857f28}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}!Create\+Server@{Create\+Server}}
+\index{Create\+Server@{Create\+Server}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}}
+\subsubsection[{Create\+Server()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Websocket\+Server.\+Create\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_server_adcca188d89d2ca8762b7e5d979857f28}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_server_a6bd50680516243f710b7eb189241b256}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}!Create\+Server@{Create\+Server}}
+\index{Create\+Server@{Create\+Server}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}}
+\subsubsection[{Create\+Server(int port)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Websocket\+Server.\+Create\+Server (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_server_a6bd50680516243f710b7eb189241b256}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_server_ad36bdf3fe5b0a9df1c652b67e504561c}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}!prepare\+Server@{prepare\+Server}}
+\index{prepare\+Server@{prepare\+Server}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}}
+\subsubsection[{prepare\+Server()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Websocket\+Server.\+prepare\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_server_ad36bdf3fe5b0a9df1c652b67e504561c}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_server_acab32c7df617492c47da886956332d9f}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}!Request\+Data@{Request\+Data}}
+\index{Request\+Data@{Request\+Data}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}}
+\subsubsection[{Request\+Data(\+String unique\+Id, double left\+X, double left\+Y, double right\+X, double right\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Websocket\+Server.\+Request\+Data (
+\begin{DoxyParamCaption}
+\item[{String}]{unique\+Id, }
+\item[{double}]{left\+X, }
+\item[{double}]{left\+Y, }
+\item[{double}]{right\+X, }
+\item[{double}]{right\+Y}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_server_1_1_websocket_server_acab32c7df617492c47da886956332d9f}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_server_aa0ffcc2e38d0a5c7f85e6c50b283718a}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}!Request\+Data@{Request\+Data}}
+\index{Request\+Data@{Request\+Data}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}}
+\subsubsection[{Request\+Data(\+String unique\+Id, double x\+Pos, double y\+Pos)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Websocket\+Server.\+Request\+Data (
+\begin{DoxyParamCaption}
+\item[{String}]{unique\+Id, }
+\item[{double}]{x\+Pos, }
+\item[{double}]{y\+Pos}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_server_1_1_websocket_server_aa0ffcc2e38d0a5c7f85e6c50b283718a}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_server_a0afc1c5aad274b94fc9b0d461424d161}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}!start@{start}}
+\index{start@{start}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}}
+\subsubsection[{start()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Websocket\+Server.\+start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_server_1_1_websocket_server_a0afc1c5aad274b94fc9b0d461424d161}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_server_ae006161a22122f220e0788cf8894cfb6}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}!start@{start}}
+\index{start@{start}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}}
+\subsubsection[{start(int port)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Websocket\+Server.\+start (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_server_1_1_websocket_server_ae006161a22122f220e0788cf8894cfb6}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_server_a2c5391b6ebe427d2d42d7b601b922e5b}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}!stop@{stop}}
+\index{stop@{stop}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}}
+\subsubsection[{stop()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Websocket\+Server.\+stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_server_1_1_websocket_server_a2c5391b6ebe427d2d42d7b601b922e5b}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_server_ac98422e37a10a6c4fd3900a09b003b5e}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}!\+\_\+conn\+Manager@{\+\_\+conn\+Manager}}
+\index{\+\_\+conn\+Manager@{\+\_\+conn\+Manager}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}}
+\subsubsection[{\+\_\+conn\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Connection\+Manager} Web\+Analyzer.\+Server.\+Websocket\+Server.\+\_\+conn\+Manager\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_server_ac98422e37a10a6c4fd3900a09b003b5e}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_server_ae9083f25b4a1b713998b19eb68e35d6e}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}!\+\_\+controller@{\+\_\+controller}}
+\index{\+\_\+controller@{\+\_\+controller}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}}
+\subsubsection[{\+\_\+controller}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Test\+Controller} Web\+Analyzer.\+Server.\+Websocket\+Server.\+\_\+controller\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_server_ae9083f25b4a1b713998b19eb68e35d6e}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_server_ac6ff75e9f3bc2200953d755b029e5344}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}!cancellation@{cancellation}}
+\index{cancellation@{cancellation}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}}
+\subsubsection[{cancellation}]{\setlength{\rightskip}{0pt plus 5cm}Cancellation\+Token\+Source Web\+Analyzer.\+Server.\+Websocket\+Server.\+cancellation\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_server_ac6ff75e9f3bc2200953d755b029e5344}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_server_abc42c992699d787cfdcb33f9e51140b4}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}!server@{server}}
+\index{server@{server}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Server@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Server}}
+\subsubsection[{server}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Socket\+Listener Web\+Analyzer.\+Server.\+Websocket\+Server.\+server\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_server_abc42c992699d787cfdcb33f9e51140b4}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+M\+A-\/\+F\+F-\/\+Server/\+Server/\hyperlink{_websocket_server_8cs}{Websocket\+Server.\+cs}\end{DoxyCompactItemize}

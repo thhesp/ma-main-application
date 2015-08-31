@@ -1,0 +1,28 @@
+var class_web_analyzer_1_1_properties_1_1_settings =
+[
+    [ "Settings", "class_web_analyzer_1_1_properties_1_1_settings.html#abe4ec5eb9d0040b8f25200d2b988f110", null ],
+    [ "SettingChangingEventHandler", "class_web_analyzer_1_1_properties_1_1_settings.html#ade54623f5935cf04300ab15254d1a846", null ],
+    [ "SettingsSavingEventHandler", "class_web_analyzer_1_1_properties_1_1_settings.html#a539f50459d03d0782e76117c5a3ed3eb", null ],
+    [ "defaultInstance", "class_web_analyzer_1_1_properties_1_1_settings.html#a384f24a72fe5cd4bd437c9fdecf5e8ce", null ],
+    [ "AOILocation", "class_web_analyzer_1_1_properties_1_1_settings.html#af6dd5e8d3c9287c9dba65dddc86de635", null ],
+    [ "Applicationname", "class_web_analyzer_1_1_properties_1_1_settings.html#a2e914901217eeff3abfd251c393bdc1f", null ],
+    [ "Datalocation", "class_web_analyzer_1_1_properties_1_1_settings.html#abef8b78254f10bd2984daa083bca8487", null ],
+    [ "Default", "class_web_analyzer_1_1_properties_1_1_settings.html#a65c2257222bfeb0f3e568ef18feb37c8", null ],
+    [ "ETConnectLocal", "class_web_analyzer_1_1_properties_1_1_settings.html#ad251bc3f8eff9b6c353d759b4d28b8ef", null ],
+    [ "ETReceiveIP", "class_web_analyzer_1_1_properties_1_1_settings.html#a72ab6d953993b21eb515f971dcd792a8", null ],
+    [ "ETReceivePort", "class_web_analyzer_1_1_properties_1_1_settings.html#aea27fc1665cd600bcb93b55d279e84bb", null ],
+    [ "ETSentIP", "class_web_analyzer_1_1_properties_1_1_settings.html#a27534719272cd08fa87e7f4f84d881ee", null ],
+    [ "ETSentPort", "class_web_analyzer_1_1_properties_1_1_settings.html#a7ca719caaac4851474a227638c93ef86", null ],
+    [ "ExperimentFilename", "class_web_analyzer_1_1_properties_1_1_settings.html#abf4e9e1c3119465ed8a31c82e0a7749c", null ],
+    [ "FirstStart", "class_web_analyzer_1_1_properties_1_1_settings.html#a73d8c78b58fba485b3989433986ae765", null ],
+    [ "FixdataLocation", "class_web_analyzer_1_1_properties_1_1_settings.html#a3c68e95c73b262cd0603f2074f7f81ab", null ],
+    [ "LogCount", "class_web_analyzer_1_1_properties_1_1_settings.html#a6dce99dba5be76c9fcb1325e83b60f2d", null ],
+    [ "LogsLocation", "class_web_analyzer_1_1_properties_1_1_settings.html#a84fcab51937db2959a8a332f1eec3ce4", null ],
+    [ "ParticipantsFilename", "class_web_analyzer_1_1_properties_1_1_settings.html#a17faca9c89900a15e80dd65589977dc8", null ],
+    [ "RawdataLocation", "class_web_analyzer_1_1_properties_1_1_settings.html#a74498d33c881c07d79e0e1f1b0efe308", null ],
+    [ "SettingsFilename", "class_web_analyzer_1_1_properties_1_1_settings.html#ad083097d959dff8a09359e19f6524982", null ],
+    [ "StatisticsLocation", "class_web_analyzer_1_1_properties_1_1_settings.html#aa664153921c24bdaa3a4cf790c153924", null ],
+    [ "UseMouseTracking", "class_web_analyzer_1_1_properties_1_1_settings.html#a71904ddfdc9f4888c7da3b370acb0c4d", null ],
+    [ "WebsocketPort", "class_web_analyzer_1_1_properties_1_1_settings.html#ab28fb58a6d2cf2841c86966c406a4ab3", null ],
+    [ "WSMessageDelay", "class_web_analyzer_1_1_properties_1_1_settings.html#a62b7526a2c670219322da46a41f2ed4b", null ]
+];

@@ -1,0 +1,215 @@
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node}{}\section{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node Class Reference}
+\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node}\index{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node@{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node}}
+Inheritance diagram for Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.096606cm]{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730e}{N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S} \{ \\*
+\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730eab50339a10e1de285ac99d4c3990b8693}{N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S.\+N\+O\+N\+E} = -\/1, 
+\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730eaecc2e9c313faddb07e7da223c1dc5c3f}{N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S.\+V\+A\+L\+U\+E} = 0, 
+\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730ea10df3d67626099df882920ba6552f16d}{N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S.\+N\+O\+T} = 1, 
+\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730ea558ffc8f5770d8e4f95f51d822685532}{N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S.\+A\+N\+D} = 2, 
+\\*
+\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730ea1d00e7dce692e8dc3f6877f035e3a616}{N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S.\+O\+R} = 3
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_af25a40f1b18460d7bee03021e19335fb}{Node} ()
+\item 
+\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a10c868b90b509e4355a2d9c9b7b34968}{Node} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730e}{N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S} type)
+\item 
+\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a5ac174eb5648c594f80c5ca3e74a6687}{Node} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node}{Node} child)
+\item 
+\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a8f431fec0565dbc38cf63b8c469ff9b6}{Node} (List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node}{Node} $>$ children)
+\item 
+\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a499c9647efddf11d1fe3bd3c8759e5d3}{Node} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730e}{N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S} type, List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node}{Node} $>$ children)
+\item 
+\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node}{Node} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a603b5439f3109a1d8718bb2a879c36b9}{Find\+Node} (String uid)
+\item 
+virtual Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_afd5fd3184ae6075feac0012977e349b6}{To\+X\+M\+L} (Xml\+Document xml\+Doc)
+\item 
+abstract Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_aa07f08b4a2299c2b9752a1eba59e245d}{Evaluate} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{D\+O\+M\+Element\+Model} el)
+\item 
+abstract Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a5cf0b866812c017ef1d0feb5f594499e}{Evaluate\+Case\+Sensitive} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{D\+O\+M\+Element\+Model} el)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node}{Node} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a54323c9080efce8ccaac711e191edeec}{Load\+From\+X\+M\+L} (Xml\+Node node\+Node)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node}{Node} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a08c9f3e82b0a8baeac2db82f16266c60}{\+\_\+children} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node}{Node}$>$()
+\item 
+\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730e}{N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_ad944bafbeb7287e38bc6bc7826752516}{\+\_\+type} = \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730eab50339a10e1de285ac99d4c3990b8693}{N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S.\+N\+O\+N\+E}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730e}{N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a326bab10d73a525224fcf5b061491dda}{Node\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node}{Node} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_af97835cf31c19c83f0044bbd6f4a9e91}{Children}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730e}{N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_ae1efb2639fc04b709b1adbd3566a8162}{Extract\+Node\+Type} (Xml\+Node node\+Node)
+\item 
+static \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node}{Node} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a1ca08dcd343feb5bf309c2702fcfa46e}{Create\+Node\+From\+X\+M\+L} (Xml\+Node node\+Node, \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730e}{N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S} node\+Type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730e}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S@{N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S}}
+\index{N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S@{N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}
+\subsubsection[{N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node.\+N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S}\hspace{0.3cm}{\ttfamily [strong]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730e}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{N\+O\+N\+E@{N\+O\+N\+E}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!N\+O\+N\+E@{N\+O\+N\+E}}\item[{\em 
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730eab50339a10e1de285ac99d4c3990b8693}{}N\+O\+N\+E\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730eab50339a10e1de285ac99d4c3990b8693}
+}]\index{V\+A\+L\+U\+E@{V\+A\+L\+U\+E}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!V\+A\+L\+U\+E@{V\+A\+L\+U\+E}}\item[{\em 
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730eaecc2e9c313faddb07e7da223c1dc5c3f}{}V\+A\+L\+U\+E\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730eaecc2e9c313faddb07e7da223c1dc5c3f}
+}]\index{N\+O\+T@{N\+O\+T}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!N\+O\+T@{N\+O\+T}}\item[{\em 
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730ea10df3d67626099df882920ba6552f16d}{}N\+O\+T\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730ea10df3d67626099df882920ba6552f16d}
+}]\index{A\+N\+D@{A\+N\+D}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!A\+N\+D@{A\+N\+D}}\item[{\em 
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730ea558ffc8f5770d8e4f95f51d822685532}{}A\+N\+D\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730ea558ffc8f5770d8e4f95f51d822685532}
+}]\index{O\+R@{O\+R}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!O\+R@{O\+R}}\item[{\em 
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730ea1d00e7dce692e8dc3f6877f035e3a616}{}O\+R\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a89c72b19ff778cbc04788f4cb47a730ea1d00e7dce692e8dc3f6877f035e3a616}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_af25a40f1b18460d7bee03021e19335fb}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!Node@{Node}}
+\index{Node@{Node}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}
+\subsubsection[{Node()}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node.\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_af25a40f1b18460d7bee03021e19335fb}
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a10c868b90b509e4355a2d9c9b7b34968}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!Node@{Node}}
+\index{Node@{Node}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}
+\subsubsection[{Node(\+N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S type)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node.\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a10c868b90b509e4355a2d9c9b7b34968}
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a5ac174eb5648c594f80c5ca3e74a6687}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!Node@{Node}}
+\index{Node@{Node}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}
+\subsubsection[{Node(\+Node child)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node.\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Node}}]{child}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a5ac174eb5648c594f80c5ca3e74a6687}
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a8f431fec0565dbc38cf63b8c469ff9b6}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!Node@{Node}}
+\index{Node@{Node}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}
+\subsubsection[{Node(\+List$<$ Node $>$ children)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node.\+Node (
+\begin{DoxyParamCaption}
+\item[{List$<$ {\bf Node} $>$}]{children}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a8f431fec0565dbc38cf63b8c469ff9b6}
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a499c9647efddf11d1fe3bd3c8759e5d3}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!Node@{Node}}
+\index{Node@{Node}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}
+\subsubsection[{Node(\+N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S type, List$<$ Node $>$ children)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node.\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S}}]{type, }
+\item[{List$<$ {\bf Node} $>$}]{children}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a499c9647efddf11d1fe3bd3c8759e5d3}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a1ca08dcd343feb5bf309c2702fcfa46e}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!Create\+Node\+From\+X\+M\+L@{Create\+Node\+From\+X\+M\+L}}
+\index{Create\+Node\+From\+X\+M\+L@{Create\+Node\+From\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}
+\subsubsection[{Create\+Node\+From\+X\+M\+L(\+Xml\+Node node\+Node, N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S node\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Node} Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node.\+Create\+Node\+From\+X\+M\+L (
+\begin{DoxyParamCaption}
+\item[{Xml\+Node}]{node\+Node, }
+\item[{{\bf N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S}}]{node\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a1ca08dcd343feb5bf309c2702fcfa46e}
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_aa07f08b4a2299c2b9752a1eba59e245d}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}
+\subsubsection[{Evaluate(\+D\+O\+M\+Element\+Model el)}]{\setlength{\rightskip}{0pt plus 5cm}abstract Boolean Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node.\+Evaluate (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+O\+M\+Element\+Model}}]{el}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_aa07f08b4a2299c2b9752a1eba59e245d}
+
+
+Implemented in \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a4372873a2359e8ef131624bad5bbaa58}{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Value\+Node}, \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_not_node_aa3794e368e151ff066abdfbdc5efb406}{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Not\+Node}, \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_and_node_aaa094a884ae4408ec6d6379d3619e7b1}{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+And\+Node}, and \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_or_node_a3dd522940f332bd171c0db7a8b30f0a7}{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Or\+Node}.
+
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a5cf0b866812c017ef1d0feb5f594499e}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!Evaluate\+Case\+Sensitive@{Evaluate\+Case\+Sensitive}}
+\index{Evaluate\+Case\+Sensitive@{Evaluate\+Case\+Sensitive}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}
+\subsubsection[{Evaluate\+Case\+Sensitive(\+D\+O\+M\+Element\+Model el)}]{\setlength{\rightskip}{0pt plus 5cm}abstract Boolean Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node.\+Evaluate\+Case\+Sensitive (
+\begin{DoxyParamCaption}
+\item[{{\bf D\+O\+M\+Element\+Model}}]{el}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a5cf0b866812c017ef1d0feb5f594499e}
+
+
+Implemented in \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a79986418c7a3439d1cb5d8f14ded199e}{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Value\+Node}, \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_and_node_a03a2a4ac1c8f85f385682e3e5456fb05}{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+And\+Node}, \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_or_node_a690c9013ec5f46532bce12fd221f4f77}{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Or\+Node}, and \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_not_node_a188d7d9fe5ee7ceff3034b393ab8493b}{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Not\+Node}.
+
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_ae1efb2639fc04b709b1adbd3566a8162}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!Extract\+Node\+Type@{Extract\+Node\+Type}}
+\index{Extract\+Node\+Type@{Extract\+Node\+Type}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}
+\subsubsection[{Extract\+Node\+Type(\+Xml\+Node node\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S} Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node.\+Extract\+Node\+Type (
+\begin{DoxyParamCaption}
+\item[{Xml\+Node}]{node\+Node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_ae1efb2639fc04b709b1adbd3566a8162}
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a603b5439f3109a1d8718bb2a879c36b9}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!Find\+Node@{Find\+Node}}
+\index{Find\+Node@{Find\+Node}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}
+\subsubsection[{Find\+Node(\+String uid)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node} Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node.\+Find\+Node (
+\begin{DoxyParamCaption}
+\item[{String}]{uid}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a603b5439f3109a1d8718bb2a879c36b9}
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a54323c9080efce8ccaac711e191edeec}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}}
+\index{Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}
+\subsubsection[{Load\+From\+X\+M\+L(\+Xml\+Node node\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Node} Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node.\+Load\+From\+X\+M\+L (
+\begin{DoxyParamCaption}
+\item[{Xml\+Node}]{node\+Node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a54323c9080efce8ccaac711e191edeec}
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_afd5fd3184ae6075feac0012977e349b6}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!To\+X\+M\+L@{To\+X\+M\+L}}
+\index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}
+\subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}virtual Xml\+Node Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node.\+To\+X\+M\+L (
+\begin{DoxyParamCaption}
+\item[{Xml\+Document}]{xml\+Doc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_afd5fd3184ae6075feac0012977e349b6}
+
+
+Reimplemented in \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a801c7d0fdc559f12d8c8e6ae1943b59d}{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Value\+Node}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a08c9f3e82b0a8baeac2db82f16266c60}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!\+\_\+children@{\+\_\+children}}
+\index{\+\_\+children@{\+\_\+children}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}
+\subsubsection[{\+\_\+children}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Node}$>$ Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node.\+\_\+children = new List$<${\bf Node}$>$()\hspace{0.3cm}{\ttfamily [protected]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a08c9f3e82b0a8baeac2db82f16266c60}
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_ad944bafbeb7287e38bc6bc7826752516}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!\+\_\+type@{\+\_\+type}}
+\index{\+\_\+type@{\+\_\+type}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}
+\subsubsection[{\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S} Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node.\+\_\+type = {\bf N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S.\+N\+O\+N\+E}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_ad944bafbeb7287e38bc6bc7826752516}
+
+
+\subsection{Property Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_af97835cf31c19c83f0044bbd6f4a9e91}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!Children@{Children}}
+\index{Children@{Children}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}
+\subsubsection[{Children}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Node}$>$ Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node.\+Children\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_af97835cf31c19c83f0044bbd6f4a9e91}
+\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a326bab10d73a525224fcf5b061491dda}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}!Node\+Type@{Node\+Type}}
+\index{Node\+Type@{Node\+Type}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Node}}
+\subsubsection[{Node\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf N\+O\+D\+E\+\_\+\+T\+Y\+P\+E\+S} Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node.\+Node\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a326bab10d73a525224fcf5b061491dda}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+M\+A-\/\+F\+F-\/\+Server/\+Models/\+Settings\+Model/\+Expression\+Tree/\hyperlink{_node_8cs}{Node.\+cs}\end{DoxyCompactItemize}

@@ -1,0 +1,144 @@
+\hypertarget{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js}{}\section{M\+A-\/\+F\+F-\/\+Server/bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.js File Reference}
+\label{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js}\index{M\+A-\/\+F\+F-\/\+Server/bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{M\+A-\/\+F\+F-\/\+Server/bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_ad5f4d4dd0568003f7652a63d2f96a1e3}{if} (!control.\+creating\+New\+Participant())
+\item 
+console \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a57d28aaf4b9be80826cb97e3b05629cf}{log} (\textquotesingle{}save participant...\textquotesingle{})
+\item 
+control \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a0dcadb619ef910799723739b09637680}{set\+Identifier} (\$(\textquotesingle{}\#identifier\textquotesingle{}).val())
+\item 
+control \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a84d06c641f8fdd4cb9476ae8b6c8d7e3}{set\+Birthyear} (parse\+Int(\$(\textquotesingle{}\#birthyear\textquotesingle{}).val()))
+\item 
+control \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a63b275787ca7c3425817f19e61a324a7}{set\+Education} (\$(\textquotesingle{}\#education\textquotesingle{}).val())
+\item 
+control \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a5a1bcc477069e08870e202b534a60eac}{set\+Sex} (\hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a92ac1efb4297eef6e7eed30fca1f3e8e}{sex})
+\item 
+\hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_ad791b869c438338fe53bb82aa5df58a4}{extract\+Extra\+Data} ()
+\item 
+console \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a15afbffce9d655105ad5ffd0ba6975c1}{log} (control.\+get\+Identifier(), control.\+get\+Birthyear(), control.\+get\+Education())
+\item 
+control \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a4a66964b7748523cdf62b68b72e03fac}{save\+Participant} ()
+\item 
+control \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a6bb6c6d36178f7806d97319e35438412}{cancel} ()
+\item 
+console \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_ab145d234881b156a41b17f4eff58b302}{log} (\$(this))
+\item 
+this \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a84ac36b48b353067227d825e0a4166d6}{closest} (\textquotesingle{}tr\textquotesingle{}).remove()
+\item 
+this \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a4705e6139301d44b1251645bcec012b1}{prop} (\textquotesingle{}checked\textquotesingle{}, true)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+var \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a92ac1efb4297eef6e7eed30fca1f3e8e}{sex} = \$(\char`\"{}\#sex input\mbox{[}type=\textquotesingle{}radio\textquotesingle{}\mbox{]}\+:checked\char`\"{}).attr(\textquotesingle{}id\textquotesingle{})
+\item 
+var \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_aad213e71e8f7878665e0af623a88a79a}{template} = \+\_\+.\+template(\$(\textquotesingle{}script\#extra-\/data-\/template\textquotesingle{}).html())
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a6bb6c6d36178f7806d97319e35438412}{}\index{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}!cancel@{cancel}}
+\index{cancel@{cancel}!bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}}
+\subsubsection[{cancel()}]{\setlength{\rightskip}{0pt plus 5cm}control cancel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a6bb6c6d36178f7806d97319e35438412}
+\hypertarget{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a84ac36b48b353067227d825e0a4166d6}{}\index{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}!closest@{closest}}
+\index{closest@{closest}!bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}}
+\subsubsection[{closest(\textquotesingle{}tr\textquotesingle{}).\+remove()}]{\setlength{\rightskip}{0pt plus 5cm}this closest (
+\begin{DoxyParamCaption}
+\item[{\textquotesingle{}tr\textquotesingle{}}]{}
+\end{DoxyParamCaption}
+)}\label{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a84ac36b48b353067227d825e0a4166d6}
+\hypertarget{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_ad791b869c438338fe53bb82aa5df58a4}{}\index{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}!extract\+Extra\+Data@{extract\+Extra\+Data}}
+\index{extract\+Extra\+Data@{extract\+Extra\+Data}!bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}}
+\subsubsection[{extract\+Extra\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf function} extract\+Extra\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_ad791b869c438338fe53bb82aa5df58a4}
+\hypertarget{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_ad5f4d4dd0568003f7652a63d2f96a1e3}{}\index{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}!if@{if}}
+\index{if@{if}!bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}}
+\subsubsection[{if("!control.\+creating\+New\+Participant())}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{!control.}]{creating\+New\+Participant()}
+\end{DoxyParamCaption}
+)}\label{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_ad5f4d4dd0568003f7652a63d2f96a1e3}
+\hypertarget{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a57d28aaf4b9be80826cb97e3b05629cf}{}\index{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}!log@{log}}
+\index{log@{log}!bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}}
+\subsubsection[{log(\textquotesingle{}save participant...\textquotesingle{})}]{\setlength{\rightskip}{0pt plus 5cm}console log (
+\begin{DoxyParamCaption}
+\item[{\textquotesingle{}save participant...\textquotesingle{}}]{}
+\end{DoxyParamCaption}
+)}\label{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a57d28aaf4b9be80826cb97e3b05629cf}
+\hypertarget{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a15afbffce9d655105ad5ffd0ba6975c1}{}\index{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}!log@{log}}
+\index{log@{log}!bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}}
+\subsubsection[{log(control.\+get\+Identifier(), control.\+get\+Birthyear(), control.\+get\+Education())}]{\setlength{\rightskip}{0pt plus 5cm}console log (
+\begin{DoxyParamCaption}
+\item[{control.}]{get\+Identifier(), }
+\item[{control.}]{get\+Birthyear(), }
+\item[{control.}]{get\+Education()}
+\end{DoxyParamCaption}
+)}\label{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a15afbffce9d655105ad5ffd0ba6975c1}
+\hypertarget{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_ab145d234881b156a41b17f4eff58b302}{}\index{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}!log@{log}}
+\index{log@{log}!bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}}
+\subsubsection[{log(\$(this))}]{\setlength{\rightskip}{0pt plus 5cm}console log (
+\begin{DoxyParamCaption}
+\item[{}]{\$this}
+\end{DoxyParamCaption}
+)}\label{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_ab145d234881b156a41b17f4eff58b302}
+\hypertarget{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a4705e6139301d44b1251645bcec012b1}{}\index{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}!prop@{prop}}
+\index{prop@{prop}!bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}}
+\subsubsection[{prop(\textquotesingle{}checked\textquotesingle{}, true)}]{\setlength{\rightskip}{0pt plus 5cm}this prop (
+\begin{DoxyParamCaption}
+\item[{\textquotesingle{}checked\textquotesingle{}}]{, }
+\item[{true}]{}
+\end{DoxyParamCaption}
+)}\label{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a4705e6139301d44b1251645bcec012b1}
+\hypertarget{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a4a66964b7748523cdf62b68b72e03fac}{}\index{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}!save\+Participant@{save\+Participant}}
+\index{save\+Participant@{save\+Participant}!bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}}
+\subsubsection[{save\+Participant()}]{\setlength{\rightskip}{0pt plus 5cm}control save\+Participant (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a4a66964b7748523cdf62b68b72e03fac}
+\hypertarget{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a84d06c641f8fdd4cb9476ae8b6c8d7e3}{}\index{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}!set\+Birthyear@{set\+Birthyear}}
+\index{set\+Birthyear@{set\+Birthyear}!bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}}
+\subsubsection[{set\+Birthyear(parse\+Int(\$(\textquotesingle{}\#birthyear\textquotesingle{}).\+val()))}]{\setlength{\rightskip}{0pt plus 5cm}control set\+Birthyear (
+\begin{DoxyParamCaption}
+\item[{parse\+Int(\$(\textquotesingle{}\#birthyear\textquotesingle{}).val())}]{}
+\end{DoxyParamCaption}
+)}\label{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a84d06c641f8fdd4cb9476ae8b6c8d7e3}
+\hypertarget{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a63b275787ca7c3425817f19e61a324a7}{}\index{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}!set\+Education@{set\+Education}}
+\index{set\+Education@{set\+Education}!bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}}
+\subsubsection[{set\+Education(\$(\textquotesingle{}\#education\textquotesingle{}).\+val())}]{\setlength{\rightskip}{0pt plus 5cm}control set\+Education (
+\begin{DoxyParamCaption}
+\item[{}]{\$\textquotesingle{}\#education\textquotesingle{}).\+val(}
+\end{DoxyParamCaption}
+)}\label{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a63b275787ca7c3425817f19e61a324a7}
+\hypertarget{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a0dcadb619ef910799723739b09637680}{}\index{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}!set\+Identifier@{set\+Identifier}}
+\index{set\+Identifier@{set\+Identifier}!bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}}
+\subsubsection[{set\+Identifier(\$(\textquotesingle{}\#identifier\textquotesingle{}).\+val())}]{\setlength{\rightskip}{0pt plus 5cm}control set\+Identifier (
+\begin{DoxyParamCaption}
+\item[{}]{\$\textquotesingle{}\#identifier\textquotesingle{}).\+val(}
+\end{DoxyParamCaption}
+)}\label{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a0dcadb619ef910799723739b09637680}
+\hypertarget{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a5a1bcc477069e08870e202b534a60eac}{}\index{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}!set\+Sex@{set\+Sex}}
+\index{set\+Sex@{set\+Sex}!bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}}
+\subsubsection[{set\+Sex(sex)}]{\setlength{\rightskip}{0pt plus 5cm}control set\+Sex (
+\begin{DoxyParamCaption}
+\item[{{\bf sex}}]{}
+\end{DoxyParamCaption}
+)}\label{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a5a1bcc477069e08870e202b534a60eac}
+
+
+\subsection{Variable Documentation}
+\hypertarget{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a92ac1efb4297eef6e7eed30fca1f3e8e}{}\index{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}!sex@{sex}}
+\index{sex@{sex}!bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}}
+\subsubsection[{sex}]{\setlength{\rightskip}{0pt plus 5cm}var sex = \$(\char`\"{}\#sex input\mbox{[}type=\textquotesingle{}radio\textquotesingle{}\mbox{]}\+:checked\char`\"{}).attr(\textquotesingle{}id\textquotesingle{})}\label{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a92ac1efb4297eef6e7eed30fca1f3e8e}
+\hypertarget{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_aad213e71e8f7878665e0af623a88a79a}{}\index{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}!template@{template}}
+\index{template@{template}!bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js@{bin/x64/\+Release/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+participant.\+js}}
+\subsubsection[{template}]{\setlength{\rightskip}{0pt plus 5cm}var template = \+\_\+.\+template(\$(\textquotesingle{}script\#extra-\/data-\/template\textquotesingle{}).html())}\label{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_aad213e71e8f7878665e0af623a88a79a}

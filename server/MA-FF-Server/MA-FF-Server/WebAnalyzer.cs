@@ -50,8 +50,7 @@ namespace WebAnalyzer
         /// Checks if it's the first run of the application. 
         /// If it is the environment will set the environment variables to fit the current system.
         /// </summary>
-        /// <seealso cref="AppSettings.ResetEnvironmentVariables()">
-        /// Contains the code for setting the environment variables. </seealso>
+        /// <seealso cref="AppSettings.ResetEnvironmentVariables()"></seealso>
         private void CheckFirstStartup()
         {
             if (Properties.Settings.Default.FirstStart)
@@ -64,8 +63,7 @@ namespace WebAnalyzer
         /// <summary>
         /// Validates the settings, so that no problems should arise.
         /// </summary>
-        /// <seealso cref="SettingsValidator.Validate()">
-        /// Contains the code for validating the settings.</seealso> 
+        /// <seealso cref="SettingsValidator.Validate()"></seealso> 
 
         private void ValidateSettings()
         {
@@ -85,8 +83,7 @@ namespace WebAnalyzer
         /// <summary>
         /// Initalizes the main part of the application. The main controller.
         /// </summary>
-        /// <seealso cref="MainController">
-        /// It is the core of the application.</seealso> 
+        /// <seealso cref="MainController"></seealso> 
 
         private void InitializeMainController()
         {

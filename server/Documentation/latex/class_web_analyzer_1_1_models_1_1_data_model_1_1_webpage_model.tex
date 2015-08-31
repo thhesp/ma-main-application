@@ -1,0 +1,186 @@
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model}{}\section{Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model Class Reference}
+\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model}\index{Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model@{Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ae5054b6875654937144914f592802d9d}{Webpage\+Model} (String url, String visit\+Timestamp)
+\item 
+\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a613cfd755d739701df6cd2b05190d72f}{Webpage\+Model} ()
+\item 
+void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a7169078e11bdd8867dc0f507c9a65b9e}{Add\+Gaze\+Data} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} data)
+\item 
+Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a056bc9895b2a1c83631c24d100353ef2}{To\+X\+M\+L} (Xml\+Document xml\+Doc)
+\item 
+Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a70651a677fea2ee273511ee0205c1885}{Generate\+Statistics\+X\+M\+L} (Xml\+Document xml\+Doc)
+\item 
+Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a052f46e1ae62f68e632423a266a1d15e}{Generate\+Fixation\+X\+M\+L} (Xml\+Document xml\+Doc)
+\item 
+Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a1c5db01c5ea35dbe8336096cd250bc2d}{Generate\+A\+O\+I\+X\+M\+L} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings}{Experiment\+Settings} settings, Xml\+Document xml\+Doc)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model}{Webpage\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a26999baeddbe48b5c6f10a0b7510c807}{Load\+From\+X\+M\+L} (Xml\+Node webpage\+Node)
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a956b067ed12f422f646b7e2a4b6bb42d}{Url}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac3378fdc78273706547ec3a9d377ef9a}{Visit\+Timestamp}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_acb4a6ecac0e4ef9ed2df7b33e4694b31}{Gazes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_af8b9bb060e28384f7ecf0635856187d4}{Create\+Webpage\+Statistics} (Xml\+Document xml\+Doc)
+\item 
+void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a52e372578a17a8174ba376ca4d699b31}{Insert\+Array\+Statistics} (Xml\+Document xml\+Doc, Xml\+Node node, long\mbox{[}$\,$\mbox{]} array)
+\item 
+void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a06a07e2bb00b5090294276c6f2057f6f}{Extract\+Fixations} (double acceptable\+Deviations)
+\item 
+void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a6f50086cd1ed28c759322f0aae8d9700}{Extract\+Fixations} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aea93808218833baaf68514071c973ae4}{\+\_\+url}
+\item 
+String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac030b9fb9430a41677eb845ceabd5b26}{\+\_\+visit\+Timestamp}
+\item 
+List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a1830061eb9c3046a86386306ac467f25}{\+\_\+position\+Data} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model}$>$()
+\item 
+List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model}{Fixation\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aeef627527c26ccf4d8caa6e65101970f}{\+\_\+left\+Fixation\+Data} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model}{Fixation\+Model}$>$()
+\item 
+List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model}{Fixation\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a5c341d7a7fd5074ddbd4cb7622914465}{\+\_\+right\+Fixation\+Data} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model}{Fixation\+Model}$>$()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ae5054b6875654937144914f592802d9d}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Webpage\+Model@{Webpage\+Model}}
+\index{Webpage\+Model@{Webpage\+Model}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Webpage\+Model(\+String url, String visit\+Timestamp)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Webpage\+Model (
+\begin{DoxyParamCaption}
+\item[{String}]{url, }
+\item[{String}]{visit\+Timestamp}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ae5054b6875654937144914f592802d9d}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a613cfd755d739701df6cd2b05190d72f}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Webpage\+Model@{Webpage\+Model}}
+\index{Webpage\+Model@{Webpage\+Model}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Webpage\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Webpage\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a613cfd755d739701df6cd2b05190d72f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a7169078e11bdd8867dc0f507c9a65b9e}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Add\+Gaze\+Data@{Add\+Gaze\+Data}}
+\index{Add\+Gaze\+Data@{Add\+Gaze\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Add\+Gaze\+Data(\+Gaze\+Model data)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Add\+Gaze\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Gaze\+Model}}]{data}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a7169078e11bdd8867dc0f507c9a65b9e}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_af8b9bb060e28384f7ecf0635856187d4}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Create\+Webpage\+Statistics@{Create\+Webpage\+Statistics}}
+\index{Create\+Webpage\+Statistics@{Create\+Webpage\+Statistics}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Create\+Webpage\+Statistics(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Create\+Webpage\+Statistics (
+\begin{DoxyParamCaption}
+\item[{Xml\+Document}]{xml\+Doc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_af8b9bb060e28384f7ecf0635856187d4}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a06a07e2bb00b5090294276c6f2057f6f}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Extract\+Fixations@{Extract\+Fixations}}
+\index{Extract\+Fixations@{Extract\+Fixations}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Extract\+Fixations(double acceptable\+Deviations)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Extract\+Fixations (
+\begin{DoxyParamCaption}
+\item[{double}]{acceptable\+Deviations}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a06a07e2bb00b5090294276c6f2057f6f}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a6f50086cd1ed28c759322f0aae8d9700}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Extract\+Fixations@{Extract\+Fixations}}
+\index{Extract\+Fixations@{Extract\+Fixations}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Extract\+Fixations()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Extract\+Fixations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a6f50086cd1ed28c759322f0aae8d9700}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a1c5db01c5ea35dbe8336096cd250bc2d}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Generate\+A\+O\+I\+X\+M\+L@{Generate\+A\+O\+I\+X\+M\+L}}
+\index{Generate\+A\+O\+I\+X\+M\+L@{Generate\+A\+O\+I\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Generate\+A\+O\+I\+X\+M\+L(\+Experiment\+Settings settings, Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Generate\+A\+O\+I\+X\+M\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Experiment\+Settings}}]{settings, }
+\item[{Xml\+Document}]{xml\+Doc}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a1c5db01c5ea35dbe8336096cd250bc2d}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a052f46e1ae62f68e632423a266a1d15e}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Generate\+Fixation\+X\+M\+L@{Generate\+Fixation\+X\+M\+L}}
+\index{Generate\+Fixation\+X\+M\+L@{Generate\+Fixation\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Generate\+Fixation\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Generate\+Fixation\+X\+M\+L (
+\begin{DoxyParamCaption}
+\item[{Xml\+Document}]{xml\+Doc}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a052f46e1ae62f68e632423a266a1d15e}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a70651a677fea2ee273511ee0205c1885}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Generate\+Statistics\+X\+M\+L@{Generate\+Statistics\+X\+M\+L}}
+\index{Generate\+Statistics\+X\+M\+L@{Generate\+Statistics\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Generate\+Statistics\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Generate\+Statistics\+X\+M\+L (
+\begin{DoxyParamCaption}
+\item[{Xml\+Document}]{xml\+Doc}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a70651a677fea2ee273511ee0205c1885}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a52e372578a17a8174ba376ca4d699b31}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Insert\+Array\+Statistics@{Insert\+Array\+Statistics}}
+\index{Insert\+Array\+Statistics@{Insert\+Array\+Statistics}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Insert\+Array\+Statistics(\+Xml\+Document xml\+Doc, Xml\+Node node, long[] array)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Insert\+Array\+Statistics (
+\begin{DoxyParamCaption}
+\item[{Xml\+Document}]{xml\+Doc, }
+\item[{Xml\+Node}]{node, }
+\item[{long\mbox{[}$\,$\mbox{]}}]{array}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a52e372578a17a8174ba376ca4d699b31}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a26999baeddbe48b5c6f10a0b7510c807}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}}
+\index{Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Load\+From\+X\+M\+L(\+Xml\+Node webpage\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Webpage\+Model} Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Load\+From\+X\+M\+L (
+\begin{DoxyParamCaption}
+\item[{Xml\+Node}]{webpage\+Node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a26999baeddbe48b5c6f10a0b7510c807}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a056bc9895b2a1c83631c24d100353ef2}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!To\+X\+M\+L@{To\+X\+M\+L}}
+\index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+To\+X\+M\+L (
+\begin{DoxyParamCaption}
+\item[{Xml\+Document}]{xml\+Doc}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a056bc9895b2a1c83631c24d100353ef2}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aeef627527c26ccf4d8caa6e65101970f}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+left\+Fixation\+Data@{\+\_\+left\+Fixation\+Data}}
+\index{\+\_\+left\+Fixation\+Data@{\+\_\+left\+Fixation\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{\+\_\+left\+Fixation\+Data}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Fixation\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+left\+Fixation\+Data = new List$<${\bf Fixation\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aeef627527c26ccf4d8caa6e65101970f}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a1830061eb9c3046a86386306ac467f25}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+position\+Data@{\+\_\+position\+Data}}
+\index{\+\_\+position\+Data@{\+\_\+position\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{\+\_\+position\+Data}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Gaze\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+position\+Data = new List$<${\bf Gaze\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a1830061eb9c3046a86386306ac467f25}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a5c341d7a7fd5074ddbd4cb7622914465}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+right\+Fixation\+Data@{\+\_\+right\+Fixation\+Data}}
+\index{\+\_\+right\+Fixation\+Data@{\+\_\+right\+Fixation\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{\+\_\+right\+Fixation\+Data}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Fixation\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+right\+Fixation\+Data = new List$<${\bf Fixation\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a5c341d7a7fd5074ddbd4cb7622914465}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aea93808218833baaf68514071c973ae4}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+url@{\+\_\+url}}
+\index{\+\_\+url@{\+\_\+url}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{\+\_\+url}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+url\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aea93808218833baaf68514071c973ae4}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac030b9fb9430a41677eb845ceabd5b26}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+visit\+Timestamp@{\+\_\+visit\+Timestamp}}
+\index{\+\_\+visit\+Timestamp@{\+\_\+visit\+Timestamp}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{\+\_\+visit\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+visit\+Timestamp\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac030b9fb9430a41677eb845ceabd5b26}
+
+
+\subsection{Property Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_acb4a6ecac0e4ef9ed2df7b33e4694b31}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Gazes@{Gazes}}
+\index{Gazes@{Gazes}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Gazes}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Gaze\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Gazes\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_acb4a6ecac0e4ef9ed2df7b33e4694b31}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a956b067ed12f422f646b7e2a4b6bb42d}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Url@{Url}}
+\index{Url@{Url}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Url}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Url\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a956b067ed12f422f646b7e2a4b6bb42d}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac3378fdc78273706547ec3a9d377ef9a}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Visit\+Timestamp@{Visit\+Timestamp}}
+\index{Visit\+Timestamp@{Visit\+Timestamp}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Visit\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Visit\+Timestamp\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac3378fdc78273706547ec3a9d377ef9a}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+M\+A-\/\+F\+F-\/\+Server/\+Models/\+Data\+Model/\hyperlink{_webpage_model_8cs}{Webpage\+Model.\+cs}\end{DoxyCompactItemize}

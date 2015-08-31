@@ -1,0 +1,123 @@
+\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager}{}\section{Web\+Analyzer.\+Server.\+Connection\+Manager Class Reference}
+\label{class_web_analyzer_1_1_server_1_1_connection_manager}\index{Web\+Analyzer.\+Server.\+Connection\+Manager@{Web\+Analyzer.\+Server.\+Connection\+Manager}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_ae034fe5148cccbcc759a56abd68bb51a}{Connection\+Manager} ()
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a7fa4617d21e13ed0302001e70ff0f79c}{Reset\+Connections} ()
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a6f743e94d77ce575913e2c504cab5057}{Start\+Message\+Thread} ()
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a8cbad625ff934cf233a70ecc2af26d95}{Stop\+Message\+Thread} ()
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a2237bfa6cf4791e578b37e75624b70df}{Request\+Data} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af690ff5521d79c7128861033ae80ae17}{unique\+Id}, double left\+X, double left\+Y, double right\+X, double right\+Y)
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a8b3ba4008dc9ee54a092c532132df757}{Request\+Data} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af690ff5521d79c7128861033ae80ae17}{unique\+Id}, double x\+Pos, double y\+Pos)
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a912992bce817cbf9177db239f7716a1e}{On\+\_\+\+Add\+Connection} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} source, \hyperlink{class_web_analyzer_1_1_events_1_1_add_connection_event}{Add\+Connection\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a802503ffd29cf9a18a2bfae95adc4b4e}{Broadcast} (\hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} message)
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a773422b69490cf64139d8237a9122eaa}{Work\+Connection\+Message\+Queues} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a23a1f3a046b14bcb1333c3ef846015d6}{\+\_\+work\+Messages} = false
+\item 
+List$<$ \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Websocket\+Connection} $>$ \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a4d1d80f0e1bca824c36908efcc4f9dc0}{\+\_\+connections} = new List$<$\hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Websocket\+Connection}$>$()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_ae034fe5148cccbcc759a56abd68bb51a}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Connection\+Manager@{Connection\+Manager}}
+\index{Connection\+Manager@{Connection\+Manager}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
+\subsubsection[{Connection\+Manager()}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Server.\+Connection\+Manager.\+Connection\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_server_1_1_connection_manager_ae034fe5148cccbcc759a56abd68bb51a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a802503ffd29cf9a18a2bfae95adc4b4e}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Broadcast@{Broadcast}}
+\index{Broadcast@{Broadcast}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
+\subsubsection[{Broadcast(\+Message message)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Broadcast (
+\begin{DoxyParamCaption}
+\item[{{\bf Message}}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a802503ffd29cf9a18a2bfae95adc4b4e}
+\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a912992bce817cbf9177db239f7716a1e}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!On\+\_\+\+Add\+Connection@{On\+\_\+\+Add\+Connection}}
+\index{On\+\_\+\+Add\+Connection@{On\+\_\+\+Add\+Connection}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
+\subsubsection[{On\+\_\+\+Add\+Connection(object source, Add\+Connection\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+On\+\_\+\+Add\+Connection (
+\begin{DoxyParamCaption}
+\item[{{\bf object}}]{source, }
+\item[{{\bf Add\+Connection\+Event}}]{e}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a912992bce817cbf9177db239f7716a1e}
+\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a2237bfa6cf4791e578b37e75624b70df}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Request\+Data@{Request\+Data}}
+\index{Request\+Data@{Request\+Data}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
+\subsubsection[{Request\+Data(\+String unique\+Id, double left\+X, double left\+Y, double right\+X, double right\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Request\+Data (
+\begin{DoxyParamCaption}
+\item[{String}]{unique\+Id, }
+\item[{double}]{left\+X, }
+\item[{double}]{left\+Y, }
+\item[{double}]{right\+X, }
+\item[{double}]{right\+Y}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a2237bfa6cf4791e578b37e75624b70df}
+\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a8b3ba4008dc9ee54a092c532132df757}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Request\+Data@{Request\+Data}}
+\index{Request\+Data@{Request\+Data}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
+\subsubsection[{Request\+Data(\+String unique\+Id, double x\+Pos, double y\+Pos)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Request\+Data (
+\begin{DoxyParamCaption}
+\item[{String}]{unique\+Id, }
+\item[{double}]{x\+Pos, }
+\item[{double}]{y\+Pos}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a8b3ba4008dc9ee54a092c532132df757}
+\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a7fa4617d21e13ed0302001e70ff0f79c}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Reset\+Connections@{Reset\+Connections}}
+\index{Reset\+Connections@{Reset\+Connections}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
+\subsubsection[{Reset\+Connections()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Reset\+Connections (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a7fa4617d21e13ed0302001e70ff0f79c}
+\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a6f743e94d77ce575913e2c504cab5057}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Start\+Message\+Thread@{Start\+Message\+Thread}}
+\index{Start\+Message\+Thread@{Start\+Message\+Thread}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
+\subsubsection[{Start\+Message\+Thread()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Start\+Message\+Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a6f743e94d77ce575913e2c504cab5057}
+\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a8cbad625ff934cf233a70ecc2af26d95}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Stop\+Message\+Thread@{Stop\+Message\+Thread}}
+\index{Stop\+Message\+Thread@{Stop\+Message\+Thread}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
+\subsubsection[{Stop\+Message\+Thread()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Stop\+Message\+Thread (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a8cbad625ff934cf233a70ecc2af26d95}
+\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a773422b69490cf64139d8237a9122eaa}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Work\+Connection\+Message\+Queues@{Work\+Connection\+Message\+Queues}}
+\index{Work\+Connection\+Message\+Queues@{Work\+Connection\+Message\+Queues}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
+\subsubsection[{Work\+Connection\+Message\+Queues()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Work\+Connection\+Message\+Queues (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a773422b69490cf64139d8237a9122eaa}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a4d1d80f0e1bca824c36908efcc4f9dc0}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!\+\_\+connections@{\+\_\+connections}}
+\index{\+\_\+connections@{\+\_\+connections}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
+\subsubsection[{\+\_\+connections}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Websocket\+Connection}$>$ Web\+Analyzer.\+Server.\+Connection\+Manager.\+\_\+connections = new List$<${\bf Websocket\+Connection}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a4d1d80f0e1bca824c36908efcc4f9dc0}
+\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a23a1f3a046b14bcb1333c3ef846015d6}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!\+\_\+work\+Messages@{\+\_\+work\+Messages}}
+\index{\+\_\+work\+Messages@{\+\_\+work\+Messages}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
+\subsubsection[{\+\_\+work\+Messages}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Connection\+Manager.\+\_\+work\+Messages = false\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a23a1f3a046b14bcb1333c3ef846015d6}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+M\+A-\/\+F\+F-\/\+Server/\+Server/\hyperlink{_connection_manager_8cs}{Connection\+Manager.\+cs}\end{DoxyCompactItemize}

@@ -1,0 +1,136 @@
+\hypertarget{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js}{}\section{M\+A-\/\+F\+F-\/\+Server/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.js File Reference}
+\label{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js}\index{M\+A-\/\+F\+F-\/\+Server/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{M\+A-\/\+F\+F-\/\+Server/\+U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a785b5ed18c274caa00d097991c294a34}{if} (!control.\+creating\+New\+Rule())
+\item 
+console \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a189cf013159f19d1c538b92d71253663}{log} (\textquotesingle{}save rule setting...\textquotesingle{})
+\item 
+control \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a55a2ca555d57e19fdd001048e2287e22}{set\+Case\+Sensitive} (\$(\textquotesingle{}\#case-\/sensitive\textquotesingle{}).\hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2edit__participant_8js_a4705e6139301d44b1251645bcec012b1}{prop}(\char`\"{}checked\char`\"{}))
+\item 
+\hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_ac50f4d0f5bb7a0345303ad55c7ee3249}{extract\+Tree\+Data} ()
+\item 
+control \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_ae3db2596f40222c31e6efd7efdd1b23a}{save\+Rule} ()
+\item 
+control \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a6bb6c6d36178f7806d97319e35438412}{cancel} ()
+\item 
+delete \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a16452e6049ea50b139055d9f614f8605}{click} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a064ea737358a67204290ee639f5a9100}{on\+Delete})
+\item 
+\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_ae6a3c367c4a8fa0bca59672d098cc7c5}{function} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a62eb39720fe600c3e4e26b2188f201c6}{on\+Add\+Condition} (event)
+\item 
+\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_ae6a3c367c4a8fa0bca59672d098cc7c5}{function} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_abd23c3ad9cf7e8287668ec48ed0be1da}{on\+Add\+Value} (event)
+\item 
+\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_ae6a3c367c4a8fa0bca59672d098cc7c5}{function} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a064ea737358a67204290ee639f5a9100}{on\+Delete} ()
+\item 
+\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_ae6a3c367c4a8fa0bca59672d098cc7c5}{function} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_ab7a42b10b350d37933d9ed5214271334}{extract\+Conditions} ()
+\item 
+\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_ae6a3c367c4a8fa0bca59672d098cc7c5}{function} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a5f4b7eb7e1c75b6e75c5719eb03138a1}{extract\+Values} ()
+\item 
+\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_ae6a3c367c4a8fa0bca59672d098cc7c5}{function} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_abf1c021fc651583927c066a78e2abadf}{build\+H\+T\+M\+L\+For\+Child\+Nodes} (parent\+Uid)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+var \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_abc33cf1bdb3e540bdb895c7d88f64a43}{root\+Uid} = control.\+create\+Rule\+Root(\$(\char`\"{}\#rule-\/root\char`\"{}).val())
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_abf1c021fc651583927c066a78e2abadf}{}\index{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}!build\+H\+T\+M\+L\+For\+Child\+Nodes@{build\+H\+T\+M\+L\+For\+Child\+Nodes}}
+\index{build\+H\+T\+M\+L\+For\+Child\+Nodes@{build\+H\+T\+M\+L\+For\+Child\+Nodes}!U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}}
+\subsubsection[{build\+H\+T\+M\+L\+For\+Child\+Nodes(parent\+Uid)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf function} build\+H\+T\+M\+L\+For\+Child\+Nodes (
+\begin{DoxyParamCaption}
+\item[{}]{parent\+Uid}
+\end{DoxyParamCaption}
+)}\label{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_abf1c021fc651583927c066a78e2abadf}
+\hypertarget{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a6bb6c6d36178f7806d97319e35438412}{}\index{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}!cancel@{cancel}}
+\index{cancel@{cancel}!U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}}
+\subsubsection[{cancel()}]{\setlength{\rightskip}{0pt plus 5cm}control cancel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a6bb6c6d36178f7806d97319e35438412}
+\hypertarget{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a16452e6049ea50b139055d9f614f8605}{}\index{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}!click@{click}}
+\index{click@{click}!U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}}
+\subsubsection[{click(on\+Delete)}]{\setlength{\rightskip}{0pt plus 5cm}delete click (
+\begin{DoxyParamCaption}
+\item[{{\bf on\+Delete}}]{}
+\end{DoxyParamCaption}
+)}\label{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a16452e6049ea50b139055d9f614f8605}
+\hypertarget{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_ab7a42b10b350d37933d9ed5214271334}{}\index{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}!extract\+Conditions@{extract\+Conditions}}
+\index{extract\+Conditions@{extract\+Conditions}!U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}}
+\subsubsection[{extract\+Conditions()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf function} extract\+Conditions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_ab7a42b10b350d37933d9ed5214271334}
+\hypertarget{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_ac50f4d0f5bb7a0345303ad55c7ee3249}{}\index{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}!extract\+Tree\+Data@{extract\+Tree\+Data}}
+\index{extract\+Tree\+Data@{extract\+Tree\+Data}!U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}}
+\subsubsection[{extract\+Tree\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}extract\+Tree\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_ac50f4d0f5bb7a0345303ad55c7ee3249}
+\hypertarget{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a5f4b7eb7e1c75b6e75c5719eb03138a1}{}\index{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}!extract\+Values@{extract\+Values}}
+\index{extract\+Values@{extract\+Values}!U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}}
+\subsubsection[{extract\+Values()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf function} extract\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a5f4b7eb7e1c75b6e75c5719eb03138a1}
+\hypertarget{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a785b5ed18c274caa00d097991c294a34}{}\index{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}!if@{if}}
+\index{if@{if}!U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}}
+\subsubsection[{if("!control.\+creating\+New\+Rule())}]{\setlength{\rightskip}{0pt plus 5cm}if (
+\begin{DoxyParamCaption}
+\item[{!control.}]{creating\+New\+Rule()}
+\end{DoxyParamCaption}
+)}\label{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a785b5ed18c274caa00d097991c294a34}
+\hypertarget{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a189cf013159f19d1c538b92d71253663}{}\index{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}!log@{log}}
+\index{log@{log}!U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}}
+\subsubsection[{log(\textquotesingle{}save rule setting...\textquotesingle{})}]{\setlength{\rightskip}{0pt plus 5cm}console log (
+\begin{DoxyParamCaption}
+\item[{\textquotesingle{}save rule setting...\textquotesingle{}}]{}
+\end{DoxyParamCaption}
+)}\label{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a189cf013159f19d1c538b92d71253663}
+\hypertarget{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a62eb39720fe600c3e4e26b2188f201c6}{}\index{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}!on\+Add\+Condition@{on\+Add\+Condition}}
+\index{on\+Add\+Condition@{on\+Add\+Condition}!U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}}
+\subsubsection[{on\+Add\+Condition(event)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf function} on\+Add\+Condition (
+\begin{DoxyParamCaption}
+\item[{}]{event}
+\end{DoxyParamCaption}
+)}\label{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a62eb39720fe600c3e4e26b2188f201c6}
+\hypertarget{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_abd23c3ad9cf7e8287668ec48ed0be1da}{}\index{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}!on\+Add\+Value@{on\+Add\+Value}}
+\index{on\+Add\+Value@{on\+Add\+Value}!U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}}
+\subsubsection[{on\+Add\+Value(event)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf function} on\+Add\+Value (
+\begin{DoxyParamCaption}
+\item[{}]{event}
+\end{DoxyParamCaption}
+)}\label{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_abd23c3ad9cf7e8287668ec48ed0be1da}
+\hypertarget{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a064ea737358a67204290ee639f5a9100}{}\index{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}!on\+Delete@{on\+Delete}}
+\index{on\+Delete@{on\+Delete}!U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}}
+\subsubsection[{on\+Delete()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf function} on\+Delete (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a064ea737358a67204290ee639f5a9100}
+\hypertarget{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_ae3db2596f40222c31e6efd7efdd1b23a}{}\index{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}!save\+Rule@{save\+Rule}}
+\index{save\+Rule@{save\+Rule}!U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}}
+\subsubsection[{save\+Rule()}]{\setlength{\rightskip}{0pt plus 5cm}control save\+Rule (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_ae3db2596f40222c31e6efd7efdd1b23a}
+\hypertarget{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a55a2ca555d57e19fdd001048e2287e22}{}\index{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}!set\+Case\+Sensitive@{set\+Case\+Sensitive}}
+\index{set\+Case\+Sensitive@{set\+Case\+Sensitive}!U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}}
+\subsubsection[{set\+Case\+Sensitive(\$(\textquotesingle{}\#case-\/sensitive\textquotesingle{}).\+prop(""checked""))}]{\setlength{\rightskip}{0pt plus 5cm}control set\+Case\+Sensitive (
+\begin{DoxyParamCaption}
+\item[{}]{\$\textquotesingle{}\#case-\/sensitive\textquotesingle{}).\+prop(\char`\"{}checked\char`\"{}}
+\end{DoxyParamCaption}
+)}\label{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a55a2ca555d57e19fdd001048e2287e22}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_abc33cf1bdb3e540bdb895c7d88f64a43}{}\index{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}!root\+Uid@{root\+Uid}}
+\index{root\+Uid@{root\+Uid}!U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js@{U\+I/\+H\+T\+M\+L\+Resources/js/src/edit\+\_\+rule.\+js}}
+\subsubsection[{root\+Uid}]{\setlength{\rightskip}{0pt plus 5cm}var root\+Uid = control.\+create\+Rule\+Root(\$(\char`\"{}\#rule-\/root\char`\"{}).val())}\label{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_abc33cf1bdb3e540bdb895c7d88f64a43}
