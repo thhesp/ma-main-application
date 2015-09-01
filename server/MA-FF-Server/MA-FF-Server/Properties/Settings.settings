@@ -63,7 +63,7 @@
       <Value Profile="(Default)">5</Value>
     </Setting>
     <Setting Name="MouseTrackingInterval" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">20</Value>
+      <Value Profile="(Default)">5</Value>
     </Setting>
     <Setting Name="TestrunSaveCheckIntervall" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1000</Value>
