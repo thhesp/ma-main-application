@@ -21,6 +21,8 @@ namespace WebAnalyzer.Server
 
         private List<WebsocketConnection> _connections = new List<WebsocketConnection>();
 
+        private StopwatchTimer timer;
+
         public ConnectionManager()
         {
             
@@ -34,19 +36,18 @@ namespace WebAnalyzer.Server
         public void StartMessageThread()
         {
             _workMessages = true;
-            var period = TimeSpan.FromMilliseconds(Properties.Settings.Default.WSMessageDelay);
-            var observable = Observable.Interval(period);
-
-            observable.Subscribe(i => {
-                if(_workMessages){
-                    WorkConnectionMessageQueues();
-                }
-            });
+            timer = new StopwatchTimer(Properties.Settings.Default.WSMessageDelay, WorkConnectionMessageQueues);
+            timer.start();
         }
 
         public void StopMessageThread()
         {
             _workMessages = false;
+            if (timer != null)
+            {
+                timer.stop();
+            }
+           
         }
 
         public void RequestData(String uniqueId, double leftX, double leftY, double rightX, double rightY)
@@ -86,13 +87,16 @@ namespace WebAnalyzer.Server
 
         private void WorkConnectionMessageQueues()
         {
-            lock (_connections)
+            if (_workMessages)
             {
-                _connections.RemoveAll(connection => connection.IsConnected == false);
-                //Logger.Log("Working through queues... ");
-                foreach (var connection in _connections)
+                lock (_connections)
                 {
-                    connection.workMessageQueue();
+                    _connections.RemoveAll(connection => connection.IsConnected == false);
+                    //Logger.Log("Working through queues... ");
+                    foreach (var connection in _connections)
+                    {
+                        connection.workMessageQueue();
+                    }
                 }
             }
         }

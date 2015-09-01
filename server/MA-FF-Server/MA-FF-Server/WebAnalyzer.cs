@@ -26,7 +26,6 @@ namespace WebAnalyzer
         [STAThread]
         static void Main()
         {
-
             if (System.Diagnostics.Debugger.IsAttached)
             {
                 Properties.Settings.Default.Reset();
