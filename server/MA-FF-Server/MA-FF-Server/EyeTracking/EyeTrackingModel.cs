@@ -23,10 +23,6 @@ namespace WebAnalyzer.EyeTracking
         /// Object of the EyeTracking Controller. Used for interacting with the EyeTracker.
         /// </summary>
         private EyeTrackingController ETDevice;
-        private EyeTrackingController.CalibrationStruct m_CalibrationData;
-        private EyeTrackingController.AccuracyStruct m_AccuracyData;
-        private EyeTrackingController.SampleStruct m_SampleData;
-        private EyeTrackingController.EventStruct m_EventData;
 
 
         // callback routine declaration
