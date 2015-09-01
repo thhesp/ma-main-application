@@ -492,11 +492,13 @@ namespace WebAnalyzer.Models.DataModel
 
         public void MessageSent(String uniqueId, String sentTimestamp)
         {
-            if (_unassignedPositions.ContainsKey(uniqueId))
+            if (uniqueId != null)
             {
-                _unassignedPositions[uniqueId].ServerSentTimestamp = sentTimestamp;
+                if (_unassignedPositions.ContainsKey(uniqueId))
+                {
+                    _unassignedPositions[uniqueId].ServerSentTimestamp = sentTimestamp;
+                }
             }
-
         }
     }
 }

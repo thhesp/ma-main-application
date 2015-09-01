@@ -37,7 +37,7 @@ namespace WebAnalyzer.Server
         {
             _workMessages = true;
             timer = new StopwatchTimer(Properties.Settings.Default.WSMessageDelay, WorkConnectionMessageQueues);
-            timer.start();
+            timer.Start();
         }
 
         public void StopMessageThread()
@@ -45,7 +45,7 @@ namespace WebAnalyzer.Server
             _workMessages = false;
             if (timer != null)
             {
-                timer.stop();
+                timer.Stop();
             }
            
         }

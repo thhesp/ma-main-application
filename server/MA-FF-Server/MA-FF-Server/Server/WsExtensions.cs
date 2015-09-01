@@ -37,11 +37,14 @@ namespace WebAnalyzer.Server
 
         public static void WriteString(this WebSocket ws, String data)
         {
-            using (var writer = ws.CreateMessageWriter(WebSocketMessageType.Text))
+            if (ws.IsConnected)
             {
-                using (var sw = new StreamWriter(writer, Encoding.UTF8))
+                using (var writer = ws.CreateMessageWriter(WebSocketMessageType.Text))
                 {
-                    sw.WriteAsync(data);
+                    using (var sw = new StreamWriter(writer, Encoding.UTF8))
+                    {
+                        sw.WriteAsync(data);
+                    }
                 }
             }
         }

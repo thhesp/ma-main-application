@@ -17,7 +17,7 @@ namespace WebAnalyzer.Test.Communication
         /// <summary>
         /// Timer to simulate data every x ms.
         /// </summary>
-        private System.Timers.Timer timer;
+        private StopwatchTimer timer;
 
         /// <summary>
         /// Event which is used for sending data to the test controller.
@@ -37,9 +37,7 @@ namespace WebAnalyzer.Test.Communication
         /// </summary>
         private void initTimer()
         {
-            this.timer = new System.Timers.Timer();
-            this.timer.Enabled = true;
-            this.timer.Interval = Properties.Settings.Default.MouseTrackingInterval;
+            timer = new StopwatchTimer(Properties.Settings.Default.MouseTrackingInterval, timer_Tick);
         }
 
         /// <summary>
@@ -48,8 +46,7 @@ namespace WebAnalyzer.Test.Communication
         public void startTracking()
         {
             Logger.Log("Start MouseTracking");
-            this.timer.Elapsed += new ElapsedEventHandler(timer_Tick);
-            this.timer.Start();
+            timer.Start();
         }
 
         /// <summary>
@@ -58,7 +55,6 @@ namespace WebAnalyzer.Test.Communication
         public void stopTracking()
         {
             Logger.Log("Stop MouseTracking");
-            this.timer.Elapsed -= new ElapsedEventHandler(timer_Tick);
             this.timer.Stop();
         }
 
@@ -66,7 +62,7 @@ namespace WebAnalyzer.Test.Communication
         /// Callback which gets called everytime the timer ends.
         /// Sends the data with the PrepareGaze Event to the controller.
         /// </summary>
-        private void timer_Tick(object sender, ElapsedEventArgs e)
+        private void timer_Tick()
         {
             PrepareGaze(this, new PrepareGazeDataEvent(Cursor.Position.X, Cursor.Position.Y, Cursor.Position.X, Cursor.Position.Y));
         }

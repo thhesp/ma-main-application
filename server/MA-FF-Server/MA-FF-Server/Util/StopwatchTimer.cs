@@ -25,7 +25,7 @@ namespace WebAnalyzer.Util
             _watch = new Stopwatch();
         }
 
-        public void start()
+        public void Start()
         {
             new Thread(() =>
             {
@@ -46,7 +46,7 @@ namespace WebAnalyzer.Util
 
         }
 
-        public void stop()
+        public void Stop()
         {
             if (_watch.IsRunning)
             {
