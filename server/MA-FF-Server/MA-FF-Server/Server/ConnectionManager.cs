@@ -92,11 +92,7 @@ namespace WebAnalyzer.Server
                 lock (_connections)
                 {
                     _connections.RemoveAll(connection => connection.IsConnected == false);
-                    //Logger.Log("Working through queues... ");
-                    foreach (var connection in _connections)
-                    {
-                        connection.workMessageQueue();
-                    }
+                    Parallel.ForEach(_connections, connection => connection.workMessageQueue());
                 }
             }
         }
