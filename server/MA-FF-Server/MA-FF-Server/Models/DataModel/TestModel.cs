@@ -368,7 +368,11 @@ namespace WebAnalyzer.Models.DataModel
 
             this.AddGazeData(url, _unassignedPositions[uniqueId]);
 
-            _unassignedPositions.Remove(uniqueId);
+            lock (_unassignedPositions)
+            {
+                _unassignedPositions.Remove(uniqueId);
+            }
+            
 
             _lastGazeActionTimestamp = Util.Timestamp.GetMillisecondsUnixTimestamp();
 
@@ -384,7 +388,10 @@ namespace WebAnalyzer.Models.DataModel
             
             this.AddGazeData(url, gazeModel);
 
-             _unassignedPositions.Remove(gazeModel.UniqueId);
+            lock (_unassignedPositions)
+            {
+                _unassignedPositions.Remove(gazeModel.UniqueId);
+            }
 
             _lastGazeActionTimestamp = Util.Timestamp.GetMillisecondsUnixTimestamp();
 
@@ -398,7 +405,10 @@ namespace WebAnalyzer.Models.DataModel
                 return false;
             }
 
-            _unassignedPositions.Remove(uniqueId);
+            lock (_unassignedPositions)
+            {
+                _unassignedPositions.Remove(uniqueId);
+            }
 
             _lastGazeActionTimestamp = Util.Timestamp.GetMillisecondsUnixTimestamp();
 
@@ -409,7 +419,12 @@ namespace WebAnalyzer.Models.DataModel
         {
             if (_unassignedPositions.ContainsKey(gazeModel.UniqueId))
             {
-                _unassignedPositions.Remove(gazeModel.UniqueId);
+
+                lock (_unassignedPositions)
+                {
+                    _unassignedPositions.Remove(gazeModel.UniqueId);
+
+                }
 
                 _lastGazeActionTimestamp = Util.Timestamp.GetMillisecondsUnixTimestamp();
 
@@ -459,7 +474,10 @@ namespace WebAnalyzer.Models.DataModel
 
             // add to unassigned position
 
-            _unassignedPositions.Add(gaze.UniqueId, gaze);
+            lock (_unassignedPositions)
+            {
+                _unassignedPositions.Add(gaze.UniqueId, gaze);
+            }
 
             return gaze.UniqueId;
         }
