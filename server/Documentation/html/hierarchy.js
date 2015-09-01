@@ -41,7 +41,9 @@ var hierarchy =
       [ "WebAnalyzer.Events.EditDomainSettingEvent", "class_web_analyzer_1_1_events_1_1_edit_domain_setting_event.html", null ],
       [ "WebAnalyzer.Events.EditParticipantEvent", "class_web_analyzer_1_1_events_1_1_edit_participant_event.html", null ],
       [ "WebAnalyzer.Events.LoadExperimentEvent", "class_web_analyzer_1_1_events_1_1_load_experiment_event.html", null ],
+      [ "WebAnalyzer.Events.MessageSentEvent", "class_web_analyzer_1_1_events_1_1_message_sent_event.html", null ],
       [ "WebAnalyzer.Events.PrepareGazeDataEvent", "class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event.html", null ],
+      [ "WebAnalyzer.Events.SaveTestrunEvent", "class_web_analyzer_1_1_events_1_1_save_testrun_event.html", null ],
       [ "WebAnalyzer.Events.SelectParticipantForTestEvent", "class_web_analyzer_1_1_events_1_1_select_participant_for_test_event.html", null ],
       [ "WebAnalyzer.Events.TestrunEvent", "class_web_analyzer_1_1_events_1_1_testrun_event.html", null ],
       [ "WebAnalyzer.Events.TriggerSaveEvent", "class_web_analyzer_1_1_events_1_1_trigger_save_event.html", null ]
@@ -70,6 +72,7 @@ var hierarchy =
     ] ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.ImageStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_image_struct.html", null ],
     [ "IObserver", null, [
+      [ "WebAnalyzer.Server.MessageHandler.ActivationMessageHandler", "class_web_analyzer_1_1_server_1_1_message_handler_1_1_activation_message_handler.html", null ],
       [ "WebAnalyzer.Server.MessageHandler.ConnectionMessageHandler", "class_web_analyzer_1_1_server_1_1_message_handler_1_1_connection_message_handler.html", null ],
       [ "WebAnalyzer.Server.MessageHandler.DataMessageHandler", "class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler.html", null ],
       [ "WebAnalyzer.Server.MessageHandler.EchoMessageHandler", "class_web_analyzer_1_1_server_1_1_message_handler_1_1_echo_message_handler.html", null ],
@@ -81,6 +84,7 @@ var hierarchy =
     [ "WebAnalyzer.Util.Logger", "class_web_analyzer_1_1_util_1_1_logger.html", null ],
     [ "WebAnalyzer.Controller.MainController", "class_web_analyzer_1_1_controller_1_1_main_controller.html", null ],
     [ "WebAnalyzer.Models.MessageModel.Message", "class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html", [
+      [ "WebAnalyzer.Models.MessageModel.ActivationMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html", null ],
       [ "WebAnalyzer.Models.MessageModel.ConnectionMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_connection_message.html", null ],
       [ "WebAnalyzer.Models.MessageModel.DataMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message.html", null ],
       [ "WebAnalyzer.Models.MessageModel.EchoMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_echo_message.html", null ],

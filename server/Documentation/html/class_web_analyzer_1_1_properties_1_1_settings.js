@@ -7,6 +7,7 @@ var class_web_analyzer_1_1_properties_1_1_settings =
     [ "AOILocation", "class_web_analyzer_1_1_properties_1_1_settings.html#af6dd5e8d3c9287c9dba65dddc86de635", null ],
     [ "Applicationname", "class_web_analyzer_1_1_properties_1_1_settings.html#a2e914901217eeff3abfd251c393bdc1f", null ],
     [ "Datalocation", "class_web_analyzer_1_1_properties_1_1_settings.html#abef8b78254f10bd2984daa083bca8487", null ],
+    [ "DataTimeout", "class_web_analyzer_1_1_properties_1_1_settings.html#a0c6ee531ecb7669be322d0b6adbbed8a", null ],
     [ "Default", "class_web_analyzer_1_1_properties_1_1_settings.html#a65c2257222bfeb0f3e568ef18feb37c8", null ],
     [ "ETConnectLocal", "class_web_analyzer_1_1_properties_1_1_settings.html#ad251bc3f8eff9b6c353d759b4d28b8ef", null ],
     [ "ETReceiveIP", "class_web_analyzer_1_1_properties_1_1_settings.html#a72ab6d953993b21eb515f971dcd792a8", null ],
@@ -23,6 +24,8 @@ var class_web_analyzer_1_1_properties_1_1_settings =
     [ "RawdataLocation", "class_web_analyzer_1_1_properties_1_1_settings.html#a74498d33c881c07d79e0e1f1b0efe308", null ],
     [ "SettingsFilename", "class_web_analyzer_1_1_properties_1_1_settings.html#ad083097d959dff8a09359e19f6524982", null ],
     [ "StatisticsLocation", "class_web_analyzer_1_1_properties_1_1_settings.html#aa664153921c24bdaa3a4cf790c153924", null ],
+    [ "TestrunDataWaitDuration", "class_web_analyzer_1_1_properties_1_1_settings.html#a4fa938c23f07358746ab269d717fd087", null ],
+    [ "TestrunSaveCheckIntervall", "class_web_analyzer_1_1_properties_1_1_settings.html#a3160d237b811df98aeb601487fa43943", null ],
     [ "UseMouseTracking", "class_web_analyzer_1_1_properties_1_1_settings.html#a71904ddfdc9f4888c7da3b370acb0c4d", null ],
     [ "WebsocketPort", "class_web_analyzer_1_1_properties_1_1_settings.html#ab28fb58a6d2cf2841c86966c406a4ab3", null ],
     [ "WSMessageDelay", "class_web_analyzer_1_1_properties_1_1_settings.html#a62b7526a2c670219322da46a41f2ed4b", null ]

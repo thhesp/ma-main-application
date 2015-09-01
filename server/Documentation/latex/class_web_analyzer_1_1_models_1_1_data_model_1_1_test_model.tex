@@ -25,6 +25,8 @@ Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model
 \item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a1822a101fa0793bd807575d7fcdbd65d}{Generate\+A\+O\+I\+X\+M\+L} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings}{Experiment\+Settings} settings, Xml\+Document xml\+Doc)
 \item 
+Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_abc6d6772659bfd91a6d1fe6923ca7a2b}{Check\+For\+Save} ()
+\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a276585c6c2bdca3cf99058e2287636dc}{Get\+Gaze\+Model} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af690ff5521d79c7128861033ae80ae17}{unique\+Id})
 \item 
 Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a5c8db4f36460523cfefc5726bfd31177}{Assign\+Gaze\+To\+Webpage} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af690ff5521d79c7128861033ae80ae17}{unique\+Id}, String url)
@@ -38,6 +40,8 @@ Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a21b653298654ea728c144a01e1dc79d0}{Prepare\+Gaze\+Data} (String timestamp, double \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_a81e910173af87b1161e719a504d52407}{x}, double y)
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a9a5e8a32d33cfbd93c7a42260d14e931}{Prepare\+Gaze\+Data} (String timestamp, double left\+X, double left\+Y, double right\+X, double right\+Y)
+\item 
+void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_af5443d18d5c7d80edaf417ee28bb296e}{Message\+Sent} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af690ff5521d79c7128861033ae80ae17}{unique\+Id}, String sent\+Timestamp)
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -72,6 +76,8 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a3
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model}{Webpage\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a849d23a83d37ac0e965c3946d8085aa2}{\+\_\+visited\+Pages} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model}{Webpage\+Model}$>$()
 \item 
 Dictionary$<$ String, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a1eaf774e73692913671ff3cb85f5772e}{\+\_\+unassigned\+Positions}
+\item 
+String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a9969004441000c661fe533b8d954ec54}{\+\_\+last\+Gaze\+Action\+Timestamp} = \char`\"{}\char`\"{}
 \end{DoxyCompactItemize}
 
 
@@ -146,6 +152,13 @@ Dictionary$<$ String, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_
 \item[{String}]{url}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_aa2f20e0defbef5daf8b4cbe282fc6a25}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_abc6d6772659bfd91a6d1fe6923ca7a2b}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Check\+For\+Save@{Check\+For\+Save}}
+\index{Check\+For\+Save@{Check\+For\+Save}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
+\subsubsection[{Check\+For\+Save()}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Check\+For\+Save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_abc6d6772659bfd91a6d1fe6923ca7a2b}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_aeb5429731ec41e1460952faf568e10be}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Create\+Experiment\+Statistics@{Create\+Experiment\+Statistics}}
 \index{Create\+Experiment\+Statistics@{Create\+Experiment\+Statistics}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Create\+Experiment\+Statistics(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Create\+Experiment\+Statistics (
@@ -227,6 +240,14 @@ Dictionary$<$ String, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_
 \item[{Xml\+Document}]{doc}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a0bf31831033b33d1e50ddd856c6a61aa}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_af5443d18d5c7d80edaf417ee28bb296e}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Message\+Sent@{Message\+Sent}}
+\index{Message\+Sent@{Message\+Sent}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
+\subsubsection[{Message\+Sent(\+String unique\+Id, String sent\+Timestamp)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Message\+Sent (
+\begin{DoxyParamCaption}
+\item[{String}]{unique\+Id, }
+\item[{String}]{sent\+Timestamp}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_af5443d18d5c7d80edaf417ee28bb296e}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a21b653298654ea728c144a01e1dc79d0}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Prepare\+Gaze\+Data@{Prepare\+Gaze\+Data}}
 \index{Prepare\+Gaze\+Data@{Prepare\+Gaze\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Prepare\+Gaze\+Data(\+String timestamp, double x, double y)}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Prepare\+Gaze\+Data (
@@ -257,6 +278,9 @@ Dictionary$<$ String, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_
 
 
 \subsection{Member Data Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a9969004441000c661fe533b8d954ec54}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+last\+Gaze\+Action\+Timestamp@{\+\_\+last\+Gaze\+Action\+Timestamp}}
+\index{\+\_\+last\+Gaze\+Action\+Timestamp@{\+\_\+last\+Gaze\+Action\+Timestamp}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
+\subsubsection[{\+\_\+last\+Gaze\+Action\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+last\+Gaze\+Action\+Timestamp = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a9969004441000c661fe533b8d954ec54}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a3392e2c7f267fe806b7f7b8bc1cfa5d2}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+last\+Page@{\+\_\+last\+Page}}
 \index{\+\_\+last\+Page@{\+\_\+last\+Page}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{\+\_\+last\+Page}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+last\+Page\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a3392e2c7f267fe806b7f7b8bc1cfa5d2}
@@ -282,4 +306,4 @@ Dictionary$<$ String, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-M\+A-\/\+F\+F-\/\+Server/\+Models/\+Data\+Model/\hyperlink{_test_model_8cs}{Test\+Model.\+cs}\end{DoxyCompactItemize}
+M\+A-\/\+F\+F-\/\+Server/\+M\+A-\/\+F\+F-\/\+Server/\+Models/\+Data\+Model/\hyperlink{_test_model_8cs}{Test\+Model.\+cs}\end{DoxyCompactItemize}

@@ -20,6 +20,10 @@ Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a913e4
 \item 
 Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a54d71b7e50589c027fff5441dea6ca54}{Is\+Connected}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \item 
+Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a973edb4f0e5e1644f551bf132ae77183}{Writing}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_af64b83d9aec7d436a262f732e3b03e0b}{Active}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
 Concurrent\+Queue$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} $>$ \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a38b19724259bebddd5990d394a3df6fd}{Message\+Queue}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
@@ -35,11 +39,10 @@ readonly Web\+Socket \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_conn
 Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a89a1a25a21d3c859fa7be34de5dcde36}{\+\_\+established} = false
 \item 
 Concurrent\+Queue$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} $>$ \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_ac5e47b66efc1ca14c95250915c14fc8d}{\+\_\+message\+Queue}
-\end{DoxyCompactItemize}
-\subsection*{Static Private Attributes}
-\begin{DoxyCompactItemize}
 \item 
-static int \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a032bd6b7324e916eb5981b54abeedb0d}{T\+I\+M\+E\+O\+U\+T} = 500
+Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_aad4b4619cdb766c16e900ee792fd2fc8}{\+\_\+active} = false
+\item 
+Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a19b519a7ec81f0898724fcdefb8c6f62}{\+\_\+writing} = false
 \end{DoxyCompactItemize}
 
 
@@ -78,21 +81,27 @@ static int \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a03
 
 
 \subsection{Member Data Documentation}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_aad4b4619cdb766c16e900ee792fd2fc8}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!\+\_\+active@{\+\_\+active}}
+\index{\+\_\+active@{\+\_\+active}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
+\subsubsection[{\+\_\+active}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Websocket\+Connection.\+\_\+active = false\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_aad4b4619cdb766c16e900ee792fd2fc8}
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a89a1a25a21d3c859fa7be34de5dcde36}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!\+\_\+established@{\+\_\+established}}
 \index{\+\_\+established@{\+\_\+established}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{\+\_\+established}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Websocket\+Connection.\+\_\+established = false\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a89a1a25a21d3c859fa7be34de5dcde36}
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_ac5e47b66efc1ca14c95250915c14fc8d}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!\+\_\+message\+Queue@{\+\_\+message\+Queue}}
 \index{\+\_\+message\+Queue@{\+\_\+message\+Queue}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{\+\_\+message\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}Concurrent\+Queue$<${\bf Message}$>$ Web\+Analyzer.\+Server.\+Websocket\+Connection.\+\_\+message\+Queue\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_ac5e47b66efc1ca14c95250915c14fc8d}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a19b519a7ec81f0898724fcdefb8c6f62}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!\+\_\+writing@{\+\_\+writing}}
+\index{\+\_\+writing@{\+\_\+writing}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
+\subsubsection[{\+\_\+writing}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Websocket\+Connection.\+\_\+writing = false\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a19b519a7ec81f0898724fcdefb8c6f62}
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a8b3efea13ab70fe8a5c866930ef7a263}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!\+\_\+ws@{\+\_\+ws}}
 \index{\+\_\+ws@{\+\_\+ws}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{\+\_\+ws}]{\setlength{\rightskip}{0pt plus 5cm}readonly Web\+Socket Web\+Analyzer.\+Server.\+Websocket\+Connection.\+\_\+ws\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a8b3efea13ab70fe8a5c866930ef7a263}
-\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a032bd6b7324e916eb5981b54abeedb0d}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!T\+I\+M\+E\+O\+U\+T@{T\+I\+M\+E\+O\+U\+T}}
-\index{T\+I\+M\+E\+O\+U\+T@{T\+I\+M\+E\+O\+U\+T}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
-\subsubsection[{T\+I\+M\+E\+O\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Server.\+Websocket\+Connection.\+T\+I\+M\+E\+O\+U\+T = 500\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a032bd6b7324e916eb5981b54abeedb0d}
 
 
 \subsection{Property Documentation}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_af64b83d9aec7d436a262f732e3b03e0b}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!Active@{Active}}
+\index{Active@{Active}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
+\subsubsection[{Active}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Websocket\+Connection.\+Active\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_af64b83d9aec7d436a262f732e3b03e0b}
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a913e4dc6584670baea40f5c57a4dedf1}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!Established@{Established}}
 \index{Established@{Established}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{Established}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Websocket\+Connection.\+Established\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a913e4dc6584670baea40f5c57a4dedf1}
@@ -108,8 +117,11 @@ static int \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a03
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a1f0be7b1ff80c5b742204d0883157578}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!Out@{Out}}
 \index{Out@{Out}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{Out}]{\setlength{\rightskip}{0pt plus 5cm}I\+Observer$<$String$>$ Web\+Analyzer.\+Server.\+Websocket\+Connection.\+Out\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a1f0be7b1ff80c5b742204d0883157578}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a973edb4f0e5e1644f551bf132ae77183}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!Writing@{Writing}}
+\index{Writing@{Writing}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
+\subsubsection[{Writing}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Websocket\+Connection.\+Writing\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a973edb4f0e5e1644f551bf132ae77183}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-M\+A-\/\+F\+F-\/\+Server/\+Server/\hyperlink{_websocket_connection_8cs}{Websocket\+Connection.\+cs}\end{DoxyCompactItemize}
+M\+A-\/\+F\+F-\/\+Server/\+M\+A-\/\+F\+F-\/\+Server/\+Server/\hyperlink{_websocket_connection_8cs}{Websocket\+Connection.\+cs}\end{DoxyCompactItemize}

@@ -1,6 +1,8 @@
 var searchData=
 [
   ['accuracystruct',['AccuracyStruct',['../struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_accuracy_struct.html',1,'WebAnalyzer::EyeTracking::EyeTrackingController']]],
+  ['activationmessage',['ActivationMessage',['../class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html',1,'WebAnalyzer::Models::MessageModel']]],
+  ['activationmessagehandler',['ActivationMessageHandler',['../class_web_analyzer_1_1_server_1_1_message_handler_1_1_activation_message_handler.html',1,'WebAnalyzer::Server::MessageHandler']]],
   ['addconnectionevent',['AddConnectionEvent',['../class_web_analyzer_1_1_events_1_1_add_connection_event.html',1,'WebAnalyzer::Events']]],
   ['andnode',['AndNode',['../class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_and_node.html',1,'WebAnalyzer::Models::SettingsModel::ExpressionTree']]],
   ['aoirectanglestruct',['AOIRectangleStruct',['../struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_a_o_i_rectangle_struct.html',1,'WebAnalyzer::EyeTracking::EyeTrackingController']]],

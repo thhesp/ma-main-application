@@ -26,6 +26,10 @@ Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_ae88c0e
 Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a99b6f672f4ef0293ac70edb20e1c7cdb}{Dispose\+Of\+Gaze\+Data} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} gaze\+Model)
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_ad375d558e5d63a79680f3fe53f1326b4}{Get\+Gaze\+Model} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af690ff5521d79c7128861033ae80ae17}{unique\+Id})
+\item 
+void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a19c13e671b0a950a1b012424fd7c2560}{Check\+For\+Save} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, Elapsed\+Event\+Args \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
+\item 
+void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_ab70718909a47aded762d0021e5ccb7b2}{On\+\_\+\+Message\+Sent} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_message_sent_event}{Message\+Sent\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
 \end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
@@ -40,8 +44,15 @@ Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a741cf9
 \item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2875208b4f4b0ed643593152f4ec025c}{Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_adc0db19e3cc5958f24dd5fd09ce34d98}{Tracking\+Status}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \end{DoxyCompactItemize}
+\subsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Save\+Testrun\+Event\+Handler \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a45f8340dcea78391a3f58e5c7996d126}{Save\+Testrun}
+\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a448797a07babe883ab8d8e646272a6eb}{Create\+Save\+Timer} ()
 \item 
 \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a9404350d73eb0d40751b1bdee5171b71}{$\sim$\+Test\+Controller} ()
 \item 
@@ -69,6 +80,8 @@ Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a517bab
 Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a49aaaa975ccbeedcd52fb03288cea3ef}{\+\_\+running}
 \item 
 Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a7d63bbfba4672d52414c318b397c504b}{\+\_\+data\+Collected} = false
+\item 
+System.\+Timers.\+Timer \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a484747e48ceb23e931111018ed87d8e1}{save\+Timer}
 \end{DoxyCompactItemize}
 
 
@@ -106,6 +119,21 @@ Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a7d63bb
 \item[{String}]{url}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_controller_1_1_test_controller_aeffea7da4e0bf3400ebddc5440dc2def}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a19c13e671b0a950a1b012424fd7c2560}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Check\+For\+Save@{Check\+For\+Save}}
+\index{Check\+For\+Save@{Check\+For\+Save}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{Check\+For\+Save(object sender, Elapsed\+Event\+Args e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+Check\+For\+Save (
+\begin{DoxyParamCaption}
+\item[{{\bf object}}]{sender, }
+\item[{Elapsed\+Event\+Args}]{e}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a19c13e671b0a950a1b012424fd7c2560}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a448797a07babe883ab8d8e646272a6eb}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Create\+Save\+Timer@{Create\+Save\+Timer}}
+\index{Create\+Save\+Timer@{Create\+Save\+Timer}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{Create\+Save\+Timer()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+Create\+Save\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a448797a07babe883ab8d8e646272a6eb}
 \hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_ae88c0e776f3d18dc0c0cfc2106b2f1a5}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Dispose\+Of\+Gaze\+Data@{Dispose\+Of\+Gaze\+Data}}
 \index{Dispose\+Of\+Gaze\+Data@{Dispose\+Of\+Gaze\+Data}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
 \subsubsection[{Dispose\+Of\+Gaze\+Data(\+String unique\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Controller.\+Test\+Controller.\+Dispose\+Of\+Gaze\+Data (
@@ -141,6 +169,14 @@ Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a7d63bb
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_aef58517bbc760e87c541cc4b0272957c}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_ab70718909a47aded762d0021e5ccb7b2}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!On\+\_\+\+Message\+Sent@{On\+\_\+\+Message\+Sent}}
+\index{On\+\_\+\+Message\+Sent@{On\+\_\+\+Message\+Sent}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{On\+\_\+\+Message\+Sent(object sender, Message\+Sent\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+On\+\_\+\+Message\+Sent (
+\begin{DoxyParamCaption}
+\item[{{\bf object}}]{sender, }
+\item[{{\bf Message\+Sent\+Event}}]{e}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_controller_1_1_test_controller_ab70718909a47aded762d0021e5ccb7b2}
 \hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a61584d87704fffabf4ff0f8c04b33407}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!On\+\_\+\+Prepare\+Gaze\+Data@{On\+\_\+\+Prepare\+Gaze\+Data}}
 \index{On\+\_\+\+Prepare\+Gaze\+Data@{On\+\_\+\+Prepare\+Gaze\+Data}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
 \subsubsection[{On\+\_\+\+Prepare\+Gaze\+Data(object source, Prepare\+Gaze\+Data\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+On\+\_\+\+Prepare\+Gaze\+Data (
@@ -224,6 +260,9 @@ Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a7d63bb
 \hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a517bab0ee0c22871788bd498de86c27e}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!\+\_\+\+W\+S\+Warning@{\+\_\+\+W\+S\+Warning}}
 \index{\+\_\+\+W\+S\+Warning@{\+\_\+\+W\+S\+Warning}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
 \subsubsection[{\+\_\+\+W\+S\+Warning}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Controller.\+Test\+Controller.\+\_\+\+W\+S\+Warning = false\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a517bab0ee0c22871788bd498de86c27e}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a484747e48ceb23e931111018ed87d8e1}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!save\+Timer@{save\+Timer}}
+\index{save\+Timer@{save\+Timer}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{save\+Timer}]{\setlength{\rightskip}{0pt plus 5cm}System.\+Timers.\+Timer Web\+Analyzer.\+Controller.\+Test\+Controller.\+save\+Timer\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a484747e48ceb23e931111018ed87d8e1}
 
 
 \subsection{Property Documentation}
@@ -244,6 +283,12 @@ Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a7d63bb
 \subsubsection[{W\+S\+Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} Web\+Analyzer.\+Controller.\+Test\+Controller.\+W\+S\+Status\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a1f3032c3be238b03976be19319a64eeb}
 
 
+\subsection{Event Documentation}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a45f8340dcea78391a3f58e5c7996d126}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Save\+Testrun@{Save\+Testrun}}
+\index{Save\+Testrun@{Save\+Testrun}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{Save\+Testrun}]{\setlength{\rightskip}{0pt plus 5cm}Save\+Testrun\+Event\+Handler Web\+Analyzer.\+Controller.\+Test\+Controller.\+Save\+Testrun}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a45f8340dcea78391a3f58e5c7996d126}
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-M\+A-\/\+F\+F-\/\+Server/\+Controller/\hyperlink{_test_controller_8cs}{Test\+Controller.\+cs}\end{DoxyCompactItemize}
+M\+A-\/\+F\+F-\/\+Server/\+M\+A-\/\+F\+F-\/\+Server/\+Controller/\hyperlink{_test_controller_8cs}{Test\+Controller.\+cs}\end{DoxyCompactItemize}

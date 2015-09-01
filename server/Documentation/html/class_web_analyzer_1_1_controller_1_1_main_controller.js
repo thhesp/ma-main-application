@@ -10,6 +10,7 @@ var class_web_analyzer_1_1_controller_1_1_main_controller =
     [ "On_EditDomainSetting", "class_web_analyzer_1_1_controller_1_1_main_controller.html#a42a7cdc67bd00b52cb7a8eb4f53e4262", null ],
     [ "On_EditParticpant", "class_web_analyzer_1_1_controller_1_1_main_controller.html#aec177eebdda59cf460a762d1a10f0248", null ],
     [ "On_LoadExperiment", "class_web_analyzer_1_1_controller_1_1_main_controller.html#abfc3aaeb8299f7890d08d7a150072b03", null ],
+    [ "On_SaveTestrun", "class_web_analyzer_1_1_controller_1_1_main_controller.html#aa00702c9b2f489d0db4a676f08e176aa", null ],
     [ "On_SelectParticipantForTest", "class_web_analyzer_1_1_controller_1_1_main_controller.html#ae8eae4c1e6dda888f7231e39aaabba3c", null ],
     [ "On_TestrunEvent", "class_web_analyzer_1_1_controller_1_1_main_controller.html#a29b97f1032832f1a4600d6e00b038067", null ],
     [ "On_TriggerSave", "class_web_analyzer_1_1_controller_1_1_main_controller.html#aadab56b24729cdfeeac6474825289c83", null ],

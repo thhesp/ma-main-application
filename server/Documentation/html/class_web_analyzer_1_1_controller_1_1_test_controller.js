@@ -4,11 +4,14 @@ var class_web_analyzer_1_1_controller_1_1_test_controller =
     [ "~TestController", "class_web_analyzer_1_1_controller_1_1_test_controller.html#a9404350d73eb0d40751b1bdee5171b71", null ],
     [ "AssignGazeToWebpage", "class_web_analyzer_1_1_controller_1_1_test_controller.html#a576aa4ab5c0fc2d7a10bcdbf2daaf1ef", null ],
     [ "AssignGazeToWebpage", "class_web_analyzer_1_1_controller_1_1_test_controller.html#aeffea7da4e0bf3400ebddc5440dc2def", null ],
+    [ "CheckForSave", "class_web_analyzer_1_1_controller_1_1_test_controller.html#a19c13e671b0a950a1b012424fd7c2560", null ],
+    [ "CreateSaveTimer", "class_web_analyzer_1_1_controller_1_1_test_controller.html#a448797a07babe883ab8d8e646272a6eb", null ],
     [ "DisposeOfGazeData", "class_web_analyzer_1_1_controller_1_1_test_controller.html#ae88c0e776f3d18dc0c0cfc2106b2f1a5", null ],
     [ "DisposeOfGazeData", "class_web_analyzer_1_1_controller_1_1_test_controller.html#a99b6f672f4ef0293ac70edb20e1c7cdb", null ],
     [ "EndServices", "class_web_analyzer_1_1_controller_1_1_test_controller.html#af7260e39f8963732f38631dd618da497", null ],
     [ "GetGazeModel", "class_web_analyzer_1_1_controller_1_1_test_controller.html#ad375d558e5d63a79680f3fe53f1326b4", null ],
     [ "GetTrackingStatus", "class_web_analyzer_1_1_controller_1_1_test_controller.html#aef58517bbc760e87c541cc4b0272957c", null ],
+    [ "On_MessageSent", "class_web_analyzer_1_1_controller_1_1_test_controller.html#ab70718909a47aded762d0021e5ccb7b2", null ],
     [ "On_PrepareGazeData", "class_web_analyzer_1_1_controller_1_1_test_controller.html#a61584d87704fffabf4ff0f8c04b33407", null ],
     [ "PrepareGazeData", "class_web_analyzer_1_1_controller_1_1_test_controller.html#af621c99b82c5589e2fa446fad6c0839e", null ],
     [ "PrepareGazeData", "class_web_analyzer_1_1_controller_1_1_test_controller.html#accf7fa7b749594a749875738800679b9", null ],
@@ -24,9 +27,11 @@ var class_web_analyzer_1_1_controller_1_1_test_controller =
     [ "_test", "class_web_analyzer_1_1_controller_1_1_test_controller.html#a6084bcc401d37f7f8861fc0e9fb771b6", null ],
     [ "_wsServer", "class_web_analyzer_1_1_controller_1_1_test_controller.html#aeb605e9f2ad9c53af52fb846fe2a98a6", null ],
     [ "_WSWarning", "class_web_analyzer_1_1_controller_1_1_test_controller.html#a517bab0ee0c22871788bd498de86c27e", null ],
+    [ "saveTimer", "class_web_analyzer_1_1_controller_1_1_test_controller.html#a484747e48ceb23e931111018ed87d8e1", null ],
     [ "DataCollected", "class_web_analyzer_1_1_controller_1_1_test_controller.html#a741cf98b95422a4a307bf8834db147b3", null ],
     [ "Running", "class_web_analyzer_1_1_controller_1_1_test_controller.html#a4020785450ade4a26f603d667ce633d6", null ],
     [ "Test", "class_web_analyzer_1_1_controller_1_1_test_controller.html#afcf9572f80c31e6d9aca33f96e3aaa4f", null ],
     [ "TrackingStatus", "class_web_analyzer_1_1_controller_1_1_test_controller.html#adc0db19e3cc5958f24dd5fd09ce34d98", null ],
-    [ "WSStatus", "class_web_analyzer_1_1_controller_1_1_test_controller.html#a1f3032c3be238b03976be19319a64eeb", null ]
+    [ "WSStatus", "class_web_analyzer_1_1_controller_1_1_test_controller.html#a1f3032c3be238b03976be19319a64eeb", null ],
+    [ "SaveTestrun", "class_web_analyzer_1_1_controller_1_1_test_controller.html#a45f8340dcea78391a3f58e5c7996d126", null ]
 ];

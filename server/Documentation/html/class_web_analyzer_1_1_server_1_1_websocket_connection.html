@@ -112,7 +112,6 @@ $(document).ready(function(){initNavTree('class_web_analyzer_1_1_server_1_1_webs
 <a href="#properties">Properties</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_web_analyzer_1_1_server_1_1_websocket_connection-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">WebAnalyzer.Server.WebsocketConnection Class Reference</div>  </div>
@@ -138,6 +137,10 @@ Properties</h2></td></tr>
 <tr class="separator:a913e4dc6584670baea40f5c57a4dedf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54d71b7e50589c027fff5441dea6ca54"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#a54d71b7e50589c027fff5441dea6ca54">IsConnected</a><code> [get]</code></td></tr>
 <tr class="separator:a54d71b7e50589c027fff5441dea6ca54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a973edb4f0e5e1644f551bf132ae77183"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#a973edb4f0e5e1644f551bf132ae77183">Writing</a><code> [get, set]</code></td></tr>
+<tr class="separator:a973edb4f0e5e1644f551bf132ae77183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af64b83d9aec7d436a262f732e3b03e0b"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#af64b83d9aec7d436a262f732e3b03e0b">Active</a><code> [get, set]</code></td></tr>
+<tr class="separator:af64b83d9aec7d436a262f732e3b03e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38b19724259bebddd5990d394a3df6fd"><td class="memItemLeft" align="right" valign="top">ConcurrentQueue&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#a38b19724259bebddd5990d394a3df6fd">MessageQueue</a><code> [get]</code></td></tr>
 <tr class="separator:a38b19724259bebddd5990d394a3df6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -154,11 +157,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a89a1a25a21d3c859fa7be34de5dcde36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5e47b66efc1ca14c95250915c14fc8d"><td class="memItemLeft" align="right" valign="top">ConcurrentQueue&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#ac5e47b66efc1ca14c95250915c14fc8d">_messageQueue</a></td></tr>
 <tr class="separator:ac5e47b66efc1ca14c95250915c14fc8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:a032bd6b7324e916eb5981b54abeedb0d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#a032bd6b7324e916eb5981b54abeedb0d">TIMEOUT</a> = 500</td></tr>
-<tr class="separator:a032bd6b7324e916eb5981b54abeedb0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad4b4619cdb766c16e900ee792fd2fc8"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#aad4b4619cdb766c16e900ee792fd2fc8">_active</a> = false</td></tr>
+<tr class="separator:aad4b4619cdb766c16e900ee792fd2fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19b519a7ec81f0898724fcdefb8c6f62"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#a19b519a7ec81f0898724fcdefb8c6f62">_writing</a> = false</td></tr>
+<tr class="separator:a19b519a7ec81f0898724fcdefb8c6f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af4ada0b7f2d032ad42da1d9238619ebd"></a>
@@ -233,6 +235,26 @@ Static Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="aad4b4619cdb766c16e900ee792fd2fc8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Boolean WebAnalyzer.Server.WebsocketConnection._active = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a89a1a25a21d3c859fa7be34de5dcde36"></a>
 <div class="memitem">
 <div class="memproto">
@@ -273,6 +295,26 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a19b519a7ec81f0898724fcdefb8c6f62"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Boolean WebAnalyzer.Server.WebsocketConnection._writing = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a8b3efea13ab70fe8a5c866930ef7a263"></a>
 <div class="memitem">
 <div class="memproto">
@@ -293,7 +335,8 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a032bd6b7324e916eb5981b54abeedb0d"></a>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="af64b83d9aec7d436a262f732e3b03e0b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -301,19 +344,18 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int WebAnalyzer.Server.WebsocketConnection.TIMEOUT = 500</td>
+          <td class="memname">Boolean WebAnalyzer.Server.WebsocketConnection.Active</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<h2 class="groupheader">Property Documentation</h2>
 <a class="anchor" id="a913e4dc6584670baea40f5c57a4dedf1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -414,8 +456,28 @@ Static Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a973edb4f0e5e1644f551bf132ae77183"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Boolean WebAnalyzer.Server.WebsocketConnection.Writing</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>MA-FF-Server/Server/<a class="el" href="_websocket_connection_8cs.html">WebsocketConnection.cs</a></li>
+<li>MA-FF-Server/MA-FF-Server/Server/<a class="el" href="_websocket_connection_8cs.html">WebsocketConnection.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

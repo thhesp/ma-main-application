@@ -10,7 +10,9 @@ var namespace_web_analyzer_1_1_events =
     [ "EditDomainSettingEvent", "class_web_analyzer_1_1_events_1_1_edit_domain_setting_event.html", "class_web_analyzer_1_1_events_1_1_edit_domain_setting_event" ],
     [ "EditParticipantEvent", "class_web_analyzer_1_1_events_1_1_edit_participant_event.html", "class_web_analyzer_1_1_events_1_1_edit_participant_event" ],
     [ "LoadExperimentEvent", "class_web_analyzer_1_1_events_1_1_load_experiment_event.html", "class_web_analyzer_1_1_events_1_1_load_experiment_event" ],
+    [ "MessageSentEvent", "class_web_analyzer_1_1_events_1_1_message_sent_event.html", "class_web_analyzer_1_1_events_1_1_message_sent_event" ],
     [ "PrepareGazeDataEvent", "class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event.html", "class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event" ],
+    [ "SaveTestrunEvent", "class_web_analyzer_1_1_events_1_1_save_testrun_event.html", "class_web_analyzer_1_1_events_1_1_save_testrun_event" ],
     [ "SelectParticipantForTestEvent", "class_web_analyzer_1_1_events_1_1_select_participant_for_test_event.html", "class_web_analyzer_1_1_events_1_1_select_participant_for_test_event" ],
     [ "TestrunEvent", "class_web_analyzer_1_1_events_1_1_testrun_event.html", "class_web_analyzer_1_1_events_1_1_testrun_event" ],
     [ "TriggerSaveEvent", "class_web_analyzer_1_1_events_1_1_trigger_save_event.html", "class_web_analyzer_1_1_events_1_1_trigger_save_event" ]

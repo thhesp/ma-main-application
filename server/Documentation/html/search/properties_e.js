@@ -2,7 +2,6 @@ var searchData=
 [
   ['rawdatalocation',['RawdataLocation',['../class_web_analyzer_1_1_properties_1_1_settings.html#a74498d33c881c07d79e0e1f1b0efe308',1,'WebAnalyzer::Properties::Settings']]],
   ['relatedgazes',['RelatedGazes',['../class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model.html#a478001ceab5fb747d7d33cbd81382932',1,'WebAnalyzer::Models::AnalysisModel::FixationModel']]],
-  ['requesttimestamp',['RequestTimestamp',['../class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message.html#acb102268ddf9098040b4e6494b4f4a39',1,'WebAnalyzer.Models.MessageModel.InDataMessage.RequestTimestamp()'],['../class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message.html#a5081299df6d4f2550151f95d58d098f4',1,'WebAnalyzer.Models.MessageModel.DataMessage.RequestTimestamp()'],['../class_web_analyzer_1_1_models_1_1_message_model_1_1_small_data_message.html#a9238f22b0b40a6e21d69490dcafb1a17',1,'WebAnalyzer.Models.MessageModel.SmallDataMessage.RequestTimestamp()']]],
   ['resourcemanager',['ResourceManager',['../class_web_analyzer_1_1_properties_1_1_resources.html#a952c3262175975dd9ed444245795013e',1,'WebAnalyzer::Properties::Resources']]],
   ['rightelement',['RightElement',['../class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message.html#a8b8cd07f6ac3c4a5dd9a5d470b4a113c',1,'WebAnalyzer::Models::MessageModel::InDataMessage']]],
   ['righteye',['RightEye',['../class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html#a2303a593c1e6b377a480eb1903110452',1,'WebAnalyzer::Models::DataModel::GazeModel']]],
