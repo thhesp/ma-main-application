@@ -103,6 +103,7 @@ var hierarchy =
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.StandAloneModeGeometryStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_stand_alone_mode_geometry_struct.html", null ],
     [ "WebAnalyzer.Util.Statistics", "class_web_analyzer_1_1_util_1_1_statistics.html", null ],
     [ "WebAnalyzer.Models.AnalysisModel.StatisticsAnalyser", "class_web_analyzer_1_1_models_1_1_analysis_model_1_1_statistics_analyser.html", null ],
+    [ "WebAnalyzer.Util.StopwatchTimer", "class_web_analyzer_1_1_util_1_1_stopwatch_timer.html", null ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.SystemInfoStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_system_info_struct.html", null ],
     [ "WebAnalyzer.Controller.TestController", "class_web_analyzer_1_1_controller_1_1_test_controller.html", null ],
     [ "WebAnalyzer.Models.DataModel.TestModel", "class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model.html", null ],

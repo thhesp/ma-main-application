@@ -1,20 +1,30 @@
 \hypertarget{class_web_analyzer_1_1_controller_1_1_load_controller}{}\section{Web\+Analyzer.\+Controller.\+Load\+Controller Class Reference}
 \label{class_web_analyzer_1_1_controller_1_1_load_controller}\index{Web\+Analyzer.\+Controller.\+Load\+Controller@{Web\+Analyzer.\+Controller.\+Load\+Controller}}
+
+
+Class which is used for loading data from files.  
+
+
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_a4ccfcc1eddcf758a1d9c3df334750a05}{Validate\+Experiment\+Folder} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path})
-\item 
+\begin{DoxyCompactList}\small\item\em Validates if the given path contains experiment data. \end{DoxyCompactList}\item 
 static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_a2cf58e1b4a77099dc5fa14f4743fcb16}{Validate\+If\+Experiment\+Does\+Not\+Exist} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} exp)
-\item 
+\begin{DoxyCompactList}\small\item\em Validates if a experiment already exists by checking the path. \end{DoxyCompactList}\item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_a49122060869d7d678c3f0518f70bbe04}{Load\+Experiment} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path})
-\item 
+\begin{DoxyCompactList}\small\item\em Loads the experiment from path. \end{DoxyCompactList}\item 
 static List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} $>$ \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_adc9166c45bf2b2a3fe1b89dc72e539bc}{Load\+Participants} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path})
-\item 
+\begin{DoxyCompactList}\small\item\em Loads the Participants and returns them as a list. \end{DoxyCompactList}\item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings}{Experiment\+Settings} \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_aac7916dc05a2869790dd010a8f5477d4}{Load\+Settings} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path})
-\item 
+\begin{DoxyCompactList}\small\item\em Loads the Settings and returns them as a Experiment\+Settings object. \end{DoxyCompactList}\item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{Test\+Model} \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_ac708d0fc98accf17574e97f1e59a7dc9}{Load\+Test} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Loads test data and returns it as an Test\+Model object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class which is used for loading data from files. 
+
 
 
 \subsection{Member Function Documentation}
@@ -25,6 +35,17 @@ static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{T
 \item[{String}]{path}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_controller_1_1_load_controller_a49122060869d7d678c3f0518f70bbe04}
+
+
+Loads the experiment from path. 
+
+Calls Load\+Participants and Load\+Settings to load them.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the directory from which to load the experiment.\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_controller_1_1_load_controller_adc9166c45bf2b2a3fe1b89dc72e539bc}{}\index{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller}!Load\+Participants@{Load\+Participants}}
 \index{Load\+Participants@{Load\+Participants}!Web\+Analyzer\+::\+Controller\+::\+Load\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller}}
 \subsubsection[{Load\+Participants(\+String path)}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf Experiment\+Participant}$>$ Web\+Analyzer.\+Controller.\+Load\+Controller.\+Load\+Participants (
@@ -32,6 +53,17 @@ static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{T
 \item[{String}]{path}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_controller_1_1_load_controller_adc9166c45bf2b2a3fe1b89dc72e539bc}
+
+
+Loads the Participants and returns them as a list. 
+
+Used when importing data from an existing experiment.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the directory from which to load the experiment participants.\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_controller_1_1_load_controller_aac7916dc05a2869790dd010a8f5477d4}{}\index{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller}!Load\+Settings@{Load\+Settings}}
 \index{Load\+Settings@{Load\+Settings}!Web\+Analyzer\+::\+Controller\+::\+Load\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller}}
 \subsubsection[{Load\+Settings(\+String path)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Experiment\+Settings} Web\+Analyzer.\+Controller.\+Load\+Controller.\+Load\+Settings (
@@ -39,6 +71,17 @@ static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{T
 \item[{String}]{path}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_controller_1_1_load_controller_aac7916dc05a2869790dd010a8f5477d4}
+
+
+Loads the Settings and returns them as a Experiment\+Settings object. 
+
+Used when importing data from an existing experiment.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the directory from which to load the experiment settings.\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_controller_1_1_load_controller_ac708d0fc98accf17574e97f1e59a7dc9}{}\index{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller}!Load\+Test@{Load\+Test}}
 \index{Load\+Test@{Load\+Test}!Web\+Analyzer\+::\+Controller\+::\+Load\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller}}
 \subsubsection[{Load\+Test(\+String path)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Test\+Model} Web\+Analyzer.\+Controller.\+Load\+Controller.\+Load\+Test (
@@ -46,6 +89,15 @@ static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{T
 \item[{String}]{path}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_controller_1_1_load_controller_ac708d0fc98accf17574e97f1e59a7dc9}
+
+
+Loads test data and returns it as an Test\+Model object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the xml file from which to load the test.\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_controller_1_1_load_controller_a4ccfcc1eddcf758a1d9c3df334750a05}{}\index{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller}!Validate\+Experiment\+Folder@{Validate\+Experiment\+Folder}}
 \index{Validate\+Experiment\+Folder@{Validate\+Experiment\+Folder}!Web\+Analyzer\+::\+Controller\+::\+Load\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller}}
 \subsubsection[{Validate\+Experiment\+Folder(\+String path)}]{\setlength{\rightskip}{0pt plus 5cm}static Boolean Web\+Analyzer.\+Controller.\+Load\+Controller.\+Validate\+Experiment\+Folder (
@@ -53,6 +105,15 @@ static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{T
 \item[{String}]{path}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_controller_1_1_load_controller_a4ccfcc1eddcf758a1d9c3df334750a05}
+
+
+Validates if the given path contains experiment data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Directory to check for experiment data\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_controller_1_1_load_controller_a2cf58e1b4a77099dc5fa14f4743fcb16}{}\index{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller}!Validate\+If\+Experiment\+Does\+Not\+Exist@{Validate\+If\+Experiment\+Does\+Not\+Exist}}
 \index{Validate\+If\+Experiment\+Does\+Not\+Exist@{Validate\+If\+Experiment\+Does\+Not\+Exist}!Web\+Analyzer\+::\+Controller\+::\+Load\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller}}
 \subsubsection[{Validate\+If\+Experiment\+Does\+Not\+Exist(\+Experiment\+Model exp)}]{\setlength{\rightskip}{0pt plus 5cm}static Boolean Web\+Analyzer.\+Controller.\+Load\+Controller.\+Validate\+If\+Experiment\+Does\+Not\+Exist (
@@ -60,6 +121,15 @@ static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{T
 \item[{{\bf Experiment\+Model}}]{exp}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_controller_1_1_load_controller_a2cf58e1b4a77099dc5fa14f4743fcb16}
+
+
+Validates if a experiment already exists by checking the path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exp} & New Experiment for which to check if there is already an experiment with the same name.\\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

@@ -12,9 +12,17 @@ using WebAnalyzer.Models.DataModel;
 
 namespace WebAnalyzer.Controller
 {
+    /// <summary>
+    /// Controller which is used for exporting/saving data to files.
+    /// </summary>
     public class ExportController
     {
 
+        /// <summary>
+        /// Saves the experiment data to a file and checks the file path.
+        /// </summary>
+        /// <remarks>Calls the SaveExperimentSettings and SaveExperimentParticipants methods.</remarks>
+        /// <param name="experiment">Experiment to save</param>
         public static Boolean SaveExperiment(ExperimentModel experiment)
         {
             String dir = experiment.GetBaseExperimentLocation();
@@ -40,6 +48,10 @@ namespace WebAnalyzer.Controller
             return true;
         }
 
+        /// <summary>
+        /// Saves the experiment settings to a file and checks the file path.
+        /// </summary>
+        /// <param name="experiment">Experiment of which the settings to save</param>
         public static Boolean SaveExperimentSettings(ExperimentModel experiment)
         {
             String dir = experiment.GetBaseExperimentLocation();
@@ -53,6 +65,11 @@ namespace WebAnalyzer.Controller
             return true;
         }
 
+        /// <summary>
+        /// Saves the experiment settings to a file.
+        /// </summary>
+        /// <param name="baseDir">Directory to save to.</param>
+        /// <param name="settings">The experiment settings to save.</param>
         private static Boolean SaveExperimentSettings(String baseDir, ExperimentSettings settings)
         {
             XmlDocument xmlDoc = new XmlDocument();
@@ -64,6 +81,10 @@ namespace WebAnalyzer.Controller
             return true;
         }
 
+        /// <summary>
+        /// Saves the experiment participants to a file and checks the file path.
+        /// </summary>
+        /// <param name="experiment">Experiment of which the participants to save</param>
         public static Boolean SaveExperimentParticipants(ExperimentModel experiment)
         {
             String dir = experiment.GetBaseExperimentLocation();
@@ -77,6 +98,11 @@ namespace WebAnalyzer.Controller
             return true;
         }
 
+        /// <summary>
+        /// Saves the experiment participants to a file.
+        /// </summary>
+        /// <param name="baseDir">Directory to save to.</param>
+        /// <param name="participants">The experiment participants to save.</param>
         private static Boolean SaveExperimentParticipants(String baseDir, List<ExperimentParticipant> participants)
         {
             XmlDocument xmlDoc = new XmlDocument();
@@ -95,7 +121,12 @@ namespace WebAnalyzer.Controller
             return true;
         }
 
-
+        /// <summary>
+        /// Saves the given testrun to the given experiment and given participant.
+        /// </summary>
+        /// <param name="experiment">The experiment to which the testrun belongs.</param>
+        /// <param name="currentParticipant">The participant to which the testrun belongs</param>
+        /// <param name="testrun">The testdata</param>
         public static Boolean SaveExperimentTestRun(ExperimentModel experiment, ExperimentParticipant currentParticipant, TestModel testrun){
             String dir = experiment.GetBaseExperimentLocation();
             dir += Properties.Settings.Default.RawdataLocation.Replace("{1}", currentParticipant.Identifier);
@@ -116,6 +147,13 @@ namespace WebAnalyzer.Controller
             return true;
         }
 
+        /// <summary>
+        /// Saves the given testrun fixations to the given experiment and given participant.
+        /// </summary>
+        /// <param name="experiment">The experiment to which the testrun belongs.</param>
+        /// <param name="currentParticipant">The participant to which the testrun belongs</param>
+        /// <param name="timestamp">Timestamp to be used for the file name.</param>
+        /// <param name="testrun">The testdata</param>
         public static Boolean SaveExperimentFixations(ExperimentModel experiment, ExperimentParticipant currentParticipant, String timestamp, TestModel testrun)
         {
             String dir = experiment.GetBaseExperimentLocation();
@@ -132,6 +170,13 @@ namespace WebAnalyzer.Controller
             return true;
         }
 
+        /// <summary>
+        /// Saves the given testrun statistics to the given experiment and given participant.
+        /// </summary>
+        /// <param name="experiment">The experiment to which the testrun belongs.</param>
+        /// <param name="currentParticipant">The participant to which the testrun belongs</param>
+        /// <param name="timestamp">Timestamp to be used for the file name.</param>
+        /// <param name="testrun">The testdata</param>
         public static Boolean SaveExperimentStatistics(ExperimentModel experiment, ExperimentParticipant currentParticipant, String timestamp, TestModel testrun)
         {
             String dir = experiment.GetBaseExperimentLocation();
@@ -148,6 +193,13 @@ namespace WebAnalyzer.Controller
             return true;
         }
 
+        /// <summary>
+        /// Saves the given testrun aois to the given experiment and given participant.
+        /// </summary>
+        /// <param name="experiment">The experiment to which the testrun belongs.</param>
+        /// <param name="currentParticipant">The participant to which the testrun belongs</param>
+        /// <param name="timestamp">Timestamp to be used for the file name.</param>
+        /// <param name="testrun">The testdata</param>
         public static Boolean SaveExperimentAOI(ExperimentModel experiment, ExperimentParticipant currentParticipant, String timestamp, TestModel testrun)
         {
             String dir = experiment.GetBaseExperimentLocation();

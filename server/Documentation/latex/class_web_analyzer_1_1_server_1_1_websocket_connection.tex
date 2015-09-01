@@ -24,7 +24,7 @@ Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a973ed
 \item 
 Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_af64b83d9aec7d436a262f732e3b03e0b}{Active}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \item 
-Concurrent\+Queue$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} $>$ \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a38b19724259bebddd5990d394a3df6fd}{Message\+Queue}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} $>$ \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a0351f67ba0d69e6d5701ef34395e0a59}{Message\+Queue}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -38,7 +38,7 @@ readonly Web\+Socket \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_conn
 \item 
 Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a89a1a25a21d3c859fa7be34de5dcde36}{\+\_\+established} = false
 \item 
-Concurrent\+Queue$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} $>$ \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_ac5e47b66efc1ca14c95250915c14fc8d}{\+\_\+message\+Queue}
+List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} $>$ \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a876416b6c825d37d39ec966b022883b3}{\+\_\+message\+Queue}
 \item 
 Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_aad4b4619cdb766c16e900ee792fd2fc8}{\+\_\+active} = false
 \item 
@@ -87,9 +87,9 @@ Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a19b51
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a89a1a25a21d3c859fa7be34de5dcde36}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!\+\_\+established@{\+\_\+established}}
 \index{\+\_\+established@{\+\_\+established}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{\+\_\+established}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Websocket\+Connection.\+\_\+established = false\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a89a1a25a21d3c859fa7be34de5dcde36}
-\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_ac5e47b66efc1ca14c95250915c14fc8d}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!\+\_\+message\+Queue@{\+\_\+message\+Queue}}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a876416b6c825d37d39ec966b022883b3}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!\+\_\+message\+Queue@{\+\_\+message\+Queue}}
 \index{\+\_\+message\+Queue@{\+\_\+message\+Queue}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
-\subsubsection[{\+\_\+message\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}Concurrent\+Queue$<${\bf Message}$>$ Web\+Analyzer.\+Server.\+Websocket\+Connection.\+\_\+message\+Queue\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_ac5e47b66efc1ca14c95250915c14fc8d}
+\subsubsection[{\+\_\+message\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Message}$>$ Web\+Analyzer.\+Server.\+Websocket\+Connection.\+\_\+message\+Queue\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a876416b6c825d37d39ec966b022883b3}
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a19b519a7ec81f0898724fcdefb8c6f62}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!\+\_\+writing@{\+\_\+writing}}
 \index{\+\_\+writing@{\+\_\+writing}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{\+\_\+writing}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Websocket\+Connection.\+\_\+writing = false\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a19b519a7ec81f0898724fcdefb8c6f62}
@@ -111,9 +111,9 @@ Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a19b51
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a54d71b7e50589c027fff5441dea6ca54}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!Is\+Connected@{Is\+Connected}}
 \index{Is\+Connected@{Is\+Connected}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{Is\+Connected}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Websocket\+Connection.\+Is\+Connected\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a54d71b7e50589c027fff5441dea6ca54}
-\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a38b19724259bebddd5990d394a3df6fd}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!Message\+Queue@{Message\+Queue}}
+\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a0351f67ba0d69e6d5701ef34395e0a59}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!Message\+Queue@{Message\+Queue}}
 \index{Message\+Queue@{Message\+Queue}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
-\subsubsection[{Message\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}Concurrent\+Queue$<${\bf Message}$>$ Web\+Analyzer.\+Server.\+Websocket\+Connection.\+Message\+Queue\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a38b19724259bebddd5990d394a3df6fd}
+\subsubsection[{Message\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Message}$>$ Web\+Analyzer.\+Server.\+Websocket\+Connection.\+Message\+Queue\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a0351f67ba0d69e6d5701ef34395e0a59}
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a1f0be7b1ff80c5b742204d0883157578}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!Out@{Out}}
 \index{Out@{Out}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{Out}]{\setlength{\rightskip}{0pt plus 5cm}I\+Observer$<$String$>$ Web\+Analyzer.\+Server.\+Websocket\+Connection.\+Out\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a1f0be7b1ff80c5b742204d0883157578}

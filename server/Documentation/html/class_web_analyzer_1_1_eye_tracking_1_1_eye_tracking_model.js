@@ -14,12 +14,8 @@ var class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model =
     [ "startTracking", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#a5f49386b161f435472133e2d1f4762e0", null ],
     [ "stopTracking", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#aef3a60c497edbedc9fe8b350f46696b1", null ],
     [ "ETDevice", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#a8a1e9d54cc3f708adad7ea22653f6818", null ],
-    [ "m_AccuracyData", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#a52e543a36d58ae2fcc7a31873aa0cbc0", null ],
     [ "m_CalibrationCallback", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#ac209f94d8baa0d71cb3df9c7a4233c1f", null ],
-    [ "m_CalibrationData", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#a5b69038b5a4c54b6b36db6d03d9a6062", null ],
     [ "m_EventCallback", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#a806e6c2c97d1e27187755e8d22f87d86", null ],
-    [ "m_EventData", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#af9f2d9de139865bf8abbe83d0fc6e10b", null ],
     [ "m_SampleCallback", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#a968cb8269069b117054c23c913671380", null ],
-    [ "m_SampleData", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#ad25c95ebc65d459b55fe943260c8c826", null ],
     [ "PrepareGaze", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#a170dd57ad1784737ddf34dc14f82293d", null ]
 ];

@@ -9,6 +9,9 @@ var dir_b277070e5ba9b6501255436e6835cef9 =
     [ "Statistics.cs", "_statistics_8cs.html", [
       [ "Statistics", "class_web_analyzer_1_1_util_1_1_statistics.html", "class_web_analyzer_1_1_util_1_1_statistics" ]
     ] ],
+    [ "StopwatchTimer.cs", "_stopwatch_timer_8cs.html", [
+      [ "StopwatchTimer", "class_web_analyzer_1_1_util_1_1_stopwatch_timer.html", "class_web_analyzer_1_1_util_1_1_stopwatch_timer" ]
+    ] ],
     [ "Timestamp.cs", "_timestamp_8cs.html", [
       [ "Timestamp", "class_web_analyzer_1_1_util_1_1_timestamp.html", "class_web_analyzer_1_1_util_1_1_timestamp" ]
     ] ],

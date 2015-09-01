@@ -13,5 +13,6 @@ var searchData=
   ['standalonemodegeometrystruct',['StandAloneModeGeometryStruct',['../struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_stand_alone_mode_geometry_struct.html',1,'WebAnalyzer::EyeTracking::EyeTrackingController']]],
   ['statistics',['Statistics',['../class_web_analyzer_1_1_util_1_1_statistics.html',1,'WebAnalyzer::Util']]],
   ['statisticsanalyser',['StatisticsAnalyser',['../class_web_analyzer_1_1_models_1_1_analysis_model_1_1_statistics_analyser.html',1,'WebAnalyzer::Models::AnalysisModel']]],
+  ['stopwatchtimer',['StopwatchTimer',['../class_web_analyzer_1_1_util_1_1_stopwatch_timer.html',1,'WebAnalyzer::Util']]],
   ['systeminfostruct',['SystemInfoStruct',['../struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_system_info_struct.html',1,'WebAnalyzer::EyeTracking::EyeTrackingController']]]
 ];

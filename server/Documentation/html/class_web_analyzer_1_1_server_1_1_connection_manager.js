@@ -11,5 +11,6 @@ var class_web_analyzer_1_1_server_1_1_connection_manager =
     [ "WorkConnectionMessageQueues", "class_web_analyzer_1_1_server_1_1_connection_manager.html#a773422b69490cf64139d8237a9122eaa", null ],
     [ "_connections", "class_web_analyzer_1_1_server_1_1_connection_manager.html#a4d1d80f0e1bca824c36908efcc4f9dc0", null ],
     [ "_workMessages", "class_web_analyzer_1_1_server_1_1_connection_manager.html#a23a1f3a046b14bcb1333c3ef846015d6", null ],
+    [ "timer", "class_web_analyzer_1_1_server_1_1_connection_manager.html#aa639f32d7193a808bd9680359b325887", null ],
     [ "MessageSent", "class_web_analyzer_1_1_server_1_1_connection_manager.html#a2eb5de18882e69a65b4b7ce3ee458af1", null ]
 ];

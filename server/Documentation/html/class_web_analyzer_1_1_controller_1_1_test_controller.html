@@ -118,91 +118,130 @@ $(document).ready(function(){initNavTree('class_web_analyzer_1_1_controller_1_1_
 <div class="title">WebAnalyzer.Controller.TestController Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class used for controlling an test run.  
+ <a href="class_web_analyzer_1_1_controller_1_1_test_controller.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:acac996dad8f9c1f9890263f82df9593a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#acac996dad8f9c1f9890263f82df9593a">TestController</a> ()</td></tr>
+<tr class="memdesc:acac996dad8f9c1f9890263f82df9593a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor which creates the TestModel, prepares all Servies (Websocket and Tracking) and creates the timer.  <a href="#acac996dad8f9c1f9890263f82df9593a">More...</a><br /></td></tr>
 <tr class="separator:acac996dad8f9c1f9890263f82df9593a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7074ca580c48782cb944d4cde6bbe26e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a7074ca580c48782cb944d4cde6bbe26e">RefreshServices</a> ()</td></tr>
+<tr class="memdesc:a7074ca580c48782cb944d4cde6bbe26e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Methods for Refreshing Services.  <a href="#a7074ca580c48782cb944d4cde6bbe26e">More...</a><br /></td></tr>
 <tr class="separator:a7074ca580c48782cb944d4cde6bbe26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe606c22838435b0b471cea3157a1a3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#afe606c22838435b0b471cea3157a1a3e">PrepareServices</a> ()</td></tr>
+<tr class="memdesc:afe606c22838435b0b471cea3157a1a3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepares all Websocket <a class="el" href="namespace_web_analyzer_1_1_server.html">Server</a> and Tracking Interface for the test.  <a href="#afe606c22838435b0b471cea3157a1a3e">More...</a><br /></td></tr>
 <tr class="separator:afe606c22838435b0b471cea3157a1a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c41ced530712abfceaab3cea7f6bbac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a2c41ced530712abfceaab3cea7f6bbac">StartTest</a> ()</td></tr>
+<tr class="memdesc:a2c41ced530712abfceaab3cea7f6bbac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the test.  <a href="#a2c41ced530712abfceaab3cea7f6bbac">More...</a><br /></td></tr>
 <tr class="separator:a2c41ced530712abfceaab3cea7f6bbac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ebdcf138dc6c394c8a5695da1f8de23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a6ebdcf138dc6c394c8a5695da1f8de23">StopTest</a> ()</td></tr>
+<tr class="memdesc:a6ebdcf138dc6c394c8a5695da1f8de23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the test.  <a href="#a6ebdcf138dc6c394c8a5695da1f8de23">More...</a><br /></td></tr>
 <tr class="separator:a6ebdcf138dc6c394c8a5695da1f8de23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af621c99b82c5589e2fa446fad6c0839e"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#af621c99b82c5589e2fa446fad6c0839e">PrepareGazeData</a> (String timestamp, double <a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#a81e910173af87b1161e719a504d52407">x</a>, double y)</td></tr>
+<tr class="memdesc:af621c99b82c5589e2fa446fad6c0839e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepares the GazeData with the TestModel.  <a href="#af621c99b82c5589e2fa446fad6c0839e">More...</a><br /></td></tr>
 <tr class="separator:af621c99b82c5589e2fa446fad6c0839e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accf7fa7b749594a749875738800679b9"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#accf7fa7b749594a749875738800679b9">PrepareGazeData</a> (String timestamp, double leftX, double leftY, double rightX, double rightY)</td></tr>
+<tr class="memdesc:accf7fa7b749594a749875738800679b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepares the GazeData with the TestModel.  <a href="#accf7fa7b749594a749875738800679b9">More...</a><br /></td></tr>
 <tr class="separator:accf7fa7b749594a749875738800679b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a576aa4ab5c0fc2d7a10bcdbf2daaf1ef"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a576aa4ab5c0fc2d7a10bcdbf2daaf1ef">AssignGazeToWebpage</a> (String <a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#af690ff5521d79c7128861033ae80ae17">uniqueId</a>, String url)</td></tr>
+<tr class="memdesc:a576aa4ab5c0fc2d7a10bcdbf2daaf1ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a gaze to the webpage given webpage.  <a href="#a576aa4ab5c0fc2d7a10bcdbf2daaf1ef">More...</a><br /></td></tr>
 <tr class="separator:a576aa4ab5c0fc2d7a10bcdbf2daaf1ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeffea7da4e0bf3400ebddc5440dc2def"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#aeffea7da4e0bf3400ebddc5440dc2def">AssignGazeToWebpage</a> (<a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a> gazeModel, String url)</td></tr>
+<tr class="memdesc:aeffea7da4e0bf3400ebddc5440dc2def"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a gaze to the webpage given webpage.  <a href="#aeffea7da4e0bf3400ebddc5440dc2def">More...</a><br /></td></tr>
 <tr class="separator:aeffea7da4e0bf3400ebddc5440dc2def"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae88c0e776f3d18dc0c0cfc2106b2f1a5"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#ae88c0e776f3d18dc0c0cfc2106b2f1a5">DisposeOfGazeData</a> (String <a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#af690ff5521d79c7128861033ae80ae17">uniqueId</a>)</td></tr>
+<tr class="memdesc:ae88c0e776f3d18dc0c0cfc2106b2f1a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispose of gaze data (since its an error)  <a href="#ae88c0e776f3d18dc0c0cfc2106b2f1a5">More...</a><br /></td></tr>
 <tr class="separator:ae88c0e776f3d18dc0c0cfc2106b2f1a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99b6f672f4ef0293ac70edb20e1c7cdb"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a99b6f672f4ef0293ac70edb20e1c7cdb">DisposeOfGazeData</a> (<a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a> gazeModel)</td></tr>
+<tr class="memdesc:a99b6f672f4ef0293ac70edb20e1c7cdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispose of gaze data (since its an error)  <a href="#a99b6f672f4ef0293ac70edb20e1c7cdb">More...</a><br /></td></tr>
 <tr class="separator:a99b6f672f4ef0293ac70edb20e1c7cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad375d558e5d63a79680f3fe53f1326b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#ad375d558e5d63a79680f3fe53f1326b4">GetGazeModel</a> (String <a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#af690ff5521d79c7128861033ae80ae17">uniqueId</a>)</td></tr>
+<tr class="memdesc:ad375d558e5d63a79680f3fe53f1326b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the GazeModel to an uniqueid  <a href="#ad375d558e5d63a79680f3fe53f1326b4">More...</a><br /></td></tr>
 <tr class="separator:ad375d558e5d63a79680f3fe53f1326b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19c13e671b0a950a1b012424fd7c2560"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a19c13e671b0a950a1b012424fd7c2560">CheckForSave</a> (<a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#aae18b7515bb2bc4137586506e7c0c903">object</a> sender, ElapsedEventArgs <a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js.html#ab5902775854a8b8440bcd25e0fe1c120">e</a>)</td></tr>
+<tr class="memdesc:a19c13e671b0a950a1b012424fd7c2560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if all data is there and save if it is.  <a href="#a19c13e671b0a950a1b012424fd7c2560">More...</a><br /></td></tr>
 <tr class="separator:a19c13e671b0a950a1b012424fd7c2560"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab70718909a47aded762d0021e5ccb7b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#ab70718909a47aded762d0021e5ccb7b2">On_MessageSent</a> (<a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#aae18b7515bb2bc4137586506e7c0c903">object</a> sender, <a class="el" href="class_web_analyzer_1_1_events_1_1_message_sent_event.html">MessageSentEvent</a> <a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js.html#ab5902775854a8b8440bcd25e0fe1c120">e</a>)</td></tr>
+<tr class="memdesc:ab70718909a47aded762d0021e5ccb7b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for Message Sent Event.  <a href="#ab70718909a47aded762d0021e5ccb7b2">More...</a><br /></td></tr>
 <tr class="separator:ab70718909a47aded762d0021e5ccb7b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:afcf9572f80c31e6d9aca33f96e3aaa4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model.html">TestModel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#afcf9572f80c31e6d9aca33f96e3aaa4f">Test</a><code> [get, set]</code></td></tr>
+<tr class="memitem:afcf9572f80c31e6d9aca33f96e3aaa4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model.html">TestModel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#afcf9572f80c31e6d9aca33f96e3aaa4f">Test</a><code> [get]</code></td></tr>
+<tr class="memdesc:afcf9572f80c31e6d9aca33f96e3aaa4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface to access the TestModel  <a href="#afcf9572f80c31e6d9aca33f96e3aaa4f">More...</a><br /></td></tr>
 <tr class="separator:afcf9572f80c31e6d9aca33f96e3aaa4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4020785450ade4a26f603d667ce633d6"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a4020785450ade4a26f603d667ce633d6">Running</a><code> [get]</code></td></tr>
+<tr class="memdesc:a4020785450ade4a26f603d667ce633d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface to check if the <a class="el" href="namespace_web_analyzer_1_1_test.html">Test</a> ir Running.  <a href="#a4020785450ade4a26f603d667ce633d6">More...</a><br /></td></tr>
 <tr class="separator:a4020785450ade4a26f603d667ce633d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a741cf98b95422a4a307bf8834db147b3"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a741cf98b95422a4a307bf8834db147b3">DataCollected</a><code> [get]</code></td></tr>
+<tr class="memdesc:a741cf98b95422a4a307bf8834db147b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface to check if data was collected.  <a href="#a741cf98b95422a4a307bf8834db147b3">More...</a><br /></td></tr>
 <tr class="separator:a741cf98b95422a4a307bf8834db147b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f3032c3be238b03976be19319a64eeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object.html#a2875208b4f4b0ed643593152f4ec025c">ExperimentObject.CONNECTION_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a1f3032c3be238b03976be19319a64eeb">WSStatus</a><code> [get]</code></td></tr>
+<tr class="memdesc:a1f3032c3be238b03976be19319a64eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface to check the ConnectionStatus of the Websocket <a class="el" href="namespace_web_analyzer_1_1_server.html">Server</a>.  <a href="#a1f3032c3be238b03976be19319a64eeb">More...</a><br /></td></tr>
 <tr class="separator:a1f3032c3be238b03976be19319a64eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc0db19e3cc5958f24dd5fd09ce34d98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object.html#a2875208b4f4b0ed643593152f4ec025c">ExperimentObject.CONNECTION_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#adc0db19e3cc5958f24dd5fd09ce34d98">TrackingStatus</a><code> [get]</code></td></tr>
+<tr class="memdesc:adc0db19e3cc5958f24dd5fd09ce34d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface to check the ConnectionStatus of the Tracker (<a class="el" href="namespace_web_analyzer_1_1_eye_tracking.html">EyeTracking</a> or Mouse).  <a href="#adc0db19e3cc5958f24dd5fd09ce34d98">More...</a><br /></td></tr>
 <tr class="separator:adc0db19e3cc5958f24dd5fd09ce34d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="events"></a>
 Events</h2></td></tr>
 <tr class="memitem:a45f8340dcea78391a3f58e5c7996d126"><td class="memItemLeft" align="right" valign="top">SaveTestrunEventHandler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a45f8340dcea78391a3f58e5c7996d126">SaveTestrun</a></td></tr>
+<tr class="memdesc:a45f8340dcea78391a3f58e5c7996d126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event for saving the testrun.  <a href="#a45f8340dcea78391a3f58e5c7996d126">More...</a><br /></td></tr>
 <tr class="separator:a45f8340dcea78391a3f58e5c7996d126"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a448797a07babe883ab8d8e646272a6eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a448797a07babe883ab8d8e646272a6eb">CreateSaveTimer</a> ()</td></tr>
-<tr class="separator:a448797a07babe883ab8d8e646272a6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9404350d73eb0d40751b1bdee5171b71"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a9404350d73eb0d40751b1bdee5171b71">~TestController</a> ()</td></tr>
+<tr class="memdesc:a9404350d73eb0d40751b1bdee5171b71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor to ensure all services get stopped.  <a href="#a9404350d73eb0d40751b1bdee5171b71">More...</a><br /></td></tr>
 <tr class="separator:a9404350d73eb0d40751b1bdee5171b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a448797a07babe883ab8d8e646272a6eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a448797a07babe883ab8d8e646272a6eb">CreateSaveTimer</a> ()</td></tr>
+<tr class="memdesc:a448797a07babe883ab8d8e646272a6eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the Timer used when checking if data can now be saved.  <a href="#a448797a07babe883ab8d8e646272a6eb">More...</a><br /></td></tr>
+<tr class="separator:a448797a07babe883ab8d8e646272a6eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef58517bbc760e87c541cc4b0272957c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object.html#a2875208b4f4b0ed643593152f4ec025c">ExperimentObject.CONNECTION_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#aef58517bbc760e87c541cc4b0272957c">GetTrackingStatus</a> ()</td></tr>
+<tr class="memdesc:aef58517bbc760e87c541cc4b0272957c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intern method to extract the Tracking Status.  <a href="#aef58517bbc760e87c541cc4b0272957c">More...</a><br /></td></tr>
 <tr class="separator:aef58517bbc760e87c541cc4b0272957c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7260e39f8963732f38631dd618da497"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#af7260e39f8963732f38631dd618da497">EndServices</a> ()</td></tr>
+<tr class="memdesc:af7260e39f8963732f38631dd618da497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops all Websocket <a class="el" href="namespace_web_analyzer_1_1_server.html">Server</a> and Tracking Interface.  <a href="#af7260e39f8963732f38631dd618da497">More...</a><br /></td></tr>
 <tr class="separator:af7260e39f8963732f38631dd618da497"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61584d87704fffabf4ff0f8c04b33407"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a61584d87704fffabf4ff0f8c04b33407">On_PrepareGazeData</a> (<a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#aae18b7515bb2bc4137586506e7c0c903">object</a> source, <a class="el" href="class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event.html">PrepareGazeDataEvent</a> <a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js.html#ab5902775854a8b8440bcd25e0fe1c120">e</a>)</td></tr>
+<tr class="memdesc:a61584d87704fffabf4ff0f8c04b33407"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepares the GazeData and requests the data over the websocket server.  <a href="#a61584d87704fffabf4ff0f8c04b33407">More...</a><br /></td></tr>
 <tr class="separator:a61584d87704fffabf4ff0f8c04b33407"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a6084bcc401d37f7f8861fc0e9fb771b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model.html">TestModel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a6084bcc401d37f7f8861fc0e9fb771b6">_test</a></td></tr>
+<tr class="memdesc:a6084bcc401d37f7f8861fc0e9fb771b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the test data for current test.  <a href="#a6084bcc401d37f7f8861fc0e9fb771b6">More...</a><br /></td></tr>
 <tr class="separator:a6084bcc401d37f7f8861fc0e9fb771b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0db36e46096d444386af0d357905f430"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html">EyeTrackingModel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a0db36e46096d444386af0d357905f430">_etModel</a></td></tr>
+<tr class="memdesc:a0db36e46096d444386af0d357905f430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the EyeTracker which is used for getting data.  <a href="#a0db36e46096d444386af0d357905f430">More...</a><br /></td></tr>
 <tr class="separator:a0db36e46096d444386af0d357905f430"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33b43014ccf6b9f7cdd1e3136ac19d3a"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a33b43014ccf6b9f7cdd1e3136ac19d3a">_ETWarning</a> = false</td></tr>
+<tr class="memdesc:a33b43014ccf6b9f7cdd1e3136ac19d3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean for indicating if there was a problem with the EyeTracker.  <a href="#a33b43014ccf6b9f7cdd1e3136ac19d3a">More...</a><br /></td></tr>
 <tr class="separator:a33b43014ccf6b9f7cdd1e3136ac19d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a517bab0ee0c22871788bd498de86c27e"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a517bab0ee0c22871788bd498de86c27e">_WSWarning</a> = false</td></tr>
+<tr class="memdesc:a517bab0ee0c22871788bd498de86c27e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean for indicating if there was a problem for the WebSocket <a class="el" href="namespace_web_analyzer_1_1_server.html">Server</a>.  <a href="#a517bab0ee0c22871788bd498de86c27e">More...</a><br /></td></tr>
 <tr class="separator:a517bab0ee0c22871788bd498de86c27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb605e9f2ad9c53af52fb846fe2a98a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_server.html">WebsocketServer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#aeb605e9f2ad9c53af52fb846fe2a98a6">_wsServer</a></td></tr>
+<tr class="memdesc:aeb605e9f2ad9c53af52fb846fe2a98a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the Websocket <a class="el" href="namespace_web_analyzer_1_1_server.html">Server</a>.  <a href="#aeb605e9f2ad9c53af52fb846fe2a98a6">More...</a><br /></td></tr>
 <tr class="separator:aeb605e9f2ad9c53af52fb846fe2a98a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c615e40201210940f07312bcc993ef5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model.html">MouseModel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a1c615e40201210940f07312bcc993ef5">_debugModel</a></td></tr>
+<tr class="memdesc:a1c615e40201210940f07312bcc993ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the MouseModel used as an alternative to the <a class="el" href="namespace_web_analyzer_1_1_eye_tracking.html">EyeTracking</a>.  <a href="#a1c615e40201210940f07312bcc993ef5">More...</a><br /></td></tr>
 <tr class="separator:a1c615e40201210940f07312bcc993ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49aaaa975ccbeedcd52fb03288cea3ef"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a49aaaa975ccbeedcd52fb03288cea3ef">_running</a></td></tr>
+<tr class="memdesc:a49aaaa975ccbeedcd52fb03288cea3ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean for indicating if the test is currently running.  <a href="#a49aaaa975ccbeedcd52fb03288cea3ef">More...</a><br /></td></tr>
 <tr class="separator:a49aaaa975ccbeedcd52fb03288cea3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d63bbfba4672d52414c318b397c504b"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a7d63bbfba4672d52414c318b397c504b">_dataCollected</a> = false</td></tr>
+<tr class="memdesc:a7d63bbfba4672d52414c318b397c504b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean for indicating if any data was collected.  <a href="#a7d63bbfba4672d52414c318b397c504b">More...</a><br /></td></tr>
 <tr class="separator:a7d63bbfba4672d52414c318b397c504b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a484747e48ceb23e931111018ed87d8e1"><td class="memItemLeft" align="right" valign="top">System.Timers.Timer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a484747e48ceb23e931111018ed87d8e1">saveTimer</a></td></tr>
+<tr class="memdesc:a484747e48ceb23e931111018ed87d8e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to an timer used for checking if all communication is done and the data can be saved.  <a href="#a484747e48ceb23e931111018ed87d8e1">More...</a><br /></td></tr>
 <tr class="separator:a484747e48ceb23e931111018ed87d8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class used for controlling an test run. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="acac996dad8f9c1f9890263f82df9593a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -215,6 +254,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor which creates the TestModel, prepares all Servies (Websocket and Tracking) and creates the timer. </p>
 
 </div>
 </div>
@@ -238,6 +279,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destructor to ensure all services get stopped. </p>
 
 </div>
 </div>
@@ -266,6 +309,16 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Assigns a gaze to the webpage given webpage. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uniqueId</td><td>Uniqueid of the gaze to assign</td></tr>
+    <tr><td class="paramname">url</td><td>Url of webpage to assign the gaze to</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="aeffea7da4e0bf3400ebddc5440dc2def"></a>
@@ -291,6 +344,16 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Assigns a gaze to the webpage given webpage. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gazeModel</td><td>Gaze to assign to webpage</td></tr>
+    <tr><td class="paramname">url</td><td>Url of webpage to assign the gaze to</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -318,6 +381,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Check if all data is there and save if it is. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sender</td><td>Object from which the method is called</td></tr>
+    <tr><td class="paramname">e</td><td>Event</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a448797a07babe883ab8d8e646272a6eb"></a>
@@ -341,6 +413,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Creates the Timer used when checking if data can now be saved. </p>
+
 </div>
 </div>
 <a class="anchor" id="ae88c0e776f3d18dc0c0cfc2106b2f1a5"></a>
@@ -357,6 +431,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Dispose of gaze data (since its an error) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uniqueId</td><td>Uniqueid of the gaze to dispose</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a99b6f672f4ef0293ac70edb20e1c7cdb"></a>
@@ -372,6 +455,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Dispose of gaze data (since its an error) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gazeModel</td><td>Gaze to dispose</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -396,6 +488,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Stops all Websocket <a class="el" href="namespace_web_analyzer_1_1_server.html">Server</a> and Tracking Interface. </p>
+<p>Uses the settings to choose what to prepare and what to use for preparing.</p>
+
 </div>
 </div>
 <a class="anchor" id="ad375d558e5d63a79680f3fe53f1326b4"></a>
@@ -411,6 +506,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Get the GazeModel to an uniqueid </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uniqueId</td><td>UniquieId of the gaze which is searched</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -434,6 +538,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Intern method to extract the Tracking Status. </p>
 
 </div>
 </div>
@@ -460,6 +566,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Callback for Message Sent Event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sender</td><td>Object from which the event gets triggered.</td></tr>
+    <tr><td class="paramname">e</td><td>Data which message was sent and when.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -495,6 +610,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Prepares the GazeData and requests the data over the websocket server. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>Source from which the event gets triggered.</td></tr>
+    <tr><td class="paramname">e</td><td>Data about the gaze.</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="af621c99b82c5589e2fa446fad6c0839e"></a>
@@ -526,6 +650,16 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Prepares the GazeData with the TestModel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timestamp</td><td>Timestamp on which the gaze was requested</td></tr>
+    <tr><td class="paramname">x</td><td>X coordinates of the gaze</td></tr>
+    <tr><td class="paramname">y</td><td>Y coordinates of the gaze</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -571,6 +705,18 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Prepares the GazeData with the TestModel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timestamp</td><td>Timestamp on which the gaze was requested</td></tr>
+    <tr><td class="paramname">leftX</td><td>X coordinates of the left eye of the gaze</td></tr>
+    <tr><td class="paramname">leftY</td><td>Y coordinates of the left eye of the gaze</td></tr>
+    <tr><td class="paramname">rightX</td><td>X coordinates of the right eye of the gaze</td></tr>
+    <tr><td class="paramname">rightY</td><td>Y coordinates of the right eye of the gaze</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="afe606c22838435b0b471cea3157a1a3e"></a>
@@ -585,6 +731,9 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Prepares all Websocket <a class="el" href="namespace_web_analyzer_1_1_server.html">Server</a> and Tracking Interface for the test. </p>
+<p>Uses the settings to choose what to prepare and what to use for preparing.</p>
 
 </div>
 </div>
@@ -601,6 +750,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Methods for Refreshing Services. </p>
+<p>Only calls EndServices and then PrepareServices.</p>
+
 </div>
 </div>
 <a class="anchor" id="a2c41ced530712abfceaab3cea7f6bbac"></a>
@@ -616,6 +768,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Starts the test. </p>
+
 </div>
 </div>
 <a class="anchor" id="a6ebdcf138dc6c394c8a5695da1f8de23"></a>
@@ -630,6 +784,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Stops the test. </p>
 
 </div>
 </div>
@@ -652,6 +808,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Boolean for indicating if any data was collected. </p>
+
 </div>
 </div>
 <a class="anchor" id="a1c615e40201210940f07312bcc993ef5"></a>
@@ -671,6 +829,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reference to the MouseModel used as an alternative to the <a class="el" href="namespace_web_analyzer_1_1_eye_tracking.html">EyeTracking</a>. </p>
 
 </div>
 </div>
@@ -692,6 +852,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Reference to the EyeTracker which is used for getting data. </p>
+<p>Can be null if MouseTracking is used.</p>
+
 </div>
 </div>
 <a class="anchor" id="a33b43014ccf6b9f7cdd1e3136ac19d3a"></a>
@@ -711,6 +874,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Boolean for indicating if there was a problem with the EyeTracker. </p>
 
 </div>
 </div>
@@ -732,6 +897,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Boolean for indicating if the test is currently running. </p>
+
 </div>
 </div>
 <a class="anchor" id="a6084bcc401d37f7f8861fc0e9fb771b6"></a>
@@ -751,6 +918,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reference to the test data for current test. </p>
 
 </div>
 </div>
@@ -772,6 +941,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Reference to the Websocket <a class="el" href="namespace_web_analyzer_1_1_server.html">Server</a>. </p>
+
 </div>
 </div>
 <a class="anchor" id="a517bab0ee0c22871788bd498de86c27e"></a>
@@ -792,6 +963,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Boolean for indicating if there was a problem for the WebSocket <a class="el" href="namespace_web_analyzer_1_1_server.html">Server</a>. </p>
+
 </div>
 </div>
 <a class="anchor" id="a484747e48ceb23e931111018ed87d8e1"></a>
@@ -811,6 +984,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reference to an timer used for checking if all communication is done and the data can be saved. </p>
 
 </div>
 </div>
@@ -833,6 +1008,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Interface to check if data was collected. </p>
+
 </div>
 </div>
 <a class="anchor" id="a4020785450ade4a26f603d667ce633d6"></a>
@@ -853,6 +1030,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Interface to check if the <a class="el" href="namespace_web_analyzer_1_1_test.html">Test</a> ir Running. </p>
+
 </div>
 </div>
 <a class="anchor" id="afcf9572f80c31e6d9aca33f96e3aaa4f"></a>
@@ -868,10 +1047,12 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Interface to access the TestModel </p>
 
 </div>
 </div>
@@ -893,6 +1074,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Interface to check the ConnectionStatus of the Tracker (<a class="el" href="namespace_web_analyzer_1_1_eye_tracking.html">EyeTracking</a> or Mouse). </p>
+<p>Used for the indicator of the main <a class="el" href="namespace_web_analyzer_1_1_u_i.html">UI</a>. </p>
+
 </div>
 </div>
 <a class="anchor" id="a1f3032c3be238b03976be19319a64eeb"></a>
@@ -913,6 +1097,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Interface to check the ConnectionStatus of the Websocket <a class="el" href="namespace_web_analyzer_1_1_server.html">Server</a>. </p>
+<p>Used for the indicator of the main <a class="el" href="namespace_web_analyzer_1_1_u_i.html">UI</a>. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Event Documentation</h2>
@@ -925,6 +1112,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Event for saving the testrun. </p>
 
 </div>
 </div>

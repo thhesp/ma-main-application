@@ -16,26 +16,65 @@ using WebAnalyzer.UI.InteractionObjects;
 
 namespace WebAnalyzer.Controller
 {
+    /// <summary>
+    /// Class used for controlling an test run.
+    /// </summary>
     class TestController
     {
 
+        /// <summary>
+        ///  Event for saving the testrun.
+        /// </summary>
         public event SaveTestrunEventHandler SaveTestrun;
 
+        /// <summary>
+        /// Reference to the test data for current test.
+        /// </summary>
         private TestModel _test;
+
+        /// <summary>
+        /// Reference to the EyeTracker which is used for getting data.
+        /// </summary>
+        /// <remarks>Can be null if MouseTracking is used.</remarks>
         private EyeTrackingModel _etModel;
 
+        /// <summary>
+        /// Boolean for indicating if there was a problem with the EyeTracker.
+        /// </summary>
         private Boolean _ETWarning = false;
+        /// <summary>
+        /// Boolean for indicating if there was a problem for the WebSocket Server.
+        /// </summary>
         private Boolean _WSWarning = false;
 
+        /// <summary>
+        /// Reference to the Websocket Server.
+        /// </summary>
         private WebsocketServer _wsServer;
 
+        /// <summary>
+        /// Reference to the MouseModel used as an alternative to the EyeTracking.
+        /// </summary>
         private MouseModel _debugModel;
 
+        /// <summary>
+        /// Boolean for indicating if the test is currently running.
+        /// </summary>
         private Boolean _running;
 
+        /// <summary>
+        /// Boolean for indicating if any data was collected.
+        /// </summary>
         private Boolean _dataCollected = false;
+
+        /// <summary>
+        /// Reference to an timer used for checking if all communication is done and the data can be saved.
+        /// </summary>
         private System.Timers.Timer saveTimer;
 
+        /// <summary>
+        /// Constructor which creates the TestModel, prepares all Servies (Websocket and Tracking) and creates the timer.
+        /// </summary>
         public TestController()
         {
             _test = new TestModel();
@@ -43,6 +82,19 @@ namespace WebAnalyzer.Controller
             CreateSaveTimer();
         }
 
+
+        /// <summary>
+        /// Destructor to ensure all services get stopped.
+        /// </summary>
+        ~TestController()
+        {
+            EndServices();
+        }
+
+
+        /// <summary>
+        /// Creates the Timer used when checking if data can now be saved.
+        /// </summary>
         private void CreateSaveTimer()
         {
             saveTimer = new System.Timers.Timer();
@@ -51,27 +103,36 @@ namespace WebAnalyzer.Controller
             saveTimer.Elapsed += new ElapsedEventHandler(CheckForSave);
         }
 
-        ~TestController()
-        {
-            EndServices();
-        }
-
+        /// <summary>
+        /// Interface to access the TestModel
+        /// </summary>
         public TestModel Test
         {
             get { return _test; }
-            set { _test = value; }
         }
 
+        /// <summary>
+        /// Interface to check if the Test ir Running.
+        /// </summary>
         public Boolean Running
         {
             get { return _running; }
         }
 
+        /// <summary>
+        /// Interface to check if data was collected.
+        /// </summary>
         public Boolean DataCollected
         {
             get { return _dataCollected; }
         }
 
+        /// <summary>
+        /// Interface to check the ConnectionStatus of the Websocket Server.
+        /// </summary>
+        /// <remarks>
+        /// Used for the indicator of the main UI.
+        /// </remarks>
         public ExperimentObject.CONNECTION_STATUS WSStatus
         {
 
@@ -92,6 +153,12 @@ namespace WebAnalyzer.Controller
             }
         }
 
+        /// <summary>
+        /// Interface to check the ConnectionStatus of the Tracker (EyeTracking or Mouse).
+        /// </summary>
+        /// <remarks>
+        /// Used for the indicator of the main UI.
+        /// </remarks>
         public ExperimentObject.CONNECTION_STATUS TrackingStatus
         {
             
@@ -101,6 +168,9 @@ namespace WebAnalyzer.Controller
             }
         }
 
+        /// <summary>
+        /// Intern method to extract the Tracking Status.
+        /// </summary>
         private ExperimentObject.CONNECTION_STATUS GetTrackingStatus()
         {
             if (Properties.Settings.Default.UseMouseTracking)
@@ -132,12 +202,20 @@ namespace WebAnalyzer.Controller
             }
         }
 
+        /// <summary>
+        /// Methods for Refreshing Services.
+        /// </summary>
+        /// <remarks>Only calls EndServices and then PrepareServices.</remarks>
         public void RefreshServices()
         {
             EndServices();
             PrepareServices();
         }
 
+        /// <summary>
+        /// Prepares all Websocket Server and Tracking Interface for the test.
+        /// </summary>
+        /// <remarks>Uses the settings to choose what to prepare and what to use for preparing.</remarks>
         public void PrepareServices()
         {
             Logger.Log("Prepare Services");
@@ -195,6 +273,10 @@ namespace WebAnalyzer.Controller
             }
         }
 
+        /// <summary>
+        /// Stops all Websocket Server and Tracking Interface.
+        /// </summary>
+        /// <remarks>Uses the settings to choose what to prepare and what to use for preparing.</remarks>
         private void EndServices()
         {
             if (_running)
@@ -219,6 +301,9 @@ namespace WebAnalyzer.Controller
             }
         }
 
+        /// <summary>
+        /// Starts the test.
+        /// </summary>
         public void StartTest()
         {
             Logger.Log("Start Experiment");
@@ -236,6 +321,9 @@ namespace WebAnalyzer.Controller
             }
         }
 
+        /// <summary>
+        /// Stops the test.
+        /// </summary>
         public void StopTest()
         {
             Logger.Log("Stop Experiment");
@@ -261,6 +349,11 @@ namespace WebAnalyzer.Controller
             saveTimer.Start();
         }
 
+        /// <summary>
+        /// Prepares the GazeData and requests the data over the websocket server.
+        /// </summary>
+        /// <param name="source">Source from which the event gets triggered.</param>
+        /// <param name="e">Data about the gaze.</param>
         private void On_PrepareGazeData(object source, PrepareGazeDataEvent e)
         {
 
@@ -276,6 +369,12 @@ namespace WebAnalyzer.Controller
             }
         }
 
+        /// <summary>
+        /// Prepares the GazeData with the TestModel.
+        /// </summary>
+        /// <param name="timestamp">Timestamp on which the gaze was requested</param>
+        /// <param name="x">X coordinates of the gaze</param>
+        /// <param name="y">Y coordinates of the gaze</param>
         public String PrepareGazeData(String timestamp, double x, double y)
         {
             if (this.Running)
@@ -285,6 +384,14 @@ namespace WebAnalyzer.Controller
             return null;
         }
 
+        /// <summary>
+        /// Prepares the GazeData with the TestModel.
+        /// </summary>
+        /// <param name="timestamp">Timestamp on which the gaze was requested</param>
+        /// <param name="leftX">X coordinates of the left eye of the gaze</param>
+        /// <param name="leftY">Y coordinates of the left eye of the gaze</param>
+        /// <param name="rightX">X coordinates of the right eye of the gaze</param>
+        /// <param name="rightY">Y coordinates of the right eye of the gaze</param>
         public String PrepareGazeData(String timestamp, double leftX, double leftY, double rightX, double rightY)
         {
             if (this.Running)
@@ -294,33 +401,65 @@ namespace WebAnalyzer.Controller
             return null;
         }
 
+        /// <summary>
+        /// Assigns a gaze to the webpage given webpage.
+        /// </summary>
+        /// <param name="uniqueId">Uniqueid of the gaze to assign</param>
+        /// <param name="url">Url of webpage to assign the gaze to</param>
+        /// <returns></returns>
         public Boolean AssignGazeToWebpage(String uniqueId, String url)
         {
             _dataCollected = true;
             return _test.AssignGazeToWebpage(uniqueId, url);
         }
 
+        /// <summary>
+        /// Assigns a gaze to the webpage given webpage.
+        /// </summary>
+        /// <param name="gazeModel">Gaze to assign to webpage</param>
+        /// <param name="url">Url of webpage to assign the gaze to</param>
+        /// <returns></returns>
         public Boolean AssignGazeToWebpage(GazeModel gazeModel, String url)
         {
             _dataCollected = true;
             return _test.AssignGazeToWebpage(gazeModel, url);
         }
 
+        /// <summary>
+        /// Dispose of gaze data (since its an error)
+        /// </summary>
+        /// <param name="uniqueId">Uniqueid of the gaze to dispose</param>
+        /// <returns></returns>
         public Boolean DisposeOfGazeData(String uniqueId)
         {
             return _test.DisposeOfGazeData(uniqueId);
         }
 
+        /// <summary>
+        /// Dispose of gaze data (since its an error)
+        /// </summary>
+        /// <param name="gazeModel">Gaze to dispose</param>
+        /// <returns></returns>
         public Boolean DisposeOfGazeData(GazeModel gazeModel)
         {
             return _test.DisposeOfGazeData(gazeModel);
         }
 
+        /// <summary>
+        /// Get the GazeModel to an uniqueid
+        /// </summary>
+        /// <param name="uniqueId">UniquieId of the gaze which is searched</param>
+        /// <returns></returns>
         public GazeModel GetGazeModel(String uniqueId)
         {
             return _test.GetGazeModel(uniqueId);
         }
 
+        /// <summary>
+        /// Check if all data is there and save if it is.
+        /// </summary>
+        /// <param name="sender">Object from which the method is called</param>
+        /// <param name="e">Event</param>
         public void CheckForSave(object sender, ElapsedEventArgs e)
         {
             if (_test.CheckForSave())
@@ -330,6 +469,11 @@ namespace WebAnalyzer.Controller
             }
         }
 
+        /// <summary>
+        /// Callback for Message Sent Event.
+        /// </summary>
+        /// <param name="sender">Object from which the event gets triggered.</param>
+        /// <param name="e">Data which message was sent and when.</param>
         public void On_MessageSent(object sender, MessageSentEvent e)
         {
             _test.MessageSent(e.UID, e.SentTimestamp);

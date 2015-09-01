@@ -12,5 +12,6 @@ var searchData=
   ['settingsvalidator_2ecs',['SettingsValidator.cs',['../_settings_validator_8cs.html',1,'']]],
   ['smalldatamessage_2ecs',['SmallDataMessage.cs',['../_small_data_message_8cs.html',1,'']]],
   ['statistics_2ecs',['Statistics.cs',['../_statistics_8cs.html',1,'']]],
-  ['statisticsanalyser_2ecs',['StatisticsAnalyser.cs',['../_statistics_analyser_8cs.html',1,'']]]
+  ['statisticsanalyser_2ecs',['StatisticsAnalyser.cs',['../_statistics_analyser_8cs.html',1,'']]],
+  ['stopwatchtimer_2ecs',['StopwatchTimer.cs',['../_stopwatch_timer_8cs.html',1,'']]]
 ];

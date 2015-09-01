@@ -1,0 +1,128 @@
+\hypertarget{class_web_analyzer_1_1_util_1_1_stopwatch_timer}{}\section{Web\+Analyzer.\+Util.\+Stopwatch\+Timer Class Reference}
+\label{class_web_analyzer_1_1_util_1_1_stopwatch_timer}\index{Web\+Analyzer.\+Util.\+Stopwatch\+Timer@{Web\+Analyzer.\+Util.\+Stopwatch\+Timer}}
+
+
+Class which is a timer with utilises the stopwatch. This enables it to tick every millisecond.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+delegate void \hyperlink{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a5670fcf49435ed5d241abd0617c9f607}{Tick} ()
+\begin{DoxyCompactList}\small\item\em The delegate for the callback. \end{DoxyCompactList}\item 
+\hyperlink{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a1b411ff5e4314d1960220119bdcfee9f}{Stopwatch\+Timer} (int interval\+In\+M\+S, \hyperlink{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a5670fcf49435ed5d241abd0617c9f607}{Tick} callback)
+\begin{DoxyCompactList}\small\item\em Constructor for the stopwatch timer. \end{DoxyCompactList}\item 
+void \hyperlink{class_web_analyzer_1_1_util_1_1_stopwatch_timer_acfa101ef1134f8236820a7c9c673342f}{Start} ()
+\begin{DoxyCompactList}\small\item\em Starts the timer in a seperate thread. \end{DoxyCompactList}\item 
+void \hyperlink{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a61fc2ce06941c2681e451916c09d2f1e}{Stop} ()
+\begin{DoxyCompactList}\small\item\em Stops the timer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a22d6806aa912ee0bfcd6e2071c45caac}{\+\_\+interval\+In\+M\+S}
+\begin{DoxyCompactList}\small\item\em The interval in which it should \char`\"{}tick\char`\"{}. \end{DoxyCompactList}\item 
+\hyperlink{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a5670fcf49435ed5d241abd0617c9f607}{Tick} \hyperlink{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a54307d4a1466d1d52cf487d3e9988105}{\+\_\+callback}
+\begin{DoxyCompactList}\small\item\em The callback reference. \end{DoxyCompactList}\item 
+Stopwatch \hyperlink{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a0e339fc5d72427474cd3eedad231f279}{\+\_\+watch}
+\begin{DoxyCompactList}\small\item\em The Stopwatch reference used for the timer. \end{DoxyCompactList}\item 
+long \hyperlink{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a598514e43384c8e3728a6ea751a359d8}{\+\_\+last\+Tick}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_web_analyzer_1_1_util_1_1_timestamp}{Timestamp} of the last tick. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class which is a timer with utilises the stopwatch. This enables it to tick every millisecond. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a1b411ff5e4314d1960220119bdcfee9f}{}\index{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer@{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer}!Stopwatch\+Timer@{Stopwatch\+Timer}}
+\index{Stopwatch\+Timer@{Stopwatch\+Timer}!Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer@{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer}}
+\subsubsection[{Stopwatch\+Timer(int interval\+In\+M\+S, Tick callback)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Util.\+Stopwatch\+Timer.\+Stopwatch\+Timer (
+\begin{DoxyParamCaption}
+\item[{int}]{interval\+In\+M\+S, }
+\item[{{\bf Tick}}]{callback}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a1b411ff5e4314d1960220119bdcfee9f}
+
+
+Constructor for the stopwatch timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interval\+In\+M\+S} & The interval in which the Timer should tick.\\
+\hline
+{\em callback} & The callback which shall be called on each tick.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_web_analyzer_1_1_util_1_1_stopwatch_timer_acfa101ef1134f8236820a7c9c673342f}{}\index{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer@{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer}!Start@{Start}}
+\index{Start@{Start}!Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer@{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer}}
+\subsubsection[{Start()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Util.\+Stopwatch\+Timer.\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_util_1_1_stopwatch_timer_acfa101ef1134f8236820a7c9c673342f}
+
+
+Starts the timer in a seperate thread. 
+
+\hypertarget{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a61fc2ce06941c2681e451916c09d2f1e}{}\index{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer@{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer}!Stop@{Stop}}
+\index{Stop@{Stop}!Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer@{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer}}
+\subsubsection[{Stop()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Util.\+Stopwatch\+Timer.\+Stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a61fc2ce06941c2681e451916c09d2f1e}
+
+
+Stops the timer. 
+
+\hypertarget{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a5670fcf49435ed5d241abd0617c9f607}{}\index{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer@{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer}!Tick@{Tick}}
+\index{Tick@{Tick}!Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer@{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer}}
+\subsubsection[{Tick()}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Util.\+Stopwatch\+Timer.\+Tick (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a5670fcf49435ed5d241abd0617c9f607}
+
+
+The delegate for the callback. 
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a54307d4a1466d1d52cf487d3e9988105}{}\index{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer@{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer}!\+\_\+callback@{\+\_\+callback}}
+\index{\+\_\+callback@{\+\_\+callback}!Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer@{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer}}
+\subsubsection[{\+\_\+callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tick} Web\+Analyzer.\+Util.\+Stopwatch\+Timer.\+\_\+callback\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a54307d4a1466d1d52cf487d3e9988105}
+
+
+The callback reference. 
+
+\hypertarget{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a22d6806aa912ee0bfcd6e2071c45caac}{}\index{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer@{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer}!\+\_\+interval\+In\+M\+S@{\+\_\+interval\+In\+M\+S}}
+\index{\+\_\+interval\+In\+M\+S@{\+\_\+interval\+In\+M\+S}!Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer@{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer}}
+\subsubsection[{\+\_\+interval\+In\+M\+S}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Util.\+Stopwatch\+Timer.\+\_\+interval\+In\+M\+S\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a22d6806aa912ee0bfcd6e2071c45caac}
+
+
+The interval in which it should \char`\"{}tick\char`\"{}. 
+
+\hypertarget{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a598514e43384c8e3728a6ea751a359d8}{}\index{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer@{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer}!\+\_\+last\+Tick@{\+\_\+last\+Tick}}
+\index{\+\_\+last\+Tick@{\+\_\+last\+Tick}!Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer@{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer}}
+\subsubsection[{\+\_\+last\+Tick}]{\setlength{\rightskip}{0pt plus 5cm}long Web\+Analyzer.\+Util.\+Stopwatch\+Timer.\+\_\+last\+Tick\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a598514e43384c8e3728a6ea751a359d8}
+
+
+\hyperlink{class_web_analyzer_1_1_util_1_1_timestamp}{Timestamp} of the last tick. 
+
+\hypertarget{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a0e339fc5d72427474cd3eedad231f279}{}\index{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer@{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer}!\+\_\+watch@{\+\_\+watch}}
+\index{\+\_\+watch@{\+\_\+watch}!Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer@{Web\+Analyzer\+::\+Util\+::\+Stopwatch\+Timer}}
+\subsubsection[{\+\_\+watch}]{\setlength{\rightskip}{0pt plus 5cm}Stopwatch Web\+Analyzer.\+Util.\+Stopwatch\+Timer.\+\_\+watch\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_util_1_1_stopwatch_timer_a0e339fc5d72427474cd3eedad231f279}
+
+
+The Stopwatch reference used for the timer. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+M\+A-\/\+F\+F-\/\+Server/\+M\+A-\/\+F\+F-\/\+Server/\+Util/\hyperlink{_stopwatch_timer_8cs}{Stopwatch\+Timer.\+cs}\end{DoxyCompactItemize}
