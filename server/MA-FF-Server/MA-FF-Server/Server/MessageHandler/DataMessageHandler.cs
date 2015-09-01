@@ -37,7 +37,7 @@ namespace WebAnalyzer.Server.MessageHandler
         {
             InDataMessage msgIn = (InDataMessage)omsgIn;
 
-            Logger.Log("Data Message uniqueid: " + msgIn.UniqueID + " with Type: " + msgIn.Type);
+            //Logger.Log("Data Message uniqueid: " + msgIn.UniqueID + " with Type: " + msgIn.Type);
 
             if (msgIn.UniqueID != null)
             {

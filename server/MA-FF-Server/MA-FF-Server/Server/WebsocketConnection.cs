@@ -25,6 +25,8 @@ namespace WebAnalyzer.Server
 
         private ConcurrentQueue<Message> _messageQueue;
 
+        private Boolean _writing = false;
+
         public WebsocketConnection(WebSocket ws)
         {
             _ws = ws;
@@ -53,6 +55,12 @@ namespace WebAnalyzer.Server
             }
         }
 
+        public Boolean Writing
+        {
+            get { return _writing; }
+            set { _writing = value; }
+        }
+
         public ConcurrentQueue<Message> MessageQueue
         {
             get { return _messageQueue; }
@@ -68,39 +76,33 @@ namespace WebAnalyzer.Server
             //check if messages are too old and remove them
             removeOldMessages();
 
-            if (!this.Established || !this.IsConnected || _messageQueue.Count == 0)
+            if (Writing || !this.Established || !this.IsConnected || _messageQueue.Count == 0)
                 return;
 
-            Logger.Log("Sent Message... current Message Count: " + _messageQueue.Count);
+            //Logger.Log("Sent Message... current Message Count: " + _messageQueue.Count);
 
             //sent first message (later in try catch block)
             Message msg = _messageQueue.ElementAt(0);
+            Writing = true;
 
-            try
+            if (msg is SmallDataMessage)
             {
+                this.Out.OnNext(((SmallDataMessage)msg).ToJson());
+            }
+            else if (msg is DataMessage)
+            {
+                this.Out.OnNext(((DataMessage)msg).ToJson());
+            }
+            else
+            {
+                Logger.Log("Message type unknown!");
+                return;
+            }
 
-                if (msg is SmallDataMessage)
-                {
-                    this.Out.OnNext(((SmallDataMessage)msg).ToJson());
-                }
-                else if (msg is DataMessage)
-                {
-                    this.Out.OnNext(((DataMessage)msg).ToJson());
-                }
-                else
-                {
-                    Logger.Log("Message type unknown!");
-                    return;
-                }
-                
-                Message outMessage;
-                _messageQueue.TryDequeue(out outMessage);
-            }
-            catch (WebSocketException e)
-            {
-                Logger.Log("Tried writing, while there still was a message been written: " + e.Message);
-            }
-            
+            Message outMessage;
+            _messageQueue.TryDequeue(out outMessage);
+
+            Writing = false;
         }
 
         private void removeOldMessages()
