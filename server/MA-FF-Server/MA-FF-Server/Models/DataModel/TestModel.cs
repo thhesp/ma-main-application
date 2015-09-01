@@ -143,6 +143,19 @@ namespace WebAnalyzer.Models.DataModel
 
             statisticsNode.Attributes.Append(visitedWebpagesCount);
 
+            XmlAttribute nrOfGazes = xmlDoc.CreateAttribute("number-of-gazes");
+
+            int sum = 0;
+
+            foreach (WebpageModel page in _visitedPages)
+            {
+                sum += page.Gazes.Count;
+            }
+
+            nrOfGazes.Value = sum.ToString();
+
+            statisticsNode.Attributes.Append(nrOfGazes);
+
             //???
             statisticsNode.AppendChild(CreateExperimentStatistics(xmlDoc));
 

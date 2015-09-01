@@ -129,6 +129,14 @@ namespace WebAnalyzer.Models.DataModel
 
             visited.Value = this.VisitTimestamp;
 
+            webpageNode.Attributes.Append(visited);
+
+            XmlAttribute nrOfGazes = xmlDoc.CreateAttribute("number-of-gazes");
+
+            nrOfGazes.Value = Gazes.Count.ToString();
+
+            webpageNode.Attributes.Append(nrOfGazes);
+
             // create & insert statistics?
 
             webpageNode.AppendChild(CreateWebpageStatistics(xmlDoc));
