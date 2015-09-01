@@ -20,6 +20,7 @@ using System.Security.Cryptography.X509Certificates;
 using WebAnalyzer.Util;
 using WebAnalyzer.Controller;
 using WebAnalyzer.Models.MessageModel;
+using WebAnalyzer.Events;
 
 namespace WebAnalyzer.Server
 {
@@ -35,6 +36,8 @@ namespace WebAnalyzer.Server
         public WebsocketServer(TestController controller)
         {
             _connManager = new ConnectionManager();
+            _connManager.MessageSent += controller.On_MessageSent;
+
             _controller = controller;
             CreateServer();
         }

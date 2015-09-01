@@ -29,13 +29,9 @@ namespace WebAnalyzer.Models.MessageModel
 
         private String _clientSent;
 
-        private String _serverSent;
-
         private String _url;
 
         private String _uniqueId;
-
-        private String _requestTimestamp;
 
         private DOMElementModel _leftElement;
         private DOMElementModel _rightElement;
@@ -63,14 +59,6 @@ namespace WebAnalyzer.Models.MessageModel
             set { _uniqueId = value; }
         }
 
-
-        public String RequestTimestamp
-        {
-            get { return _requestTimestamp; }
-            set { _requestTimestamp = value; }
-        }
-
-
         public String URL
         {
             get { return _url; }
@@ -81,12 +69,6 @@ namespace WebAnalyzer.Models.MessageModel
         {
             get { return _serverReceived; }
             set { _serverReceived = value; }
-        }
-
-        public String ServerSent
-        {
-            get { return _serverSent; }
-            set { _serverSent = value; }
         }
 
         public String ClientReceived

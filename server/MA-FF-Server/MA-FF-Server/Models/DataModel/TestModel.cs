@@ -421,13 +421,17 @@ namespace WebAnalyzer.Models.DataModel
 
         public String PrepareGazeData(String timestamp, double leftX, double leftY, double rightX, double rightY)
         {
+            String callbackTimestamp = Timestamp.GetMillisecondsUnixTimestamp();
+
             GazeModel gaze = new GazeModel(timestamp);
 
-            String receiveTimestamp = Timestamp.GetMillisecondsUnixTimestamp();
+            gaze.DataRequestedTimestamp = callbackTimestamp;
+
+            
 
             // left eye
 
-            EyeTrackingData leftData = new EyeTrackingData(leftX, leftY, receiveTimestamp);
+            EyeTrackingData leftData = new EyeTrackingData(leftX, leftY, callbackTimestamp);
 
             PositionDataModel leftPos = new PositionDataModel();
 
@@ -436,7 +440,7 @@ namespace WebAnalyzer.Models.DataModel
 
             // right eye
 
-            EyeTrackingData rightData = new EyeTrackingData(rightX, rightY, receiveTimestamp);
+            EyeTrackingData rightData = new EyeTrackingData(rightX, rightY, callbackTimestamp);
 
             PositionDataModel rightPos = new PositionDataModel();
 
@@ -479,6 +483,15 @@ namespace WebAnalyzer.Models.DataModel
             _visitedPages.Add(pageModel);
 
             return pageModel;
+        }
+
+        public void MessageSent(String uniqueId, String sentTimestamp)
+        {
+            if (_unassignedPositions.ContainsKey(uniqueId))
+            {
+                _unassignedPositions[uniqueId].ServerSentTimestamp = sentTimestamp;
+            }
+
         }
     }
 }

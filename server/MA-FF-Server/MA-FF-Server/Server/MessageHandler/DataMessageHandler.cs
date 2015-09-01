@@ -65,10 +65,6 @@ namespace WebAnalyzer.Server.MessageHandler
 
                 gazeModel.ServerReceivedTimestamp = msgIn.ServerReceived;
 
-                gazeModel.DataRequestedTimestamp = msgIn.RequestTimestamp;
-
-                gazeModel.ServerSentTimestamp = msgIn.ServerSent;
-
                 gazeModel.ClientSentTimestamp = msgIn.ClientSent;
 
                 gazeModel.ClientReceivedTimestamp = msgIn.ClientReceived;

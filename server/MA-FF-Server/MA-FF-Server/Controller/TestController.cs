@@ -329,5 +329,10 @@ namespace WebAnalyzer.Controller
                 SaveTestrun(this, new SaveTestrunEvent());
             }
         }
+
+        public void On_MessageSent(object sender, MessageSentEvent e)
+        {
+            _test.MessageSent(e.UID, e.SentTimestamp);
+        }
     }
 }

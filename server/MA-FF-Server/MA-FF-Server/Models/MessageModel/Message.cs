@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using System.IO;
 using Newtonsoft.Json.Linq;
 using WebAnalyzer.Models.DataModel;
+using WebAnalyzer.Events;
 
 namespace WebAnalyzer.Models.MessageModel
 {
@@ -172,12 +173,6 @@ namespace WebAnalyzer.Models.MessageModel
                         {
                             case "uniqueid":
                                 msg.UniqueID = value;
-                                break;
-                            case "datarequest":
-                                msg.RequestTimestamp = value;
-                                break;
-                            case "serversent":
-                                msg.ServerSent = value;
                                 break;
                             case "clientreceived":
                                 msg.ClientReceived = value;

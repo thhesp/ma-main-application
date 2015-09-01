@@ -5,11 +5,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebAnalyzer.Events;
 
 namespace WebAnalyzer.Models.MessageModel
 {
     public class DataMessage : Message
     {
+        public event MessageSentEventHandler MessageSent;
 
         /* 
          * 
@@ -25,8 +27,6 @@ namespace WebAnalyzer.Models.MessageModel
 
         private double _rightX;
         private double _rightY;
-
-        private String _requestTimestamp;
 
         public DataMessage()
         {
@@ -48,8 +48,6 @@ namespace WebAnalyzer.Models.MessageModel
             _rightX = rightX;
             _rightY = rightY;
 
-            _requestTimestamp = Util.Timestamp.GetMillisecondsUnixTimestamp();
-
             return this;
         }
 
@@ -58,14 +56,6 @@ namespace WebAnalyzer.Models.MessageModel
             get { return _uniqueId; }
             set { _uniqueId = value; }
         }
-
-
-        public String RequestTimestamp
-        {
-            get { return _requestTimestamp; }
-            set { _requestTimestamp = value; }
-        }
-
 
         public Double LeftX
         {
@@ -108,14 +98,6 @@ namespace WebAnalyzer.Models.MessageModel
             writer.WritePropertyName("uniqueid");
             writer.WriteValue(_uniqueId);
 
-            // "datarequest" : 
-            writer.WritePropertyName("datarequest");
-            writer.WriteValue(_requestTimestamp);
-
-            // "serversent" : 
-            writer.WritePropertyName("serversent");
-            writer.WriteValue(Util.Timestamp.GetMillisecondsUnixTimestamp());
-
             // "left": x,y
             writer.WritePropertyName("left");
 
@@ -152,6 +134,8 @@ namespace WebAnalyzer.Models.MessageModel
 
             // }
             writer.WriteEndObject();
+
+            MessageSent(this, new MessageSentEvent(this.UniqueID));
 
             return sw.ToString();
         }

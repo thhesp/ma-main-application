@@ -15,6 +15,8 @@ namespace WebAnalyzer.Server
 {
     public class ConnectionManager
     {
+        public event MessageSentEventHandler MessageSent;
+
         private Boolean _workMessages = false;
 
         private List<WebsocketConnection> _connections = new List<WebsocketConnection>();
@@ -53,6 +55,8 @@ namespace WebAnalyzer.Server
 
             message.SetMessageData(uniqueId, leftX, leftY, rightX, rightY);
 
+            message.MessageSent += MessageSent;
+
             this.Broadcast(message);
         }
 
@@ -61,6 +65,8 @@ namespace WebAnalyzer.Server
             SmallDataMessage message = new SmallDataMessage(Timestamp.GetMillisecondsUnixTimestamp());
 
             message.SetMessageData(uniqueId, xPos, yPos);
+
+            message.MessageSent += MessageSent;
 
             this.Broadcast(message);
         }

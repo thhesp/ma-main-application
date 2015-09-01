@@ -6,12 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using WebAnalyzer.Events;
+
 namespace WebAnalyzer.Models.MessageModel
 {
     class SmallDataMessage : Message
     {
+        public event MessageSentEventHandler MessageSent;
 
-                /* 
+        /* 
          * 
          * Message Data
          * 
@@ -22,8 +25,6 @@ namespace WebAnalyzer.Models.MessageModel
 
         private double _x;
         private double _y;
-
-        private String _requestTimestamp;
 
         public SmallDataMessage(String _timestamp) : base(_timestamp)
         {
@@ -36,8 +37,6 @@ namespace WebAnalyzer.Models.MessageModel
             _x = x;
             _y = y;
 
-            _requestTimestamp = Util.Timestamp.GetMillisecondsUnixTimestamp();
-
             return this;
         }
 
@@ -45,13 +44,6 @@ namespace WebAnalyzer.Models.MessageModel
         {
             get { return _uniqueId; }
             set { _uniqueId = value; }
-        }
-
-
-        public String RequestTimestamp
-        {
-            get { return _requestTimestamp; }
-            set { _requestTimestamp = value; }
         }
 
         public Double X
@@ -82,15 +74,6 @@ namespace WebAnalyzer.Models.MessageModel
             writer.WritePropertyName("uniqueid");
             writer.WriteValue(_uniqueId);
 
-            // "datarequest" : 
-            writer.WritePropertyName("datarequest");
-            writer.WriteValue(_requestTimestamp);
-
-            // "serversent" : 
-            writer.WritePropertyName("serversent");
-            writer.WriteValue(Util.Timestamp.GetMillisecondsUnixTimestamp());
-
-
             // "x" : 
             writer.WritePropertyName("x");
             writer.WriteValue(_x);
@@ -102,6 +85,8 @@ namespace WebAnalyzer.Models.MessageModel
 
             // }
             writer.WriteEndObject();
+
+            MessageSent(this, new MessageSentEvent(this.UniqueID));
 
             return sw.ToString();
         }

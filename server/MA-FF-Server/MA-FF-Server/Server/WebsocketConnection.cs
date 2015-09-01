@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using vtortola.WebSockets;
 using WebAnalyzer.Models.MessageModel;
 using WebAnalyzer.Util;
+using WebAnalyzer.Events;
 
 namespace WebAnalyzer.Server
 {
