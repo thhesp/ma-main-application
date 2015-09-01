@@ -145,6 +145,12 @@ namespace WebAnalyzer.Models.MessageModel
 
                         switch (property)
                         {
+                            case "clientreceived":
+                                msg.ClientReceived = value.ToString();
+                                break;
+                            case "clientsent":
+                                msg.ClientSent = value.ToString();
+                                break;
                             case "top":
                                 leftElement.Top = value;
                                 break;
@@ -173,12 +179,6 @@ namespace WebAnalyzer.Models.MessageModel
                         {
                             case "uniqueid":
                                 msg.UniqueID = value;
-                                break;
-                            case "clientreceived":
-                                msg.ClientReceived = value;
-                                break;
-                            case "clientsent":
-                                msg.ClientSent = value;
                                 break;
                             case "url":
                                 msg.URL = value;
