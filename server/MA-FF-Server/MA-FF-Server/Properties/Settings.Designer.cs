@@ -253,5 +253,29 @@ namespace WebAnalyzer.Properties {
                 this["MouseTrackingInterval"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1000")]
+        public int TestrunSaveCheckIntervall {
+            get {
+                return ((int)(this["TestrunSaveCheckIntervall"]));
+            }
+            set {
+                this["TestrunSaveCheckIntervall"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("500")]
+        public int TestrunDataWaitDuration {
+            get {
+                return ((int)(this["TestrunDataWaitDuration"]));
+            }
+            set {
+                this["TestrunDataWaitDuration"] = value;
+            }
+        }
     }
 }

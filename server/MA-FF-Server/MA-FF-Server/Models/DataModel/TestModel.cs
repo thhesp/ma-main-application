@@ -13,7 +13,6 @@ namespace WebAnalyzer.Models.DataModel
 {
     public class TestModel
     {
-
         private String _started;
 
         private String _lastPage;
@@ -22,6 +21,8 @@ namespace WebAnalyzer.Models.DataModel
         private List<WebpageModel> _visitedPages = new List<WebpageModel>();
 
         private Dictionary<String, GazeModel> _unassignedPositions;
+
+        private String _lastGazeActionTimestamp = "";
         
 
         public TestModel()
@@ -325,6 +326,22 @@ namespace WebAnalyzer.Models.DataModel
 
         #endregion
 
+        public Boolean CheckForSave(){
+            if(_unassignedPositions.Count == 0){
+                return true;
+            }
+
+            //duration since last gaze was assigned/ disposed
+            long duration = long.Parse(Util.Timestamp.GetMillisecondsUnixTimestamp()) - long.Parse(_lastGazeActionTimestamp);
+
+            if (duration >= Properties.Settings.Default.TestrunDataWaitDuration)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         public GazeModel GetGazeModel(String uniqueId)
         {
             if (_unassignedPositions.ContainsKey(uniqueId))
@@ -348,6 +365,8 @@ namespace WebAnalyzer.Models.DataModel
 
             _unassignedPositions.Remove(uniqueId);
 
+            _lastGazeActionTimestamp = Util.Timestamp.GetMillisecondsUnixTimestamp();
+
             return true;
         }
 
@@ -362,6 +381,8 @@ namespace WebAnalyzer.Models.DataModel
 
              _unassignedPositions.Remove(gazeModel.UniqueId);
 
+            _lastGazeActionTimestamp = Util.Timestamp.GetMillisecondsUnixTimestamp();
+
             return true;
         }
 
@@ -374,6 +395,8 @@ namespace WebAnalyzer.Models.DataModel
 
             _unassignedPositions.Remove(uniqueId);
 
+            _lastGazeActionTimestamp = Util.Timestamp.GetMillisecondsUnixTimestamp();
+
             return true;
         }
 
@@ -382,6 +405,9 @@ namespace WebAnalyzer.Models.DataModel
             if (_unassignedPositions.ContainsKey(gazeModel.UniqueId))
             {
                 _unassignedPositions.Remove(gazeModel.UniqueId);
+
+                _lastGazeActionTimestamp = Util.Timestamp.GetMillisecondsUnixTimestamp();
+
                 return true;
             }
 

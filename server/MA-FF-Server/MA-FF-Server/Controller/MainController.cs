@@ -33,6 +33,7 @@ namespace WebAnalyzer.Controller
         public void Start()
         {
             _testController = new TestController();
+            _testController.SaveTestrun += On_SaveTestrun;
 
             ShowMainUI();
         }
@@ -332,12 +333,6 @@ namespace WebAnalyzer.Controller
         {
             Logger.Log("Stop Test");
             _testController.StopTest();
-            if (_testController.DataCollected
-                && _currentExperiment != null 
-                && _currentParticipant != null)
-            {
-                ExportController.SaveExperimentTestRun(_currentExperiment, _currentParticipant, _testController.Test);
-            }
         }
 
         private void On_EditApplicationSettings(object source, EditApplicationSettingsEvent e)
@@ -361,6 +356,17 @@ namespace WebAnalyzer.Controller
         {
             Logger.Log("Select Participant....");
             _currentParticipant = _currentExperiment.GetParticipantByUID(e.UID);
+        }
+
+        private void On_SaveTestrun(object source, SaveTestrunEvent e)
+        {
+            if (_testController.DataCollected
+                    && _currentExperiment != null
+                    && _currentParticipant != null)
+            {
+                Logger.Log("Saving data...");
+                ExportController.SaveExperimentTestRun(_currentExperiment, _currentParticipant, _testController.Test);
+            }
         }
 
     }

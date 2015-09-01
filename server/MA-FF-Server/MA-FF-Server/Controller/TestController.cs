@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 using WebAnalyzer.Util;
 using WebAnalyzer.Models.DataModel;
@@ -18,6 +19,8 @@ namespace WebAnalyzer.Controller
     class TestController
     {
 
+        public event SaveTestrunEventHandler SaveTestrun;
+
         private TestModel _test;
         private EyeTrackingModel _etModel;
 
@@ -31,11 +34,21 @@ namespace WebAnalyzer.Controller
         private Boolean _running;
 
         private Boolean _dataCollected = false;
+        private System.Timers.Timer saveTimer;
 
         public TestController()
         {
             _test = new TestModel();
             PrepareServices();
+            CreateSaveTimer();
+        }
+
+        private void CreateSaveTimer()
+        {
+            saveTimer = new System.Timers.Timer();
+            saveTimer.Enabled = true;
+            saveTimer.Interval = Properties.Settings.Default.TestrunSaveCheckIntervall;
+            saveTimer.Elapsed += new ElapsedEventHandler(CheckForSave);
         }
 
         ~TestController()
@@ -243,6 +256,9 @@ namespace WebAnalyzer.Controller
                     _etModel.stopTracking();
                 }
             }
+
+            //start timer to check if saving is possible
+            saveTimer.Start();
         }
 
         private void On_PrepareGazeData(object source, PrepareGazeDataEvent e)
@@ -303,6 +319,15 @@ namespace WebAnalyzer.Controller
         public GazeModel GetGazeModel(String uniqueId)
         {
             return _test.GetGazeModel(uniqueId);
+        }
+
+        public void CheckForSave(object sender, ElapsedEventArgs e)
+        {
+            if (_test.CheckForSave())
+            {
+                saveTimer.Stop();
+                SaveTestrun(this, new SaveTestrunEvent());
+            }
         }
     }
 }
