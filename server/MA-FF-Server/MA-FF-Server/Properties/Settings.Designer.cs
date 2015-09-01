@@ -277,5 +277,17 @@ namespace WebAnalyzer.Properties {
                 this["TestrunDataWaitDuration"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        public int DataTimeout {
+            get {
+                return ((int)(this["DataTimeout"]));
+            }
+            set {
+                this["DataTimeout"] = value;
+            }
+        }
     }
 }

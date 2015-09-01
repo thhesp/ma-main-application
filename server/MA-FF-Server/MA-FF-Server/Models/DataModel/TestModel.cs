@@ -331,6 +331,11 @@ namespace WebAnalyzer.Models.DataModel
                 return true;
             }
 
+            if (_lastGazeActionTimestamp == "")
+            {
+                return true;
+            }
+
             //duration since last gaze was assigned/ disposed
             long duration = long.Parse(Util.Timestamp.GetMillisecondsUnixTimestamp()) - long.Parse(_lastGazeActionTimestamp);
 

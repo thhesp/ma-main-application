@@ -102,6 +102,7 @@ namespace WebAnalyzer.Server
             lock (_connections)
             {
                 _connections.Add(e.Connection);
+                e.Connection.Active = true;
             }
 
             Logger.Log("Current connection count: " + _connections.Count);

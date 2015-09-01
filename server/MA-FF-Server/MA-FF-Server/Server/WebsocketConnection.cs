@@ -14,9 +14,6 @@ namespace WebAnalyzer.Server
 {
     public class WebsocketConnection
     {
-
-        private static int TIMEOUT = 500;
-
         public IObservable<Message> In { get; set; }
         public IObserver<String> Out { get; set; }
 
@@ -25,6 +22,8 @@ namespace WebAnalyzer.Server
         private Boolean _established = false;
 
         private ConcurrentQueue<Message> _messageQueue;
+
+        private Boolean _active = false;
 
         private Boolean _writing = false;
 
@@ -62,6 +61,12 @@ namespace WebAnalyzer.Server
             set { _writing = value; }
         }
 
+        public Boolean Active
+        {
+            get { return _active; }
+            set { _active = value; }
+        }
+
         public ConcurrentQueue<Message> MessageQueue
         {
             get { return _messageQueue; }
@@ -77,7 +82,7 @@ namespace WebAnalyzer.Server
             //check if messages are too old and remove them
             removeOldMessages();
 
-            if (Writing || !this.Established || !this.IsConnected || _messageQueue.Count == 0)
+            if (Writing || !Active || !this.Established || !this.IsConnected || _messageQueue.Count == 0)
                 return;
 
             //Logger.Log("Sent Message... current Message Count: " + _messageQueue.Count);
@@ -113,7 +118,7 @@ namespace WebAnalyzer.Server
 
             Message msg = _messageQueue.ElementAt(0);
             String currentTimestamp = Timestamp.GetMillisecondsUnixTimestamp();
-            while ((long.Parse(currentTimestamp) - long.Parse(msg.Timestamp)) > WebsocketConnection.TIMEOUT)
+            while ((long.Parse(currentTimestamp) - long.Parse(msg.Timestamp)) > Properties.Settings.Default.DataTimeout)
             {
                 // remove first element
                 Message outMessage;

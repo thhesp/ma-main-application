@@ -52,6 +52,9 @@ namespace WebAnalyzer.Server
             published.Where(msgIn => msgIn != null && msgIn is ConnectionMessage)
                .Subscribe(connectMsg);
 
+            published.Where(msgIn => msgIn != null && msgIn is ActivationMessage)
+                 .Subscribe(new ActivationMessageHandler(connection));
+
             // data
             published.Where(msgIn => msgIn != null && msgIn is InDataMessage)
                .Subscribe(new DataMessageHandler(_controller, connection));

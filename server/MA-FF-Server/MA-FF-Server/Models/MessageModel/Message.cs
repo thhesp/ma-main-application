@@ -58,6 +58,10 @@ namespace WebAnalyzer.Models.MessageModel
                                 return new ConnectionMessage(ConnectionMessage.CONNECTION_MESSAGE_TYPE.REQUEST);
                             case "connectComplete":
                                 return new ConnectionMessage(ConnectionMessage.CONNECTION_MESSAGE_TYPE.COMPLETE);
+                            case "activate":
+                                return new ActivationMessage(ActivationMessage.ACTIVATION_MESSAGE_TYPE.ACTIVATE);
+                            case "deactivate":
+                                return new ActivationMessage(ActivationMessage.ACTIVATION_MESSAGE_TYPE.DEACTIVATE);
                             case "data":
                                 return DataMessageFromJson(reader);
                             case "error":
