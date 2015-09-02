@@ -18,14 +18,6 @@ namespace WebAnalyzer.Server
         ConnectionManager _connectionManager;
         TestController _controller;
 
-        string[] _commands = {
-            "connectRequest",
-            "connectComplete",
-            "data",
-            "event",
-            "error"
-        };
-
         public WebsocketConnectionsObserver(TestController controller, ConnectionManager connectionManager)
         {
             _connectionManager = connectionManager;
@@ -67,11 +59,6 @@ namespace WebAnalyzer.Server
             //event
            published.Where(msgIn => msgIn.command != null && msgIn.command == "event")
               .Subscribe(new DataMessageHandler(_controller, connection));
-            
-             
-            // fallover ==> echo
-           /*published.Where(msgIn => msgIn.command == null || Array.IndexOf(_commands, msgIn.command) == -1)
-               .Subscribe(new EchoMessageHandler(_connectionManager, connection));
             */
         }
     }

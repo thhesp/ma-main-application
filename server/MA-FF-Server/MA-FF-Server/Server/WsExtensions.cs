@@ -24,14 +24,14 @@ namespace WebAnalyzer.Server
             {
                 using (var sr = new StreamReader(message, Encoding.UTF8))
                 {
-
                     return Message.FromJson(new JsonTextReader(sr));
-
-                    //return (dynamic)JObject.Load(new JsonTextReader(sr));
                 }
             }
             else
+            {
                 return null;
+            }
+                
 
         }
 
