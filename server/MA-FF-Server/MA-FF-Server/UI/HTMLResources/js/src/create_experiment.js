@@ -19,25 +19,26 @@ $('#import-values').change(function () {
 });
 
 $('#import-experiment-button').click(function () {
-    var path = expWizard.selectExperimentToImportData();
-
-    $('#import-experiment').text(path);
-    // save path as hidden and use it for the import and only display the experiment name?
+    expWizard.selectExperimentToImportData();
 });
+
+function updateImportExperiment(path) {
+    console.log("Import path: " + path);
+    $('#import-experiment').text(path);
+}
 
 $('#create-experiment-button').click(function () {
     console.log('create experiment...');
     var name = $('#experiment-name').val();
 
     if ($('#import-values').prop('checked')) {
-        var path = $('#import-experiment').text();
         var importSettings = $('#import-settings').prop('checked');
         var importParticipants = $('#import-participants').prop('checked');
 
         console.log("importSettings: ", importSettings);
         console.log("importParticipants: ", importParticipants);
 
-        expWizard.createExperimentWithImport(name, path, importSettings, importParticipants);
+        expWizard.createExperimentWithImport(name, importSettings, importParticipants);
     } else {
         expWizard.createExperiment(name);
     }

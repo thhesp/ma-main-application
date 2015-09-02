@@ -21,6 +21,8 @@ namespace WebAnalyzer.UI
 {
     public partial class SelectExperimentForm : Form
     {
+        public event SelectExperimentEventHandler SelectExperiment;
+
         private ChromiumWebBrowser myBrowser = null;
 
         private String _path = "";
@@ -44,6 +46,8 @@ namespace WebAnalyzer.UI
             myBrowser = new ChromiumWebBrowser(page);
 
             SelectExperimentControl control = new SelectExperimentControl(this);
+
+            control.SelectExperiment += SelectExperiment;
 
             control.Browser = myBrowser;
 

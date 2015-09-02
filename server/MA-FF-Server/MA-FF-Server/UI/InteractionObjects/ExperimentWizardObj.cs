@@ -17,10 +17,16 @@ namespace WebAnalyzer.UI.InteractionObjects
     public class ExperimentWizardObj : BaseInteractionObject
     {
 
+        public enum SELECT_ACTION { NONE = -1, FOR_LOADING = 0, FOR_IMPORTING = 1 };
+
         public event CreateExperimentEventHandler CreateExperiment;
         public event LoadExperimentEventHandler LoadExperiment;
 
-        public ExperimentWizard _form;
+        private ExperimentWizard _form;
+
+        private String _importPath;
+
+        private SELECT_ACTION _currentAction = SELECT_ACTION.NONE;
 
         public ExperimentWizardObj(ExperimentWizard form)
         {
@@ -45,80 +51,70 @@ namespace WebAnalyzer.UI.InteractionObjects
             CreateExperiment(this, new CreateExperimentEvent(name));
         }
 
-        public void createExperimentWithImport(String name, String importExp, Boolean importSettings, Boolean importParticipants)
+        public void createExperimentWithImport(String name, Boolean importSettings, Boolean importParticipants)
         {
             Logger.Log("Create experiment with name: " + name);
 
-            Logger.Log("Import from: " + importExp);
+            Logger.Log("Import from: " + _importPath);
 
             CreateExperimentEvent eventData = new CreateExperimentEvent(name);
 
-            eventData.SetImportData(importExp, importParticipants, importSettings);
+            eventData.SetImportData(_importPath, importParticipants, importSettings);
 
             CreateExperiment(this, eventData);
         }
 
-        public String selectExperimentToImportData()
+        public void selectExperimentToImportData()
         {
-            String path = SelectExperimentDialog();
+            _currentAction = SELECT_ACTION.FOR_IMPORTING;
 
-            return path;
+            SelectExperimentDialog();
         }
 
         public void selectExperimentToLoad()
         {
-            String path = SelectExperimentDialog();
-            Logger.Log(path);
-            if (path != null)
-            {
-                LoadExperiment(this, new LoadExperimentEvent(path));
-            }
-
+            _currentAction = SELECT_ACTION.FOR_LOADING;
+            SelectExperimentDialog();
         }
 
-        private String SelectExperimentDialog()
+        private void SelectExperimentDialog()
         {
-            SelectExperimentForm selectExperiment = new SelectExperimentForm();
-
-            if (selectExperiment.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            _form.BeginInvoke((Action)delegate
             {
-                //refresh aois
+                SelectExperimentForm selectExperiment = new SelectExperimentForm();
 
-                return selectExperiment.Path;
-            }
+                selectExperiment.SelectExperiment += On_SelectExperiment;
 
-            return "";
-        }
-
-        private String SelectFolderDialog()
-        {
-            // done in a new thread (kinda is a hack) because of the STAThread problem.
-            //http://stackoverflow.com/questions/6860153/exception-when-using-folderbrowserdialog
-            string selectedPath = "";
-            var t = new Thread((ThreadStart)(() =>
-            {
-                FolderBrowserDialog fbd = new FolderBrowserDialog();
-                Logger.Log("Default path: " + Properties.Settings.Default.Datalocation);
-                fbd.RootFolder = System.Environment.SpecialFolder.MyDocuments;
-                fbd.SelectedPath = Properties.Settings.Default.Datalocation;
-
-                Logger.Log("SelectedPath: " + fbd.SelectedPath);
-
-                fbd.ShowNewFolderButton = false;
-                if (fbd.ShowDialog() == DialogResult.Cancel)
+                if (selectExperiment.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    selectedPath = null;
-                    return;
+                    //refresh aois
                 }
+            });
+        }
 
+        private void On_SelectExperiment(object sender, SelectExperimentEvent e)
+        {
+            if (_currentAction == SELECT_ACTION.FOR_IMPORTING)
+            {
+                Logger.Log(e.Path);
+                if (e.Path != null)
+                {
+                    _importPath = e.Path;
 
-                selectedPath = fbd.SelectedPath;
-            }));
+                    String name = e.Path.Remove(0, Properties.Settings.Default.Datalocation.Length);
 
-            t.SetApartmentState(ApartmentState.STA);
-            t.Start();
-            t.Join();
-            return selectedPath;
+                    EvaluteJavaScript("updateImportExperiment('" + name + "');");
+                }
+            }
+            else if (_currentAction == SELECT_ACTION.FOR_LOADING)
+            {
+                Logger.Log(e.Path);
+                if (e.Path != null)
+                {
+                    LoadExperiment(this, new LoadExperimentEvent(e.Path));
+                }
+            }
+
         }
     }
 }

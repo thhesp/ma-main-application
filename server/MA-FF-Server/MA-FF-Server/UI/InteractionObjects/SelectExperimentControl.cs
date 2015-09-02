@@ -17,6 +17,8 @@ namespace WebAnalyzer.UI.InteractionObjects
     public class SelectExperimentControl : BaseInteractionObject
     {
 
+        public event SelectExperimentEventHandler SelectExperiment;
+
         private SelectExperimentForm _form;
 
         private List<String> _experimentNames = new List<String>();
@@ -50,7 +52,7 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             Logger.Log("Select experiment: " + path);
 
-            _form.Path = path;
+            SelectExperiment(this, new SelectExperimentEvent(path));
 
             _form.Invoke((MethodInvoker)delegate
             {
