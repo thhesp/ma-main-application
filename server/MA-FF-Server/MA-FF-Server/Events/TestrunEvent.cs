@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebAnalyzer.UI.InteractionObjects;
 
 namespace WebAnalyzer.Events
 {
-    public delegate void TestrunEventHandler(object sender, TestrunEvent e);
+    public delegate void TestrunEventHandler(BaseInteractionObject sender, TestrunEvent e);
 
     public class TestrunEvent : EventArgs
     {

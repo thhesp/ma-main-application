@@ -31,3 +31,11 @@ $('#select-participant-button').click(function () {
         control.selectParticipant();
     }
 });
+
+function showSaveIndicator() {
+    jQuery('#saving-wrapper').show();
+};
+
+function hideSaveIndicator() {
+    jQuery('#saving-wrapper').hide();
+};

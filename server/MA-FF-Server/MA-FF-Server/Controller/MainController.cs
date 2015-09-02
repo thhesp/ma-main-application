@@ -30,6 +30,9 @@ namespace WebAnalyzer.Controller
         private ExperimentWizard experimentWizard;
         private ExperimentParticipant _currentParticipant;
 
+
+        private TestrunControl _testrunControlUI;
+
         public void Start()
         {
             _testController = new TestController();
@@ -291,8 +294,13 @@ namespace WebAnalyzer.Controller
             }
         }
 
-        private void On_TestrunEvent(object source, TestrunEvent e)
+        private void On_TestrunEvent(BaseInteractionObject source, TestrunEvent e)
         {
+            if(source is TestrunControl){
+                _testrunControlUI = (TestrunControl) source;
+            }
+                
+
             switch (e.Type)
             {
                 case TestrunEvent.EVENT_TYPE.Create:
@@ -333,6 +341,7 @@ namespace WebAnalyzer.Controller
         {
             Logger.Log("Stop Test");
             _testController.StopTest();
+            _testrunControlUI.ShowSaveIndicator();
         }
 
         private void On_EditApplicationSettings(object source, EditApplicationSettingsEvent e)
@@ -366,6 +375,7 @@ namespace WebAnalyzer.Controller
             {
                 Logger.Log("Saving data...");
                 ExportController.SaveExperimentTestRun(_currentExperiment, _currentParticipant, _testController.Test);
+                _testrunControlUI.HideSaveIndicator();
             }
         }
 

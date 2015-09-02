@@ -103,5 +103,18 @@ namespace WebAnalyzer.UI.InteractionObjects
 
             _form.ReloadPage();
         }
+
+        public void ShowSaveIndicator()
+        {
+            Logger.Log("show save indicator");
+            EvaluteJavaScript("showSaveIndicator();");
+
+        }
+
+        public void HideSaveIndicator()
+        {
+            Logger.Log("hide save indicator");
+            EvaluteJavaScript("hideSaveIndicator();");
+        }
     }
 }
