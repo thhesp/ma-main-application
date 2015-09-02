@@ -87,7 +87,7 @@ namespace WebAnalyzer.Models.AnalysisModel
 
         #region XMLFunctions
 
-        public XmlNode ToXML(XmlDocument xmlDoc)
+        public XmlNode ToXML(XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode fixationNode = xmlDoc.CreateElement("fixation");
 
@@ -121,20 +121,22 @@ namespace WebAnalyzer.Models.AnalysisModel
 
             fixationNode.Attributes.Append(endY);
 
-
-            XmlNode gazesNode = xmlDoc.CreateElement("related-gazes");
-
-            foreach (GazeModel gaze in _relatedGazes)
+            if (includeSingleGazeData)
             {
-                gazesNode.AppendChild(gaze.ToXML(xmlDoc));
-            }
+                XmlNode gazesNode = xmlDoc.CreateElement("related-gazes");
 
-            fixationNode.AppendChild(gazesNode);
+                foreach (GazeModel gaze in _relatedGazes)
+                {
+                    gazesNode.AppendChild(gaze.ToXML(xmlDoc));
+                }
+
+                fixationNode.AppendChild(gazesNode);
+            }
 
             return fixationNode;
         }
 
-        public XmlNode ToAOIXML(ExperimentSettings settings, WebpageModel page, String eye, XmlDocument xmlDoc)
+        public XmlNode ToAOIXML(ExperimentSettings settings, WebpageModel page, String eye, XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
 
             String aoi = ""; ;
@@ -188,15 +190,17 @@ namespace WebAnalyzer.Models.AnalysisModel
 
             aoiNode.Attributes.Append(endY);
 
-
-            XmlNode gazesNode = xmlDoc.CreateElement("related-gazes");
-
-            foreach (GazeModel gaze in _relatedGazes)
+            if (includeSingleGazeData)
             {
-                gazesNode.AppendChild(gaze.ToXML(xmlDoc));
-            }
+                XmlNode gazesNode = xmlDoc.CreateElement("related-gazes");
 
-            aoiNode.AppendChild(gazesNode);
+                foreach (GazeModel gaze in _relatedGazes)
+                {
+                    gazesNode.AppendChild(gaze.ToXML(xmlDoc));
+                }
+
+                aoiNode.AppendChild(gazesNode);
+            }
 
             return aoiNode;
         }

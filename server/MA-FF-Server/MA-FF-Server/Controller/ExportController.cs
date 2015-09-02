@@ -162,7 +162,7 @@ namespace WebAnalyzer.Controller
             FileIO.CheckPath(dir);
             XmlDocument xmlDoc = new XmlDocument();
 
-            xmlDoc.AppendChild(testrun.GenerateFixationXML(xmlDoc));
+            xmlDoc.AppendChild(testrun.GenerateFixationXML(xmlDoc, false));
 
             xmlDoc.Save(dir + "\\" + timestamp + ".xml");
             
@@ -185,7 +185,7 @@ namespace WebAnalyzer.Controller
             FileIO.CheckPath(dir);
             XmlDocument xmlDoc = new XmlDocument();
 
-            xmlDoc.AppendChild(testrun.GenerateStatisticsXML(xmlDoc));
+            xmlDoc.AppendChild(testrun.GenerateStatisticsXML(xmlDoc, false));
 
             xmlDoc.Save(dir + "\\" + timestamp + ".xml");
 
@@ -208,7 +208,7 @@ namespace WebAnalyzer.Controller
             FileIO.CheckPath(dir);
             XmlDocument xmlDoc = new XmlDocument();
 
-            xmlDoc.AppendChild(testrun.GenerateAOIXML(experiment.Settings, xmlDoc));
+            xmlDoc.AppendChild(testrun.GenerateAOIXML(experiment.Settings, xmlDoc, false));
 
             xmlDoc.Save(dir + "\\" + timestamp + ".xml");
 

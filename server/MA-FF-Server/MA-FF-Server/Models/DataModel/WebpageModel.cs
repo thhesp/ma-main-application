@@ -115,7 +115,7 @@ namespace WebAnalyzer.Models.DataModel
             return page;
         }
 
-        public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc)
+        public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode webpageNode = xmlDoc.CreateElement("webpage");
 
@@ -141,15 +141,17 @@ namespace WebAnalyzer.Models.DataModel
 
             webpageNode.AppendChild(CreateWebpageStatistics(xmlDoc));
 
-            XmlNode gazesNode = xmlDoc.CreateElement("gazes");
-
-            foreach (GazeModel data in _positionData)
+            if (includeSingleGazeData)
             {
-                gazesNode.AppendChild(data.GenerateStatisticsXML(xmlDoc));
+                XmlNode gazesNode = xmlDoc.CreateElement("gazes");
+
+                foreach (GazeModel data in _positionData)
+                {
+                    gazesNode.AppendChild(data.GenerateStatisticsXML(xmlDoc));
+                }
+
+                webpageNode.AppendChild(gazesNode);
             }
-
-            webpageNode.AppendChild(gazesNode);
-
 
             return webpageNode;
         }
@@ -210,7 +212,7 @@ namespace WebAnalyzer.Models.DataModel
 
         }
 
-        public XmlNode GenerateFixationXML(XmlDocument xmlDoc)
+        public XmlNode GenerateFixationXML(XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             ExtractFixations();
 
@@ -243,7 +245,7 @@ namespace WebAnalyzer.Models.DataModel
 
             foreach (FixationModel data in _leftFixationData)
             {
-                leftEyeNode.AppendChild(data.ToXML(xmlDoc));
+                leftEyeNode.AppendChild(data.ToXML(xmlDoc, includeSingleGazeData));
             }
 
             fixationsNode.AppendChild(leftEyeNode);
@@ -258,7 +260,7 @@ namespace WebAnalyzer.Models.DataModel
 
             foreach (FixationModel data in _rightFixationData)
             {
-                rightEyeNode.AppendChild(data.ToXML(xmlDoc));
+                rightEyeNode.AppendChild(data.ToXML(xmlDoc, includeSingleGazeData));
             }
 
             fixationsNode.AppendChild(rightEyeNode);
@@ -269,7 +271,7 @@ namespace WebAnalyzer.Models.DataModel
             return webpageNode;
         }
 
-        public XmlNode GenerateAOIXML(ExperimentSettings settings, XmlDocument xmlDoc)
+        public XmlNode GenerateAOIXML(ExperimentSettings settings, XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             ExtractFixations();
 
@@ -302,7 +304,7 @@ namespace WebAnalyzer.Models.DataModel
 
             foreach (FixationModel data in _leftFixationData)
             {
-                XmlNode node = data.ToAOIXML(settings, this, "left", xmlDoc);
+                XmlNode node = data.ToAOIXML(settings, this, "left", xmlDoc, includeSingleGazeData);
 
                 if (node != null)
                 {
@@ -323,7 +325,7 @@ namespace WebAnalyzer.Models.DataModel
             foreach (FixationModel data in _rightFixationData)
             {
 
-                XmlNode node = data.ToAOIXML(settings, this, "right", xmlDoc);
+                XmlNode node = data.ToAOIXML(settings, this, "right", xmlDoc, includeSingleGazeData);
 
                 if (node != null)
                 {

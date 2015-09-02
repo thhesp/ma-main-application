@@ -128,6 +128,11 @@ namespace WebAnalyzer.Models.DataModel
 
         public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc)
         {
+            return GenerateStatisticsXML(xmlDoc, true);
+        }
+
+        public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc, Boolean includeSingleGazeData)
+        {
             XmlNode statisticsNode = xmlDoc.CreateElement("statistics");
 
             XmlAttribute started = xmlDoc.CreateAttribute("started");
@@ -164,7 +169,7 @@ namespace WebAnalyzer.Models.DataModel
 
             foreach (WebpageModel page in _visitedPages)
             {
-                webpagesNode.AppendChild(page.GenerateStatisticsXML(xmlDoc));
+                webpagesNode.AppendChild(page.GenerateStatisticsXML(xmlDoc, includeSingleGazeData));
             }
 
             statisticsNode.AppendChild(webpagesNode);
@@ -269,6 +274,11 @@ namespace WebAnalyzer.Models.DataModel
 
         public XmlNode GenerateFixationXML(XmlDocument xmlDoc)
         {
+            return GenerateFixationXML(xmlDoc, true);
+        }
+
+        public XmlNode GenerateFixationXML(XmlDocument xmlDoc, Boolean includeSingleGazeData)
+        {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
 
 
@@ -288,7 +298,7 @@ namespace WebAnalyzer.Models.DataModel
 
             foreach (WebpageModel page in _visitedPages)
             {
-                webpagesNode.AppendChild(page.GenerateFixationXML(xmlDoc));
+                webpagesNode.AppendChild(page.GenerateFixationXML(xmlDoc, includeSingleGazeData));
             }
 
             experimentNode.AppendChild(webpagesNode);
@@ -297,6 +307,11 @@ namespace WebAnalyzer.Models.DataModel
         }
 
         public XmlNode GenerateAOIXML(ExperimentSettings settings, XmlDocument xmlDoc)
+        {
+            return GenerateAOIXML(settings, xmlDoc, true);
+        }
+
+        public XmlNode GenerateAOIXML(ExperimentSettings settings, XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
 
@@ -316,7 +331,7 @@ namespace WebAnalyzer.Models.DataModel
 
             foreach (WebpageModel page in _visitedPages)
             {
-                webpagesNode.AppendChild(page.GenerateAOIXML(settings, xmlDoc));
+                webpagesNode.AppendChild(page.GenerateAOIXML(settings, xmlDoc, includeSingleGazeData));
             }
 
             experimentNode.AppendChild(webpagesNode);
