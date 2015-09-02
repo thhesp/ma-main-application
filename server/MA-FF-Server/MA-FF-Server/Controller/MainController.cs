@@ -150,7 +150,7 @@ namespace WebAnalyzer.Controller
         {
             _mainUI.SetExperimentData(experiment);
             SetConnectionStati();
-            _mainUI.RefreshData();
+            _mainUI.ReloadPage();
         }
 
         private void RefreshMainUI()

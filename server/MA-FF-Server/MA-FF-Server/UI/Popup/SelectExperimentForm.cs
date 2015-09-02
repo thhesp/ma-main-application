@@ -15,41 +15,43 @@ using System.Windows.Forms;
 using WebAnalyzer.UI.InteractionObjects;
 using WebAnalyzer.Util;
 using WebAnalyzer.Events;
+using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.UI
 {
-    public partial class ExperimentWizard : Form
+    public partial class SelectExperimentForm : Form
     {
         private ChromiumWebBrowser myBrowser = null;
 
-        public event CreateExperimentEventHandler CreateExperiment;
-        public event LoadExperimentEventHandler LoadExperiment;
+        private String _path = "";
 
-
-        public ExperimentWizard()
+        public SelectExperimentForm()
         {
             InitializeComponent();
+        }
+
+        public String Path
+        {
+            get { return _path; }
+            set { _path = value; }
         }
 
         private void Browser_Load(object sender, EventArgs e)
         {
             //Cef.Initialize();
 
-            string page = string.Format("{0}UI/HTMLResources/html/popup/experiment_wizard/index.html", Utilities.GetAppLocation());
+            string page = string.Format("{0}UI/HTMLResources/html/popup/experiment_wizard/select_experiment.html", Utilities.GetAppLocation());
             myBrowser = new ChromiumWebBrowser(page);
 
-            ExperimentWizardObj expWizard = new ExperimentWizardObj(this);
-            expWizard.Browser = myBrowser;
+            SelectExperimentControl control = new SelectExperimentControl(this);
 
-            expWizard.CreateExperiment += this.CreateExperiment;
-            expWizard.LoadExperiment += this.LoadExperiment;
+            control.Browser = myBrowser;
 
-            // Register the JavaScriptInteractionObj class with JS
-            myBrowser.RegisterJsObject("expWizard", expWizard);
+            myBrowser.RegisterJsObject("control", control);
 
             myBrowser.Load(page);
-            
-            //ChromiumWebBrowser myBrowser = new ChromiumWebBrowser("http://www.maps.google.com");
+
+
             this.Controls.Add(myBrowser);
 
             // chromdev tools
@@ -59,6 +61,7 @@ namespace WebAnalyzer.UI
 
         private void Browser_Closing(object sender, FormClosingEventArgs e)
         {
+
             //Cef.Shutdown();
         }
 
@@ -81,6 +84,15 @@ namespace WebAnalyzer.UI
             {
                 Logger.Log("Show dev tools");
                 myBrowser.ShowDevTools();
+            }
+        }
+
+        public void ReloadPage()
+        {
+            if (myBrowser != null)
+            {
+                myBrowser.Reload();
+                Logger.Log("Reloading???");
             }
         }
     }

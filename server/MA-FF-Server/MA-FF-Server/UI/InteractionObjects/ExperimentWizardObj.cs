@@ -20,6 +20,13 @@ namespace WebAnalyzer.UI.InteractionObjects
         public event CreateExperimentEventHandler CreateExperiment;
         public event LoadExperimentEventHandler LoadExperiment;
 
+        public ExperimentWizard _form;
+
+        public ExperimentWizardObj(ExperimentWizard form)
+        {
+            _form = form;
+        }
+
         public void back()
         {
             Browser.Back();
@@ -53,20 +60,36 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         public String selectExperimentToImportData()
         {
-            String path = SelectFolderDialog();
+            String path = SelectExperimentDialog();
 
             return path;
         }
 
         public void selectExperimentToLoad()
         {
-            String path = SelectFolderDialog();
+            String path = SelectExperimentDialog();
             Logger.Log(path);
             if (path != null)
             {
                 LoadExperiment(this, new LoadExperimentEvent(path));
             }
 
+        }
+
+        private String SelectExperimentDialog()
+        {
+
+            String selectPath = "";
+            SelectExperimentForm selectExperiment = new SelectExperimentForm();
+
+            if (selectExperiment.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                //refresh aois
+
+                selectPath = selectExperiment.Path;
+            }
+
+            return selectPath;
         }
 
         private String SelectFolderDialog()
@@ -89,7 +112,7 @@ namespace WebAnalyzer.UI.InteractionObjects
                     selectedPath = null;
                     return;
                 }
-                    
+
 
                 selectedPath = fbd.SelectedPath;
             }));

@@ -195,11 +195,18 @@
     <Compile Include="UI\ChromeDevTools.cs" />
     <Compile Include="UI\InteractionObjects\ApplicationSettingsObj.cs" />
     <Compile Include="UI\InteractionObjects\SelectParticipantControl.cs" />
+    <Compile Include="UI\InteractionObjects\SelectExperimentControl.cs" />
     <Compile Include="UI\InteractionObjects\TestrunControl.cs" />
     <Compile Include="UI\InteractionObjects\RuleControl.cs" />
     <Compile Include="UI\InteractionObjects\AOISettingControl.cs" />
     <Compile Include="UI\InteractionObjects\DomainSettingControl.cs" />
     <Compile Include="UI\InteractionObjects\ParticipantControl.cs" />
+    <Compile Include="UI\Popup\SelectExperimentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Popup\SelectExperimentForm.Designer.cs">
+      <DependentUpon>SelectExperimentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Popup\SelectParticipantForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +286,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Popup\SelectExperimentForm.resx">
+      <DependentUpon>SelectExperimentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Popup\SelectParticipantForm.resx">
       <DependentUpon>SelectParticipantForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -384,6 +394,9 @@
     <Content Include="UI\HTMLResources\html\main\index.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="UI\HTMLResources\html\popup\experiment_wizard\select_experiment.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UI\HTMLResources\html\popup\testrun\participants.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -419,6 +432,9 @@
     </Content>
     <Content Include="UI\HTMLResources\js\lib\jquery-2.1.4.min.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HTMLResources\js\src\select_experiment.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UI\HTMLResources\js\src\logging.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

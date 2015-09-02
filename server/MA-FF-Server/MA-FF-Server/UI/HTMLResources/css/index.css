@@ -322,3 +322,9 @@ input.invalid {
     font: 18px Arial, sans-serif;
     float: right;
 }
+
+/* experiment select list */
+
+#experiment-list .row{
+    border-bottom: solid 2px black;
+}

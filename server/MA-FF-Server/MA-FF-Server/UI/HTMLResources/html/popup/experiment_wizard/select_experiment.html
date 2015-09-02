@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 centered">
+                <h1>Experiment auswählen: </h1>
+            </div>
+        </div>
+
+        <div id="experiment-list">
+
+        </div>
+    </div><!-- /.container -->
+    <script type="text/template" id="experiment-template" class="template">
+            <div class="row">
+                <div class=" col-md-8">
+                    <h3><%= name %></h3>
+                    <p><%= path %></p>
+                </div>
+                <div class=" col-md-4">
+                    <button path="<%= path %>" type="button" class="select-experiment-button btn btn-default">Auswählen</button>
+                </div>
+            </div>
+    </script>
+
+    <script type="text/javascript" src="../../../js/lib/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../../../js/lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../js/lib/underscore.min.js"></script>
+    <script type="text/javascript" src="../../../js/src/logging.js"></script>
+
+    <script type="text/javascript" src="../../../js/src/select_experiment.js"></script>
+</body>
+</html>
