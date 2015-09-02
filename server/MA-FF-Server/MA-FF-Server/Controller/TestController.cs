@@ -327,6 +327,7 @@ namespace WebAnalyzer.Controller
         public void StopTest()
         {
             Logger.Log("Stop Experiment");
+            _test.Stopped = DateTime.Now.ToString();
             _running = false;
             // stop server etc.
 

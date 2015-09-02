@@ -14,6 +14,7 @@ namespace WebAnalyzer.Models.DataModel
     public class TestModel
     {
         private String _started;
+        private String _stopped;
 
         private String _lastPage;
         private WebpageModel _lastPageModel;
@@ -34,6 +35,12 @@ namespace WebAnalyzer.Models.DataModel
         {
             get { return _started; }
             set { _started = value; }
+        }
+
+        public String Stopped
+        {
+            get { return _stopped; }
+            set { _stopped = value; }
         }
         
         #region GetterSetterFunctions
@@ -74,6 +81,20 @@ namespace WebAnalyzer.Models.DataModel
 
             experimentNode.Attributes.Append(started);
 
+            XmlAttribute stopped = xmlDoc.CreateAttribute("stopped");
+
+            stopped.Value = this.Stopped;
+
+            experimentNode.Attributes.Append(stopped);
+
+            XmlAttribute duration = xmlDoc.CreateAttribute("duration");
+
+            TimeSpan calcDuration = DateTime.Parse(Stopped) - DateTime.Parse(Started);
+
+            duration.Value = calcDuration.ToString();
+
+            experimentNode.Attributes.Append(duration);
+
             XmlAttribute visitedWebpagesCount = xmlDoc.CreateAttribute("count-of-visited-pages");
 
             visitedWebpagesCount.Value = this._visitedPages.Count.ToString();
@@ -110,6 +131,9 @@ namespace WebAnalyzer.Models.DataModel
                     case "started":
                         test.Started = attr.Value;
                         break;
+                    case "stopped":
+                        test.Stopped = attr.Value;
+                        break;
                 }
             }
 
@@ -140,6 +164,20 @@ namespace WebAnalyzer.Models.DataModel
             started.Value = this.Started;
 
             statisticsNode.Attributes.Append(started);
+
+            XmlAttribute stopped = xmlDoc.CreateAttribute("stopped");
+
+            stopped.Value = this.Stopped;
+
+            statisticsNode.Attributes.Append(stopped);
+
+            XmlAttribute duration = xmlDoc.CreateAttribute("duration");
+
+            TimeSpan calcDuration = DateTime.Parse(Stopped) - DateTime.Parse(Started);
+
+            duration.Value = calcDuration.ToString();
+
+            statisticsNode.Attributes.Append(duration);
 
             // create & insert statistics for whole experiment
 
@@ -288,6 +326,20 @@ namespace WebAnalyzer.Models.DataModel
 
             experimentNode.Attributes.Append(started);
 
+            XmlAttribute stopped = xmlDoc.CreateAttribute("stopped");
+
+            stopped.Value = this.Stopped;
+
+            experimentNode.Attributes.Append(stopped);
+
+            XmlAttribute duration = xmlDoc.CreateAttribute("duration");
+
+            TimeSpan calcDuration = DateTime.Parse(Stopped) - DateTime.Parse(Started);
+
+            duration.Value = calcDuration.ToString();
+
+            experimentNode.Attributes.Append(duration);
+
             XmlAttribute visitedWebpagesCount = xmlDoc.CreateAttribute("count-of-visited-pages");
 
             visitedWebpagesCount.Value = this._visitedPages.Count.ToString();
@@ -320,6 +372,20 @@ namespace WebAnalyzer.Models.DataModel
             started.Value = this.Started;
 
             experimentNode.Attributes.Append(started);
+
+            XmlAttribute stopped = xmlDoc.CreateAttribute("stopped");
+
+            stopped.Value = this.Stopped;
+
+            experimentNode.Attributes.Append(stopped);
+
+            XmlAttribute duration = xmlDoc.CreateAttribute("duration");
+
+            TimeSpan calcDuration = DateTime.Parse(Stopped) - DateTime.Parse(Started);
+
+            duration.Value = calcDuration.ToString();
+
+            experimentNode.Attributes.Append(duration);
 
             XmlAttribute visitedWebpagesCount = xmlDoc.CreateAttribute("count-of-visited-pages");
 
