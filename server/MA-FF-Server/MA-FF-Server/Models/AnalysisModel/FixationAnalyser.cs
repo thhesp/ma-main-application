@@ -52,7 +52,7 @@ namespace WebAnalyzer.Models.AnalysisModel
                     if (duration >= minimumDuration)
                     {
                         //create fixation
-                        FixationModel fixation = new FixationModel(duration, eye);
+                        FixationModel fixation = new FixationModel(startTimestamp, relatedGazes.Last().DataRequestedTimestamp, duration, eye);
 
                         fixation.From(startX, startY);
                         fixation.To(endX, endY);
@@ -91,7 +91,7 @@ namespace WebAnalyzer.Models.AnalysisModel
             {
                 //Logger.Log("Saving last fixation...");
                 //create fixation
-                FixationModel fixation = new FixationModel(duration, eye);
+                FixationModel fixation = new FixationModel(startTimestamp, relatedGazes.Last().DataRequestedTimestamp, duration, eye);
 
                 fixation.From(startX, startY);
                 fixation.To(endX, endY);

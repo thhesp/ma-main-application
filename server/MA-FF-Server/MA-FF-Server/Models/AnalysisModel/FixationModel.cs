@@ -13,6 +13,9 @@ namespace WebAnalyzer.Models.AnalysisModel
     public class FixationModel
     {
 
+        private String _startTimestamp;
+        private String _endTimestamp;
+
         private long _duration = 0;
 
         private String _eye;
@@ -22,8 +25,10 @@ namespace WebAnalyzer.Models.AnalysisModel
         private List<GazeModel> _relatedGazes = new List<GazeModel>();
 
 
-        public FixationModel(long duration, String eye)
+        public FixationModel(String startTimestamp, String endTimestamp, long duration, String eye)
         {
+            _startTimestamp = startTimestamp;
+            _endTimestamp = endTimestamp;
             _duration = duration;
             _eye = eye;
         }
@@ -90,6 +95,18 @@ namespace WebAnalyzer.Models.AnalysisModel
         public XmlNode ToXML(XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode fixationNode = xmlDoc.CreateElement("fixation");
+
+            XmlAttribute startTimestamp = xmlDoc.CreateAttribute("start-timestamp");
+
+            startTimestamp.Value = _startTimestamp;
+
+            fixationNode.Attributes.Append(startTimestamp);
+
+            XmlAttribute endTimestamp = xmlDoc.CreateAttribute("end-timestamp");
+
+            endTimestamp.Value = _endTimestamp;
+
+            fixationNode.Attributes.Append(endTimestamp);
 
             XmlAttribute duration = xmlDoc.CreateAttribute("duration");
 
@@ -158,6 +175,18 @@ namespace WebAnalyzer.Models.AnalysisModel
             identifier.Value = aoi;
 
             aoiNode.Attributes.Append(identifier);
+
+            XmlAttribute startTimestamp = xmlDoc.CreateAttribute("start-timestamp");
+
+            startTimestamp.Value = _startTimestamp;
+
+            aoiNode.Attributes.Append(startTimestamp);
+
+            XmlAttribute endTimestamp = xmlDoc.CreateAttribute("end-timestamp");
+
+            endTimestamp.Value = _endTimestamp;
+
+            aoiNode.Attributes.Append(endTimestamp);
 
             XmlAttribute duration = xmlDoc.CreateAttribute("duration");
 
