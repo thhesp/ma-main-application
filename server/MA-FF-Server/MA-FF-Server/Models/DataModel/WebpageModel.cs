@@ -296,11 +296,7 @@ namespace WebAnalyzer.Models.DataModel
 
             XmlNode leftEyeNode = xmlDoc.CreateElement("left-eye");
 
-            XmlAttribute leftFixationsCount = xmlDoc.CreateAttribute("count-of-fixations");
-
-            leftFixationsCount.Value = _leftFixationData.Count.ToString();
-
-            leftEyeNode.Attributes.Append(leftFixationsCount);
+            int countLeftAOI = 0;
 
             foreach (FixationModel data in _leftFixationData)
             {
@@ -309,18 +305,21 @@ namespace WebAnalyzer.Models.DataModel
                 if (node != null)
                 {
                     leftEyeNode.AppendChild(node);
+                    countLeftAOI++;
                 }
             }
 
             aoisNode.AppendChild(leftEyeNode);
 
+            XmlAttribute leftAOICount = xmlDoc.CreateAttribute("count-of-aois");
+
+            leftAOICount.Value = countLeftAOI.ToString();
+
+            leftEyeNode.Attributes.Append(leftAOICount);
+
             XmlNode rightEyeNode = xmlDoc.CreateElement("right-eye");
 
-            XmlAttribute rightFixationsCount = xmlDoc.CreateAttribute("count-of-fixations");
-
-            rightFixationsCount.Value = _rightFixationData.Count.ToString();
-
-            rightEyeNode.Attributes.Append(rightFixationsCount);
+            int countRightAOI = 0;
 
             foreach (FixationModel data in _rightFixationData)
             {
@@ -329,11 +328,19 @@ namespace WebAnalyzer.Models.DataModel
 
                 if (node != null)
                 {
-                    leftEyeNode.AppendChild(node);
+                    rightEyeNode.AppendChild(node);
+                    countRightAOI++;
                 }
             }
 
             aoisNode.AppendChild(rightEyeNode);
+
+
+            XmlAttribute rightAOICount = xmlDoc.CreateAttribute("count-of-aoi");
+
+            rightAOICount.Value = countRightAOI.ToString();
+
+            rightEyeNode.Attributes.Append(rightAOICount);
 
             webpageNode.AppendChild(aoisNode);
 
