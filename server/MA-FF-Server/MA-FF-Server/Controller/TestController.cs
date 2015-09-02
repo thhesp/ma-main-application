@@ -28,6 +28,11 @@ namespace WebAnalyzer.Controller
         public event SaveTestrunEventHandler SaveTestrun;
 
         /// <summary>
+        ///  Event for updating the connection count.
+        /// </summary>
+        public event UpdateWSConnectionCountEventHandler UpdateWSConnectionCount;
+
+        /// <summary>
         /// Reference to the test data for current test.
         /// </summary>
         private TestModel _test;
@@ -478,6 +483,16 @@ namespace WebAnalyzer.Controller
         public void On_MessageSent(object sender, MessageSentEvent e)
         {
             _test.MessageSent(e.UID, e.SentTimestamp);
+        }
+
+        /// <summary>
+        /// Callback for Update WS Connection Count Event
+        /// </summary>
+        /// <param name="sender">Object from which the event gets triggered.</param>
+        /// <param name="e">Data about the number of connections</param>
+        public void On_UpdateConnectionCount(object sender, UpdateWSConnectionCountEvent e)
+        {
+            UpdateWSConnectionCount(sender, e);   
         }
     }
 }

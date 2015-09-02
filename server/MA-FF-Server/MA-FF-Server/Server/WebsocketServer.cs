@@ -37,6 +37,7 @@ namespace WebAnalyzer.Server
         {
             _connManager = new ConnectionManager();
             _connManager.MessageSent += controller.On_MessageSent;
+            _connManager.UpdateWSConnectionCount += controller.On_UpdateConnectionCount;
 
             _controller = controller;
             CreateServer();

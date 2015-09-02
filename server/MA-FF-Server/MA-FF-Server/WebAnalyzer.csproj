@@ -132,6 +132,7 @@
     <Compile Include="Events\CreateDomainSettingEvent.cs" />
     <Compile Include="Events\CreateParticipantEvent.cs" />
     <Compile Include="Events\MessageSentEvent.cs" />
+    <Compile Include="Events\UpdateWSConnectionCountEvent.cs" />
     <Compile Include="Events\SaveTestrunEvent.cs" />
     <Compile Include="Events\EditApplicationSettingsEvent.cs" />
     <Compile Include="Events\SelectParticipantForTestEvent.cs" />

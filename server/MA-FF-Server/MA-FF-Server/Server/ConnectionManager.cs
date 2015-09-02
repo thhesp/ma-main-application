@@ -16,6 +16,7 @@ namespace WebAnalyzer.Server
     public class ConnectionManager
     {
         public event MessageSentEventHandler MessageSent;
+        public event UpdateWSConnectionCountEventHandler UpdateWSConnectionCount;
 
         private Boolean _workMessages = false;
 
@@ -23,8 +24,19 @@ namespace WebAnalyzer.Server
 
         private StopwatchTimer timer;
 
+        private int _lastConnectionCount = 0;
+
         public ConnectionManager()
         {
+        }
+
+        private void UpdateConnectionCount()
+        {
+            if (_lastConnectionCount != _connections.Count)
+            {
+                _lastConnectionCount = _connections.Count;
+                UpdateWSConnectionCount(this, new UpdateWSConnectionCountEvent(_lastConnectionCount));
+            }
             
         }
 
@@ -77,10 +89,8 @@ namespace WebAnalyzer.Server
             lock (_connections)
             {
                 _connections.RemoveAll(connection => connection.IsConnected == false);
-                foreach (var connection in _connections)
-                {
-                    connection.EnqueueMessage(message);
-                }
+                UpdateConnectionCount();
+                Parallel.ForEach(_connections, connection => connection.EnqueueMessage(message));
             }
 
         }
@@ -92,6 +102,7 @@ namespace WebAnalyzer.Server
                 lock (_connections)
                 {
                     _connections.RemoveAll(connection => connection.IsConnected == false);
+                    UpdateConnectionCount();
                     Parallel.ForEach(_connections, connection => connection.workMessageQueue());
                 }
             }
@@ -103,6 +114,7 @@ namespace WebAnalyzer.Server
             {
                 _connections.Add(e.Connection);
                 e.Connection.Active = true;
+                UpdateConnectionCount();
             }
 
             Logger.Log("Current connection count: " + _connections.Count);

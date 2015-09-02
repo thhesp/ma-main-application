@@ -46,7 +46,7 @@ namespace WebAnalyzer.UI
         {
             if (_exp != null)
             {
-                _exp.setWSConnectionStatus(status);
+                _exp.SetWSConnectionStatus(status);
             }
         }
 
@@ -54,7 +54,25 @@ namespace WebAnalyzer.UI
         {
             if (_exp != null)
             {
-                _exp.setTrackingConnectionStatus(status);
+                _exp.SetTrackingConnectionStatus(status);
+            }
+        }
+
+        public void SetWSConnectionCount(int count)
+        {
+            if (_exp != null)
+            {
+                _exp.SetWSConnectionCount(count);
+            }
+        }
+
+        public void RefreshData()
+        {
+
+            if (_exp != null && myBrowser != null && !myBrowser.IsLoading && !myBrowser.IsLoading)
+            {
+                _exp.RefreshData();
+                Logger.Log("Refresh Data..");
             }
         }
 
@@ -63,7 +81,7 @@ namespace WebAnalyzer.UI
             if (myBrowser != null)
             {
                 myBrowser.Reload();
-                Logger.Log("Reloading???");
+                Logger.Log("Reloading Page");
             }
         }
 

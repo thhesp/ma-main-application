@@ -19,6 +19,8 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         private CONNECTION_STATUS _trackingConnection = CONNECTION_STATUS.disconnected;
 
+        private int _connectionCount = 0;
+
 
         public ExperimentObject(){
         }
@@ -79,14 +81,29 @@ namespace WebAnalyzer.UI.InteractionObjects
             return _trackingConnection.ToString();
         }
 
-        public void setWSConnectionStatus(CONNECTION_STATUS status)
+        public void SetWSConnectionStatus(CONNECTION_STATUS status)
         {
             _wsConnection = status;
         }
 
-        public void setTrackingConnectionStatus(CONNECTION_STATUS status)
+        public void SetTrackingConnectionStatus(CONNECTION_STATUS status)
         {
             _trackingConnection = status;
+        }
+
+        public void SetWSConnectionCount(int count)
+        {
+            _connectionCount = count;
+        }
+
+        public int getConnectionCount()
+        {
+            return _connectionCount;
+        }
+
+        public void RefreshData()
+        {
+            EvaluteJavaScript("initialize();");
         }
     }
 }

@@ -26,8 +26,8 @@ namespace WebAnalyzer.Controller
 
         private TestController _testController;
 
-        private HTMLUI mainUI;
-        private ExperimentWizard experimentWizard;
+        private HTMLUI _mainUI;
+        private ExperimentWizard _experimentWizard;
         private ExperimentParticipant _currentParticipant;
 
 
@@ -37,6 +37,7 @@ namespace WebAnalyzer.Controller
         {
             _testController = new TestController();
             _testController.SaveTestrun += On_SaveTestrun;
+            _testController.UpdateWSConnectionCount += On_UpdateConnectionCount;
 
             ShowMainUI();
         }
@@ -46,15 +47,15 @@ namespace WebAnalyzer.Controller
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            mainUI = new HTMLUI();
-            mainUI.Shown += new System.EventHandler(this.MainUIFinishedLoading);
+            _mainUI = new HTMLUI();
+            _mainUI.Shown += new System.EventHandler(this.MainUIFinishedLoading);
 
-            mainUI.EditParticipant += On_EditParticpant;
-            mainUI.EditDomainSetting += On_EditDomainSetting;
-            mainUI.Testrun += On_TestrunEvent;
-            mainUI.EditApplicationSetting += On_EditApplicationSettings;
+            _mainUI.EditParticipant += On_EditParticpant;
+            _mainUI.EditDomainSetting += On_EditDomainSetting;
+            _mainUI.Testrun += On_TestrunEvent;
+            _mainUI.EditApplicationSetting += On_EditApplicationSettings;
 
-            Application.Run(mainUI);
+            Application.Run(_mainUI);
         }
 
         private void MainUIFinishedLoading(object sender, EventArgs e)
@@ -66,19 +67,19 @@ namespace WebAnalyzer.Controller
         private void ShowExperimentWizard()
         {
             Logger.Log("Show experiment wizard?");
-            experimentWizard = new ExperimentWizard();
-            experimentWizard.CreateExperiment += On_CreateExperiment;
-            experimentWizard.LoadExperiment += On_LoadExperiment;
+            _experimentWizard = new ExperimentWizard();
+            _experimentWizard.CreateExperiment += On_CreateExperiment;
+            _experimentWizard.LoadExperiment += On_LoadExperiment;
 
-            System.Windows.Forms.DialogResult result = experimentWizard.ShowDialog();
+            System.Windows.Forms.DialogResult result = _experimentWizard.ShowDialog();
 
             if (result == System.Windows.Forms.DialogResult.OK)
             {
-                experimentWizard.Dispose();
+                _experimentWizard.Dispose();
             }
             else if (result == System.Windows.Forms.DialogResult.Cancel || result == System.Windows.Forms.DialogResult.Abort)
             {
-                mainUI.Close();
+                _mainUI.Close();
             }
             else
             {
@@ -141,15 +142,15 @@ namespace WebAnalyzer.Controller
 
         private void SetConnectionStati()
         {
-            mainUI.SetWSConnectionStatus(_testController.WSStatus);
-            mainUI.SetTrackingConnectionStatus(_testController.TrackingStatus);
+            _mainUI.SetWSConnectionStatus(_testController.WSStatus);
+            _mainUI.SetTrackingConnectionStatus(_testController.TrackingStatus);
         }
 
         private void SetExpiermentData(ExperimentModel experiment)
         {
-            mainUI.SetExperimentData(experiment);
+            _mainUI.SetExperimentData(experiment);
             SetConnectionStati();
-            mainUI.ReloadPage();
+            _mainUI.RefreshData();
         }
 
         private void RefreshMainUI()
@@ -159,10 +160,10 @@ namespace WebAnalyzer.Controller
 
         private void CloseExperimentWizard()
         {
-            experimentWizard.Invoke((MethodInvoker)delegate
+            _experimentWizard.Invoke((MethodInvoker)delegate
             {
                 // close the form on the forms thread
-                experimentWizard.DialogResult = DialogResult.OK;
+                _experimentWizard.DialogResult = DialogResult.OK;
             });
         }
 
@@ -233,7 +234,7 @@ namespace WebAnalyzer.Controller
 
         private void ShowEditParticipantForm(ExperimentParticipant particpant, Boolean createNew)
         {
-            mainUI.BeginInvoke((Action)delegate
+            _mainUI.BeginInvoke((Action)delegate
             {
                 Logger.Log("Show edit participant?");
                 EditParticipantForm editParticpant = new EditParticipantForm(particpant, createNew);
@@ -252,7 +253,7 @@ namespace WebAnalyzer.Controller
 
         private void ShowEditDomainSettingForm(DomainSettings setting, Boolean createNew)
         {
-            mainUI.BeginInvoke((Action)delegate
+            _mainUI.BeginInvoke((Action)delegate
             {
                 Logger.Log("Show edit domain setting?");
                 EditDomainSettingForm editSetting = new EditDomainSettingForm(setting, createNew);
@@ -317,7 +318,7 @@ namespace WebAnalyzer.Controller
 
         private void CreateTestrun()
         {
-            mainUI.BeginInvoke((Action)delegate
+            _mainUI.BeginInvoke((Action)delegate
             {
                 Logger.Log("Show edit application setting");
                 TestrunForm testrun = new TestrunForm(_currentExperiment);
@@ -346,7 +347,7 @@ namespace WebAnalyzer.Controller
 
         private void On_EditApplicationSettings(object source, EditApplicationSettingsEvent e)
         {
-            mainUI.BeginInvoke((Action)delegate
+            _mainUI.BeginInvoke((Action)delegate
             {
                 Logger.Log("Show edit application setting");
                 EditApplicationSettings editSetting = new EditApplicationSettings();
@@ -376,6 +377,20 @@ namespace WebAnalyzer.Controller
                 Logger.Log("Saving data...");
                 ExportController.SaveExperimentTestRun(_currentExperiment, _currentParticipant, _testController.Test);
                 _testrunControlUI.HideSaveIndicator();
+            }
+        }
+
+        /// <summary>
+        /// Callback for Update WS Connection Count Event
+        /// </summary>
+        /// <param name="sender">Object from which the event gets triggered.</param>
+        /// <param name="e">Data about the number of connections</param>
+        private void On_UpdateConnectionCount(object sender, UpdateWSConnectionCountEvent e)
+        {
+            if (_mainUI != null)
+            {
+                _mainUI.SetWSConnectionCount(e.Count);
+                _mainUI.RefreshData();
             }
         }
 

@@ -29,7 +29,10 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         public void EvaluteJavaScript(String script)
         {
-            Browser.EvaluateScriptAsync(script);
+            if (Browser != null && script != null)
+            {
+                Browser.EvaluateScriptAsync(script);
+            }
         }
 
         public void javascriptLog(String message)
