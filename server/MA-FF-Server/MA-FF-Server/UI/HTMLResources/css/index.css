@@ -326,5 +326,11 @@ input.invalid {
 /* experiment select list */
 
 #experiment-list .row{
+    padding: 5px;
+    border-bottom: solid 2px black;
+}
+
+#participants-table .tr{
+    padding: 5px;
     border-bottom: solid 2px black;
 }

@@ -38,9 +38,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.Name = "Edit AOI Setting";
+            this.Name = "Experimentteilnehmer auswählen";
             this.ShowIcon = false;
-            this.Text = "Edit AOI Setting";
+            this.Text = "Experimentteilnehmer auswählen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Browser_Closing);
             this.Load += new System.EventHandler(this.Browser_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_KeyDown);

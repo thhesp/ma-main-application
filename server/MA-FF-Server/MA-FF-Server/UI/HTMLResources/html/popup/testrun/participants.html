@@ -13,12 +13,22 @@
                     <h2>Teilnehmer auswählen</h2>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-md-12 centered">
+                    <input id="filter-participants" type="text" placeholder="z.B.: Testperson 1" />
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-md-12">
                     <table style="width:100%">
                         <thead>
                             <tr>
                                 <th>Identifier</th>
+                            </tr>
+                            <tr>
+
                             </tr>
                         </thead>
                         <tbody id="participants-table">
@@ -31,9 +41,12 @@
     <footer></footer>
 
     <script type="text/template" id="participant-template" class="template">
-        <tr uid="<%= uid %>">
+        <tr filter="<%= identifier %>">
             <td>
                 <%= identifier %>
+            </td>
+            <td>
+                <button uid="<%= uid %>" type="button" class="select-participant-button btn btn-default">Auswählen</button>
             </td>
         </tr>
     </script>
@@ -41,6 +54,7 @@
     <script type="text/javascript" src="../../../js/lib/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="../../../js/lib/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../../js/lib/underscore.min.js"></script>
+    <script type="text/javascript" src="../../../js/src/filter.js"></script>
 
     <script type="text/javascript">
         var participantArray = control.participantArray();
@@ -52,12 +66,18 @@
             $("#participants-table").append(template({ uid: participantUIDs[i], identifier: participantArray[i] }));
         }
 
-        $('#participants-table tr').click(function () {
+        $('#participants-table tr .select-participant-button').click(function () {
             var uid = $(this).attr('uid');
 
             console.log('clicked: ', uid);
             control.selectParticipant(uid);
         });
+
+        $('#filter-participants').on('keyup', filterParticipants);
+
+        function filterParticipants() {
+            filter('#participants-table tr', $('#filter-participants').val());
+        }
     </script>
 </body>
 </html>
