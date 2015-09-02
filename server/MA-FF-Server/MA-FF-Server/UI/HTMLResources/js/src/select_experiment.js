@@ -14,4 +14,10 @@
         var path = $(this).attr('path');
         control.selectExperiment(path);
     });
+
+    $('#filter-experiment').on('keyup', filterExperiment);
 });
+
+function filterExperiment() {
+    filter('#experiment-list .row', $('#filter-experiment').val());
+}

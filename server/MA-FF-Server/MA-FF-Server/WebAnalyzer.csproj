@@ -433,6 +433,9 @@
     <Content Include="UI\HTMLResources\js\lib\jquery-2.1.4.min.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="UI\HTMLResources\js\src\filter.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UI\HTMLResources\js\src\select_experiment.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

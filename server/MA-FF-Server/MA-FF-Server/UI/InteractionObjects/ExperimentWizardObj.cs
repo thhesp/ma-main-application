@@ -78,18 +78,16 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         private String SelectExperimentDialog()
         {
-
-            String selectPath = "";
             SelectExperimentForm selectExperiment = new SelectExperimentForm();
 
             if (selectExperiment.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 //refresh aois
 
-                selectPath = selectExperiment.Path;
+                return selectExperiment.Path;
             }
 
-            return selectPath;
+            return "";
         }
 
         private String SelectFolderDialog()

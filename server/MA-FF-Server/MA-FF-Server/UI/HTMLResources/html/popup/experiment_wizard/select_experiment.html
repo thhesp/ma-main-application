@@ -14,26 +14,34 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-12 centered">
+                <input id="filter-experiment" type="text" placeholder="z.B.: Testname" />
+            </div>
+        </div>
+
         <div id="experiment-list">
 
         </div>
     </div><!-- /.container -->
     <script type="text/template" id="experiment-template" class="template">
-            <div class="row">
-                <div class=" col-md-8">
-                    <h3><%= name %></h3>
-                    <p><%= path %></p>
-                </div>
-                <div class=" col-md-4">
-                    <button path="<%= path %>" type="button" class="select-experiment-button btn btn-default">Auswählen</button>
-                </div>
+        <div class="row" filter="<%= name %>">
+            <div class=" col-md-8">
+                <h3><%= name %></h3>
+                <p><%= path %></p>
             </div>
+            <div class=" col-md-4">
+                <button path="<%= path %>" type="button" class="select-experiment-button btn btn-default">Auswählen</button>
+            </div>
+        </div>
     </script>
 
     <script type="text/javascript" src="../../../js/lib/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="../../../js/lib/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../../js/lib/underscore.min.js"></script>
     <script type="text/javascript" src="../../../js/src/logging.js"></script>
+
+    <script type="text/javascript" src="../../../js/src/filter.js"></script>
 
     <script type="text/javascript" src="../../../js/src/select_experiment.js"></script>
 </body>
