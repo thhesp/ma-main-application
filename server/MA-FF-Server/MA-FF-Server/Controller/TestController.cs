@@ -289,7 +289,11 @@ namespace WebAnalyzer.Controller
                 StopTest();
             }
 
-            _wsServer.stop();
+            if (_wsServer != null)
+            {
+                _wsServer.stop();
+            }
+            
 
             if (_debugModel != null)
             {

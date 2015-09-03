@@ -57,7 +57,19 @@ namespace WebAnalyzer.Server
             Logger.Log("Creating Websocket-Server on Port :" + port);
 
             cancellation = new CancellationTokenSource();
-            server = new WebSocketListener(new IPEndPoint(IPAddress.Any, port));
+
+
+            // https://github.com/vtortola/WebSocketListener/wiki/WebSocketListener-options
+            
+              WebSocketListenerOptions options = new WebSocketListenerOptions();
+
+            options.NegotiationTimeout = TimeSpan.FromMilliseconds(1000);
+
+            options.UseNagleAlgorithm = false;
+
+            server = new WebSocketListener(new IPEndPoint(IPAddress.Any, port), options);
+
+            //server = new WebSocketListener(new IPEndPoint(IPAddress.Any, port));
 
             //add 
             var rfc6455 = new vtortola.WebSockets.Rfc6455.WebSocketFactoryRfc6455(server);

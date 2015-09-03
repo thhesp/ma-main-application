@@ -31,6 +31,7 @@ namespace WebAnalyzer.Server
 
         public void OnError(Exception error)
         {
+            //error on connection timeout from here?
             Logger.Log("Connection error: " + error.Message);
         }
 
