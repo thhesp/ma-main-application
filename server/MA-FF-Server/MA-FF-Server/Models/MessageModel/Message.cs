@@ -190,6 +190,9 @@ namespace WebAnalyzer.Models.MessageModel
                             case "tag":
                                 leftElement.Tag = value;
                                 break;
+                            case "path":
+                                leftElement.Path = value;
+                                break;
 
                         }
                     }
@@ -366,6 +369,9 @@ namespace WebAnalyzer.Models.MessageModel
                     else if (reader.TokenType == JsonToken.String && property == "tag")
                     {
                         element.Tag = reader.Value.ToString();
+                    } else if (reader.TokenType == JsonToken.String && property == "path")
+                    {
+                        element.Path = reader.Value.ToString();
                     }
                 }
                 else

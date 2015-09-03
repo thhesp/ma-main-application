@@ -11,6 +11,9 @@ namespace WebAnalyzer.Models.DataModel
     {
 
         private String _tag;
+
+        private String _path;
+
         private String _id;
         private String _title;
 
@@ -51,6 +54,12 @@ namespace WebAnalyzer.Models.DataModel
         {
             get { return _title; }
             set { _title = value; }
+        }
+
+        public String Path
+        {
+            get { return _path; }
+            set { _path = value; }
         }
 
         public double Left
@@ -137,6 +146,14 @@ namespace WebAnalyzer.Models.DataModel
             tag.Value = this.Tag;
 
             elementNode.Attributes.Append(tag);
+
+            //path
+
+            XmlAttribute path = xmlDoc.CreateAttribute("path");
+
+            path.Value = this.Path;
+
+            elementNode.Attributes.Append(path);
 
             //id
 
@@ -246,6 +263,9 @@ namespace WebAnalyzer.Models.DataModel
                         break;
                     case "id":
                         elementModel.ID = attr.Value;
+                        break;
+                    case "path":
+                        elementModel.Path = attr.Value;
                         break;
                     case "title":
                         elementModel.Title = attr.Value;
