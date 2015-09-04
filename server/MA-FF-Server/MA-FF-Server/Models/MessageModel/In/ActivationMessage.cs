@@ -22,10 +22,18 @@ namespace WebAnalyzer.Models.MessageModel
 
        private ACTIVATION_MESSAGE_TYPE _type;
 
+       private String _url;
+
        public ActivationMessage(ACTIVATION_MESSAGE_TYPE type)
         {
             _type = type;
         }
+
+       public String URL
+       {
+           get { return _url; }
+           set { _url = value; }
+       }
 
        public ACTIVATION_MESSAGE_TYPE Type
         {

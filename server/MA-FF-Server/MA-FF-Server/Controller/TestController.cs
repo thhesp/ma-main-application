@@ -498,5 +498,19 @@ namespace WebAnalyzer.Controller
         {
             UpdateWSConnectionCount(sender, e);   
         }
+
+        /// <summary>
+        /// Callback for Update WS Change Webpage Event
+        /// </summary>
+        /// <param name="sender">Object from which the event gets triggered.</param>
+        /// <param name="e">Data about the webpage</param>
+        public void On_AddWebpage(object source, AddWebpageEvent e)
+        {
+            Logger.Log("Add Webpage: " + e.URL);
+            if (e.URL != "")
+            {
+                _test.AddWebpage(e.URL, e.Timestamp);
+            }
+        }
     }
 }

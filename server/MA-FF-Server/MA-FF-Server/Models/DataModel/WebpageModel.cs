@@ -17,6 +17,7 @@ namespace WebAnalyzer.Models.DataModel
 
         private String _url;
         private String _visitTimestamp;
+
         private List<GazeModel> _positionData = new List<GazeModel>();
 
         /* Fixations */

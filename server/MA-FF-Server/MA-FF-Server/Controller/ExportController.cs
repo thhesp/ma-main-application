@@ -146,9 +146,10 @@ namespace WebAnalyzer.Controller
 
             xmlDoc.Save(dir + "\\" + timestamp + ".xml");
 
-            SaveExperimentFixations(experiment, currentParticipant, timestamp, testrun);
-            /*
             SaveExperimentStatistics(experiment, currentParticipant, timestamp, testrun);
+            /*
+            
+            SaveExperimentFixations(experiment, currentParticipant, timestamp, testrun);
             SaveExperimentAOI(experiment, currentParticipant, timestamp, testrun);
             */
             return true;

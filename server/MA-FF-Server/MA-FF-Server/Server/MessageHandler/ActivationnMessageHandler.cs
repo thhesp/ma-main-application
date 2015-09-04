@@ -13,6 +13,8 @@ namespace WebAnalyzer.Server.MessageHandler
 {
     class ActivationMessageHandler : IObserver<Object>
     {
+        public event AddWebpageEventHandler AddWebpage;
+
         readonly WebsocketConnection _connection;
 
         public ActivationMessageHandler(WebsocketConnection connection)
@@ -38,6 +40,7 @@ namespace WebAnalyzer.Server.MessageHandler
 
             if (msgIn.Type == ActivationMessage.ACTIVATION_MESSAGE_TYPE.ACTIVATE)
             {
+                AddWebpage(this, new AddWebpageEvent(msgIn.URL));
                 _connection.Active = true;
             }
             else if (msgIn.Type == ActivationMessage.ACTIVATION_MESSAGE_TYPE.DEACTIVATE)

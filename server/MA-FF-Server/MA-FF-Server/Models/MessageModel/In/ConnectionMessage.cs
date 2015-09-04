@@ -22,9 +22,17 @@ namespace WebAnalyzer.Models.MessageModel
 
         private CONNECTION_MESSAGE_TYPE _type;
 
+        private String _url;
+
         public ConnectionMessage(CONNECTION_MESSAGE_TYPE type)
         {
             _type = type;
+        }
+
+        public String URL
+        {
+            get { return _url; }
+            set { _url = value; }
         }
 
         public CONNECTION_MESSAGE_TYPE Type

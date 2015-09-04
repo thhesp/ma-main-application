@@ -41,12 +41,16 @@ namespace WebAnalyzer.Server
 
             ConnectionMessageHandler connectMsg = new ConnectionMessageHandler(connection);
             connectMsg.AddConnection += _connectionManager.On_AddConnection;
+            connectMsg.AddWebpage += _controller.On_AddWebpage;
 
             published.Where(msgIn => msgIn != null && msgIn is ConnectionMessage)
                .Subscribe(connectMsg);
 
+            ActivationMessageHandler activationMsg = new ActivationMessageHandler(connection);
+            activationMsg.AddWebpage += _controller.On_AddWebpage;
+
             published.Where(msgIn => msgIn != null && msgIn is ActivationMessage)
-                 .Subscribe(new ActivationMessageHandler(connection));
+                 .Subscribe(activationMsg);
 
             // data
             published.Where(msgIn => msgIn != null && msgIn is InDataMessage)

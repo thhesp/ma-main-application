@@ -9,6 +9,7 @@ using WebAnalyzer.Util;
 using WebAnalyzer.Models.SettingsModel;
 using WebAnalyzer.Models.AnalysisModel;
 using WebAnalyzer.Models.AlgorithmModel;
+using WebAnalyzer.Events;
 
 namespace WebAnalyzer.Models.DataModel
 {
@@ -16,9 +17,6 @@ namespace WebAnalyzer.Models.DataModel
     {
         private String _started;
         private String _stopped;
-
-        private String _lastPage;
-        private WebpageModel _lastPageModel;
 
         private List<WebpageModel> _visitedPages = new List<WebpageModel>();
 
@@ -44,22 +42,6 @@ namespace WebAnalyzer.Models.DataModel
             set { _stopped = value; }
         }
         
-        #region GetterSetterFunctions
-
-        public void AddWebpage(String url)
-        {
-            this.AddWebpage(url, Timestamp.GetMillisecondsUnixTimestamp());
-        }
-
-        public void AddWebpage(String url, String timestamp)
-        {
-            WebpageModel page = new WebpageModel(url, timestamp);
-            _visitedPages.Add(page);
-        }
-
-
-        #endregion
-
         public Boolean Exportable()
         {
             if(_visitedPages.Count > 0)
@@ -426,10 +408,16 @@ namespace WebAnalyzer.Models.DataModel
 
             if (duration >= Properties.Settings.Default.TestrunDataWaitDuration)
             {
+                RemoveEmptyPages();
                 return true;
             }
 
             return false;
+        }
+
+        private void RemoveEmptyPages()
+        {
+            _visitedPages.RemoveAll(page => page.Gazes.Count == 0);
         }
 
         public GazeModel GetGazeModel(String uniqueId)
@@ -569,28 +557,44 @@ namespace WebAnalyzer.Models.DataModel
 
         private GazeModel AddGazeData(String url, GazeModel gazeModel)
         {
-            WebpageModel pageModel = this.GetPageModel(url, gazeModel.Timestamp);
+            WebpageModel pageModel = this.GetPageModel(url, gazeModel.DataRequestedTimestamp);
 
-            _lastPage = url;
-            _lastPageModel = pageModel;
-
-            pageModel.AddGazeData(gazeModel);
+            if (pageModel != null)
+            {
+                pageModel.AddGazeData(gazeModel);
+            }
+            else
+            {
+                Logger.Log("No page model for gaze found????");
+            }
 
             return gazeModel;
         }
 
         private WebpageModel GetPageModel(String url, String timestamp)
         {
-            if (_lastPage != null && _lastPage == url && _lastPageModel != null)
+            // reiterate from the back of the list, so that the newest page gets used
+
+            lock (_visitedPages)
             {
-                return _lastPageModel;
+                if (_visitedPages.Count == 1 && _visitedPages[0].Url == url)
+                {
+                    return _visitedPages[0];
+                }
+
+                for (int i = _visitedPages.Count - 1; i > 0; i--)
+                {
+                    if (_visitedPages[i].Url == url)
+                    {
+                        if (long.Parse(_visitedPages[i].VisitTimestamp) < long.Parse(timestamp) )
+                        {
+                            return _visitedPages[i];
+                        }
+                    }
+                }
             }
 
-            WebpageModel pageModel = new WebpageModel(url, timestamp);
-
-            _visitedPages.Add(pageModel);
-
-            return pageModel;
+            return null;
         }
 
         public void MessageSent(String uniqueId, String sentTimestamp)
@@ -609,6 +613,16 @@ namespace WebAnalyzer.Models.DataModel
             foreach (WebpageModel page in _visitedPages)
             {
                 page.ExtractFixations(algorithm);
+            }
+        }
+
+        public void AddWebpage(String url, String timestamp)
+        {
+            WebpageModel pageModel = new WebpageModel(url, timestamp);
+
+            lock (_visitedPages)
+            {
+                _visitedPages.Add(pageModel);
             }
         }
     }

@@ -55,13 +55,13 @@ namespace WebAnalyzer.Models.MessageModel
                         switch (messageType)
                         {
                             case "connectRequest":
-                                return new ConnectionMessage(ConnectionMessage.CONNECTION_MESSAGE_TYPE.REQUEST);
+                                return ConnectionMessageFromJson(ConnectionMessage.CONNECTION_MESSAGE_TYPE.REQUEST, reader);
                             case "connectComplete":
-                                return new ConnectionMessage(ConnectionMessage.CONNECTION_MESSAGE_TYPE.COMPLETE);
+                                return ConnectionMessageFromJson(ConnectionMessage.CONNECTION_MESSAGE_TYPE.COMPLETE, reader);
                             case "activate":
-                                return new ActivationMessage(ActivationMessage.ACTIVATION_MESSAGE_TYPE.ACTIVATE);
+                                return ActivationMessageFromJson(ActivationMessage.ACTIVATION_MESSAGE_TYPE.ACTIVATE, reader);
                             case "deactivate":
-                                return new ActivationMessage(ActivationMessage.ACTIVATION_MESSAGE_TYPE.DEACTIVATE);
+                                return ActivationMessageFromJson(ActivationMessage.ACTIVATION_MESSAGE_TYPE.DEACTIVATE, reader);
                             case "data":
                                 return DataMessageFromJson(reader);
                             case "error":
@@ -73,6 +73,70 @@ namespace WebAnalyzer.Models.MessageModel
                 }
             }
 
+
+            return null;
+        }
+
+        private static ConnectionMessage ConnectionMessageFromJson(ConnectionMessage.CONNECTION_MESSAGE_TYPE type, JsonTextReader reader){
+            //Logger.Log("connection message found!");
+
+            if (type == ConnectionMessage.CONNECTION_MESSAGE_TYPE.REQUEST)
+            {
+                return new ConnectionMessage(type);
+            }
+            
+
+            String property = string.Empty;
+
+            ConnectionMessage msg = new ConnectionMessage(type);
+
+            while (reader.Read())
+            {
+                if (reader.Value != null)
+                {
+                    if (reader.TokenType == JsonToken.PropertyName)
+                        property = reader.Value.ToString();
+
+                    if (property == "url" && reader.TokenType == JsonToken.String)
+                    {
+                        msg.URL = reader.Value.ToString();
+
+                        return msg;
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        private static ActivationMessage ActivationMessageFromJson(ActivationMessage.ACTIVATION_MESSAGE_TYPE type, JsonTextReader reader)
+        {
+            //Logger.Log("Activation message found!");
+
+            if (type == ActivationMessage.ACTIVATION_MESSAGE_TYPE.DEACTIVATE)
+            {
+                return new ActivationMessage(ActivationMessage.ACTIVATION_MESSAGE_TYPE.DEACTIVATE);
+            }
+
+            String property = string.Empty;
+
+            ActivationMessage msg = new ActivationMessage(type);
+
+            while (reader.Read())
+            {
+                if (reader.Value != null)
+                {
+                    if (reader.TokenType == JsonToken.PropertyName)
+                        property = reader.Value.ToString();
+
+                    if (property == "url" && reader.TokenType == JsonToken.String)
+                    {
+                        msg.URL = reader.Value.ToString();
+
+                        return msg;
+                    }
+                }
+            }
 
             return null;
         }

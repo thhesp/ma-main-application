@@ -14,6 +14,7 @@ namespace WebAnalyzer.Server.MessageHandler
     class ConnectionMessageHandler : IObserver<Object>
     {
         public event AddConnectionEventHandler AddConnection;
+        public event AddWebpageEventHandler AddWebpage;
 
         readonly WebsocketConnection _connection;
 
@@ -44,6 +45,7 @@ namespace WebAnalyzer.Server.MessageHandler
             }
             else if (msgIn.Type == ConnectionMessage.CONNECTION_MESSAGE_TYPE.COMPLETE)
             {
+                AddWebpage(this, new AddWebpageEvent(msgIn.URL));
                 completeHandshake();
             }
 
