@@ -172,7 +172,7 @@ namespace WebAnalyzer.Models.DataModel
                             gaze.Timestamp = attr.Value;
                             break;
                         case "data-requested-timestamp":
-                            gaze.Timestamp = attr.Value;
+                            gaze.DataRequestedTimestamp = attr.Value;
                             break;
                         case "server-sent-timestamp":
                             gaze.ServerSentTimestamp = attr.Value;

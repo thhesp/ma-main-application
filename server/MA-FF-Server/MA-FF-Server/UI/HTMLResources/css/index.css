@@ -96,11 +96,13 @@ div.content {
 }
 
 
-#cancel-button {
+#cancel-button
+{
     float: left;
 }
 
-#save-button{
+#save-button,
+#export-button{
     float: right;
 }
 

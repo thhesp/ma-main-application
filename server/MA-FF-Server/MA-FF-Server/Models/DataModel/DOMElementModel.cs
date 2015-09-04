@@ -296,9 +296,12 @@ namespace WebAnalyzer.Models.DataModel
 
                 foreach (XmlNode child in elementNode.ChildNodes)
                 {
-                    if (child.Name == "class")
+                    if (child.Name == "classes")
                     {
-                        elementModel.AddClass(child.InnerText);
+                        foreach (XmlNode classesChild in child.ChildNodes)
+                        {
+                            elementModel.AddClass(classesChild.InnerText);
+                        }
                     }
                     else if (child.Name == "attributes")
                     {
