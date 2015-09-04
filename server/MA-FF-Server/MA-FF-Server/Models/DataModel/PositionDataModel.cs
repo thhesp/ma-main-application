@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
+using WebAnalyzer.Util;
+
 using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.Models.DataModel
@@ -62,31 +64,38 @@ namespace WebAnalyzer.Models.DataModel
 
         public static PositionDataModel LoadFromXML(XmlNode posNode)
         {
-            PositionDataModel posModel = new PositionDataModel();
-
-            foreach (XmlNode child in posNode.ChildNodes)
+            if (posNode.Name == "position")
             {
-                if (child.Name == "eyetracking-data")
-                {
-                    EyeTrackingData etData = EyeTrackingData.LoadFromXML(child);
+                PositionDataModel posModel = new PositionDataModel();
 
-                    if (etData != null)
+                foreach (XmlNode child in posNode.ChildNodes)
+                {
+                    if (child.Name == "eyetracking-data")
                     {
-                        posModel.EyeTrackingData = etData;
+                        EyeTrackingData etData = EyeTrackingData.LoadFromXML(child);
+
+                        if (etData != null)
+                        {
+                            posModel.EyeTrackingData = etData;
+                        }
+                    }
+                    else if (child.Name == "element")
+                    {
+                        DOMElementModel domModel = DOMElementModel.LoadFromXML(child);
+
+                        if (domModel != null)
+                        {
+                            posModel.Element = domModel;
+                        }
                     }
                 }
-                else if (child.Name == "element")
-                {
-                    DOMElementModel domModel = DOMElementModel.LoadFromXML(child);
 
-                    if (domModel != null)
-                    {
-                        posModel.Element = domModel;
-                    }
-                }
+                return posModel;
             }
 
-            return posModel;
+            Logger.Log("Wrong node type given");
+
+            return null;
         }
 
         #endregion

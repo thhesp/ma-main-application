@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.DataModel
 {
@@ -64,22 +65,29 @@ namespace WebAnalyzer.Models.DataModel
 
         public static AttributeModel LoadFromXML(XmlNode attrNode)
         {
-            AttributeModel attrModel = new AttributeModel();
-
-            foreach (XmlAttribute attr in attrNode.Attributes)
+            if (attrNode.Name == "attribute")
             {
-                switch (attr.Name)
+                AttributeModel attrModel = new AttributeModel();
+
+                foreach (XmlAttribute attr in attrNode.Attributes)
                 {
-                    case "name":
-                        attrModel.Name = attr.Value;
-                        break;
-                    case "value":
-                        attrModel.Value = attr.Value;
-                        break;
+                    switch (attr.Name)
+                    {
+                        case "name":
+                            attrModel.Name = attr.Value;
+                            break;
+                        case "value":
+                            attrModel.Value = attr.Value;
+                            break;
+                    }
                 }
+
+                return attrModel;
             }
 
-            return attrModel;
+            Logger.Log("Wrong node type given");
+
+            return null;
         }
 
         #endregion

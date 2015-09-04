@@ -137,13 +137,16 @@ namespace WebAnalyzer.Models.DataModel
                 }
             }
 
-            foreach (XmlNode child in experimentNode.ChildNodes)
+            foreach (XmlNode webpages in experimentNode.ChildNodes)
             {
-                WebpageModel page = WebpageModel.LoadFromXML(child);
-
-                if (page != null)
+                foreach (XmlNode webpage in webpages)
                 {
-                    test._visitedPages.Add(page);
+                    WebpageModel page = WebpageModel.LoadFromXML(webpage);
+
+                    if (page != null)
+                    {
+                        test._visitedPages.Add(page);
+                    }
                 }
             }
 

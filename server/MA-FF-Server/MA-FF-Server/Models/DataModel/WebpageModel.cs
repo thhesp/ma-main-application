@@ -87,32 +87,39 @@ namespace WebAnalyzer.Models.DataModel
 
         public static WebpageModel LoadFromXML(XmlNode webpageNode)
         {
-            WebpageModel page = new WebpageModel();
-
-            foreach (XmlAttribute attr in webpageNode.Attributes)
+            if (webpageNode.Name == "webpage")
             {
-                switch (attr.Name)
+                WebpageModel page = new WebpageModel();
+
+                foreach (XmlAttribute attr in webpageNode.Attributes)
                 {
-                    case "url":
-                        page.Url = attr.Value;
-                        break;
-                    case "visited":
-                        page.VisitTimestamp = attr.Value;
-                        break;
+                    switch (attr.Name)
+                    {
+                        case "url":
+                            page.Url = attr.Value;
+                            break;
+                        case "visited":
+                            page.VisitTimestamp = attr.Value;
+                            break;
+                    }
                 }
+
+                foreach (XmlNode child in webpageNode.ChildNodes)
+                {
+                    GazeModel gaze = GazeModel.LoadFromXML(child);
+
+                    if (gaze != null)
+                    {
+                        page.AddGazeData(gaze);
+                    }
+                }
+
+                return page;
             }
 
-            foreach (XmlNode child in webpageNode.ChildNodes)
-            {
-                GazeModel gaze = GazeModel.LoadFromXML(child);
+            Logger.Log("Wrong node type given");
 
-                if (gaze != null)
-                {
-                    page.AddGazeData(gaze);
-                }
-            }
-
-            return page;
+            return null;
         }
 
         public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc, Boolean includeSingleGazeData)

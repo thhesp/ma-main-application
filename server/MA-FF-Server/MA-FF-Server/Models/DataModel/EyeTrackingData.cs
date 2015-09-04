@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.DataModel
 {
@@ -90,25 +91,33 @@ namespace WebAnalyzer.Models.DataModel
 
         public static EyeTrackingData LoadFromXML(XmlNode etNode)
         {
-            EyeTrackingData etData = new EyeTrackingData();
-
-            foreach (XmlAttribute attr in etNode.Attributes)
+            if (etNode.Name == "eyetracking-data")
             {
-                switch (attr.Name)
+                EyeTrackingData etData = new EyeTrackingData();
+
+                foreach (XmlAttribute attr in etNode.Attributes)
                 {
-                    case "x":
-                        etData.X = int.Parse(attr.Value);
-                        break;
-                    case "y":
-                        etData.Y = int.Parse(attr.Value);
-                        break;
-                    case "callback":
-                        etData.CallbackTimestamp = attr.Value;
-                        break;
+                    switch (attr.Name)
+                    {
+                        case "x":
+                            etData.X = int.Parse(attr.Value);
+                            break;
+                        case "y":
+                            etData.Y = int.Parse(attr.Value);
+                            break;
+                        case "callback":
+                            etData.CallbackTimestamp = attr.Value;
+                            break;
+                    }
                 }
+
+                return etData;
+
             }
 
-            return etData;
+            Logger.Log("Wrong node type given");
+
+            return null;
         }
         #endregion
     }

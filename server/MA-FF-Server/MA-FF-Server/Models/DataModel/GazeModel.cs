@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Xml;
 using WebAnalyzer.Models.Base;
 
+using WebAnalyzer.Util;
+
 namespace WebAnalyzer.Models.DataModel
 {
     public class GazeModel : BasicRawData
@@ -158,56 +160,63 @@ namespace WebAnalyzer.Models.DataModel
 
         public static GazeModel LoadFromXML(XmlNode gazeNode)
         {
-            GazeModel gaze = new GazeModel();
-
-            foreach (XmlAttribute attr in gazeNode.Attributes)
+            if (gazeNode.Name == "gaze")
             {
-                switch (attr.Name)
-                {
-                    case "timestamp":
-                        gaze.Timestamp = attr.Value;
-                        break;
-                    case "data-requested-timestamp":
-                        gaze.Timestamp = attr.Value;
-                        break;
-                    case "server-sent-timestamp":
-                        gaze.ServerSentTimestamp = attr.Value;
-                        break;
-                    case "server-received-timestamp":
-                        gaze.ServerReceivedTimestamp = attr.Value;
-                        break;
-                    case "client-sent-timestamp":
-                        gaze.ClientSentTimestamp = attr.Value;
-                        break;
-                    case "client-received-timestamp":
-                        gaze.ClientReceivedTimestamp = attr.Value;
-                        break;
-                }
-            }
+                GazeModel gaze = new GazeModel();
 
-            foreach (XmlNode child in gazeNode.ChildNodes)
-            {
-                if (child.Name == "left-eye")
+                foreach (XmlAttribute attr in gazeNode.Attributes)
                 {
-                    PositionDataModel posModel = PositionDataModel.LoadFromXML(child);
-
-                    if (posModel != null)
+                    switch (attr.Name)
                     {
-                        gaze.LeftEye = posModel;
+                        case "timestamp":
+                            gaze.Timestamp = attr.Value;
+                            break;
+                        case "data-requested-timestamp":
+                            gaze.Timestamp = attr.Value;
+                            break;
+                        case "server-sent-timestamp":
+                            gaze.ServerSentTimestamp = attr.Value;
+                            break;
+                        case "server-received-timestamp":
+                            gaze.ServerReceivedTimestamp = attr.Value;
+                            break;
+                        case "client-sent-timestamp":
+                            gaze.ClientSentTimestamp = attr.Value;
+                            break;
+                        case "client-received-timestamp":
+                            gaze.ClientReceivedTimestamp = attr.Value;
+                            break;
                     }
                 }
-                else if (child.Name == "right-eye")
-                {
-                    PositionDataModel posModel = PositionDataModel.LoadFromXML(child);
 
-                    if (posModel != null)
+                foreach (XmlNode eyes in gazeNode.ChildNodes)
+                {
+                    if (eyes.Name == "left-eye")
                     {
-                        gaze.RightEye = posModel;
+                        PositionDataModel posModel = PositionDataModel.LoadFromXML(eyes.FirstChild);
+
+                        if (posModel != null)
+                        {
+                            gaze.LeftEye = posModel;
+                        }
+                    }
+                    else if (eyes.Name == "right-eye")
+                    {
+                        PositionDataModel posModel = PositionDataModel.LoadFromXML(eyes.FirstChild);
+
+                        if (posModel != null)
+                        {
+                            gaze.RightEye = posModel;
+                        }
                     }
                 }
+
+                return gaze;
             }
 
-            return gaze;
+            Logger.Log("Wrong node type given");
+
+            return null;
         }
 
         public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc)
