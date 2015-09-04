@@ -374,12 +374,23 @@ namespace WebAnalyzer.Controller
 
         private void On_SaveTestrun(object source, SaveTestrunEvent e)
         {
-            if (_testController.DataCollected
-                    && _currentExperiment != null
+            if (!_testController.DataCollected)
+            {
+                Logger.Log("No Data collected!");
+                if (_testrunControlUI != null)
+                {
+                    _testrunControlUI.DisplayError("Es wurden keine Daten erfasst und somit konnten keine Daten gespeichert werden.");
+                }
+            }else if (_currentExperiment != null
                     && _currentParticipant != null)
             {
                 Logger.Log("Saving data...");
                 ExportController.SaveExperimentTestRun(_currentExperiment, _currentParticipant, _testController.Test);
+                
+            }
+
+            if (_testrunControlUI != null)
+            {
                 _testrunControlUI.HideSaveIndicator();
             }
         }
