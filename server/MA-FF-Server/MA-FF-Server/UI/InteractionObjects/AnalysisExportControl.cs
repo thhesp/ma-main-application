@@ -14,6 +14,8 @@ using WebAnalyzer.Events;
 
 using WebAnalyzer.Controller;
 
+using WebAnalyzer.Models.AlgorithmModel;
+
 namespace WebAnalyzer.UI.InteractionObjects
 {
     public class AnalysisExportControl : BaseInteractionObject
@@ -32,6 +34,10 @@ namespace WebAnalyzer.UI.InteractionObjects
         private String _filename;
 
         private ExportController.EXPORT_FORMATS _exportFormat;
+
+        private Algorithm.ALGORITHM_TYPES _algorithmType;
+
+        private Boolean _containGazeData = false;
 
         public AnalysisExportControl(HTMLUI form)
         {
@@ -52,6 +58,11 @@ namespace WebAnalyzer.UI.InteractionObjects
         public void setExportFormat(String format)
         {
             _exportFormat = (ExportController.EXPORT_FORMATS) Enum.Parse(typeof(ExportController.EXPORT_FORMATS), format, true);
+        }
+
+        public void setContainGazeData(Boolean containGazeData)
+        {
+            _containGazeData = containGazeData;
         }
 
         public void export()
@@ -76,7 +87,32 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         public void analyse()
         {
+            ShowSaveIndicator();
 
+            if (_testrun != null && _folderPath != "" && _filename != "")
+            {
+                extractAlgorithmData();
+            }
+            else
+            {
+                if (_testrun == null)
+                {
+                    Logger.Log("Testdaten konnten nicht geladen werden...");
+                }
+
+                Logger.Log("Path: " + _folderPath);
+                Logger.Log("Filename: " + _filename);
+            }
+        }
+
+        private void extractAlgorithmData()
+        {
+            switch (_algorithmType)
+            {
+                case Algorithm.ALGORITHM_TYPES.DISTANCE:
+                    EvaluteJavaScript("createDistanceAlgorithm();");
+                    break;
+            }
         }
 
         public void selectParticipant()
@@ -185,6 +221,29 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             Logger.Log("hide save indicator");
             EvaluteJavaScript("hideSaveIndicator();");
+        }
+
+        private void ExportData()
+        {
+            ExportController.SaveExperimentFixations(_testrun, _folderPath, _filename, _exportFormat, _containGazeData);
+            ExportController.SaveExperimentAOI(_exp, _testrun, _folderPath, _filename, _exportFormat, _containGazeData);
+
+            HideSaveIndicator();
+        }
+
+        public void useDistanceAlgorithm(double minimumDuration, double acceptableDeviation)
+        {
+            Logger.Log("Use minimumDuration: " + minimumDuration);
+            Logger.Log("Use acceptableDeviation: " + acceptableDeviation);
+
+            DistanceAlgorithm algorithm = new DistanceAlgorithm();
+
+            algorithm.MinimumDuration = minimumDuration;
+            algorithm.AccetableDeviations = acceptableDeviation;
+
+            _testrun.ExtractFixations(algorithm);
+
+            ExportData();
         }
     }
 }

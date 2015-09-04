@@ -147,9 +147,10 @@ namespace WebAnalyzer.Controller
             xmlDoc.Save(dir + "\\" + timestamp + ".xml");
 
             SaveExperimentFixations(experiment, currentParticipant, timestamp, testrun);
+            /*
             SaveExperimentStatistics(experiment, currentParticipant, timestamp, testrun);
             SaveExperimentAOI(experiment, currentParticipant, timestamp, testrun);
-
+            */
             return true;
         }
 
@@ -244,6 +245,80 @@ namespace WebAnalyzer.Controller
                         xmlDoc.AppendChild(testrun.ToXML(xmlDoc));
 
                         xmlDoc.Save(dir + "\\" + filename + ".xml");
+                        break;
+
+                    case EXPORT_FORMATS.CSV:
+
+                        break;
+                }
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        /// <summary>
+        /// Export the given testrun fixations to the given directory and filename with the given format.
+        /// </summary>
+        /// <param name="testrun">The testdata</param>
+        /// <param name="dir">Directory to export to</param>
+        /// <param name="filename">Filename to use</param>
+        /// <param name="format">Format in which to save the data</param>
+        /// <param name="includeGazeData">Should the export contain data about the single gazes</param>
+        public static Boolean SaveExperimentFixations(TestModel testrun, String dir, String filename, EXPORT_FORMATS format, Boolean includeGazeData)
+        {
+            if (Directory.Exists(dir))
+            {
+
+                Logger.Log("Exporting to: " + dir + "\\" + filename + ".xml");
+                switch (format)
+                {
+                    case EXPORT_FORMATS.XML:
+                        XmlDocument xmlDoc = new XmlDocument();
+
+                        xmlDoc.AppendChild(testrun.GenerateFixationXML(xmlDoc, includeGazeData));
+
+                        xmlDoc.Save(dir + "\\" + filename + "-fixations.xml");
+                        break;
+
+                    case EXPORT_FORMATS.CSV:
+
+                        break;
+                }
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        /// <summary>
+        /// Export the given testrun aois to the given directory and filename with the given format.
+        /// </summary>
+        /// <param name="testrun">The testdata</param>
+        /// <param name="dir">Directory to export to</param>
+        /// <param name="filename">Filename to use</param>
+        /// <param name="format">Format in which to save the data</param>
+        /// <param name="includeGazeData">Should the export contain data about the single gazes</param>
+        public static Boolean SaveExperimentAOI(ExperimentModel experiment, TestModel testrun, String dir, String filename, EXPORT_FORMATS format, Boolean includeGazeData)
+        {
+            if (Directory.Exists(dir))
+            {
+
+                Logger.Log("Exporting to: " + dir + "\\" + filename + ".xml");
+                switch (format)
+                {
+                    case EXPORT_FORMATS.XML:
+                        XmlDocument xmlDoc = new XmlDocument();
+
+                        xmlDoc.AppendChild(testrun.GenerateAOIXML(experiment.Settings, xmlDoc, includeGazeData));
+
+                        xmlDoc.Save(dir + "\\" + filename + "-aois.xml");
                         break;
 
                     case EXPORT_FORMATS.CSV:

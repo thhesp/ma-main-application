@@ -8,6 +8,7 @@ using System.Xml;
 using WebAnalyzer.Models.AnalysisModel;
 using WebAnalyzer.Util;
 using WebAnalyzer.Models.SettingsModel;
+using WebAnalyzer.Models.AlgorithmModel;
 
 namespace WebAnalyzer.Models.DataModel
 {
@@ -55,6 +56,18 @@ namespace WebAnalyzer.Models.DataModel
         public void AddGazeData(GazeModel data)
         {
             _positionData.Add(data);
+        }
+
+        public List<FixationModel> LeftFixationData
+        {
+            get { return _leftFixationData; }
+            set { _leftFixationData = value; }
+        }
+
+        public List<FixationModel> RightFixationData
+        {
+            get { return _rightFixationData; }
+            set { _rightFixationData = value; }
         }
 
         #endregion
@@ -221,8 +234,6 @@ namespace WebAnalyzer.Models.DataModel
 
         public XmlNode GenerateFixationXML(XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
-            ExtractFixations();
-
             XmlNode webpageNode = xmlDoc.CreateElement("webpage");
 
             XmlAttribute url = xmlDoc.CreateAttribute("url");
@@ -280,8 +291,6 @@ namespace WebAnalyzer.Models.DataModel
 
         public XmlNode GenerateAOIXML(ExperimentSettings settings, XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
-            ExtractFixations();
-
             XmlNode webpageNode = xmlDoc.CreateElement("webpage");
 
             XmlAttribute url = xmlDoc.CreateAttribute("url");
@@ -360,19 +369,10 @@ namespace WebAnalyzer.Models.DataModel
 
         #region FixationFunctions
 
-        private void ExtractFixations(double acceptableDeviations)
+        public void ExtractFixations(Algorithm algorithm)
         {
-            _leftFixationData = FixationAnalyser.ExtractFixations(_positionData, "left", 100, acceptableDeviations);
-            _rightFixationData = FixationAnalyser.ExtractFixations(_positionData, "right", 100, acceptableDeviations);
-
-        }
-
-        private void ExtractFixations()
-        {
-            //this.ExtractFixations(0);
-
-            _leftFixationData = FixationAnalyser.ExtractFixations(_positionData, "left", 100, 0);
-            _rightFixationData = FixationAnalyser.ExtractFixations(_positionData, "right", 100, 0);
+            _leftFixationData = algorithm.ExtractFixation(_positionData, "right");
+            _rightFixationData = algorithm.ExtractFixation(_positionData, "right");
         }
 
         #endregion

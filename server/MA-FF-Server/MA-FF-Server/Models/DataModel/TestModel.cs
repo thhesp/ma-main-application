@@ -8,6 +8,7 @@ using System.Xml;
 using WebAnalyzer.Util;
 using WebAnalyzer.Models.SettingsModel;
 using WebAnalyzer.Models.AnalysisModel;
+using WebAnalyzer.Models.AlgorithmModel;
 
 namespace WebAnalyzer.Models.DataModel
 {
@@ -600,6 +601,14 @@ namespace WebAnalyzer.Models.DataModel
                 {
                     _unassignedPositions[uniqueId].ServerSentTimestamp = sentTimestamp;
                 }
+            }
+        }
+
+        public void ExtractFixations(Algorithm algorithm)
+        {
+            foreach (WebpageModel page in _visitedPages)
+            {
+                page.ExtractFixations(algorithm);
             }
         }
     }

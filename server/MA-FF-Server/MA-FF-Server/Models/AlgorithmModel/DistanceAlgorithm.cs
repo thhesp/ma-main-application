@@ -3,14 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebAnalyzer.Models.AnalysisModel;
 using WebAnalyzer.Models.DataModel;
 
-namespace WebAnalyzer.Models.AnalysisModel
+namespace WebAnalyzer.Models.AlgorithmModel
 {
-    public class FixationAnalyser
+    public class DistanceAlgorithm : Algorithm
     {
 
-        public static List<FixationModel> ExtractFixations(List<GazeModel> positions, String eye, double minimumDuration, double acceptableDeviations)
+        private double _minimumDuration;
+        
+        private double _acceptableDeviations;
+
+        public Double MinimumDuration{
+            get{ return _minimumDuration; }
+            set {_minimumDuration = value; }
+        }
+
+        public Double AccetableDeviations
+        {
+            get { return _acceptableDeviations; }
+            set { _acceptableDeviations = value; }
+        }
+
+        public override List<FixationModel> ExtractFixation(List<GazeModel> positions, String eye)
         {
             List<FixationModel> fixations = new List<FixationModel>();
 
@@ -21,11 +37,11 @@ namespace WebAnalyzer.Models.AnalysisModel
             // iniate with first gaze data element
             PositionDataModel posModel = positions[0].GetEyeData(eye);
 
-            double startX = posModel.EyeTrackingData.X - acceptableDeviations;
-            double startY = posModel.EyeTrackingData.Y - acceptableDeviations;
+            double startX = posModel.EyeTrackingData.X - AccetableDeviations;
+            double startY = posModel.EyeTrackingData.Y - AccetableDeviations;
 
-            double endX = posModel.EyeTrackingData.X + acceptableDeviations;
-            double endY = posModel.EyeTrackingData.Y + acceptableDeviations;
+            double endX = posModel.EyeTrackingData.X + AccetableDeviations;
+            double endY = posModel.EyeTrackingData.Y + AccetableDeviations;
 
             String startTimestamp = positions[0].DataRequestedTimestamp;
 
@@ -49,7 +65,7 @@ namespace WebAnalyzer.Models.AnalysisModel
                 {
                     //fixation (if there was one) ends
                     //@Todo: add constant/ setting for duration min time
-                    if (duration >= minimumDuration)
+                    if (duration >= MinimumDuration)
                     {
                         //create fixation
                         FixationModel fixation = new FixationModel(startTimestamp, relatedGazes.Last().DataRequestedTimestamp, duration, eye);
@@ -71,11 +87,11 @@ namespace WebAnalyzer.Models.AnalysisModel
                     relatedGazes = new List<GazeModel>();
 
                     // iniate with current gaze element
-                    startX = currentPos.EyeTrackingData.X - acceptableDeviations;
-                    startY = currentPos.EyeTrackingData.Y - acceptableDeviations;
+                    startX = currentPos.EyeTrackingData.X - AccetableDeviations;
+                    startY = currentPos.EyeTrackingData.Y - AccetableDeviations;
 
-                    endX = currentPos.EyeTrackingData.X + acceptableDeviations;
-                    endY = currentPos.EyeTrackingData.Y + acceptableDeviations;
+                    endX = currentPos.EyeTrackingData.X + AccetableDeviations;
+                    endY = currentPos.EyeTrackingData.Y + AccetableDeviations;
 
                     startTimestamp = positions[pos].DataRequestedTimestamp;
 
@@ -87,7 +103,7 @@ namespace WebAnalyzer.Models.AnalysisModel
 
             //clear up a possible ending fixation
 
-            if (duration >= minimumDuration)
+            if (duration >= MinimumDuration)
             {
                 //Logger.Log("Saving last fixation...");
                 //create fixation
