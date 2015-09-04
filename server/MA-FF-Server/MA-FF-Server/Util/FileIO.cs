@@ -12,13 +12,14 @@ namespace WebAnalyzer.Util
     /// </summary>
     public static class FileIO
     {
+
         /// <summary>
         /// Checks if a path exists and creates if it does not exists.
         /// </summary>
         /// <param name="dir">Location which should be checked</param>
-        public static void CheckPath(String dir)
+        public static void CheckPathAndCreate(String dir)
         {
-            CheckPath(dir, false);
+            CheckPathAndCreate(dir, false);
         }
 
         /// <summary>
@@ -26,7 +27,7 @@ namespace WebAnalyzer.Util
         /// </summary>
         /// <param name="dir">Location which should be checked</param>
         /// <param name="invisible">If the location does not exists, should it be created as a invisible Directory.</param>
-        public static void CheckPath(String dir, bool invisible)
+        public static void CheckPathAndCreate(String dir, bool invisible)
         {
             bool exists = Directory.Exists(dir);
             if (!exists)

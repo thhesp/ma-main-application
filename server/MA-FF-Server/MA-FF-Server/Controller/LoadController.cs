@@ -149,7 +149,7 @@ namespace WebAnalyzer.Controller
         /// <param name="path">Path to the xml file from which to load the test.</param>
         public static TestModel LoadTest(String path)
         {
-            if (System.IO.Directory.Exists(path))
+            if (System.IO.File.Exists(path))
             {
                 XmlDocument doc = new XmlDocument();
                 doc.Load(path);
@@ -158,6 +158,36 @@ namespace WebAnalyzer.Controller
             }
             // throw exception?
             return null;
+        }
+
+
+        /// <summary>
+        /// Generates Path to Rawdata Location of Testrun
+        /// </summary>
+        /// <param name="experiment">Current experiment to get the data from</param>
+        /// <param name="participant">Current participant to get the data from</param>
+        public static String GetRawTestdataLocation(ExperimentModel experiment, ExperimentParticipant participant)
+        {
+            String dir = experiment.GetBaseExperimentLocation();
+            dir += Properties.Settings.Default.RawdataLocation.Replace("{1}", participant.Identifier);
+
+            FileIO.CheckPathAndCreate(dir);
+
+            return dir;
+        }
+
+        /// <summary>
+        /// Validates if the given path contains testrun data.
+        /// </summary>
+        /// <param name="path">File to check for testrun data</param>
+        public static Boolean ValidateTestrunFile(String path)
+        {
+
+            if(!path.Contains(".xml")){
+                return false;
+            }
+
+            return true;
         }
     }
 }

@@ -23,6 +23,7 @@ namespace WebAnalyzer.UI
     {
         private ChromiumWebBrowser myBrowser = null;
         private ExperimentObject _exp = null;
+        private AnalysisExportControl _analysisExportControl = null;
 
         public event EditParticipantEventHandler EditParticipant;
         public event EditDomainSettingEventHandler EditDomainSetting;
@@ -39,6 +40,11 @@ namespace WebAnalyzer.UI
             if (_exp != null)
             {
                 _exp.Experiment = experiment;
+            }
+
+            if (_analysisExportControl != null)
+            {
+                _analysisExportControl.Experiment = experiment;
             }
         }
 
@@ -106,6 +112,15 @@ namespace WebAnalyzer.UI
             myBrowser.RegisterJsObject("nav", nav);
         }
 
+        private void CreateAnalysisAndExportObj()
+        {
+            _analysisExportControl = new AnalysisExportControl(this);
+
+            _analysisExportControl.Browser = myBrowser;
+
+            myBrowser.RegisterJsObject("analysisExportControl", _analysisExportControl);
+        }
+
         private void CreateExperimentObj()
         {
             _exp = new ExperimentObject();
@@ -122,6 +137,7 @@ namespace WebAnalyzer.UI
 
             CreateNav();
             CreateExperimentObj();
+            CreateAnalysisAndExportObj();
 
             myBrowser.Load(page);
             

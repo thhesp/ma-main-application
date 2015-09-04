@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,6 +53,16 @@ namespace WebAnalyzer.Util
         public static String GetDateTime(String date)
         {
             return DateTime.Parse(date).ToString("ddMMyyyy-HHmm");
+        }
+
+
+        /// <summary>
+        /// Creates an date string for the the given testrun filename.
+        /// </summary>
+        /// <remarks>Not really sure right now if this is needed or if the string could just be reused...</remarks>
+        public static String GetCreatedFromFilename(String filename)
+        {
+            return DateTime.ParseExact(filename, "ddMMyyyy-HHmm", CultureInfo.InvariantCulture).ToString();
         }
     }
 }

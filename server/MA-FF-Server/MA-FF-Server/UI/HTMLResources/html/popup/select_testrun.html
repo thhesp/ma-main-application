@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/index.css">
+</head>
+<body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 centered">
+                    <h2>Testlauf auswählen</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <table style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Datum</th>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </thead>
+                        <tbody id="testrun-table">
+                            
+                        </tbody>
+                    </table> 
+                </div>
+            </div>
+        </div><!-- /.container -->
+    <footer></footer>
+
+    <script type="text/template" id="testrun-template" class="template">
+        <tr>
+            <td>
+                <%= date %>
+            </td>
+            <td>
+                <button path="<%= path %>" date="<%= date %>" type="button" class="select-testrun-button btn btn-default">Auswählen</button>
+            </td>
+        </tr>
+    </script>
+
+    <script type="text/javascript" src="../../js/lib/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../../js/lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/lib/underscore.min.js"></script>
+
+    <script type="text/javascript">
+        var testrunPaths = control.testrunPaths();
+        var testrunDates = control.testrunDates();
+
+        var template = _.template($('script#testrun-template').html());
+
+        for (var i = 0; i < testrunPaths.length; i++) {
+            $("#testrun-table").append(template({ path: testrunPaths[i], date: testrunDates[i] }));
+        }
+
+        $('#testrun-table tr .select-testrun-button').click(function () {
+            var path = $(this).attr('path');
+            var created = $(this).attr('date');
+
+            console.log('clicked: ', path);
+            control.selectTestrun(created, path);
+        });
+
+    </script>
+</body>
+</html>

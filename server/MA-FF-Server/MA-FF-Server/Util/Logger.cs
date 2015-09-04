@@ -202,7 +202,7 @@ namespace WebAnalyzer.Util
         /// Checks the normal log location. If it does not exist, it gets generated invisible.
         /// </summary>
         private void checkLogLocation(){
-            FileIO.CheckPath(Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation, true);
+            FileIO.CheckPathAndCreate(Properties.Settings.Default.Datalocation + Properties.Settings.Default.LogsLocation, true);
         }
 
         /// <summary>
@@ -211,7 +211,7 @@ namespace WebAnalyzer.Util
         /// <param name="experimentName">Name of the experiment to which the location belongs.</param>
         private void checkExperimentLogLocation(String experimentName)
         {
-            FileIO.CheckPath(Properties.Settings.Default.Datalocation + experimentName + "\\" + Properties.Settings.Default.LogsLocation, true);
+            FileIO.CheckPathAndCreate(Properties.Settings.Default.Datalocation + experimentName + "\\" + Properties.Settings.Default.LogsLocation, true);
         }
 
         /// <summary>

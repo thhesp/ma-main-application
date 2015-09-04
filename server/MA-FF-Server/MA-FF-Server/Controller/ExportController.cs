@@ -9,6 +9,7 @@ using WebAnalyzer.Models.Base;
 using WebAnalyzer.Util;
 using WebAnalyzer.Models.SettingsModel;
 using WebAnalyzer.Models.DataModel;
+using System.IO;
 
 namespace WebAnalyzer.Controller
 {
@@ -19,6 +20,11 @@ namespace WebAnalyzer.Controller
     {
 
         /// <summary>
+        /// Enum which export formats are possible
+        /// </summary>
+        public enum EXPORT_FORMATS { XML = 0, CSV = 1 };
+
+        /// <summary>
         /// Saves the experiment data to a file and checks the file path.
         /// </summary>
         /// <remarks>Calls the SaveExperimentSettings and SaveExperimentParticipants methods.</remarks>
@@ -27,7 +33,7 @@ namespace WebAnalyzer.Controller
         {
             String dir = experiment.GetBaseExperimentLocation();
 
-            FileIO.CheckPath(dir);
+            FileIO.CheckPathAndCreate(dir);
             XmlDocument xmlDoc = new XmlDocument();
 
             xmlDoc.AppendChild(experiment.ToXML(xmlDoc));
@@ -56,7 +62,7 @@ namespace WebAnalyzer.Controller
         {
             String dir = experiment.GetBaseExperimentLocation();
 
-            FileIO.CheckPath(dir);
+            FileIO.CheckPathAndCreate(dir);
             if (experiment.Settings != null)
             {
                 return SaveExperimentSettings(dir, experiment.Settings);
@@ -89,7 +95,7 @@ namespace WebAnalyzer.Controller
         {
             String dir = experiment.GetBaseExperimentLocation();
 
-            FileIO.CheckPath(dir);
+            FileIO.CheckPathAndCreate(dir);
             if (experiment.Participants != null)
             {
                 return SaveExperimentParticipants(dir, experiment.Participants);
@@ -133,7 +139,7 @@ namespace WebAnalyzer.Controller
 
             String timestamp = Util.Timestamp.GetDateTime(testrun.Started);
 
-            FileIO.CheckPath(dir);
+            FileIO.CheckPathAndCreate(dir);
             XmlDocument xmlDoc = new XmlDocument();
 
             xmlDoc.AppendChild(testrun.ToXML(xmlDoc));
@@ -159,7 +165,7 @@ namespace WebAnalyzer.Controller
             String dir = experiment.GetBaseExperimentLocation();
             dir += Properties.Settings.Default.FixdataLocation.Replace("{1}", currentParticipant.Identifier);
 
-            FileIO.CheckPath(dir);
+            FileIO.CheckPathAndCreate(dir);
             XmlDocument xmlDoc = new XmlDocument();
 
             xmlDoc.AppendChild(testrun.GenerateFixationXML(xmlDoc, false));
@@ -182,7 +188,7 @@ namespace WebAnalyzer.Controller
             String dir = experiment.GetBaseExperimentLocation();
             dir += Properties.Settings.Default.StatisticsLocation.Replace("{1}", currentParticipant.Identifier);
 
-            FileIO.CheckPath(dir);
+            FileIO.CheckPathAndCreate(dir);
             XmlDocument xmlDoc = new XmlDocument();
 
             xmlDoc.AppendChild(testrun.GenerateStatisticsXML(xmlDoc, false));
@@ -205,7 +211,7 @@ namespace WebAnalyzer.Controller
             String dir = experiment.GetBaseExperimentLocation();
             dir += Properties.Settings.Default.AOILocation.Replace("{1}", currentParticipant.Identifier);
 
-            FileIO.CheckPath(dir);
+            FileIO.CheckPathAndCreate(dir);
             XmlDocument xmlDoc = new XmlDocument();
 
             xmlDoc.AppendChild(testrun.GenerateAOIXML(experiment.Settings, xmlDoc, false));
@@ -214,6 +220,43 @@ namespace WebAnalyzer.Controller
 
 
             return true;
+        }
+
+
+        /// <summary>
+        /// Export the given testrun to the given directory and filename with the given format.
+        /// </summary>
+        /// <param name="testrun">The testdata</param>
+        /// <param name="dir">Directory to export to</param>
+        /// <param name="filename">Filename to use</param>
+        /// <param name="format">Format in which to save the data</param>
+        public static Boolean ExportExperimentTestRun(TestModel testrun, String dir, String filename, EXPORT_FORMATS format)
+        {
+            if (Directory.Exists(dir))
+            {
+
+                Logger.Log("Exporting to: " + dir + "\\" + filename + ".xml");
+                switch (format)
+                {
+                    case EXPORT_FORMATS.XML:
+                        XmlDocument xmlDoc = new XmlDocument();
+
+                        xmlDoc.AppendChild(testrun.ToXML(xmlDoc));
+
+                        xmlDoc.Save(dir + "\\" + filename + ".xml");
+                        break;
+
+                    case EXPORT_FORMATS.CSV:
+
+                        break;
+                }
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
     }

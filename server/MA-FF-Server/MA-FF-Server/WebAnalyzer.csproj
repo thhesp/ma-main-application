@@ -132,6 +132,7 @@
     <Compile Include="Events\CreateDomainSettingEvent.cs" />
     <Compile Include="Events\CreateParticipantEvent.cs" />
     <Compile Include="Events\MessageSentEvent.cs" />
+    <Compile Include="Events\SelectTestrunToLoadEvent.cs" />
     <Compile Include="Events\SelectExperimentEvent.cs" />
     <Compile Include="Events\UpdateWSConnectionCountEvent.cs" />
     <Compile Include="Events\SaveTestrunEvent.cs" />
@@ -195,8 +196,10 @@
     <Compile Include="ApplicationSettings\SettingsValidator.cs" />
     <Compile Include="UI\ChromeDevTools.cs" />
     <Compile Include="UI\InteractionObjects\ApplicationSettingsObj.cs" />
+    <Compile Include="UI\InteractionObjects\SelectTestrunControl.cs" />
     <Compile Include="UI\InteractionObjects\SelectParticipantControl.cs" />
     <Compile Include="UI\InteractionObjects\SelectExperimentControl.cs" />
+    <Compile Include="UI\InteractionObjects\AnalysisExportControl.cs" />
     <Compile Include="UI\InteractionObjects\TestrunControl.cs" />
     <Compile Include="UI\InteractionObjects\RuleControl.cs" />
     <Compile Include="UI\InteractionObjects\AOISettingControl.cs" />
@@ -207,6 +210,12 @@
     </Compile>
     <Compile Include="UI\Popup\SelectExperimentForm.Designer.cs">
       <DependentUpon>SelectExperimentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Popup\SelectTestrunForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Popup\SelectTestrunForm.Designer.cs">
+      <DependentUpon>SelectTestrunForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Popup\SelectParticipantForm.cs">
       <SubType>Form</SubType>
@@ -289,6 +298,9 @@
     </Compile>
     <EmbeddedResource Include="UI\Popup\SelectExperimentForm.resx">
       <DependentUpon>SelectExperimentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Popup\SelectTestrunForm.resx">
+      <DependentUpon>SelectTestrunForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Popup\SelectParticipantForm.resx">
       <DependentUpon>SelectParticipantForm.cs</DependentUpon>
@@ -398,6 +410,9 @@
     <Content Include="UI\HTMLResources\html\popup\experiment_wizard\select_experiment.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="UI\HTMLResources\html\popup\select_testrun.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UI\HTMLResources\html\popup\testrun\participants.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -433,6 +448,12 @@
     </Content>
     <Content Include="UI\HTMLResources\js\lib\jquery-2.1.4.min.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HTMLResources\js\src\export.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\HTMLResources\js\src\analyse.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UI\HTMLResources\js\src\filter.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
