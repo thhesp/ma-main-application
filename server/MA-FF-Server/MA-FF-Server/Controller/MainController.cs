@@ -35,10 +35,6 @@ namespace WebAnalyzer.Controller
 
         public void Start()
         {
-            _testController = new TestController();
-            _testController.SaveTestrun += On_SaveTestrun;
-            _testController.UpdateWSConnectionCount += On_UpdateConnectionCount;
-
             ShowMainUI();
         }
 
@@ -60,7 +56,15 @@ namespace WebAnalyzer.Controller
 
         private void MainUIFinishedLoading(object sender, EventArgs e)
         {
+            InitializeTestController();
             ShowExperimentWizard();
+        }
+
+        private void InitializeTestController()
+        {
+            _testController = new TestController();
+            _testController.SaveTestrun += On_SaveTestrun;
+            _testController.UpdateWSConnectionCount += On_UpdateConnectionCount;
         }
 
        
