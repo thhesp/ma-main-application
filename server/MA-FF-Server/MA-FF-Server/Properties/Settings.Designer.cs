@@ -232,7 +232,7 @@ namespace WebAnalyzer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
         public int WSMessageDelay {
             get {
                 return ((int)(this["WSMessageDelay"]));
@@ -244,7 +244,7 @@ namespace WebAnalyzer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        [global::System.Configuration.DefaultSettingValueAttribute("15")]
         public int MouseTrackingInterval {
             get {
                 return ((int)(this["MouseTrackingInterval"]));

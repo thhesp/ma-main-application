@@ -26,13 +26,13 @@ namespace WebAnalyzer.Server
 
         public void OnCompleted()
         {
-            Logger.Log("Connection completed");
+            Logger.Log("Connection Observer completed");
         }
 
         public void OnError(Exception error)
         {
             //error on connection timeout from here?
-            Logger.Log("Connection error: " + error.Message);
+            Logger.Log("Connection Observer error: " + error.Message);
         }
 
         public void OnNext(WebsocketConnection connection)

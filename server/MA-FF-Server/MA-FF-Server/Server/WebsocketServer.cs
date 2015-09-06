@@ -40,13 +40,7 @@ namespace WebAnalyzer.Server
             _connManager.UpdateWSConnectionCount += controller.On_UpdateConnectionCount;
 
             _controller = controller;
-            CreateServer();
         }
-
-        private void CreateServer(){
-            this.CreateServer(8888);
-        }
-
         private void CreateServer(int port)
         {
             if (server != null)
@@ -69,18 +63,10 @@ namespace WebAnalyzer.Server
 
             server = new WebSocketListener(new IPEndPoint(IPAddress.Any, port), options);
 
-            //server = new WebSocketListener(new IPEndPoint(IPAddress.Any, port));
-
             //add 
             var rfc6455 = new vtortola.WebSockets.Rfc6455.WebSocketFactoryRfc6455(server);
             rfc6455.MessageExtensions.RegisterExtension(new WebSocketDeflateExtension());
             server.Standards.RegisterStandard(rfc6455);
-        }
-
-        public void start()
-        {
-            CreateServer();
-            prepareServer();
         }
 
         public void start(int port)
@@ -114,11 +100,13 @@ namespace WebAnalyzer.Server
 
         public void stop()
         {
-            _connManager.StopMessageThread();
-            _connManager.ResetConnections();
+            cancellation.Cancel();
 
             server.Stop();
-            cancellation.Cancel();
+
+            _connManager.StopMessageThread();
+            
+            _connManager.ResetConnections();
 
             server.Dispose();
 

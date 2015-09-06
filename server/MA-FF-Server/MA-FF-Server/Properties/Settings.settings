@@ -60,10 +60,10 @@
       <Value Profile="(Default)">data\{1}\aoi\</Value>
     </Setting>
     <Setting Name="WSMessageDelay" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">1</Value>
+      <Value Profile="(Default)">10</Value>
     </Setting>
     <Setting Name="MouseTrackingInterval" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">5</Value>
+      <Value Profile="(Default)">15</Value>
     </Setting>
     <Setting Name="TestrunSaveCheckIntervall" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1000</Value>
