@@ -10,7 +10,7 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.DataModel
 {
-    public class GazeModel : BasicRawData
+    public class GazeModel : BasicData
     {
         
         private String _uniqueId;

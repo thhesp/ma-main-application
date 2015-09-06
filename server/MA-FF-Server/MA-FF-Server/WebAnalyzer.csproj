@@ -152,6 +152,9 @@
     <Compile Include="Models\AnalysisModel\StatisticsAnalyser.cs" />
     <Compile Include="Models\Base\ExperimentModel.cs" />
     <Compile Include="Models\Base\ExperimentParticipant.cs" />
+    <Compile Include="Models\Base\RawData.cs" />
+    <Compile Include="Models\Base\RawEvent.cs" />
+    <Compile Include="Models\Base\RawGaze.cs" />
     <Compile Include="Models\Base\UIDBase.cs" />
     <Compile Include="Models\MessageModel\In\ActivationMessage.cs" />
     <Compile Include="Models\MessageModel\In\ErrorMessage.cs" />
@@ -161,7 +164,7 @@
     <Compile Include="Models\SettingsModel\DomainSettings.cs" />
     <Compile Include="Models\SettingsModel\ExperimentSettings.cs" />
     <Compile Include="Controller\ExportController.cs" />
-    <Compile Include="Models\Base\BasicRawData.cs" />
+    <Compile Include="Models\Base\BasicData.cs" />
     <Compile Include="Models\MessageModel\Out\DataMessage.cs" />
     <Compile Include="Models\MessageModel\Out\EchoMessage.cs" />
     <Compile Include="Models\MessageModel\Message.cs" />

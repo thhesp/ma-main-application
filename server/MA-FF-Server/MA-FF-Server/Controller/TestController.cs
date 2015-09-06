@@ -13,6 +13,7 @@ using WebAnalyzer.Test.Communication;
 using WebAnalyzer.EyeTracking;
 using WebAnalyzer.Events;
 using WebAnalyzer.UI.InteractionObjects;
+using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.Controller
 {
@@ -78,6 +79,11 @@ namespace WebAnalyzer.Controller
         private System.Timers.Timer saveTimer;
 
         /// <summary>
+        /// Contains the raw data of the tracking device, without any extra informations.
+        /// </summary>
+        private RawTrackingData _rawData = new RawTrackingData();
+
+        /// <summary>
         /// Constructor which creates the TestModel, prepares all Servies (Websocket and Tracking) and creates the timer.
         /// </summary>
         public TestController()
@@ -114,6 +120,14 @@ namespace WebAnalyzer.Controller
         public TestModel Test
         {
             get { return _test; }
+        }
+
+        /// <summary>
+        /// Interface to access the collected raw data.
+        /// </summary>
+        public RawTrackingData RawData
+        {
+            get { return _rawData; }
         }
 
         /// <summary>
@@ -256,6 +270,7 @@ namespace WebAnalyzer.Controller
 
                     _etModel.PrepareGaze += On_PrepareGazeData;
 
+                    _etModel.AddTrackingEvent += On_TrackingEvent;
 
                     if (Properties.Settings.Default.ETConnectLocal)
                     {
@@ -389,6 +404,7 @@ namespace WebAnalyzer.Controller
         {
             if (this.Running)
             {
+                _rawData.AddRawGaze(timestamp, x,y);
                 return _test.PrepareGazeData(timestamp, x, y);
             }
             return null;
@@ -406,6 +422,7 @@ namespace WebAnalyzer.Controller
         {
             if (this.Running)
             {
+                _rawData.AddRawGaze(timestamp, leftX, leftY, rightX, rightY);
                 return _test.PrepareGazeData(timestamp, leftX, leftY, rightX, rightY);
             }
             return null;
@@ -511,6 +528,17 @@ namespace WebAnalyzer.Controller
             {
                 _test.AddWebpage(e.URL, e.Timestamp);
             }
+        }
+
+        /// <summary>
+        /// Event which gets triggered from the tracking model when an event happend.
+        /// </summary>
+        /// <param name="source">Object from which the event gets triggered.</param>
+        /// <param name="e">Data about the event which happened.</param>
+        /// <remarks>Used for collecting data about fixations from the EyeTracker.</remarks>
+        public void On_TrackingEvent(object source, AddTrackingEvent e)
+        {
+            _rawData.AddEvent(e.Event);
         }
     }
 }

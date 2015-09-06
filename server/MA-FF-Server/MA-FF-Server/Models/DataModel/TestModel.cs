@@ -10,6 +10,7 @@ using WebAnalyzer.Models.SettingsModel;
 using WebAnalyzer.Models.AnalysisModel;
 using WebAnalyzer.Models.AlgorithmModel;
 using WebAnalyzer.Events;
+using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.Models.DataModel
 {
@@ -20,15 +21,9 @@ namespace WebAnalyzer.Models.DataModel
 
         private List<WebpageModel> _visitedPages = new List<WebpageModel>();
 
-        private Dictionary<String, GazeModel> _unassignedPositions;
+        private Dictionary<String, GazeModel> _unassignedPositions = new Dictionary<String, GazeModel>();
 
         private String _lastGazeActionTimestamp = "";
-        
-
-        public TestModel()
-        {
-            _unassignedPositions = new Dictionary<String, GazeModel>();
-        }
 
         public String Started
         {
@@ -514,17 +509,17 @@ namespace WebAnalyzer.Models.DataModel
 
         public String PrepareGazeData(String timestamp, double leftX, double leftY, double rightX, double rightY)
         {
-            String callbackTimestamp = Timestamp.GetMillisecondsUnixTimestamp();
+            String requestedTimestamp = Timestamp.GetMillisecondsUnixTimestamp();
 
             GazeModel gaze = new GazeModel(timestamp);
 
-            gaze.DataRequestedTimestamp = callbackTimestamp;
+            gaze.DataRequestedTimestamp = requestedTimestamp;
 
             
 
             // left eye
 
-            EyeTrackingData leftData = new EyeTrackingData(leftX, leftY, callbackTimestamp);
+            EyeTrackingData leftData = new EyeTrackingData(leftX, leftY, requestedTimestamp);
 
             PositionDataModel leftPos = new PositionDataModel();
 
@@ -533,7 +528,7 @@ namespace WebAnalyzer.Models.DataModel
 
             // right eye
 
-            EyeTrackingData rightData = new EyeTrackingData(rightX, rightY, callbackTimestamp);
+            EyeTrackingData rightData = new EyeTrackingData(rightX, rightY, requestedTimestamp);
 
             PositionDataModel rightPos = new PositionDataModel();
 

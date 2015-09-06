@@ -5,6 +5,7 @@ using WebAnalyzer.Server;
 using WebAnalyzer.Util;
 
 using WebAnalyzer.Events;
+using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.EyeTracking
 {
@@ -18,6 +19,11 @@ namespace WebAnalyzer.EyeTracking
         /// Event which is used for sending data to the test controller.
         /// </summary>
         public event PrepareGazeEventHandler PrepareGaze;
+
+        /// <summary>
+        /// Event which is used for sending events to the test controller.
+        /// </summary>
+        public event AddTrackingEventHandler AddTrackingEvent;
 
         /// <summary>
         /// Object of the EyeTracking Controller. Used for interacting with the EyeTracker.
@@ -192,8 +198,6 @@ namespace WebAnalyzer.EyeTracking
                 " - DistanceL: " + sampleData.leftEye.eyePositionZ.ToString();
 
            PrepareGaze(this, new PrepareGazeDataEvent(sampleData.timestamp.ToString(), sampleData.leftEye.gazeX, sampleData.leftEye.gazeY, sampleData.rightEye.gazeX, sampleData.rightEye.gazeY));
-
-           Logger.Log(data);
         }
 
         /// <summary>
@@ -207,10 +211,26 @@ namespace WebAnalyzer.EyeTracking
             String data = "Data from EventCallback - eye: " + eventData.eye.ToString() +
                 " Event: " + eventData.eventType + " startTime: " + eventData.startTime.ToString() +
                 " End:" + eventData.endTime.ToString() + " duration:" + eventData.duration.ToString() +
-                " PosX:" + eventData.positionX.ToString() + " PosY:" + eventData.positionY.ToString();
+                " PosX:" + eventData.positionX.ToString() +
+                " PosY:" + eventData.positionY.ToString();
 
+            RawTrackingEvent rawEvent = new RawTrackingEvent();
 
-            Logger.Log(data);
+            rawEvent.Eye = eventData.eye.ToString();
+
+            rawEvent.EventType = eventData.eventType.ToString();
+
+            rawEvent.StartTime = eventData.startTime.ToString();
+
+            rawEvent.EndTime = eventData.endTime.ToString();
+
+            rawEvent.Duration = eventData.duration.ToString();
+
+            rawEvent.X = eventData.positionX;
+
+            rawEvent.Y = eventData.positionY;
+
+            AddTrackingEvent(this, new AddTrackingEvent(rawEvent));
         }
 
         /// <summary>
@@ -220,7 +240,7 @@ namespace WebAnalyzer.EyeTracking
         {
             String data = "Data from CalibrationCallback - Number:" + calibrationPointData.number + " PosX:" + calibrationPointData.positionx + " PosY:" + calibrationPointData.positiony;
 
-            Logger.Log(data);
+            //Logger.Log(data);
         }
 
         #endregion
