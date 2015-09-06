@@ -91,6 +91,12 @@ namespace WebAnalyzer.Models.DataModel
 
             webpageNode.Attributes.Append(visited);
 
+            XmlAttribute numberOfGazes = xmlDoc.CreateAttribute("number-of-gazes");
+
+            numberOfGazes.Value = _positionData.Count.ToString();
+
+            webpageNode.Attributes.Append(numberOfGazes);
+
             foreach (GazeModel data in _positionData)
             {
                 webpageNode.AppendChild(data.ToXML(xmlDoc));
