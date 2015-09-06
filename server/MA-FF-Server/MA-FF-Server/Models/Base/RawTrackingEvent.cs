@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace WebAnalyzer.Models.Base
 {
@@ -56,6 +57,111 @@ namespace WebAnalyzer.Models.Base
         {
             get { return _y; }
             set { _y = value; }
+        }
+
+        public XmlNode ToXML(XmlDocument xmlDoc)
+        {
+            XmlNode eventNode = xmlDoc.CreateElement("event");
+
+            //eventtype
+
+            XmlAttribute eventType = xmlDoc.CreateAttribute("event-type");
+
+            eventType.Value = this.EventType;
+
+            eventNode.Attributes.Append(eventType);
+
+            //eye
+
+            XmlAttribute eye = xmlDoc.CreateAttribute("eye");
+
+            eye.Value = this.Eye;
+
+            eventNode.Attributes.Append(eye);
+
+            //starttime
+
+            XmlAttribute startTime = xmlDoc.CreateAttribute("start-time");
+
+            startTime.Value = this.StartTime;
+
+            eventNode.Attributes.Append(startTime);
+
+            //endtime
+
+            XmlAttribute endTime = xmlDoc.CreateAttribute("end-time");
+
+            endTime.Value = this.EndTime;
+
+            eventNode.Attributes.Append(endTime);
+
+            //duration
+
+            XmlAttribute duration = xmlDoc.CreateAttribute("duration");
+
+            duration.Value = this.Duration;
+
+            eventNode.Attributes.Append(duration);
+
+            //x
+
+            XmlAttribute x = xmlDoc.CreateAttribute("x");
+
+            x.Value = this.X.ToString();
+
+            eventNode.Attributes.Append(x);
+
+            //y
+
+            XmlAttribute y = xmlDoc.CreateAttribute("y");
+
+            y.Value = this.Y.ToString();
+
+            eventNode.Attributes.Append(y);
+
+
+
+            return eventNode;
+        }
+
+        public static RawTrackingEvent LoadFromXML(XmlNode eventNode)
+        {
+            if (eventNode.Name == "event")
+            {
+                RawTrackingEvent rawEvent = new RawTrackingEvent();
+
+                foreach (XmlAttribute attr in eventNode.Attributes)
+                {
+                    switch (attr.Name)
+                    {
+                        case "event-type":
+                            rawEvent.EventType = attr.Value;
+                            break;
+                        case "eye":
+                            rawEvent.Eye = attr.Value;
+                            break;
+                        case "start-time":
+                            rawEvent.StartTime = attr.Value;
+                            break;
+                        case "end-time":
+                            rawEvent.EndTime = attr.Value;
+                            break;
+                        case "duration":
+                            rawEvent.Duration = attr.Value;
+                            break;
+                        case "x":
+                            rawEvent.X = Double.Parse(attr.Value);
+                            break;
+                        case "y":
+                            rawEvent.Y = Double.Parse(attr.Value);
+                            break;
+                    }
+                }
+
+                return rawEvent;
+            }
+
+            return null;
         }
     }
 }

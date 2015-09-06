@@ -94,15 +94,6 @@ namespace WebAnalyzer.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("data\\{1}\\fixations\\")]
-        public string FixdataLocation {
-            get {
-                return ((string)(this["FixdataLocation"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("data\\{1}\\statistics\\")]
         public string StatisticsLocation {
             get {
@@ -220,18 +211,6 @@ namespace WebAnalyzer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("data\\{1}\\aoi\\")]
-        public string AOILocation {
-            get {
-                return ((string)(this["AOILocation"]));
-            }
-            set {
-                this["AOILocation"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("10")]
         public int WSMessageDelay {
             get {
@@ -287,6 +266,18 @@ namespace WebAnalyzer.Properties {
             }
             set {
                 this["DataTimeout"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("data\\{1}\\data")]
+        public string ExperimentDataLocation {
+            get {
+                return ((string)(this["ExperimentDataLocation"]));
+            }
+            set {
+                this["ExperimentDataLocation"] = value;
             }
         }
     }

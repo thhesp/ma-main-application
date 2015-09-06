@@ -135,7 +135,7 @@ namespace WebAnalyzer.Controller
         /// <param name="testrun">The testdata</param>
         public static Boolean SaveExperimentTestRun(ExperimentModel experiment, ExperimentParticipant currentParticipant, TestModel testrun){
             String dir = experiment.GetBaseExperimentLocation();
-            dir += Properties.Settings.Default.RawdataLocation.Replace("{1}", currentParticipant.Identifier);
+            dir += Properties.Settings.Default.ExperimentDataLocation.Replace("{1}", currentParticipant.Identifier);
 
             String timestamp = Util.Timestamp.GetDateTime(testrun.Started);
 
@@ -147,11 +147,6 @@ namespace WebAnalyzer.Controller
             xmlDoc.Save(dir + "\\" + timestamp + ".xml");
 
             SaveExperimentStatistics(experiment, currentParticipant, timestamp, testrun);
-            /*
-            
-            SaveExperimentFixations(experiment, currentParticipant, timestamp, testrun);
-            SaveExperimentAOI(experiment, currentParticipant, timestamp, testrun);
-            */
             return true;
         }
 
@@ -175,6 +170,28 @@ namespace WebAnalyzer.Controller
             xmlDoc.Save(dir + "\\" + timestamp + ".xml");
 
 
+            return true;
+        }
+
+        /// <summary>
+        /// Saves the given testrun to the given experiment and given participant.
+        /// </summary>
+        /// <param name="experiment">The experiment to which the testrun belongs.</param>
+        /// <param name="currentParticipant">The participant to which the testrun belongs</param>
+        /// <param name="testrun">The testdata</param>
+        public static Boolean SaveExperimentRawData(ExperimentModel experiment, ExperimentParticipant currentParticipant, TestModel testrun, RawTrackingData rawData)
+        {
+            String dir = experiment.GetBaseExperimentLocation();
+            dir += Properties.Settings.Default.RawdataLocation.Replace("{1}", currentParticipant.Identifier);
+
+            String timestamp = Util.Timestamp.GetDateTime(testrun.Started);
+
+            FileIO.CheckPathAndCreate(dir);
+            XmlDocument xmlDoc = new XmlDocument();
+
+            xmlDoc.AppendChild(rawData.ToXML(currentParticipant, xmlDoc));
+
+            xmlDoc.Save(dir + "\\" + timestamp + ".xml");
             return true;
         }
 

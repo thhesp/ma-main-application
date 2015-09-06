@@ -386,7 +386,7 @@ namespace WebAnalyzer.Controller
             {
                 Logger.Log("Saving data...");
                 ExportController.SaveExperimentTestRun(_currentExperiment, _currentParticipant, _testController.Test);
-                
+                ExportController.SaveExperimentRawData(_currentExperiment, _currentParticipant, _testController.Test, _testController.RawData);
             }
 
             if (_testrunControlUI != null)

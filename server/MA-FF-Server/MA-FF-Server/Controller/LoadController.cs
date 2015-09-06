@@ -166,10 +166,10 @@ namespace WebAnalyzer.Controller
         /// </summary>
         /// <param name="experiment">Current experiment to get the data from</param>
         /// <param name="participant">Current participant to get the data from</param>
-        public static String GetRawTestdataLocation(ExperimentModel experiment, ExperimentParticipant participant)
+        public static String GetTestdataLocation(ExperimentModel experiment, ExperimentParticipant participant)
         {
             String dir = experiment.GetBaseExperimentLocation();
-            dir += Properties.Settings.Default.RawdataLocation.Replace("{1}", participant.Identifier);
+            dir += Properties.Settings.Default.ExperimentDataLocation.Replace("{1}", participant.Identifier);
 
             FileIO.CheckPathAndCreate(dir);
 

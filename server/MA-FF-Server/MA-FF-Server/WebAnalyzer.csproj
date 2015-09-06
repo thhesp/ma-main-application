@@ -376,9 +376,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Analysis\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="UI\HTMLResources\css\font-awesome.min.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

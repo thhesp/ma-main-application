@@ -45,7 +45,7 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         private void extractTestrunData(ExperimentModel exp, ExperimentParticipant participant)
         {
-            String path = LoadController.GetRawTestdataLocation(exp, participant);
+            String path = LoadController.GetTestdataLocation(exp, participant);
 
             Logger.Log("Rawdata path: " + path);
 

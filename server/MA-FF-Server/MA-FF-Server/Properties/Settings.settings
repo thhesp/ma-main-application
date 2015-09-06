@@ -23,9 +23,6 @@
     <Setting Name="RawdataLocation" Type="System.String" Scope="Application">
       <Value Profile="(Default)">data\{1}\raw</Value>
     </Setting>
-    <Setting Name="FixdataLocation" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">data\{1}\fixations\</Value>
-    </Setting>
     <Setting Name="StatisticsLocation" Type="System.String" Scope="Application">
       <Value Profile="(Default)">data\{1}\statistics\</Value>
     </Setting>
@@ -56,9 +53,6 @@
     <Setting Name="LogCount" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">5</Value>
     </Setting>
-    <Setting Name="AOILocation" Type="System.String" Scope="User">
-      <Value Profile="(Default)">data\{1}\aoi\</Value>
-    </Setting>
     <Setting Name="WSMessageDelay" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">10</Value>
     </Setting>
@@ -73,6 +67,9 @@
     </Setting>
     <Setting Name="DataTimeout" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="ExperimentDataLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">data\{1}\data</Value>
     </Setting>
   </Settings>
 </SettingsFile>
