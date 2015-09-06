@@ -70,7 +70,7 @@ namespace WebAnalyzer.UI.InteractionObjects
             ShowSaveIndicator();
 
             if(_testrun != null && _folderPath != "" && _filename != ""){
-                ExportController.ExportExperimentTestRun(_testrun, _folderPath, _filename, _exportFormat);
+                ExportController.ExportExperimentTestRun(_testrun, _participant,_folderPath, _filename, _exportFormat);
             }
             else
             {
@@ -225,8 +225,8 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         private void ExportData()
         {
-            ExportController.SaveExperimentFixations(_testrun, _folderPath, _filename, _exportFormat, _containGazeData);
-            ExportController.SaveExperimentAOI(_exp, _testrun, _folderPath, _filename, _exportFormat, _containGazeData);
+            ExportController.SaveExperimentFixations(_testrun, _participant, _folderPath, _filename, _exportFormat, _containGazeData);
+            ExportController.SaveExperimentAOI(_exp, _testrun, _participant, _folderPath, _filename, _exportFormat, _containGazeData);
 
             HideSaveIndicator();
         }

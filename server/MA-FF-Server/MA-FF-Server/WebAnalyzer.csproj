@@ -125,6 +125,7 @@
   <ItemGroup>
     <Compile Include="Controller\LoadController.cs" />
     <Compile Include="Controller\MainController.cs" />
+    <Compile Include="Events\AddTrackingEvent.cs" />
     <Compile Include="Events\AddWebpageEvent.cs" />
     <Compile Include="Events\AddConnectionEvent.cs" />
     <Compile Include="Events\CreateRuleEvent.cs" />
@@ -152,9 +153,9 @@
     <Compile Include="Models\AnalysisModel\StatisticsAnalyser.cs" />
     <Compile Include="Models\Base\ExperimentModel.cs" />
     <Compile Include="Models\Base\ExperimentParticipant.cs" />
-    <Compile Include="Models\Base\RawData.cs" />
-    <Compile Include="Models\Base\RawEvent.cs" />
-    <Compile Include="Models\Base\RawGaze.cs" />
+    <Compile Include="Models\Base\RawTrackingData.cs" />
+    <Compile Include="Models\Base\RawTrackingEvent.cs" />
+    <Compile Include="Models\Base\RawTrackingGaze.cs" />
     <Compile Include="Models\Base\UIDBase.cs" />
     <Compile Include="Models\MessageModel\In\ActivationMessage.cs" />
     <Compile Include="Models\MessageModel\In\ErrorMessage.cs" />

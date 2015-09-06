@@ -142,7 +142,7 @@ namespace WebAnalyzer.Controller
             FileIO.CheckPathAndCreate(dir);
             XmlDocument xmlDoc = new XmlDocument();
 
-            xmlDoc.AppendChild(testrun.ToXML(xmlDoc));
+            xmlDoc.AppendChild(testrun.ToXML(currentParticipant, xmlDoc));
 
             xmlDoc.Save(dir + "\\" + timestamp + ".xml");
 
@@ -152,29 +152,6 @@ namespace WebAnalyzer.Controller
             SaveExperimentFixations(experiment, currentParticipant, timestamp, testrun);
             SaveExperimentAOI(experiment, currentParticipant, timestamp, testrun);
             */
-            return true;
-        }
-
-        /// <summary>
-        /// Saves the given testrun fixations to the given experiment and given participant.
-        /// </summary>
-        /// <param name="experiment">The experiment to which the testrun belongs.</param>
-        /// <param name="currentParticipant">The participant to which the testrun belongs</param>
-        /// <param name="timestamp">Timestamp to be used for the file name.</param>
-        /// <param name="testrun">The testdata</param>
-        public static Boolean SaveExperimentFixations(ExperimentModel experiment, ExperimentParticipant currentParticipant, String timestamp, TestModel testrun)
-        {
-            String dir = experiment.GetBaseExperimentLocation();
-            dir += Properties.Settings.Default.FixdataLocation.Replace("{1}", currentParticipant.Identifier);
-
-            FileIO.CheckPathAndCreate(dir);
-            XmlDocument xmlDoc = new XmlDocument();
-
-            xmlDoc.AppendChild(testrun.GenerateFixationXML(xmlDoc, false));
-
-            xmlDoc.Save(dir + "\\" + timestamp + ".xml");
-            
-
             return true;
         }
 
@@ -201,29 +178,6 @@ namespace WebAnalyzer.Controller
             return true;
         }
 
-        /// <summary>
-        /// Saves the given testrun aois to the given experiment and given participant.
-        /// </summary>
-        /// <param name="experiment">The experiment to which the testrun belongs.</param>
-        /// <param name="currentParticipant">The participant to which the testrun belongs</param>
-        /// <param name="timestamp">Timestamp to be used for the file name.</param>
-        /// <param name="testrun">The testdata</param>
-        public static Boolean SaveExperimentAOI(ExperimentModel experiment, ExperimentParticipant currentParticipant, String timestamp, TestModel testrun)
-        {
-            String dir = experiment.GetBaseExperimentLocation();
-            dir += Properties.Settings.Default.AOILocation.Replace("{1}", currentParticipant.Identifier);
-
-            FileIO.CheckPathAndCreate(dir);
-            XmlDocument xmlDoc = new XmlDocument();
-
-            xmlDoc.AppendChild(testrun.GenerateAOIXML(experiment.Settings, xmlDoc, false));
-
-            xmlDoc.Save(dir + "\\" + timestamp + ".xml");
-
-
-            return true;
-        }
-
 
         /// <summary>
         /// Export the given testrun to the given directory and filename with the given format.
@@ -232,7 +186,7 @@ namespace WebAnalyzer.Controller
         /// <param name="dir">Directory to export to</param>
         /// <param name="filename">Filename to use</param>
         /// <param name="format">Format in which to save the data</param>
-        public static Boolean ExportExperimentTestRun(TestModel testrun, String dir, String filename, EXPORT_FORMATS format)
+        public static Boolean ExportExperimentTestRun(TestModel testrun, ExperimentParticipant participant, String dir, String filename, EXPORT_FORMATS format)
         {
             if (Directory.Exists(dir))
             {
@@ -243,7 +197,7 @@ namespace WebAnalyzer.Controller
                     case EXPORT_FORMATS.XML:
                         XmlDocument xmlDoc = new XmlDocument();
 
-                        xmlDoc.AppendChild(testrun.ToXML(xmlDoc));
+                        xmlDoc.AppendChild(testrun.ToXML(participant, xmlDoc));
 
                         xmlDoc.Save(dir + "\\" + filename + ".xml");
                         break;
@@ -270,7 +224,7 @@ namespace WebAnalyzer.Controller
         /// <param name="filename">Filename to use</param>
         /// <param name="format">Format in which to save the data</param>
         /// <param name="includeGazeData">Should the export contain data about the single gazes</param>
-        public static Boolean SaveExperimentFixations(TestModel testrun, String dir, String filename, EXPORT_FORMATS format, Boolean includeGazeData)
+        public static Boolean SaveExperimentFixations(TestModel testrun, ExperimentParticipant participant, String dir, String filename, EXPORT_FORMATS format, Boolean includeGazeData)
         {
             if (Directory.Exists(dir))
             {
@@ -281,7 +235,7 @@ namespace WebAnalyzer.Controller
                     case EXPORT_FORMATS.XML:
                         XmlDocument xmlDoc = new XmlDocument();
 
-                        xmlDoc.AppendChild(testrun.GenerateFixationXML(xmlDoc, includeGazeData));
+                        xmlDoc.AppendChild(testrun.GenerateFixationXML(participant, xmlDoc, includeGazeData));
 
                         xmlDoc.Save(dir + "\\" + filename + "-fixations.xml");
                         break;
@@ -306,7 +260,7 @@ namespace WebAnalyzer.Controller
         /// <param name="filename">Filename to use</param>
         /// <param name="format">Format in which to save the data</param>
         /// <param name="includeGazeData">Should the export contain data about the single gazes</param>
-        public static Boolean SaveExperimentAOI(ExperimentModel experiment, TestModel testrun, String dir, String filename, EXPORT_FORMATS format, Boolean includeGazeData)
+        public static Boolean SaveExperimentAOI(ExperimentModel experiment, TestModel testrun, ExperimentParticipant participant, String dir, String filename, EXPORT_FORMATS format, Boolean includeGazeData)
         {
             if (Directory.Exists(dir))
             {
@@ -317,7 +271,7 @@ namespace WebAnalyzer.Controller
                     case EXPORT_FORMATS.XML:
                         XmlDocument xmlDoc = new XmlDocument();
 
-                        xmlDoc.AppendChild(testrun.GenerateAOIXML(experiment.Settings, xmlDoc, includeGazeData));
+                        xmlDoc.AppendChild(testrun.GenerateAOIXML(experiment.Settings, participant, xmlDoc, includeGazeData));
 
                         xmlDoc.Save(dir + "\\" + filename + "-aois.xml");
                         break;

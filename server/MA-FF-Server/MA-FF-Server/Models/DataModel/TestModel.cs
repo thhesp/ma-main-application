@@ -47,9 +47,7 @@ namespace WebAnalyzer.Models.DataModel
             return false;
         }
 
-        #region XMLFunctions
-
-        public XmlNode ToXML(XmlDocument xmlDoc)
+        public XmlNode ToXML(ExperimentParticipant participant, XmlDocument xmlDoc)
         {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
 
@@ -79,6 +77,10 @@ namespace WebAnalyzer.Models.DataModel
 
             experimentNode.Attributes.Append(visitedWebpagesCount);
 
+            // add participant data
+            experimentNode.AppendChild(participant.ToXML(xmlDoc));
+
+            // add experiment data
             XmlNode webpagesNode = xmlDoc.CreateElement("webpages");
 
             foreach(WebpageModel page in _visitedPages)
@@ -115,15 +117,18 @@ namespace WebAnalyzer.Models.DataModel
                 }
             }
 
-            foreach (XmlNode webpages in experimentNode.ChildNodes)
+            foreach (XmlNode childs in experimentNode.ChildNodes)
             {
-                foreach (XmlNode webpage in webpages)
+                if (childs.Name == "webpages")
                 {
-                    WebpageModel page = WebpageModel.LoadFromXML(webpage);
-
-                    if (page != null)
+                    foreach (XmlNode webpage in childs)
                     {
-                        test._visitedPages.Add(page);
+                        WebpageModel page = WebpageModel.LoadFromXML(webpage);
+
+                        if (page != null)
+                        {
+                            test._visitedPages.Add(page);
+                        }
                     }
                 }
             }
@@ -291,12 +296,7 @@ namespace WebAnalyzer.Models.DataModel
             return durations;
         }
 
-        public XmlNode GenerateFixationXML(XmlDocument xmlDoc)
-        {
-            return GenerateFixationXML(xmlDoc, true);
-        }
-
-        public XmlNode GenerateFixationXML(XmlDocument xmlDoc, Boolean includeSingleGazeData)
+        public XmlNode GenerateFixationXML(ExperimentParticipant participant, XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
 
@@ -327,6 +327,10 @@ namespace WebAnalyzer.Models.DataModel
 
             experimentNode.Attributes.Append(visitedWebpagesCount);
 
+            //add participant data
+            experimentNode.AppendChild(participant.ToXML(xmlDoc));
+
+            //add experiment data
             XmlNode webpagesNode = xmlDoc.CreateElement("webpages");
 
             foreach (WebpageModel page in _visitedPages)
@@ -339,12 +343,7 @@ namespace WebAnalyzer.Models.DataModel
             return experimentNode;
         }
 
-        public XmlNode GenerateAOIXML(ExperimentSettings settings, XmlDocument xmlDoc)
-        {
-            return GenerateAOIXML(settings, xmlDoc, true);
-        }
-
-        public XmlNode GenerateAOIXML(ExperimentSettings settings, XmlDocument xmlDoc, Boolean includeSingleGazeData)
+        public XmlNode GenerateAOIXML(ExperimentSettings settings, ExperimentParticipant participant, XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
 
@@ -374,6 +373,10 @@ namespace WebAnalyzer.Models.DataModel
 
             experimentNode.Attributes.Append(visitedWebpagesCount);
 
+            //add participant data
+            experimentNode.AppendChild(participant.ToXML(xmlDoc));
+
+            //add experiment data
             XmlNode webpagesNode = xmlDoc.CreateElement("webpages");
 
             foreach (WebpageModel page in _visitedPages)
@@ -385,8 +388,6 @@ namespace WebAnalyzer.Models.DataModel
 
             return experimentNode;
         }
-
-        #endregion
 
         public Boolean CheckForSave(){
             if(_unassignedPositions.Count == 0){
