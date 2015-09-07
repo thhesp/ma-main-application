@@ -82,8 +82,6 @@ namespace WebAnalyzer.EyeTracking
             catch (Exception exc)
             {
                 Logger.Log("Exception: " + exc.Message);
-                // log error?
-                //logger1.Text = "Exception during iV_Connect: " + exc.Message;
                 return false;
             }
         }
@@ -94,27 +92,28 @@ namespace WebAnalyzer.EyeTracking
         /// </summary>
         public Boolean connectLocal()
         {
-            Logger.Log("connectLocal");
+            Logger.Log("Connect local");
 
-            /*int errorID = 0;
             try
             {
-                ETDevice.iV_SetCalibrationCallback(m_CalibrationCallback);
-                ETDevice.iV_SetSampleCallback(m_SampleCallback);
-                ETDevice.iV_SetEventCallback(m_EventCallback);
 
-                errorID = ETDevice.iV_ConnectLocal();
+                int ret = ETDevice.iV_ConnectLocal();
+
+                if (ret == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
             }
-            catch (System.Exception e)
+            catch (Exception exc)
             {
-                Logger.Log(e.Message);
+                Logger.Log("Exception: " + exc.Message);
+                return false;
             }
-
-            Logger.Log("ErrorID: " + errorID);*/
-
-
-
-            return connect("127.0.0.1", 4444, "127.0.0.1", 5555);
         }
 
         /// <summary>
@@ -147,7 +146,7 @@ namespace WebAnalyzer.EyeTracking
             {
                 //ETDevice.iV_SetCalibrationCallback(m_CalibrationCallback);
                 ETDevice.iV_SetSampleCallback(m_SampleCallback);
-                //ETDevice.iV_SetEventCallback(m_EventCallback);
+                ETDevice.iV_SetEventCallback(m_EventCallback);
             }
         }
 
@@ -160,7 +159,7 @@ namespace WebAnalyzer.EyeTracking
             {
                 //ETDevice.iV_SetCalibrationCallback(null);
                 ETDevice.iV_SetSampleCallback(null);
-                //ETDevice.iV_SetEventCallback(null);
+                ETDevice.iV_SetEventCallback(null);
             }
         }
 
@@ -238,7 +237,7 @@ namespace WebAnalyzer.EyeTracking
         /// </summary>
         void CalibrationCallbackFunction(EyeTrackingController.CalibrationPointStruct calibrationPointData)
         {
-            String data = "Data from CalibrationCallback - Number:" + calibrationPointData.number + " PosX:" + calibrationPointData.positionx + " PosY:" + calibrationPointData.positiony;
+            String data = "Data from CalibrationCallback - Number:" + calibrationPointData.number + " PosX:" + calibrationPointData.positionX + " PosY:" + calibrationPointData.positionY;
 
             //Logger.Log(data);
         }

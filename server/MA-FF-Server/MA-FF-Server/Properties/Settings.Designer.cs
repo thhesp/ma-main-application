@@ -175,7 +175,7 @@ namespace WebAnalyzer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("5555")]
+        [global::System.Configuration.DefaultSettingValueAttribute("4444")]
         public int ETSentPort {
             get {
                 return ((int)(this["ETSentPort"]));
@@ -185,15 +185,12 @@ namespace WebAnalyzer.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("log\\")]
         public string LogsLocation {
             get {
                 return ((string)(this["LogsLocation"]));
-            }
-            set {
-                this["LogsLocation"] = value;
             }
         }
         
@@ -269,15 +266,12 @@ namespace WebAnalyzer.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("data\\{1}\\data")]
         public string ExperimentDataLocation {
             get {
                 return ((string)(this["ExperimentDataLocation"]));
-            }
-            set {
-                this["ExperimentDataLocation"] = value;
             }
         }
     }

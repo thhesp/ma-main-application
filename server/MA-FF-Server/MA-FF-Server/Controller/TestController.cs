@@ -211,8 +211,10 @@ namespace WebAnalyzer.Controller
                 }
 
 
+                Logger.Log("Connection Status: " + _etModel.isConnected());
+
                 if (_etModel != null
-                    && _etModel.isConnected() == 0) // RET_SUCCESS
+                    && _etModel.isConnected() == 1) // RET_SUCCESS
                 {
                     return ExperimentObject.CONNECTION_STATUS.connected;
                 }

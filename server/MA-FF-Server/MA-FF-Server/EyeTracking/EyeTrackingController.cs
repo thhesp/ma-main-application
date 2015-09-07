@@ -1,4 +1,35 @@
-﻿using System;
+﻿// -----------------------------------------------------------------------
+//
+// (c) Copyright 1997-2015, SensoMotoric Instruments GmbH
+// 
+// Permission  is  hereby granted,  free  of  charge,  to any  person  or
+// organization  obtaining  a  copy  of  the  software  and  accompanying
+// documentation  covered  by  this  license  (the  "Software")  to  use,
+// reproduce,  display, distribute, execute,  and transmit  the Software,
+// and  to  prepare derivative  works  of  the  Software, and  to  permit
+// third-parties to whom the Software  is furnished to do so, all subject
+// to the following:
+// 
+// The  copyright notices  in  the Software  and  this entire  statement,
+// including the above license  grant, this restriction and the following
+// disclaimer, must be  included in all copies of  the Software, in whole
+// or  in part, and  all derivative  works of  the Software,  unless such
+// copies   or   derivative   works   are   solely   in   the   form   of
+// machine-executable  object   code  generated  by   a  source  language
+// processor.
+// 
+// THE  SOFTWARE IS  PROVIDED  "AS  IS", WITHOUT  WARRANTY  OF ANY  KIND,
+// EXPRESS OR  IMPLIED, INCLUDING  BUT NOT LIMITED  TO THE  WARRANTIES OF
+// MERCHANTABILITY,   FITNESS  FOR  A   PARTICULAR  PURPOSE,   TITLE  AND
+// NON-INFRINGEMENT. IN  NO EVENT SHALL  THE COPYRIGHT HOLDERS  OR ANYONE
+// DISTRIBUTING  THE  SOFTWARE  BE   LIABLE  FOR  ANY  DAMAGES  OR  OTHER
+// LIABILITY, WHETHER  IN CONTRACT, TORT OR OTHERWISE,  ARISING FROM, OUT
+// OF OR IN CONNECTION WITH THE  SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+//
+// -----------------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Runtime.InteropServices;
@@ -6,13 +37,80 @@ using System.Threading;
 
 namespace WebAnalyzer.EyeTracking
 {
-    /// <summary>
-    /// This class contains the functionality to use the iView X API of SMI.
-    /// </summary>
+
     public class EyeTrackingController
     {
 
+#if (x86) 
+		// use 32 bit library 
+		const string dllName = "iViewXAPI.dll";
+#elif (x64)
+		// use 64 bit library 
+		const string dllName = "iViewXAPI64.dll";
+#else
+        // use 32 bit library 
+        const string dllName = "iViewXAPI.dll";
+#warning iViewXAPI library might be wrong. 32bit dll will be loaded.
+#endif
+
+
+
+
         // API Struct definition. See the manual for further description. 
+
+        public enum ETDevice
+        {
+            NONE = 0,
+            RED = 1,
+            REDm = 2,
+            HiSpeed = 3,
+            MRI = 4,
+            HED = 5,
+            Custom = 7,
+            REDn = 8
+        };
+
+        public enum ETApplication
+        {
+            iViewX = 0,
+            iViewXOEM = 1,
+            iViewNG = 2
+        };
+
+        public enum FilterType
+        {
+            Average = 0
+        };
+
+        public enum FilterAction
+        {
+            Query = 0,
+            Set = 1
+        };
+
+        public enum CalibrationPointUsageStatusEnum
+        {
+            calibrationPointUsed = 0,
+            calibrationPointUnused = 1,
+            calibrationPointUnusedBecauseOfTimeout = 2,
+            calibrationPointUnusedBecauseOfBadQuality = 3,
+            calibrationPointIgnored = 4
+        };
+
+        public enum CalibrationStatusEnum
+        {
+            calibrationUnknown = 0,
+            calibrationInvalid = 1,
+            calibrationValid = 2,
+            calibrationInProgress = 3
+        };
+
+        public enum REDGeometryEnum
+        {
+            monitorIntegrated = 0,
+            standalone = 1
+        };
+
         public struct SystemInfoStruct
         {
             public int samplerate;
@@ -22,9 +120,37 @@ namespace WebAnalyzer.EyeTracking
             public int API_MajorVersion;
             public int API_MinorVersion;
             public int API_Buildnumber;
-            public int iV_ETSystem;
+            public ETDevice iV_ETSystem;
         };
 
+        public struct SpeedModeStruct
+        {
+            int version;
+            int speedMode;
+            int numberOfSpeedModes;
+            [MarshalAs(UnmanagedType.I4, SizeConst = 16)]
+            int[] speedModes;
+        };
+
+        public struct CalibrationPointStruct
+        {
+            public int number;
+            public int positionX;
+            public int positionY;
+        };
+
+        public struct CalibrationPointQualityStruct
+        {
+            int number;
+            int positionX;
+            int positionY;
+            double correctedPorX;
+            double correctedPorY;
+            double standardDeviationX;
+            double standardDeviationY;
+            CalibrationPointUsageStatusEnum usageStatus;
+            double qualityIndex;
+        };
 
         public struct EyeDataStruct
         {
@@ -44,7 +170,7 @@ namespace WebAnalyzer.EyeTracking
             public EyeDataStruct rightEye;
             public int planeNumber;
         };
-        
+
 
         public struct EventStruct
         {
@@ -57,14 +183,24 @@ namespace WebAnalyzer.EyeTracking
             public double positionY;
         };
 
-
-        public struct CalibrationPointStruct
+        public struct EyePositionStruct
         {
-            public int number;
-            public int positionx;
-            public int positiony;
+            public int validity;
+            public double relativePositionX;
+            public double relativePositionY;
+            public double relativePositionZ;
+            public double positionRatingX;
+            public double positionRatingY;
+            public double positionRatingZ;
         };
 
+        public struct TrackingStatusStruct
+        {
+            public Int64 timestamp;
+            public EyePositionStruct leftEye;
+            public EyePositionStruct rightEye;
+            public EyePositionStruct total;
+        };
 
         public struct AccuracyStruct
         {
@@ -74,67 +210,44 @@ namespace WebAnalyzer.EyeTracking
             public double deviationYRight;
         };
 
+        public struct GazeChannelQualityStruct
+        {
+            double gazeChannelQualityLeft;
+            double gazeChannelQualityRight;
+            double gazeChannelQualityBinocular;
+        };
 
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public struct CalibrationStruct
         {
-            public int method;				        
-            public int visualization;			    
-            public int displayDevice;				
-            public int speed;					    
-            public int autoAccept;			        
-            public int foregroundColor;	            
-            public int backgroundColor;	            
-            public int targetShape;		            
-            public int targetSize;		            
+            public int method;
+            public int visualization;
+            public int displayDevice;
+            public int speed;
+            public int autoAccept;
+            public int foregroundColor;
+            public int backgroundColor;
+            public int targetShape;
+            public int targetSize;
             [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 256)]
             public string targetFilename;
         };
-        
 
-        public struct REDStandAloneModeStruct
+        public struct REDGeometryStruct
         {
+            public REDGeometryEnum redGeometry;
+            public int monitorSize;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 256)]
+            public string setupName;
             public int stimX;
             public int stimY;
             public int stimHeightOverFloor;
             public int redHeightOverFloor;
             public int redStimDist;
             public int redInclAngle;
-        };
-
-        public struct StandAloneModeGeometryStruct
-        {
-            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 256)]
-            public string name;
-            public int stimX;
-            public int stimY;
-            public int stimHeightOverFloor;
-            public int redHeightOverFloor;
-            public int redStimDist;
-            public int redInclAngle;
-        };
-
-
-        public struct REDMonitorAttachedGeometry
-        {
-            public int stimX;
-            public int stimY;
             public int redStimDistHeight;
             public int redStimDistDepth;
-            public int redInclAngle;
         };
-
-        public struct MonitorAttachedGeometryStruct
-        {
-            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 256)]
-            public string name;
-            public int stimX;
-            public int stimY;
-            public int redStimDistHeight;
-            public int redStimDistDepth;
-            public int redInclAngle;
-        };
-
 
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
         public struct ImageStruct
@@ -145,6 +258,12 @@ namespace WebAnalyzer.EyeTracking
             public IntPtr imageBuffer;
         };
 
+        public struct DateStruct
+        {
+            public int day;
+            public int month;
+            public int year;
+        };
 
         public struct AOIRectangleStruct
         {
@@ -171,431 +290,770 @@ namespace WebAnalyzer.EyeTracking
         };
 
 
+        // Kernel Function definition 
+
+        [DllImport("kernel32.dll", EntryPoint = "CopyMemory", SetLastError = false)]
+        public static extern void CopyMemory(IntPtr dest, IntPtr src, uint count);
+
 
         // API Function definition. See the manual for further description. 
 
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_Start")]
-        private static extern int Unmanaged_Start(int etApplication);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_Quit")]
-        private static extern int Unmanaged_Quit();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_SetLogger")]
-        private static extern int Unmanaged_SetLogger(int loglevel, StringBuilder filename);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_Log")]
-        private static extern int Unmanaged_Log(StringBuilder message);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_SetLicense")]
-        private static extern int Unmanaged_SetLicense(StringBuilder key);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_SetConnectionTimeout")]
-        private static extern void Unmanaged_SetConnectionTimeout(int time);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_Connect")]
-        private static extern int Unmanaged_Connect(StringBuilder sendIP, int sendPort, StringBuilder receiveIP, int receivePort);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_ConnectLocal")]
+        [DllImport(dllName, EntryPoint = "iV_AbortCalibration")]
+        private static extern int Unmanaged_AbortCalibration();
+
+        [DllImport(dllName, EntryPoint = "iV_AbortCalibrationPoint")]
+        private static extern int Unmanaged_AbortCalibrationPoint();
+
+        [DllImport(dllName, EntryPoint = "iV_AcceptCalibrationPoint")]
+        private static extern int Unmanaged_AcceptCalibrationPoint();
+
+        [DllImport(dllName, EntryPoint = "iV_Calibrate")]
+        private static extern int Unmanaged_Calibrate();
+
+        [DllImport(dllName, EntryPoint = "iV_ChangeCalibrationPoint")]
+        private static extern int Unmanaged_ChangeCalibrationPoint(int number, int positionX, int positionY);
+
+        [DllImport(dllName, EntryPoint = "iV_ClearAOI")]
+        private static extern int Unmanaged_ClearAOI();
+
+        [DllImport(dllName, EntryPoint = "iV_ClearRecordingBuffer")]
+        private static extern int Unmanaged_ClearRecordingBuffer();
+
+        [DllImport(dllName, EntryPoint = "iV_ConfigureFilter")]
+        private static extern int Unmanaged_ConfigureFilter(FilterType filter, FilterAction action, IntPtr data);
+
+        [DllImport(dllName, EntryPoint = "iV_Connect")]
+        private static extern int Unmanaged_Connect(StringBuilder sendIPAddress, int sendPort, StringBuilder recvIPAddress, int receivePort);
+
+        [DllImport(dllName, EntryPoint = "iV_ConnectLocal")]
         private static extern int Unmanaged_ConnectLocal();
 
+        [DllImport(dllName, EntryPoint = "iV_ContinueEyetracking")]
+        private static extern int Unmanaged_ContinueEyetracking();
 
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_IsConnected")]
-        private static extern int Unmanaged_IsConnected();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_Disconnect")]
+        [DllImport(dllName, EntryPoint = "iV_ContinueRecording")]
+        private static extern int Unmanaged_ContinueRecording(StringBuilder etMessage);
+
+        [DllImport(dllName, EntryPoint = "iV_DefineAOI")]
+        private static extern int Unmanaged_DefineAOI(ref AOIStruct aoiData);
+
+        [DllImport(dllName, EntryPoint = "iV_DefineAOIPort")]
+        private static extern int Unmanaged_DefineAOIPort(int port);
+
+        [DllImport(dllName, EntryPoint = "iV_DeleteREDGeometry")]
+        private static extern int Unmanaged_DeleteREDGeometry(StringBuilder name);
+
+        [DllImport(dllName, EntryPoint = "iV_DisableAOI")]
+        private static extern int Unmanaged_DisableAOI(StringBuilder name);
+
+        [DllImport(dllName, EntryPoint = "iV_DisableAOIGroup")]
+        private static extern int Unmanaged_DisableAOIGroup(StringBuilder group);
+
+        [DllImport(dllName, EntryPoint = "iV_DisableGazeDataFilter")]
+        private static extern int Unmanaged_DisableGazeDataFilter();
+
+        [DllImport(dllName, EntryPoint = "iV_DisableProcessorHighPerformanceMode")]
+        private static extern int Unmanaged_DisableProcessorHighPerformanceMode();
+
+        [DllImport(dllName, EntryPoint = "iV_Disconnect")]
         private static extern int Unmanaged_Disconnect();
-        
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_AbortCalibration")]
-        private static extern int Unmanaged_AbortCalibration();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_AcceptCalibrationPoint")]
-        private static extern int Unmanaged_AcceptCalibrationPoint();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_ChangeCalibrationPoint")]
-        private static extern int Unmanaged_ChangeCalibrationPoint(int number, int positionX, int positionY);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_ResetCalibrationPoints")]
-        private static extern int Unmanaged_ResetCalibrationPoints();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_SetupCalibration")]
-        private static extern int Unmanaged_SetupCalibration(ref CalibrationStruct calibrationData);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_Calibrate")]
-        private static extern int Unmanaged_Calibrate();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_Validate")]
-        private static extern int Unmanaged_Validate();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_LoadCalibration")]
-        private static extern int Unmanaged_LoadCalibration(StringBuilder name);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_SaveCalibration")]
-        private static extern int Unmanaged_SaveCalibration(StringBuilder name);
 
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_ClearRecordingBuffer")]
-        private static extern int Unmanaged_ClearRecordingBuffer();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_ContinueRecording")]
-        private static extern int Unmanaged_ContinueRecording(StringBuilder trialName);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_PauseRecording")]
+        [DllImport(dllName, EntryPoint = "iV_EnableAOI")]
+        private static extern int Unmanaged_EnableAOI(StringBuilder name);
+
+        [DllImport(dllName, EntryPoint = "iV_EnableAOIGroup")]
+        private static extern int Unmanaged_EnableAOIGroup(StringBuilder group);
+
+        [DllImport(dllName, EntryPoint = "iV_EnableGazeDataFilter")]
+        private static extern int Unmanaged_EnableGazeDataFilter();
+
+        [DllImport(dllName, EntryPoint = "iV_EnableProcessorHighPerformanceMode")]
+        private static extern int Unmanaged_EnableProcessorHighPerformanceMode();
+
+        [DllImport(dllName, EntryPoint = "iV_GetAccuracy")]
+        private static extern int Unmanaged_GetAccuracy(ref AccuracyStruct accuracyData, int visualization);
+
+        [DllImport(dllName, EntryPoint = "iV_GetAccuracyImage")]
+        private static extern int Unmanaged_GetAccuracyImage(ref ImageStruct imageData);
+
+        [DllImport(dllName, EntryPoint = "iV_GetAOIOutputValue")]
+        private static extern int Unmanaged_GetAOIOutputValue(ref int aoiOutputValue);
+
+        [DllImport(dllName, EntryPoint = "iV_GetCalibrationParameter")]
+        private static extern int Unmanaged_GetCalibrationParameter(ref CalibrationStruct calibrationData);
+
+        [DllImport(dllName, EntryPoint = "iV_GetCalibrationPoint")]
+        private static extern int Unmanaged_GetCalibrationPoint(int calibrationPointNumber, ref CalibrationPointStruct calibrationPoint);
+
+        [DllImport(dllName, EntryPoint = "iV_GetCalibrationQuality")]
+        private static extern int Unmanaged_GetCalibrationQuality(int calibrationPointNumber,
+        ref CalibrationPointQualityStruct left, ref CalibrationPointQualityStruct right);
+
+        [DllImport(dllName, EntryPoint = "iV_GetCalibrationQualityImage")]
+        private static extern int Unmanaged_GetCalibrationQualityImage(ref ImageStruct imageData);
+
+        [DllImport(dllName, EntryPoint = "iV_GetCalibrationStatus")]
+        private static extern int Unmanaged_GetCalibrationStatus(ref CalibrationStatusEnum status);
+
+        [DllImport(dllName, EntryPoint = "iV_GetCurrentCalibrationPoint")]
+        private static extern int Unmanaged_GetCurrentCalibrationPoint(ref CalibrationPointStruct actualCalibrationPoint);
+
+        [DllImport(dllName, EntryPoint = "iV_GetCurrentREDGeometry")]
+        private static extern int Unmanaged_GetCurrentREDGeometry(ref REDGeometryStruct geometry);
+
+        [DllImport(dllName, EntryPoint = "iV_GetCurrentTimestamp")]
+        private static extern int Unmanaged_GetCurrentTimestamp(ref Int64 currentTimestamp);
+
+        [DllImport(dllName, EntryPoint = "iV_GetDeviceName")]
+        private static extern int Unmanaged_GetDeviceName([In] [Out] char[] deviceName);
+
+        [DllImport(dllName, EntryPoint = "iV_GetEvent")]
+        private static extern int Unmanaged_GetEvent(ref EventStruct eventDataSample);
+
+        [DllImport(dllName, EntryPoint = "iV_GetEyeImage")]
+        private static extern int Unmanaged_GetEyeImage(ref ImageStruct imageData);
+
+        [DllImport(dllName, EntryPoint = "iV_GetFeatureKey")]
+        private static extern int Unmanaged_GetFeatureKey(ref Int64 featureKey);
+
+        [DllImport(dllName, EntryPoint = "iV_GetGazeChannelQuality")]
+        private static extern int Unmanaged_GetGazeChannelQuality(ref GazeChannelQualityStruct qualityData);
+
+        [DllImport(dllName, EntryPoint = "iV_GetGeometryProfiles")]
+        private static extern int Unmanaged_GetGeometryProfiles(int maxSize, ref StringBuilder profileNames);
+
+        [DllImport(dllName, EntryPoint = "iV_GetLicenseDueDate")]
+        private static extern int Unmanaged_GetLicenseDueDate(ref DateStruct licenseDueDate);
+
+        [DllImport(dllName, EntryPoint = "iV_GetREDGeometry")]
+        private static extern int Unmanaged_GetREDGeometry(StringBuilder profileName, ref REDGeometryStruct geometry);
+
+        [DllImport(dllName, EntryPoint = "iV_GetSample")]
+        private static extern int Unmanaged_GetSample(ref SampleStruct rawDataSample);
+
+        [DllImport(dllName, EntryPoint = "iV_GetSceneVideo")]
+        private static extern int Unmanaged_GetSceneVideo(ref ImageStruct imageData);
+
+        [DllImport(dllName, EntryPoint = "iV_GetSerialNumber")]
+        private static extern int Unmanaged_GetSerialNumber([In] [Out] char[] snArray);
+
+        [DllImport(dllName, EntryPoint = "iV_GetSpeedModes")]
+        private static extern int Unmanaged_GetSpeedModes(ref SpeedModeStruct speedModes);
+
+        [DllImport(dllName, EntryPoint = "iV_GetSystemInfo")]
+        private static extern int Unmanaged_GetSystemInfo(ref SystemInfoStruct systemInfoData);
+
+        [DllImport(dllName, EntryPoint = "iV_GetTrackingMonitor")]
+        private static extern int Unmanaged_GetTrackingMonitor(ref ImageStruct imageData);
+
+        [DllImport(dllName, EntryPoint = "iV_GetTrackingStatus")]
+        private static extern int Unmanaged_GetTrackingStatus(ref TrackingStatusStruct trackingStatus);
+
+        [DllImport(dllName, EntryPoint = "iV_GetUseCalibrationKeys")]
+        private static extern int Unmanaged_GetUseCalibrationKeys(ref int enableKeys);
+
+        [DllImport(dllName, EntryPoint = "iV_HideAccuracyMonitor")]
+        private static extern int Unmanaged_HideAccuracyMonitor();
+
+        [DllImport(dllName, EntryPoint = "iV_HideEyeImageMonitor")]
+        private static extern int Unmanaged_HideEyeImageMonitor();
+
+        [DllImport(dllName, EntryPoint = "iV_HideSceneVideoMonitor")]
+        private static extern int Unmanaged_HideSceneVideoMonitor();
+
+        [DllImport(dllName, EntryPoint = "iV_HideTrackingMonitor")]
+        private static extern int Unmanaged_HideTrackingMonitor();
+
+        [DllImport(dllName, EntryPoint = "iV_IsConnected")]
+        private static extern int Unmanaged_IsConnected();
+
+        [DllImport(dllName, EntryPoint = "iV_LoadCalibration")]
+        private static extern int Unmanaged_LoadCalibration(StringBuilder name);
+
+        [DllImport(dllName, EntryPoint = "iV_Log")]
+        private static extern int Unmanaged_Log(StringBuilder logMessage);
+
+        [DllImport(dllName, EntryPoint = "iV_PauseEyetracking")]
+        private static extern int Unmanaged_PauseEyetracking();
+
+        [DllImport(dllName, EntryPoint = "iV_PauseRecording")]
         private static extern int Unmanaged_PauseRecording();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_StartRecording")]
-        private static extern int Unmanaged_StartRecording();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_StopRecording")]
-        private static extern int Unmanaged_StopRecording();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_SendImageMessage")]
-        private static extern int Unmanaged_SendImageMessage(StringBuilder message);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_SaveData")]
+
+        [DllImport(dllName, EntryPoint = "iV_Quit")]
+        private static extern int Unmanaged_Quit();
+
+        [DllImport(dllName, EntryPoint = "iV_RecalibrateOnePoint")]
+        private static extern int Unmanaged_RecalibrateOnePoint(int number);
+
+        [DllImport(dllName, EntryPoint = "iV_ReleaseAOIPort")]
+        private static extern int Unmanaged_ReleaseAOIPort();
+
+        [DllImport(dllName, EntryPoint = "iV_RemoveAOI")]
+        private static extern int Unmanaged_RemoveAOI(StringBuilder aoiName);
+
+        [DllImport(dllName, EntryPoint = "iV_ResetCalibrationPoints")]
+        private static extern int Unmanaged_ResetCalibrationPoints();
+
+        [DllImport(dllName, EntryPoint = "iV_SaveCalibration")]
+        private static extern int Unmanaged_SaveCalibration(StringBuilder aoiName);
+
+        [DllImport(dllName, EntryPoint = "iV_SaveData")]
         private static extern int Unmanaged_SaveData(StringBuilder filename, StringBuilder description, StringBuilder user, int overwrite);
 
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_ContinueEyetracking")]
-        private static extern int Unmanaged_ContinueEyetracking();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_PauseEyetracking")]
-        private static extern int Unmanaged_PauseEyetracking();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_EnableGazeDataFilter")]
-        private static extern int Unmanaged_EnableGazeDataFilter();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_DisableGazeDataFilter")]
-        private static extern int Unmanaged_DisableGazeDataFilter();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_SetEventDetectionParameter")]
-        private static extern int Unmanaged_SetEventDetectionParameter(int minDuration, int maxDispersion);
+        [DllImport(dllName, EntryPoint = "iV_SelectREDGeometry")]
+        private static extern int Unmanaged_SelectREDGeometry(StringBuilder profileName);
 
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_DefineAOIPort")]
-        private static extern int Unmanaged_DefineAOIPort(int port);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_ReleaseAOIPort")]
-        private static extern int Unmanaged_ReleaseAOIPort();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_DefineAOI")]
-        private static extern int Unmanaged_DefineAOI(ref AOIStruct aoi);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_RemoveAOI")]
-        private static extern int Unmanaged_RemoveAOI(StringBuilder aoiName);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_ClearAOI")]
-        private static extern int Unmanaged_ClearAOI();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_EnableAOI")]
-        private static extern int Unmanaged_EnableAOI(StringBuilder aoiName);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_DisableAOI")]
-        private static extern int Unmanaged_DisableAOI(StringBuilder aoiName);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_EnableAOIGroup")]
-        private static extern int Unmanaged_EnableAOIGroup(StringBuilder aoiGroup);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_DisableAOIGroup")]
-        private static extern int Unmanaged_DisableAOIGroup(StringBuilder aoiGroup);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_TestLPT")]
-        private static extern int Unmanaged_TestLPT(int value);
-        
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_GetTrackingMonitor")]
-        private static extern int Unmanaged_GetTrackingMonitor(ref ImageStruct image);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_GetSceneVideo")]
-        private static extern int Unmanaged_GetSceneVideo(ref ImageStruct image);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_GetEyeImage")]
-        private static extern int Unmanaged_GetEyeImage(ref ImageStruct image);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_GetAccuracyImage")]
-        private static extern int Unmanaged_GetAccuracyImage(ref ImageStruct image);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_GetAccuracy")]
-        private static extern int Unmanaged_GetAccuracy(ref AccuracyStruct accuracyData, int visualization);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_GetCurrentTimestamp")]
-        private static extern int Unmanaged_GetCurrentTimestamp(ref Int64 currentTimestamp);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_GetSample")]
-        private static extern int Unmanaged_GetSample(ref SampleStruct sampleData);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_GetEvent")]
-        private static extern int Unmanaged_GetEvent(ref EventStruct eventData);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_SendCommand")]
+        [DllImport(dllName, EntryPoint = "iV_SendCommand")]
         private static extern int Unmanaged_SendCommand(StringBuilder etMessage);
 
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_ShowEyeImageMonitor")]
+        [DllImport(dllName, EntryPoint = "iV_SendImageMessage")]
+        private static extern int Unmanaged_SendImageMessage(StringBuilder etMessage);
+
+        [DllImport(dllName, CallingConvention = CallingConvention.StdCall, EntryPoint = "iV_SetAOIHitCallback")]
+        private static extern void Unmanaged_SetAOIHitCallback(MulticastDelegate aoiHitCallbackFunction);
+
+        [DllImport(dllName, CallingConvention = CallingConvention.StdCall, EntryPoint = "iV_SetCalibrationCallback")]
+        private static extern void Unmanaged_SetCalibrationCallback(MulticastDelegate calibrationCallbackFunction);
+
+        [DllImport(dllName, EntryPoint = "iV_SetConnectionTimeout")]
+        private static extern int Unmanaged_SetConnectionTimeout(int time);
+
+        [DllImport(dllName, CallingConvention = CallingConvention.StdCall, EntryPoint = "iV_SetEventCallback")]
+        private static extern void Unmanaged_SetEventCallback(MulticastDelegate eventCallbackFunction);
+
+        [DllImport(dllName, EntryPoint = "iV_SetEventDetectionParameter")]
+        private static extern int Unmanaged_SetEventDetectionParameter(int minDuration, int maxDispersion);
+
+        [DllImport(dllName, CallingConvention = CallingConvention.StdCall, EntryPoint = "iV_SetEyeImageCallback")]
+        private static extern void Unmanaged_SetEyeImageCallback(MulticastDelegate eyeImageCallbackFunction);
+
+        [DllImport(dllName, EntryPoint = "iV_SetLicense")]
+        private static extern int Unmanaged_SetLicense(StringBuilder licenseKey);
+
+        [DllImport(dllName, EntryPoint = "iV_SetLogger")]
+        private static extern int Unmanaged_SetLogger(int logLevel, StringBuilder filename);
+
+        [DllImport(dllName, EntryPoint = "iV_SetREDGeometry")]
+        private static extern int Unmanaged_SetREDGeometry(ref REDGeometryStruct redGeometry);
+
+        [DllImport(dllName, EntryPoint = "iV_SetResolution")]
+        private static extern int Unmanaged_SetResolution(int stimulusWidth, int stimulusHeight);
+
+        [DllImport(dllName, CallingConvention = CallingConvention.StdCall, EntryPoint = "iV_SetSampleCallback")]
+        private static extern void Unmanaged_SetSampleCallback(MulticastDelegate sampleCallbackFunction);
+
+        [DllImport(dllName, CallingConvention = CallingConvention.StdCall, EntryPoint = "iV_SetSceneVideoCallback")]
+        private static extern void Unmanaged_SetSceneVideoCallback(MulticastDelegate sceneVideoCallbackFunction);
+
+        [DllImport(dllName, EntryPoint = "iV_SetSpeedMode")]
+        private static extern int Unmanaged_SetSpeedMode(int speedMode);
+
+        [DllImport(dllName, CallingConvention = CallingConvention.StdCall, EntryPoint = "iV_SetTrackingMonitorCallback")]
+        private static extern void Unmanaged_SetTrackingMonitorCallback(MulticastDelegate trackingMonitorCallbackFunction);
+
+        [DllImport(dllName, EntryPoint = "iV_SetTrackingParameter")]
+        private static extern int Unmanaged_SetTrackingParameter(int ET_PARAM_EYE, int ET_PARAM, int value);
+
+        [DllImport(dllName, EntryPoint = "iV_SetupCalibration")]
+        private static extern int Unmanaged_SetupCalibration(ref CalibrationStruct calibrationData);
+
+        [DllImport(dllName, EntryPoint = "iV_SetUseCalibrationKeys")]
+        private static extern int Unmanaged_SetUseCalibrationKeys(int enableKeys);
+
+        [DllImport(dllName, EntryPoint = "iV_ShowAccuracyMonitor")]
+        private static extern int Unmanaged_ShowAccuracyMonitor();
+
+        [DllImport(dllName, EntryPoint = "iV_ShowEyeImageMonitor")]
         private static extern int Unmanaged_ShowEyeImageMonitor();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_ShowTrackingMonitor")]
-        private static extern int Unmanaged_ShowTrackingMonitor();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_ShowSceneVideoMonitor")]
+
+        [DllImport(dllName, EntryPoint = "iV_ShowSceneVideoMonitor")]
         private static extern int Unmanaged_ShowSceneVideoMonitor();
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_ShowSceneVideoMonitor")]
-        private static extern int Unmanaged_GetSystemInfo(ref SystemInfoStruct systemInfoData);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_GetCurrentCalibrationPoint")]
-        private static extern int Unmanaged_GetCurrentCalibrationPoint(ref CalibrationPointStruct calibrationPointData);
 
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_SetupREDStandAloneMode")]
-        private static extern int Unmanaged_SetupREDStandAloneMode(ref REDStandAloneModeStruct standAloneMode);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_SetupREDMonitorAttachedGeometry")]
-        private static extern int Unmanaged_SetupREDMonitorAttachedGeometry(ref REDMonitorAttachedGeometry standAloneMode);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_SetupStandAloneModeGeometry")]
-        private static extern int Unmanaged_SetupStandAloneModeGeometry(ref StandAloneModeGeometryStruct standAloneModeGeometry);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_SetupMonitorAttachedGeometry")]
-        private static extern int Unmanaged_SetupMonitorAttachedGeometry(ref MonitorAttachedGeometryStruct monitorAttachedGeometry);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_DeleteStandAloneModeGeometry")]
-        private static extern int Unmanaged_DeleteStandAloneModeGeometry(StringBuilder name);
-        [DllImport("iViewXAPI.dll", EntryPoint = "iV_DeleteMonitorAttachedGeometry")]
-        private static extern int Unmanaged_DeleteMonitorAttachedGeometry(StringBuilder name);
+        [DllImport(dllName, EntryPoint = "iV_ShowTrackingMonitor")]
+        private static extern int Unmanaged_ShowTrackingMonitor();
 
-        // API Callback definition. See the manual for further description. 
-        [DllImport("iViewXAPI.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "iV_SetCalibrationCallback")]
-        private static extern void Unmanaged_SetCalibrationCallback(MulticastDelegate callback);
-        [DllImport("iViewXAPI.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "iV_SetSampleCallback")]
-        private static extern void Unmanaged_SetSampleCallback(MulticastDelegate callback);
-        [DllImport("iViewXAPI.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "iV_SetEventCallback")]
-        private static extern void Unmanaged_SetEventCallback(MulticastDelegate callback);
-        [DllImport("iViewXAPI.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "iV_SetEyeImageCallback")]
-        private static extern void Unmanaged_SetEyeImageCallback(MulticastDelegate callback);
-        [DllImport("iViewXAPI.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "iV_SetSceneVideoCallback")]
-        private static extern void Unmanaged_SetSceneVideoCallback(MulticastDelegate callback);
-        [DllImport("iViewXAPI.dll", CallingConvention = CallingConvention.StdCall, EntryPoint = "iV_SetTrackingMonitorCallback")]
-        private static extern void Unmanaged_SetTrackingMonitorCallback(MulticastDelegate callback);
+        [DllImport(dllName, EntryPoint = "iV_Start")]
+        private static extern int Unmanaged_Start(ETApplication etApplication);
+
+        [DllImport(dllName, EntryPoint = "iV_StartRecording")]
+        private static extern int Unmanaged_StartRecording();
+
+        [DllImport(dllName, EntryPoint = "iV_StopRecording")]
+        private static extern int Unmanaged_StopRecording();
+
+        [DllImport(dllName, EntryPoint = "iV_TestTTL")]
+        private static extern int Unmanaged_TestTTL(long value);
+
+        [DllImport(dllName, EntryPoint = "iV_Validate")]
+        private static extern int Unmanaged_Validate();
+
 
 
         public int iV_AbortCalibration()
         {
             return Unmanaged_AbortCalibration();
         }
+
+        public int iV_AbortCalibrationPoint()
+        {
+            return Unmanaged_AbortCalibrationPoint();
+        }
+
         public int iV_AcceptCalibrationPoint()
         {
             return Unmanaged_AcceptCalibrationPoint();
         }
+
+        public int iV_Calibrate()
+        {
+            return Unmanaged_Calibrate();
+        }
+
         public int iV_ChangeCalibrationPoint(int number, int positionX, int positionY)
         {
             return Unmanaged_ChangeCalibrationPoint(number, positionX, positionY);
         }
-        public int iV_ResetCalibrationPoints()
+
+        public int iV_ClearAOI()
         {
-            return Unmanaged_ResetCalibrationPoints();
+            return Unmanaged_ClearAOI();
+        }
+
+        public int iV_ClearRecordingBuffer()
+        {
+            return Unmanaged_ClearRecordingBuffer();
+        }
+
+        public int iV_ConfigureFilter(FilterType filter, FilterAction action, IntPtr data)
+        {
+            return Unmanaged_ConfigureFilter(filter, action, data);
+        }
+
+        public int iV_Connect(StringBuilder sendIP, int sendPort, StringBuilder receiveIP, int receivePort)
+        {
+            return Unmanaged_Connect(sendIP, sendPort, receiveIP, receivePort);
+        }
+
+        public int iV_ConnectLocal()
+        {
+            return Unmanaged_ConnectLocal();
+        }
+
+        public int iV_ContinueEyetracking()
+        {
+            return Unmanaged_ContinueEyetracking();
+        }
+
+        public int iV_ContinueRecording(StringBuilder trialname)
+        {
+            return Unmanaged_ContinueRecording(trialname);
+        }
+
+        public int iV_DefineAOI(ref AOIStruct aoi)
+        {
+            return Unmanaged_DefineAOI(ref aoi);
         }
 
         public int iV_DefineAOIPort(int port)
         {
             return Unmanaged_DefineAOIPort(port);
         }
-        public int iV_ReleaseAOIPort()
+
+        public int iV_DeleteREDGeometry(StringBuilder name)
         {
-            return Unmanaged_ReleaseAOIPort();
+            return Unmanaged_DeleteREDGeometry(name);
         }
-        public int iV_DefineAOI(ref AOIStruct aoi)
+
+        public int iV_DisableAOI(StringBuilder aoiName)
         {
-            return Unmanaged_DefineAOI(ref aoi);
+            return Unmanaged_DisableAOI(aoiName);
         }
-        public int iV_RemoveAOI(StringBuilder aoiName)
+
+        public int iV_DisableAOIGroup(StringBuilder aoiGroup)
         {
-            return Unmanaged_RemoveAOI(aoiName);
+            return Unmanaged_DisableAOIGroup(aoiGroup);
         }
-        public int iV_ClearAOI()
+
+        public int iV_DisableGazeDataFilter()
         {
-            return Unmanaged_ClearAOI();
+            return Unmanaged_DisableGazeDataFilter();
+        }
+
+        public int iV_DisableProcessorHighPerformanceMode()
+        {
+            return Unmanaged_DisableProcessorHighPerformanceMode();
+        }
+
+        public int iV_Disconnect()
+        {
+            return Unmanaged_Disconnect();
         }
 
         public int iV_EnableAOI(StringBuilder aoiName)
         {
             return Unmanaged_EnableAOI(aoiName);
         }
-        public int iV_DisableAOI(StringBuilder aoiName)
-        {
-            return Unmanaged_DisableAOI(aoiName);
-        }
+
         public int iV_EnableAOIGroup(StringBuilder aoiGroup)
         {
             return Unmanaged_EnableAOIGroup(aoiGroup);
         }
-        public int iV_DisableAOIGroup(StringBuilder aoiGroup)
-        {
-            return Unmanaged_DisableAOIGroup(aoiGroup);
-        }
 
-
-        public int iV_TestLPT(int value)
-        {
-            return Unmanaged_TestLPT(value);
-        }
-        public int iV_GetTrackingMonitor(ref ImageStruct image)
-        {
-            return Unmanaged_GetTrackingMonitor(ref image);
-        }
-        public int iV_GetEyeImage(ref ImageStruct image)
-        {
-            return Unmanaged_GetEyeImage(ref image);
-        }
-        public int iV_GetSceneVideo(ref ImageStruct image)
-        {
-            return Unmanaged_GetSceneVideo(ref image);
-        }
-        public int iV_GetAccuracyImage(ref ImageStruct image)
-        {
-            return Unmanaged_GetAccuracyImage(ref image);
-        }        
-        public int iV_SetLicense(StringBuilder key)
-        {
-            return Unmanaged_SetLicense(key);
-        }
         public int iV_EnableGazeDataFilter()
         {
             return Unmanaged_EnableGazeDataFilter();
         }
-        public int iV_DisableGazeDataFilter()
+
+        public int iV_EnableProcessorHighPerformanceMode()
         {
-            return Unmanaged_DisableGazeDataFilter();
+            return Unmanaged_EnableProcessorHighPerformanceMode();
         }
-        public int iV_Calibrate()
-        {
-            return Unmanaged_Calibrate();
-        }
-        public int iV_ClearRecordingBuffer()
-        {
-            return Unmanaged_ClearRecordingBuffer();
-        }
-        public void iV_SetConnectionTimeout(int time)
-        {
-            Unmanaged_SetConnectionTimeout(time);
-        }
-        public int iV_Connect(StringBuilder sendIP, int sendPort, StringBuilder receiveIP, int receivePort)
-        {
-            return Unmanaged_Connect(sendIP, sendPort, receiveIP, receivePort);
-        }
-        public int iV_ConnectLocal()
-        {
-            return Unmanaged_ConnectLocal();
-        }
-        public int iV_ContinueRecording(StringBuilder trialname)
-        {
-            return Unmanaged_ContinueRecording(trialname);
-        }
-        public int iV_Disconnect()
-        {
-            return Unmanaged_Disconnect();
-        }
+
         public int iV_GetAccuracy(ref AccuracyStruct accuracyData, int visualization)
         {
             return Unmanaged_GetAccuracy(ref accuracyData, visualization);
         }
-        public int iV_GetCurrentTimestamp(ref Int64 currentTimestamp)
+
+        public int iV_GetAccuracyImage(ref ImageStruct image)
         {
-            return Unmanaged_GetCurrentTimestamp(ref currentTimestamp);
+            return Unmanaged_GetAccuracyImage(ref image);
         }
+
+        public int iV_GetAOIOutputValue(ref int aoiOutputValue)
+        {
+            return Unmanaged_GetAOIOutputValue(ref aoiOutputValue);
+        }
+
+        public int iV_GetCalibrationParameter(ref CalibrationStruct calibrationData)
+        {
+            return Unmanaged_GetCalibrationParameter(ref calibrationData);
+        }
+
+        public int iV_GetCalibrationPoint(int calibrationPointNumber, ref CalibrationPointStruct calibrationPoint)
+        {
+            return Unmanaged_GetCalibrationPoint(calibrationPointNumber, ref calibrationPoint);
+        }
+
+        public int iV_GetCalibrationQuality(int calibrationPointNumber, ref CalibrationPointQualityStruct left, ref CalibrationPointQualityStruct right)
+        {
+            return Unmanaged_GetCalibrationQuality(calibrationPointNumber, ref left, ref right);
+        }
+
+        public int iV_GetCalibrationQualityImage(ref ImageStruct image)
+        {
+            return Unmanaged_GetCalibrationQualityImage(ref image);
+        }
+
+        public int iV_GetCalibrationStatus(ref CalibrationStatusEnum calibrationStatus)
+        {
+            return Unmanaged_GetCalibrationStatus(ref calibrationStatus);
+        }
+
         public int iV_GetCurrentCalibrationPoint(ref CalibrationPointStruct currentCalibrationPoint)
         {
             return Unmanaged_GetCurrentCalibrationPoint(ref currentCalibrationPoint);
         }
-        public int iV_SetEventDetectionParameter(int minDuration, int maxDispersion)
+
+        public int iV_GetCurrentREDGeometry(ref REDGeometryStruct geometry)
         {
-            return Unmanaged_SetEventDetectionParameter(minDuration, maxDispersion);
+            return Unmanaged_GetCurrentREDGeometry(ref geometry);
         }
+
+        public int iV_GetCurrentTimestamp(ref Int64 currentTimestamp)
+        {
+            return Unmanaged_GetCurrentTimestamp(ref currentTimestamp);
+        }
+
+        public int iV_GetDeviceName(out char[] deviceName)
+        {
+            deviceName = new char[64];
+            return (int)Unmanaged_GetDeviceName(deviceName);
+        }
+
         public int iV_GetEvent(ref EventStruct eventDataSample)
         {
             return Unmanaged_GetEvent(ref eventDataSample);
         }
+
+        public int iV_GetEyeImage(ref ImageStruct image)
+        {
+            return Unmanaged_GetEyeImage(ref image);
+        }
+
+        public int iV_GetFeatureKey(ref Int64 featureKey)
+        {
+            return Unmanaged_GetFeatureKey(ref featureKey);
+        }
+
+        public int iV_GetGazeChannelQuality(ref GazeChannelQualityStruct qualityData)
+        {
+            return Unmanaged_GetGazeChannelQuality(ref qualityData);
+        }
+
+        public int iV_GetGeometryProfiles(int maxSize, ref StringBuilder profileNames)
+        {
+            return Unmanaged_GetGeometryProfiles(maxSize, ref profileNames);
+        }
+
+        public int iV_GetLicenseDueDate(ref DateStruct licenseDueDate)
+        {
+            return Unmanaged_GetLicenseDueDate(ref licenseDueDate);
+        }
+
+        public int iV_GetREDGeometry(StringBuilder profileName, ref REDGeometryStruct geometry)
+        {
+            return Unmanaged_GetREDGeometry(profileName, ref geometry);
+        }
+
         public int iV_GetSample(ref SampleStruct rawDataSample)
         {
             return Unmanaged_GetSample(ref rawDataSample);
         }
+
+        public int iV_GetSceneVideo(ref ImageStruct image)
+        {
+            return Unmanaged_GetSceneVideo(ref image);
+        }
+
+        public int iV_GetSerialNumber(out char[] serialNumber)
+        {
+            serialNumber = new char[64];
+            return (int)Unmanaged_GetSerialNumber(serialNumber);
+        }
+
         public int iV_GetSystemInfo(ref SystemInfoStruct systemInfo)
         {
             return Unmanaged_GetSystemInfo(ref systemInfo);
         }
+
+        public int iV_GetTrackingMonitor(ref ImageStruct image)
+        {
+            return Unmanaged_GetTrackingMonitor(ref image);
+        }
+
+        public int iV_GetTrackingStatus(ref TrackingStatusStruct trackingstatus)
+        {
+            return Unmanaged_GetTrackingStatus(ref trackingstatus);
+        }
+
+        public int iV_HideAccuracyMonitor()
+        {
+            return Unmanaged_HideAccuracyMonitor();
+        }
+
+        public int iV_HideEyeImageMonitor()
+        {
+            return Unmanaged_HideEyeImageMonitor();
+        }
+
+        public int iV_HideSceneVideoMonitor()
+        {
+            return Unmanaged_HideSceneVideoMonitor();
+        }
+
+        public int iV_HideTrackingMonitor()
+        {
+            return Unmanaged_HideTrackingMonitor();
+        }
+
         public int iV_IsConnected()
         {
             return Unmanaged_IsConnected();
         }
+
         public int iV_LoadCalibration(StringBuilder name)
         {
             return Unmanaged_LoadCalibration(name);
         }
-        public int iV_PauseRecording()
-        {
-            return Unmanaged_PauseRecording();
-        }
-        public int iV_Quit()
-        {
-            return Unmanaged_Quit();
-        }
-        public int iV_SaveCalibration(StringBuilder name)
-        {
-            return Unmanaged_SaveCalibration(name);
-        }
-        public int iV_SaveData(StringBuilder filename, StringBuilder description, StringBuilder user, int overwrite)
-        {
-            return Unmanaged_SaveData(filename, description, user, overwrite);
-        }
-        public int iV_SendCommand(StringBuilder etMessage)
-        {
-            return Unmanaged_SendCommand(etMessage);
-        }
-        public int iV_SendImageMessage(StringBuilder message)
-        {
-            return Unmanaged_SendImageMessage(message);
-        }
-        public void iV_SetCalibrationCallback(MulticastDelegate calibrationCallback)
-        {
-            Unmanaged_SetCalibrationCallback(calibrationCallback);
-        }
-        public void iV_SetEventCallback(MulticastDelegate eventCallback)
-        {
-            Unmanaged_SetEventCallback(eventCallback);
-        }
-        public void iV_SetSampleCallback(MulticastDelegate sampleCallback)
-        {
-            Unmanaged_SetSampleCallback(sampleCallback);
-        }
-        public void iV_SetSceneVideoCallback(MulticastDelegate sceneVideoCallback)
-        {
-            Unmanaged_SetSceneVideoCallback(sceneVideoCallback);
-        }
-        public void iV_SetTrackingMonitorCallback(MulticastDelegate trackingMonitorCallback)
-        {
-            Unmanaged_SetTrackingMonitorCallback(trackingMonitorCallback);
-        }
-        public void iV_SetEyeImageCallback(MulticastDelegate eyeImageCallback)
-        {
-            Unmanaged_SetEyeImageCallback(eyeImageCallback);
-        }
-        public int iV_SetLogger(int logLevel, StringBuilder filename)
-        {
-            return Unmanaged_SetLogger(logLevel, filename);
-        }
+
         public int iV_Log(StringBuilder message)
         {
             return Unmanaged_Log(message);
-        }
-        public int iV_SetupCalibration(ref CalibrationStruct calibrationData)
-        {
-            return Unmanaged_SetupCalibration(ref calibrationData);
-        }
-        public int iV_SetupREDMonitorAttachedGeometry(ref REDMonitorAttachedGeometry standAloneMode)
-        {
-            return Unmanaged_SetupREDMonitorAttachedGeometry(ref standAloneMode);
-        }
-        public int iV_SetupREDStandAloneMode(ref REDStandAloneModeStruct standAloneMode)
-        {
-            return Unmanaged_SetupREDStandAloneMode(ref standAloneMode);
-        }
-
-        public int iV_SetupMonitorAttachedGeometry(ref MonitorAttachedGeometryStruct monitorAttachedGeometry)
-        {
-            return Unmanaged_SetupMonitorAttachedGeometry(ref monitorAttachedGeometry);
-        }
-        public int iV_SetupStandAloneModeGeometry(ref StandAloneModeGeometryStruct standAloneModeGeometry)
-        {
-            return Unmanaged_SetupStandAloneModeGeometry(ref standAloneModeGeometry);
-        }
-
-        public int iV_DeleteMonitorAttachedGeometry(StringBuilder name)
-        {
-            return Unmanaged_DeleteMonitorAttachedGeometry(name);
-        }
-        public int iV_DeleteStandAloneModeGeometry(StringBuilder name)
-        {
-            return Unmanaged_DeleteStandAloneModeGeometry(name);
-        }
-        
-        public int iV_ShowEyeImageMonitor()
-        {
-            return Unmanaged_ShowEyeImageMonitor();
-        }
-        public int iV_ShowSceneVideoMonitor()
-        {
-            return Unmanaged_ShowSceneVideoMonitor();
-        }
-        public int iV_ShowTrackingMonitor()
-        {
-            return Unmanaged_ShowTrackingMonitor();
-        }
-        public int iV_Start(int etApplication)
-        {
-            return Unmanaged_Start(etApplication);
-        }
-        public int iV_StartRecording()
-        {
-            return Unmanaged_StartRecording();
-        }
-        public int iV_StopRecording()
-        {
-            return Unmanaged_StopRecording();
-        }
-        public int iV_Validate()
-        {
-            return Unmanaged_Validate();
         }
 
         public int iV_PauseEyetracking()
         {
             return Unmanaged_PauseEyetracking();
         }
-        public int iV_ContinueEyetracking()
+
+        public int iV_PauseRecording()
         {
-            return Unmanaged_ContinueEyetracking();
+            return Unmanaged_PauseRecording();
         }
+
+        public int iV_Quit()
+        {
+            return Unmanaged_Quit();
+        }
+
+        public int iV_ReleaseAOIPort()
+        {
+            return Unmanaged_ReleaseAOIPort();
+        }
+        public int iV_RemoveAOI(StringBuilder aoiName)
+        {
+            return Unmanaged_RemoveAOI(aoiName);
+        }
+
+        public int iV_ResetCalibrationPoints()
+        {
+            return Unmanaged_ResetCalibrationPoints();
+        }
+
+        public int iV_SaveCalibration(StringBuilder name)
+        {
+            return Unmanaged_SaveCalibration(name);
+        }
+
+        public int iV_SaveData(StringBuilder filename, StringBuilder description, StringBuilder user, int overwrite)
+        {
+            return Unmanaged_SaveData(filename, description, user, overwrite);
+        }
+
+        public int iV_SelectREDGeometry(StringBuilder profileName)
+        {
+            return Unmanaged_SelectREDGeometry(profileName);
+        }
+
+        public int iV_SendCommand(StringBuilder etMessage)
+        {
+            return Unmanaged_SendCommand(etMessage);
+        }
+
+        public int iV_SendImageMessage(StringBuilder message)
+        {
+            return Unmanaged_SendImageMessage(message);
+        }
+
+        public void iV_SetAOIHitCallback(MulticastDelegate aoiHitCallback)
+        {
+            Unmanaged_SetAOIHitCallback(aoiHitCallback);
+        }
+
+        public void iV_SetCalibrationCallback(MulticastDelegate calibrationCallback)
+        {
+            Unmanaged_SetCalibrationCallback(calibrationCallback);
+        }
+
+        public void iV_SetConnectionTimeout(int time)
+        {
+            Unmanaged_SetConnectionTimeout(time);
+        }
+
+        public void iV_SetEventCallback(MulticastDelegate eventCallback)
+        {
+            Unmanaged_SetEventCallback(eventCallback);
+        }
+
+        public int iV_SetEventDetectionParameter(int minDuration, int maxDispersion)
+        {
+            return Unmanaged_SetEventDetectionParameter(minDuration, maxDispersion);
+        }
+
+        public void iV_SetEyeImageCallback(MulticastDelegate eyeImageCallback)
+        {
+            Unmanaged_SetEyeImageCallback(eyeImageCallback);
+        }
+
+        public int iV_SetLicense(StringBuilder key)
+        {
+            return Unmanaged_SetLicense(key);
+        }
+
+        public int iV_SetLogger(int logLevel, StringBuilder filename)
+        {
+            return Unmanaged_SetLogger(logLevel, filename);
+        }
+
+        public int iV_SetREDGeometry(ref REDGeometryStruct redGeometry)
+        {
+            return Unmanaged_SetREDGeometry(ref redGeometry);
+        }
+
+        public void iV_SetResolution(int stimulusWidth, int stimulusHeight)
+        {
+            Unmanaged_SetResolution(stimulusWidth, stimulusHeight);
+        }
+
+        public void iV_SetSampleCallback(MulticastDelegate sampleCallback)
+        {
+            Unmanaged_SetSampleCallback(sampleCallback);
+        }
+
+        public void iV_SetSceneVideoCallback(MulticastDelegate sceneVideoCallback)
+        {
+            Unmanaged_SetSceneVideoCallback(sceneVideoCallback);
+        }
+
+        public int iV_SetSpeedMode(int speedMode)
+        {
+            return Unmanaged_SetSpeedMode(speedMode);
+        }
+
+        public void iV_SetTrackingMonitorCallback(MulticastDelegate trackingMonitorCallback)
+        {
+            Unmanaged_SetTrackingMonitorCallback(trackingMonitorCallback);
+        }
+
+        public void iV_SetTrackingParameter(int ET_PARAM_EYE, int ET_PARAM, int value)
+        {
+            Unmanaged_SetTrackingParameter(ET_PARAM_EYE, ET_PARAM, value);
+        }
+
+        public int iV_SetupCalibration(ref CalibrationStruct calibrationData)
+        {
+            return Unmanaged_SetupCalibration(ref calibrationData);
+        }
+
+        public int iV_SetUseCalibrationKeys(int enableKeys)
+        {
+            return Unmanaged_SetUseCalibrationKeys(enableKeys);
+        }
+
+        public int iV_ShowAccuracyMonitor()
+        {
+            return Unmanaged_ShowAccuracyMonitor();
+        }
+
+        public int iV_ShowEyeImageMonitor()
+        {
+            return Unmanaged_ShowEyeImageMonitor();
+        }
+
+        public int iV_ShowSceneVideoMonitor()
+        {
+            return Unmanaged_ShowSceneVideoMonitor();
+        }
+
+        public int iV_ShowTrackingMonitor()
+        {
+            return Unmanaged_ShowTrackingMonitor();
+        }
+
+        public int iV_Start(int etApplication)
+        {
+            return Unmanaged_Start((ETApplication)etApplication);
+        }
+
+        public int iV_StartRecording()
+        {
+            return Unmanaged_StartRecording();
+        }
+
+        public int iV_StopRecording()
+        {
+            return Unmanaged_StopRecording();
+        }
+
+        public int iV_TestTTL(int value)
+        {
+            return Unmanaged_TestTTL(value);
+        }
+
+        public int iV_Validate()
+        {
+            return Unmanaged_Validate();
+        }
+
     }
 }
