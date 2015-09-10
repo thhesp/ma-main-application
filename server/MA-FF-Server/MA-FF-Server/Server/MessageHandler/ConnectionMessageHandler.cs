@@ -62,8 +62,6 @@ namespace WebAnalyzer.Server.MessageHandler
 
         private void completeHandshake()
         {
-            _connection.Established = true;
-
             AddConnection(this, new AddConnectionEvent(_connection));
         }
     }

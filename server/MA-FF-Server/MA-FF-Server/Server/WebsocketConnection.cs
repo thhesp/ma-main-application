@@ -19,8 +19,6 @@ namespace WebAnalyzer.Server
 
         readonly WebSocket _ws;
 
-        private Boolean _established = false;
-
         private List<Message> _messageQueue;
 
         private Boolean _active = false;
@@ -31,20 +29,6 @@ namespace WebAnalyzer.Server
         {
             _ws = ws;
             _messageQueue = new List<Message>();
-        }
-
-        public Boolean Established
-        {
-            get
-            {
-
-                return _established;
-            }
-
-            set
-            {
-                _established = value;
-            }
         }
 
         public Boolean IsConnected
@@ -88,7 +72,7 @@ namespace WebAnalyzer.Server
                 //check if messages are too old and remove them
                 removeOldMessages();
 
-                if (Writing || !Active || !this.Established || !this.IsConnected || _messageQueue.Count == 0)
+                if (Writing || !Active || !this.IsConnected || _messageQueue.Count == 0)
                     return;
 
                 //Logger.Log("Sent Message... current Message Count: " + _messageQueue.Count);
