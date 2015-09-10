@@ -37,7 +37,7 @@ namespace WebAnalyzer.Server
                 _lastConnectionCount = _connections.Count;
                 UpdateWSConnectionCount(this, new UpdateWSConnectionCountEvent(_lastConnectionCount));
             }
-            
+
         }
 
         public void ResetConnections()
@@ -59,7 +59,7 @@ namespace WebAnalyzer.Server
             {
                 timer.Stop();
             }
-           
+
         }
 
         public void RequestData(String uniqueId, double leftX, double leftY, double rightX, double rightY)
@@ -86,11 +86,11 @@ namespace WebAnalyzer.Server
 
         private void Broadcast(Message message)
         {
+            RemoveOldConnections();
             lock (_connections)
             {
-                _connections.RemoveAll(connection => connection.IsConnected == false);
-                UpdateConnectionCount();
-                Parallel.ForEach(_connections, connection => connection.EnqueueMessage(message));
+                //encqueue only to active message
+                Parallel.ForEach(_connections.Where(connection => connection.Active), connection => connection.EnqueueMessage(message));
             }
 
         }
@@ -99,13 +99,27 @@ namespace WebAnalyzer.Server
         {
             if (_workMessages)
             {
+                RemoveOldConnections();
                 lock (_connections)
                 {
-                    _connections.RemoveAll(connection => connection.IsConnected == false);
-                    UpdateConnectionCount();
                     Parallel.ForEach(_connections, connection => connection.workMessageQueue());
                 }
             }
+        }
+
+        private void RemoveOldConnections()
+        {
+            IEnumerable<WebsocketConnection> oldConnections;
+            lock (_connections)
+            {
+                 oldConnections = _connections.Where(connection => !connection.IsConnected);
+
+                if(oldConnections.Count() == 0)
+                    return;
+                _connections.RemoveAll(connection => oldConnections.Contains(connection));
+            }
+
+            UpdateConnectionCount();
         }
 
         public void On_AddConnection(object source, AddConnectionEvent e)
@@ -113,9 +127,9 @@ namespace WebAnalyzer.Server
             lock (_connections)
             {
                 _connections.Add(e.Connection);
-                e.Connection.Active = true;
-                UpdateConnectionCount();
             }
+            e.Connection.Active = true;
+            UpdateConnectionCount();
 
             Logger.Log("Current connection count: " + _connections.Count);
         }

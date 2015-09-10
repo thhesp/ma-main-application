@@ -31,6 +31,14 @@ namespace WebAnalyzer.Server
             _messageQueue = new List<Message>();
         }
 
+        ~WebsocketConnection() {
+            _active = false;
+            _messageQueue.Clear();
+
+            _ws.Close();
+            _ws.Dispose();
+        }
+
         public Boolean IsConnected
         {
             get 
@@ -67,12 +75,15 @@ namespace WebAnalyzer.Server
 
         public void workMessageQueue()
         {
+            if (_messageQueue.Count == 0)
+                return;
+
             lock (MessageQueue)
             {
                 //check if messages are too old and remove them
                 removeOldMessages();
 
-                if (Writing || !Active || !this.IsConnected || _messageQueue.Count == 0)
+                if (_messageQueue.Count == 0 || Writing|| !this.IsConnected)
                     return;
 
                 //Logger.Log("Sent Message... current Message Count: " + _messageQueue.Count);
@@ -104,9 +115,6 @@ namespace WebAnalyzer.Server
 
         private void removeOldMessages()
         {
-            if (_messageQueue.Count == 0)
-                return;
-
             String currentTimestamp = Timestamp.GetMillisecondsUnixTimestamp();
             _messageQueue.RemoveAll(msg => ((long.Parse(currentTimestamp) - long.Parse(msg.Timestamp)) > Properties.Settings.Default.DataTimeout));
         }
