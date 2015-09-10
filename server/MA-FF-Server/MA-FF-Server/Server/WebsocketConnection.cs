@@ -116,7 +116,7 @@ namespace WebAnalyzer.Server
         private void removeOldMessages()
         {
             String currentTimestamp = Timestamp.GetMillisecondsUnixTimestamp();
-            _messageQueue.RemoveAll(msg => ((long.Parse(currentTimestamp) - long.Parse(msg.Timestamp)) > Properties.Settings.Default.DataTimeout));
+            _messageQueue.RemoveAll(msg => ((long.Parse(msg.Timestamp) - long.Parse(currentTimestamp)) > Properties.Settings.Default.DataTimeout));
         }
     }
 }
