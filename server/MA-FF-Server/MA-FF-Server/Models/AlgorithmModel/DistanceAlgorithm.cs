@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WebAnalyzer.Models.AnalysisModel;
 using WebAnalyzer.Models.DataModel;
+using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.AlgorithmModel
 {
@@ -57,14 +58,13 @@ namespace WebAnalyzer.Models.AlgorithmModel
                 if ((startX <= currentPos.EyeTrackingData.X && endX >= currentPos.EyeTrackingData.X) &&
                     (startY <= currentPos.EyeTrackingData.Y && endY >= currentPos.EyeTrackingData.Y))
                 {
-                    duration = long.Parse(positions[pos].DataRequestedTimestamp) - long.Parse(startTimestamp);
                     //found related gaze
                     relatedGazes.Add(positions[pos]);
                 }
                 else
                 {
+                    duration = long.Parse(relatedGazes.Last().DataRequestedTimestamp) - long.Parse(startTimestamp);
                     //fixation (if there was one) ends
-                    //@Todo: add constant/ setting for duration min time
                     if (duration >= MinimumDuration)
                     {
                         //create fixation
@@ -101,27 +101,106 @@ namespace WebAnalyzer.Models.AlgorithmModel
                 }
             }
 
-            //clear up a possible ending fixation
-
-            if (duration >= MinimumDuration)
+            if (relatedGazes.Count > 0)
             {
-                //Logger.Log("Saving last fixation...");
-                //create fixation
-                FixationModel fixation = new FixationModel(startTimestamp, relatedGazes.Last().DataRequestedTimestamp, duration, eye);
+                //clear up a possible ending fixation
+                duration = long.Parse(relatedGazes.Last().DataRequestedTimestamp) - long.Parse(startTimestamp);
 
-                fixation.From(startX, startY);
-                fixation.To(endX, endY);
-                fixation.RelatedGazes = relatedGazes;
+                if (duration >= MinimumDuration)
+                {
+                    //Logger.Log("Saving last fixation...");
+                    //create fixation
+                    FixationModel fixation = new FixationModel(startTimestamp, relatedGazes.Last().DataRequestedTimestamp, duration, eye);
 
-                fixations.Add(fixation);
+                    fixation.From(startX, startY);
+                    fixation.To(endX, endY);
+                    fixation.RelatedGazes = relatedGazes;
 
+                    fixations.Add(fixation);
+
+                }
             }
-            else
-            {
-                //Logger.Log("Last fixation to short :(");
-            }
+            
 
             return fixations;
+        }
+
+        public override List<SaccadeModel> ExtractSaccades(List<GazeModel> positions, String eye)
+        {
+            List<SaccadeModel> saccades = new List<SaccadeModel>();
+
+            List<FixationModel> fixations = ExtractFixation(positions, eye);
+
+            List<GazeModel> relatedGazes = new List<GazeModel>();
+
+            long duration = 0;
+            String startTimestamp = positions[0].DataRequestedTimestamp;
+
+            int fixationCount = 0;
+            List<GazeModel> fixationGazes = fixations[fixationCount].RelatedGazes;
+
+            for (int pos = 0; pos < positions.Count; pos++)
+            {
+                //fixations starts, saccades end
+                if (fixationGazes.Contains(positions[pos]))
+                {
+                    Logger.Log("Fixation found, saccade ends now.");
+
+                    // create saccade if related gazes are there
+                    if (relatedGazes.Count > 0)
+                    {
+                        duration = long.Parse(relatedGazes.Last().DataRequestedTimestamp) - long.Parse(startTimestamp);
+                        SaccadeModel saccade = new SaccadeModel(startTimestamp, relatedGazes.Last().DataRequestedTimestamp, duration, eye);
+
+                        saccade.RelatedGazes = relatedGazes;
+
+                        saccades.Add(saccade);
+
+                        //create new related gazes
+                        relatedGazes = new List<GazeModel>();
+                    }
+
+                    //jump over all gazes of the current fixation
+
+                    int newPos = positions.IndexOf(fixationGazes.Last()) + 1;
+
+                    if (newPos >= positions.Count)
+                    {
+                        break;
+                    }
+
+                    Logger.Log("Jumping from " + pos + " to " + newPos);
+
+                    pos = newPos;
+
+                    startTimestamp = positions[pos].DataRequestedTimestamp;
+
+                    duration = 0;
+
+
+                    //jump to next fixation
+                    fixationCount++;
+                    fixationGazes = fixations[fixationCount].RelatedGazes;
+                }
+                else
+                {
+                    //belongs to saccade
+                    relatedGazes.Add(positions[pos]);
+                }
+            }
+
+            if (relatedGazes.Count > 0)
+            {
+                Logger.Log("Saccade at the end found");
+                duration = long.Parse(relatedGazes.Last().DataRequestedTimestamp) - long.Parse(startTimestamp);
+                SaccadeModel saccade = new SaccadeModel(startTimestamp, relatedGazes.Last().DataRequestedTimestamp, duration, eye);
+
+                saccade.RelatedGazes = relatedGazes;
+
+                saccades.Add(saccade);
+            }
+
+            return saccades;
         }
     }
 }

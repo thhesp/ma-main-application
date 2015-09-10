@@ -24,6 +24,10 @@ namespace WebAnalyzer.Models.DataModel
         private List<FixationModel> _leftFixationData = new List<FixationModel>();
         private List<FixationModel> _rightFixationData = new List<FixationModel>();
 
+        /* Saccades */
+        private List<SaccadeModel> _leftSaccadesData = new List<SaccadeModel>();
+        private List<SaccadeModel> _rightSaccadesnData = new List<SaccadeModel>();
+
         public WebpageModel(String url, String visitTimestamp)
         {
             _url = url;
@@ -371,6 +375,63 @@ namespace WebAnalyzer.Models.DataModel
             return webpageNode;
         }
 
+        public XmlNode GenerateSaccadesXML(XmlDocument xmlDoc, Boolean includeSingleGazeData)
+        {
+            XmlNode webpageNode = xmlDoc.CreateElement("webpage");
+
+            XmlAttribute url = xmlDoc.CreateAttribute("url");
+
+            url.Value = this.Url;
+
+            webpageNode.Attributes.Append(url);
+
+            XmlAttribute visited = xmlDoc.CreateAttribute("visited");
+
+            visited.Value = this.VisitTimestamp;
+
+            webpageNode.Attributes.Append(visited);
+
+
+            // insert fixations
+
+            XmlNode saccadesNode = xmlDoc.CreateElement("saccades");
+
+            XmlNode leftEyeNode = xmlDoc.CreateElement("left-eye");
+
+            XmlAttribute leftSaccadesCount = xmlDoc.CreateAttribute("count-of-saccades");
+
+            leftSaccadesCount.Value = _leftSaccadesData.Count.ToString();
+
+            leftEyeNode.Attributes.Append(leftSaccadesCount);
+
+            foreach (SaccadeModel data in _leftSaccadesData)
+            {
+                leftEyeNode.AppendChild(data.ToXML(xmlDoc, includeSingleGazeData));
+            }
+
+            saccadesNode.AppendChild(leftEyeNode);
+
+            XmlNode rightEyeNode = xmlDoc.CreateElement("right-eye");
+
+            XmlAttribute rightSaccadesCount = xmlDoc.CreateAttribute("count-of-saccades");
+
+            rightSaccadesCount.Value = _rightSaccadesnData.Count.ToString();
+
+            rightEyeNode.Attributes.Append(rightSaccadesCount);
+
+            foreach (SaccadeModel data in _rightSaccadesnData)
+            {
+                rightEyeNode.AppendChild(data.ToXML(xmlDoc, includeSingleGazeData));
+            }
+
+            saccadesNode.AppendChild(rightEyeNode);
+
+            webpageNode.AppendChild(saccadesNode);
+
+
+            return webpageNode;
+        }
+
         #endregion
 
 
@@ -378,8 +439,11 @@ namespace WebAnalyzer.Models.DataModel
 
         public void ExtractFixations(Algorithm algorithm)
         {
-            _leftFixationData = algorithm.ExtractFixation(_positionData, "right");
+            _leftFixationData = algorithm.ExtractFixation(_positionData, "left");
             _rightFixationData = algorithm.ExtractFixation(_positionData, "right");
+
+            _leftSaccadesData = algorithm.ExtractSaccades(_positionData, "left");
+            _rightSaccadesnData = algorithm.ExtractSaccades(_positionData, "right");
         }
 
         #endregion

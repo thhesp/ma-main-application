@@ -227,6 +227,8 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             ExportController.SaveExperimentFixations(_testrun, _participant, _folderPath, _filename, _exportFormat, _containGazeData);
             ExportController.SaveExperimentAOI(_exp, _testrun, _participant, _folderPath, _filename, _exportFormat, _containGazeData);
+            ExportController.SaveExperimentSaccades(_testrun, _participant, _folderPath, _filename, _exportFormat, _containGazeData);
+
 
             HideSaveIndicator();
         }

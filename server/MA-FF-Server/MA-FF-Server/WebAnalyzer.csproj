@@ -149,6 +149,7 @@
     <Compile Include="Controller\TestController.cs" />
     <Compile Include="Models\AlgorithmModel\Algorithm.cs" />
     <Compile Include="Models\AlgorithmModel\DistanceAlgorithm.cs" />
+    <Compile Include="Models\AnalysisModel\SaccadeModel.cs" />
     <Compile Include="Models\AnalysisModel\FixationModel.cs" />
     <Compile Include="Models\AnalysisModel\StatisticsAnalyser.cs" />
     <Compile Include="Models\Base\ExperimentModel.cs" />

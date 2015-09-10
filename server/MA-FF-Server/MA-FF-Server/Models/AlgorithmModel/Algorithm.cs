@@ -13,5 +13,7 @@ namespace WebAnalyzer.Models.AlgorithmModel
         public enum ALGORITHM_TYPES { DISTANCE };
 
         public abstract List<FixationModel> ExtractFixation(List<GazeModel> positions, String eye);
+
+        public abstract List<SaccadeModel> ExtractSaccades(List<GazeModel> positions, String eye);
     }
 }

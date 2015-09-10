@@ -389,6 +389,53 @@ namespace WebAnalyzer.Models.DataModel
             return experimentNode;
         }
 
+        public XmlNode GenerateSaccadesXML(ExperimentParticipant participant, XmlDocument xmlDoc, Boolean includeSingleGazeData)
+        {
+            XmlNode experimentNode = xmlDoc.CreateElement("experiment");
+
+
+            XmlAttribute started = xmlDoc.CreateAttribute("started");
+
+            started.Value = this.Started;
+
+            experimentNode.Attributes.Append(started);
+
+            XmlAttribute stopped = xmlDoc.CreateAttribute("stopped");
+
+            stopped.Value = this.Stopped;
+
+            experimentNode.Attributes.Append(stopped);
+
+            XmlAttribute duration = xmlDoc.CreateAttribute("duration");
+
+            TimeSpan calcDuration = DateTime.Parse(Stopped) - DateTime.Parse(Started);
+
+            duration.Value = calcDuration.ToString();
+
+            experimentNode.Attributes.Append(duration);
+
+            XmlAttribute visitedWebpagesCount = xmlDoc.CreateAttribute("count-of-visited-pages");
+
+            visitedWebpagesCount.Value = this._visitedPages.Count.ToString();
+
+            experimentNode.Attributes.Append(visitedWebpagesCount);
+
+            //add participant data
+            experimentNode.AppendChild(participant.ToXML(xmlDoc));
+
+            //add experiment data
+            XmlNode webpagesNode = xmlDoc.CreateElement("webpages");
+
+            foreach (WebpageModel page in _visitedPages)
+            {
+                webpagesNode.AppendChild(page.GenerateSaccadesXML(xmlDoc, includeSingleGazeData));
+            }
+
+            experimentNode.AppendChild(webpagesNode);
+
+            return experimentNode;
+        }
+
         public Boolean CheckForSave(){
             if(_unassignedPositions.Count == 0){
                 return true;

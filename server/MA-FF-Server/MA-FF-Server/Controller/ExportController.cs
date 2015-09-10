@@ -269,6 +269,7 @@ namespace WebAnalyzer.Controller
                 return false;
             }
         }
+
         /// <summary>
         /// Export the given testrun aois to the given directory and filename with the given format.
         /// </summary>
@@ -291,6 +292,43 @@ namespace WebAnalyzer.Controller
                         xmlDoc.AppendChild(testrun.GenerateAOIXML(experiment.Settings, participant, xmlDoc, includeGazeData));
 
                         xmlDoc.Save(dir + "\\" + filename + "-aois.xml");
+                        break;
+
+                    case EXPORT_FORMATS.CSV:
+
+                        break;
+                }
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Export the given testrun saccades to the given directory and filename with the given format.
+        /// </summary>
+        /// <param name="testrun">The testdata</param>
+        /// <param name="dir">Directory to export to</param>
+        /// <param name="filename">Filename to use</param>
+        /// <param name="format">Format in which to save the data</param>
+        /// <param name="includeGazeData">Should the export contain data about the single gazes</param>
+        public static Boolean SaveExperimentSaccades(TestModel testrun, ExperimentParticipant participant, String dir, String filename, EXPORT_FORMATS format, Boolean includeGazeData)
+        {
+            if (Directory.Exists(dir))
+            {
+
+                Logger.Log("Exporting to: " + dir + "\\" + filename + ".xml");
+                switch (format)
+                {
+                    case EXPORT_FORMATS.XML:
+                        XmlDocument xmlDoc = new XmlDocument();
+
+                        xmlDoc.AppendChild(testrun.GenerateSaccadesXML(participant, xmlDoc, includeGazeData));
+
+                        xmlDoc.Save(dir + "\\" + filename + "-saccades.xml");
                         break;
 
                     case EXPORT_FORMATS.CSV:
