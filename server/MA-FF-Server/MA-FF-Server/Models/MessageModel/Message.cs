@@ -257,6 +257,9 @@ namespace WebAnalyzer.Models.MessageModel
                             case "path":
                                 leftElement.Path = value;
                                 break;
+                            case "selector":
+                                leftElement.Selector = value;
+                                break;
 
                         }
                     }
@@ -436,6 +439,10 @@ namespace WebAnalyzer.Models.MessageModel
                     } else if (reader.TokenType == JsonToken.String && property == "path")
                     {
                         element.Path = reader.Value.ToString();
+                    }
+                    else if (reader.TokenType == JsonToken.String && property == "selector")
+                    {
+                        element.Selector = reader.Value.ToString();
                     }
                 }
                 else
