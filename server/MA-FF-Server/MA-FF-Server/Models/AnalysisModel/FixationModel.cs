@@ -138,6 +138,12 @@ namespace WebAnalyzer.Models.AnalysisModel
 
             fixationNode.Attributes.Append(endY);
 
+            XmlAttribute countOfGazes = xmlDoc.CreateAttribute("count-of-gazes");
+
+            countOfGazes.Value = this.RelatedGazes.Count.ToString();
+
+            fixationNode.Attributes.Append(countOfGazes);
+
             if (includeSingleGazeData)
             {
                 XmlNode gazesNode = xmlDoc.CreateElement("related-gazes");
@@ -218,6 +224,12 @@ namespace WebAnalyzer.Models.AnalysisModel
             endY.Value = this.EndY.ToString();
 
             aoiNode.Attributes.Append(endY);
+
+            XmlAttribute countOfGazes = xmlDoc.CreateAttribute("count-of-gazes");
+
+            countOfGazes.Value = this.RelatedGazes.Count.ToString();
+
+            aoiNode.Attributes.Append(countOfGazes);
 
             if (includeSingleGazeData)
             {

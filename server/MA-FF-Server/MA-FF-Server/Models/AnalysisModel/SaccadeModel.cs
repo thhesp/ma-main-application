@@ -69,6 +69,12 @@ namespace WebAnalyzer.Models.AnalysisModel
 
             saccadeNode.Attributes.Append(duration);
 
+            XmlAttribute countOfGazes = xmlDoc.CreateAttribute("count-of-gazes");
+
+            countOfGazes.Value = this.RelatedGazes.Count.ToString();
+
+            saccadeNode.Attributes.Append(countOfGazes);
+
             if (includeSingleGazeData)
             {
                 XmlNode gazesNode = xmlDoc.CreateElement("related-gazes");

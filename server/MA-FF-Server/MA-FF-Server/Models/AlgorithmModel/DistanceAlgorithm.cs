@@ -144,7 +144,7 @@ namespace WebAnalyzer.Models.AlgorithmModel
                 //fixations starts, saccades end
                 if (fixationGazes.Contains(positions[pos]))
                 {
-                    Logger.Log("Fixation found, saccade ends now.");
+                    //Logger.Log("Fixation found, saccade ends now.");
 
                     // create saccade if related gazes are there
                     if (relatedGazes.Count > 0)
@@ -169,7 +169,7 @@ namespace WebAnalyzer.Models.AlgorithmModel
                         break;
                     }
 
-                    Logger.Log("Jumping from " + pos + " to " + newPos);
+                    //Logger.Log("Jumping from " + pos + " to " + newPos);
 
                     pos = newPos;
 
@@ -191,7 +191,7 @@ namespace WebAnalyzer.Models.AlgorithmModel
 
             if (relatedGazes.Count > 0)
             {
-                Logger.Log("Saccade at the end found");
+                //Logger.Log("Saccade at the end found");
                 duration = long.Parse(relatedGazes.Last().DataRequestedTimestamp) - long.Parse(startTimestamp);
                 SaccadeModel saccade = new SaccadeModel(startTimestamp, relatedGazes.Last().DataRequestedTimestamp, duration, eye);
 
