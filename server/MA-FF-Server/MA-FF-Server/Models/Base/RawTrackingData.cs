@@ -15,7 +15,20 @@ namespace WebAnalyzer.Models.Base
 
         private List<RawTrackingEvent> _events = new List<RawTrackingEvent>();
 
-        public void AddEvent(RawTrackingEvent rawEvent){
+        public List<RawTrackingGaze> Gazes
+        {
+            get { return _gazes; }
+            set { _gazes = value; }
+        }
+
+        public List<RawTrackingEvent> Events
+        {
+            get { return _events; }
+            set { _events = value; }
+        }
+
+        public void AddEvent(RawTrackingEvent rawEvent)
+        {
             _events.Add(rawEvent);
         }
 

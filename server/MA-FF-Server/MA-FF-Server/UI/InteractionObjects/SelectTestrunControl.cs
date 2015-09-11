@@ -54,7 +54,7 @@ namespace WebAnalyzer.UI.InteractionObjects
             for (int i = 0; i < files.Length; i++)
             {
 
-                if (LoadController.ValidateTestrunFile(files[i]))
+                if (LoadController.ValidateXMLFile(files[i]))
                 {
                     _testrunPaths.Add(files[i]);
 
