@@ -34,6 +34,10 @@ namespace WebAnalyzer.Models.AlgorithmModel
                 //find all gazes which belong to this fixation
                 FixationModel fixation = new FixationModel(fixationEvent.StartTime, fixationEvent.EndTime, long.Parse(fixationEvent.Duration), eye);
 
+                fixation.From(fixationEvent.X, fixationEvent.Y);
+
+                fixation.To(fixationEvent.X, fixationEvent.Y);
+
                 long startTimestamp;
                 long endTimestamp;
 
@@ -63,6 +67,7 @@ namespace WebAnalyzer.Models.AlgorithmModel
 
                 foreach (GazeModel pos in positions)
                 {
+                    //use the "timestamp" since it is the one saved from the tracking event
                     long gazeTimestamp = long.Parse(pos.Timestamp);
 
                     //Logger.Log("GazeTimestamp: " + gazeTimestamp + " should be between " + startTimestamp + " and " + endTimestamp);
@@ -76,7 +81,11 @@ namespace WebAnalyzer.Models.AlgorithmModel
 
                 }
 
-                fixations.Add(fixation);
+                //only add fixations with related gazes (to remove data before and after browser action)
+                if (fixation.RelatedGazes.Count > 0)
+                {
+                    fixations.Add(fixation);
+                }
             }
 
 

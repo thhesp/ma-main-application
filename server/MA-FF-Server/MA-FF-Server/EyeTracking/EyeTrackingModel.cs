@@ -182,7 +182,7 @@ namespace WebAnalyzer.EyeTracking
         /// Callback function for sample Data.
         /// </summary>
         /// <remarks>
-        /// The data is for one tracking point.
+        /// The data is for one tracking point. Timestamps in microseconds if normale samplestruct, if 32 bit sample struct its in milliseconds...
         /// </remarks>
         void GetSampleCallbackFunction(EyeTrackingController.SampleStruct sampleData)
         {
@@ -203,7 +203,7 @@ namespace WebAnalyzer.EyeTracking
         /// Callback function for event Data.
         /// </summary>
         /// <remarks>
-        /// The data is for mainly fixations.
+        /// The data is for mainly fixations. Timestamps in microseconds if normale samplestruct, if 32 bit sample struct its in milliseconds...
         /// </remarks>
         void GetEventCallbackFunction(EyeTrackingController.EventStruct eventData)
         {
