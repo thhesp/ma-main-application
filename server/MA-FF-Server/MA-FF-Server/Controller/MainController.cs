@@ -128,11 +128,21 @@ namespace WebAnalyzer.Controller
 
             if (LoadController.ValidateExperimentFolder(e.Path))
             {
-                _currentExperiment = LoadController.LoadExperiment(e.Path);
+                ExperimentModel loadedExperiment = LoadController.LoadExperiment(e.Path);
 
-                SetExpiermentData(_currentExperiment);
-                CloseExperimentWizard();
-                Logger.getInstance().ExperimentName = _currentExperiment.ExperimentName;
+                if (loadedExperiment != null)
+                {
+                    _currentExperiment = loadedExperiment;
+                    SetExpiermentData(_currentExperiment);
+                    CloseExperimentWizard();
+                    Logger.getInstance().ExperimentName = _currentExperiment.ExperimentName;
+                }
+                else
+                {
+                    //do sth?
+                    source.DisplayError("Das Experiment konnte nicht geladen werden.");
+                    Logger.Log("Error loading the experiment!");
+                }
             }
             else
             {

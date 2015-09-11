@@ -10,6 +10,7 @@ using WebAnalyzer.Models.SettingsModel;
 using WebAnalyzer.Models.Base;
 using WebAnalyzer.Util;
 using WebAnalyzer.Models.DataModel;
+using System.IO;
 
 namespace WebAnalyzer.Controller
 {
@@ -70,9 +71,12 @@ namespace WebAnalyzer.Controller
         /// <param name="path">Path to the directory from which to load the experiment.</param>
         public static ExperimentModel LoadExperiment(String path)
         {
-            if(System.IO.Directory.Exists(path)){
+            String experimentPath = path + "\\" + Properties.Settings.Default.ExperimentFilename;
+
+            if (ValidateXMLFile(experimentPath))
+            {
                 XmlDocument doc = new XmlDocument();
-                doc.Load(path + "\\" + Properties.Settings.Default.ExperimentFilename);
+                doc.Load(experimentPath);
 
                 ExperimentModel experiment = ExperimentModel.LoadFromXML(doc);
 
@@ -83,6 +87,10 @@ namespace WebAnalyzer.Controller
                 }
 
                 return experiment;
+            }
+            else
+            {
+                Logger.Log("Invalid experiment file!");
             }
             // throw exception?
             return null;
@@ -95,10 +103,12 @@ namespace WebAnalyzer.Controller
         /// <param name="path">Path to the directory from which to load the experiment participants.</param>
         public static List<ExperimentParticipant> LoadParticipants(String path)
         {
-            if (System.IO.Directory.Exists(path))
+            String participantsPath = path + "\\" + Properties.Settings.Default.ParticipantsFilename;
+
+            if (ValidateXMLFile(participantsPath))
             {
                 XmlDocument doc = new XmlDocument();
-                doc.Load(path + "\\" + Properties.Settings.Default.ParticipantsFilename);
+                doc.Load(participantsPath);
 
                 XmlNode participantsNode = doc.DocumentElement.SelectSingleNode("/participants");
 
@@ -120,6 +130,10 @@ namespace WebAnalyzer.Controller
 
                 return participants;
             }
+            else
+            {
+                Logger.Log("Invalid participants file!");
+            }
             // throw exception?
             return null;
 
@@ -132,12 +146,18 @@ namespace WebAnalyzer.Controller
         /// <param name="path">Path to the directory from which to load the experiment settings.</param>
         public static ExperimentSettings LoadSettings(String path)
         {
-            if (System.IO.Directory.Exists(path))
+            String settingsPath = path + "\\" + Properties.Settings.Default.SettingsFilename;
+
+            if (ValidateXMLFile(settingsPath))
             {
                 XmlDocument doc = new XmlDocument();
-                doc.Load(path + "\\" + Properties.Settings.Default.SettingsFilename);
+                doc.Load(settingsPath);
 
                 return ExperimentSettings.LoadFromXML(doc);
+            }
+            else
+            {
+                Logger.Log("Invalid settings file!");
             }
             // throw exception?
             return null;
@@ -149,7 +169,7 @@ namespace WebAnalyzer.Controller
         /// <param name="path">Path to the xml file from which to load the test.</param>
         public static TestModel LoadTest(String path)
         {
-            if (System.IO.File.Exists(path))
+            if (ValidateXMLFile(path))
             {
                 XmlDocument doc = new XmlDocument();
                 doc.Load(path);
@@ -160,9 +180,26 @@ namespace WebAnalyzer.Controller
             return null;
         }
 
+        /// <summary>
+        /// Loads raw data and returns it as an RawData object.
+        /// </summary>
+        /// <param name="path">Path to the xml file from which to load the raw data.</param>
+        public static RawTrackingData LoadRawData(String path)
+        {
+            if (ValidateXMLFile(path))
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(path);
+
+                return RawTrackingData.LoadFromXML(doc);
+            }
+            // throw exception?
+            return null;
+        }
+
 
         /// <summary>
-        /// Generates Path to Rawdata Location of Testrun
+        /// Generates Path to Testdata Location of Testrun
         /// </summary>
         /// <param name="experiment">Current experiment to get the data from</param>
         /// <param name="participant">Current participant to get the data from</param>
@@ -177,15 +214,74 @@ namespace WebAnalyzer.Controller
         }
 
         /// <summary>
+        /// Generates Path to Rawdata Location of Testrun
+        /// </summary>
+        /// <param name="experiment">Current experiment to get the data from</param>
+        /// <param name="participant">Current participant to get the data from</param>
+        public static String GetRawdataLocation(ExperimentModel experiment, ExperimentParticipant participant)
+        {
+            String dir = experiment.GetBaseExperimentLocation();
+            dir += Properties.Settings.Default.RawdataLocation.Replace("{1}", participant.Identifier);
+
+            FileIO.CheckPathAndCreate(dir);
+
+            return dir;
+        }
+
+        /// <summary>
+        /// Generates Path to Rawdata Location of Testrun
+        /// </summary>
+        /// <param name="experiment">Current experiment to get the data from</param>
+        /// <param name="participant">Current participant to get the data from</param>
+        /// <param name="path">Path to the testdata</param>
+        public static String GetAssociatedRawDataForTestdata(ExperimentModel experiment, ExperimentParticipant participant, String path)
+        {
+            String dir = experiment.GetBaseExperimentLocation();
+            dir += Properties.Settings.Default.RawdataLocation.Replace("{1}", participant.Identifier);
+
+            bool exists = Directory.Exists(dir);
+            if (exists)
+            {
+                String filename = Path.GetFileName(path);
+
+                return Path.Combine(dir, filename);
+            }
+
+           
+
+            return "";
+        }
+
+        /// <summary>
         /// Validates if the given path contains testrun data.
         /// </summary>
         /// <param name="path">File to check for testrun data</param>
-        public static Boolean ValidateTestrunFile(String path)
+        public static Boolean ValidateXMLFile(String path)
         {
-
-            if(!path.Contains(".xml")){
+            if (!File.Exists(path))
+            {
+                Logger.Log("File " + path + " does not exist.");
                 return false;
             }
+
+            if(!path.Contains(".xml")){
+                Logger.Log("File " + path + " is no XML File.");
+                return false;
+            }
+
+            /*var doc = new XmlDocument();
+            try
+            {
+                doc.LoadXml(path);
+            }
+            catch (XmlException e)
+            {
+                // put code here that should be executed when the XML is not valid.
+
+                Logger.Log("XML File is not valid: " + e.Message);
+
+                return false;
+            }*/
 
             return true;
         }
