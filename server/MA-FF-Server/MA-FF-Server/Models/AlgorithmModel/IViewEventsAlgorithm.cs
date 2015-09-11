@@ -37,18 +37,18 @@ namespace WebAnalyzer.Models.AlgorithmModel
                 long startTimestamp;
                 long endTimestamp;
 
-                if (fixationEvent.StartTime != "" && fixationEvent.EndTime != "")
+                if (fixationEvent.StartTime != "0" && fixationEvent.EndTime != "0")
                 {
                     startTimestamp = long.Parse(fixationEvent.StartTime);
                     endTimestamp = long.Parse(fixationEvent.EndTime);
                 }
-                else if (fixationEvent.StartTime != "")
+                else if (fixationEvent.StartTime != "0")
                 {
                     startTimestamp = long.Parse(fixationEvent.StartTime);
 
                     endTimestamp = startTimestamp + long.Parse(fixationEvent.Duration);
                 }
-                else if (fixationEvent.EndTime != "")
+                else if (fixationEvent.EndTime != "0")
                 {
                     endTimestamp = long.Parse(fixationEvent.EndTime);
 
@@ -63,10 +63,14 @@ namespace WebAnalyzer.Models.AlgorithmModel
 
                 foreach (GazeModel pos in positions)
                 {
-                    long gazeTimestamp = long.Parse(pos.DataRequestedTimestamp);
+                    long gazeTimestamp = long.Parse(pos.Timestamp);
+
+                    //Logger.Log("GazeTimestamp: " + gazeTimestamp + " should be between " + startTimestamp + " and " + endTimestamp);
 
                     if (gazeTimestamp >= startTimestamp && gazeTimestamp <= endTimestamp)
                     {
+                        //Logger.Log("Related Gaze found.");
+
                         fixation.AddRelatedGaze(pos);
                     }
 

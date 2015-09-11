@@ -100,10 +100,10 @@ namespace WebAnalyzer.Models.DataModel
                     switch (attr.Name)
                     {
                         case "x":
-                            etData.X = int.Parse(attr.Value);
+                            etData.X = Double.Parse(attr.Value);
                             break;
                         case "y":
-                            etData.Y = int.Parse(attr.Value);
+                            etData.Y = Double.Parse(attr.Value);
                             break;
                         case "callback":
                             etData.CallbackTimestamp = attr.Value;

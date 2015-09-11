@@ -162,7 +162,12 @@ namespace WebAnalyzer.Models.AnalysisModel
         public XmlNode ToAOIXML(ExperimentSettings settings, WebpageModel page, String eye, XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
 
-            String aoi = ""; ;
+            String aoi = "";
+
+            if (GetRelatedGazes().Count == 0)
+            {
+                return null;
+            }
 
             if(eye == "left"){
                  aoi = settings.GetAOI(page, GetRelatedGazes()[0].LeftEye.Element);

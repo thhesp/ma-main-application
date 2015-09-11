@@ -66,7 +66,16 @@ namespace WebAnalyzer.Models.Base
 
         public Boolean BelongsToEye(String eye)
         {
-            return Eye == eye;
+            if (this.Eye == "l" && eye == "left")
+            {
+                return true;
+            }
+            else if (this.Eye == "r" && eye == "right")
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public XmlNode ToXML(XmlDocument xmlDoc)
