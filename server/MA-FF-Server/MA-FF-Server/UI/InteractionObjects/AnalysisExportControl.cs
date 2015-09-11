@@ -60,6 +60,19 @@ namespace WebAnalyzer.UI.InteractionObjects
             _exportFormat = (ExportController.EXPORT_FORMATS) Enum.Parse(typeof(ExportController.EXPORT_FORMATS), format, true);
         }
 
+        public void setAlgorithmType(String format)
+        {
+            switch (format)
+            {
+                case "distance":
+                    _algorithmType = Algorithm.ALGORITHM_TYPES.DISTANCE;
+                    break;
+                case "iview":
+                    _algorithmType = Algorithm.ALGORITHM_TYPES.IVIEW_EVENTS;
+                    break;
+            }
+        }
+
         public void setContainGazeData(Boolean containGazeData)
         {
             _containGazeData = containGazeData;
@@ -91,6 +104,7 @@ namespace WebAnalyzer.UI.InteractionObjects
 
             if (_testrun != null && _folderPath != "" && _filename != "")
             {
+                // after extracting the algorithm Data, the Export will be triggered from there
                 extractAlgorithmData();
             }
             else
@@ -111,6 +125,9 @@ namespace WebAnalyzer.UI.InteractionObjects
             {
                 case Algorithm.ALGORITHM_TYPES.DISTANCE:
                     EvaluteJavaScript("createDistanceAlgorithm();");
+                    break;
+                case Algorithm.ALGORITHM_TYPES.IVIEW_EVENTS:
+                    useIViewEvents();
                     break;
             }
         }
@@ -246,6 +263,36 @@ namespace WebAnalyzer.UI.InteractionObjects
             _testrun.ExtractFixations(algorithm);
 
             ExportData();
+        }
+
+        private void useIViewEvents()
+        {
+            Logger.Log("Loading RawData.. ");
+
+            String rawDataPath = LoadController.GetAssociatedRawDataForTestdata(_exp, _participant, _testrun.Filename);
+
+            RawTrackingData rawData = LoadController.LoadRawData(rawDataPath);
+
+            if (rawData != null)
+            {
+                IViewEventsAlgorithm algorithm = new IViewEventsAlgorithm();
+
+                algorithm.RawData = rawData;
+
+                _testrun.ExtractFixations(algorithm);
+
+                ExportData();
+            }
+            else
+            {
+                Logger.Log("Could not load the raw data for this test.");
+
+                DisplayError("Die Rawdaten zu diesem Test konnten nicht geladen werden.");
+
+                HideSaveIndicator();
+            }
+
+            
         }
     }
 }

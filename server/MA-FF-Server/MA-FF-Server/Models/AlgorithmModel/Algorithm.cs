@@ -10,7 +10,7 @@ namespace WebAnalyzer.Models.AlgorithmModel
 {
     public abstract class Algorithm
     {
-        public enum ALGORITHM_TYPES { DISTANCE };
+        public enum ALGORITHM_TYPES { DISTANCE, IVIEW_EVENTS };
 
         public abstract List<FixationModel> ExtractFixation(List<GazeModel> positions, String eye);
 

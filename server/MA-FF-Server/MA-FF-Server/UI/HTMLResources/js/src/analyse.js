@@ -108,6 +108,8 @@ jQuery('#analysis-algorithm').on('change', function () {
 
     var algorithm = jQuery('#analysis-algorithm').val();
 
+    analysisExportControl.setAlgorithmType(algorithm);
+
     var template;
 
     switch (algorithm) {
