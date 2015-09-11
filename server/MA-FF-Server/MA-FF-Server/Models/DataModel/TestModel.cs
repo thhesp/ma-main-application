@@ -584,7 +584,7 @@ namespace WebAnalyzer.Models.DataModel
 
             // left eye
 
-            EyeTrackingData leftData = new EyeTrackingData(leftX, leftY, requestedTimestamp);
+            EyeTrackingData leftData = new EyeTrackingData(leftX, leftY, timestamp);
 
             PositionDataModel leftPos = new PositionDataModel();
 
@@ -593,7 +593,7 @@ namespace WebAnalyzer.Models.DataModel
 
             // right eye
 
-            EyeTrackingData rightData = new EyeTrackingData(rightX, rightY, requestedTimestamp);
+            EyeTrackingData rightData = new EyeTrackingData(rightX, rightY, timestamp);
 
             PositionDataModel rightPos = new PositionDataModel();
 
