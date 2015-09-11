@@ -36,6 +36,8 @@ namespace WebAnalyzer.Controller
             FileIO.CheckPathAndCreate(dir);
             XmlDocument xmlDoc = new XmlDocument();
 
+            xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", null, null));;
+
             xmlDoc.AppendChild(experiment.ToXML(xmlDoc));
 
             xmlDoc.Save(dir + Properties.Settings.Default.ExperimentFilename);
@@ -80,6 +82,8 @@ namespace WebAnalyzer.Controller
         {
             XmlDocument xmlDoc = new XmlDocument();
 
+            xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", null, null));;
+
             xmlDoc.AppendChild(settings.ToXML(xmlDoc));
 
             xmlDoc.Save(baseDir + Properties.Settings.Default.SettingsFilename);
@@ -113,6 +117,8 @@ namespace WebAnalyzer.Controller
         {
             XmlDocument xmlDoc = new XmlDocument();
 
+            xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", null, null));;
+
             XmlNode participantsNode = xmlDoc.CreateElement("participants");
 
             foreach (ExperimentParticipant participant in participants)
@@ -142,6 +148,8 @@ namespace WebAnalyzer.Controller
             FileIO.CheckPathAndCreate(dir);
             XmlDocument xmlDoc = new XmlDocument();
 
+            xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", null, null));;
+
             xmlDoc.AppendChild(testrun.ToXML(currentParticipant, xmlDoc));
 
             xmlDoc.Save(dir + "\\" + timestamp + ".xml");
@@ -164,6 +172,8 @@ namespace WebAnalyzer.Controller
 
             FileIO.CheckPathAndCreate(dir);
             XmlDocument xmlDoc = new XmlDocument();
+
+            xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", null, null));;
 
             xmlDoc.AppendChild(testrun.GenerateStatisticsXML(xmlDoc, false));
 
@@ -189,6 +199,8 @@ namespace WebAnalyzer.Controller
             FileIO.CheckPathAndCreate(dir);
             XmlDocument xmlDoc = new XmlDocument();
 
+            xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", null, null));;
+
             xmlDoc.AppendChild(rawData.ToXML(currentParticipant, xmlDoc));
 
             xmlDoc.Save(dir + "\\" + timestamp + ".xml");
@@ -213,6 +225,8 @@ namespace WebAnalyzer.Controller
                 {
                     case EXPORT_FORMATS.XML:
                         XmlDocument xmlDoc = new XmlDocument();
+
+                        xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", null, null));;
 
                         xmlDoc.AppendChild(testrun.ToXML(participant, xmlDoc));
 
@@ -252,6 +266,8 @@ namespace WebAnalyzer.Controller
                     case EXPORT_FORMATS.XML:
                         XmlDocument xmlDoc = new XmlDocument();
 
+                        xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", null, null));;
+
                         xmlDoc.AppendChild(testrun.GenerateFixationXML(participant, xmlDoc, includeGazeData));
 
                         xmlDoc.Save(dir + "\\" + filename + "-fixations.xml");
@@ -289,6 +305,8 @@ namespace WebAnalyzer.Controller
                     case EXPORT_FORMATS.XML:
                         XmlDocument xmlDoc = new XmlDocument();
 
+                        xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", null, null));;
+
                         xmlDoc.AppendChild(testrun.GenerateAOIXML(experiment.Settings, participant, xmlDoc, includeGazeData));
 
                         xmlDoc.Save(dir + "\\" + filename + "-aois.xml");
@@ -325,6 +343,8 @@ namespace WebAnalyzer.Controller
                 {
                     case EXPORT_FORMATS.XML:
                         XmlDocument xmlDoc = new XmlDocument();
+
+                        xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", null, null));
 
                         xmlDoc.AppendChild(testrun.GenerateSaccadesXML(participant, xmlDoc, includeGazeData));
 

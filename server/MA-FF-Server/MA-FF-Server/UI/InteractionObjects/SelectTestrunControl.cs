@@ -47,7 +47,7 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             String path = LoadController.GetTestdataLocation(exp, participant);
 
-            Logger.Log("Rawdata path: " + path);
+            Logger.Log("Testdata path: " + path);
 
             String[] files = Directory.GetFiles(path);
 

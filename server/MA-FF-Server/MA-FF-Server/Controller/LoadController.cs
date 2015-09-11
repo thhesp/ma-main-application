@@ -269,10 +269,10 @@ namespace WebAnalyzer.Controller
                 return false;
             }
 
-            /*var doc = new XmlDocument();
+            var doc = new XmlDocument();
             try
             {
-                doc.LoadXml(path);
+                doc.Load(path);
             }
             catch (XmlException e)
             {
@@ -281,7 +281,8 @@ namespace WebAnalyzer.Controller
                 Logger.Log("XML File is not valid: " + e.Message);
 
                 return false;
-            }*/
+            }
+
 
             return true;
         }
