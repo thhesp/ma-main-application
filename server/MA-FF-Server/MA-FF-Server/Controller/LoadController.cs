@@ -233,8 +233,8 @@ namespace WebAnalyzer.Controller
         /// </summary>
         /// <param name="experiment">Current experiment to get the data from</param>
         /// <param name="participant">Current participant to get the data from</param>
-        /// <param name="path">Path to the testdata</param>
-        public static String GetAssociatedRawDataForTestdata(ExperimentModel experiment, ExperimentParticipant participant, String path)
+        /// <param name="filename">Filename of the testdata</param>
+        public static String GetAssociatedRawDataForTestdata(ExperimentModel experiment, ExperimentParticipant participant, String filename)
         {
             String dir = experiment.GetBaseExperimentLocation();
             dir += Properties.Settings.Default.RawdataLocation.Replace("{1}", participant.Identifier);
@@ -242,7 +242,6 @@ namespace WebAnalyzer.Controller
             bool exists = Directory.Exists(dir);
             if (exists)
             {
-                String filename = Path.GetFileName(path);
 
                 return Path.Combine(dir, filename);
             }

@@ -25,6 +25,23 @@ namespace WebAnalyzer.Models.DataModel
 
         private String _lastGazeActionTimestamp = "";
 
+        public String Filename
+        {
+            get
+            {
+                return Timestamp.GetDateTime(Started) + ".xml";
+            }
+        }
+
+
+        public String FilenameWithoutExtension
+        {
+            get
+            {
+                return Timestamp.GetDateTime(Started);
+            }
+        }
+
         public String Started
         {
             get { return _started; }

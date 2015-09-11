@@ -143,7 +143,7 @@ namespace WebAnalyzer.Controller
             String dir = experiment.GetBaseExperimentLocation();
             dir += Properties.Settings.Default.ExperimentDataLocation.Replace("{1}", currentParticipant.Identifier);
 
-            String timestamp = Util.Timestamp.GetDateTime(testrun.Started);
+            String filename = testrun.Filename;
 
             FileIO.CheckPathAndCreate(dir);
             XmlDocument xmlDoc = new XmlDocument();
@@ -152,9 +152,9 @@ namespace WebAnalyzer.Controller
 
             xmlDoc.AppendChild(testrun.ToXML(currentParticipant, xmlDoc));
 
-            xmlDoc.Save(dir + "\\" + timestamp + ".xml");
+            xmlDoc.Save(dir + "\\" + filename);
 
-            SaveExperimentStatistics(experiment, currentParticipant, timestamp, testrun);
+            SaveExperimentStatistics(experiment, currentParticipant, filename, testrun);
             return true;
         }
 
@@ -163,9 +163,9 @@ namespace WebAnalyzer.Controller
         /// </summary>
         /// <param name="experiment">The experiment to which the testrun belongs.</param>
         /// <param name="currentParticipant">The participant to which the testrun belongs</param>
-        /// <param name="timestamp">Timestamp to be used for the file name.</param>
+        /// <param name="filename">Filename to be used for the export.</param>
         /// <param name="testrun">The testdata</param>
-        public static Boolean SaveExperimentStatistics(ExperimentModel experiment, ExperimentParticipant currentParticipant, String timestamp, TestModel testrun)
+        public static Boolean SaveExperimentStatistics(ExperimentModel experiment, ExperimentParticipant currentParticipant, String filename, TestModel testrun)
         {
             String dir = experiment.GetBaseExperimentLocation();
             dir += Properties.Settings.Default.StatisticsLocation.Replace("{1}", currentParticipant.Identifier);
@@ -177,24 +177,25 @@ namespace WebAnalyzer.Controller
 
             xmlDoc.AppendChild(testrun.GenerateStatisticsXML(xmlDoc, false));
 
-            xmlDoc.Save(dir + "\\" + timestamp + ".xml");
+            xmlDoc.Save(dir + "\\" + filename);
 
 
             return true;
         }
 
         /// <summary>
-        /// Saves the given testrun to the given experiment and given participant.
+        /// Saves the given rawdata of the testrun to the given experiment and given participant.
         /// </summary>
         /// <param name="experiment">The experiment to which the testrun belongs.</param>
         /// <param name="currentParticipant">The participant to which the testrun belongs</param>
-        /// <param name="testrun">The testdata</param>
+        /// <param name="testrun">The testdata to which the raw data belongs</param>
+        /// <param name="rawData">Raw data to be exported</param>
         public static Boolean SaveExperimentRawData(ExperimentModel experiment, ExperimentParticipant currentParticipant, TestModel testrun, RawTrackingData rawData)
         {
             String dir = experiment.GetBaseExperimentLocation();
             dir += Properties.Settings.Default.RawdataLocation.Replace("{1}", currentParticipant.Identifier);
 
-            String timestamp = Util.Timestamp.GetDateTime(testrun.Started);
+            String filename = testrun.Filename;
 
             FileIO.CheckPathAndCreate(dir);
             XmlDocument xmlDoc = new XmlDocument();
@@ -203,7 +204,7 @@ namespace WebAnalyzer.Controller
 
             xmlDoc.AppendChild(rawData.ToXML(currentParticipant, xmlDoc));
 
-            xmlDoc.Save(dir + "\\" + timestamp + ".xml");
+            xmlDoc.Save(dir + "\\" + filename);
             return true;
         }
 
