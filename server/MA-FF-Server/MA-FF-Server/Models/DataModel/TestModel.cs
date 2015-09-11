@@ -668,11 +668,11 @@ namespace WebAnalyzer.Models.DataModel
             }
         }
 
-        public void ExtractFixations(Algorithm algorithm)
+        public void ExtractFixationsAndSaccades(Algorithm algorithm)
         {
             foreach (WebpageModel page in _visitedPages)
             {
-                page.ExtractFixations(algorithm);
+                page.ExtractFixationsAndSaccades(algorithm);
             }
         }
 

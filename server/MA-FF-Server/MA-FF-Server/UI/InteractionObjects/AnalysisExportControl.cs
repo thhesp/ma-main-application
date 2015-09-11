@@ -260,7 +260,7 @@ namespace WebAnalyzer.UI.InteractionObjects
             algorithm.MinimumDuration = minimumDuration;
             algorithm.AccetableDeviations = acceptableDeviation;
 
-            _testrun.ExtractFixations(algorithm);
+            _testrun.ExtractFixationsAndSaccades(algorithm);
 
             ExportData();
         }
@@ -279,7 +279,7 @@ namespace WebAnalyzer.UI.InteractionObjects
 
                 algorithm.RawData = rawData;
 
-                _testrun.ExtractFixations(algorithm);
+                _testrun.ExtractFixationsAndSaccades(algorithm);
 
                 ExportData();
             }

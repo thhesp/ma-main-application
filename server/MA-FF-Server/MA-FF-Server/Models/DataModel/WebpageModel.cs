@@ -437,7 +437,7 @@ namespace WebAnalyzer.Models.DataModel
 
         #region FixationFunctions
 
-        public void ExtractFixations(Algorithm algorithm)
+        public void ExtractFixationsAndSaccades(Algorithm algorithm)
         {
             _leftFixationData = algorithm.ExtractFixation(_positionData, "left");
             _rightFixationData = algorithm.ExtractFixation(_positionData, "right");
