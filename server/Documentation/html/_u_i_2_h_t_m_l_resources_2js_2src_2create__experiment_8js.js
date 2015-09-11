@@ -5,7 +5,8 @@ var _u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js =
     [ "if", "_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js.html#a328a79ad6ab2d59cdd4a7131f4a7f6c3", null ],
     [ "log", "_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js.html#a0bf99d647b918cf32eb3a19a2a9a35e2", null ],
     [ "ready", "_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js.html#ab80389e9a96e9c772932eedd1a143b05", null ],
+    [ "selectExperimentToImportData", "_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js.html#a9fa8e6c77056922fad85ff61987fde02", null ],
+    [ "updateImportExperiment", "_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js.html#a4cd389a8cf37502a66f377e8f629b00f", null ],
     [ "else", "_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js.html#a0544c3fe466e421738dae463968b70ba", null ],
-    [ "name", "_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js.html#adac2bcb4f01b574cbc63fe8ee2c56bf0", null ],
-    [ "path", "_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js.html#aa72e0c8a20e6bcc571d3a1c51846e627", null ]
+    [ "name", "_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js.html#adac2bcb4f01b574cbc63fe8ee2c56bf0", null ]
 ];

@@ -7,5 +7,6 @@ var class_web_analyzer_1_1_server_1_1_message_handler_1_1_connection_message_han
     [ "OnNext", "class_web_analyzer_1_1_server_1_1_message_handler_1_1_connection_message_handler.html#ac6e06ccaa5792fa911bd54d34a166eca", null ],
     [ "respondToHandshake", "class_web_analyzer_1_1_server_1_1_message_handler_1_1_connection_message_handler.html#a2f23a8e23baf509038d8b6a20ba55c11", null ],
     [ "_connection", "class_web_analyzer_1_1_server_1_1_message_handler_1_1_connection_message_handler.html#ac9450ddba733401319fb68606dcfd3a3", null ],
-    [ "AddConnection", "class_web_analyzer_1_1_server_1_1_message_handler_1_1_connection_message_handler.html#a10b402c23b0015efb4b3643a064e7f09", null ]
+    [ "AddConnection", "class_web_analyzer_1_1_server_1_1_message_handler_1_1_connection_message_handler.html#a10b402c23b0015efb4b3643a064e7f09", null ],
+    [ "AddWebpage", "class_web_analyzer_1_1_server_1_1_message_handler_1_1_connection_message_handler.html#a4a1e2b8d5b77a7559db92b1e1a07aed9", null ]
 ];

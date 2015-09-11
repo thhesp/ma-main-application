@@ -6,5 +6,7 @@ var class_web_analyzer_1_1_models_1_1_message_model_1_1_connection_message =
     ] ],
     [ "ConnectionMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_connection_message.html#a28b97882765f7759b31981ef271deaf3", null ],
     [ "_type", "class_web_analyzer_1_1_models_1_1_message_model_1_1_connection_message.html#abb086bc753b39762aede8191821e72cb", null ],
-    [ "Type", "class_web_analyzer_1_1_models_1_1_message_model_1_1_connection_message.html#a74c569109e3a9d19130c36fa9628a5f5", null ]
+    [ "_url", "class_web_analyzer_1_1_models_1_1_message_model_1_1_connection_message.html#a8b546b2299ebc28fbe93f158a7e1742a", null ],
+    [ "Type", "class_web_analyzer_1_1_models_1_1_message_model_1_1_connection_message.html#a74c569109e3a9d19130c36fa9628a5f5", null ],
+    [ "URL", "class_web_analyzer_1_1_models_1_1_message_model_1_1_connection_message.html#afc9df7636f98ce36f983c89db64f1c6a", null ]
 ];

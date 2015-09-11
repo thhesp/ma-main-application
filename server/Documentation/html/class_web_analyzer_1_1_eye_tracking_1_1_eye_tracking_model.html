@@ -150,6 +150,9 @@ Events</h2></td></tr>
 <tr class="memitem:a170dd57ad1784737ddf34dc14f82293d"><td class="memItemLeft" align="right" valign="top">PrepareGazeEventHandler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#a170dd57ad1784737ddf34dc14f82293d">PrepareGaze</a></td></tr>
 <tr class="memdesc:a170dd57ad1784737ddf34dc14f82293d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event which is used for sending data to the test controller.  <a href="#a170dd57ad1784737ddf34dc14f82293d">More...</a><br /></td></tr>
 <tr class="separator:a170dd57ad1784737ddf34dc14f82293d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9985cde00e3f6c48694b7577e2689ea"><td class="memItemLeft" align="right" valign="top">AddTrackingEventHandler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#af9985cde00e3f6c48694b7577e2689ea">AddTrackingEvent</a></td></tr>
+<tr class="memdesc:af9985cde00e3f6c48694b7577e2689ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event which is used for sending events to the test controller.  <a href="#af9985cde00e3f6c48694b7577e2689ea">More...</a><br /></td></tr>
+<tr class="separator:af9985cde00e3f6c48694b7577e2689ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -382,7 +385,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Callback function for event Data. </p>
-<p>The data is for mainly fixations. </p>
+<p>The data is for mainly fixations. Timestamps in microseconds if normale samplestruct, if 32 bit sample struct its in milliseconds... </p>
 
 </div>
 </div>
@@ -433,7 +436,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Callback function for sample Data. </p>
-<p>The data is for one tracking point. </p>
+<p>The data is for one tracking point. Timestamps in microseconds if normale samplestruct, if 32 bit sample struct its in milliseconds... </p>
 
 </div>
 </div>
@@ -572,6 +575,20 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Event Documentation</h2>
+<a class="anchor" id="af9985cde00e3f6c48694b7577e2689ea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AddTrackingEventHandler WebAnalyzer.EyeTracking.EyeTrackingModel.AddTrackingEvent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Event which is used for sending events to the test controller. </p>
+
+</div>
+</div>
 <a class="anchor" id="a170dd57ad1784737ddf34dc14f82293d"></a>
 <div class="memitem">
 <div class="memproto">

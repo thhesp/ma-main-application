@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['algorithmmodel',['AlgorithmModel',['../namespace_web_analyzer_1_1_models_1_1_algorithm_model.html',1,'WebAnalyzer::Models']]],
   ['analysismodel',['AnalysisModel',['../namespace_web_analyzer_1_1_models_1_1_analysis_model.html',1,'WebAnalyzer::Models']]],
   ['applicationsettings',['ApplicationSettings',['../namespace_web_analyzer_1_1_application_settings.html',1,'WebAnalyzer']]],
   ['base',['Base',['../namespace_web_analyzer_1_1_models_1_1_base.html',1,'WebAnalyzer::Models']]],

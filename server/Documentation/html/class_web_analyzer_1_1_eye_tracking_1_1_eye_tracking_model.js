@@ -17,5 +17,6 @@ var class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model =
     [ "m_CalibrationCallback", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#ac209f94d8baa0d71cb3df9c7a4233c1f", null ],
     [ "m_EventCallback", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#a806e6c2c97d1e27187755e8d22f87d86", null ],
     [ "m_SampleCallback", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#a968cb8269069b117054c23c913671380", null ],
+    [ "AddTrackingEvent", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#af9985cde00e3f6c48694b7577e2689ea", null ],
     [ "PrepareGaze", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html#a170dd57ad1784737ddf34dc14f82293d", null ]
 ];

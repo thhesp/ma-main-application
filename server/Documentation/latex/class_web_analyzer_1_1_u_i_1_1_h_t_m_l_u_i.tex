@@ -17,6 +17,10 @@ void \hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_aceec55dc8dd89be1fcbf
 \item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_aa012cb8155f5ab3dfc93b564f8a76faa}{Set\+Tracking\+Connection\+Status} (\hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2875208b4f4b0ed643593152f4ec025c}{Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} status)
 \item 
+void \hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_a00b81504075fbc78a43776c2688b3ffd}{Set\+W\+S\+Connection\+Count} (int count)
+\item 
+void \hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_a25ca61f40127be0b7d381bbd17c0fd5e}{Refresh\+Data} ()
+\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_a32d0bf8581afa8af866438d4ee76dd9f}{Reload\+Page} ()
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
@@ -44,6 +48,8 @@ void \hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_afaacdee71a728c1cbe04
 \item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_a274870a5d1268fa3a2e40d674cf8e61b}{Create\+Nav} ()
 \item 
+void \hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_a167ae69309a8f44387164d5f6d8f0c29}{Create\+Analysis\+And\+Export\+Obj} ()
+\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_af92127c0a733a77a2363ff1d8b26713b}{Create\+Experiment\+Obj} ()
 \item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_abc8c290c8b516e80333172298d96eb52}{Browser\+\_\+\+Load} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, Event\+Args \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
@@ -60,6 +66,8 @@ void \hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_a982fd123521466139710
 Chromium\+Web\+Browser \hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_a5f4700cfc8d03cdc4927814acbd0a5dc}{my\+Browser} = null
 \item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object}{Experiment\+Object} \hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_a39034582b0bcec2f24942ba2661829ec}{\+\_\+exp} = null
+\item 
+\hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control}{Analysis\+Export\+Control} \hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_acf16c624451c1154268d8fe9fe82e62c}{\+\_\+analysis\+Export\+Control} = null
 \item 
 System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_ad803fa08573756d8039c07fbfd62c851}{components} = null
 \begin{DoxyCompactList}\small\item\em Required designer variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -92,6 +100,13 @@ System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1
 \item[{Event\+Args}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_abc8c290c8b516e80333172298d96eb52}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_a167ae69309a8f44387164d5f6d8f0c29}{}\index{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I@{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I}!Create\+Analysis\+And\+Export\+Obj@{Create\+Analysis\+And\+Export\+Obj}}
+\index{Create\+Analysis\+And\+Export\+Obj@{Create\+Analysis\+And\+Export\+Obj}!Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I@{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I}}
+\subsubsection[{Create\+Analysis\+And\+Export\+Obj()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+H\+T\+M\+L\+U\+I.\+Create\+Analysis\+And\+Export\+Obj (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_a167ae69309a8f44387164d5f6d8f0c29}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_afaacdee71a728c1cbe04087351e70395}{}\index{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I@{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I}!Create\+Browser@{Create\+Browser}}
 \index{Create\+Browser@{Create\+Browser}!Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I@{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I}}
 \subsubsection[{Create\+Browser(\+String page)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+H\+T\+M\+L\+U\+I.\+Create\+Browser (
@@ -148,6 +163,13 @@ Clean up any resources being used.
 
 Required method for Designer support -\/ do not modify the contents of this method with the code editor. 
 
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_a25ca61f40127be0b7d381bbd17c0fd5e}{}\index{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I@{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I}!Refresh\+Data@{Refresh\+Data}}
+\index{Refresh\+Data@{Refresh\+Data}!Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I@{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I}}
+\subsubsection[{Refresh\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+H\+T\+M\+L\+U\+I.\+Refresh\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_a25ca61f40127be0b7d381bbd17c0fd5e}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_a32d0bf8581afa8af866438d4ee76dd9f}{}\index{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I@{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I}!Reload\+Page@{Reload\+Page}}
 \index{Reload\+Page@{Reload\+Page}!Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I@{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I}}
 \subsubsection[{Reload\+Page()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+H\+T\+M\+L\+U\+I.\+Reload\+Page (
@@ -169,6 +191,13 @@ Required method for Designer support -\/ do not modify the contents of this meth
 \item[{{\bf Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S}}]{status}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_aa012cb8155f5ab3dfc93b564f8a76faa}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_a00b81504075fbc78a43776c2688b3ffd}{}\index{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I@{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I}!Set\+W\+S\+Connection\+Count@{Set\+W\+S\+Connection\+Count}}
+\index{Set\+W\+S\+Connection\+Count@{Set\+W\+S\+Connection\+Count}!Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I@{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I}}
+\subsubsection[{Set\+W\+S\+Connection\+Count(int count)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+H\+T\+M\+L\+U\+I.\+Set\+W\+S\+Connection\+Count (
+\begin{DoxyParamCaption}
+\item[{int}]{count}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_a00b81504075fbc78a43776c2688b3ffd}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_aceec55dc8dd89be1fcbfa8a7184d3715}{}\index{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I@{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I}!Set\+W\+S\+Connection\+Status@{Set\+W\+S\+Connection\+Status}}
 \index{Set\+W\+S\+Connection\+Status@{Set\+W\+S\+Connection\+Status}!Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I@{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I}}
 \subsubsection[{Set\+W\+S\+Connection\+Status(\+Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S status)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+H\+T\+M\+L\+U\+I.\+Set\+W\+S\+Connection\+Status (
@@ -186,6 +215,9 @@ Required method for Designer support -\/ do not modify the contents of this meth
 
 
 \subsection{Member Data Documentation}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_acf16c624451c1154268d8fe9fe82e62c}{}\index{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I@{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I}!\+\_\+analysis\+Export\+Control@{\+\_\+analysis\+Export\+Control}}
+\index{\+\_\+analysis\+Export\+Control@{\+\_\+analysis\+Export\+Control}!Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I@{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I}}
+\subsubsection[{\+\_\+analysis\+Export\+Control}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Analysis\+Export\+Control} Web\+Analyzer.\+U\+I.\+H\+T\+M\+L\+U\+I.\+\_\+analysis\+Export\+Control = null\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_acf16c624451c1154268d8fe9fe82e62c}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_a39034582b0bcec2f24942ba2661829ec}{}\index{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I@{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I}!\+\_\+exp@{\+\_\+exp}}
 \index{\+\_\+exp@{\+\_\+exp}!Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I@{Web\+Analyzer\+::\+U\+I\+::\+H\+T\+M\+L\+U\+I}}
 \subsubsection[{\+\_\+exp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+Object} Web\+Analyzer.\+U\+I.\+H\+T\+M\+L\+U\+I.\+\_\+exp = null\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i_a39034582b0bcec2f24942ba2661829ec}

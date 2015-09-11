@@ -22,6 +22,7 @@ var searchData=
   ['experimentwizardobj',['ExperimentWizardObj',['../class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj.html',1,'WebAnalyzer::UI::InteractionObjects']]],
   ['exportcontroller',['ExportController',['../class_web_analyzer_1_1_controller_1_1_export_controller.html',1,'WebAnalyzer::Controller']]],
   ['eyedatastruct',['EyeDataStruct',['../struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_eye_data_struct.html',1,'WebAnalyzer::EyeTracking::EyeTrackingController']]],
+  ['eyepositionstruct',['EyePositionStruct',['../struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_eye_position_struct.html',1,'WebAnalyzer::EyeTracking::EyeTrackingController']]],
   ['eyetrackingcontroller',['EyeTrackingController',['../class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller.html',1,'WebAnalyzer::EyeTracking']]],
   ['eyetrackingdata',['EyeTrackingData',['../class_web_analyzer_1_1_models_1_1_data_model_1_1_eye_tracking_data.html',1,'WebAnalyzer::Models::DataModel']]],
   ['eyetrackingmodel',['EyeTrackingModel',['../class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html',1,'WebAnalyzer::EyeTracking']]]

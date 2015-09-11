@@ -6,5 +6,7 @@ var class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message =
     ] ],
     [ "ActivationMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#a20a171686a029b6466062511e4ca2fda", null ],
     [ "_type", "class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#a108e256eff9daab288b9c8c8f18d9792", null ],
-    [ "Type", "class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#a0f68201fb8faad6d3a2a074bc7670313", null ]
+    [ "_url", "class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#a7d5933c3187edc115317483ad31df6b4", null ],
+    [ "Type", "class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#a0f68201fb8faad6d3a2a074bc7670313", null ],
+    [ "URL", "class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#a4df0cf1fbf60a7211a5ee55831adcb9e", null ]
 ];

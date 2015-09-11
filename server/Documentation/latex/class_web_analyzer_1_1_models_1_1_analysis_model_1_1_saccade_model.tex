@@ -1,0 +1,89 @@
+\hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model}{}\section{Web\+Analyzer.\+Models.\+Analysis\+Model.\+Saccade\+Model Class Reference}
+\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model}\index{Web\+Analyzer.\+Models.\+Analysis\+Model.\+Saccade\+Model@{Web\+Analyzer.\+Models.\+Analysis\+Model.\+Saccade\+Model}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a79d89d10a20d49d98c7d93151bc913c7}{Saccade\+Model} (String start\+Timestamp, String end\+Timestamp, long duration, String eye)
+\item 
+void \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a4167bccd0254507dd6664ed4a4691c82}{Add\+Related\+Gaze} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} model)
+\item 
+Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a631bef5fc5b9234cd8e81cc92bcbc276}{To\+X\+M\+L} (Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a32d8fa96fd180fbbfee83b47fd8e72f9}{Related\+Gazes}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+String \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_aba79dc37019465bcc958062438713351}{\+\_\+start\+Timestamp}
+\item 
+String \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a30104f011f5c5d49a6a3df6343dc8fd8}{\+\_\+end\+Timestamp}
+\item 
+long \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a702f475b5c253e0af654a3d5d38324db}{\+\_\+duration} = 0
+\item 
+String \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_ad26094ad3aa83c781182f2bce5d0fb13}{\+\_\+eye}
+\item 
+List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_aaa7e07a49ff69d723d0098ea49d02a0a}{\+\_\+related\+Gazes} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model}$>$()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a79d89d10a20d49d98c7d93151bc913c7}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}!Saccade\+Model@{Saccade\+Model}}
+\index{Saccade\+Model@{Saccade\+Model}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}}
+\subsubsection[{Saccade\+Model(\+String start\+Timestamp, String end\+Timestamp, long duration, String eye)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Analysis\+Model.\+Saccade\+Model.\+Saccade\+Model (
+\begin{DoxyParamCaption}
+\item[{String}]{start\+Timestamp, }
+\item[{String}]{end\+Timestamp, }
+\item[{long}]{duration, }
+\item[{String}]{eye}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a79d89d10a20d49d98c7d93151bc913c7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a4167bccd0254507dd6664ed4a4691c82}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}!Add\+Related\+Gaze@{Add\+Related\+Gaze}}
+\index{Add\+Related\+Gaze@{Add\+Related\+Gaze}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}}
+\subsubsection[{Add\+Related\+Gaze(\+Gaze\+Model model)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Analysis\+Model.\+Saccade\+Model.\+Add\+Related\+Gaze (
+\begin{DoxyParamCaption}
+\item[{{\bf Gaze\+Model}}]{model}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a4167bccd0254507dd6664ed4a4691c82}
+\hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a631bef5fc5b9234cd8e81cc92bcbc276}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}!To\+X\+M\+L@{To\+X\+M\+L}}
+\index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}}
+\subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Analysis\+Model.\+Saccade\+Model.\+To\+X\+M\+L (
+\begin{DoxyParamCaption}
+\item[{Xml\+Document}]{xml\+Doc, }
+\item[{Boolean}]{include\+Single\+Gaze\+Data}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a631bef5fc5b9234cd8e81cc92bcbc276}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a702f475b5c253e0af654a3d5d38324db}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}!\+\_\+duration@{\+\_\+duration}}
+\index{\+\_\+duration@{\+\_\+duration}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}}
+\subsubsection[{\+\_\+duration}]{\setlength{\rightskip}{0pt plus 5cm}long Web\+Analyzer.\+Models.\+Analysis\+Model.\+Saccade\+Model.\+\_\+duration = 0\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a702f475b5c253e0af654a3d5d38324db}
+\hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a30104f011f5c5d49a6a3df6343dc8fd8}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}!\+\_\+end\+Timestamp@{\+\_\+end\+Timestamp}}
+\index{\+\_\+end\+Timestamp@{\+\_\+end\+Timestamp}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}}
+\subsubsection[{\+\_\+end\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Analysis\+Model.\+Saccade\+Model.\+\_\+end\+Timestamp\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a30104f011f5c5d49a6a3df6343dc8fd8}
+\hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_ad26094ad3aa83c781182f2bce5d0fb13}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}!\+\_\+eye@{\+\_\+eye}}
+\index{\+\_\+eye@{\+\_\+eye}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}}
+\subsubsection[{\+\_\+eye}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Analysis\+Model.\+Saccade\+Model.\+\_\+eye\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_ad26094ad3aa83c781182f2bce5d0fb13}
+\hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_aaa7e07a49ff69d723d0098ea49d02a0a}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}!\+\_\+related\+Gazes@{\+\_\+related\+Gazes}}
+\index{\+\_\+related\+Gazes@{\+\_\+related\+Gazes}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}}
+\subsubsection[{\+\_\+related\+Gazes}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Gaze\+Model}$>$ Web\+Analyzer.\+Models.\+Analysis\+Model.\+Saccade\+Model.\+\_\+related\+Gazes = new List$<${\bf Gaze\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_aaa7e07a49ff69d723d0098ea49d02a0a}
+\hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_aba79dc37019465bcc958062438713351}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}!\+\_\+start\+Timestamp@{\+\_\+start\+Timestamp}}
+\index{\+\_\+start\+Timestamp@{\+\_\+start\+Timestamp}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}}
+\subsubsection[{\+\_\+start\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Analysis\+Model.\+Saccade\+Model.\+\_\+start\+Timestamp\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_aba79dc37019465bcc958062438713351}
+
+
+\subsection{Property Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a32d8fa96fd180fbbfee83b47fd8e72f9}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}!Related\+Gazes@{Related\+Gazes}}
+\index{Related\+Gazes@{Related\+Gazes}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Saccade\+Model}}
+\subsubsection[{Related\+Gazes}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Gaze\+Model}$>$ Web\+Analyzer.\+Models.\+Analysis\+Model.\+Saccade\+Model.\+Related\+Gazes\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model_a32d8fa96fd180fbbfee83b47fd8e72f9}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+M\+A-\/\+F\+F-\/\+Server/\+M\+A-\/\+F\+F-\/\+Server/\+Models/\+Analysis\+Model/\hyperlink{_saccade_model_8cs}{Saccade\+Model.\+cs}\end{DoxyCompactItemize}

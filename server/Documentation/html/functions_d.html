@@ -105,6 +105,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_n.html#index_n"><span>n</span></a></li>
       <li><a href="functions_o.html#index_o"><span>o</span></a></li>
       <li><a href="functions_p.html#index_p"><span>p</span></a></li>
+      <li><a href="functions_q.html#index_q"><span>q</span></a></li>
       <li><a href="functions_r.html#index_r"><span>r</span></a></li>
       <li><a href="functions_s.html#index_s"><span>s</span></a></li>
       <li><a href="functions_t.html#index_t"><span>t</span></a></li>
@@ -165,10 +166,13 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 : <a class="el" href="class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler.html#a5fe3823e540e3dbecaf9899d81ce8074">WebAnalyzer.Server.MessageHandler.DataMessageHandler</a>
 </li>
 <li>DataRequestedTimestamp
-: <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_basic_raw_data.html#a80650296bb277246c1e0877c6d4e60aa">WebAnalyzer.Models.Base.BasicRawData</a>
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_basic_data.html#a9f11a4f0d9a836f2306752c698b19856">WebAnalyzer.Models.Base.BasicData</a>
 </li>
 <li>DataTimeout
 : <a class="el" href="class_web_analyzer_1_1_properties_1_1_settings.html#a0c6ee531ecb7669be322d0b6adbbed8a">WebAnalyzer.Properties.Settings</a>
+</li>
+<li>day
+: <a class="el" href="struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_date_struct.html#a81822d115a0593283bfee09a2a356e0b">WebAnalyzer.EyeTracking.EyeTrackingController.DateStruct</a>
 </li>
 <li>Default
 : <a class="el" href="class_web_analyzer_1_1_properties_1_1_settings.html#a65c2257222bfeb0f3e568ef18feb37c8">WebAnalyzer.Properties.Settings</a>
@@ -227,12 +231,17 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 , <a class="el" href="class_web_analyzer_1_1_u_i_1_1_edit_rule_form.html#ab1eaea9ca9d285938a31d96a5ada8a6a">WebAnalyzer.UI.EditRuleForm</a>
 , <a class="el" href="class_web_analyzer_1_1_u_i_1_1_experiment_wizard.html#a15f391a3ce1d14428480cbf98d7ed043">WebAnalyzer.UI.ExperimentWizard</a>
 , <a class="el" href="class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i.html#a8f64d2d40440500ce68bea7174c191bb">WebAnalyzer.UI.HTMLUI</a>
+, <a class="el" href="class_web_analyzer_1_1_u_i_1_1_select_experiment_form.html#abb5373fcb6854347261f268740f0415c">WebAnalyzer.UI.SelectExperimentForm</a>
 , <a class="el" href="class_web_analyzer_1_1_u_i_1_1_select_participant_form.html#ae4a0da7ef5d15438618315aaa48fc565">WebAnalyzer.UI.SelectParticipantForm</a>
+, <a class="el" href="class_web_analyzer_1_1_u_i_1_1_select_testrun_form.html#a5cef96e7db81ffcde7521e814bbcec79">WebAnalyzer.UI.SelectTestrunForm</a>
 , <a class="el" href="class_web_analyzer_1_1_u_i_1_1_testrun_form.html#a532f52d26e600d080622a943b4306110">WebAnalyzer.UI.TestrunForm</a>
 </li>
 <li>DisposeOfGazeData()
-: <a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a99b6f672f4ef0293ac70edb20e1c7cdb">WebAnalyzer.Controller.TestController</a>
-, <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model.html#a4e84c40eeb26adae1fcacc4ffc291d2f">WebAnalyzer.Models.DataModel.TestModel</a>
+: <a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#ae88c0e776f3d18dc0c0cfc2106b2f1a5">WebAnalyzer.Controller.TestController</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model.html#a5f84a8ffb744cbe5dc345e1f34bff9a6">WebAnalyzer.Models.DataModel.TestModel</a>
+</li>
+<li>dllName
+: <a class="el" href="class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller.html#a3d379c5e2e4fe3eb39090973223e79a8">WebAnalyzer.EyeTracking.EyeTrackingController</a>
 </li>
 <li>Domain
 : <a class="el" href="class_web_analyzer_1_1_events_1_1_create_domain_setting_event.html#a38563439a3da6789afcb3dc1e3fb30e3">WebAnalyzer.Events.CreateDomainSettingEvent</a>
@@ -245,7 +254,7 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 : <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control.html#a301b531dda08a3e63de11d1fed1b8742">WebAnalyzer.UI.InteractionObjects.DomainSettingControl</a>
 </li>
 <li>DomainSettings()
-: <a class="el" href="class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings.html#a8ffad3f7b78462d687db4f95dd484953">WebAnalyzer.Models.SettingsModel.DomainSettings</a>
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings.html#af6797984cc6e12c59f276558864db719">WebAnalyzer.Models.SettingsModel.DomainSettings</a>
 </li>
 <li>domainSettingsArray()
 : <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object.html#a150c4672bd1ed68b1db01cf2391107ec">WebAnalyzer.UI.InteractionObjects.ExperimentObject</a>
@@ -261,15 +270,16 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 </li>
 <li>Duration
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model.html#a045eca17df1de4d293b5d38b1c812040">WebAnalyzer.Models.AnalysisModel.FixationModel</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event.html#a9e7f104978e7aac39ab700856229aecf">WebAnalyzer.Models.Base.RawTrackingEvent</a>
 </li>
 <li>DurationFromClientReceivedToClientSent()
-: <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_basic_raw_data.html#aa8efb3ddeee4b023da606951d6dc3caa">WebAnalyzer.Models.Base.BasicRawData</a>
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_basic_data.html#a438bf9b94d6048ed88a268f0497f4ee0">WebAnalyzer.Models.Base.BasicData</a>
 </li>
 <li>DurationFromRequestTillSending()
-: <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_basic_raw_data.html#a095dc0eb5da23a69aced738d844b2b80">WebAnalyzer.Models.Base.BasicRawData</a>
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_basic_data.html#abfc630907e2b10eee7bae486ae2f21a4">WebAnalyzer.Models.Base.BasicData</a>
 </li>
 <li>DurationFromServerSentToReceived()
-: <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_basic_raw_data.html#a3bd1dcce4b4dbb7181b0ae3f20a74e3b">WebAnalyzer.Models.Base.BasicRawData</a>
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_basic_data.html#a441d5a37fec9147bb16831aae4d957e2">WebAnalyzer.Models.Base.BasicData</a>
 </li>
 </ul>
 </div><!-- contents -->

@@ -21,22 +21,30 @@ void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a912992bce8
 \begin{DoxyCompactItemize}
 \item 
 Message\+Sent\+Event\+Handler \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a2eb5de18882e69a65b4b7ce3ee458af1}{Message\+Sent}
+\item 
+Update\+W\+S\+Connection\+Count\+Event\+Handler \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_ab583440105517709081698d731b2bdcd}{Update\+W\+S\+Connection\+Count}
 \end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a68db2e8493dd838aec226f40db1d5a6e}{Update\+Connection\+Count} ()
+\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a802503ffd29cf9a18a2bfae95adc4b4e}{Broadcast} (\hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} message)
 \item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a773422b69490cf64139d8237a9122eaa}{Work\+Connection\+Message\+Queues} ()
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a2c3ef15396b89a8ec145e62158348faf}{Remove\+Old\+Connections} ()
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a23a1f3a046b14bcb1333c3ef846015d6}{\+\_\+work\+Messages} = false
+Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a23a1f3a046b14bcb1333c3ef846015d6}{\+\_\+work\+Messages} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
 \item 
 List$<$ \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Websocket\+Connection} $>$ \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a4d1d80f0e1bca824c36908efcc4f9dc0}{\+\_\+connections} = new List$<$\hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Websocket\+Connection}$>$()
 \item 
 \hyperlink{class_web_analyzer_1_1_util_1_1_stopwatch_timer}{Stopwatch\+Timer} \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_aa639f32d7193a808bd9680359b325887}{timer}
+\item 
+int \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a26374e3936745ea45ecf5f77e4d8884f}{\+\_\+last\+Connection\+Count} = 0
 \end{DoxyCompactItemize}
 
 
@@ -66,6 +74,13 @@ List$<$ \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Webso
 \item[{{\bf Add\+Connection\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a912992bce817cbf9177db239f7716a1e}
+\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a2c3ef15396b89a8ec145e62158348faf}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Remove\+Old\+Connections@{Remove\+Old\+Connections}}
+\index{Remove\+Old\+Connections@{Remove\+Old\+Connections}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
+\subsubsection[{Remove\+Old\+Connections()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Remove\+Old\+Connections (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a2c3ef15396b89a8ec145e62158348faf}
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a2237bfa6cf4791e578b37e75624b70df}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Request\+Data@{Request\+Data}}
 \index{Request\+Data@{Request\+Data}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{Request\+Data(\+String unique\+Id, double left\+X, double left\+Y, double right\+X, double right\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Request\+Data (
@@ -107,6 +122,13 @@ List$<$ \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Webso
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a8cbad625ff934cf233a70ecc2af26d95}
+\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a68db2e8493dd838aec226f40db1d5a6e}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Update\+Connection\+Count@{Update\+Connection\+Count}}
+\index{Update\+Connection\+Count@{Update\+Connection\+Count}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
+\subsubsection[{Update\+Connection\+Count()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Update\+Connection\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a68db2e8493dd838aec226f40db1d5a6e}
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a773422b69490cf64139d8237a9122eaa}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Work\+Connection\+Message\+Queues@{Work\+Connection\+Message\+Queues}}
 \index{Work\+Connection\+Message\+Queues@{Work\+Connection\+Message\+Queues}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{Work\+Connection\+Message\+Queues()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Work\+Connection\+Message\+Queues (
@@ -120,9 +142,12 @@ List$<$ \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Webso
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a4d1d80f0e1bca824c36908efcc4f9dc0}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!\+\_\+connections@{\+\_\+connections}}
 \index{\+\_\+connections@{\+\_\+connections}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{\+\_\+connections}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Websocket\+Connection}$>$ Web\+Analyzer.\+Server.\+Connection\+Manager.\+\_\+connections = new List$<${\bf Websocket\+Connection}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a4d1d80f0e1bca824c36908efcc4f9dc0}
+\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a26374e3936745ea45ecf5f77e4d8884f}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!\+\_\+last\+Connection\+Count@{\+\_\+last\+Connection\+Count}}
+\index{\+\_\+last\+Connection\+Count@{\+\_\+last\+Connection\+Count}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
+\subsubsection[{\+\_\+last\+Connection\+Count}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Server.\+Connection\+Manager.\+\_\+last\+Connection\+Count = 0\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a26374e3936745ea45ecf5f77e4d8884f}
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a23a1f3a046b14bcb1333c3ef846015d6}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!\+\_\+work\+Messages@{\+\_\+work\+Messages}}
 \index{\+\_\+work\+Messages@{\+\_\+work\+Messages}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
-\subsubsection[{\+\_\+work\+Messages}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Connection\+Manager.\+\_\+work\+Messages = false\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a23a1f3a046b14bcb1333c3ef846015d6}
+\subsubsection[{\+\_\+work\+Messages}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Connection\+Manager.\+\_\+work\+Messages = {\bf false}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a23a1f3a046b14bcb1333c3ef846015d6}
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_aa639f32d7193a808bd9680359b325887}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!timer@{timer}}
 \index{timer@{timer}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{timer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stopwatch\+Timer} Web\+Analyzer.\+Server.\+Connection\+Manager.\+timer\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_aa639f32d7193a808bd9680359b325887}
@@ -132,6 +157,9 @@ List$<$ \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Webso
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a2eb5de18882e69a65b4b7ce3ee458af1}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Message\+Sent@{Message\+Sent}}
 \index{Message\+Sent@{Message\+Sent}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{Message\+Sent}]{\setlength{\rightskip}{0pt plus 5cm}Message\+Sent\+Event\+Handler Web\+Analyzer.\+Server.\+Connection\+Manager.\+Message\+Sent}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a2eb5de18882e69a65b4b7ce3ee458af1}
+\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_ab583440105517709081698d731b2bdcd}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Update\+W\+S\+Connection\+Count@{Update\+W\+S\+Connection\+Count}}
+\index{Update\+W\+S\+Connection\+Count@{Update\+W\+S\+Connection\+Count}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
+\subsubsection[{Update\+W\+S\+Connection\+Count}]{\setlength{\rightskip}{0pt plus 5cm}Update\+W\+S\+Connection\+Count\+Event\+Handler Web\+Analyzer.\+Server.\+Connection\+Manager.\+Update\+W\+S\+Connection\+Count}\label{class_web_analyzer_1_1_server_1_1_connection_manager_ab583440105517709081698d731b2bdcd}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

@@ -5,6 +5,13 @@
 \hyperlink{namespace_web_analyzer_1_1_controller}{Controller} which is used for exporting/saving data to files.  
 
 
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_a8cea4a311ecaf495f305f9d7829a57aa}{E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S} \{ \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_a8cea4a311ecaf495f305f9d7829a57aaa3501bb093d363810b671059b9cfed3f8}{E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S.\+X\+M\+L} = 0, 
+\hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_a8cea4a311ecaf495f305f9d7829a57aaacc8d68c551c4a9a6d5313e07de4deafd}{E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S.\+C\+S\+V} = 1
+ \}\begin{DoxyCompactList}\small\item\em Enum which export formats are possible \end{DoxyCompactList}
+\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -16,12 +23,18 @@ static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controlle
 \begin{DoxyCompactList}\small\item\em Saves the experiment participants to a file and checks the file path. \end{DoxyCompactList}\item 
 static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_a6053d7ce4cb34a29e17a212d5613cc79}{Save\+Experiment\+Test\+Run} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} experiment, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} current\+Participant, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{Test\+Model} testrun)
 \begin{DoxyCompactList}\small\item\em Saves the given testrun to the given experiment and given participant. \end{DoxyCompactList}\item 
-static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_accf8d0d7a9f4d46df35a5ed77d26cb4c}{Save\+Experiment\+Fixations} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} experiment, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} current\+Participant, String timestamp, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{Test\+Model} testrun)
-\begin{DoxyCompactList}\small\item\em Saves the given testrun fixations to the given experiment and given participant. \end{DoxyCompactList}\item 
-static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_aac2a1b577a35a77d577c855c73dd5bf0}{Save\+Experiment\+Statistics} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} experiment, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} current\+Participant, String timestamp, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{Test\+Model} testrun)
+static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_a08b9a190bd2cf514d7c2989e8e121703}{Save\+Experiment\+Statistics} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} experiment, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} current\+Participant, String filename, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{Test\+Model} testrun)
 \begin{DoxyCompactList}\small\item\em Saves the given testrun statistics to the given experiment and given participant. \end{DoxyCompactList}\item 
-static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_af284a2f2a413989ab50da390bfad5e35}{Save\+Experiment\+A\+O\+I} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} experiment, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} current\+Participant, String timestamp, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{Test\+Model} testrun)
-\begin{DoxyCompactList}\small\item\em Saves the given testrun aois to the given experiment and given participant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_a08a2ba34501efa8e3cca837af7a3dd07}{Save\+Experiment\+Raw\+Data} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} experiment, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} current\+Participant, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{Test\+Model} testrun, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data}{Raw\+Tracking\+Data} raw\+Data)
+\begin{DoxyCompactList}\small\item\em Saves the given rawdata of the testrun to the given experiment and given participant. \end{DoxyCompactList}\item 
+static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_a9f312de4f46d4bfb9c33b4f7ce79e79d}{Export\+Experiment\+Test\+Run} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{Test\+Model} testrun, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant, String dir, String filename, \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_a8cea4a311ecaf495f305f9d7829a57aa}{E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S} format)
+\begin{DoxyCompactList}\small\item\em Export the given testrun to the given directory and filename with the given format. \end{DoxyCompactList}\item 
+static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_a56bbd706bd4f1e32c603893c5216d132}{Save\+Experiment\+Fixations} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{Test\+Model} testrun, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant, String dir, String filename, \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_a8cea4a311ecaf495f305f9d7829a57aa}{E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S} format, Boolean include\+Gaze\+Data)
+\begin{DoxyCompactList}\small\item\em Export the given testrun fixations to the given directory and filename with the given format. \end{DoxyCompactList}\item 
+static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_a3bf67d51c5be3abf110a145a472049f8}{Save\+Experiment\+A\+O\+I} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} experiment, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{Test\+Model} testrun, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant, String dir, String filename, \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_a8cea4a311ecaf495f305f9d7829a57aa}{E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S} format, Boolean include\+Gaze\+Data)
+\begin{DoxyCompactList}\small\item\em Export the given testrun aois to the given directory and filename with the given format. \end{DoxyCompactList}\item 
+static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_a9c72f57f079de884e7e029abf4283e41}{Save\+Experiment\+Saccades} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{Test\+Model} testrun, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant, String dir, String filename, \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_a8cea4a311ecaf495f305f9d7829a57aa}{E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S} format, Boolean include\+Gaze\+Data)
+\begin{DoxyCompactList}\small\item\em Export the given testrun saccades to the given directory and filename with the given format. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -36,7 +49,52 @@ static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controlle
 
 
 
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_export_controller_a8cea4a311ecaf495f305f9d7829a57aa}{}\index{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}!E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S@{E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S}}
+\index{E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S@{E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S}!Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}}
+\subsubsection[{E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Web\+Analyzer.\+Controller.\+Export\+Controller.\+E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S}\hspace{0.3cm}{\ttfamily [strong]}}\label{class_web_analyzer_1_1_controller_1_1_export_controller_a8cea4a311ecaf495f305f9d7829a57aa}
+
+
+Enum which export formats are possible 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{X\+M\+L@{X\+M\+L}!Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}}\index{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}!X\+M\+L@{X\+M\+L}}\item[{\em 
+\hypertarget{class_web_analyzer_1_1_controller_1_1_export_controller_a8cea4a311ecaf495f305f9d7829a57aaa3501bb093d363810b671059b9cfed3f8}{}X\+M\+L\label{class_web_analyzer_1_1_controller_1_1_export_controller_a8cea4a311ecaf495f305f9d7829a57aaa3501bb093d363810b671059b9cfed3f8}
+}]\index{C\+S\+V@{C\+S\+V}!Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}}\index{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}!C\+S\+V@{C\+S\+V}}\item[{\em 
+\hypertarget{class_web_analyzer_1_1_controller_1_1_export_controller_a8cea4a311ecaf495f305f9d7829a57aaacc8d68c551c4a9a6d5313e07de4deafd}{}C\+S\+V\label{class_web_analyzer_1_1_controller_1_1_export_controller_a8cea4a311ecaf495f305f9d7829a57aaacc8d68c551c4a9a6d5313e07de4deafd}
+}]\end{description}
+\end{Desc}
+
+
 \subsection{Member Function Documentation}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_export_controller_a9f312de4f46d4bfb9c33b4f7ce79e79d}{}\index{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}!Export\+Experiment\+Test\+Run@{Export\+Experiment\+Test\+Run}}
+\index{Export\+Experiment\+Test\+Run@{Export\+Experiment\+Test\+Run}!Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}}
+\subsubsection[{Export\+Experiment\+Test\+Run(\+Test\+Model testrun, Experiment\+Participant participant, String dir, String filename, E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S format)}]{\setlength{\rightskip}{0pt plus 5cm}static Boolean Web\+Analyzer.\+Controller.\+Export\+Controller.\+Export\+Experiment\+Test\+Run (
+\begin{DoxyParamCaption}
+\item[{{\bf Test\+Model}}]{testrun, }
+\item[{{\bf Experiment\+Participant}}]{participant, }
+\item[{String}]{dir, }
+\item[{String}]{filename, }
+\item[{{\bf E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S}}]{format}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_controller_1_1_export_controller_a9f312de4f46d4bfb9c33b4f7ce79e79d}
+
+
+Export the given testrun to the given directory and filename with the given format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em testrun} & The testdata\\
+\hline
+{\em dir} & Directory to export to\\
+\hline
+{\em filename} & Filename to use\\
+\hline
+{\em format} & Format in which to save the data\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_controller_1_1_export_controller_a4b85a3cd4921ac619d484d0c3d2b031b}{}\index{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}!Save\+Experiment@{Save\+Experiment}}
 \index{Save\+Experiment@{Save\+Experiment}!Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}}
 \subsubsection[{Save\+Experiment(\+Experiment\+Model experiment)}]{\setlength{\rightskip}{0pt plus 5cm}static Boolean Web\+Analyzer.\+Controller.\+Export\+Controller.\+Save\+Experiment (
@@ -55,54 +113,63 @@ Calls the Save\+Experiment\+Settings and Save\+Experiment\+Participants methods.
 {\em experiment} & Experiment to save\\
 \hline
 \end{DoxyParams}
-\hypertarget{class_web_analyzer_1_1_controller_1_1_export_controller_af284a2f2a413989ab50da390bfad5e35}{}\index{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}!Save\+Experiment\+A\+O\+I@{Save\+Experiment\+A\+O\+I}}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_export_controller_a3bf67d51c5be3abf110a145a472049f8}{}\index{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}!Save\+Experiment\+A\+O\+I@{Save\+Experiment\+A\+O\+I}}
 \index{Save\+Experiment\+A\+O\+I@{Save\+Experiment\+A\+O\+I}!Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}}
-\subsubsection[{Save\+Experiment\+A\+O\+I(\+Experiment\+Model experiment, Experiment\+Participant current\+Participant, String timestamp, Test\+Model testrun)}]{\setlength{\rightskip}{0pt plus 5cm}static Boolean Web\+Analyzer.\+Controller.\+Export\+Controller.\+Save\+Experiment\+A\+O\+I (
+\subsubsection[{Save\+Experiment\+A\+O\+I(\+Experiment\+Model experiment, Test\+Model testrun, Experiment\+Participant participant, String dir, String filename, E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S format, Boolean include\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}static Boolean Web\+Analyzer.\+Controller.\+Export\+Controller.\+Save\+Experiment\+A\+O\+I (
 \begin{DoxyParamCaption}
 \item[{{\bf Experiment\+Model}}]{experiment, }
-\item[{{\bf Experiment\+Participant}}]{current\+Participant, }
-\item[{String}]{timestamp, }
-\item[{{\bf Test\+Model}}]{testrun}
+\item[{{\bf Test\+Model}}]{testrun, }
+\item[{{\bf Experiment\+Participant}}]{participant, }
+\item[{String}]{dir, }
+\item[{String}]{filename, }
+\item[{{\bf E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S}}]{format, }
+\item[{Boolean}]{include\+Gaze\+Data}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_controller_1_1_export_controller_af284a2f2a413989ab50da390bfad5e35}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_controller_1_1_export_controller_a3bf67d51c5be3abf110a145a472049f8}
 
 
-Saves the given testrun aois to the given experiment and given participant. 
+Export the given testrun aois to the given directory and filename with the given format. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em experiment} & The experiment to which the testrun belongs.\\
-\hline
-{\em current\+Participant} & The participant to which the testrun belongs\\
-\hline
-{\em timestamp} & Timestamp to be used for the file name.\\
-\hline
 {\em testrun} & The testdata\\
+\hline
+{\em dir} & Directory to export to\\
+\hline
+{\em filename} & Filename to use\\
+\hline
+{\em format} & Format in which to save the data\\
+\hline
+{\em include\+Gaze\+Data} & Should the export contain data about the single gazes\\
 \hline
 \end{DoxyParams}
-\hypertarget{class_web_analyzer_1_1_controller_1_1_export_controller_accf8d0d7a9f4d46df35a5ed77d26cb4c}{}\index{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}!Save\+Experiment\+Fixations@{Save\+Experiment\+Fixations}}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_export_controller_a56bbd706bd4f1e32c603893c5216d132}{}\index{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}!Save\+Experiment\+Fixations@{Save\+Experiment\+Fixations}}
 \index{Save\+Experiment\+Fixations@{Save\+Experiment\+Fixations}!Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}}
-\subsubsection[{Save\+Experiment\+Fixations(\+Experiment\+Model experiment, Experiment\+Participant current\+Participant, String timestamp, Test\+Model testrun)}]{\setlength{\rightskip}{0pt plus 5cm}static Boolean Web\+Analyzer.\+Controller.\+Export\+Controller.\+Save\+Experiment\+Fixations (
+\subsubsection[{Save\+Experiment\+Fixations(\+Test\+Model testrun, Experiment\+Participant participant, String dir, String filename, E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S format, Boolean include\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}static Boolean Web\+Analyzer.\+Controller.\+Export\+Controller.\+Save\+Experiment\+Fixations (
 \begin{DoxyParamCaption}
-\item[{{\bf Experiment\+Model}}]{experiment, }
-\item[{{\bf Experiment\+Participant}}]{current\+Participant, }
-\item[{String}]{timestamp, }
-\item[{{\bf Test\+Model}}]{testrun}
+\item[{{\bf Test\+Model}}]{testrun, }
+\item[{{\bf Experiment\+Participant}}]{participant, }
+\item[{String}]{dir, }
+\item[{String}]{filename, }
+\item[{{\bf E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S}}]{format, }
+\item[{Boolean}]{include\+Gaze\+Data}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_controller_1_1_export_controller_accf8d0d7a9f4d46df35a5ed77d26cb4c}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_controller_1_1_export_controller_a56bbd706bd4f1e32c603893c5216d132}
 
 
-Saves the given testrun fixations to the given experiment and given participant. 
+Export the given testrun fixations to the given directory and filename with the given format. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em experiment} & The experiment to which the testrun belongs.\\
-\hline
-{\em current\+Participant} & The participant to which the testrun belongs\\
-\hline
-{\em timestamp} & Timestamp to be used for the file name.\\
-\hline
 {\em testrun} & The testdata\\
+\hline
+{\em dir} & Directory to export to\\
+\hline
+{\em filename} & Filename to use\\
+\hline
+{\em format} & Format in which to save the data\\
+\hline
+{\em include\+Gaze\+Data} & Should the export contain data about the single gazes\\
 \hline
 \end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_controller_1_1_export_controller_a8f08f0812bc86eaca9e42e076874ea94}{}\index{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}!Save\+Experiment\+Participants@{Save\+Experiment\+Participants}}
@@ -140,6 +207,60 @@ Saves the experiment participants to a file.
 {\em participants} & The experiment participants to save.\\
 \hline
 \end{DoxyParams}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_export_controller_a08a2ba34501efa8e3cca837af7a3dd07}{}\index{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}!Save\+Experiment\+Raw\+Data@{Save\+Experiment\+Raw\+Data}}
+\index{Save\+Experiment\+Raw\+Data@{Save\+Experiment\+Raw\+Data}!Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}}
+\subsubsection[{Save\+Experiment\+Raw\+Data(\+Experiment\+Model experiment, Experiment\+Participant current\+Participant, Test\+Model testrun, Raw\+Tracking\+Data raw\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}static Boolean Web\+Analyzer.\+Controller.\+Export\+Controller.\+Save\+Experiment\+Raw\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Experiment\+Model}}]{experiment, }
+\item[{{\bf Experiment\+Participant}}]{current\+Participant, }
+\item[{{\bf Test\+Model}}]{testrun, }
+\item[{{\bf Raw\+Tracking\+Data}}]{raw\+Data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_controller_1_1_export_controller_a08a2ba34501efa8e3cca837af7a3dd07}
+
+
+Saves the given rawdata of the testrun to the given experiment and given participant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em experiment} & The experiment to which the testrun belongs.\\
+\hline
+{\em current\+Participant} & The participant to which the testrun belongs\\
+\hline
+{\em testrun} & The testdata to which the raw data belongs\\
+\hline
+{\em raw\+Data} & Raw data to be exported\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_export_controller_a9c72f57f079de884e7e029abf4283e41}{}\index{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}!Save\+Experiment\+Saccades@{Save\+Experiment\+Saccades}}
+\index{Save\+Experiment\+Saccades@{Save\+Experiment\+Saccades}!Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}}
+\subsubsection[{Save\+Experiment\+Saccades(\+Test\+Model testrun, Experiment\+Participant participant, String dir, String filename, E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S format, Boolean include\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}static Boolean Web\+Analyzer.\+Controller.\+Export\+Controller.\+Save\+Experiment\+Saccades (
+\begin{DoxyParamCaption}
+\item[{{\bf Test\+Model}}]{testrun, }
+\item[{{\bf Experiment\+Participant}}]{participant, }
+\item[{String}]{dir, }
+\item[{String}]{filename, }
+\item[{{\bf E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S}}]{format, }
+\item[{Boolean}]{include\+Gaze\+Data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_controller_1_1_export_controller_a9c72f57f079de884e7e029abf4283e41}
+
+
+Export the given testrun saccades to the given directory and filename with the given format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em testrun} & The testdata\\
+\hline
+{\em dir} & Directory to export to\\
+\hline
+{\em filename} & Filename to use\\
+\hline
+{\em format} & Format in which to save the data\\
+\hline
+{\em include\+Gaze\+Data} & Should the export contain data about the single gazes\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_controller_1_1_export_controller_a293a07018f0a6c4380482d58c5080852}{}\index{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}!Save\+Experiment\+Settings@{Save\+Experiment\+Settings}}
 \index{Save\+Experiment\+Settings@{Save\+Experiment\+Settings}!Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}}
 \subsubsection[{Save\+Experiment\+Settings(\+Experiment\+Model experiment)}]{\setlength{\rightskip}{0pt plus 5cm}static Boolean Web\+Analyzer.\+Controller.\+Export\+Controller.\+Save\+Experiment\+Settings (
@@ -175,16 +296,16 @@ Saves the experiment settings to a file.
 {\em settings} & The experiment settings to save.\\
 \hline
 \end{DoxyParams}
-\hypertarget{class_web_analyzer_1_1_controller_1_1_export_controller_aac2a1b577a35a77d577c855c73dd5bf0}{}\index{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}!Save\+Experiment\+Statistics@{Save\+Experiment\+Statistics}}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_export_controller_a08b9a190bd2cf514d7c2989e8e121703}{}\index{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}!Save\+Experiment\+Statistics@{Save\+Experiment\+Statistics}}
 \index{Save\+Experiment\+Statistics@{Save\+Experiment\+Statistics}!Web\+Analyzer\+::\+Controller\+::\+Export\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Export\+Controller}}
-\subsubsection[{Save\+Experiment\+Statistics(\+Experiment\+Model experiment, Experiment\+Participant current\+Participant, String timestamp, Test\+Model testrun)}]{\setlength{\rightskip}{0pt plus 5cm}static Boolean Web\+Analyzer.\+Controller.\+Export\+Controller.\+Save\+Experiment\+Statistics (
+\subsubsection[{Save\+Experiment\+Statistics(\+Experiment\+Model experiment, Experiment\+Participant current\+Participant, String filename, Test\+Model testrun)}]{\setlength{\rightskip}{0pt plus 5cm}static Boolean Web\+Analyzer.\+Controller.\+Export\+Controller.\+Save\+Experiment\+Statistics (
 \begin{DoxyParamCaption}
 \item[{{\bf Experiment\+Model}}]{experiment, }
 \item[{{\bf Experiment\+Participant}}]{current\+Participant, }
-\item[{String}]{timestamp, }
+\item[{String}]{filename, }
 \item[{{\bf Test\+Model}}]{testrun}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_controller_1_1_export_controller_aac2a1b577a35a77d577c855c73dd5bf0}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_controller_1_1_export_controller_a08b9a190bd2cf514d7c2989e8e121703}
 
 
 Saves the given testrun statistics to the given experiment and given participant. 
@@ -195,7 +316,7 @@ Saves the given testrun statistics to the given experiment and given participant
 \hline
 {\em current\+Participant} & The participant to which the testrun belongs\\
 \hline
-{\em timestamp} & Timestamp to be used for the file name.\\
+{\em filename} & Filename to be used for the export.\\
 \hline
 {\em testrun} & The testdata\\
 \hline

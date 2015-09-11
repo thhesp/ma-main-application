@@ -1,5 +1,6 @@
 var dir_272cf6df7b3275700c2b9e047ae3f0a6 =
 [
+    [ "AlgorithmModel", "dir_9d674f7a273ee123051649d817a2b736.html", "dir_9d674f7a273ee123051649d817a2b736" ],
     [ "AnalysisModel", "dir_ba3d44888030818679e6c2abad5516ac.html", "dir_ba3d44888030818679e6c2abad5516ac" ],
     [ "Base", "dir_30029038c49e987ffbe1859774881d4c.html", "dir_30029038c49e987ffbe1859774881d4c" ],
     [ "DataModel", "dir_b95da6996b9aa18aa7e96ff8d94e3bed.html", "dir_b95da6996b9aa18aa7e96ff8d94e3bed" ],

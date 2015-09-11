@@ -3,17 +3,13 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a237f4021726f632e9eb468585d959ad3}{Test\+Model} ()
-\item 
-void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a947bc920ec736799df566da1f5660c70}{Add\+Webpage} (String url)
-\item 
-void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a71db82cab933dd7e7585915bd97740dd}{Add\+Webpage} (String url, String timestamp)
-\item 
 Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_af8e1e55844cdb5e707ed4a0942448867}{Exportable} ()
 \item 
-Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_af8f96e7cfa71b5bb99c4bfbaa469368d}{To\+X\+M\+L} (Xml\+Document xml\+Doc)
+Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a0320168b69827719088d63216b7cd07c}{To\+X\+M\+L} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant, Xml\+Document xml\+Doc)
 \item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a81c7aa756c48c0a577b9877ebbbb07b8}{Generate\+Statistics\+X\+M\+L} (Xml\+Document xml\+Doc)
+\item 
+Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a59a7a3398a51963ffde94badae9bcc38}{Generate\+Statistics\+X\+M\+L} (Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
 \item 
 long\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ad9e6b0da3998485b11af3f532c429136}{Array\+Of\+Duration\+From\+Request\+Till\+Sent} ()
 \item 
@@ -21,9 +17,11 @@ long\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model
 \item 
 long\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a2f272e9970feb3a1fbca147b34b8b3f7}{Array\+Of\+Duration\+From\+Client\+Received\+To\+Client\+Sent} ()
 \item 
-Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ab0d963dc5a7c320e3133e88585acfadc}{Generate\+Fixation\+X\+M\+L} (Xml\+Document xml\+Doc)
+Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_abc99e17d851571723952cf1717d0a711}{Generate\+Fixation\+X\+M\+L} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
 \item 
-Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a1822a101fa0793bd807575d7fcdbd65d}{Generate\+A\+O\+I\+X\+M\+L} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings}{Experiment\+Settings} settings, Xml\+Document xml\+Doc)
+Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a5fbd82aef3cf27ecf196f7daff4422da}{Generate\+A\+O\+I\+X\+M\+L} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings}{Experiment\+Settings} settings, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
+\item 
+Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a07fd0a4cf43fd9c9dfca89d0583e4609}{Generate\+Saccades\+X\+M\+L} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
 \item 
 Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_abc6d6772659bfd91a6d1fe6923ca7a2b}{Check\+For\+Save} ()
 \item 
@@ -42,6 +40,10 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a2
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a9a5e8a32d33cfbd93c7a42260d14e931}{Prepare\+Gaze\+Data} (String timestamp, double left\+X, double left\+Y, double right\+X, double right\+Y)
 \item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_af5443d18d5c7d80edaf417ee28bb296e}{Message\+Sent} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af690ff5521d79c7128861033ae80ae17}{unique\+Id}, String sent\+Timestamp)
+\item 
+void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_aca2998a693a880f8c1fd1457615988ac}{Extract\+Fixations\+And\+Saccades} (\hyperlink{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm}{Algorithm} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2analyse_8js_a1222cf9678e9ad6a699b071d3308f976}{algorithm})
+\item 
+void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a71db82cab933dd7e7585915bd97740dd}{Add\+Webpage} (String url, String timestamp)
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -51,7 +53,13 @@ static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{T
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
+String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a4353d075e751f00ca785cf5702f00910}{Filename}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a91b896389e06b664e992c719f4d73e9b}{Filename\+Without\+Extension}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_acdb09845b9c3bc8582f78d2729524216}{Started}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a636a8cedde376c835de9d909e8ec2c2d}{Stopped}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -59,6 +67,8 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ac
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_aeb5429731ec41e1460952faf568e10be}{Create\+Experiment\+Statistics} (Xml\+Document xml\+Doc)
 \item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a285dda9a94c63de7c47203f47e69e372}{Insert\+Array\+Statistics} (Xml\+Document xml\+Doc, Xml\+Node node, long\mbox{[}$\,$\mbox{]} array)
+\item 
+void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a2fd8bf35c47c7fe3aee6537a1514ce10}{Remove\+Empty\+Pages} ()
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_adf086c022e7d9475f2e705665af0721a}{Add\+Gaze\+Data} (String url, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} gaze\+Model)
 \item 
@@ -69,26 +79,14 @@ void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a285
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a81e009853a2999fac79631cfcd0ed4db}{\+\_\+started}
 \item 
-String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a3392e2c7f267fe806b7f7b8bc1cfa5d2}{\+\_\+last\+Page}
-\item 
-\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model}{Webpage\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_aa43eb21aef126248c3533fcd4100cb1a}{\+\_\+last\+Page\+Model}
+String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a6253cabd7bb33c13da5927853cc8d228}{\+\_\+stopped}
 \item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model}{Webpage\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a849d23a83d37ac0e965c3946d8085aa2}{\+\_\+visited\+Pages} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model}{Webpage\+Model}$>$()
 \item 
-Dictionary$<$ String, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a1eaf774e73692913671ff3cb85f5772e}{\+\_\+unassigned\+Positions}
+Dictionary$<$ String, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a1eaf774e73692913671ff3cb85f5772e}{\+\_\+unassigned\+Positions} = new Dictionary$<$String, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model}$>$()
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a9969004441000c661fe533b8d954ec54}{\+\_\+last\+Gaze\+Action\+Timestamp} = \char`\"{}\char`\"{}
 \end{DoxyCompactItemize}
-
-
-\subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a237f4021726f632e9eb468585d959ad3}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Test\+Model@{Test\+Model}}
-\index{Test\+Model@{Test\+Model}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
-\subsubsection[{Test\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Test\+Model (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a237f4021726f632e9eb468585d959ad3}
 
 
 \subsection{Member Function Documentation}
@@ -100,13 +98,6 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a9
 \item[{{\bf Gaze\+Model}}]{gaze\+Model}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_adf086c022e7d9475f2e705665af0721a}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a947bc920ec736799df566da1f5660c70}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Add\+Webpage@{Add\+Webpage}}
-\index{Add\+Webpage@{Add\+Webpage}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
-\subsubsection[{Add\+Webpage(\+String url)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Add\+Webpage (
-\begin{DoxyParamCaption}
-\item[{String}]{url}
-\end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a947bc920ec736799df566da1f5660c70}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a71db82cab933dd7e7585915bd97740dd}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Add\+Webpage@{Add\+Webpage}}
 \index{Add\+Webpage@{Add\+Webpage}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Add\+Webpage(\+String url, String timestamp)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Add\+Webpage (
@@ -187,21 +178,41 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a9
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_af8e1e55844cdb5e707ed4a0942448867}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a1822a101fa0793bd807575d7fcdbd65d}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Generate\+A\+O\+I\+X\+M\+L@{Generate\+A\+O\+I\+X\+M\+L}}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_aca2998a693a880f8c1fd1457615988ac}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Extract\+Fixations\+And\+Saccades@{Extract\+Fixations\+And\+Saccades}}
+\index{Extract\+Fixations\+And\+Saccades@{Extract\+Fixations\+And\+Saccades}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
+\subsubsection[{Extract\+Fixations\+And\+Saccades(\+Algorithm algorithm)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Extract\+Fixations\+And\+Saccades (
+\begin{DoxyParamCaption}
+\item[{{\bf Algorithm}}]{algorithm}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_aca2998a693a880f8c1fd1457615988ac}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a5fbd82aef3cf27ecf196f7daff4422da}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Generate\+A\+O\+I\+X\+M\+L@{Generate\+A\+O\+I\+X\+M\+L}}
 \index{Generate\+A\+O\+I\+X\+M\+L@{Generate\+A\+O\+I\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
-\subsubsection[{Generate\+A\+O\+I\+X\+M\+L(\+Experiment\+Settings settings, Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Generate\+A\+O\+I\+X\+M\+L (
+\subsubsection[{Generate\+A\+O\+I\+X\+M\+L(\+Experiment\+Settings settings, Experiment\+Participant participant, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Generate\+A\+O\+I\+X\+M\+L (
 \begin{DoxyParamCaption}
 \item[{{\bf Experiment\+Settings}}]{settings, }
-\item[{Xml\+Document}]{xml\+Doc}
+\item[{{\bf Experiment\+Participant}}]{participant, }
+\item[{Xml\+Document}]{xml\+Doc, }
+\item[{Boolean}]{include\+Single\+Gaze\+Data}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a1822a101fa0793bd807575d7fcdbd65d}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ab0d963dc5a7c320e3133e88585acfadc}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Generate\+Fixation\+X\+M\+L@{Generate\+Fixation\+X\+M\+L}}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a5fbd82aef3cf27ecf196f7daff4422da}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_abc99e17d851571723952cf1717d0a711}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Generate\+Fixation\+X\+M\+L@{Generate\+Fixation\+X\+M\+L}}
 \index{Generate\+Fixation\+X\+M\+L@{Generate\+Fixation\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
-\subsubsection[{Generate\+Fixation\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Generate\+Fixation\+X\+M\+L (
+\subsubsection[{Generate\+Fixation\+X\+M\+L(\+Experiment\+Participant participant, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Generate\+Fixation\+X\+M\+L (
 \begin{DoxyParamCaption}
-\item[{Xml\+Document}]{xml\+Doc}
+\item[{{\bf Experiment\+Participant}}]{participant, }
+\item[{Xml\+Document}]{xml\+Doc, }
+\item[{Boolean}]{include\+Single\+Gaze\+Data}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ab0d963dc5a7c320e3133e88585acfadc}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_abc99e17d851571723952cf1717d0a711}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a07fd0a4cf43fd9c9dfca89d0583e4609}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Generate\+Saccades\+X\+M\+L@{Generate\+Saccades\+X\+M\+L}}
+\index{Generate\+Saccades\+X\+M\+L@{Generate\+Saccades\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
+\subsubsection[{Generate\+Saccades\+X\+M\+L(\+Experiment\+Participant participant, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Generate\+Saccades\+X\+M\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Experiment\+Participant}}]{participant, }
+\item[{Xml\+Document}]{xml\+Doc, }
+\item[{Boolean}]{include\+Single\+Gaze\+Data}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a07fd0a4cf43fd9c9dfca89d0583e4609}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a81c7aa756c48c0a577b9877ebbbb07b8}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Generate\+Statistics\+X\+M\+L@{Generate\+Statistics\+X\+M\+L}}
 \index{Generate\+Statistics\+X\+M\+L@{Generate\+Statistics\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Generate\+Statistics\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Generate\+Statistics\+X\+M\+L (
@@ -209,6 +220,14 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a9
 \item[{Xml\+Document}]{xml\+Doc}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a81c7aa756c48c0a577b9877ebbbb07b8}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a59a7a3398a51963ffde94badae9bcc38}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Generate\+Statistics\+X\+M\+L@{Generate\+Statistics\+X\+M\+L}}
+\index{Generate\+Statistics\+X\+M\+L@{Generate\+Statistics\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
+\subsubsection[{Generate\+Statistics\+X\+M\+L(\+Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Generate\+Statistics\+X\+M\+L (
+\begin{DoxyParamCaption}
+\item[{Xml\+Document}]{xml\+Doc, }
+\item[{Boolean}]{include\+Single\+Gaze\+Data}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a59a7a3398a51963ffde94badae9bcc38}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a276585c6c2bdca3cf99058e2287636dc}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Get\+Gaze\+Model@{Get\+Gaze\+Model}}
 \index{Get\+Gaze\+Model@{Get\+Gaze\+Model}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Get\+Gaze\+Model(\+String unique\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gaze\+Model} Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Get\+Gaze\+Model (
@@ -268,40 +287,54 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a9
 \item[{double}]{right\+Y}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a9a5e8a32d33cfbd93c7a42260d14e931}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_af8f96e7cfa71b5bb99c4bfbaa469368d}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!To\+X\+M\+L@{To\+X\+M\+L}}
-\index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
-\subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+To\+X\+M\+L (
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a2fd8bf35c47c7fe3aee6537a1514ce10}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Remove\+Empty\+Pages@{Remove\+Empty\+Pages}}
+\index{Remove\+Empty\+Pages@{Remove\+Empty\+Pages}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
+\subsubsection[{Remove\+Empty\+Pages()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Remove\+Empty\+Pages (
 \begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a2fd8bf35c47c7fe3aee6537a1514ce10}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a0320168b69827719088d63216b7cd07c}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!To\+X\+M\+L@{To\+X\+M\+L}}
+\index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
+\subsubsection[{To\+X\+M\+L(\+Experiment\+Participant participant, Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+To\+X\+M\+L (
+\begin{DoxyParamCaption}
+\item[{{\bf Experiment\+Participant}}]{participant, }
 \item[{Xml\+Document}]{xml\+Doc}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_af8f96e7cfa71b5bb99c4bfbaa469368d}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a0320168b69827719088d63216b7cd07c}
 
 
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a9969004441000c661fe533b8d954ec54}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+last\+Gaze\+Action\+Timestamp@{\+\_\+last\+Gaze\+Action\+Timestamp}}
 \index{\+\_\+last\+Gaze\+Action\+Timestamp@{\+\_\+last\+Gaze\+Action\+Timestamp}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{\+\_\+last\+Gaze\+Action\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+last\+Gaze\+Action\+Timestamp = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a9969004441000c661fe533b8d954ec54}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a3392e2c7f267fe806b7f7b8bc1cfa5d2}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+last\+Page@{\+\_\+last\+Page}}
-\index{\+\_\+last\+Page@{\+\_\+last\+Page}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
-\subsubsection[{\+\_\+last\+Page}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+last\+Page\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a3392e2c7f267fe806b7f7b8bc1cfa5d2}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_aa43eb21aef126248c3533fcd4100cb1a}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+last\+Page\+Model@{\+\_\+last\+Page\+Model}}
-\index{\+\_\+last\+Page\+Model@{\+\_\+last\+Page\+Model}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
-\subsubsection[{\+\_\+last\+Page\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Webpage\+Model} Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+last\+Page\+Model\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_aa43eb21aef126248c3533fcd4100cb1a}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a81e009853a2999fac79631cfcd0ed4db}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+started@{\+\_\+started}}
 \index{\+\_\+started@{\+\_\+started}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{\+\_\+started}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+started\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a81e009853a2999fac79631cfcd0ed4db}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a6253cabd7bb33c13da5927853cc8d228}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+stopped@{\+\_\+stopped}}
+\index{\+\_\+stopped@{\+\_\+stopped}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
+\subsubsection[{\+\_\+stopped}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+stopped\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a6253cabd7bb33c13da5927853cc8d228}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a1eaf774e73692913671ff3cb85f5772e}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+unassigned\+Positions@{\+\_\+unassigned\+Positions}}
 \index{\+\_\+unassigned\+Positions@{\+\_\+unassigned\+Positions}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
-\subsubsection[{\+\_\+unassigned\+Positions}]{\setlength{\rightskip}{0pt plus 5cm}Dictionary$<$String, {\bf Gaze\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+unassigned\+Positions\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a1eaf774e73692913671ff3cb85f5772e}
+\subsubsection[{\+\_\+unassigned\+Positions}]{\setlength{\rightskip}{0pt plus 5cm}Dictionary$<$String, {\bf Gaze\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+unassigned\+Positions = new Dictionary$<$String, {\bf Gaze\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a1eaf774e73692913671ff3cb85f5772e}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a849d23a83d37ac0e965c3946d8085aa2}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+visited\+Pages@{\+\_\+visited\+Pages}}
 \index{\+\_\+visited\+Pages@{\+\_\+visited\+Pages}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{\+\_\+visited\+Pages}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Webpage\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+visited\+Pages = new List$<${\bf Webpage\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a849d23a83d37ac0e965c3946d8085aa2}
 
 
 \subsection{Property Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a4353d075e751f00ca785cf5702f00910}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Filename@{Filename}}
+\index{Filename@{Filename}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
+\subsubsection[{Filename}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Filename\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a4353d075e751f00ca785cf5702f00910}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a91b896389e06b664e992c719f4d73e9b}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Filename\+Without\+Extension@{Filename\+Without\+Extension}}
+\index{Filename\+Without\+Extension@{Filename\+Without\+Extension}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
+\subsubsection[{Filename\+Without\+Extension}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Filename\+Without\+Extension\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a91b896389e06b664e992c719f4d73e9b}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_acdb09845b9c3bc8582f78d2729524216}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Started@{Started}}
 \index{Started@{Started}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Started}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Started\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_acdb09845b9c3bc8582f78d2729524216}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a636a8cedde376c835de9d909e8ec2c2d}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Stopped@{Stopped}}
+\index{Stopped@{Stopped}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
+\subsubsection[{Stopped}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Stopped\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a636a8cedde376c835de9d909e8ec2c2d}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

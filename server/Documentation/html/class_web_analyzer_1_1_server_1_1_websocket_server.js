@@ -1,12 +1,10 @@
 var class_web_analyzer_1_1_server_1_1_websocket_server =
 [
     [ "WebsocketServer", "class_web_analyzer_1_1_server_1_1_websocket_server.html#a3fddc08875cc188f4fb799ca4ccfe6ad", null ],
-    [ "CreateServer", "class_web_analyzer_1_1_server_1_1_websocket_server.html#adcca188d89d2ca8762b7e5d979857f28", null ],
     [ "CreateServer", "class_web_analyzer_1_1_server_1_1_websocket_server.html#a6bd50680516243f710b7eb189241b256", null ],
     [ "prepareServer", "class_web_analyzer_1_1_server_1_1_websocket_server.html#ad36bdf3fe5b0a9df1c652b67e504561c", null ],
     [ "RequestData", "class_web_analyzer_1_1_server_1_1_websocket_server.html#acab32c7df617492c47da886956332d9f", null ],
     [ "RequestData", "class_web_analyzer_1_1_server_1_1_websocket_server.html#aa0ffcc2e38d0a5c7f85e6c50b283718a", null ],
-    [ "start", "class_web_analyzer_1_1_server_1_1_websocket_server.html#a0afc1c5aad274b94fc9b0d461424d161", null ],
     [ "start", "class_web_analyzer_1_1_server_1_1_websocket_server.html#ae006161a22122f220e0788cf8894cfb6", null ],
     [ "stop", "class_web_analyzer_1_1_server_1_1_websocket_server.html#a2c5391b6ebe427d2d42d7b601b922e5b", null ],
     [ "_connManager", "class_web_analyzer_1_1_server_1_1_websocket_server.html#ac98422e37a10a6c4fd3900a09b003b5e", null ],

@@ -2,6 +2,7 @@ var class_web_analyzer_1_1_controller_1_1_main_controller =
 [
     [ "CloseExperimentWizard", "class_web_analyzer_1_1_controller_1_1_main_controller.html#ab0958418a7186810e84795d022411b19", null ],
     [ "CreateTestrun", "class_web_analyzer_1_1_controller_1_1_main_controller.html#a89558728bf22eec76ec4ff3ca0660490", null ],
+    [ "InitializeTestController", "class_web_analyzer_1_1_controller_1_1_main_controller.html#a547afe4ecfaa8fd487ee1665262374fe", null ],
     [ "MainUIFinishedLoading", "class_web_analyzer_1_1_controller_1_1_main_controller.html#aab65da07ca7ce15a5957e7f01e260b86", null ],
     [ "On_CreateDomainSetting", "class_web_analyzer_1_1_controller_1_1_main_controller.html#aaec17c78ea87f6af50faa3fa08f5c551", null ],
     [ "On_CreateExperiment", "class_web_analyzer_1_1_controller_1_1_main_controller.html#a128386d15417b0ae5e388f39d71c7535", null ],
@@ -12,8 +13,9 @@ var class_web_analyzer_1_1_controller_1_1_main_controller =
     [ "On_LoadExperiment", "class_web_analyzer_1_1_controller_1_1_main_controller.html#abfc3aaeb8299f7890d08d7a150072b03", null ],
     [ "On_SaveTestrun", "class_web_analyzer_1_1_controller_1_1_main_controller.html#aa00702c9b2f489d0db4a676f08e176aa", null ],
     [ "On_SelectParticipantForTest", "class_web_analyzer_1_1_controller_1_1_main_controller.html#ae8eae4c1e6dda888f7231e39aaabba3c", null ],
-    [ "On_TestrunEvent", "class_web_analyzer_1_1_controller_1_1_main_controller.html#a29b97f1032832f1a4600d6e00b038067", null ],
+    [ "On_TestrunEvent", "class_web_analyzer_1_1_controller_1_1_main_controller.html#a8f86c27064bd088e28cf0aa0308bda2b", null ],
     [ "On_TriggerSave", "class_web_analyzer_1_1_controller_1_1_main_controller.html#aadab56b24729cdfeeac6474825289c83", null ],
+    [ "On_UpdateConnectionCount", "class_web_analyzer_1_1_controller_1_1_main_controller.html#aa5f17af11b8604a5bb8d78d3f7ec5d7a", null ],
     [ "RefreshMainUI", "class_web_analyzer_1_1_controller_1_1_main_controller.html#adaf2d5b304f6a713b9f08c9b4c7a6b62", null ],
     [ "SetConnectionStati", "class_web_analyzer_1_1_controller_1_1_main_controller.html#af163fb2f694b612e5bf4a854f09b119f", null ],
     [ "SetExpiermentData", "class_web_analyzer_1_1_controller_1_1_main_controller.html#a9834e917d2a61f4d5adb424ed76e0622", null ],
@@ -26,7 +28,8 @@ var class_web_analyzer_1_1_controller_1_1_main_controller =
     [ "StopTest", "class_web_analyzer_1_1_controller_1_1_main_controller.html#ac75ad84f0191902e27a711efd325c648", null ],
     [ "_currentExperiment", "class_web_analyzer_1_1_controller_1_1_main_controller.html#aa4f1360b63aad914ee646345d48c4837", null ],
     [ "_currentParticipant", "class_web_analyzer_1_1_controller_1_1_main_controller.html#ab952ff62d095db81af55f2676923a87a", null ],
+    [ "_experimentWizard", "class_web_analyzer_1_1_controller_1_1_main_controller.html#a00b3a191e545ae8d10db2400f2b498a1", null ],
+    [ "_mainUI", "class_web_analyzer_1_1_controller_1_1_main_controller.html#a8f4b51e26bd6810c2103a75a9116c7f6", null ],
     [ "_testController", "class_web_analyzer_1_1_controller_1_1_main_controller.html#a89f0064ffc8bd59de5df9e610fc765f1", null ],
-    [ "experimentWizard", "class_web_analyzer_1_1_controller_1_1_main_controller.html#ae26ccfce4545f36905f855621e0a36dc", null ],
-    [ "mainUI", "class_web_analyzer_1_1_controller_1_1_main_controller.html#a70cf415b6537ad91455f3b9b450df036", null ]
+    [ "_testrunControlUI", "class_web_analyzer_1_1_controller_1_1_main_controller.html#a8acee18d61ec9490f689cf2492c56bc0", null ]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['request',['REQUEST',['../class_web_analyzer_1_1_models_1_1_message_model_1_1_connection_message.html#a0b8ebc456d3aed9c51235f2a1a1a1cdbaad6c35880c58d97c03d60a6ad0f23737',1,'WebAnalyzer::Models::MessageModel::ConnectionMessage']]]
+  ['participants',['PARTICIPANTS',['../class_web_analyzer_1_1_events_1_1_trigger_save_event.html#a4eec94af974a1711b6e32010e3e54c0da41d4e02780b46eeb797f488ec6ded226',1,'WebAnalyzer::Events::TriggerSaveEvent']]]
 ];

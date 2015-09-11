@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['message_5ftype',['MESSAGE_TYPE',['../class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message.html#a5c01620a5429c5eec75477e614c96f94',1,'WebAnalyzer::Models::MessageModel::InDataMessage']]]
+  ['filteraction',['FilterAction',['../class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller.html#abb07906895fb0b4d42dda920e7e9bc1e',1,'WebAnalyzer::EyeTracking::EyeTrackingController']]],
+  ['filtertype',['FilterType',['../class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller.html#ad9753f580da53bc6d88c2e32a579a2cc',1,'WebAnalyzer::EyeTracking::EyeTrackingController']]]
 ];

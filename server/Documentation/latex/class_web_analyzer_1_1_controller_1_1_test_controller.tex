@@ -35,12 +35,20 @@ Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a99b6f6
 void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a19c13e671b0a950a1b012424fd7c2560}{Check\+For\+Save} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, Elapsed\+Event\+Args \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
 \begin{DoxyCompactList}\small\item\em Check if all data is there and save if it is. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_ab70718909a47aded762d0021e5ccb7b2}{On\+\_\+\+Message\+Sent} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_message_sent_event}{Message\+Sent\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\begin{DoxyCompactList}\small\item\em Callback for Message Sent Event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Callback for Message Sent Event. \end{DoxyCompactList}\item 
+void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_aab50b4935b131507a7dbfae94aa632df}{On\+\_\+\+Update\+Connection\+Count} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_update_w_s_connection_count_event}{Update\+W\+S\+Connection\+Count\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
+\begin{DoxyCompactList}\small\item\em Callback for Update W\+S Connection Count Event \end{DoxyCompactList}\item 
+void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_aac7dd97807dbc4bb9f7c8127b7f210e4}{On\+\_\+\+Add\+Webpage} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} source, \hyperlink{class_web_analyzer_1_1_events_1_1_add_webpage_event}{Add\+Webpage\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
+\begin{DoxyCompactList}\small\item\em Callback for Update W\+S Change Webpage Event \end{DoxyCompactList}\item 
+void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_afd9f2518fa8375fbbb40b5267116316d}{On\+\_\+\+Tracking\+Event} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} source, \hyperlink{class_web_analyzer_1_1_events_1_1_add_tracking_event}{Add\+Tracking\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
+\begin{DoxyCompactList}\small\item\em Event which gets triggered from the tracking model when an event happend. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{Test\+Model} \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_afcf9572f80c31e6d9aca33f96e3aaa4f}{Test}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Interface to access the Test\+Model \end{DoxyCompactList}\item 
+\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data}{Raw\+Tracking\+Data} \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a3ec6bf7552cde054fdffaa8a1a6cf981}{Raw\+Data}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Interface to access the collected raw data. \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a4020785450ade4a26f603d667ce633d6}{Running}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \begin{DoxyCompactList}\small\item\em Interface to check if the \hyperlink{namespace_web_analyzer_1_1_test}{Test} ir Running. \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a741cf98b95422a4a307bf8834db147b3}{Data\+Collected}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
@@ -53,7 +61,9 @@ Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a741cf9
 \begin{DoxyCompactItemize}
 \item 
 Save\+Testrun\+Event\+Handler \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a45f8340dcea78391a3f58e5c7996d126}{Save\+Testrun}
-\begin{DoxyCompactList}\small\item\em Event for saving the testrun. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Event for saving the testrun. \end{DoxyCompactList}\item 
+Update\+W\+S\+Connection\+Count\+Event\+Handler \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a3b6d28efa43ed99a2bdf0db062ba46e1}{Update\+W\+S\+Connection\+Count}
+\begin{DoxyCompactList}\small\item\em Event for updating the connection count. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -74,9 +84,9 @@ void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a61584d877
 \begin{DoxyCompactList}\small\item\em Reference to the test data for current test. \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model}{Eye\+Tracking\+Model} \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a0db36e46096d444386af0d357905f430}{\+\_\+et\+Model}
 \begin{DoxyCompactList}\small\item\em Reference to the Eye\+Tracker which is used for getting data. \end{DoxyCompactList}\item 
-Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a33b43014ccf6b9f7cdd1e3136ac19d3a}{\+\_\+\+E\+T\+Warning} = false
+Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a33b43014ccf6b9f7cdd1e3136ac19d3a}{\+\_\+\+E\+T\+Warning} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
 \begin{DoxyCompactList}\small\item\em Boolean for indicating if there was a problem with the Eye\+Tracker. \end{DoxyCompactList}\item 
-Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a517bab0ee0c22871788bd498de86c27e}{\+\_\+\+W\+S\+Warning} = false
+Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a517bab0ee0c22871788bd498de86c27e}{\+\_\+\+W\+S\+Warning} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
 \begin{DoxyCompactList}\small\item\em Boolean for indicating if there was a problem for the Web\+Socket \hyperlink{namespace_web_analyzer_1_1_server}{Server}. \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_server}{Websocket\+Server} \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_aeb605e9f2ad9c53af52fb846fe2a98a6}{\+\_\+ws\+Server}
 \begin{DoxyCompactList}\small\item\em Reference to the Websocket \hyperlink{namespace_web_analyzer_1_1_server}{Server}. \end{DoxyCompactList}\item 
@@ -84,10 +94,12 @@ Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a517bab
 \begin{DoxyCompactList}\small\item\em Reference to the Mouse\+Model used as an alternative to the \hyperlink{namespace_web_analyzer_1_1_eye_tracking}{Eye\+Tracking}. \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a49aaaa975ccbeedcd52fb03288cea3ef}{\+\_\+running}
 \begin{DoxyCompactList}\small\item\em Boolean for indicating if the test is currently running. \end{DoxyCompactList}\item 
-Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a7d63bbfba4672d52414c318b397c504b}{\+\_\+data\+Collected} = false
+Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a7d63bbfba4672d52414c318b397c504b}{\+\_\+data\+Collected} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
 \begin{DoxyCompactList}\small\item\em Boolean for indicating if any data was collected. \end{DoxyCompactList}\item 
 System.\+Timers.\+Timer \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a484747e48ceb23e931111018ed87d8e1}{save\+Timer}
-\begin{DoxyCompactList}\small\item\em Reference to an timer used for checking if all communication is done and the data can be saved. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Reference to an timer used for checking if all communication is done and the data can be saved. \end{DoxyCompactList}\item 
+\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data}{Raw\+Tracking\+Data} \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_ac2155d50816dddd7e62689655d3a978f}{\+\_\+raw\+Data} = new \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data}{Raw\+Tracking\+Data}()
+\begin{DoxyCompactList}\small\item\em Contains the raw data of the tracking device, without any extra informations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -274,6 +286,25 @@ Get the Gaze\+Model to an uniqueid
 
 Intern method to extract the Tracking Status. 
 
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_aac7dd97807dbc4bb9f7c8127b7f210e4}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!On\+\_\+\+Add\+Webpage@{On\+\_\+\+Add\+Webpage}}
+\index{On\+\_\+\+Add\+Webpage@{On\+\_\+\+Add\+Webpage}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{On\+\_\+\+Add\+Webpage(object source, Add\+Webpage\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+On\+\_\+\+Add\+Webpage (
+\begin{DoxyParamCaption}
+\item[{{\bf object}}]{source, }
+\item[{{\bf Add\+Webpage\+Event}}]{e}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_controller_1_1_test_controller_aac7dd97807dbc4bb9f7c8127b7f210e4}
+
+
+Callback for Update W\+S Change Webpage Event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object from which the event gets triggered.\\
+\hline
+{\em e} & Data about the webpage\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_ab70718909a47aded762d0021e5ccb7b2}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!On\+\_\+\+Message\+Sent@{On\+\_\+\+Message\+Sent}}
 \index{On\+\_\+\+Message\+Sent@{On\+\_\+\+Message\+Sent}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
 \subsubsection[{On\+\_\+\+Message\+Sent(object sender, Message\+Sent\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+On\+\_\+\+Message\+Sent (
@@ -310,6 +341,46 @@ Prepares the Gaze\+Data and requests the data over the websocket server.
 {\em source} & Source from which the event gets triggered.\\
 \hline
 {\em e} & Data about the gaze.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_afd9f2518fa8375fbbb40b5267116316d}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!On\+\_\+\+Tracking\+Event@{On\+\_\+\+Tracking\+Event}}
+\index{On\+\_\+\+Tracking\+Event@{On\+\_\+\+Tracking\+Event}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{On\+\_\+\+Tracking\+Event(object source, Add\+Tracking\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+On\+\_\+\+Tracking\+Event (
+\begin{DoxyParamCaption}
+\item[{{\bf object}}]{source, }
+\item[{{\bf Add\+Tracking\+Event}}]{e}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_controller_1_1_test_controller_afd9f2518fa8375fbbb40b5267116316d}
+
+
+Event which gets triggered from the tracking model when an event happend. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Object from which the event gets triggered.\\
+\hline
+{\em e} & Data about the event which happened.\\
+\hline
+\end{DoxyParams}
+
+
+Used for collecting data about fixations from the Eye\+Tracker.\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_aab50b4935b131507a7dbfae94aa632df}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!On\+\_\+\+Update\+Connection\+Count@{On\+\_\+\+Update\+Connection\+Count}}
+\index{On\+\_\+\+Update\+Connection\+Count@{On\+\_\+\+Update\+Connection\+Count}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{On\+\_\+\+Update\+Connection\+Count(object sender, Update\+W\+S\+Connection\+Count\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+On\+\_\+\+Update\+Connection\+Count (
+\begin{DoxyParamCaption}
+\item[{{\bf object}}]{sender, }
+\item[{{\bf Update\+W\+S\+Connection\+Count\+Event}}]{e}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_controller_1_1_test_controller_aab50b4935b131507a7dbfae94aa632df}
+
+
+Callback for Update W\+S Connection Count Event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object from which the event gets triggered.\\
+\hline
+{\em e} & Data about the number of connections\\
 \hline
 \end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_af621c99b82c5589e2fa446fad6c0839e}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Prepare\+Gaze\+Data@{Prepare\+Gaze\+Data}}
@@ -411,7 +482,7 @@ Stops the test.
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a7d63bbfba4672d52414c318b397c504b}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!\+\_\+data\+Collected@{\+\_\+data\+Collected}}
 \index{\+\_\+data\+Collected@{\+\_\+data\+Collected}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
-\subsubsection[{\+\_\+data\+Collected}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Controller.\+Test\+Controller.\+\_\+data\+Collected = false\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a7d63bbfba4672d52414c318b397c504b}
+\subsubsection[{\+\_\+data\+Collected}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Controller.\+Test\+Controller.\+\_\+data\+Collected = {\bf false}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a7d63bbfba4672d52414c318b397c504b}
 
 
 Boolean for indicating if any data was collected. 
@@ -432,10 +503,17 @@ Reference to the Eye\+Tracker which is used for getting data.
 
 Can be null if Mouse\+Tracking is used.\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a33b43014ccf6b9f7cdd1e3136ac19d3a}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!\+\_\+\+E\+T\+Warning@{\+\_\+\+E\+T\+Warning}}
 \index{\+\_\+\+E\+T\+Warning@{\+\_\+\+E\+T\+Warning}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
-\subsubsection[{\+\_\+\+E\+T\+Warning}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Controller.\+Test\+Controller.\+\_\+\+E\+T\+Warning = false\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a33b43014ccf6b9f7cdd1e3136ac19d3a}
+\subsubsection[{\+\_\+\+E\+T\+Warning}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Controller.\+Test\+Controller.\+\_\+\+E\+T\+Warning = {\bf false}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a33b43014ccf6b9f7cdd1e3136ac19d3a}
 
 
 Boolean for indicating if there was a problem with the Eye\+Tracker. 
+
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_ac2155d50816dddd7e62689655d3a978f}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!\+\_\+raw\+Data@{\+\_\+raw\+Data}}
+\index{\+\_\+raw\+Data@{\+\_\+raw\+Data}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{\+\_\+raw\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Raw\+Tracking\+Data} Web\+Analyzer.\+Controller.\+Test\+Controller.\+\_\+raw\+Data = new {\bf Raw\+Tracking\+Data}()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_ac2155d50816dddd7e62689655d3a978f}
+
+
+Contains the raw data of the tracking device, without any extra informations. 
 
 \hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a49aaaa975ccbeedcd52fb03288cea3ef}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!\+\_\+running@{\+\_\+running}}
 \index{\+\_\+running@{\+\_\+running}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
@@ -460,7 +538,7 @@ Reference to the Websocket \hyperlink{namespace_web_analyzer_1_1_server}{Server}
 
 \hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a517bab0ee0c22871788bd498de86c27e}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!\+\_\+\+W\+S\+Warning@{\+\_\+\+W\+S\+Warning}}
 \index{\+\_\+\+W\+S\+Warning@{\+\_\+\+W\+S\+Warning}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
-\subsubsection[{\+\_\+\+W\+S\+Warning}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Controller.\+Test\+Controller.\+\_\+\+W\+S\+Warning = false\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a517bab0ee0c22871788bd498de86c27e}
+\subsubsection[{\+\_\+\+W\+S\+Warning}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Controller.\+Test\+Controller.\+\_\+\+W\+S\+Warning = {\bf false}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a517bab0ee0c22871788bd498de86c27e}
 
 
 Boolean for indicating if there was a problem for the Web\+Socket \hyperlink{namespace_web_analyzer_1_1_server}{Server}. 
@@ -481,6 +559,13 @@ Reference to an timer used for checking if all communication is done and the dat
 
 
 Interface to check if data was collected. 
+
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a3ec6bf7552cde054fdffaa8a1a6cf981}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Raw\+Data@{Raw\+Data}}
+\index{Raw\+Data@{Raw\+Data}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{Raw\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Raw\+Tracking\+Data} Web\+Analyzer.\+Controller.\+Test\+Controller.\+Raw\+Data\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a3ec6bf7552cde054fdffaa8a1a6cf981}
+
+
+Interface to access the collected raw data. 
 
 \hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a4020785450ade4a26f603d667ce633d6}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Running@{Running}}
 \index{Running@{Running}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
@@ -519,6 +604,13 @@ Used for the indicator of the main \hyperlink{namespace_web_analyzer_1_1_u_i}{U\
 
 
 Event for saving the testrun. 
+
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a3b6d28efa43ed99a2bdf0db062ba46e1}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Update\+W\+S\+Connection\+Count@{Update\+W\+S\+Connection\+Count}}
+\index{Update\+W\+S\+Connection\+Count@{Update\+W\+S\+Connection\+Count}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{Update\+W\+S\+Connection\+Count}]{\setlength{\rightskip}{0pt plus 5cm}Update\+W\+S\+Connection\+Count\+Event\+Handler Web\+Analyzer.\+Controller.\+Test\+Controller.\+Update\+W\+S\+Connection\+Count}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a3b6d28efa43ed99a2bdf0db062ba46e1}
+
+
+Event for updating the connection count. 
 
 
 

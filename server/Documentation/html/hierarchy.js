@@ -1,6 +1,10 @@
 var hierarchy =
 [
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.AccuracyStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_accuracy_struct.html", null ],
+    [ "WebAnalyzer.Models.AlgorithmModel.Algorithm", "class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html", [
+      [ "WebAnalyzer.Models.AlgorithmModel.DistanceAlgorithm", "class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_distance_algorithm.html", null ],
+      [ "WebAnalyzer.Models.AlgorithmModel.IViewEventsAlgorithm", "class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_i_view_events_algorithm.html", null ]
+    ] ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.AOIRectangleStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_a_o_i_rectangle_struct.html", null ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.AOIStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_a_o_i_struct.html", null ],
     [ "ApplicationSettingsBase", null, [
@@ -9,6 +13,7 @@ var hierarchy =
     [ "WebAnalyzer.ApplicationSettings.AppSettings", "class_web_analyzer_1_1_application_settings_1_1_app_settings.html", null ],
     [ "WebAnalyzer.Models.DataModel.AttributeModel", "class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model.html", null ],
     [ "WebAnalyzer.UI.InteractionObjects.BaseInteractionObject", "class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object.html", [
+      [ "WebAnalyzer.UI.InteractionObjects.AnalysisExportControl", "class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control.html", null ],
       [ "WebAnalyzer.UI.InteractionObjects.AOISettingControl", "class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_a_o_i_setting_control.html", null ],
       [ "WebAnalyzer.UI.InteractionObjects.ApplicationSettingsObj", "class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_application_settings_obj.html", null ],
       [ "WebAnalyzer.UI.InteractionObjects.DomainSettingControl", "class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control.html", null ],
@@ -17,21 +22,27 @@ var hierarchy =
       [ "WebAnalyzer.UI.InteractionObjects.Navigation", "class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_navigation.html", null ],
       [ "WebAnalyzer.UI.InteractionObjects.ParticipantControl", "class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_participant_control.html", null ],
       [ "WebAnalyzer.UI.InteractionObjects.RuleControl", "class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_rule_control.html", null ],
+      [ "WebAnalyzer.UI.InteractionObjects.SelectExperimentControl", "class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control.html", null ],
       [ "WebAnalyzer.UI.InteractionObjects.SelectParticipantControl", "class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_participant_control.html", null ],
+      [ "WebAnalyzer.UI.InteractionObjects.SelectTestrunControl", "class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_testrun_control.html", null ],
       [ "WebAnalyzer.UI.InteractionObjects.TestrunControl", "class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control.html", null ]
     ] ],
-    [ "WebAnalyzer.Models.Base.BasicRawData", "class_web_analyzer_1_1_models_1_1_base_1_1_basic_raw_data.html", [
+    [ "WebAnalyzer.Models.Base.BasicData", "class_web_analyzer_1_1_models_1_1_base_1_1_basic_data.html", [
       [ "WebAnalyzer.Models.DataModel.GazeModel", "class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html", null ],
       [ "WebAnalyzer.Models.EventModel.ClickEventModel", "class_web_analyzer_1_1_models_1_1_event_model_1_1_click_event_model.html", null ],
       [ "WebAnalyzer.Models.EventModel.ScrollEventModel", "class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model.html", null ]
     ] ],
+    [ "WebAnalyzer.EyeTracking.EyeTrackingController.CalibrationPointQualityStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_calibration_point_quality_struct.html", null ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.CalibrationPointStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_calibration_point_struct.html", null ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.CalibrationStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_calibration_struct.html", null ],
     [ "WebAnalyzer.UI.ChromeDevTools", "class_web_analyzer_1_1_u_i_1_1_chrome_dev_tools.html", null ],
     [ "WebAnalyzer.Server.ConnectionManager", "class_web_analyzer_1_1_server_1_1_connection_manager.html", null ],
+    [ "WebAnalyzer.EyeTracking.EyeTrackingController.DateStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_date_struct.html", null ],
     [ "WebAnalyzer.Models.DataModel.DOMElementModel", "class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model.html", null ],
     [ "EventArgs", null, [
       [ "WebAnalyzer.Events.AddConnectionEvent", "class_web_analyzer_1_1_events_1_1_add_connection_event.html", null ],
+      [ "WebAnalyzer.Events.AddTrackingEvent", "class_web_analyzer_1_1_events_1_1_add_tracking_event.html", null ],
+      [ "WebAnalyzer.Events.AddWebpageEvent", "class_web_analyzer_1_1_events_1_1_add_webpage_event.html", null ],
       [ "WebAnalyzer.Events.CreateAOISettingEvent", "class_web_analyzer_1_1_events_1_1_create_a_o_i_setting_event.html", null ],
       [ "WebAnalyzer.Events.CreateDomainSettingEvent", "class_web_analyzer_1_1_events_1_1_create_domain_setting_event.html", null ],
       [ "WebAnalyzer.Events.CreateExperimentEvent", "class_web_analyzer_1_1_events_1_1_create_experiment_event.html", null ],
@@ -44,20 +55,23 @@ var hierarchy =
       [ "WebAnalyzer.Events.MessageSentEvent", "class_web_analyzer_1_1_events_1_1_message_sent_event.html", null ],
       [ "WebAnalyzer.Events.PrepareGazeDataEvent", "class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event.html", null ],
       [ "WebAnalyzer.Events.SaveTestrunEvent", "class_web_analyzer_1_1_events_1_1_save_testrun_event.html", null ],
+      [ "WebAnalyzer.Events.SelectExperimentEvent", "class_web_analyzer_1_1_events_1_1_select_experiment_event.html", null ],
       [ "WebAnalyzer.Events.SelectParticipantForTestEvent", "class_web_analyzer_1_1_events_1_1_select_participant_for_test_event.html", null ],
+      [ "WebAnalyzer.Events.SelectTestrunToLoadEvent", "class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event.html", null ],
       [ "WebAnalyzer.Events.TestrunEvent", "class_web_analyzer_1_1_events_1_1_testrun_event.html", null ],
-      [ "WebAnalyzer.Events.TriggerSaveEvent", "class_web_analyzer_1_1_events_1_1_trigger_save_event.html", null ]
+      [ "WebAnalyzer.Events.TriggerSaveEvent", "class_web_analyzer_1_1_events_1_1_trigger_save_event.html", null ],
+      [ "WebAnalyzer.Events.UpdateWSConnectionCountEvent", "class_web_analyzer_1_1_events_1_1_update_w_s_connection_count_event.html", null ]
     ] ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.EventStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_event_struct.html", null ],
     [ "WebAnalyzer.Models.Base.ExperimentModel", "class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html", null ],
     [ "WebAnalyzer.Models.SettingsModel.ExperimentSettings", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings.html", null ],
     [ "WebAnalyzer.Controller.ExportController", "class_web_analyzer_1_1_controller_1_1_export_controller.html", null ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.EyeDataStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_eye_data_struct.html", null ],
+    [ "WebAnalyzer.EyeTracking.EyeTrackingController.EyePositionStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_eye_position_struct.html", null ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingController", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller.html", null ],
     [ "WebAnalyzer.Models.DataModel.EyeTrackingData", "class_web_analyzer_1_1_models_1_1_data_model_1_1_eye_tracking_data.html", null ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingModel", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html", null ],
     [ "WebAnalyzer.Util.FileIO", "class_web_analyzer_1_1_util_1_1_file_i_o.html", null ],
-    [ "WebAnalyzer.Models.AnalysisModel.FixationAnalyser", "class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_analyser.html", null ],
     [ "WebAnalyzer.Models.AnalysisModel.FixationModel", "class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model.html", null ],
     [ "Form", null, [
       [ "WebAnalyzer.UI.EditAOISettingForm", "class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form.html", null ],
@@ -67,9 +81,12 @@ var hierarchy =
       [ "WebAnalyzer.UI.EditRuleForm", "class_web_analyzer_1_1_u_i_1_1_edit_rule_form.html", null ],
       [ "WebAnalyzer.UI.ExperimentWizard", "class_web_analyzer_1_1_u_i_1_1_experiment_wizard.html", null ],
       [ "WebAnalyzer.UI.HTMLUI", "class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i.html", null ],
+      [ "WebAnalyzer.UI.SelectExperimentForm", "class_web_analyzer_1_1_u_i_1_1_select_experiment_form.html", null ],
       [ "WebAnalyzer.UI.SelectParticipantForm", "class_web_analyzer_1_1_u_i_1_1_select_participant_form.html", null ],
+      [ "WebAnalyzer.UI.SelectTestrunForm", "class_web_analyzer_1_1_u_i_1_1_select_testrun_form.html", null ],
       [ "WebAnalyzer.UI.TestrunForm", "class_web_analyzer_1_1_u_i_1_1_testrun_form.html", null ]
     ] ],
+    [ "WebAnalyzer.EyeTracking.EyeTrackingController.GazeChannelQualityStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_gaze_channel_quality_struct.html", null ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.ImageStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_image_struct.html", null ],
     [ "IObserver", null, [
       [ "WebAnalyzer.Server.MessageHandler.ActivationMessageHandler", "class_web_analyzer_1_1_server_1_1_message_handler_1_1_activation_message_handler.html", null ],
@@ -92,15 +109,17 @@ var hierarchy =
       [ "WebAnalyzer.Models.MessageModel.InDataMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message.html", null ],
       [ "WebAnalyzer.Models.MessageModel.SmallDataMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_small_data_message.html", null ]
     ] ],
-    [ "WebAnalyzer.EyeTracking.EyeTrackingController.MonitorAttachedGeometryStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_monitor_attached_geometry_struct.html", null ],
     [ "WebAnalyzer.Test.Communication.MouseModel", "class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model.html", null ],
     [ "WebAnalyzer.Models.DataModel.PositionDataModel", "class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model.html", null ],
-    [ "WebAnalyzer.EyeTracking.EyeTrackingController.REDMonitorAttachedGeometry", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_r_e_d_monitor_attached_geometry.html", null ],
-    [ "WebAnalyzer.EyeTracking.EyeTrackingController.REDStandAloneModeStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_r_e_d_stand_alone_mode_struct.html", null ],
+    [ "WebAnalyzer.Models.Base.RawTrackingData", "class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data.html", null ],
+    [ "WebAnalyzer.Models.Base.RawTrackingEvent", "class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event.html", null ],
+    [ "WebAnalyzer.Models.Base.RawTrackingGaze", "class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze.html", null ],
+    [ "WebAnalyzer.EyeTracking.EyeTrackingController.REDGeometryStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_r_e_d_geometry_struct.html", null ],
     [ "WebAnalyzer.Properties.Resources", "class_web_analyzer_1_1_properties_1_1_resources.html", null ],
+    [ "WebAnalyzer.Models.AnalysisModel.SaccadeModel", "class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model.html", null ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.SampleStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_sample_struct.html", null ],
     [ "WebAnalyzer.ApplicationSettings.SettingsValidator", "class_web_analyzer_1_1_application_settings_1_1_settings_validator.html", null ],
-    [ "WebAnalyzer.EyeTracking.EyeTrackingController.StandAloneModeGeometryStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_stand_alone_mode_geometry_struct.html", null ],
+    [ "WebAnalyzer.EyeTracking.EyeTrackingController.SpeedModeStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_speed_mode_struct.html", null ],
     [ "WebAnalyzer.Util.Statistics", "class_web_analyzer_1_1_util_1_1_statistics.html", null ],
     [ "WebAnalyzer.Models.AnalysisModel.StatisticsAnalyser", "class_web_analyzer_1_1_models_1_1_analysis_model_1_1_statistics_analyser.html", null ],
     [ "WebAnalyzer.Util.StopwatchTimer", "class_web_analyzer_1_1_util_1_1_stopwatch_timer.html", null ],
@@ -108,6 +127,7 @@ var hierarchy =
     [ "WebAnalyzer.Controller.TestController", "class_web_analyzer_1_1_controller_1_1_test_controller.html", null ],
     [ "WebAnalyzer.Models.DataModel.TestModel", "class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model.html", null ],
     [ "WebAnalyzer.Util.Timestamp", "class_web_analyzer_1_1_util_1_1_timestamp.html", null ],
+    [ "WebAnalyzer.EyeTracking.EyeTrackingController.TrackingStatusStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_tracking_status_struct.html", null ],
     [ "WebAnalyzer.Models.SettingsModel.ExpressionTree.TreeGenerator", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_tree_generator.html", null ],
     [ "WebAnalyzer.Models.Base.UIDBase", "class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base.html", [
       [ "WebAnalyzer.Models.Base.ExperimentParticipant", "class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant.html", null ],

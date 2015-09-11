@@ -6,6 +6,7 @@ var searchData=
   ['testrunevent',['TestrunEvent',['../class_web_analyzer_1_1_events_1_1_testrun_event.html',1,'WebAnalyzer::Events']]],
   ['testrunform',['TestrunForm',['../class_web_analyzer_1_1_u_i_1_1_testrun_form.html',1,'WebAnalyzer::UI']]],
   ['timestamp',['Timestamp',['../class_web_analyzer_1_1_util_1_1_timestamp.html',1,'WebAnalyzer::Util']]],
+  ['trackingstatusstruct',['TrackingStatusStruct',['../struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_tracking_status_struct.html',1,'WebAnalyzer::EyeTracking::EyeTrackingController']]],
   ['treegenerator',['TreeGenerator',['../class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_tree_generator.html',1,'WebAnalyzer::Models::SettingsModel::ExpressionTree']]],
   ['triggersaveevent',['TriggerSaveEvent',['../class_web_analyzer_1_1_events_1_1_trigger_save_event.html',1,'WebAnalyzer::Events']]]
 ];

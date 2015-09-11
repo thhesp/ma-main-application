@@ -2,6 +2,8 @@ var class_web_analyzer_1_1_models_1_1_message_model_1_1_message =
 [
     [ "Message", "class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html#ad1fc3e795c7af522dbf12792f621abfd", null ],
     [ "Message", "class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html#af05222ad929359946a4ce5d983bf7b22", null ],
+    [ "ActivationMessageFromJson", "class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html#a00da0edc16e3cd335dbc128c04d865de", null ],
+    [ "ConnectionMessageFromJson", "class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html#a314276c1b58a764cb8216c85aecbc251", null ],
     [ "DataMessageFromJson", "class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html#a09f5ab44d912bea7b3ae5e2a78eab490", null ],
     [ "ErrorMessageFromJson", "class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html#a8a0c7229b12b93ecea85d87799507906", null ],
     [ "ExtractAttributes", "class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html#a9a2024f67011c88f2d831c4749d8ea06", null ],

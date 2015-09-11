@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['calibrationpointqualitystruct',['CalibrationPointQualityStruct',['../struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_calibration_point_quality_struct.html',1,'WebAnalyzer::EyeTracking::EyeTrackingController']]],
   ['calibrationpointstruct',['CalibrationPointStruct',['../struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_calibration_point_struct.html',1,'WebAnalyzer::EyeTracking::EyeTrackingController']]],
   ['calibrationstruct',['CalibrationStruct',['../struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_calibration_struct.html',1,'WebAnalyzer::EyeTracking::EyeTrackingController']]],
   ['chromedevtools',['ChromeDevTools',['../class_web_analyzer_1_1_u_i_1_1_chrome_dev_tools.html',1,'WebAnalyzer::UI']]],
