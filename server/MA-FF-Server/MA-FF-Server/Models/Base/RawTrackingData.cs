@@ -27,6 +27,37 @@ namespace WebAnalyzer.Models.Base
             set { _events = value; }
         }
 
+        public List<RawTrackingEvent> GetEventsForEye(String eye)
+        {
+            List<RawTrackingEvent> eyeEvents = new List<RawTrackingEvent>();
+
+            foreach(RawTrackingEvent rawEvent in Events)
+            {
+                if (rawEvent.BelongsToEye(eye))
+                {
+                    eyeEvents.Add(rawEvent);
+                }
+            }
+
+            return eyeEvents;
+        }
+
+
+        public List<RawTrackingEvent> GetFixationsForEye(String eye)
+        {
+            List<RawTrackingEvent> eyeEvents = new List<RawTrackingEvent>();
+
+            foreach (RawTrackingEvent rawEvent in Events)
+            {
+                if (rawEvent.IsFixation() && rawEvent.BelongsToEye(eye))
+                {
+                    eyeEvents.Add(rawEvent);
+                }
+            }
+
+            return eyeEvents;
+        }
+
         public void AddEvent(RawTrackingEvent rawEvent)
         {
             _events.Add(rawEvent);

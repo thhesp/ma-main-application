@@ -59,6 +59,16 @@ namespace WebAnalyzer.Models.Base
             set { _y = value; }
         }
 
+        public Boolean IsFixation()
+        {
+            return EventType == "F";
+        }
+
+        public Boolean BelongsToEye(String eye)
+        {
+            return Eye == eye;
+        }
+
         public XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode eventNode = xmlDoc.CreateElement("event");
