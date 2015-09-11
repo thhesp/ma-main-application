@@ -38,9 +38,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.Name = "Edit AOI Setting";
+            this.Name = "AOI Einstellungen anpassen/ erzeugen";
             this.ShowIcon = false;
-            this.Text = "Edit AOI Setting";
+            this.Text = "AOI Einstellungen anpassen/ erzeugen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Browser_Closing);
             this.Load += new System.EventHandler(this.Browser_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_KeyDown);

@@ -38,9 +38,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.Name = "Edit Domain Setting";
+            this.Name = "Domain Einstellungen anpassen/ erzeugen";
             this.ShowIcon = false;
-            this.Text = "Edit Domain Setting";
+            this.Text = "Domain Einstellungen anpassen/ erzeugen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Browser_Closing);
             this.Load += new System.EventHandler(this.Browser_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_KeyDown);

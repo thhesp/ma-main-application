@@ -38,9 +38,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.Name = "ExperimentWizard";
+            this.Name = "Experiment laden / erstellen";
             this.ShowIcon = false;
-            this.Text = "ExperimentWizard";
+            this.Text = "Experiment laden / erstellen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Browser_Closing);
             this.Load += new System.EventHandler(this.Browser_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_KeyDown);

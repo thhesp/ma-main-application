@@ -38,9 +38,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.Name = "Experimentteilnehmer auswählen";
+            this.Name = "Testlauf auswählen";
             this.ShowIcon = false;
-            this.Text = "Experimentteilnehmer auswählen";
+            this.Text = "Testlauf auswählen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Browser_Closing);
             this.Load += new System.EventHandler(this.Browser_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_KeyDown);
