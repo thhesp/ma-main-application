@@ -183,6 +183,7 @@ namespace WebAnalyzer.Models.MessageModel
             {
                 if (reader.Value != null)
                 {
+                    //comment console writeline in for debugging
                     //Console.WriteLine("Token: {0}, Value: {1}", reader.TokenType, reader.Value);
                     //get property ==> name of field
                     if (reader.TokenType == JsonToken.PropertyName)
@@ -213,12 +214,6 @@ namespace WebAnalyzer.Models.MessageModel
 
                         switch (property)
                         {
-                            case "clientreceived":
-                                msg.ClientReceived = value.ToString();
-                                break;
-                            case "clientsent":
-                                msg.ClientSent = value.ToString();
-                                break;
                             case "top":
                                 leftElement.Top = value;
                                 break;
@@ -274,6 +269,12 @@ namespace WebAnalyzer.Models.MessageModel
                                 break;
                             case "clientsent":
                                 msg.ClientSent = value.ToString();
+                                break;
+                            case "htmlX":
+                                leftElement.HTMLX = value;
+                                break;
+                            case "htmlY":
+                                leftElement.HTMLY = value;
                                 break;
                         }
                     }
@@ -443,6 +444,14 @@ namespace WebAnalyzer.Models.MessageModel
                     else if (reader.TokenType == JsonToken.String && property == "selector")
                     {
                         element.Selector = reader.Value.ToString();
+                    }
+                    else if ((reader.TokenType == JsonToken.Float || reader.TokenType == JsonToken.Integer) && property == "htmlX")
+                    {
+                        element.HTMLX = Double.Parse(reader.Value.ToString());
+                    }
+                    else if ((reader.TokenType == JsonToken.Float || reader.TokenType == JsonToken.Integer) && property == "htmlY")
+                    {
+                        element.HTMLY = Double.Parse(reader.Value.ToString());
                     }
                 }
                 else

@@ -11,6 +11,9 @@ namespace WebAnalyzer.Models.DataModel
     public class DOMElementModel
     {
 
+        private double _htmlX;
+        private double _htmlY;
+
         private String _tag;
 
         private String _path;
@@ -38,6 +41,18 @@ namespace WebAnalyzer.Models.DataModel
         }
 
         #region GetterSetterFunctions
+
+        public Double HTMLX
+        {
+            get { return _htmlX; }
+            set { _htmlX = value; }
+        }
+
+        public Double HTMLY
+        {
+            get { return _htmlY; }
+            set { _htmlY = value; }
+        }
 
         public String Tag
         {
@@ -186,6 +201,22 @@ namespace WebAnalyzer.Models.DataModel
 
             elementNode.Attributes.Append(title);
 
+            //htmlX
+
+            XmlAttribute htmlX = xmlDoc.CreateAttribute("html-x");
+
+            htmlX.Value = this.HTMLX.ToString();
+
+            elementNode.Attributes.Append(htmlX);
+
+            //htmlY
+
+            XmlAttribute htmlY = xmlDoc.CreateAttribute("html-y");
+
+            htmlY.Value = this.HTMLY.ToString();
+
+            elementNode.Attributes.Append(htmlY);
+
             //left
 
             XmlAttribute left = xmlDoc.CreateAttribute("left");
@@ -289,6 +320,12 @@ namespace WebAnalyzer.Models.DataModel
                             break;
                         case "title":
                             elementModel.Title = attr.Value;
+                            break;
+                        case "html-x":
+                            elementModel.HTMLX = Double.Parse(attr.Value);
+                            break;
+                        case "html-y":
+                            elementModel.HTMLY = Double.Parse(attr.Value);
                             break;
                         case "left":
                             elementModel.Left = Double.Parse(attr.Value);
