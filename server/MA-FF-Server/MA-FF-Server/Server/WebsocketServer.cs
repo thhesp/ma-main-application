@@ -57,18 +57,23 @@ namespace WebAnalyzer.Server
             
               WebSocketListenerOptions options = new WebSocketListenerOptions();
 
-            options.NegotiationTimeout = TimeSpan.FromMilliseconds(100);
+            options.NegotiationTimeout = TimeSpan.FromMilliseconds(5000);
             options.WebSocketReceiveTimeout = TimeSpan.FromMilliseconds(100);
             options.WebSocketSendTimeout = TimeSpan.FromMilliseconds(100);
+
+            options.PingTimeout = TimeSpan.FromMilliseconds(500);
 
             options.UseNagleAlgorithm = false;
 
             server = new WebSocketListener(new IPEndPoint(IPAddress.Any, port), options);
-
-            //add 
+           
+            
             var rfc6455 = new vtortola.WebSockets.Rfc6455.WebSocketFactoryRfc6455(server);
+            
             rfc6455.MessageExtensions.RegisterExtension(new WebSocketDeflateExtension());
+            
             server.Standards.RegisterStandard(rfc6455);
+           
         }
 
         public void start(int port)
