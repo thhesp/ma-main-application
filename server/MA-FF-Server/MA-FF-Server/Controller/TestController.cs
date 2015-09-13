@@ -435,11 +435,12 @@ namespace WebAnalyzer.Controller
         /// </summary>
         /// <param name="uniqueId">Uniqueid of the gaze to assign</param>
         /// <param name="url">Url of webpage to assign the gaze to</param>
+        /// <param name="connectionUID">The Uniqueid of the connection to correctly identify the visited webpage</param>
         /// <returns></returns>
-        public Boolean AssignGazeToWebpage(String uniqueId, String url)
+        public Boolean AssignGazeToWebpage(String uniqueId, String url, String connectionUID)
         {
             _dataCollected = true;
-            return _test.AssignGazeToWebpage(uniqueId, url);
+            return _test.AssignGazeToWebpage(uniqueId, url, connectionUID);
         }
 
         /// <summary>
@@ -447,11 +448,12 @@ namespace WebAnalyzer.Controller
         /// </summary>
         /// <param name="gazeModel">Gaze to assign to webpage</param>
         /// <param name="url">Url of webpage to assign the gaze to</param>
+        /// <param name="connectionUID">The Uniqueid of the connection to correctly identify the visited webpage</param>
         /// <returns></returns>
-        public Boolean AssignGazeToWebpage(GazeModel gazeModel, String url)
+        public Boolean AssignGazeToWebpage(GazeModel gazeModel, String url, String connectionUID)
         {
             _dataCollected = true;
-            return _test.AssignGazeToWebpage(gazeModel, url);
+            return _test.AssignGazeToWebpage(gazeModel, url, connectionUID);
         }
 
         /// <summary>
@@ -528,7 +530,7 @@ namespace WebAnalyzer.Controller
             Logger.Log("Add Webpage: " + e.URL);
             if (e.URL != "")
             {
-                _test.AddWebpage(e.URL, e.Timestamp);
+                _test.AddWebpage(e.URL, e.Timestamp, e.ConnectionUID);
             }
         }
 

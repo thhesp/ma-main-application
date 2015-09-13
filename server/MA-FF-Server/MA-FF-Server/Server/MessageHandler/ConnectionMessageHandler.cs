@@ -45,7 +45,7 @@ namespace WebAnalyzer.Server.MessageHandler
             }
             else if (msgIn.Type == ConnectionMessage.CONNECTION_MESSAGE_TYPE.COMPLETE)
             {
-                AddWebpage(this, new AddWebpageEvent(msgIn.URL));
+                AddWebpage(this, new AddWebpageEvent(msgIn.URL, _connection.UID));
                 completeHandshake();
             }
 

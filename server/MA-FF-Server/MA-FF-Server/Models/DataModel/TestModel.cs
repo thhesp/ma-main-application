@@ -492,14 +492,14 @@ namespace WebAnalyzer.Models.DataModel
             return null;
         }
 
-        public Boolean AssignGazeToWebpage(String uniqueId, String url)
+        public Boolean AssignGazeToWebpage(String uniqueId, String url, String connectionUID)
         {
             if (!_unassignedPositions.ContainsKey(uniqueId))
             {
                 return false;
             }
 
-            this.AddGazeData(url, _unassignedPositions[uniqueId]);
+            this.AddGazeData(url, connectionUID, _unassignedPositions[uniqueId]);
 
             lock (_unassignedPositions)
             {
@@ -512,14 +512,14 @@ namespace WebAnalyzer.Models.DataModel
             return true;
         }
 
-        public Boolean AssignGazeToWebpage(GazeModel gazeModel, String url)
+        public Boolean AssignGazeToWebpage(GazeModel gazeModel, String url, String connectionUID)
         {
             if (!_unassignedPositions.ContainsKey(gazeModel.UniqueId))
             {
                 return false;
             }
-            
-            this.AddGazeData(url, gazeModel);
+
+            this.AddGazeData(url, connectionUID, gazeModel);
 
             lock (_unassignedPositions)
             {
@@ -615,9 +615,9 @@ namespace WebAnalyzer.Models.DataModel
             return gaze.UniqueId;
         }
 
-        private GazeModel AddGazeData(String url, GazeModel gazeModel)
+        private GazeModel AddGazeData(String url, String connectionUID, GazeModel gazeModel)
         {
-            WebpageModel pageModel = this.GetPageModel(url, gazeModel.DataRequestedTimestamp);
+            WebpageModel pageModel = this.GetPageModel(url, connectionUID, gazeModel.DataRequestedTimestamp);
 
             if (pageModel != null)
             {
@@ -631,20 +631,21 @@ namespace WebAnalyzer.Models.DataModel
             return gazeModel;
         }
 
-        private WebpageModel GetPageModel(String url, String timestamp)
+        private WebpageModel GetPageModel(String url, String connectionUID, String timestamp)
         {
             // reiterate from the back of the list, so that the newest page gets used
 
             lock (_visitedPages)
             {
-                if (_visitedPages.Count == 1 && _visitedPages[0].Url == url)
+                if (_visitedPages.Count == 1 && _visitedPages[0].Url == url && _visitedPages[0].ConnectionUID == connectionUID)
                 {
                     return _visitedPages[0];
                 }
 
                 for (int i = _visitedPages.Count - 1; i > 0; i--)
                 {
-                    if (_visitedPages[i].Url == url)
+                    if (_visitedPages[i].Url == url && 
+                        _visitedPages[i].ConnectionUID == connectionUID)
                     {
                         if (long.Parse(_visitedPages[i].VisitTimestamp) < long.Parse(timestamp) )
                         {
@@ -676,9 +677,9 @@ namespace WebAnalyzer.Models.DataModel
             }
         }
 
-        public void AddWebpage(String url, String timestamp)
+        public void AddWebpage(String url, String timestamp, String connectionUID)
         {
-            WebpageModel pageModel = new WebpageModel(url, timestamp);
+            WebpageModel pageModel = new WebpageModel(url, connectionUID, timestamp);
 
             lock (_visitedPages)
             {

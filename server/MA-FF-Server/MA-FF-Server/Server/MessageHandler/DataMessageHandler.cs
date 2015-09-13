@@ -47,7 +47,7 @@ namespace WebAnalyzer.Server.MessageHandler
                 {
                     if (msgIn.URL != null)
                     {
-                        _controller.AssignGazeToWebpage(gaze, msgIn.URL);
+                        _controller.AssignGazeToWebpage(gaze, msgIn.URL, _connection.UID);
                     }
                 }
             }

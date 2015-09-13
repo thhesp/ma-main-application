@@ -9,10 +9,11 @@ using vtortola.WebSockets;
 using WebAnalyzer.Models.MessageModel;
 using WebAnalyzer.Util;
 using WebAnalyzer.Events;
+using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.Server
 {
-    public class WebsocketConnection
+    public class WebsocketConnection : UIDBase
     {
         public IObservable<Message> In { get; set; }
         public IObserver<String> Out { get; set; }
@@ -21,11 +22,13 @@ namespace WebAnalyzer.Server
 
         private List<Message> _messageQueue;
 
+        private String _uid;
+
         private Boolean _active = false;
 
         private Boolean _writing = false;
 
-        public WebsocketConnection(WebSocket ws)
+        public WebsocketConnection(WebSocket ws) : base()
         {
             _ws = ws;
             _messageQueue = new List<Message>();

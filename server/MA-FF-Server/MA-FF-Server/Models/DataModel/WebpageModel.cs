@@ -16,6 +16,9 @@ namespace WebAnalyzer.Models.DataModel
     {
 
         private String _url;
+
+        private String _connectionUID;
+
         private String _visitTimestamp;
 
         private List<GazeModel> _positionData = new List<GazeModel>();
@@ -28,10 +31,11 @@ namespace WebAnalyzer.Models.DataModel
         private List<SaccadeModel> _leftSaccadesData = new List<SaccadeModel>();
         private List<SaccadeModel> _rightSaccadesnData = new List<SaccadeModel>();
 
-        public WebpageModel(String url, String visitTimestamp)
+        public WebpageModel(String url, String connectionUID, String visitTimestamp)
         {
             _url = url;
             _visitTimestamp = visitTimestamp;
+            _connectionUID = connectionUID;
         }
 
         public WebpageModel()
@@ -45,6 +49,11 @@ namespace WebAnalyzer.Models.DataModel
         {
             get { return _url; }
             set { _url = value;}
+        }
+
+        public String ConnectionUID
+        {
+            get { return _connectionUID; }
         }
 
         public String VisitTimestamp

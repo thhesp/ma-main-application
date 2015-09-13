@@ -14,17 +14,24 @@ namespace WebAnalyzer.Events
     {
 
         private String _url;
+        private String _connetionUID;
         private String _timestamp;
 
-        public AddWebpageEvent(String url)
+        public AddWebpageEvent(String url, String connectionUID)
         {
             _url = url;
+            _connetionUID = connectionUID;
             _timestamp = Util.Timestamp.GetMillisecondsUnixTimestamp();
         }
 
         public String URL
         {
             get { return _url; }
+        }
+
+        public String ConnectionUID
+        {
+            get { return _connetionUID; }
         }
 
         public String Timestamp
