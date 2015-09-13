@@ -57,7 +57,9 @@ namespace WebAnalyzer.Server
             
               WebSocketListenerOptions options = new WebSocketListenerOptions();
 
-            options.NegotiationTimeout = TimeSpan.FromMilliseconds(1000);
+            options.NegotiationTimeout = TimeSpan.FromMilliseconds(100);
+            options.WebSocketReceiveTimeout = TimeSpan.FromMilliseconds(100);
+            options.WebSocketSendTimeout = TimeSpan.FromMilliseconds(100);
 
             options.UseNagleAlgorithm = false;
 

@@ -30,6 +30,7 @@ namespace WebAnalyzer.Server
 
         public WebsocketConnection(WebSocket ws) : base()
         {
+            Logger.Log("Creating new WS Conncetion");
             _ws = ws;
             _messageQueue = new List<Message>();
         }
