@@ -214,6 +214,7 @@ namespace WebAnalyzer.Controller
         /// </summary>
         /// <param name="testrun">The testdata</param>
         /// <param name="dir">Directory to export to</param>
+        /// <param name="participant">the Participant to which the data belongs</param>
         /// <param name="filename">Filename to use</param>
         /// <param name="format">Format in which to save the data</param>
         public static Boolean ExportExperimentTestRun(TestModel testrun, ExperimentParticipant participant, String dir, String filename, EXPORT_FORMATS format)
@@ -247,6 +248,44 @@ namespace WebAnalyzer.Controller
             }
         }
 
+        /// <summary>
+        /// Export the given raw data to the given directory and filename with the given format.
+        /// </summary>
+        /// <param name="rawData">The data to be exported</param>
+        /// <param name="participant">The participant</param>
+        /// <param name="dir">Directory to export to</param>
+        /// <param name="filename">Filename to use</param>
+        /// <param name="format">Format in which to save the data</param>
+        public static Boolean ExportExperimentRawData(RawTrackingData rawData, ExperimentParticipant participant, String dir, String filename, EXPORT_FORMATS format)
+        {
+            if (Directory.Exists(dir))
+            {
+
+                Logger.Log("Exporting RawData to: " + dir + "\\" + filename + ".xml");
+                switch (format)
+                {
+                    case EXPORT_FORMATS.XML:
+                        XmlDocument xmlDoc = new XmlDocument();
+
+                        xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", null, null)); ;
+
+                        xmlDoc.AppendChild(rawData.ToXML(participant, xmlDoc));
+
+                        xmlDoc.Save(dir + "\\" + filename + "-raw.xml");
+                        break;
+
+                    case EXPORT_FORMATS.CSV:
+
+                        break;
+                }
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         /// <summary>
         /// Export the given testrun fixations to the given directory and filename with the given format.

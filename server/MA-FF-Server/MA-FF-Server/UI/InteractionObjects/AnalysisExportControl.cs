@@ -84,11 +84,30 @@ namespace WebAnalyzer.UI.InteractionObjects
 
             if(_testrun != null && _folderPath != "" && _filename != ""){
                 ExportController.ExportExperimentTestRun(_testrun, _participant,_folderPath, _filename, _exportFormat);
+
+                String rawDataPath = LoadController.GetAssociatedRawDataForTestdata(_exp, _participant, _testrun.Filename);
+
+                RawTrackingData rawData = LoadController.LoadRawData(rawDataPath);
+
+                if (rawData != null)
+                {
+                    ExportController.ExportExperimentRawData(rawData, _participant, _folderPath, _filename, _exportFormat);
+                }
+                else
+                {
+                    Logger.Log("Could not load the raw data for this test.");
+
+                    DisplayError("Die Rawdaten zu diesem Test konnten nicht geladen werden.");
+                }
+
+                
             }
             else
             {
                 if(_testrun == null){
                     Logger.Log("Testdaten konnten nicht geladen werden...");
+
+                    DisplayError("Testdaten konnten nicht geladen werden...");
                 }
                 
                 Logger.Log("Path: " + _folderPath);
