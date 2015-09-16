@@ -80,41 +80,72 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         public void export()
         {
+            Boolean errorWhileExporting = false;
+
             ShowSaveIndicator();
 
-            if(_testrun != null && _folderPath != "" && _filename != ""){
-                ExportController.ExportExperimentTestRun(_testrun, _participant,_folderPath, _filename, _exportFormat);
-
-                String rawDataPath = LoadController.GetAssociatedRawDataForTestdata(_exp, _participant, _testrun.Filename);
-
-                RawTrackingData rawData = LoadController.LoadRawData(rawDataPath);
-
-                if (rawData != null)
+            try
+            {
+                if (_testrun != null && _folderPath != "" && _filename != "")
                 {
-                    ExportController.ExportExperimentRawData(rawData, _participant, _folderPath, _filename, _exportFormat);
+                    ExportController.ExportExperimentTestRun(_testrun, _participant, _folderPath, _filename, _exportFormat);
+
+                    String rawDataPath = LoadController.GetAssociatedRawDataForTestdata(_exp, _participant, _testrun.Filename);
+
+                    RawTrackingData rawData = LoadController.LoadRawData(rawDataPath);
+
+                    if (rawData != null)
+                    {
+                        ExportController.ExportExperimentRawData(rawData, _participant, _folderPath, _filename, _exportFormat);
+                    }
+                    else
+                    {
+                        Logger.Log("Could not load the raw data for this test.");
+
+                        DisplayError("Die Rawdaten zu diesem Test konnten nicht geladen werden.");
+
+                        errorWhileExporting = true;
+                    }
+
+
                 }
                 else
                 {
-                    Logger.Log("Could not load the raw data for this test.");
+                    if (_testrun == null)
+                    {
+                        Logger.Log("Testdaten konnten nicht geladen werden...");
 
-                    DisplayError("Die Rawdaten zu diesem Test konnten nicht geladen werden.");
+                        DisplayError("Testdaten konnten nicht geladen werden...");
+
+                    }
+
+                    Logger.Log("Path: " + _folderPath);
+                    Logger.Log("Filename: " + _filename);
+
+                    errorWhileExporting = true;
                 }
-
-                
             }
-            else
+            catch (Exception e)
             {
-                if(_testrun == null){
-                    Logger.Log("Testdaten konnten nicht geladen werden...");
+                Logger.Log("Exception while exporting: " + e.Message);
 
-                    DisplayError("Testdaten konnten nicht geladen werden...");
-                }
-                
-                Logger.Log("Path: " + _folderPath);
-                Logger.Log("Filename: " + _filename);
+                errorWhileExporting = true;
             }
 
             HideSaveIndicator();
+
+            if (errorWhileExporting)
+            {
+                Logger.Log("Die Daten konnten nicht erfolgreich exportiert werden.");
+
+                DisplayError("Die Daten konnten nicht erfolgreich exportiert werden.");
+            }
+            else
+            {
+                Logger.Log("Die Daten konnten erfolgreich exportiert werden.");
+
+                DisplayError("Die Daten konnten erfolgreich exportiert werden.");
+            }
         }
 
         public void analyse()
@@ -261,12 +292,35 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         private void ExportData()
         {
-            ExportController.SaveExperimentFixations(_testrun, _participant, _folderPath, _filename, _exportFormat, _containGazeData);
-            ExportController.SaveExperimentAOI(_exp, _testrun, _participant, _folderPath, _filename, _exportFormat, _containGazeData);
-            ExportController.SaveExperimentSaccades(_testrun, _participant, _folderPath, _filename, _exportFormat, _containGazeData);
+            Boolean errorWhileExporting = false;
 
+            try
+            {
+                ExportController.SaveExperimentFixations(_testrun, _participant, _folderPath, _filename, _exportFormat, _containGazeData);
+                ExportController.SaveExperimentAOI(_exp, _testrun, _participant, _folderPath, _filename, _exportFormat, _containGazeData);
+                ExportController.SaveExperimentSaccades(_testrun, _participant, _folderPath, _filename, _exportFormat, _containGazeData);
+            }
+            catch (Exception e)
+            {
+                errorWhileExporting = true;
+
+                Logger.Log("Exception while exporting: " + e.Message);
+            }
 
             HideSaveIndicator();
+
+            if (errorWhileExporting)
+            {
+                Logger.Log("Die Daten konnten nicht erfolgreich exportiert werden.");
+
+                DisplayError("Die Daten konnten nicht erfolgreich exportiert werden.");
+            }
+            else
+            {
+                Logger.Log("Die Daten konnten erfolgreich exportiert werden.");
+
+                DisplayError("Die Daten konnten erfolgreich exportiert werden.");
+            }
         }
 
         public void useDistanceAlgorithm(double minimumDuration, double acceptableDeviation)
