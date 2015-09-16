@@ -58,6 +58,11 @@ namespace WebAnalyzer.UI.InteractionObjects
         public void setExportFormat(String format)
         {
             _exportFormat = (ExportController.EXPORT_FORMATS) Enum.Parse(typeof(ExportController.EXPORT_FORMATS), format, true);
+
+            if (_exportFormat == ExportController.EXPORT_FORMATS.CSV)
+            {
+                DisplayError("Das Fomat CSV wird derzeit leider noch nicht unterstützt.");
+            }
         }
 
         public void setAlgorithmType(String format)
