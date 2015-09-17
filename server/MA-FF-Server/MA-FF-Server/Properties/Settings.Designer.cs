@@ -274,5 +274,65 @@ namespace WebAnalyzer.Properties {
                 return ((string)(this["ExperimentDataLocation"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5000")]
+        public int WebsocketNegotiationTimeout {
+            get {
+                return ((int)(this["WebsocketNegotiationTimeout"]));
+            }
+            set {
+                this["WebsocketNegotiationTimeout"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5000")]
+        public int WebsocketSentTimeout {
+            get {
+                return ((int)(this["WebsocketSentTimeout"]));
+            }
+            set {
+                this["WebsocketSentTimeout"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5000")]
+        public int WebsocketReceiveTimeout {
+            get {
+                return ((int)(this["WebsocketReceiveTimeout"]));
+            }
+            set {
+                this["WebsocketReceiveTimeout"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5000")]
+        public int WebsocketPingTimeout {
+            get {
+                return ((int)(this["WebsocketPingTimeout"]));
+            }
+            set {
+                this["WebsocketPingTimeout"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool WebsocketUseNagle {
+            get {
+                return ((bool)(this["WebsocketUseNagle"]));
+            }
+            set {
+                this["WebsocketUseNagle"] = value;
+            }
+        }
     }
 }

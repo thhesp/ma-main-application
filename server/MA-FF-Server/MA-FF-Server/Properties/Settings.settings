@@ -71,5 +71,20 @@
     <Setting Name="ExperimentDataLocation" Type="System.String" Scope="Application">
       <Value Profile="(Default)">data\{1}\data</Value>
     </Setting>
+    <Setting Name="WebsocketNegotiationTimeout" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
+    <Setting Name="WebsocketSentTimeout" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
+    <Setting Name="WebsocketReceiveTimeout" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
+    <Setting Name="WebsocketPingTimeout" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
+    <Setting Name="WebsocketUseNagle" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

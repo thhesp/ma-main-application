@@ -57,13 +57,13 @@ namespace WebAnalyzer.Server
             
               WebSocketListenerOptions options = new WebSocketListenerOptions();
 
-            options.NegotiationTimeout = TimeSpan.FromMilliseconds(5000);
-            options.WebSocketReceiveTimeout = TimeSpan.FromMilliseconds(100);
-            options.WebSocketSendTimeout = TimeSpan.FromMilliseconds(100);
+            options.NegotiationTimeout = TimeSpan.FromMilliseconds(Properties.Settings.Default.WebsocketNegotiationTimeout);
+            options.WebSocketReceiveTimeout = TimeSpan.FromMilliseconds(Properties.Settings.Default.WebsocketReceiveTimeout);
+            options.WebSocketSendTimeout = TimeSpan.FromMilliseconds(Properties.Settings.Default.WebsocketSentTimeout);
 
-            options.PingTimeout = TimeSpan.FromMilliseconds(500);
+            options.PingTimeout = TimeSpan.FromMilliseconds(Properties.Settings.Default.WebsocketPingTimeout);
 
-            options.UseNagleAlgorithm = false;
+            options.UseNagleAlgorithm = Properties.Settings.Default.WebsocketUseNagle;
 
             server = new WebSocketListener(new IPEndPoint(IPAddress.Any, port), options);
            
