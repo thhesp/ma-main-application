@@ -329,7 +329,9 @@ namespace WebAnalyzer.Controller
         /// <summary>
         /// Export the given testrun aois to the given directory and filename with the given format.
         /// </summary>
+        /// <param name="experiment">The current experiment</param>
         /// <param name="testrun">The testdata</param>
+        /// <param name="participant">The current participant</param>
         /// <param name="dir">Directory to export to</param>
         /// <param name="filename">Filename to use</param>
         /// <param name="format">Format in which to save the data</param>

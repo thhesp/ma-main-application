@@ -390,6 +390,9 @@ namespace WebAnalyzer.Models.DataModel
 
             experimentNode.Attributes.Append(visitedWebpagesCount);
 
+            //add aoi rules
+            experimentNode.AppendChild(settings.ToXML(xmlDoc));
+
             //add participant data
             experimentNode.AppendChild(participant.ToXML(xmlDoc));
 
