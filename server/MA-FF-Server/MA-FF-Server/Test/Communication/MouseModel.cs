@@ -4,6 +4,7 @@ using System.Windows.Forms;
 
 using WebAnalyzer.Util;
 using WebAnalyzer.Events;
+using WebAnalyzer.Models.DataModel;
 
 
 namespace WebAnalyzer.Test.Communication
@@ -64,7 +65,17 @@ namespace WebAnalyzer.Test.Communication
         /// </summary>
         private void timer_Tick()
         {
-            PrepareGaze(this, new PrepareGazeDataEvent(Cursor.Position.X, Cursor.Position.Y, Cursor.Position.X, Cursor.Position.Y));
-        }
+            String timestamp = Timestamp.GetMillisecondsUnixTimestamp();
+            double x = Cursor.Position.X;
+            double y = Cursor.Position.Y;
+
+            EyeTrackingData leftEye = new EyeTrackingData(x, y,timestamp);
+
+
+            EyeTrackingData rightEye = new EyeTrackingData(x, y, timestamp);
+
+            PrepareGaze(this, new PrepareGazeDataEvent(leftEye, rightEye));
+
+         }
     }
 }

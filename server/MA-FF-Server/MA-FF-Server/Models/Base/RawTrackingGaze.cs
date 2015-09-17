@@ -17,17 +17,10 @@ namespace WebAnalyzer.Models.Base
         {
         }
 
-        public RawTrackingGaze(String callbackTimestamp, double leftX, double leftY, double rightX, double rightY)
+        public RawTrackingGaze(EyeTrackingData leftEye, EyeTrackingData rightEye)
         {
-            _leftEye = new EyeTrackingData(leftX, leftY, callbackTimestamp);
-            _rightEye = new EyeTrackingData(rightX, rightY, callbackTimestamp);
-        }
-
-
-        public RawTrackingGaze(String callbackTimestamp, double x, double y)
-        {
-            _leftEye = new EyeTrackingData(x, y, callbackTimestamp);
-            _rightEye = _leftEye;
+            _leftEye = leftEye;
+            _rightEye = rightEye;
         }
 
         public XmlNode ToXML(XmlDocument xmlDoc)

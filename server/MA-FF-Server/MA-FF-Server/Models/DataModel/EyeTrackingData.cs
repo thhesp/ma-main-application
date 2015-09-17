@@ -14,6 +14,12 @@ namespace WebAnalyzer.Models.DataModel
         private double _x;
         private double _y;
 
+        private double _diameter;
+
+        private double _eyePostionX;
+        private double _eyePostionY;
+        private double _eyePostionZ;
+
         private String _callbackTimestamp;
 
         public EyeTrackingData()
@@ -32,8 +38,6 @@ namespace WebAnalyzer.Models.DataModel
         {
             _callbackTimestamp = callbackTimestamp;
         }
-
-        #region GetterSetterFunctions
 
         public double X
         {
@@ -54,7 +58,29 @@ namespace WebAnalyzer.Models.DataModel
             set { _callbackTimestamp = value; }
         }
 
-        #endregion
+        public Double Diameter
+        {
+            get { return _diameter; }
+            set { _diameter = value; }
+        }
+
+        public Double EyePositionX
+        {
+            get { return _eyePostionX; }
+            set { _eyePostionX = value; }
+        }
+
+        public Double EyePositionY
+        {
+            get { return _eyePostionY; }
+            set { _eyePostionY = value; }
+        }
+
+        public Double EyePositionZ
+        {
+            get { return _eyePostionZ; }
+            set { _eyePostionZ = value; }
+        }
 
         #region XMLFunctions
 
@@ -86,6 +112,34 @@ namespace WebAnalyzer.Models.DataModel
 
             eyetrackingDataNode.Attributes.Append(callbackTimestamp);
 
+            //diameter
+            XmlAttribute diameter = xmlDoc.CreateAttribute("diameter");
+
+            diameter.Value = this.Diameter.ToString();
+
+            eyetrackingDataNode.Attributes.Append(diameter);
+
+            //eyePositionX
+            XmlAttribute positionX = xmlDoc.CreateAttribute("eye-position-x");
+
+            positionX.Value = this.EyePositionX.ToString();
+
+            eyetrackingDataNode.Attributes.Append(positionX);
+
+            //eyePositionY
+            XmlAttribute positionY = xmlDoc.CreateAttribute("eye-position-y");
+
+            positionY.Value = this.EyePositionY.ToString();
+
+            eyetrackingDataNode.Attributes.Append(positionY);
+
+            //eyePositionZ
+            XmlAttribute positionZ = xmlDoc.CreateAttribute("eye-position-z");
+
+            positionZ.Value = this.EyePositionZ.ToString();
+
+            eyetrackingDataNode.Attributes.Append(positionZ);
+
             return eyetrackingDataNode;
         }
 
@@ -107,6 +161,18 @@ namespace WebAnalyzer.Models.DataModel
                             break;
                         case "callback":
                             etData.CallbackTimestamp = attr.Value;
+                            break;
+                        case "diameter":
+                            etData.Diameter = Double.Parse(attr.Value);
+                            break;
+                        case "eye-position-x":
+                            etData.EyePositionX = Double.Parse(attr.Value);
+                            break;
+                        case "eye-position-y":
+                            etData.EyePositionY = Double.Parse(attr.Value);
+                            break;
+                        case "eye-position-z":
+                            etData.EyePositionZ = Double.Parse(attr.Value);
                             break;
                     }
                 }

@@ -63,14 +63,9 @@ namespace WebAnalyzer.Models.Base
             _events.Add(rawEvent);
         }
 
-        public void AddRawGaze(String callbackTimestamp, double leftX, double leftY, double rightX, double rightY)
+        public void AddRawGaze(EyeTrackingData leftEye, EyeTrackingData rightEye)
         {
-            _gazes.Add(new RawTrackingGaze(callbackTimestamp, leftX, leftY, rightX, rightY));
-        }
-
-        public void AddRawGaze(String callbackTimestamp, double x, double y)
-        {
-            _gazes.Add(new RawTrackingGaze(callbackTimestamp, x, y));
+            _gazes.Add(new RawTrackingGaze(leftEye, rightEye));
         }
 
         public XmlNode ToXML(ExperimentParticipant participant, XmlDocument xmlDoc)

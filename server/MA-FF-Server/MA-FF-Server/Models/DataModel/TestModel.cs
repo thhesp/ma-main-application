@@ -567,16 +567,11 @@ namespace WebAnalyzer.Models.DataModel
             return false;
         }
 
-        public String PrepareGazeData(String timestamp, double x, double y)
-        {
-            return this.PrepareGazeData(timestamp, x, y, x, y);
-        }
-
-        public String PrepareGazeData(String timestamp, double leftX, double leftY, double rightX, double rightY)
+        public String PrepareGazeData(EyeTrackingData leftEye, EyeTrackingData rightEye)
         {
             String requestedTimestamp = Timestamp.GetMillisecondsUnixTimestamp();
 
-            GazeModel gaze = new GazeModel(timestamp);
+            GazeModel gaze = new GazeModel(leftEye.CallbackTimestamp);
 
             gaze.DataRequestedTimestamp = requestedTimestamp;
 
@@ -584,20 +579,16 @@ namespace WebAnalyzer.Models.DataModel
 
             // left eye
 
-            EyeTrackingData leftData = new EyeTrackingData(leftX, leftY, timestamp);
-
             PositionDataModel leftPos = new PositionDataModel();
 
-            leftPos.EyeTrackingData = leftData;
+            leftPos.EyeTrackingData = leftEye;
 
 
             // right eye
 
-            EyeTrackingData rightData = new EyeTrackingData(rightX, rightY, timestamp);
-
             PositionDataModel rightPos = new PositionDataModel();
 
-            rightPos.EyeTrackingData = rightData;
+            rightPos.EyeTrackingData = rightEye;
 
             // add to gaze model
 

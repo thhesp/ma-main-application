@@ -6,6 +6,7 @@ using WebAnalyzer.Util;
 
 using WebAnalyzer.Events;
 using WebAnalyzer.Models.Base;
+using WebAnalyzer.Models.DataModel;
 
 namespace WebAnalyzer.EyeTracking
 {
@@ -196,7 +197,23 @@ namespace WebAnalyzer.EyeTracking
                 " - DistanceR: " + sampleData.rightEye.eyePositionZ.ToString() +
                 " - DistanceL: " + sampleData.leftEye.eyePositionZ.ToString();
 
-           PrepareGaze(this, new PrepareGazeDataEvent(sampleData.timestamp.ToString(), sampleData.leftEye.gazeX, sampleData.leftEye.gazeY, sampleData.rightEye.gazeX, sampleData.rightEye.gazeY));
+           EyeTrackingData leftEye = new EyeTrackingData(sampleData.leftEye.gazeX, sampleData.leftEye.gazeY, sampleData.timestamp.ToString());
+
+           leftEye.Diameter = sampleData.leftEye.diam;
+
+           leftEye.EyePositionX = sampleData.leftEye.eyePositionX;
+           leftEye.EyePositionY = sampleData.leftEye.eyePositionY;
+           leftEye.EyePositionZ = sampleData.leftEye.eyePositionZ;
+
+           EyeTrackingData rightEye = new EyeTrackingData(sampleData.rightEye.gazeX, sampleData.rightEye.gazeY, sampleData.timestamp.ToString());
+
+           leftEye.Diameter = sampleData.rightEye.diam;
+
+           leftEye.EyePositionX = sampleData.rightEye.eyePositionX;
+           leftEye.EyePositionY = sampleData.rightEye.eyePositionY;
+           leftEye.EyePositionZ = sampleData.rightEye.eyePositionZ;
+
+           PrepareGaze(this, new PrepareGazeDataEvent(leftEye, rightEye));
         }
 
         /// <summary>

@@ -1,5 +1,5 @@
 ﻿using System;
-
+using WebAnalyzer.Models.DataModel;
 using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Events
@@ -8,55 +8,22 @@ namespace WebAnalyzer.Events
 
     public class PrepareGazeDataEvent : EventArgs
     {
+        private EyeTrackingData _leftEye, _rightEye;
 
-        private String _timestamp;
-
-        private double _leftX, _leftY, _rightX, _rightY;
-
-        public PrepareGazeDataEvent(String timestamp, double leftX, double leftY, double rightX, double rightY)
+        public PrepareGazeDataEvent(EyeTrackingData leftEye, EyeTrackingData rightEye)
         {
-            _timestamp = timestamp;
-            _leftX = leftX;
-            _leftY = leftY;
-            _rightX = rightX;
-            _rightY = rightY;
-
+            _leftEye = leftEye;
+            _rightEye = rightEye;
         }
 
-
-        public PrepareGazeDataEvent(double leftX, double leftY, double rightX, double rightY)
+        public EyeTrackingData LeftEye
         {
-            _timestamp = Timestamp.GetMillisecondsUnixTimestamp();
-            _leftX = leftX;
-            _leftY = leftY;
-            _rightX = rightX;
-            _rightY = rightY;
-
+            get { return _leftEye; }
         }
 
-        public String GazeTimestamp
+        public EyeTrackingData RightEye
         {
-            get { return _timestamp; }
-        }
-
-        public double LeftX
-        {
-            get { return _leftX; }
-        }
-
-        public double LeftY
-        {
-            get { return _leftY; }
-        }
-
-        public double RightX
-        {
-            get { return _rightX; }
-        }
-
-        public double RightY
-        {
-            get { return _rightY; }
+            get { return _rightEye; }
         }
     }
 }

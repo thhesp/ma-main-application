@@ -384,15 +384,15 @@ namespace WebAnalyzer.Controller
         private void On_PrepareGazeData(object source, PrepareGazeDataEvent e)
         {
 
-            String uniqueId = PrepareGazeData(e.GazeTimestamp, e.LeftX, e.LeftY, e.RightX, e.RightY);
+            String uniqueId = PrepareGazeData(e.LeftEye, e.RightEye);
 
-            if (e.LeftX == e.RightX && e.LeftY == e.RightY)
+            if (e.LeftEye.X == e.RightEye.X && e.LeftEye.Y == e.RightEye.Y)
             {
-                _wsServer.RequestData(uniqueId, e.LeftX, e.LeftY);
+                _wsServer.RequestData(uniqueId, e.LeftEye.X, e.LeftEye.Y);
             }
             else
             {
-                _wsServer.RequestData(uniqueId, e.LeftX, e.LeftY, e.RightX, e.RightY);
+                _wsServer.RequestData(uniqueId, e.LeftEye.X, e.LeftEye.Y, e.RightEye.X, e.RightEye.Y);
             }
         }
 
@@ -402,30 +402,12 @@ namespace WebAnalyzer.Controller
         /// <param name="timestamp">Timestamp on which the gaze was requested</param>
         /// <param name="x">X coordinates of the gaze</param>
         /// <param name="y">Y coordinates of the gaze</param>
-        public String PrepareGazeData(String timestamp, double x, double y)
+        public String PrepareGazeData(EyeTrackingData leftEye, EyeTrackingData rightEye)
         {
             if (this.Running)
             {
-                _rawData.AddRawGaze(timestamp, x,y);
-                return _test.PrepareGazeData(timestamp, x, y);
-            }
-            return null;
-        }
-
-        /// <summary>
-        /// Prepares the GazeData with the TestModel.
-        /// </summary>
-        /// <param name="timestamp">Timestamp on which the gaze was requested</param>
-        /// <param name="leftX">X coordinates of the left eye of the gaze</param>
-        /// <param name="leftY">Y coordinates of the left eye of the gaze</param>
-        /// <param name="rightX">X coordinates of the right eye of the gaze</param>
-        /// <param name="rightY">Y coordinates of the right eye of the gaze</param>
-        public String PrepareGazeData(String timestamp, double leftX, double leftY, double rightX, double rightY)
-        {
-            if (this.Running)
-            {
-                _rawData.AddRawGaze(timestamp, leftX, leftY, rightX, rightY);
-                return _test.PrepareGazeData(timestamp, leftX, leftY, rightX, rightY);
+                _rawData.AddRawGaze(leftEye, rightEye);
+                return _test.PrepareGazeData(leftEye, rightEye);
             }
             return null;
         }
