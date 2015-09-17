@@ -38,11 +38,11 @@ namespace WebAnalyzer.Models.AlgorithmModel
             // iniate with first gaze data element
             PositionDataModel posModel = positions[0].GetEyeData(eye);
 
-            double startX = posModel.EyeTrackingData.X - AccetableDeviations;
-            double startY = posModel.EyeTrackingData.Y - AccetableDeviations;
+            double startX = posModel.TrackingData.X - AccetableDeviations;
+            double startY = posModel.TrackingData.Y - AccetableDeviations;
 
-            double endX = posModel.EyeTrackingData.X + AccetableDeviations;
-            double endY = posModel.EyeTrackingData.Y + AccetableDeviations;
+            double endX = posModel.TrackingData.X + AccetableDeviations;
+            double endY = posModel.TrackingData.Y + AccetableDeviations;
 
             String startTimestamp = positions[0].DataRequestedTimestamp;
 
@@ -55,8 +55,8 @@ namespace WebAnalyzer.Models.AlgorithmModel
                 // get element with data
                 PositionDataModel currentPos = positions[pos].GetEyeData(eye);
 
-                if ((startX <= currentPos.EyeTrackingData.X && endX >= currentPos.EyeTrackingData.X) &&
-                    (startY <= currentPos.EyeTrackingData.Y && endY >= currentPos.EyeTrackingData.Y))
+                if ((startX <= currentPos.TrackingData.X && endX >= currentPos.TrackingData.X) &&
+                    (startY <= currentPos.TrackingData.Y && endY >= currentPos.TrackingData.Y))
                 {
                     //found related gaze
                     relatedGazes.Add(positions[pos]);
@@ -87,11 +87,11 @@ namespace WebAnalyzer.Models.AlgorithmModel
                     relatedGazes = new List<GazeModel>();
 
                     // iniate with current gaze element
-                    startX = currentPos.EyeTrackingData.X - AccetableDeviations;
-                    startY = currentPos.EyeTrackingData.Y - AccetableDeviations;
+                    startX = currentPos.TrackingData.X - AccetableDeviations;
+                    startY = currentPos.TrackingData.Y - AccetableDeviations;
 
-                    endX = currentPos.EyeTrackingData.X + AccetableDeviations;
-                    endY = currentPos.EyeTrackingData.Y + AccetableDeviations;
+                    endX = currentPos.TrackingData.X + AccetableDeviations;
+                    endY = currentPos.TrackingData.Y + AccetableDeviations;
 
                     startTimestamp = positions[pos].DataRequestedTimestamp;
 

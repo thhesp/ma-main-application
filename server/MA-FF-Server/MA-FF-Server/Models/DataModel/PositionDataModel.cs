@@ -14,8 +14,7 @@ namespace WebAnalyzer.Models.DataModel
     public class PositionDataModel
     {
 
-
-        private EyeTrackingData _eyeTrackingData;
+        private BaseTrackingData _trackingData;
 
         private DOMElementModel _element;
 
@@ -23,18 +22,13 @@ namespace WebAnalyzer.Models.DataModel
         {
         }
 
-        public PositionDataModel(double x, double y) : this()
-        {
-            _eyeTrackingData = new EyeTrackingData(x, y);
-        }
-
         #region GetterSetterFunctions
 
 
-        public EyeTrackingData EyeTrackingData
+        public BaseTrackingData TrackingData
         {
-            get { return _eyeTrackingData; }
-            set { _eyeTrackingData = value; }
+            get { return _trackingData; }
+            set { _trackingData = value; }
         }
 
         public DOMElementModel Element
@@ -53,7 +47,7 @@ namespace WebAnalyzer.Models.DataModel
 
             //eyetracking data
 
-            positionNode.AppendChild(this.EyeTrackingData.ToXML(xmlDoc));
+            positionNode.AppendChild(this.TrackingData.ToXML(xmlDoc));
 
             //element data
 
@@ -70,13 +64,13 @@ namespace WebAnalyzer.Models.DataModel
 
                 foreach (XmlNode child in posNode.ChildNodes)
                 {
-                    if (child.Name == "eyetracking-data")
+                    if (child.Name == "eyetracking-data" || child.Name == "mousetracking-data")
                     {
-                        EyeTrackingData etData = EyeTrackingData.LoadFromXML(child);
+                        BaseTrackingData data = BaseTrackingData.LoadFromXML(child);
 
-                        if (etData != null)
+                        if (data != null)
                         {
-                            posModel.EyeTrackingData = etData;
+                            posModel.TrackingData = data;
                         }
                     }
                     else if (child.Name == "element")

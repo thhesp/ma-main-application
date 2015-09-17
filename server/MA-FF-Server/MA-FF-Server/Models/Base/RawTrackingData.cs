@@ -63,7 +63,7 @@ namespace WebAnalyzer.Models.Base
             _events.Add(rawEvent);
         }
 
-        public void AddRawGaze(EyeTrackingData leftEye, EyeTrackingData rightEye)
+        public void AddRawGaze(BaseTrackingData leftEye, BaseTrackingData rightEye)
         {
             _gazes.Add(new RawTrackingGaze(leftEye, rightEye));
         }

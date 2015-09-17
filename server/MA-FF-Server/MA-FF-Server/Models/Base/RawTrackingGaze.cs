@@ -10,14 +10,14 @@ namespace WebAnalyzer.Models.Base
 {
     public class RawTrackingGaze
     {
-        private EyeTrackingData _leftEye;
-        private EyeTrackingData _rightEye;
+        private BaseTrackingData _leftEye;
+        private BaseTrackingData _rightEye;
 
         public RawTrackingGaze()
         {
         }
 
-        public RawTrackingGaze(EyeTrackingData leftEye, EyeTrackingData rightEye)
+        public RawTrackingGaze(BaseTrackingData leftEye, BaseTrackingData rightEye)
         {
             _leftEye = leftEye;
             _rightEye = rightEye;
@@ -55,7 +55,7 @@ namespace WebAnalyzer.Models.Base
                 {
                     if (eyes.Name == "left-eye")
                     {
-                        EyeTrackingData etData = EyeTrackingData.LoadFromXML(eyes.FirstChild);
+                        BaseTrackingData etData = BaseTrackingData.LoadFromXML(eyes.FirstChild);
 
                         if (etData != null)
                         {
@@ -64,7 +64,7 @@ namespace WebAnalyzer.Models.Base
                     }
                     else if (eyes.Name == "right-eye")
                     {
-                        EyeTrackingData etData = EyeTrackingData.LoadFromXML(eyes.FirstChild);
+                        BaseTrackingData etData = BaseTrackingData.LoadFromXML(eyes.FirstChild);
 
                         if (etData != null)
                         {

@@ -1,6 +1,7 @@
 ﻿using System;
 using WebAnalyzer.Models.DataModel;
 using WebAnalyzer.Util;
+using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.Events
 {
@@ -8,20 +9,20 @@ namespace WebAnalyzer.Events
 
     public class PrepareGazeDataEvent : EventArgs
     {
-        private EyeTrackingData _leftEye, _rightEye;
+        private BaseTrackingData _leftEye, _rightEye;
 
-        public PrepareGazeDataEvent(EyeTrackingData leftEye, EyeTrackingData rightEye)
+        public PrepareGazeDataEvent(BaseTrackingData leftEye, BaseTrackingData rightEye)
         {
             _leftEye = leftEye;
             _rightEye = rightEye;
         }
 
-        public EyeTrackingData LeftEye
+        public BaseTrackingData LeftEye
         {
             get { return _leftEye; }
         }
 
-        public EyeTrackingData RightEye
+        public BaseTrackingData RightEye
         {
             get { return _rightEye; }
         }

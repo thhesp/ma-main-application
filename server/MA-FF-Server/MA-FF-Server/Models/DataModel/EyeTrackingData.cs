@@ -5,14 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using WebAnalyzer.Util;
+using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.Models.DataModel
 {
-    public class EyeTrackingData
+    public class EyeTrackingData : BaseTrackingData
     {
-
-        private double _x;
-        private double _y;
 
         private double _diameter;
 
@@ -20,42 +18,19 @@ namespace WebAnalyzer.Models.DataModel
         private double _eyePostionY;
         private double _eyePostionZ;
 
-        private String _callbackTimestamp;
-
-        public EyeTrackingData()
+        public EyeTrackingData() : base()
         {
 
         }
 
-        public EyeTrackingData(double x, double y)
+        public EyeTrackingData(double x, double y) : base(x,y)
         {
-            _x = x;
-            _y = y;
         }
 
         public EyeTrackingData(double x, double y, String callbackTimestamp)
-            : this(x, y)
+            : base(x, y, callbackTimestamp)
         {
-            _callbackTimestamp = callbackTimestamp;
-        }
-
-        public double X
-        {
-            get { return _x; }
-            set { _x = value; }
-        }
-
-
-        public double Y
-        {
-            get { return _y; }
-            set { _y = value; }
-        }
-
-        public String CallbackTimestamp
-        {
-            get { return _callbackTimestamp; }
-            set { _callbackTimestamp = value; }
+            
         }
 
         public Double Diameter
@@ -84,7 +59,7 @@ namespace WebAnalyzer.Models.DataModel
 
         #region XMLFunctions
 
-        public XmlNode ToXML(XmlDocument xmlDoc)
+        public override XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode eyetrackingDataNode = xmlDoc.CreateElement("eyetracking-data");
 

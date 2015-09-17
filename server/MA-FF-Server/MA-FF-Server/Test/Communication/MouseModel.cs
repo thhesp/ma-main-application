@@ -69,10 +69,10 @@ namespace WebAnalyzer.Test.Communication
             double x = Cursor.Position.X;
             double y = Cursor.Position.Y;
 
-            EyeTrackingData leftEye = new EyeTrackingData(x, y,timestamp);
+            MouseTrackingData leftEye = new MouseTrackingData(x, y, timestamp);
 
 
-            EyeTrackingData rightEye = new EyeTrackingData(x, y, timestamp);
+            MouseTrackingData rightEye = new MouseTrackingData(x, y, timestamp);
 
             PrepareGaze(this, new PrepareGazeDataEvent(leftEye, rightEye));
 

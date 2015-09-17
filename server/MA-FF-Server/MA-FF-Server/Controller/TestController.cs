@@ -400,9 +400,9 @@ namespace WebAnalyzer.Controller
         /// Prepares the GazeData with the TestModel.
         /// </summary>
         /// <param name="timestamp">Timestamp on which the gaze was requested</param>
-        /// <param name="x">X coordinates of the gaze</param>
-        /// <param name="y">Y coordinates of the gaze</param>
-        public String PrepareGazeData(EyeTrackingData leftEye, EyeTrackingData rightEye)
+        /// <param name="leftEye">Data about the left Eye</param>
+        /// <param name="rightEye">Data about the right Eye</param>
+        public String PrepareGazeData(BaseTrackingData leftEye, BaseTrackingData rightEye)
         {
             if (this.Running)
             {
