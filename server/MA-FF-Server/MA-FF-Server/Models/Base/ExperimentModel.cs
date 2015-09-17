@@ -133,7 +133,19 @@ namespace WebAnalyzer.Models.Base
 
             experiment.Attributes.Append(createdAt);
 
+            /* settings */
 
+            XmlNode internSettings = xmlDoc.CreateElement("intern-settings");
+
+            /* websocket delay*/
+
+            XmlNode websocketDelay = xmlDoc.CreateElement("websocket-delay");
+
+            websocketDelay.InnerText = Properties.Settings.Default.WSMessageDelay.ToString();
+
+            internSettings.AppendChild(websocketDelay); ;
+
+            experiment.AppendChild(internSettings);
 
             return experiment;
         }
@@ -148,7 +160,6 @@ namespace WebAnalyzer.Models.Base
                 Logger.Log("No Experiment Node found.");
                 return null;
             }
-            /*
 
             foreach(XmlAttribute attr in expNode.Attributes){
                 switch (attr.Name)
@@ -160,10 +171,28 @@ namespace WebAnalyzer.Models.Base
                         experiment.CreatedAt = DateTime.Parse(attr.Value);
                         break;
                 }
-            }*/
+            }
 
-            experiment.ExperimentName = expNode.Attributes["name"].Value;
-            experiment.CreatedAt = DateTime.Parse(expNode.Attributes["created-at"].Value);
+            foreach (XmlNode child in expNode.ChildNodes)
+            {
+                if (child.Name == "intern-settings")
+                {
+                    foreach (XmlNode setting in child.ChildNodes)
+                    {
+                        switch (setting.Name)
+                        {
+                            case "websocket-delay":
+                                Properties.Settings.Default.WSMessageDelay = int.Parse(setting.InnerText);
+                                break;
+                        }
+                    }
+
+                    Properties.Settings.Default.Save();
+                }
+            }
+
+            //experiment.ExperimentName = expNode.Attributes["name"].Value;
+            //experiment.CreatedAt = DateTime.Parse(expNode.Attributes["created-at"].Value);
 
             return experiment;
         }
