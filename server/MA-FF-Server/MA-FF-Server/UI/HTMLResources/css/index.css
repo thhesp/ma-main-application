@@ -322,7 +322,8 @@ input.invalid {
     text-align: center;
     
     font: 18px Arial, sans-serif;
-    float: right;
+    float: left;
+    margin-left: 10px
 }
 
 /* experiment select list */
