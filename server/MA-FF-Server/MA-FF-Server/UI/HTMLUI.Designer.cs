@@ -1,4 +1,8 @@
-﻿namespace WebAnalyzer.UI
+﻿using System.Windows.Forms;
+using System.Windows;
+using System.Drawing;
+
+namespace WebAnalyzer.UI
 {
     partial class HTMLUI
     {
@@ -34,8 +38,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(945, 391);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            int height = (int)(Screen.PrimaryScreen.Bounds.Height - 40);
+            int width = (int)(Screen.PrimaryScreen.Bounds.Width);
+            this.Size = new Size(width, height);
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(Screen.PrimaryScreen.Bounds.X, Screen.PrimaryScreen.Bounds.Y);
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "WebAnalyzer";
