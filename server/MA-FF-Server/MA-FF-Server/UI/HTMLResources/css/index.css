@@ -37,6 +37,14 @@ div.content {
     left: 0;
 }
 
+.navbar-header{
+    clear:both;
+}
+
+#navbar{
+  margin-top: 59px;
+}
+
 .websocket-server-container,
 .eyetracker-container,
 .global-settings-container{
@@ -59,7 +67,6 @@ div.content {
     padding-top: 30px;
     padding-bottom: 30px;
     left: 90%;
-    margin-left: 20px;
 }
  
 #eyetracker-status, 
@@ -323,7 +330,7 @@ input.invalid {
     
     font: 18px Arial, sans-serif;
     float: left;
-    margin-left: 10px
+    margin-left: 30px
 }
 
 /* experiment select list */
