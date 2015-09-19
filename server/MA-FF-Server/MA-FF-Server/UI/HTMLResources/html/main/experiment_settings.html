@@ -61,11 +61,18 @@
                                 <th>Delete</th>
                             </tr>
                         </thead>
-                        <tbody id="settings-table">
-                        </tbody>
+                        <tbody id="settings-table"></tbody>
                     </table>
                 </div>
             </div>
+
+            <div class="row at-bottom">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-default import-btn">Einstellungen aus XML importieren</button>
+                    <button type="button" class="btn btn-default export-btn">Einstellungen als XML exportieren</button>
+                </div>
+            </div>
+
         </div><!-- /.container -->
     </div>
     <footer></footer>
@@ -102,30 +109,30 @@
 
         var template = _.template($('script#domains-template').html());
 
-    for (var i = 0; i < settingsArray.length; i++) {
-        $("#settings-table").append(template({ uid: uidsArray[i], domain: settingsArray[i] }));
-    }
+        for (var i = 0; i < settingsArray.length; i++) {
+            $("#settings-table").append(template({ uid: uidsArray[i], domain: settingsArray[i] }));
+        }
 
-    $('#settings-table .edit').click(function () {
-        var uid = $(this).closest('tr').attr('uid');
+        $('#settings-table .edit').click(function () {
+            var uid = $(this).closest('tr').attr('uid');
 
-        console.log('edit clicked: ', uid);
-        nav.editDomainSetting(uid);
-    });
+            console.log('edit clicked: ', uid);
+            nav.editDomainSetting(uid);
+        });
 
-    $('#settings-table .copy').click(function () {
-        var uid = $(this).closest('tr').attr('uid');
+        $('#settings-table .copy').click(function () {
+            var uid = $(this).closest('tr').attr('uid');
 
-        console.log('copy clicked: ', uid);
-        nav.copyDomainSetting(uid);
-    });
+            console.log('copy clicked: ', uid);
+            nav.copyDomainSetting(uid);
+        });
 
-    $('#settings-table .delete').click(function () {
-        var uid = $(this).closest('tr').attr('uid');
+        $('#settings-table .delete').click(function () {
+            var uid = $(this).closest('tr').attr('uid');
 
-        console.log('delete clicked: ', uid);
-        nav.deleteDomainSetting(uid);
-    });
+            console.log('delete clicked: ', uid);
+            nav.deleteDomainSetting(uid);
+        });
 
     </script>
 
