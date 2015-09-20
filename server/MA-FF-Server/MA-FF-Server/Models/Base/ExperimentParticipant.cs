@@ -196,10 +196,13 @@ namespace WebAnalyzer.Models.Base
 
             copy.Identifier = "Kopie - " + orig.Identifier;
             copy.BirthYear = orig.BirthYear;
-            copy.Education = orig.Education;
+            copy.Education = (String) orig.Education.Clone();
             copy.Sex = orig.Sex;
 
-            copy.ExtraData = orig.ExtraData;
+            foreach (KeyValuePair<String, String> entry in orig.ExtraData)
+            {
+                copy.ExtraData.Add((String)entry.Key.Clone(), (String)entry.Value.Clone());
+            }
 
             return copy;
         }

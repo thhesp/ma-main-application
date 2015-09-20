@@ -101,7 +101,7 @@ namespace WebAnalyzer.Models.SettingsModel
             SettingsRule copy = new SettingsRule();
 
             copy.CaseSensitive = orig.CaseSensitive;
-            copy.RuleRoot = orig.RuleRoot;
+            copy.RuleRoot = Node.Copy(orig.RuleRoot);
 
             return copy;
         }

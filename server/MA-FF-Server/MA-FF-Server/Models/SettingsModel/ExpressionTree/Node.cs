@@ -14,13 +14,14 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
     public abstract class Node : UIDBase
     {
 
-        public enum NODE_TYPES { NONE = -1, VALUE = 0, NOT = 1, AND = 2, OR = 3};
+        public enum NODE_TYPES { NONE = -1, VALUE = 0, NOT = 1, AND = 2, OR = 3 };
 
         protected List<Node> _children = new List<Node>();
 
         protected NODE_TYPES _type = NODE_TYPES.NONE;
 
-        public Node() : base()
+        public Node()
+            : base()
         {
 
         }
@@ -50,7 +51,8 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             _children = children;
         }
 
-        public NODE_TYPES NodeType{
+        public NODE_TYPES NodeType
+        {
             get { return _type; }
             set { _type = value; }
         }
@@ -160,9 +162,41 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
 
                 }
             }
-            
+
             return null;
-     }
+        }
+
+        public static Node Copy(Node orig)
+        {
+            NODE_TYPES nodeType = orig._type;
+
+            Node copy = CreateNode(nodeType, orig);
+
+            foreach (Node child in orig.Children)
+            {
+                copy.Children.Add(Node.Copy(child));
+            }
+
+            return copy;
+        }
+
+        private static Node CreateNode(NODE_TYPES nodeType, Node orig)
+        {
+            switch (nodeType)
+            {
+
+                case NODE_TYPES.AND:
+                    return new AndNode();
+                case NODE_TYPES.NOT:
+                    return new NotNode();
+                case NODE_TYPES.OR:
+                    return new OrNode();
+                case NODE_TYPES.VALUE:
+                    return ValueNode.Copy((ValueNode) orig);
+            }
+
+            return null;
+        }
 
         public abstract Boolean Evaluate(DOMElementModel el);
         public abstract Boolean EvaluateCaseSensitive(DOMElementModel el);

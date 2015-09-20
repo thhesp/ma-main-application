@@ -205,7 +205,11 @@ namespace WebAnalyzer.Models.SettingsModel
 
             copy.Domain = "Kopie - " + orig.Domain;
             copy.IncludesSubdomains = orig.IncludesSubdomains;
-            copy.AOIS = orig.AOIS;
+
+            foreach (AOISettings aoi in orig.AOIS)
+            {
+                copy.AOIS.Add(AOISettings.Clone(aoi));
+            }
 
             return copy;
         }

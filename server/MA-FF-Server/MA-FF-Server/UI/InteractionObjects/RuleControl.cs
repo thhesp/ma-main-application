@@ -24,14 +24,11 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         private Boolean _create;
 
-        private TreeGenerator _generator;
-
         public RuleControl(EditRuleForm form, SettingsRule rule, Boolean create)
         {
             _form = form;
             _rule = rule;
             _create = create;
-            _generator = new TreeGenerator();
         }
 
         public Boolean creatingNewRule()

@@ -146,7 +146,25 @@ namespace WebAnalyzer.Models.SettingsModel
             AOISettings copy = new AOISettings();
 
             copy.Identifier = "Kopie - " + orig.Identifier;
-            copy.Rules = orig.Rules;
+
+            foreach (SettingsRule rule in orig.Rules)
+            {
+                copy.Rules.Add(SettingsRule.Copy(rule));
+            }
+
+            return copy;
+        }
+
+        public static AOISettings Clone(AOISettings orig)
+        {
+            AOISettings copy = new AOISettings();
+
+            copy.Identifier = (String) orig.Identifier.Clone();
+
+            foreach (SettingsRule rule in orig.Rules)
+            {
+                copy.Rules.Add(SettingsRule.Copy(rule));
+            }
 
             return copy;
         }

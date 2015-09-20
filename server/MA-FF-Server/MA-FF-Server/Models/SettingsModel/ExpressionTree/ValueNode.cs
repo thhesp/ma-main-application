@@ -123,5 +123,17 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
 
             return node;
         }
+
+
+        public static ValueNode Copy(ValueNode orig)
+        {
+            ValueNode copy = new ValueNode();
+
+            copy.Value = orig.Value;
+
+            copy.ValueType = orig.ValueType;
+
+            return copy;
+        }
     }
 }

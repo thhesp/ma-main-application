@@ -48,6 +48,5 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
 
             return true;
         }
-
     }
 }
