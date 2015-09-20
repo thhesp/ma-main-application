@@ -140,6 +140,47 @@ namespace WebAnalyzer.Controller
         }
 
         /// <summary>
+        /// Loads the Participants and returns them as a list.
+        /// </summary>
+        /// <remarks>Used when importing data from an existing experiment.</remarks>
+        /// <param name="file">File from which to load the experiment participants.</param>
+        public static List<ExperimentParticipant> ImportParticipants(String file)
+        {
+            if (ValidateXMLFile(file))
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(file);
+
+                XmlNode participantsNode = doc.DocumentElement.SelectSingleNode("/participants");
+
+                if (participantsNode == null)
+                {
+                    return null;
+                }
+
+                List<ExperimentParticipant> participants = new List<ExperimentParticipant>();
+
+                foreach (XmlNode participantNode in participantsNode.ChildNodes)
+                {
+                    ExperimentParticipant participant = ExperimentParticipant.LoadFromXML(participantNode);
+                    if (participant != null)
+                    {
+                        participants.Add(participant);
+                    }
+                }
+
+                return participants;
+            }
+            else
+            {
+                Logger.Log("Invalid participants file!");
+            }
+            // throw exception?
+            return null;
+
+        }
+
+        /// <summary>
         /// Loads the Settings and returns them as a ExperimentSettings object.
         /// </summary>
         /// <remarks>Used when importing data from an existing experiment.</remarks>
@@ -152,6 +193,28 @@ namespace WebAnalyzer.Controller
             {
                 XmlDocument doc = new XmlDocument();
                 doc.Load(settingsPath);
+
+                return ExperimentSettings.LoadFromXML(doc);
+            }
+            else
+            {
+                Logger.Log("Invalid settings file!");
+            }
+            // throw exception?
+            return null;
+        }
+
+        /// <summary>
+        /// Loads the Settings and returns them as a ExperimentSettings object.
+        /// </summary>
+        /// <remarks>Used when importing data from an existing experiment.</remarks>
+        /// <param name="file">File from which to load the experiment settings.</param>
+        public static ExperimentSettings ImportSettings(String file)
+        {
+            if (ValidateXMLFile(file))
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(file);
 
                 return ExperimentSettings.LoadFromXML(doc);
             }

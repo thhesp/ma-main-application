@@ -30,6 +30,8 @@ namespace WebAnalyzer.UI
         public event TestrunEventHandler Testrun;
         public event EditApplicationSettingsEventHandler EditApplicationSetting;
 
+        public event TriggerSaveEventHandler TriggerSave;
+
         public HTMLUI()
         {
             InitializeComponent();
@@ -125,6 +127,7 @@ namespace WebAnalyzer.UI
         {
             _exp = new ExperimentObject(this);
             _exp.Browser = myBrowser;
+            _exp.TriggerSave += TriggerSave;
             myBrowser.RegisterJsObject("experimentObj", _exp);
         }
 

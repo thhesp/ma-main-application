@@ -6,13 +6,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WebAnalyzer.Controller;
+using WebAnalyzer.Events;
 using WebAnalyzer.Models.Base;
+using WebAnalyzer.Models.SettingsModel;
 using WebAnalyzer.Util;
 
 namespace WebAnalyzer.UI.InteractionObjects
 {
     public class ExperimentObject : BaseInteractionObject
     {
+
+        public event TriggerSaveEventHandler TriggerSave;
 
         private HTMLUI _form;
 
@@ -118,11 +122,41 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             Logger.Log("Import Participants");
 
-            String filePath = loadFileDialog();
-
-            if (filePath != "")
+            if (DisplayYesNoQuestion("Beim Import werden alle bestehenden Daten überschrieben. Trotzdem fortfahren?", "Teilnehmer importieren"))
             {
 
+                String filePath = loadFileDialog();
+
+                if (filePath != "")
+                {
+                    try
+                    {
+                        List<ExperimentParticipant> participants = LoadController.ImportParticipants(filePath);
+
+                        if (participants != null)
+                        {
+                            _exp.Participants = participants;
+
+                            _form.ReloadPage();
+
+                            TriggerSave(this, new TriggerSaveEvent(TriggerSaveEvent.SAVE_TYPES.PARTICIPANTS));
+
+                            DisplaySuccess("Die Experimentteilnehmer wurden erfolgreich importiert.", "Import erfolgreich");
+                        }
+                        else
+                        {
+                            DisplayError("Das XML enthielt fehlerhafte Daten, darum war ein Import nicht möglich.");
+                        }
+
+                    }
+                    catch (Exception e)
+                    {
+                        Logger.Log("Error while importing participants: " + e.Message);
+
+                        DisplayError("Es ist ein Fehler beim Import der Experimentteilnehmer aufgetreten.");
+                    }
+
+                }
             }
         }
 
@@ -130,11 +164,40 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             Logger.Log("Import Experimentsettings");
 
-            String filePath = loadFileDialog();
-
-            if (filePath != "")
+            if (DisplayYesNoQuestion("Beim Import werden alle bestehenden Daten überschrieben. Trotzdem fortfahren?", "Einstellungen importieren"))
             {
-                
+
+                String filePath = loadFileDialog();
+
+                if (filePath != "")
+                {
+                    try
+                    {
+                        ExperimentSettings settings = LoadController.ImportSettings(filePath);
+
+                        if (settings != null)
+                        {
+                            _exp.Settings = settings;
+
+                            _form.ReloadPage();
+
+                            TriggerSave(this, new TriggerSaveEvent(TriggerSaveEvent.SAVE_TYPES.SETTINGS));
+
+                            DisplaySuccess("Die Experimenteinstellungen wurden erfolgreich importiert.", "Import erfolgreich");
+                        }
+                        else
+                        {
+                            DisplayError("Das XML enthielt fehlerhafte Daten, darum war ein Import nicht möglich.");
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        Logger.Log("Error while importing settings: " + e.Message);
+
+                        DisplayError("Es ist ein Fehler beim Import der Experimenteinstellungen aufgetreten.");
+                    }
+
+                }
             }
         }
 
@@ -148,8 +211,9 @@ namespace WebAnalyzer.UI.InteractionObjects
             {
                 ExportController.ExportExperimentParticipants(filePath, _exp.Participants);
 
+                DisplaySuccess("Die Experimentteilnehmer wurden erfolgreich exportiert.", "Export erfolgreich");
             }
-            
+
         }
 
         public void exportExperimentSettings()
@@ -161,6 +225,8 @@ namespace WebAnalyzer.UI.InteractionObjects
             if (filePath != "")
             {
                 ExportController.ExportExperimentSettings(filePath, _exp.Settings);
+
+                DisplaySuccess("Die Experimenteinstellungen wurden erfolgreich exportiert.", "Export erfolgreich");
             }
         }
 
@@ -172,18 +238,19 @@ namespace WebAnalyzer.UI.InteractionObjects
                 Stream myStream = null;
                 OpenFileDialog loadFileDialog = new OpenFileDialog();
 
-                loadFileDialog.InitialDirectory = "c:\\";
+                loadFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                 loadFileDialog.Filter = "XML Datei|*.xml";
                 loadFileDialog.RestoreDirectory = true;
 
                 if (loadFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    if(loadFileDialog.FileName != ""){
+                    if (loadFileDialog.FileName != "")
+                    {
                         Logger.Log("Selected Filename: " + loadFileDialog.FileName);
 
                         filePath = loadFileDialog.FileName;
                     }
-                    
+
                 }
             });
 

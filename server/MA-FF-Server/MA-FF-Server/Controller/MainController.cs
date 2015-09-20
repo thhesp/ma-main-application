@@ -50,6 +50,7 @@ namespace WebAnalyzer.Controller
             _mainUI.EditDomainSetting += On_EditDomainSetting;
             _mainUI.Testrun += On_TestrunEvent;
             _mainUI.EditApplicationSetting += On_EditApplicationSettings;
+            _mainUI.TriggerSave += On_TriggerSave;
 
             Application.Run(_mainUI);
         }
