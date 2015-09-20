@@ -40,7 +40,7 @@ namespace WebAnalyzer.Server.MessageHandler
 
             if (msgIn.Type == ActivationMessage.ACTIVATION_MESSAGE_TYPE.ACTIVATE)
             {
-                AddWebpage(this, new AddWebpageEvent(msgIn.URL, _connection.UID));
+                AddWebpage(this, new AddWebpageEvent(msgIn.URL, msgIn.WindowWidth, msgIn.WindowHeight, _connection.UID));
                 _connection.Active = true;
             }
             else if (msgIn.Type == ActivationMessage.ACTIVATION_MESSAGE_TYPE.DEACTIVATE)

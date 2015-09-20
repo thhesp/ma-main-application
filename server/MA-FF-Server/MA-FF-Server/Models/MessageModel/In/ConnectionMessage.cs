@@ -24,6 +24,9 @@ namespace WebAnalyzer.Models.MessageModel
 
         private String _url;
 
+        private int _windowWidth = 0;
+        private int _windowHeight = 0;
+
         public ConnectionMessage(CONNECTION_MESSAGE_TYPE type)
         {
             _type = type;
@@ -38,6 +41,18 @@ namespace WebAnalyzer.Models.MessageModel
         public CONNECTION_MESSAGE_TYPE Type
         {
             get { return _type; }
+        }
+
+        public int WindowWidth
+        {
+            get { return _windowWidth; }
+            set { _windowWidth = value; }
+        }
+
+        public int WindowHeight
+        {
+            get { return _windowHeight; }
+            set { _windowHeight = value; }
         }
     }
 }

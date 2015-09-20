@@ -429,7 +429,12 @@ namespace WebAnalyzer.Controller
             Logger.Log("Add Webpage: " + e.URL);
             if (e.URL != "")
             {
-                _test.AddWebpage(e.URL, e.Timestamp, e.ConnectionUID);
+                WebpageModel pageModel = new WebpageModel(e.URL, e.ConnectionUID, e.Timestamp);
+
+                pageModel.WindowHeight = e.WindowHeight;
+                pageModel.WindowWidth = e.WindowWidth;
+
+                _test.AddWebpage(pageModel);
             }
         }
 

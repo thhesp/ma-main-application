@@ -17,6 +17,9 @@ namespace WebAnalyzer.Models.DataModel
 
         private String _url;
 
+        private int _windowWidth = 0;
+        private int _windowHeight = 0;
+
         private String _connectionUID;
 
         private String _visitTimestamp;
@@ -62,6 +65,18 @@ namespace WebAnalyzer.Models.DataModel
             set { _visitTimestamp = value; }
         }
 
+        public int WindowWidth
+        {
+            get { return _windowWidth; }
+            set { _windowWidth = value; }
+        }
+
+        public int WindowHeight
+        {
+            get { return _windowHeight; }
+            set { _windowHeight = value; }
+        }
+
         public List<GazeModel> Gazes
         {
             get { return _positionData; }
@@ -104,6 +119,18 @@ namespace WebAnalyzer.Models.DataModel
 
             webpageNode.Attributes.Append(visited);
 
+            XmlAttribute windowWidth = xmlDoc.CreateAttribute("window-width");
+
+            windowWidth.Value = this.WindowWidth.ToString();
+
+            webpageNode.Attributes.Append(windowWidth);
+
+            XmlAttribute windowHeight = xmlDoc.CreateAttribute("window-height");
+
+            windowHeight.Value = this.WindowHeight.ToString();
+
+            webpageNode.Attributes.Append(windowHeight);
+
             XmlAttribute numberOfGazes = xmlDoc.CreateAttribute("number-of-gazes");
 
             numberOfGazes.Value = _positionData.Count.ToString();
@@ -133,6 +160,12 @@ namespace WebAnalyzer.Models.DataModel
                             break;
                         case "visited":
                             page.VisitTimestamp = attr.Value;
+                            break;
+                        case "window-width":
+                            page.WindowWidth = int.Parse(attr.Value);
+                            break;
+                        case "window-height":
+                            page.WindowHeight = int.Parse(attr.Value);
                             break;
                     }
                 }
@@ -268,6 +301,18 @@ namespace WebAnalyzer.Models.DataModel
 
             webpageNode.Attributes.Append(visited);
 
+            XmlAttribute windowWidth = xmlDoc.CreateAttribute("window-width");
+
+            windowWidth.Value = this.WindowWidth.ToString();
+
+            webpageNode.Attributes.Append(windowWidth);
+
+            XmlAttribute windowHeight = xmlDoc.CreateAttribute("window-height");
+
+            windowHeight.Value = this.WindowHeight.ToString();
+
+            webpageNode.Attributes.Append(windowHeight);
+
 
             // insert fixations
 
@@ -324,6 +369,18 @@ namespace WebAnalyzer.Models.DataModel
             visited.Value = this.VisitTimestamp;
 
             webpageNode.Attributes.Append(visited);
+
+            XmlAttribute windowWidth = xmlDoc.CreateAttribute("window-width");
+
+            windowWidth.Value = this.WindowWidth.ToString();
+
+            webpageNode.Attributes.Append(windowWidth);
+
+            XmlAttribute windowHeight = xmlDoc.CreateAttribute("window-height");
+
+            windowHeight.Value = this.WindowHeight.ToString();
+
+            webpageNode.Attributes.Append(windowHeight);
 
 
             // insert fixations
@@ -399,6 +456,18 @@ namespace WebAnalyzer.Models.DataModel
             visited.Value = this.VisitTimestamp;
 
             webpageNode.Attributes.Append(visited);
+
+            XmlAttribute windowWidth = xmlDoc.CreateAttribute("window-width");
+
+            windowWidth.Value = this.WindowWidth.ToString();
+
+            webpageNode.Attributes.Append(windowWidth);
+
+            XmlAttribute windowHeight = xmlDoc.CreateAttribute("window-height");
+
+            windowHeight.Value = this.WindowHeight.ToString();
+
+            webpageNode.Attributes.Append(windowHeight);
 
 
             // insert fixations

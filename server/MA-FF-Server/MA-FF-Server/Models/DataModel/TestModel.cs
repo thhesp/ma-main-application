@@ -671,10 +671,8 @@ namespace WebAnalyzer.Models.DataModel
             }
         }
 
-        public void AddWebpage(String url, String timestamp, String connectionUID)
+        public void AddWebpage(WebpageModel pageModel)
         {
-            WebpageModel pageModel = new WebpageModel(url, connectionUID, timestamp);
-
             lock (_visitedPages)
             {
                 _visitedPages.Add(pageModel);

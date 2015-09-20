@@ -100,13 +100,19 @@ namespace WebAnalyzer.Models.MessageModel
                     if (property == "url" && reader.TokenType == JsonToken.String)
                     {
                         msg.URL = reader.Value.ToString();
-
-                        return msg;
+                    }
+                    else if (property == "height" && reader.TokenType == JsonToken.Integer)
+                    {
+                        msg.WindowHeight = int.Parse(reader.Value.ToString());
+                    }
+                    else if (property == "width" && reader.TokenType == JsonToken.Integer)
+                    {
+                        msg.WindowWidth = int.Parse(reader.Value.ToString());
                     }
                 }
             }
 
-            return null;
+            return msg;
         }
 
         private static ActivationMessage ActivationMessageFromJson(ActivationMessage.ACTIVATION_MESSAGE_TYPE type, JsonTextReader reader)
@@ -131,14 +137,20 @@ namespace WebAnalyzer.Models.MessageModel
 
                     if (property == "url" && reader.TokenType == JsonToken.String)
                     {
-                        msg.URL = reader.Value.ToString();
-
-                        return msg;
+                        msg.URL = reader.Value.ToString();                        
+                    }
+                    else if (property == "height" && reader.TokenType == JsonToken.Integer)
+                    {
+                        msg.WindowHeight = int.Parse(reader.Value.ToString());
+                    }
+                    else if (property == "width" && reader.TokenType == JsonToken.Integer)
+                    {
+                        msg.WindowWidth = int.Parse(reader.Value.ToString());
                     }
                 }
             }
 
-            return null;
+            return msg;
         }
 
         private static ErrorMessage ErrorMessageFromJson(JsonTextReader reader)
