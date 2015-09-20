@@ -1,4 +1,4 @@
-﻿if (!control.creatingNewDomainSetting()) {
+﻿if (!control.creatingNewDomainSetting() || control.isRefreshing()) {
     console.log("initialize data...");
 
     $('#domain').val(control.getDomain());
@@ -50,6 +50,10 @@ $('#cancel-button').click(function () {
 
 
 $('#add-aoi').click(function () {
+    //set data so it won't get lost
+    control.setDomain($('#domain').val());
+    control.setIncludeSubdomains($('#include-subdomains').prop("checked"));
+
     //show window
     control.createAOI();
 });

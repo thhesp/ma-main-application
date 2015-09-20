@@ -1,4 +1,4 @@
-﻿if (!control.creatingNewAOISetting()) {
+﻿if (!control.creatingNewAOISetting() || control.isRefreshing()) {
     console.log("initialize data...");
 
     $('#identifier').val(control.getIdentifier());
@@ -46,6 +46,9 @@ $('#cancel-button').click(function () {
 
 
 $('#add-rule').click(function () {
+    //set data so it won't get lost
+    control.setIdentifier($('#identifier').val());
+
     //show window
     control.createRule();
 });

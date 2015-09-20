@@ -8,6 +8,7 @@ using WebAnalyzer.Models.SettingsModel;
 using System.Windows.Forms;
 
 using WebAnalyzer.Events;
+using WebAnalyzer.Util;
 
 namespace WebAnalyzer.UI.InteractionObjects
 {
@@ -22,6 +23,8 @@ namespace WebAnalyzer.UI.InteractionObjects
         private DomainSettings _setting;
 
         private Boolean _create;
+
+        private Boolean _refreshing = false;
 
         public DomainSettingControl(EditDomainSettingForm form, DomainSettings setting, Boolean create)
         {
@@ -114,7 +117,7 @@ namespace WebAnalyzer.UI.InteractionObjects
 
             _setting.AddAOI(copy);
 
-            _form.ReloadPage();
+            refreshData();
             TriggerSave(this, new TriggerSaveEvent(TriggerSaveEvent.SAVE_TYPES.SETTINGS));
         }
 
@@ -123,7 +126,7 @@ namespace WebAnalyzer.UI.InteractionObjects
             AOISettings aoi = _setting.GetAOISettingByUid(uid);
             _setting.AOIS.Remove(aoi);
 
-            _form.ReloadPage();
+            refreshData();
             TriggerSave(this, new TriggerSaveEvent(TriggerSaveEvent.SAVE_TYPES.SETTINGS));
         }
 
@@ -137,8 +140,7 @@ namespace WebAnalyzer.UI.InteractionObjects
 
                 if (editSetting.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
-                    //refresh aois
-                    _form.ReloadPage();
+                    refreshData();
                     TriggerSave(this, new TriggerSaveEvent(TriggerSaveEvent.SAVE_TYPES.SETTINGS));
                 }
             });
@@ -147,6 +149,17 @@ namespace WebAnalyzer.UI.InteractionObjects
         private void On_CreateAOISetting(object source, CreateAOISettingEvent e)
         {
             _setting.AddAOI(e.AOI);
+        }
+
+        public Boolean isRefreshing()
+        {
+            return _refreshing;
+        }
+
+        private void refreshData(){
+            _refreshing = true;
+
+            _form.ReloadPage();
         }
     }
 }

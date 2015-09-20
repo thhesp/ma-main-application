@@ -23,6 +23,8 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         private Boolean _create;
 
+        private Boolean _refreshing = false;
+
         public AOISettingControl(EditAOISettingForm form, AOISettings setting, Boolean create)
         {
             _form = form;
@@ -95,7 +97,7 @@ namespace WebAnalyzer.UI.InteractionObjects
 
             _setting.AddRule(copy);
 
-            _form.ReloadPage();
+            refreshData();
             TriggerSave(this, new TriggerSaveEvent(TriggerSaveEvent.SAVE_TYPES.SETTINGS));
         }
 
@@ -104,7 +106,7 @@ namespace WebAnalyzer.UI.InteractionObjects
             SettingsRule rule = _setting.GetRuleSettingByUid(uid);
             _setting.Rules.Remove(rule);
 
-            _form.ReloadPage();
+            refreshData();
             TriggerSave(this, new TriggerSaveEvent(TriggerSaveEvent.SAVE_TYPES.SETTINGS));
         }
 
@@ -118,7 +120,7 @@ namespace WebAnalyzer.UI.InteractionObjects
                 if (editRule.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     //refresh aois
-                    _form.ReloadPage();
+                    refreshData();
                     TriggerSave(this, new TriggerSaveEvent(TriggerSaveEvent.SAVE_TYPES.SETTINGS));
                 }
             });
@@ -127,6 +129,19 @@ namespace WebAnalyzer.UI.InteractionObjects
         private void On_CreateRule(object source, CreateRuleEvent e)
         {
             _setting.AddRule(e.Rule);
+        }
+
+
+        public Boolean isRefreshing()
+        {
+            return _refreshing;
+        }
+
+        private void refreshData()
+        {
+            _refreshing = true;
+
+            _form.ReloadPage();
         }
     }
 }
