@@ -8,6 +8,7 @@ using CefSharp;
 using CefSharp.WinForms;
 
 using WebAnalyzer.Util;
+using System.Windows.Forms;
 
 namespace WebAnalyzer.UI.InteractionObjects
 {
@@ -24,7 +25,28 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         public void DisplayError(String message)
         {
-            EvaluteJavaScript("alert('" + message + "');");
+            //EvaluteJavaScript("alert('" + message + "');");
+
+            MessageBox.Show(message, "Ein Fehler ist aufgetragen");
+        }
+
+        public void DisplayError(String message, String title)
+        {
+            //EvaluteJavaScript("alert('" + message + "');");
+
+            MessageBox.Show(message, title);
+        }
+
+        public void DisplaySuccess(String message, String title)
+        {
+            //EvaluteJavaScript("alert('" + message + "');");
+
+            MessageBox.Show(message, title);
+        }
+
+        public Boolean DisplayYesNoQuestion(String message, String title)
+        {
+            return MessageBox.Show(message, title, MessageBoxButtons.YesNo) == DialogResult.Yes;
         }
 
         public void EvaluteJavaScript(String script)

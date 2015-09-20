@@ -148,7 +148,6 @@ namespace WebAnalyzer.UI.InteractionObjects
             {
                 ExportController.ExportExperimentParticipants(filePath, _exp.Participants);
 
-
             }
             
         }

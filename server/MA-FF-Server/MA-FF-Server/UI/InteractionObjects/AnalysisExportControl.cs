@@ -149,7 +149,7 @@ namespace WebAnalyzer.UI.InteractionObjects
             {
                 Logger.Log("Die Daten konnten erfolgreich exportiert werden.");
 
-                DisplayError("Die Daten konnten erfolgreich exportiert werden.");
+                DisplaySuccess("Die Daten konnten erfolgreich exportiert werden.", "Export erfolgreich");
             }
         }
 
@@ -324,7 +324,7 @@ namespace WebAnalyzer.UI.InteractionObjects
             {
                 Logger.Log("Die Daten konnten erfolgreich exportiert werden.");
 
-                DisplayError("Die Daten konnten erfolgreich exportiert werden.");
+                DisplaySuccess("Die Daten konnten erfolgreich exportiert werden.", "Export erfolgreich");
             }
         }
 
