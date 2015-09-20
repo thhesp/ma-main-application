@@ -340,6 +340,8 @@ input.invalid {
     margin-left: 30px
 }
 
+
+
 /* experiment select list */
 
 #experiment-list .row{
@@ -347,10 +349,6 @@ input.invalid {
     border-bottom: solid 2px black;
 }
 
-#participants-table .tr{
-    padding: 5px;
-    border-bottom: solid 2px black;
-}
 
 /* import/export*/
 
@@ -380,4 +378,13 @@ input.invalid {
     color: #fff;
     background-color: #55A9F0;
     border-color: #286090;
+}
+
+tr td{  
+    padding-top: 15px;
+}
+
+thead{
+    padding-bottom: 10px;
+    border-bottom: 2px double grey;
 }
