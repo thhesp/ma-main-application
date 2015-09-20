@@ -370,13 +370,13 @@ input.invalid {
 
 /* bootstrap override*/
 
-.btn-default{
+.btn-primary{
     color: #fff;
     background-color: #295EB8;
     border-color: #2e6da4;
 }
 
-.btn-default:hover{
+.btn-primary:hover{
     color: #fff;
     background-color: #55A9F0;
     border-color: #286090;
