@@ -67,5 +67,21 @@ namespace WebAnalyzer.ApplicationSettings
 
             return true;
         }
+
+        /// <summary>
+        /// Resets all the experiment variables. Used from ExperimentModel
+        /// </summary>
+        public static void ResetExperimentVariables()
+        {
+            Properties.Settings.Default.WSMessageDelay = 10;
+
+            Properties.Settings.Default.LogCount = 5;
+
+            Properties.Settings.Default.MouseTrackingInterval = 15;
+
+            Properties.Settings.Default.DataTimeout = 200;
+
+            Properties.Settings.Default.Save();
+        }
     }
 }

@@ -137,8 +137,6 @@ namespace WebAnalyzer.Controller
                     SetExpiermentData(_currentExperiment);
                     CloseExperimentWizard();
                     Logger.getInstance().ExperimentName = _currentExperiment.ExperimentName;
-
-                    Console.WriteLine("Setting: " + Properties.Settings.Default.WSMessageDelay);
                 }
                 else
                 {

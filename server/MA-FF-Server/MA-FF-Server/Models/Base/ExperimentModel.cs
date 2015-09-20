@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
-
+using WebAnalyzer.ApplicationSettings;
 using WebAnalyzer.Models.SettingsModel;
 using WebAnalyzer.Util;
 
@@ -29,6 +29,11 @@ namespace WebAnalyzer.Models.Base
         public ExperimentModel()
         {
             _createdAt = DateTime.Now;
+        }
+
+        ~ExperimentModel()
+        {
+            ResetInternSettings();
         }
 
         public String ExperimentName
@@ -137,17 +142,68 @@ namespace WebAnalyzer.Models.Base
 
             XmlNode internSettings = xmlDoc.CreateElement("intern-settings");
 
+            SaveInternSettings(internSettings, xmlDoc);
+
+            experiment.AppendChild(internSettings);
+
+            return experiment;
+        }
+
+        private void SaveInternSettings(XmlNode internSettings, XmlDocument xmlDoc)
+        {
+
+            /* log count */
+
+            XmlComment logCountComment = xmlDoc.CreateComment("Amout of logs which are backed up");
+
+            internSettings.AppendChild(logCountComment);
+
+            XmlNode logCount = xmlDoc.CreateElement("log-count");
+
+            logCount.InnerText = Properties.Settings.Default.LogCount.ToString();
+
+            internSettings.AppendChild(logCount);
+
+
             /* websocket delay*/
+
+            XmlComment websocketDelayComment = xmlDoc.CreateComment("Delay in which messages from the websocket message queue are sent (if possible) (In milliseconds)");
+
+            internSettings.AppendChild(websocketDelayComment);
 
             XmlNode websocketDelay = xmlDoc.CreateElement("websocket-delay");
 
             websocketDelay.InnerText = Properties.Settings.Default.WSMessageDelay.ToString();
 
-            internSettings.AppendChild(websocketDelay); ;
+            internSettings.AppendChild(websocketDelay);
 
-            experiment.AppendChild(internSettings);
+            /* mousetracking delay*/
 
-            return experiment;
+            XmlComment mousetrackingIntervalComment = xmlDoc.CreateComment("Interval in which the mousedata gets collected when using mousetracking. (In milliseconds)");
+
+            internSettings.AppendChild(mousetrackingIntervalComment);
+
+            XmlNode mousetrackingInterval = xmlDoc.CreateElement("mousetracking-interval");
+
+            mousetrackingInterval.InnerText = Properties.Settings.Default.MouseTrackingInterval.ToString();
+
+            internSettings.AppendChild(mousetrackingInterval);
+
+
+            /* data timeout*/
+
+            XmlComment dataTimeoutComment = xmlDoc.CreateComment("Duration after which a message is too old, to be sent. (In milliseconds)");
+
+            internSettings.AppendChild(dataTimeoutComment);
+
+            XmlNode dataTimeout = xmlDoc.CreateElement("data-timeout");
+
+            dataTimeout.InnerText = Properties.Settings.Default.DataTimeout.ToString();
+
+            internSettings.AppendChild(dataTimeout);
+
+
+
         }
 
         public static ExperimentModel LoadFromXML(XmlDocument doc)
@@ -179,22 +235,37 @@ namespace WebAnalyzer.Models.Base
                 {
                     foreach (XmlNode setting in child.ChildNodes)
                     {
-                        switch (setting.Name)
-                        {
-                            case "websocket-delay":
-                                Properties.Settings.Default.WSMessageDelay = int.Parse(setting.InnerText);
-                                break;
-                        }
+                        LoadSetting(setting);
                     }
 
                     Properties.Settings.Default.Save();
                 }
             }
 
-            //experiment.ExperimentName = expNode.Attributes["name"].Value;
-            //experiment.CreatedAt = DateTime.Parse(expNode.Attributes["created-at"].Value);
-
             return experiment;
+        }
+
+        private static void LoadSetting(XmlNode setting)
+        {
+            switch (setting.Name)
+            {
+                case "websocket-delay":
+                    Properties.Settings.Default.WSMessageDelay = int.Parse(setting.InnerText);
+                    break;
+                case "log-count":
+                    Properties.Settings.Default.LogCount = int.Parse(setting.InnerText);
+                    break;
+                case "mousetracking-interval":
+                    Properties.Settings.Default.MouseTrackingInterval = int.Parse(setting.InnerText);
+                    break;
+                case "data-timeout":
+                    Properties.Settings.Default.DataTimeout = int.Parse(setting.InnerText);
+                    break;
+            }
+        }
+
+        private void ResetInternSettings(){
+            AppSettings.ResetExperimentVariables();
         }
 
         public static ExperimentModel CreateExperiment(String name)
