@@ -160,6 +160,7 @@
     <Compile Include="Models\AnalysisModel\SaccadeModel.cs" />
     <Compile Include="Models\AnalysisModel\FixationModel.cs" />
     <Compile Include="Models\AnalysisModel\StatisticsAnalyser.cs" />
+    <Compile Include="Models\Base\BaseTrackingModel.cs" />
     <Compile Include="Models\Base\ExperimentModel.cs" />
     <Compile Include="Models\Base\ExperimentParticipant.cs" />
     <Compile Include="Models\Base\BaseTrackingData.cs" />

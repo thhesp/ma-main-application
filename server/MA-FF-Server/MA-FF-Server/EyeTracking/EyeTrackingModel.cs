@@ -7,6 +7,7 @@ using WebAnalyzer.Util;
 using WebAnalyzer.Events;
 using WebAnalyzer.Models.Base;
 using WebAnalyzer.Models.DataModel;
+using WebAnalyzer.UI.InteractionObjects;
 
 namespace WebAnalyzer.EyeTracking
 {
@@ -14,17 +15,8 @@ namespace WebAnalyzer.EyeTracking
     /// <summary>
     /// This model contains all functionality necessary for using the ET controller for tests.
     /// </summary>
-    public class EyeTrackingModel
+    public class EyeTrackingModel : BaseTrackingModel
     {
-        /// <summary>
-        /// Event which is used for sending data to the test controller.
-        /// </summary>
-        public event PrepareGazeEventHandler PrepareGaze;
-
-        /// <summary>
-        /// Event which is used for sending events to the test controller.
-        /// </summary>
-        public event AddTrackingEventHandler AddTrackingEvent;
 
         /// <summary>
         /// Object of the EyeTracking Controller. Used for interacting with the EyeTracker.
@@ -54,6 +46,29 @@ namespace WebAnalyzer.EyeTracking
             m_EventCallback = new GetEventCallback(GetEventCallbackFunction);
         }
 
+        public override ExperimentObject.CONNECTION_STATUS connect()
+        {
+            Boolean sucess = false;
+
+            _connectionStatus = ExperimentObject.CONNECTION_STATUS.disconnected;
+
+            if (Properties.Settings.Default.ETConnectLocal)
+            {
+                sucess = connectLocal();
+            }
+            else
+            {
+                sucess = connect(Properties.Settings.Default.ETSentIP, Properties.Settings.Default.ETSentPort, Properties.Settings.Default.ETReceiveIP, Properties.Settings.Default.ETReceivePort);
+            }
+
+            if (sucess)
+            {
+                _connectionStatus = ExperimentObject.CONNECTION_STATUS.connected;
+            }
+
+            return _connectionStatus;
+        }
+
         /// <summary>
         /// Method to connect to an EyeTracking Server.
         /// </summary>
@@ -61,7 +76,7 @@ namespace WebAnalyzer.EyeTracking
         /// <param name="sendport">The Port over which the EyeTracker sents data.</param>
         /// <param name="receiveip">The IP of the device from which the EyeTracker receives data.</param>
         /// <param name="receiveport">The Port over which the EyeTracker receives data.</param>
-        public Boolean connect(String sendip, int sendport, String receiveip, int receiveport)
+        private Boolean connect(String sendip, int sendport, String receiveip, int receiveport)
         {
             Logger.Log("Connect with "+sendip+":"+sendport+" to "+receiveip+":"+receiveport);
 
@@ -74,24 +89,22 @@ namespace WebAnalyzer.EyeTracking
                 {
                     return true;
                 }
-                else
-                {
-                    return false;
-                }
 
             }
             catch (Exception exc)
             {
                 Logger.Log("Exception: " + exc.Message);
-                return false;
+                _connectionStatus = ExperimentObject.CONNECTION_STATUS.warning;
             }
+
+            return false;
         }
 
 
         /// <summary>
         /// Method to connect to an EyeTracking Server locally.
         /// </summary>
-        public Boolean connectLocal()
+        private Boolean connectLocal()
         {
             Logger.Log("Connect local");
 
@@ -104,24 +117,34 @@ namespace WebAnalyzer.EyeTracking
                 {
                     return true;
                 }
-                else
-                {
-                    return false;
-                }
 
             }
             catch (Exception exc)
             {
                 Logger.Log("Exception: " + exc.Message);
-                return false;
+                _connectionStatus = ExperimentObject.CONNECTION_STATUS.warning;
             }
+
+            return false;
+        }
+
+        public override ExperimentObject.CONNECTION_STATUS disconnect()
+        {
+            Boolean sucess = internDisconnect();
+
+            if (sucess)
+            {
+                _connectionStatus = ExperimentObject.CONNECTION_STATUS.disconnected;
+            }
+
+            return _connectionStatus;
         }
 
         /// <summary>
         /// Disconnet from the Eye Tracking Server
         /// (Important Note: You must disconnect your Application from the server to avoid critical crashed and problems with the Portsettings)
         /// </summary>
-        public int disconnect()
+        private Boolean internDisconnect()
         {
             Logger.Log("disconnect");
 
@@ -129,19 +152,26 @@ namespace WebAnalyzer.EyeTracking
             try
             {
                 errorID = ETDevice.iV_Disconnect();
+
+                if (errorID == 1)
+                {
+                    return true;
+                }
             }
             catch (System.Exception e)
             {
-                Logger.Log(e.Message);
+                Logger.Log("Exception: " + e.Message);
+
+                _connectionStatus = ExperimentObject.CONNECTION_STATUS.warning;
             }
 
-            return errorID;
+            return false;
         }
 
         /// <summary>
         /// Starts the Tracking by setting the necessary callbacks.
         /// </summary>
-        public void startTracking()
+        public override void startTracking()
         {
             if (ETDevice != null)
             {
@@ -154,7 +184,7 @@ namespace WebAnalyzer.EyeTracking
         /// <summary>
         /// Stops the Tracking by removeing the callbacks.
         /// </summary>
-        public void stopTracking()
+        public override void stopTracking()
         {
             if (ETDevice != null)
             {
@@ -167,7 +197,7 @@ namespace WebAnalyzer.EyeTracking
         /// <summary>
         /// Checks if the EyeTracking Device is connected.
         /// </summary>
-        public int isConnected()
+        private int isConnected()
         {
             if (ETDevice != null)
             {
@@ -213,7 +243,7 @@ namespace WebAnalyzer.EyeTracking
            leftEye.EyePositionY = sampleData.rightEye.eyePositionY;
            leftEye.EyePositionZ = sampleData.rightEye.eyePositionZ;
 
-           PrepareGaze(this, new PrepareGazeDataEvent(leftEye, rightEye));
+           triggerGazeEvent(leftEye, rightEye);
         }
 
         /// <summary>
@@ -246,7 +276,7 @@ namespace WebAnalyzer.EyeTracking
 
             rawEvent.Y = eventData.positionY;
 
-            AddTrackingEvent(this, new AddTrackingEvent(rawEvent));
+            triggerTrackingEvent(rawEvent);
         }
 
         /// <summary>

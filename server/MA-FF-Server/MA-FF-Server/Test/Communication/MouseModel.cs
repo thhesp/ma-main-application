@@ -5,6 +5,8 @@ using System.Windows.Forms;
 using WebAnalyzer.Util;
 using WebAnalyzer.Events;
 using WebAnalyzer.Models.DataModel;
+using WebAnalyzer.Models.Base;
+using WebAnalyzer.UI.InteractionObjects;
 
 
 namespace WebAnalyzer.Test.Communication
@@ -13,17 +15,12 @@ namespace WebAnalyzer.Test.Communication
     /// <summary>
     /// Mousemodel used for testing when no eyetracker is available.
     /// </summary>
-    public class MouseModel
+    public class MouseModel : BaseTrackingModel
     {
         /// <summary>
         /// Timer to simulate data every x ms.
         /// </summary>
         private StopwatchTimer timer;
-
-        /// <summary>
-        /// Event which is used for sending data to the test controller.
-        /// </summary>
-        public event PrepareGazeEventHandler PrepareGaze;
 
         /// <summary>
         /// Constructor which initialises the everything needed.
@@ -41,10 +38,24 @@ namespace WebAnalyzer.Test.Communication
             timer = new StopwatchTimer(Properties.Settings.Default.MouseTrackingInterval, timer_Tick);
         }
 
+        public override ExperimentObject.CONNECTION_STATUS connect()
+        {
+          _connectionStatus = ExperimentObject.CONNECTION_STATUS.connected;
+
+          return _connectionStatus;
+        }
+
+        public override ExperimentObject.CONNECTION_STATUS disconnect()
+        {
+            _connectionStatus = ExperimentObject.CONNECTION_STATUS.disconnected;
+
+            return _connectionStatus;
+        }
+
         /// <summary>
         /// Function which starts the tracking of the mouse.
         /// </summary>
-        public void startTracking()
+        public override void startTracking()
         {
             Logger.Log("Start MouseTracking");
             timer.Start();
@@ -53,7 +64,7 @@ namespace WebAnalyzer.Test.Communication
         /// <summary>
         /// Function which stops the tracking of the mouse.
         /// </summary>
-        public void stopTracking()
+        public override void stopTracking()
         {
             Logger.Log("Stop MouseTracking");
             this.timer.Stop();
@@ -74,8 +85,7 @@ namespace WebAnalyzer.Test.Communication
 
             MouseTrackingData rightEye = new MouseTrackingData(x, y, timestamp);
 
-            PrepareGaze(this, new PrepareGazeDataEvent(leftEye, rightEye));
-
+            triggerGazeEvent(leftEye, rightEye);
          }
     }
 }

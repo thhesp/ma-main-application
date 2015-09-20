@@ -39,15 +39,12 @@ namespace WebAnalyzer.Controller
         private TestModel _test;
 
         /// <summary>
-        /// Reference to the EyeTracker which is used for getting data.
+        /// Reference to the used trackingModel;
         /// </summary>
-        /// <remarks>Can be null if MouseTracking is used.</remarks>
-        private EyeTrackingModel _etModel;
+        /// <remarks>Can be eyetracker or mousetracker.</remarks>
+        private BaseTrackingModel _trackingModel;
 
-        /// <summary>
-        /// Boolean for indicating if there was a problem with the EyeTracker.
-        /// </summary>
-        private Boolean _ETWarning = false;
+
         /// <summary>
         /// Boolean for indicating if there was a problem for the WebSocket Server.
         /// </summary>
@@ -57,11 +54,6 @@ namespace WebAnalyzer.Controller
         /// Reference to the Websocket Server.
         /// </summary>
         private WebsocketServer _wsServer;
-
-        /// <summary>
-        /// Reference to the MouseModel used as an alternative to the EyeTracking.
-        /// </summary>
-        private MouseModel _debugModel;
 
         /// <summary>
         /// Boolean for indicating if the test is currently running.
@@ -180,46 +172,10 @@ namespace WebAnalyzer.Controller
         /// </remarks>
         public ExperimentObject.CONNECTION_STATUS TrackingStatus
         {
-            
+
             get
             {
-                return GetTrackingStatus();
-            }
-        }
-
-        /// <summary>
-        /// Intern method to extract the Tracking Status.
-        /// </summary>
-        private ExperimentObject.CONNECTION_STATUS GetTrackingStatus()
-        {
-            if (Properties.Settings.Default.UseMouseTracking)
-            {
-                Logger.Log("Get MouseTrackingStatus....");
-                if (_debugModel != null)
-                {
-                    return ExperimentObject.CONNECTION_STATUS.connected;
-                }
-
-                return ExperimentObject.CONNECTION_STATUS.disconnected;
-            }
-            else
-            {
-                Logger.Log("Get EyeTrackingStatus....");
-                if (_ETWarning)
-                {
-                    return ExperimentObject.CONNECTION_STATUS.warning;
-                }
-
-
-                Logger.Log("Connection Status: " + _etModel.isConnected());
-
-                if (_etModel != null
-                    && _etModel.isConnected() == 1) // RET_SUCCESS
-                {
-                    return ExperimentObject.CONNECTION_STATUS.connected;
-                }
-
-                return ExperimentObject.CONNECTION_STATUS.disconnected;
+                return _trackingModel.ConnectionStatus;
             }
         }
 
@@ -256,42 +212,29 @@ namespace WebAnalyzer.Controller
                 _WSWarning = true;
             }
 
-            if (Properties.Settings.Default.UseMouseTracking)
+
+            try
             {
-                _debugModel = new MouseModel();
 
-                _debugModel.PrepareGaze += On_PrepareGazeData;
+                if (Properties.Settings.Default.UseMouseTracking)
+                {
+                    _trackingModel = new MouseModel();
+                }
+                else
+                {
+                    _trackingModel = new EyeTrackingModel();
+                }
 
+                _trackingModel.PrepareGaze += On_PrepareGazeData;
+
+                _trackingModel.AddTrackingEvent += On_TrackingEvent;
+
+                _trackingModel.connect();
             }
-            else
+            catch (Exception e)
             {
-
-                try
-                {
-                    _etModel = new EyeTrackingModel();
-
-                    _etModel.PrepareGaze += On_PrepareGazeData;
-
-                    _etModel.AddTrackingEvent += On_TrackingEvent;
-
-                    if (Properties.Settings.Default.ETConnectLocal)
-                    {
-                        _ETWarning = !_etModel.connectLocal();
-                    }
-                    else
-                    {
-                        _ETWarning = !_etModel.connect(Properties.Settings.Default.ETSentIP, Properties.Settings.Default.ETSentPort, Properties.Settings.Default.ETReceiveIP, Properties.Settings.Default.ETReceivePort);
-                    }
-
-                    Logger.Log("ET_Warning????" + _ETWarning.ToString());
-                }
-                catch (Exception e)
-                {
-                    Logger.Log("EyeTrackingException: " + e.Source + "-" + e.Message);
-
-                    _ETWarning = true;
-                }
-
+                Logger.Log("TrackingException: " + e.Source + "-" + e.Message);
+                _trackingModel.ConnectionStatus = ExperimentObject.CONNECTION_STATUS.warning;
             }
         }
 
@@ -310,21 +253,12 @@ namespace WebAnalyzer.Controller
             {
                 _wsServer.stop();
             }
-            
 
-            if (_debugModel != null)
-            {
-                _debugModel.PrepareGaze -= On_PrepareGazeData;
-                _debugModel = null;
-            }
-            if (_etModel != null)
-            {
-                _etModel.disconnect();
+            _trackingModel.PrepareGaze -= On_PrepareGazeData;
 
-                _etModel.PrepareGaze -= On_PrepareGazeData;
+            _trackingModel.AddTrackingEvent -= On_TrackingEvent;
 
-                _etModel = null;
-            }
+            _trackingModel = null;
         }
 
         /// <summary>
@@ -336,14 +270,10 @@ namespace WebAnalyzer.Controller
             _running = true;
             _dataCollected = false;
             _test.Started = DateTime.Now.ToString();
-            // set listeners
-            if (Properties.Settings.Default.UseMouseTracking)
+
+            if (_trackingModel != null)
             {
-                _debugModel.startTracking();
-            }
-            else
-            {
-                _etModel.startTracking();
+                _trackingModel.startTracking();
             }
         }
 
@@ -355,21 +285,11 @@ namespace WebAnalyzer.Controller
             Logger.Log("Stop Experiment");
             _test.Stopped = DateTime.Now.ToString();
             _running = false;
-            // stop server etc.
 
-            if (Properties.Settings.Default.UseMouseTracking)
+            // stop server etc.
+            if (_trackingModel != null)
             {
-                if (_debugModel != null)
-                {
-                    _debugModel.stopTracking();
-                }
-            }
-            else
-            {
-                if (_etModel != null)
-                {
-                    _etModel.stopTracking();
-                }
+                _trackingModel.stopTracking();
             }
 
             //start timer to check if saving is possible
@@ -499,7 +419,7 @@ namespace WebAnalyzer.Controller
         /// <param name="e">Data about the number of connections</param>
         public void On_UpdateConnectionCount(object sender, UpdateWSConnectionCountEvent e)
         {
-            UpdateWSConnectionCount(sender, e);   
+            UpdateWSConnectionCount(sender, e);
         }
 
         /// <summary>
