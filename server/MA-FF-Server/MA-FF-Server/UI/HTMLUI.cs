@@ -123,7 +123,7 @@ namespace WebAnalyzer.UI
 
         private void CreateExperimentObj()
         {
-            _exp = new ExperimentObject();
+            _exp = new ExperimentObject(this);
             _exp.Browser = myBrowser;
             myBrowser.RegisterJsObject("experimentObj", _exp);
         }

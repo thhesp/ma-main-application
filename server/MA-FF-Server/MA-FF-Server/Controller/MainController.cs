@@ -420,6 +420,5 @@ namespace WebAnalyzer.Controller
                 _mainUI.RefreshData();
             }
         }
-
     }
 }

@@ -92,6 +92,24 @@ namespace WebAnalyzer.Controller
         }
 
         /// <summary>
+        /// Exports the experiment settings to a file.
+        /// </summary>
+        /// <param name="file">Path to file</param>
+        /// <param name="settings">The experiment settings to save.</param>
+        public static Boolean ExportExperimentSettings(String file, ExperimentSettings settings)
+        {
+            XmlDocument xmlDoc = new XmlDocument();
+
+            xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", null, null)); ;
+
+            xmlDoc.AppendChild(settings.ToXML(xmlDoc));
+
+            xmlDoc.Save(file);
+
+            return true;
+        }
+
+        /// <summary>
         /// Saves the experiment participants to a file and checks the file path.
         /// </summary>
         /// <param name="experiment">Experiment of which the participants to save</param>
@@ -129,6 +147,31 @@ namespace WebAnalyzer.Controller
             xmlDoc.AppendChild(participantsNode);
 
             xmlDoc.Save(baseDir + Properties.Settings.Default.ParticipantsFilename);
+
+            return true;
+        }
+
+        /// <summary>
+        /// Exports the experiment participants to a file.
+        /// </summary>
+        /// <param name="file">Path to file.</param>
+        /// <param name="participants">The experiment participants to save.</param>
+        public static Boolean ExportExperimentParticipants(String file, List<ExperimentParticipant> participants)
+        {
+            XmlDocument xmlDoc = new XmlDocument();
+
+            xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", null, null)); ;
+
+            XmlNode participantsNode = xmlDoc.CreateElement("participants");
+
+            foreach (ExperimentParticipant participant in participants)
+            {
+                participantsNode.AppendChild(participant.ToXML(xmlDoc));
+            }
+
+            xmlDoc.AppendChild(participantsNode);
+
+            xmlDoc.Save(file);
 
             return true;
         }

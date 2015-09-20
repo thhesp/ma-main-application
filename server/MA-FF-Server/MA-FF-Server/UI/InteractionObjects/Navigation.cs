@@ -9,6 +9,7 @@ using CefSharp.WinForms;
 
 using WebAnalyzer.Util;
 using WebAnalyzer.Events;
+using System.Windows.Forms;
 
 namespace WebAnalyzer.UI.InteractionObjects
 {
