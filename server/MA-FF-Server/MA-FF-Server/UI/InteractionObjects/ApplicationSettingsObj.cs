@@ -14,7 +14,7 @@ namespace WebAnalyzer.UI.InteractionObjects
     {
         private EditApplicationSettings _form;
 
-        private Boolean _useMouseTracking;
+        private String _trackingModelType;
 
         private int _wsPort;
 
@@ -29,7 +29,7 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             _form = form;
 
-            _useMouseTracking = Properties.Settings.Default.UseMouseTracking;
+            _trackingModelType = Properties.Settings.Default.TrackingModelType;
 
             _wsPort = Properties.Settings.Default.WebsocketPort;
 
@@ -57,7 +57,7 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         private void SaveData()
         {
-            Properties.Settings.Default.UseMouseTracking = _useMouseTracking;
+            Properties.Settings.Default.TrackingModelType = _trackingModelType;
 
             Properties.Settings.Default.WebsocketPort = _wsPort;
 
@@ -83,14 +83,14 @@ namespace WebAnalyzer.UI.InteractionObjects
             });
         }
 
-        public void setUseMouseTracking(Boolean useMouseTracking)
+        public void setTrackingModelType(String trackingModelType)
         {
-            _useMouseTracking = useMouseTracking;
+            _trackingModelType = trackingModelType;
         }
 
-        public Boolean getUseMouseTracking()
+        public String getTrackingModelType()
         {
-            return _useMouseTracking;
+            return _trackingModelType;
         }
 
         public void setETConnectLocal(Boolean ETConnectLocal)

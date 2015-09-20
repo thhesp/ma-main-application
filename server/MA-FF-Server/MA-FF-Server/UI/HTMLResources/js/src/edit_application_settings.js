@@ -1,77 +1,14 @@
-﻿$('#websocket-port').val(control.getWSPort());
+﻿$('input[name=tracking-model]').on('change', function () {
+    console.log("change...");
+    $('.additional-settings').hide();
 
-$('#use-mouse-tracking').prop("checked", control.getUseMouseTracking());
+    var activeSetting = $('input[name=tracking-model]:checked').attr('id');
 
-$('#connect-local').prop("checked", control.getETConnectLocal());
+    console.log("activeSettings: ", activeSetting);
 
-$('#et-sent-ip').val(control.getETSentIP());
-
-$('#et-sent-port').val(control.getETSentPort());
-
-$('#et-receive-ip').val(control.getETReceiveIP());
-
-$('#et-receive-port').val(control.getETReceivePort());
-
-// disable & enable stuff
-if ($('#use-mouse-tracking').prop('checked')) {
-    $('#connect-local').attr('disabled', true);
-
-    $('#et-sent-ip').attr('disabled', true);
-
-    $('#et-sent-port').attr('disabled', true);
-
-    $('#et-receive-ip').attr('disabled', true);
-
-    $('#et-receive-port').attr('disabled', true);
-} else if ($('#connect-local').prop('checked')) {
-    $('#et-sent-ip').attr('disabled', true);
-
-    $('#et-sent-port').attr('disabled', true);
-
-    $('#et-receive-ip').attr('disabled', true);
-
-    $('#et-receive-port').attr('disabled', true);
-}
-
-$('#save-button').click(function () {
-
-    if (validateData()) {
-        saveData();
-    }
-
+    $('.additional-settings.' + activeSetting).show();
 });
 
-$('#cancel-button').click(function () {
-    console.log('cancel form...');
-    control.cancel();
-});
-
-$('#use-mouse-tracking').on('change', function () {
-    if ($(this).prop('checked')) {
-        $('#connect-local').attr('disabled', true);
-
-        $('#et-sent-ip').attr('disabled', true);
-
-        $('#et-sent-port').attr('disabled', true);
-
-        $('#et-receive-ip').attr('disabled', true);
-
-        $('#et-receive-port').attr('disabled', true);
-    } else {
-        $('#connect-local').attr('disabled', false);
-
-        if (!$('#connect-local').prop('checked')) {
-            $('#et-sent-ip').attr('disabled', false);
-
-            $('#et-sent-port').attr('disabled', false);
-
-            $('#et-receive-ip').attr('disabled', false);
-
-            $('#et-receive-port').attr('disabled', false);
-        }
-
-    }
-});
 
 $('#connect-local').on('change', function () {
     if ($(this).prop('checked')) {
@@ -92,6 +29,38 @@ $('#connect-local').on('change', function () {
         $('#et-receive-port').attr('disabled', false);
     }
 });
+
+$('#websocket-port').val(control.getWSPort());
+
+$('#' + control.getTrackingModelType()).prop("checked", true);
+
+$('input[name=tracking-model]').trigger('change');
+
+$('#connect-local').prop("checked", control.getETConnectLocal());
+
+$('#connect-local').trigger('change');
+
+$('#et-sent-ip').val(control.getETSentIP());
+
+$('#et-sent-port').val(control.getETSentPort());
+
+$('#et-receive-ip').val(control.getETReceiveIP());
+
+$('#et-receive-port').val(control.getETReceivePort());
+
+$('#save-button').click(function () {
+
+    if (validateData()) {
+        saveData();
+    }
+
+});
+
+$('#cancel-button').click(function () {
+    console.log('cancel form...');
+    control.cancel();
+});
+
 
 function validateData() {
 
@@ -137,7 +106,7 @@ function saveData() {
 
     control.setWSPort(parseInt($('#websocket-port').val()));
 
-    control.setUseMouseTracking($('#use-mouse-tracking').prop("checked"));
+    control.setTrackingModelType($('input[name=tracking-model]:checked').attr('id'));
 
     control.setETConnectLocal($('#connect-local').prop("checked"));
 

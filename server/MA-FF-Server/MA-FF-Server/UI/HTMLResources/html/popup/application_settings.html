@@ -1,35 +1,43 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <title>Index</title>
-        <link rel="stylesheet" type="text/css" media="screen" href="../../css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="../../css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" media="screen" href="../../css/index.css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>Einstellungen</h2>
-                </div>
+<head>
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../css/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Einstellungen</h2>
+            </div>
 
-                <div class="col-md-12">
-                    <h3>Websocket Einstellungen</h3>
-                </div>
+            <div class="col-md-12">
+                <h3>Websocket Einstellungen</h3>
+            </div>
 
-                <div class="col-md-12">
-                    <label>Websocket Port:</label>
-                    <input id="websocket-port" type="number" placeholder="z.B.: 8888" />
-                </div>
+            <div class="col-md-12">
+                <label>Websocket Port:</label>
+                <input id="websocket-port" type="number" placeholder="z.B.: 8888" />
+            </div>
 
-                <div class="col-md-12">
-                    <h3>EyeTracking Einstellungen</h3>
-                </div>
+            <div class="col-md-12">
+                <h3>EyeTracking Einstellungen</h3>
+            </div>
 
-                <div class="col-md-12">
-                    <label><input id="use-mouse-tracking" type="checkbox" value="true">MouseTracking statt EyeTracking verwenden</label>
-                </div>
+            <div class="col-md-12">
+                <label><input id="mouse" type="radio" name="tracking-model">MouseTrackingverwenden</label>
+            </div>
 
+            <div class="additional-settings mouse">
+            </div>
+
+            <div class="col-md-12">
+                <label><input id="eye" type="radio" name="tracking-model">EyeTracking verwenden</label>
+            </div>
+
+            <div class="additional-settings eye">
                 <div class="col-md-12">
                     <label><input id="connect-local" type="checkbox" value="true">Mit lokalen EyeTracker verbinden</label>
                 </div>
@@ -54,21 +62,25 @@
                     <input id="et-receive-port" type="number" placeholder="z.B.: 5555" />
                 </div>
             </div>
-            
-            <div class="row">
-                <div class="col-md-12">
-                    <button id="cancel-button" type="button" class="btn btn-primary">Abbrechen</button>
-                    <button id="save-button" type="button" class="btn btn-primary">Speichern</button>
-                </div>
-            </div>
-        </div><!-- /.container -->
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <button id="cancel-button" type="button" class="btn btn-primary">Abbrechen</button>
+            <button id="save-button" type="button" class="btn btn-primary">Speichern</button>
+        </div>
+    </div>
+    </div><!-- /.container -->
 
 
-        <script type="text/javascript" src="../../js/lib/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript" src="../../js/lib/bootstrap.min.js"></script>
-        <script type="text/javascript" src="../../js/lib/underscore.min.js"></script>
+    <script type="text/javascript" src="../../js/lib/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../../js/lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/lib/underscore.min.js"></script>
 
-        <script type="text/javascript" src="../../js/src/logging.js"></script>
-        <script type="text/javascript" src="../../js/src/edit_application_settings.js"></script>
-    </body>
+    <script type="text/javascript" src="../../js/src/logging.js"></script>
+    <script type="text/javascript" src="../../js/src/edit_application_settings.js"></script>
+</body>
 </html>

@@ -215,15 +215,7 @@ namespace WebAnalyzer.Controller
 
             try
             {
-
-                if (Properties.Settings.Default.UseMouseTracking)
-                {
-                    _trackingModel = new MouseModel();
-                }
-                else
-                {
-                    _trackingModel = new EyeTrackingModel();
-                }
+                _trackingModel = BaseTrackingModel.GetTrackingModel();
 
                 _trackingModel.PrepareGaze += On_PrepareGazeData;
 
@@ -234,7 +226,12 @@ namespace WebAnalyzer.Controller
             catch (Exception e)
             {
                 Logger.Log("TrackingException: " + e.Source + "-" + e.Message);
-                _trackingModel.ConnectionStatus = ExperimentObject.CONNECTION_STATUS.warning;
+
+                if (_trackingModel != null)
+                {
+                    _trackingModel.ConnectionStatus = ExperimentObject.CONNECTION_STATUS.warning;
+                }
+               
             }
         }
 

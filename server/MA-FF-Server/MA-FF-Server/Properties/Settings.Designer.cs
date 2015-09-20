@@ -103,18 +103,6 @@ namespace WebAnalyzer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool UseMouseTracking {
-            get {
-                return ((bool)(this["UseMouseTracking"]));
-            }
-            set {
-                this["UseMouseTracking"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("8888")]
         public int WebsocketPort {
             get {
@@ -332,6 +320,18 @@ namespace WebAnalyzer.Properties {
             }
             set {
                 this["WebsocketUseNagle"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("mouse")]
+        public string TrackingModelType {
+            get {
+                return ((string)(this["TrackingModelType"]));
+            }
+            set {
+                this["TrackingModelType"] = value;
             }
         }
     }
