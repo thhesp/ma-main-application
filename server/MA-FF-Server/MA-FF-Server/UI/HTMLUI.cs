@@ -136,6 +136,9 @@ namespace WebAnalyzer.UI
             Cef.Initialize();
 
             string page = string.Format("{0}UI/HTMLResources/html/main/index.html", Utilities.GetAppLocation());
+
+            Logger.Log("UI Location: " + page);
+
             CreateBrowser(page);
 
             CreateNav();
