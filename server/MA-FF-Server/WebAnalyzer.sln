@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAnalyzer", "MA-FF-Server\WebAnalyzer.csproj", "{1B72CD95-C031-48AF-8ABD-33F10CBC005E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WebAnalyzerSetup", "WebAnalyzerSetup\WebAnalyzerSetup.vdproj", "{CD9097D9-CE90-4DCE-969F-049E6E8B9A2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,12 @@ Global
 		{1B72CD95-C031-48AF-8ABD-33F10CBC005E}.Release|x64.Build.0 = Release|x64
 		{1B72CD95-C031-48AF-8ABD-33F10CBC005E}.Release|x86.ActiveCfg = Release|x86
 		{1B72CD95-C031-48AF-8ABD-33F10CBC005E}.Release|x86.Build.0 = Release|x86
+		{CD9097D9-CE90-4DCE-969F-049E6E8B9A2B}.Debug|Any CPU.ActiveCfg = Debug
+		{CD9097D9-CE90-4DCE-969F-049E6E8B9A2B}.Debug|x64.ActiveCfg = Debug
+		{CD9097D9-CE90-4DCE-969F-049E6E8B9A2B}.Debug|x86.ActiveCfg = Debug
+		{CD9097D9-CE90-4DCE-969F-049E6E8B9A2B}.Release|Any CPU.ActiveCfg = Release
+		{CD9097D9-CE90-4DCE-969F-049E6E8B9A2B}.Release|x64.ActiveCfg = Release
+		{CD9097D9-CE90-4DCE-969F-049E6E8B9A2B}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
