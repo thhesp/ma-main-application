@@ -99,6 +99,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_11E0E0166F0A4BD5882E3F6B2D0875D0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1281C9524CCE1BFB0DFFAD165AE7DE3E"
         "OwnerKey" = "8:_A061E85D16C748C786BA1EE52EBEBE4E"
         "MsmSig" = "8:_UNDEFINED"
@@ -178,6 +184,12 @@
         "Entry"
         {
         "MsmKey" = "8:_22107F932E364B2AB436CA3DC88F129C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_22D6574FFAFA4292BD15FFA4B2757083"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -281,6 +293,12 @@
         {
         "MsmKey" = "8:_42B4D8BB7F9547BDD20161DCFE0E7021"
         "OwnerKey" = "8:_295E0E53D438C5E3F74C363250C02E84"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_42C383A2852645F5B71DFB6073C8BEF0"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -453,6 +471,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_6B06F4B8515C4A1FA25B237E84302E0A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_6E30A275D0EB40BC8F791796991B49E8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -519,6 +543,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_80A760019C424B92AF4BE6B47648E262"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_8289EC8329A443DCAC4E35E5979AFF5D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -551,6 +581,12 @@
         {
         "MsmKey" = "8:_8B4DFF430F77D5D68D11C30327F3BDC3"
         "OwnerKey" = "8:_A061E85D16C748C786BA1EE52EBEBE4E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8D835D78052D49E09B7CD1652C52D1FF"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -651,6 +687,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_A5EF7F7043DE4711A72CF25445FBFCBE"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A7D4A3D964784A5495A301CB1DA5B1ED"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -659,6 +701,12 @@
         {
         "MsmKey" = "8:_A822ED64011C4E05940FAB58556380FE"
         "OwnerKey" = "8:_295E0E53D438C5E3F74C363250C02E84"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A8284A19AD6B4970BC696C9FCA9AA0BE"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -843,6 +891,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_D8C2928309A14949B1F5B9A3F1854BE9"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_D9E8A77DE5B64460B7A15DBB5EADE7D4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -975,6 +1029,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_F1AD3853BF904C2796B8B37A28946006"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_F36C760E6B9600139930F715149184F4"
         "OwnerKey" = "8:_B98F243946382A45E82554E3C1B98AED"
         "MsmSig" = "8:_UNDEFINED"
@@ -989,6 +1049,12 @@
         {
         "MsmKey" = "8:_F36C760E6B9600139930F715149184F4"
         "OwnerKey" = "8:_A061E85D16C748C786BA1EE52EBEBE4E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F79F6E70077F4F328C7054CB1A2CC7CF"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1024,7 +1090,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CF3DC4B868EAC8BB0BCF6DC2EBB25D79"
+        "OwnerKey" = "8:_491EBFA8D7855C65426E6DE48D244FBE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1163,12 +1229,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_477139114C997E6889683FD0E3EA0AC9"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_491EBFA8D7855C65426E6DE48D244FBE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1487,6 +1547,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_A112032B7E09B8BAC6287F2A48178199"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_CF3DC4B868EAC8BB0BCF6DC2EBB25D79"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -1872,6 +1938,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_11E0E0166F0A4BD5882E3F6B2D0875D0"
+            {
+            "SourcePath" = "8:..\\MA-FF-Server\\UI\\HTMLResources\\fonts\\glyphicons-halflings-regular.eot"
+            "TargetName" = "8:glyphicons-halflings-regular.eot"
+            "Tag" = "8:"
+            "Folder" = "8:_5DCE02B569AB4F13825480DBA9A7247D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1281C9524CCE1BFB0DFFAD165AE7DE3E"
             {
             "AssemblyRegister" = "3:1"
@@ -2173,6 +2259,26 @@
             "TargetName" = "8:fil.pak"
             "Tag" = "8:"
             "Folder" = "8:_9DF32E90F51A46A191DC5934806F0AD3"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_22D6574FFAFA4292BD15FFA4B2757083"
+            {
+            "SourcePath" = "8:..\\MA-FF-Server\\UI\\HTMLResources\\fonts\\fontawesome-webfont.ttf"
+            "TargetName" = "8:fontawesome-webfont.ttf"
+            "Tag" = "8:"
+            "Folder" = "8:_5DCE02B569AB4F13825480DBA9A7247D"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -2551,6 +2657,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_42C383A2852645F5B71DFB6073C8BEF0"
+            {
+            "SourcePath" = "8:..\\MA-FF-Server\\UI\\HTMLResources\\fonts\\fontawesome-webfont.woff2"
+            "TargetName" = "8:fontawesome-webfont.woff2"
+            "Tag" = "8:"
+            "Folder" = "8:_5DCE02B569AB4F13825480DBA9A7247D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_42FE0C764F404B39A5A9BEE9A79B6E79"
@@ -3147,6 +3273,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6B06F4B8515C4A1FA25B237E84302E0A"
+            {
+            "SourcePath" = "8:..\\MA-FF-Server\\UI\\HTMLResources\\fonts\\glyphicons-halflings-regular.woff"
+            "TargetName" = "8:glyphicons-halflings-regular.woff"
+            "Tag" = "8:"
+            "Folder" = "8:_5DCE02B569AB4F13825480DBA9A7247D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6E30A275D0EB40BC8F791796991B49E8"
             {
             "SourcePath" = "8:..\\MA-FF-Server\\bin\\x86\\Release\\locales\\es-419.pak"
@@ -3411,6 +3557,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_80A760019C424B92AF4BE6B47648E262"
+            {
+            "SourcePath" = "8:..\\MA-FF-Server\\UI\\HTMLResources\\fonts\\fontawesome-webfont.woff"
+            "TargetName" = "8:fontawesome-webfont.woff"
+            "Tag" = "8:"
+            "Folder" = "8:_5DCE02B569AB4F13825480DBA9A7247D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8289EC8329A443DCAC4E35E5979AFF5D"
             {
             "SourcePath" = "8:..\\MA-FF-Server\\bin\\x86\\Release\\libcef.dll"
@@ -3551,6 +3717,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8D835D78052D49E09B7CD1652C52D1FF"
+            {
+            "SourcePath" = "8:..\\MA-FF-Server\\UI\\HTMLResources\\fonts\\glyphicons-halflings-regular.ttf"
+            "TargetName" = "8:glyphicons-halflings-regular.ttf"
+            "Tag" = "8:"
+            "Folder" = "8:_5DCE02B569AB4F13825480DBA9A7247D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8E0DE96B1342497187780D068DC20F62"
@@ -3963,6 +4149,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A5EF7F7043DE4711A72CF25445FBFCBE"
+            {
+            "SourcePath" = "8:..\\MA-FF-Server\\UI\\HTMLResources\\fonts\\fontawesome-webfont.svg"
+            "TargetName" = "8:fontawesome-webfont.svg"
+            "Tag" = "8:"
+            "Folder" = "8:_5DCE02B569AB4F13825480DBA9A7247D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A7D4A3D964784A5495A301CB1DA5B1ED"
             {
             "SourcePath" = "8:..\\MA-FF-Server\\bin\\x86\\Release\\locales\\am.pak"
@@ -4012,6 +4218,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A8284A19AD6B4970BC696C9FCA9AA0BE"
+            {
+            "SourcePath" = "8:..\\MA-FF-Server\\UI\\HTMLResources\\fonts\\FontAwesome.otf"
+            "TargetName" = "8:FontAwesome.otf"
+            "Tag" = "8:"
+            "Folder" = "8:_5DCE02B569AB4F13825480DBA9A7247D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AB1118B3D32E37DFA40C7777874B940A"
@@ -4688,6 +4914,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D8C2928309A14949B1F5B9A3F1854BE9"
+            {
+            "SourcePath" = "8:..\\MA-FF-Server\\UI\\HTMLResources\\fonts\\glyphicons-halflings-regular.woff2"
+            "TargetName" = "8:glyphicons-halflings-regular.woff2"
+            "Tag" = "8:"
+            "Folder" = "8:_5DCE02B569AB4F13825480DBA9A7247D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D9E8A77DE5B64460B7A15DBB5EADE7D4"
             {
             "SourcePath" = "8:..\\MA-FF-Server\\bin\\x86\\Release\\locales\\pt-BR.pak"
@@ -5238,6 +5484,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F1AD3853BF904C2796B8B37A28946006"
+            {
+            "SourcePath" = "8:..\\MA-FF-Server\\UI\\HTMLResources\\fonts\\fontawesome-webfont.eot"
+            "TargetName" = "8:fontawesome-webfont.eot"
+            "Tag" = "8:"
+            "Folder" = "8:_5DCE02B569AB4F13825480DBA9A7247D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F36C760E6B9600139930F715149184F4"
             {
             "AssemblyRegister" = "3:1"
@@ -5267,6 +5533,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F79F6E70077F4F328C7054CB1A2CC7CF"
+            {
+            "SourcePath" = "8:..\\MA-FF-Server\\UI\\HTMLResources\\fonts\\glyphicons-halflings-regular.svg"
+            "TargetName" = "8:glyphicons-halflings-regular.svg"
+            "Tag" = "8:"
+            "Folder" = "8:_5DCE02B569AB4F13825480DBA9A7247D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F824613406EE4D40A13EC1FF578B05F1"
@@ -5429,6 +5715,39 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_09C130527C1844068F6BEE6C6AA6F710"
+                    {
+                    "Name" = "8:UI"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_5804A1C796DC4C1AACA9729F2BC7F8DC"
+                        "Folders"
+                        {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_87D6E25910714BD989CC0846F93F135D"
+                            {
+                            "Name" = "8:HTMLResources"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_CBF1CA80370A4D22A47F8EC9B263CF04"
+                                "Folders"
+                                {
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_5DCE02B569AB4F13825480DBA9A7247D"
+                                    {
+                                    "Name" = "8:fonts"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_A5651534FD70435F9BFF7FCDAC0752C3"
+                                        "Folders"
+                                        {
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_9DF32E90F51A46A191DC5934806F0AD3"
                     {
                     "Name" = "8:locales"
@@ -5479,9 +5798,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:WebAnalyzerSetup"
+        "ProductName" = "8:WebAnalyzer"
         "ProductCode" = "8:{6FBBBAB6-D8CB-475F-BAD2-9EF90892CB22}"
-        "PackageCode" = "8:{62294804-EA88-4A15-9506-800B42D932F7}"
+        "PackageCode" = "8:{B35EC5DD-87CD-4F6A-B71D-F1D4B0A1F4DF}"
         "UpgradeCode" = "8:{E90C07E3-462F-47EE-9B49-D8D427C86FC3}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -5492,7 +5811,7 @@
         "Manufacturer" = "8:WebAnalyzer"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:WebAnalyzerSetup"
+        "Title" = "8:WebAnalyzer"
         "Subject" = "8:"
         "ARPCONTACT" = "8:WebAnalyzer"
         "Keywords" = "8:"
