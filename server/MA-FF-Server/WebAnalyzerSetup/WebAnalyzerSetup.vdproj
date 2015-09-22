@@ -117,12 +117,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_148C3B3457F84934987869E40A573A4D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_16E168FD78F04F4DB5C76753AAF83880"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -507,12 +501,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_73703C23D5AE4C79BED6732E75C8B3FA"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_75A50EDE2A01C97737D093A9033775AB"
         "OwnerKey" = "8:_A061E85D16C748C786BA1EE52EBEBE4E"
         "MsmSig" = "8:_UNDEFINED"
@@ -789,12 +777,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_B9535CED215C4B119BEC123841062B75"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_B959EAB019C75B3DBDCBA3803C23495A"
         "OwnerKey" = "8:_A061E85D16C748C786BA1EE52EBEBE4E"
         "MsmSig" = "8:_UNDEFINED"
@@ -803,12 +785,6 @@
         {
         "MsmKey" = "8:_B98F243946382A45E82554E3C1B98AED"
         "OwnerKey" = "8:_A061E85D16C748C786BA1EE52EBEBE4E"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_BC4BAB96EBC24593957BECFA08EF4B0A"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -981,12 +957,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_E970AFB4835A4BE78C68A9DAAACB9C7A"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_EBB34462B44244E490CEE21A9935ADE6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1013,6 +983,12 @@
         {
         "MsmKey" = "8:_ECB82E108408563B9E977933E46B57C3"
         "OwnerKey" = "8:_A061E85D16C748C786BA1EE52EBEBE4E"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_EEA0C340C6AF421D90914A20F4214EC4"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2018,26 +1994,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_148C3B3457F84934987869E40A573A4D"
-            {
-            "SourcePath" = "8:..\\MA-FF-Server\\bin\\x86\\Release\\locales\\ca.pak"
-            "TargetName" = "8:ca.pak"
-            "Tag" = "8:"
-            "Folder" = "8:_9DF32E90F51A46A191DC5934806F0AD3"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_16E168FD78F04F4DB5C76753AAF83880"
@@ -3404,26 +3360,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_73703C23D5AE4C79BED6732E75C8B3FA"
-            {
-            "SourcePath" = "8:..\\MA-FF-Server\\bin\\x86\\Release\\locales\\am.pak"
-            "TargetName" = "8:am.pak"
-            "Tag" = "8:"
-            "Folder" = "8:_9DF32E90F51A46A191DC5934806F0AD3"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_75A50EDE2A01C97737D093A9033775AB"
             {
             "AssemblyRegister" = "3:1"
@@ -4506,26 +4442,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B9535CED215C4B119BEC123841062B75"
-            {
-            "SourcePath" = "8:..\\MA-FF-Server\\bin\\x86\\Release\\locales\\ar.pak"
-            "TargetName" = "8:ar.pak"
-            "Tag" = "8:"
-            "Folder" = "8:_9DF32E90F51A46A191DC5934806F0AD3"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B959EAB019C75B3DBDCBA3803C23495A"
             {
             "AssemblyRegister" = "3:1"
@@ -4586,26 +4502,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BC4BAB96EBC24593957BECFA08EF4B0A"
-            {
-            "SourcePath" = "8:..\\MA-FF-Server\\bin\\x86\\Release\\locales\\bn.pak"
-            "TargetName" = "8:bn.pak"
-            "Tag" = "8:"
-            "Folder" = "8:_9DF32E90F51A46A191DC5934806F0AD3"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C22B3867E5D8300B60DB5356C12B892E"
@@ -5280,26 +5176,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E970AFB4835A4BE78C68A9DAAACB9C7A"
-            {
-            "SourcePath" = "8:..\\MA-FF-Server\\bin\\x86\\Release\\locales\\bg.pak"
-            "TargetName" = "8:bg.pak"
-            "Tag" = "8:"
-            "Folder" = "8:_9DF32E90F51A46A191DC5934806F0AD3"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EBB34462B44244E490CEE21A9935ADE6"
             {
             "SourcePath" = "8:..\\MA-FF-Server\\bin\\x86\\Release\\locales\\he.pak"
@@ -5431,6 +5307,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EEA0C340C6AF421D90914A20F4214EC4"
+            {
+            "SourcePath" = "8:C:\\Windows\\SysWOW64\\msiexec.exe"
+            "TargetName" = "8:msiexec.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_EFDE7B3DCB4E4EE3B8BAF929EB7B07F8"
+            "Condition" = "8:NOT Installed"
+            "Transitive" = "11:TRUE"
+            "Vital" = "11:FALSE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:TRUE"
+            "Permanent" = "11:TRUE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_EF15EDFC655F397D4FBB56D10FBFE3C9"
@@ -5783,6 +5679,17 @@
                     }
                 }
             }
+            "{1525181F-901A-416C-8A58-119130FE478E}:_EFDE7B3DCB4E4EE3B8BAF929EB7B07F8"
+            {
+            "Name" = "8:#1914"
+            "AlwaysCreate" = "11:FALSE"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Property" = "8:SystemFolder"
+                "Folders"
+                {
+                }
+            }
         }
         "LaunchCondition"
         {
@@ -5800,7 +5707,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:WebAnalyzer"
         "ProductCode" = "8:{6FBBBAB6-D8CB-475F-BAD2-9EF90892CB22}"
-        "PackageCode" = "8:{B35EC5DD-87CD-4F6A-B71D-F1D4B0A1F4DF}"
+        "PackageCode" = "8:{3CD4AB6B-2A00-45C7-9AE5-1ED55C40978B}"
         "UpgradeCode" = "8:{E90C07E3-462F-47EE-9B49-D8D427C86FC3}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -5931,6 +5838,20 @@
             "Target" = "8:_A061E85D16C748C786BA1EE52EBEBE4E"
             "Folder" = "8:_3927C7513E094E8EBCB19070A1EC832F"
             "WorkingFolder" = "8:_B8DFC110EC884728B234FC738010DF4B"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F44FECB8482241A88D5AAB9BF32CDCC9"
+            {
+            "Name" = "8:WebAnalyzer deinstallieren"
+            "Arguments" = "8:/x {6FBBBAB6-D8CB-475F-BAD2-9EF90892CB22}"
+            "Description" = "8:WebAnalyzer deinstallieren"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_EEA0C340C6AF421D90914A20F4214EC4"
+            "Folder" = "8:_3927C7513E094E8EBCB19070A1EC832F"
+            "WorkingFolder" = "8:_EFDE7B3DCB4E4EE3B8BAF929EB7B07F8"
             "Icon" = "8:"
             "Feature" = "8:"
             }
