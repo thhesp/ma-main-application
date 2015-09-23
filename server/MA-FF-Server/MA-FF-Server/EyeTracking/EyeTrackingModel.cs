@@ -207,6 +207,31 @@ namespace WebAnalyzer.EyeTracking
             return 101;
         }
 
+        /// <summary>
+        /// Function which returns the tracking frequency.
+        /// </summary>
+        public override double getTrackingFrequency()
+        {
+            int trackingFrequencyHtz = getTrackingFrequencyInHz();
+
+            //calculate from htz to milliseconds
+            double trackingFrequencyMS = 1000.0 / trackingFrequencyHtz;
+
+            return trackingFrequencyMS;
+        }
+
+        /// <summary>
+        /// Function which returns the tracking frequency in hertz.
+        /// </summary>
+        private int getTrackingFrequencyInHz()
+        {
+            EyeTrackingController.SystemInfoStruct systemInfo = new EyeTrackingController.SystemInfoStruct();
+
+            ETDevice.iV_GetSystemInfo(ref systemInfo);
+
+            return systemInfo.samplerate;
+        }
+
         #region CallbackFunctions
 
         /// <summary>

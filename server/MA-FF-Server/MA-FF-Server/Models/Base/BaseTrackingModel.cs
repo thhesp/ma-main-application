@@ -66,6 +66,8 @@ namespace WebAnalyzer.Models.Base
 
         public abstract void stopTracking();
 
+        public abstract double getTrackingFrequency();
+
         protected void triggerGazeEvent(BaseTrackingData leftEye, BaseTrackingData rightEye)
         {
             PrepareGaze(this, new PrepareGazeDataEvent(leftEye, rightEye));

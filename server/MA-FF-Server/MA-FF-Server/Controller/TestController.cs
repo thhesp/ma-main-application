@@ -222,6 +222,8 @@ namespace WebAnalyzer.Controller
                 _trackingModel.AddTrackingEvent += On_TrackingEvent;
 
                 _trackingModel.connect();
+
+                Logger.Log("Trackingrate: " + _trackingModel.getTrackingFrequency());
             }
             catch (Exception e)
             {

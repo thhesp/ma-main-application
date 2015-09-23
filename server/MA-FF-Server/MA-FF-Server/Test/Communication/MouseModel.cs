@@ -71,6 +71,14 @@ namespace WebAnalyzer.Test.Communication
         }
 
         /// <summary>
+        /// Function which returns the tracking frequency.
+        /// </summary>
+        public override double getTrackingFrequency()
+        {
+            return Properties.Settings.Default.MouseTrackingInterval;
+        }
+
+        /// <summary>
         /// Callback which gets called everytime the timer ends.
         /// Sends the data with the PrepareGaze Event to the controller.
         /// </summary>
