@@ -37,10 +37,17 @@ namespace WebAnalyzer.Server.MessageHandler
             {
                 processURLChangeEvent((URLChangeEventMessage)omsgIn);
             }
-
+            else if (omsgIn is ScrollEventMessage)
+            {
+                processScrollEvent((ScrollEventMessage)omsgIn);
+            }
+            else if (omsgIn is ResizeEventMessage)
+            {
+                processResizeChangeEvent((ResizeEventMessage)omsgIn);
+            }
         }
 
-        private void processScrollEvent(Object msg)
+        private void processScrollEvent(ScrollEventMessage msg)
         {
 
         }
@@ -50,7 +57,7 @@ namespace WebAnalyzer.Server.MessageHandler
             AddWebpage(this, new AddWebpageEvent(msg.URL, msg.WindowWidth, msg.WindowHeight, _connection.UID));
         }
 
-        private void resizeChangeEvent(Object msg)
+        private void processResizeChangeEvent(ResizeEventMessage msg)
         {
 
         }

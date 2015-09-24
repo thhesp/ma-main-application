@@ -492,7 +492,7 @@ namespace WebAnalyzer.Models.MessageModel
 
         private static EventMessage EventMessageFromJson(JsonTextReader reader)
         {
-            Logger.Log("event message found!");
+            //Logger.Log("event message found!");
 
             String property = string.Empty;
 
@@ -507,7 +507,7 @@ namespace WebAnalyzer.Models.MessageModel
                     {
                         String eventType = reader.Value.ToString();
 
-                        Logger.Log("EventType: " + eventType);
+                        //Logger.Log("EventType: " + eventType);
 
                         switch (eventType)
                         {

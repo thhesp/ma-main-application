@@ -13,6 +13,14 @@ namespace WebAnalyzer.Models.MessageModel
     public abstract class EventMessage : Message
     {
 
+        protected String _url;
+
+        public String URL
+        {
+            get { return _url; }
+            set { _url = value; }
+        }
+
         /* 
          * 
          * Message Data
@@ -21,7 +29,7 @@ namespace WebAnalyzer.Models.MessageModel
 
         public static URLChangeEventMessage URLChangeEventMessageFromJson(JsonTextReader reader)
         {
-            Logger.Log("URL Change message found!");
+            //Logger.Log("URL Change message found!");
 
             String property = string.Empty;
 
@@ -52,14 +60,13 @@ namespace WebAnalyzer.Models.MessageModel
             return msg;
         }
 
-        public static URLChangeEventMessage ScrollEventMessageFromJson(JsonTextReader reader)
+        public static ScrollEventMessage ScrollEventMessageFromJson(JsonTextReader reader)
         {
             //Logger.Log("Scroll event message found!");
 
-
             String property = string.Empty;
 
-            URLChangeEventMessage msg = new URLChangeEventMessage();
+            ScrollEventMessage msg = new ScrollEventMessage();
 
             while (reader.Read())
             {
@@ -68,20 +75,31 @@ namespace WebAnalyzer.Models.MessageModel
                     if (reader.TokenType == JsonToken.PropertyName)
                         property = reader.Value.ToString();
 
+                    if (property == "url" && reader.TokenType == JsonToken.String)
+                    {
+                        msg.URL = reader.Value.ToString();
+                    }
+                    else if (property == "scrollx" && reader.TokenType == JsonToken.Integer)
+                    {
+                        msg.ScrollX = int.Parse(reader.Value.ToString());
+                    }
+                    else if (property == "scrolly" && reader.TokenType == JsonToken.Integer)
+                    {
+                        msg.ScrollY = int.Parse(reader.Value.ToString());
+                    }
                 }
             }
 
             return msg;
         }
 
-        public static URLChangeEventMessage ResizeEventMessageFromJson(JsonTextReader reader)
+        public static ResizeEventMessage ResizeEventMessageFromJson(JsonTextReader reader)
         {
             //Logger.Log("resize event message found!");
 
-
             String property = string.Empty;
 
-            URLChangeEventMessage msg = new URLChangeEventMessage();
+            ResizeEventMessage msg = new ResizeEventMessage();
 
             while (reader.Read())
             {
@@ -90,7 +108,18 @@ namespace WebAnalyzer.Models.MessageModel
                     if (reader.TokenType == JsonToken.PropertyName)
                         property = reader.Value.ToString();
 
-
+                    if (property == "url" && reader.TokenType == JsonToken.String)
+                    {
+                        msg.URL = reader.Value.ToString();
+                    }
+                    else if (property == "height" && reader.TokenType == JsonToken.Integer)
+                    {
+                        msg.WindowHeight = int.Parse(reader.Value.ToString());
+                    }
+                    else if (property == "width" && reader.TokenType == JsonToken.Integer)
+                    {
+                        msg.WindowWidth = int.Parse(reader.Value.ToString());
+                    }
                 }
             }
 

@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace WebAnalyzer.Models.MessageModel.In.EventMessages
 {
-    public class URLChangeEventMessage : EventMessage
+    public class ResizeEventMessage : EventMessage
     {
-
         private int _windowWidth = 0;
         private int _windowHeight = 0;
 
