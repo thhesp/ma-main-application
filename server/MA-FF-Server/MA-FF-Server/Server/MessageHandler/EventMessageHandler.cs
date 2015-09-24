@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebAnalyzer.Events;
+using WebAnalyzer.Models.MessageModel;
+using WebAnalyzer.Models.MessageModel.In.EventMessages;
 
 namespace WebAnalyzer.Server.MessageHandler
 {
     class EventMessageHandler : IObserver<Object>
     {
+        public event AddWebpageEventHandler AddWebpage;
+
         readonly ConnectionManager _connectionManager;
         readonly WebsocketConnection _connection;
 
-        public EventMessageHandler(ConnectionManager connectionManager, WebsocketConnection connection)
+        public EventMessageHandler(WebsocketConnection connection)
         {
-            _connectionManager = connectionManager;
             _connection = connection;
         }
 
@@ -29,19 +33,24 @@ namespace WebAnalyzer.Server.MessageHandler
 
         public void OnNext(Object omsgIn)
         {
-            dynamic msgIn = omsgIn;
-
-
-
-            
-        }
-
-        private void processClickEvent(Object msg)
-        {
+            if (omsgIn is URLChangeEventMessage)
+            {
+                processURLChangeEvent((URLChangeEventMessage)omsgIn);
+            }
 
         }
 
         private void processScrollEvent(Object msg)
+        {
+
+        }
+
+        private void processURLChangeEvent(URLChangeEventMessage msg)
+        {
+            AddWebpage(this, new AddWebpageEvent(msg.URL, msg.WindowWidth, msg.WindowHeight, _connection.UID));
+        }
+
+        private void resizeChangeEvent(Object msg)
         {
 
         }

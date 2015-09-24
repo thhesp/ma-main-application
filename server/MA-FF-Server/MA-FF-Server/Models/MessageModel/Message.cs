@@ -64,6 +64,8 @@ namespace WebAnalyzer.Models.MessageModel
                                 return ActivationMessageFromJson(ActivationMessage.ACTIVATION_MESSAGE_TYPE.DEACTIVATE, reader);
                             case "data":
                                 return DataMessageFromJson(reader);
+                            case "event":
+                                return EventMessageFromJson(reader);
                             case "error":
                                 return ErrorMessageFromJson(reader);
                             default:
@@ -486,6 +488,43 @@ namespace WebAnalyzer.Models.MessageModel
                     }
                 }
             }
+        }
+
+        private static EventMessage EventMessageFromJson(JsonTextReader reader)
+        {
+            Logger.Log("event message found!");
+
+            String property = string.Empty;
+
+            while (reader.Read())
+            {
+                if (reader.Value != null)
+                {
+                    if (reader.TokenType == JsonToken.PropertyName)
+                        property = reader.Value.ToString();
+
+                    if (reader.TokenType == JsonToken.String && property == "eventType")
+                    {
+                        String eventType = reader.Value.ToString();
+
+                        Logger.Log("EventType: " + eventType);
+
+                        switch (eventType)
+                        {
+                            case "url-change":
+                                return EventMessage.URLChangeEventMessageFromJson(reader);
+                            case "resize":
+                                return EventMessage.ResizeEventMessageFromJson(reader);
+                            case "scroll":
+                                return EventMessage.ScrollEventMessageFromJson(reader);
+                            default:
+                                return null;
+                        }
+                    }
+                }
+            }
+
+            return null;
         }
     }
 

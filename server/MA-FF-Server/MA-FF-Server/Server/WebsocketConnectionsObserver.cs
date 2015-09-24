@@ -60,11 +60,13 @@ namespace WebAnalyzer.Server
             published.Where(msgIn => msgIn != null && msgIn is ErrorMessage)
               .Subscribe(new ErrorMessageHandler(_controller, connection));
 
-            /*
+            EventMessageHandler eventMsg = new EventMessageHandler(connection);
+            eventMsg.AddWebpage += _controller.On_AddWebpage;
+
             //event
-           published.Where(msgIn => msgIn.command != null && msgIn.command == "event")
-              .Subscribe(new DataMessageHandler(_controller, connection));
-            */
+            published.Where(msgIn => msgIn != null && msgIn is EventMessage)
+              .Subscribe(eventMsg);
+            
         }
     }
 }

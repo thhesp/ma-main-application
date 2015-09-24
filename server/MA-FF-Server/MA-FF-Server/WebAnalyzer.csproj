@@ -188,9 +188,11 @@
     <Compile Include="Models\Base\RawTrackingGaze.cs" />
     <Compile Include="Models\Base\UIDBase.cs" />
     <Compile Include="Models\DataModel\MouseTrackingData.cs" />
+    <Compile Include="Models\MessageModel\In\EventMessage.cs" />
     <Compile Include="Models\MessageModel\In\ActivationMessage.cs" />
     <Compile Include="Models\MessageModel\In\ErrorMessage.cs" />
     <Compile Include="Models\MessageModel\In\ConnectionMessage.cs" />
+    <Compile Include="Models\MessageModel\In\EventMessages\URLChangeEventMessage.cs" />
     <Compile Include="Models\MessageModel\In\InDataMessage.cs" />
     <Compile Include="Models\SettingsModel\AOISettings.cs" />
     <Compile Include="Models\SettingsModel\DomainSettings.cs" />
