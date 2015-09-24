@@ -353,9 +353,9 @@ input.invalid {
 /* import/export*/
 
 .at-bottom{
-    position: fixed;
-    bottom: 20px;
+    position: absolute;
     width: 80%;
+    margin-top: 40px;
 }
 
 .export-btn{
