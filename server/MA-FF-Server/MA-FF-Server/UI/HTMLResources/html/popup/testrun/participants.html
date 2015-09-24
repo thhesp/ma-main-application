@@ -60,18 +60,22 @@
         var participantArray = control.participantArray();
         var participantUIDs = control.participantUIDs();
 
-        var template = _.template($('script#participant-template').html());
+        if (participantArray.length > 0) {
+            var template = _.template($('script#participant-template').html());
 
-        for (var i = 0; i < participantArray.length; i++) {
-            $("#participants-table").append(template({ uid: participantUIDs[i], identifier: participantArray[i] }));
+            for (var i = 0; i < participantArray.length; i++) {
+                $("#participants-table").append(template({ uid: participantUIDs[i], identifier: participantArray[i] }));
+            }
+
+            $('#participants-table tr .select-participant-button').click(function () {
+                var uid = $(this).attr('uid');
+
+                console.log('clicked: ', uid);
+                control.selectParticipant(uid);
+            });
+        } else {
+            $("#participants-table").append("Es existieren keine Teilnehmer für dieses Experiment");
         }
-
-        $('#participants-table tr .select-participant-button').click(function () {
-            var uid = $(this).attr('uid');
-
-            console.log('clicked: ', uid);
-            control.selectParticipant(uid);
-        });
 
         $('#filter-participants').on('keyup', filterParticipants);
 

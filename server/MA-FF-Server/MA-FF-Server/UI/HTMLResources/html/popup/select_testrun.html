@@ -52,19 +52,25 @@
         var testrunPaths = control.testrunPaths();
         var testrunDates = control.testrunDates();
 
-        var template = _.template($('script#testrun-template').html());
+        if (testrunPaths.length > 0) {
+            var template = _.template($('script#testrun-template').html());
 
-        for (var i = 0; i < testrunPaths.length; i++) {
-            $("#testrun-table").append(template({ path: testrunPaths[i], date: testrunDates[i] }));
+            for (var i = 0; i < testrunPaths.length; i++) {
+                $("#testrun-table").append(template({ path: testrunPaths[i], date: testrunDates[i] }));
+            }
+
+            $('#testrun-table tr .select-testrun-button').click(function () {
+                var path = $(this).attr('path');
+                var created = $(this).attr('date');
+
+                console.log('clicked: ', path);
+                control.selectTestrun(created, path);
+            });
+        } else {
+            $("#testrun-table").append("Für diesen Teilnehmer wurden noch keine Testdaten aufgenommen");
         }
 
-        $('#testrun-table tr .select-testrun-button').click(function () {
-            var path = $(this).attr('path');
-            var created = $(this).attr('date');
 
-            console.log('clicked: ', path);
-            control.selectTestrun(created, path);
-        });
 
     </script>
 </body>
