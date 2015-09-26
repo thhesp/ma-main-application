@@ -9,6 +9,7 @@ using WebAnalyzer.Models.AnalysisModel;
 using WebAnalyzer.Util;
 using WebAnalyzer.Models.SettingsModel;
 using WebAnalyzer.Models.AlgorithmModel;
+using WebAnalyzer.Models.EventModel;
 
 namespace WebAnalyzer.Models.DataModel
 {
@@ -25,6 +26,8 @@ namespace WebAnalyzer.Models.DataModel
         private String _visitTimestamp;
 
         private List<GazeModel> _positionData = new List<GazeModel>();
+
+        private List<BaseEventModel> _eventData = new List<BaseEventModel>();
 
         /* Fixations */
         private List<FixationModel> _leftFixationData = new List<FixationModel>();
@@ -51,7 +54,7 @@ namespace WebAnalyzer.Models.DataModel
         public String Url
         {
             get { return _url; }
-            set { _url = value;}
+            set { _url = value; }
         }
 
         public String ConnectionUID
@@ -80,6 +83,11 @@ namespace WebAnalyzer.Models.DataModel
         public List<GazeModel> Gazes
         {
             get { return _positionData; }
+        }
+
+        public List<BaseEventModel> Events
+        {
+            get { return _eventData; }
         }
 
         public void AddGazeData(GazeModel data)
@@ -137,10 +145,23 @@ namespace WebAnalyzer.Models.DataModel
 
             webpageNode.Attributes.Append(numberOfGazes);
 
+            XmlNode gazesNode = xmlDoc.CreateElement("gazes");
+
             foreach (GazeModel data in _positionData)
+            {
+                gazesNode.AppendChild(data.ToXML(xmlDoc));
+            }
+
+            webpageNode.AppendChild(gazesNode);
+
+            XmlNode eventsNode = xmlDoc.CreateElement("events");
+
+            foreach (BaseEventModel data in _eventData)
             {
                 webpageNode.AppendChild(data.ToXML(xmlDoc));
             }
+
+            webpageNode.AppendChild(eventsNode);
 
             return webpageNode;
         }
@@ -172,12 +193,31 @@ namespace WebAnalyzer.Models.DataModel
 
                 foreach (XmlNode child in webpageNode.ChildNodes)
                 {
-                    GazeModel gaze = GazeModel.LoadFromXML(child);
-
-                    if (gaze != null)
+                    if (child.Name == "gazes")
                     {
-                        page.AddGazeData(gaze);
+                        foreach (XmlNode gazeNode in child)
+                        {
+                            GazeModel gaze = GazeModel.LoadFromXML(gazeNode);
+
+                            if (gaze != null)
+                            {
+                                page.AddGazeData(gaze);
+                            }
+                        }
                     }
+                    else if (child.Name == "events")
+                    {
+                        foreach (XmlNode eventNode in child)
+                        {
+                            BaseEventModel eventModel = BaseEventModel.LoadFromXML(eventNode);
+
+                            if (eventModel != null)
+                            {
+                                page.Events.Add(eventModel);
+                            }
+                        }
+                    }
+
                 }
 
                 return page;

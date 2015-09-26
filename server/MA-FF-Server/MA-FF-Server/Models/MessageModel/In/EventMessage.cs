@@ -15,10 +15,18 @@ namespace WebAnalyzer.Models.MessageModel
 
         protected String _url;
 
+        protected String _eventTimestamp;
+
         public String URL
         {
             get { return _url; }
             set { _url = value; }
+        }
+
+        public String EventTimestamp
+        {
+            get { return _eventTimestamp; }
+            set { _eventTimestamp = value; }
         }
 
         /* 
@@ -87,6 +95,10 @@ namespace WebAnalyzer.Models.MessageModel
                     {
                         msg.ScrollY = int.Parse(reader.Value.ToString());
                     }
+                    else if (property == "eventtimestamp" && reader.TokenType == JsonToken.String)
+                    {
+                        msg.EventTimestamp = reader.Value.ToString();
+                    }
                 }
             }
 
@@ -119,6 +131,10 @@ namespace WebAnalyzer.Models.MessageModel
                     else if (property == "width" && reader.TokenType == JsonToken.Integer)
                     {
                         msg.WindowWidth = int.Parse(reader.Value.ToString());
+                    }
+                    else if (property == "eventtimestamp" && reader.TokenType == JsonToken.String)
+                    {
+                        msg.EventTimestamp = reader.Value.ToString();
                     }
                 }
             }
