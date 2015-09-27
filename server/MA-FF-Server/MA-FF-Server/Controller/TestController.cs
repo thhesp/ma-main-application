@@ -450,5 +450,19 @@ namespace WebAnalyzer.Controller
         {
             _rawData.AddEvent(e.Event);
         }
+
+        /// <summary>
+        /// Event which gets triggered when an event from the browser gets received.
+        /// </summary>
+        /// <param name="source">Object from which the event gets triggered.</param>
+        /// <param name="e">Data about the event which happened.</param>
+        /// <remarks>Used for collecting the events sent from the browser.</remarks>
+        public void On_AddBrowserEvent(object source, AddBrowserEvent e)
+        {
+            if (_test != null)
+            {
+                _test.AssignEventToWebpage(e.EventModel, e.EventModel.URL, e.ConnectionUID);
+            }
+        }
     }
 }

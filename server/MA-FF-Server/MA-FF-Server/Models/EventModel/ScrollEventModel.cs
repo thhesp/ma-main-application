@@ -67,7 +67,13 @@ namespace WebAnalyzer.Models.EventModel
 
             resizeEventNode.Attributes.Append(serverReceived);
 
+            //eventTimesatmp
 
+            XmlAttribute eventTimestamp = xmlDoc.CreateAttribute("event-timestamp");
+
+            eventTimestamp.Value = this.EventTimestamp;
+
+            resizeEventNode.Attributes.Append(eventTimestamp);
 
             return resizeEventNode;
         }

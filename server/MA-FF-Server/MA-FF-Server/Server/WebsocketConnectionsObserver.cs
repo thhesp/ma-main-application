@@ -62,6 +62,7 @@ namespace WebAnalyzer.Server
 
             EventMessageHandler eventMsg = new EventMessageHandler(connection);
             eventMsg.AddWebpage += _controller.On_AddWebpage;
+            eventMsg.AddBrowserEvent += _controller.On_AddBrowserEvent;
 
             //event
             published.Where(msgIn => msgIn != null && msgIn is EventMessage)

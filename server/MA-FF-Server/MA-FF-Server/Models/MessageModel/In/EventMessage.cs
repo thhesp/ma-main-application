@@ -95,7 +95,7 @@ namespace WebAnalyzer.Models.MessageModel
                     {
                         msg.ScrollY = int.Parse(reader.Value.ToString());
                     }
-                    else if (property == "eventtimestamp" && reader.TokenType == JsonToken.String)
+                    else if (property == "eventtimestamp" && reader.TokenType == JsonToken.Integer)
                     {
                         msg.EventTimestamp = reader.Value.ToString();
                     }
@@ -132,7 +132,7 @@ namespace WebAnalyzer.Models.MessageModel
                     {
                         msg.WindowWidth = int.Parse(reader.Value.ToString());
                     }
-                    else if (property == "eventtimestamp" && reader.TokenType == JsonToken.String)
+                    else if (property == "eventtimestamp" && reader.TokenType == JsonToken.Integer)
                     {
                         msg.EventTimestamp = reader.Value.ToString();
                     }

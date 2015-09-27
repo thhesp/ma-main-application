@@ -11,6 +11,7 @@ using WebAnalyzer.Models.AnalysisModel;
 using WebAnalyzer.Models.AlgorithmModel;
 using WebAnalyzer.Events;
 using WebAnalyzer.Models.Base;
+using WebAnalyzer.Models.EventModel;
 
 namespace WebAnalyzer.Models.DataModel
 {
@@ -534,6 +535,21 @@ namespace WebAnalyzer.Models.DataModel
             return true;
         }
 
+        public void AssignEventToWebpage(BaseEventModel eventModel, String url, String connectionUID)
+        {
+            WebpageModel pageModel = this.GetPageModel(url, connectionUID, eventModel.ServerReceivedTimestamp);
+
+            if (pageModel != null)
+            {
+                pageModel.Events.Add(eventModel);
+            }
+            else
+            {
+                Logger.Log("No pagemodel for event found: " + url);
+            }
+
+        }
+
         public Boolean DisposeOfGazeData(String uniqueId)
         {
             if (!_unassignedPositions.ContainsKey(uniqueId))
@@ -644,6 +660,21 @@ namespace WebAnalyzer.Models.DataModel
                         if (long.Parse(_visitedPages[i].VisitTimestamp) < long.Parse(timestamp) )
                         {
                             return _visitedPages[i];
+                        }
+                        else
+                        {
+                            Logger.Log(_visitedPages[i].VisitTimestamp + " timestamp not right " + timestamp);
+                        }
+                    }
+                    else
+                    {
+                        if (_visitedPages[i].Url != url)
+                        {
+                            Logger.Log(_visitedPages[i].Url + " url not right: " + url);
+                        }
+                        else if (_visitedPages[i].ConnectionUID != connectionUID)
+                        {
+                            Logger.Log(_visitedPages[i].ConnectionUID + " connectionUID not right: " + connectionUID);
                         }
                     }
                 }

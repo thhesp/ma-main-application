@@ -20,6 +20,15 @@ namespace WebAnalyzer.Models.EventModel
         }
 
 
+        protected String _url;
+
+        public String URL
+        {
+            get { return _url; }
+            set { _url = value; }
+        }
+
+
         public abstract XmlNode ToXML(XmlDocument xmlDoc);
 
         public static BaseEventModel LoadFromXML(XmlNode eventNode)

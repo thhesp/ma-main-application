@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebAnalyzer.Events;
+using WebAnalyzer.Models.EventModel;
 using WebAnalyzer.Models.MessageModel;
 using WebAnalyzer.Models.MessageModel.In.EventMessages;
 
@@ -12,8 +13,8 @@ namespace WebAnalyzer.Server.MessageHandler
     class EventMessageHandler : IObserver<Object>
     {
         public event AddWebpageEventHandler AddWebpage;
+        public event AddBrowserEventHandler AddBrowserEvent;
 
-        readonly ConnectionManager _connectionManager;
         readonly WebsocketConnection _connection;
 
         public EventMessageHandler(WebsocketConnection connection)
@@ -49,7 +50,13 @@ namespace WebAnalyzer.Server.MessageHandler
 
         private void processScrollEvent(ScrollEventMessage msg)
         {
+            ScrollEventModel eventModel = new ScrollEventModel(msg.ScrollX, msg.ScrollY, Util.Timestamp.GetMillisecondsUnixTimestamp());
 
+            eventModel.URL = msg.URL;
+
+            eventModel.EventTimestamp = msg.EventTimestamp;
+
+            AddBrowserEvent(this, new AddBrowserEvent(eventModel, _connection.UID));
         }
 
         private void processURLChangeEvent(URLChangeEventMessage msg)
@@ -59,7 +66,13 @@ namespace WebAnalyzer.Server.MessageHandler
 
         private void processResizeChangeEvent(ResizeEventMessage msg)
         {
+            ResizeEventModel eventModel = new ResizeEventModel(msg.WindowHeight, msg.WindowWidth, Util.Timestamp.GetMillisecondsUnixTimestamp());
 
+            eventModel.URL = msg.URL;
+
+            eventModel.EventTimestamp = msg.EventTimestamp;
+
+            AddBrowserEvent(this, new AddBrowserEvent(eventModel, _connection.UID));
         }
     }
 }

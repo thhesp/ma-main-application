@@ -158,7 +158,7 @@ namespace WebAnalyzer.Models.DataModel
 
             foreach (BaseEventModel data in _eventData)
             {
-                webpageNode.AppendChild(data.ToXML(xmlDoc));
+                eventsNode.AppendChild(data.ToXML(xmlDoc));
             }
 
             webpageNode.AppendChild(eventsNode);

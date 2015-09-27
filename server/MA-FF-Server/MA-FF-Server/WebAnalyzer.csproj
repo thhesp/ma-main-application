@@ -152,6 +152,7 @@
     <Compile Include="Controller\LoadController.cs" />
     <Compile Include="Controller\MainController.cs" />
     <Compile Include="Events\AddTrackingEvent.cs" />
+    <Compile Include="Events\AddBrowserEvent.cs" />
     <Compile Include="Events\AddWebpageEvent.cs" />
     <Compile Include="Events\AddConnectionEvent.cs" />
     <Compile Include="Events\CreateRuleEvent.cs" />
