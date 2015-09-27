@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WebAnalyzer.Controller;
@@ -30,6 +31,8 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         private int _connectionCount = 0;
 
+        private String _lastDescriptionUpdateTimestamp;
+        private Boolean _saveTimer = false;
 
         public ExperimentObject(HTMLUI form)
         {
@@ -48,6 +51,54 @@ namespace WebAnalyzer.UI.InteractionObjects
                 return _exp.ExperimentName;
 
             return null;
+        }
+
+        public String getDescription()
+        {
+            if (_exp != null)
+                return _exp.Description;
+
+            return null;
+        }
+
+        public void updateDescription(String description)
+        {
+            _exp.Description = description;
+            _lastDescriptionUpdateTimestamp = Timestamp.GetMillisecondsUnixTimestamp();
+
+            checkSaveTimer();
+        }
+
+        private void checkSaveTimer()
+        {
+            if (!_saveTimer)
+            {
+                _saveTimer = true;
+                createSaveTimer();
+            }
+        }
+
+        private void createSaveTimer()
+        {
+            int interval = Properties.Settings.Default.ExperimentDescriptionSaveTimeout;
+            Task.Factory.StartNew(() =>
+            {
+                Thread.Sleep(interval);
+                String currentTimestamp = Timestamp.GetMillisecondsUnixTimestamp();
+
+                Logger.Log("checking if saving is necessary");
+                // check if _lastDescription update is newer than it should
+                if (long.Parse(_lastDescriptionUpdateTimestamp) - long.Parse(currentTimestamp) < interval)
+                {
+                    Logger.Log("saving the experiment file");
+                    TriggerSave(this, new TriggerSaveEvent(TriggerSaveEvent.SAVE_TYPES.ALL));
+                    _saveTimer = false;
+                }
+                else
+                {
+                    createSaveTimer();
+                }
+            });
         }
 
         public String[] participantArray()

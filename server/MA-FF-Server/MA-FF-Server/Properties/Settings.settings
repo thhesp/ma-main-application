@@ -86,5 +86,8 @@
     <Setting Name="TrackingModelType" Type="System.String" Scope="User">
       <Value Profile="(Default)">mouse</Value>
     </Setting>
+    <Setting Name="ExperimentDescriptionSaveTimeout" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3000</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

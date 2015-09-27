@@ -14,6 +14,9 @@ namespace WebAnalyzer.Models.Base
     {
 
         private String _experimentName;
+
+        private String _description;
+
         private DateTime _createdAt;
 
         private List<ExperimentParticipant> _participants = new List<ExperimentParticipant>();
@@ -40,6 +43,12 @@ namespace WebAnalyzer.Models.Base
         {
             get { return _experimentName; }
             set { _experimentName = value;  }
+        }
+
+        public String Description
+        {
+            get { return _description; }
+            set { _description = value; }
         }
 
         public DateTime CreatedAt
@@ -137,6 +146,15 @@ namespace WebAnalyzer.Models.Base
             createdAt.Value = this.CreatedAt.ToString();
 
             experiment.Attributes.Append(createdAt);
+
+
+            /* settings */
+
+            XmlNode description = xmlDoc.CreateElement("description");
+
+            description.InnerText = this.Description;
+
+            experiment.AppendChild(description);
 
             /* settings */
 
@@ -239,6 +257,10 @@ namespace WebAnalyzer.Models.Base
                     }
 
                     Properties.Settings.Default.Save();
+                }
+                else if (child.Name == "description")
+                {
+                    experiment.Description = child.InnerText;
                 }
             }
 

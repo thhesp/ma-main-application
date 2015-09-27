@@ -11,7 +11,7 @@ namespace WebAnalyzer.Events
     public class TriggerSaveEvent : EventArgs
     {
 
-        public enum SAVE_TYPES { ALL = 0, PARTICIPANTS = 1, SETTINGS = 2 };
+        public enum SAVE_TYPES { ALL = 0, PARTICIPANTS = 1, SETTINGS = 2};
 
         private SAVE_TYPES _type;
 

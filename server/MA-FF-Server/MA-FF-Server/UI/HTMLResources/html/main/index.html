@@ -45,6 +45,14 @@
                         <button type="button" class="btn btn-primary btn-lg" onclick="nav.createTestrun()">Testrun</button>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Experimentbeschreibung:</label>
+                        <br/>
+                        <textarea id="description" rows="16" cols="80"></textarea>
+                    </div>
+                </div>
             </div><!-- /.container -->
         </div>
         <footer>
@@ -57,6 +65,14 @@
         <script type="text/javascript" src="../../js/src/logging.js"></script>
         <script type="text/javascript" src="../../js/src/nav.js"></script>
         <script type="text/javascript" src="../../js/src/init.js"></script>
+
+        <script type="text/javascript">
+            $('#description').val(experimentObj.getDescription());
+
+            $("#description").on('change keyup paste', function () {
+                experimentObj.updateDescription($(this).val());
+            });
+        </script>
         
     </body>
 </html>
