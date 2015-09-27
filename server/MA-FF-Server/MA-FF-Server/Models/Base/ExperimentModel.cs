@@ -221,6 +221,17 @@ namespace WebAnalyzer.Models.Base
             internSettings.AppendChild(dataTimeout);
 
 
+            /* data timeout*/
+
+            XmlComment forceMessageDelaySettingsComment = xmlDoc.CreateComment("Should the settings for the message delay be forced and not changed by the software.");
+
+            internSettings.AppendChild(forceMessageDelaySettingsComment);
+
+            XmlNode forceMessageDelaySettings = xmlDoc.CreateElement("force-message-delay");
+
+            forceMessageDelaySettings.InnerText = Properties.Settings.Default.ForceMessageDelaySettings.ToString();
+
+            internSettings.AppendChild(forceMessageDelaySettings);
 
         }
 
@@ -282,6 +293,9 @@ namespace WebAnalyzer.Models.Base
                     break;
                 case "data-timeout":
                     Properties.Settings.Default.DataTimeout = int.Parse(setting.InnerText);
+                    break;
+                case "force-message-delay":
+                    Properties.Settings.Default.ForceMessageDelaySettings = Boolean.Parse(setting.InnerText);
                     break;
             }
         }

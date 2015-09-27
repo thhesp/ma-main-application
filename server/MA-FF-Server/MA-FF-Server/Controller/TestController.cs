@@ -223,7 +223,7 @@ namespace WebAnalyzer.Controller
 
                 _trackingModel.connect();
 
-                Logger.Log("Trackingrate: " + _trackingModel.getTrackingFrequency());
+                CheckTrackingFrequency();
             }
             catch (Exception e)
             {
@@ -235,6 +235,51 @@ namespace WebAnalyzer.Controller
                 }
                
             }
+        }
+
+        /// <summary>
+        /// Checks if tracking frequency and ws message interval values can work with the current settings.
+        /// </summary>
+        private void CheckTrackingFrequency(){
+        
+            double trackingInterval = _trackingModel.getTrackingFrequency();
+
+            Logger.Log("Trackingrate: " + trackingInterval);
+
+            int messageSentInterval = Properties.Settings.Default.WSMessageDelay;
+
+            Logger.Log("Message Interval: " + messageSentInterval);
+            Logger.Log("Tracking interval: " + trackingInterval);
+
+            if (!Properties.Settings.Default.ForceMessageDelaySettings)
+            {
+                if (messageSentInterval > trackingInterval)
+                {
+                    // message interval to big
+                    Logger.Log("Message interval bigger than tracking interval.");
+
+                    // calculate new value
+                    messageSentInterval = (int)(trackingInterval / 2);
+                }
+                else
+                {
+                    // message interval smaller
+                    Logger.Log("Message interval smaller than tracking interval.");
+
+                    if (messageSentInterval > (trackingInterval / 2))
+                    {
+                        Logger.Log("Message interval not small enough");
+                        // calculate new value
+                        messageSentInterval = (int)(trackingInterval / 2);
+                    }
+                }
+
+                Logger.Log("Updated Message Interval: " + messageSentInterval);
+            }
+
+            _test.MessageSentInterval = messageSentInterval;
+            _test.TrackingInterval = trackingInterval;
+
         }
 
         /// <summary>

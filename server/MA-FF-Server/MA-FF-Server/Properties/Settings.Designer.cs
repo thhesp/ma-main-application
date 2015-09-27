@@ -346,5 +346,17 @@ namespace WebAnalyzer.Properties {
                 this["ExperimentDescriptionSaveTimeout"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ForceMessageDelaySettings {
+            get {
+                return ((bool)(this["ForceMessageDelaySettings"]));
+            }
+            set {
+                this["ForceMessageDelaySettings"] = value;
+            }
+        }
     }
 }

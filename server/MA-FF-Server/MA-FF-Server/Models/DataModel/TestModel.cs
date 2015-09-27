@@ -30,6 +30,9 @@ namespace WebAnalyzer.Models.DataModel
 
         private String _lastGazeActionTimestamp = "";
 
+        private double _trackingInterval = 0;
+        private int _messageSentInterval = 0;
+
         public String Filename
         {
             get
@@ -69,6 +72,18 @@ namespace WebAnalyzer.Models.DataModel
         {
             get { return _protocol; }
             set { _protocol = value; }
+        }
+
+        public double TrackingInterval
+        {
+            get { return _trackingInterval; }
+            set { _trackingInterval = value; }
+        }
+
+        public int MessageSentInterval
+        {
+            get { return _messageSentInterval; }
+            set { _messageSentInterval = value; }
         }
         
         public Boolean Exportable()
@@ -117,6 +132,18 @@ namespace WebAnalyzer.Models.DataModel
 
             experimentNode.Attributes.Append(visitedWebpagesCount);
 
+            XmlAttribute messageSentIntervall = xmlDoc.CreateAttribute("ws-message-sent-interval");
+
+            messageSentIntervall.Value = MessageSentInterval.ToString();
+
+            experimentNode.Attributes.Append(messageSentIntervall);
+
+            XmlAttribute trackingIntervall = xmlDoc.CreateAttribute("tracking-interval");
+
+            trackingIntervall.Value = this.TrackingInterval.ToString();
+
+            experimentNode.Attributes.Append(trackingIntervall);
+
             //add protocol
             XmlNode protocolNode = xmlDoc.CreateElement("protocol");
 
@@ -163,6 +190,12 @@ namespace WebAnalyzer.Models.DataModel
                         break;
                     case "label":
                         test.Label = attr.Value;
+                        break;
+                    case "ws-message-sent-interval":
+                        test.MessageSentInterval = int.Parse(attr.Value);
+                        break;
+                    case "tracking-interval":
+                        test.TrackingInterval = double.Parse(attr.Value);
                         break;
                 }
             }
