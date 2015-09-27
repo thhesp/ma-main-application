@@ -14,7 +14,7 @@ namespace WebAnalyzer.Events
     {
 
         private String _url;
-        private String _connetionUID;
+        private String _connectionUID;
         private String _timestamp;
 
         private int _windowWidth = 0;
@@ -23,7 +23,7 @@ namespace WebAnalyzer.Events
         public AddWebpageEvent(String url, int windowWidth, int windowHeight, String connectionUID)
         {
             _url = url;
-            _connetionUID = connectionUID;
+            _connectionUID = connectionUID;
             _windowHeight = windowHeight;
             _windowWidth = windowWidth;
             _timestamp = Util.Timestamp.GetMillisecondsUnixTimestamp();
@@ -36,7 +36,7 @@ namespace WebAnalyzer.Events
 
         public String ConnectionUID
         {
-            get { return _connetionUID; }
+            get { return _connectionUID; }
         }
 
         public String Timestamp
