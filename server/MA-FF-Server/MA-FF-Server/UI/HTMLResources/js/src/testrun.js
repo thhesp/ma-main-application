@@ -1,9 +1,13 @@
 ﻿$("#participant-identifier").text(control.getParticipantIdentifier());
 
+$("#protocol").val(control.getProtocol());
+
+$("#label").val(control.getLabel());
+
 $("#test-control-button").click(function () {
     if (control.testRunning()) {
         control.stopTestrun();
-
+        control.addTestrunData();
         $('#select-participant-button').attr('disabled', false);
         $('#close-button').attr('disabled', false);
 
@@ -22,7 +26,8 @@ $("#test-control-button").click(function () {
     }
 });
 
-$('#close-button').click(function() {
+$('#close-button').click(function () {
+    control.addTestrunData();
     control.endTest();
 });
 
@@ -30,6 +35,15 @@ $('#select-participant-button').click(function () {
     if (!control.testRunning()) {
         control.selectParticipant();
     }
+});
+
+$("#protocol").on('change keyup paste', function () {
+    control.updateProtocol($(this).val());
+});
+
+
+$("#label").on('change keyup paste', function () {
+    control.updateLabel($(this).val());
 });
 
 function showSaveIndicator() {

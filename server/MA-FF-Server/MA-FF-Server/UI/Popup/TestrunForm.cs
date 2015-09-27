@@ -24,8 +24,11 @@ namespace WebAnalyzer.UI
         private ChromiumWebBrowser myBrowser = null;
         public event TestrunEventHandler Testrun;
         public event SelectParticipantForTestEventHandler SelectParticipant;
+        public event AddTestrunDataEventHandler AddTestrunData;
 
         private ExperimentModel _experiment;
+
+        private TestrunControl _control;
 
         public TestrunForm(ExperimentModel experiment)
         {
@@ -41,16 +44,17 @@ namespace WebAnalyzer.UI
             string page = string.Format("{0}UI/HTMLResources/html/popup/testrun/testrun.html", Utilities.GetAppLocation());
             myBrowser = new ChromiumWebBrowser(page);
 
-            TestrunControl control = new TestrunControl(this);
+            _control = new TestrunControl(this);
 
-            control.Testrun += Testrun;
-            control.SelectParticipant += SelectParticipant;
+            _control.Testrun += Testrun;
+            _control.SelectParticipant += SelectParticipant;
+            _control.AddTestrunData += AddTestrunData;
 
-            control.Experiment = _experiment;
+            _control.Experiment = _experiment;
 
-            control.Browser = myBrowser;
+            _control.Browser = myBrowser;
 
-            myBrowser.RegisterJsObject("control", control);
+            myBrowser.RegisterJsObject("control", _control);
 
             myBrowser.Load(page);
             
@@ -64,6 +68,7 @@ namespace WebAnalyzer.UI
 
         private void Browser_Closing(object sender, FormClosingEventArgs e)
         {
+            _control.addTestrunData();
             //Cef.Shutdown();
         }
 

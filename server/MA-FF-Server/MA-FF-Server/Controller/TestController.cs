@@ -464,5 +464,24 @@ namespace WebAnalyzer.Controller
                 _test.AssignEventToWebpage(e.EventModel, e.EventModel.URL, e.ConnectionUID);
             }
         }
+
+        /// <summary>
+        /// Event which gets triggered to add data to the current testrun
+        /// </summary>
+        /// <param name="source">Object from which the event gets triggered.</param>
+        /// <param name="e">Data about the testrun.</param>
+        public void On_AddTestrunData(object source, AddTestrunDataEvent e)
+        {
+            if (_test != null)
+            {
+                _test.Label = e.Label;
+                _test.Protocol = e.Protocol;
+
+                // save testrun if data was already saved
+                if(_dataCollected && !saveTimer.Enabled){
+                    SaveTestrun(this, new SaveTestrunEvent());
+                }
+            }
+        }
     }
 }

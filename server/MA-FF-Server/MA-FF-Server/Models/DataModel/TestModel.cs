@@ -20,6 +20,10 @@ namespace WebAnalyzer.Models.DataModel
         private String _started;
         private String _stopped;
 
+        private String _label;
+
+        private String _protocol;
+
         private List<WebpageModel> _visitedPages = new List<WebpageModel>();
 
         private Dictionary<String, GazeModel> _unassignedPositions = new Dictionary<String, GazeModel>();
@@ -54,6 +58,18 @@ namespace WebAnalyzer.Models.DataModel
             get { return _stopped; }
             set { _stopped = value; }
         }
+
+        public String Label
+        {
+            get { return _label; }
+            set { _label = value; }
+        }
+
+        public String Protocol
+        {
+            get { return _protocol; }
+            set { _protocol = value; }
+        }
         
         public Boolean Exportable()
         {
@@ -68,6 +84,12 @@ namespace WebAnalyzer.Models.DataModel
         public XmlNode ToXML(ExperimentParticipant participant, XmlDocument xmlDoc)
         {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
+
+            XmlAttribute label = xmlDoc.CreateAttribute("label");
+
+            label.Value = this.Label;
+
+            experimentNode.Attributes.Append(label);
 
             XmlAttribute started = xmlDoc.CreateAttribute("started");
 
@@ -94,6 +116,13 @@ namespace WebAnalyzer.Models.DataModel
             visitedWebpagesCount.Value = this._visitedPages.Count.ToString();
 
             experimentNode.Attributes.Append(visitedWebpagesCount);
+
+            //add protocol
+            XmlNode protocolNode = xmlDoc.CreateElement("protocol");
+
+            protocolNode.InnerText = this.Protocol;
+
+            experimentNode.AppendChild(protocolNode);
 
             // add participant data
             experimentNode.AppendChild(participant.ToXML(xmlDoc));
@@ -132,14 +161,17 @@ namespace WebAnalyzer.Models.DataModel
                     case "stopped":
                         test.Stopped = attr.Value;
                         break;
+                    case "label":
+                        test.Label = attr.Value;
+                        break;
                 }
             }
 
-            foreach (XmlNode childs in experimentNode.ChildNodes)
+            foreach (XmlNode child in experimentNode.ChildNodes)
             {
-                if (childs.Name == "webpages")
+                if (child.Name == "webpages")
                 {
-                    foreach (XmlNode webpage in childs)
+                    foreach (XmlNode webpage in child)
                     {
                         WebpageModel page = WebpageModel.LoadFromXML(webpage);
 
@@ -148,6 +180,10 @@ namespace WebAnalyzer.Models.DataModel
                             test._visitedPages.Add(page);
                         }
                     }
+                }
+                else if (child.Name == "protocol")
+                {
+                    test.Protocol = child.InnerText;
                 }
             }
 

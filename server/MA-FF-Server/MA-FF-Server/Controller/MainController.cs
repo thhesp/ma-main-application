@@ -339,6 +339,7 @@ namespace WebAnalyzer.Controller
                 TestrunForm testrun = new TestrunForm(_currentExperiment);
                 testrun.Testrun += On_TestrunEvent;
                 testrun.SelectParticipant += On_SelectParticipantForTest;
+                testrun.AddTestrunData += _testController.On_AddTestrunData;
 
                 if (testrun.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {

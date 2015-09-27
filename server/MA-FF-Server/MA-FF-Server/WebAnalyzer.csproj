@@ -151,6 +151,7 @@
   <ItemGroup>
     <Compile Include="Controller\LoadController.cs" />
     <Compile Include="Controller\MainController.cs" />
+    <Compile Include="Events\AddTestrunDataEvent.cs" />
     <Compile Include="Events\AddTrackingEvent.cs" />
     <Compile Include="Events\AddBrowserEvent.cs" />
     <Compile Include="Events\AddWebpageEvent.cs" />

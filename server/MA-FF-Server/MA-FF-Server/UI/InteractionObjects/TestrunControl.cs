@@ -17,6 +17,7 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         public event TestrunEventHandler Testrun;
         public event SelectParticipantForTestEventHandler SelectParticipant;
+        public event AddTestrunDataEventHandler AddTestrunData;
 
         private TestrunForm _form;
         private ExperimentModel _exp;
@@ -24,6 +25,10 @@ namespace WebAnalyzer.UI.InteractionObjects
         private Boolean _running = false;
 
         private ExperimentParticipant _participant;
+
+
+        private String _label;
+        private String _protocol;
 
         public TestrunControl(TestrunForm form)
         {
@@ -34,6 +39,31 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             get { return _exp; }
             set { _exp = value; }
+        }
+
+        public void updateLabel(String label)
+        {
+            _label = label;
+        }
+
+        public void updateProtocol(String protocol)
+        {
+            _protocol = protocol;
+        }
+
+        public String getLabel()
+        {
+            return _label;
+        }
+
+        public String getProtocol()
+        {
+            return _protocol;
+        }
+
+        public void addTestrunData()
+        {
+            AddTestrunData(this, new AddTestrunDataEvent(_label, _protocol));
         }
 
         public void endTest()
