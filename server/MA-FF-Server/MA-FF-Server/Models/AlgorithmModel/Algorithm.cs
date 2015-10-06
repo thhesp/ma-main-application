@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using WebAnalyzer.Models.AnalysisModel;
 using WebAnalyzer.Models.DataModel;
 using WebAnalyzer.Util;
@@ -14,6 +15,8 @@ namespace WebAnalyzer.Models.AlgorithmModel
         public enum ALGORITHM_TYPES { DISTANCE, IVIEW_EVENTS };
 
         public abstract List<FixationModel> ExtractFixation(List<GazeModel> positions, String eye);
+
+        public abstract XmlNode ToXML(XmlDocument xmlDoc);
 
         public List<SaccadeModel> ExtractSaccades(List<GazeModel> positions, String eye)
         {

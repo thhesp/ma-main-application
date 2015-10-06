@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using WebAnalyzer.Models.AnalysisModel;
 using WebAnalyzer.Models.DataModel;
 using WebAnalyzer.Util;
@@ -128,6 +129,29 @@ namespace WebAnalyzer.Models.AlgorithmModel
             
 
             return fixations;
+        }
+
+        public override XmlNode ToXML(XmlDocument xmlDoc)
+        {
+            XmlNode algorithm = xmlDoc.CreateElement("distance");
+
+            /* minimum duration */
+
+            XmlAttribute minDuration = xmlDoc.CreateAttribute("minimum-duration");
+
+            minDuration.Value = this.MinimumDuration.ToString();
+
+            algorithm.Attributes.Append(minDuration);
+
+            /* accepatable deviation */
+
+            XmlAttribute acceptableDeviation = xmlDoc.CreateAttribute("acceptable-deviation");
+
+            acceptableDeviation.Value = this.AccetableDeviations.ToString();
+
+            algorithm.Attributes.Append(acceptableDeviation);
+
+            return algorithm;
         }
     }
 }

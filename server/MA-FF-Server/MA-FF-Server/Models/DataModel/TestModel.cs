@@ -383,7 +383,7 @@ namespace WebAnalyzer.Models.DataModel
             return durations;
         }
 
-        public XmlNode GenerateFixationXML(ExperimentParticipant participant, XmlDocument xmlDoc, Boolean includeSingleGazeData)
+        public XmlNode GenerateFixationXML(ExperimentParticipant participant, Algorithm algorithm, XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
 
@@ -416,6 +416,13 @@ namespace WebAnalyzer.Models.DataModel
 
             //add participant data
             experimentNode.AppendChild(participant.ToXML(xmlDoc));
+
+            //add algorithm data
+            XmlNode algorithmNode = xmlDoc.CreateElement("algorithm");
+
+            algorithmNode.AppendChild(algorithm.ToXML(xmlDoc));
+
+            experimentNode.AppendChild(algorithmNode);
 
             //add experiment data
             XmlNode webpagesNode = xmlDoc.CreateElement("webpages");
@@ -430,7 +437,7 @@ namespace WebAnalyzer.Models.DataModel
             return experimentNode;
         }
 
-        public XmlNode GenerateAOIXML(ExperimentSettings settings, ExperimentParticipant participant, XmlDocument xmlDoc, Boolean includeSingleGazeData)
+        public XmlNode GenerateAOIXML(ExperimentSettings settings, ExperimentParticipant participant, Algorithm algorithm, XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
 
@@ -460,11 +467,18 @@ namespace WebAnalyzer.Models.DataModel
 
             experimentNode.Attributes.Append(visitedWebpagesCount);
 
-            //add aoi rules
-            experimentNode.AppendChild(settings.ToXML(xmlDoc));
-
             //add participant data
             experimentNode.AppendChild(participant.ToXML(xmlDoc));
+
+            //add algorithm data
+            XmlNode algorithmNode = xmlDoc.CreateElement("algorithm");
+
+            algorithmNode.AppendChild(algorithm.ToXML(xmlDoc));
+
+            experimentNode.AppendChild(algorithmNode);
+
+            //add aoi rules
+            experimentNode.AppendChild(settings.ToXML(xmlDoc));
 
             //add experiment data
             XmlNode webpagesNode = xmlDoc.CreateElement("webpages");
@@ -479,10 +493,10 @@ namespace WebAnalyzer.Models.DataModel
             return experimentNode;
         }
 
-        public XmlNode GenerateSaccadesXML(ExperimentParticipant participant, XmlDocument xmlDoc, Boolean includeSingleGazeData)
+        public XmlNode GenerateSaccadesXML(ExperimentParticipant participant, Algorithm algorithm, XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
-
+            
 
             XmlAttribute started = xmlDoc.CreateAttribute("started");
 
@@ -512,6 +526,13 @@ namespace WebAnalyzer.Models.DataModel
 
             //add participant data
             experimentNode.AppendChild(participant.ToXML(xmlDoc));
+
+            //add algorithm data
+            XmlNode algorithmNode = xmlDoc.CreateElement("algorithm");
+
+            algorithmNode.AppendChild(algorithm.ToXML(xmlDoc));
+
+            experimentNode.AppendChild(algorithmNode);
 
             //add experiment data
             XmlNode webpagesNode = xmlDoc.CreateElement("webpages");

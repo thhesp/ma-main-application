@@ -10,6 +10,7 @@ using WebAnalyzer.Util;
 using WebAnalyzer.Models.SettingsModel;
 using WebAnalyzer.Models.DataModel;
 using System.IO;
+using WebAnalyzer.Models.AlgorithmModel;
 
 namespace WebAnalyzer.Controller
 {
@@ -334,11 +335,13 @@ namespace WebAnalyzer.Controller
         /// Export the given testrun fixations to the given directory and filename with the given format.
         /// </summary>
         /// <param name="testrun">The testdata</param>
+        /// <param name="participant">The current participant</param>
+        /// <param name="algorithm">The used algorithm while generating the fixations</param>
         /// <param name="dir">Directory to export to</param>
         /// <param name="filename">Filename to use</param>
         /// <param name="format">Format in which to save the data</param>
         /// <param name="includeGazeData">Should the export contain data about the single gazes</param>
-        public static Boolean SaveExperimentFixations(TestModel testrun, ExperimentParticipant participant, String dir, String filename, EXPORT_FORMATS format, Boolean includeGazeData)
+        public static Boolean SaveExperimentFixations(TestModel testrun, ExperimentParticipant participant, Algorithm algorithm, String dir, String filename, EXPORT_FORMATS format, Boolean includeGazeData)
         {
             if (Directory.Exists(dir))
             {
@@ -351,7 +354,7 @@ namespace WebAnalyzer.Controller
 
                         xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", null, null));;
 
-                        xmlDoc.AppendChild(testrun.GenerateFixationXML(participant, xmlDoc, includeGazeData));
+                        xmlDoc.AppendChild(testrun.GenerateFixationXML(participant, algorithm, xmlDoc, includeGazeData));
 
                         xmlDoc.Save(dir + "\\" + filename + "-fixations.xml");
                         break;
@@ -375,11 +378,12 @@ namespace WebAnalyzer.Controller
         /// <param name="experiment">The current experiment</param>
         /// <param name="testrun">The testdata</param>
         /// <param name="participant">The current participant</param>
+        /// <param name="algorithm">The used algorithm while generating the aoi</param>
         /// <param name="dir">Directory to export to</param>
         /// <param name="filename">Filename to use</param>
         /// <param name="format">Format in which to save the data</param>
         /// <param name="includeGazeData">Should the export contain data about the single gazes</param>
-        public static Boolean SaveExperimentAOI(ExperimentModel experiment, TestModel testrun, ExperimentParticipant participant, String dir, String filename, EXPORT_FORMATS format, Boolean includeGazeData)
+        public static Boolean SaveExperimentAOI(ExperimentModel experiment, TestModel testrun, ExperimentParticipant participant, Algorithm algorithm, String dir, String filename, EXPORT_FORMATS format, Boolean includeGazeData)
         {
             if (Directory.Exists(dir))
             {
@@ -392,7 +396,7 @@ namespace WebAnalyzer.Controller
 
                         xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", null, null));;
 
-                        xmlDoc.AppendChild(testrun.GenerateAOIXML(experiment.Settings, participant, xmlDoc, includeGazeData));
+                        xmlDoc.AppendChild(testrun.GenerateAOIXML(experiment.Settings, participant, algorithm, xmlDoc, includeGazeData));
 
                         xmlDoc.Save(dir + "\\" + filename + "-aois.xml");
                         break;
@@ -414,11 +418,13 @@ namespace WebAnalyzer.Controller
         /// Export the given testrun saccades to the given directory and filename with the given format.
         /// </summary>
         /// <param name="testrun">The testdata</param>
+        /// <param name="participant">The current participant</param>
+        /// <param name="algorithm">The used algorithm while generating the saccades</param>
         /// <param name="dir">Directory to export to</param>
         /// <param name="filename">Filename to use</param>
         /// <param name="format">Format in which to save the data</param>
         /// <param name="includeGazeData">Should the export contain data about the single gazes</param>
-        public static Boolean SaveExperimentSaccades(TestModel testrun, ExperimentParticipant participant, String dir, String filename, EXPORT_FORMATS format, Boolean includeGazeData)
+        public static Boolean SaveExperimentSaccades(TestModel testrun, ExperimentParticipant participant, Algorithm algorithm, String dir, String filename, EXPORT_FORMATS format, Boolean includeGazeData)
         {
             if (Directory.Exists(dir))
             {
@@ -431,7 +437,7 @@ namespace WebAnalyzer.Controller
 
                         xmlDoc.AppendChild(xmlDoc.CreateXmlDeclaration("1.0", null, null));
 
-                        xmlDoc.AppendChild(testrun.GenerateSaccadesXML(participant, xmlDoc, includeGazeData));
+                        xmlDoc.AppendChild(testrun.GenerateSaccadesXML(participant, algorithm, xmlDoc, includeGazeData));
 
                         xmlDoc.Save(dir + "\\" + filename + "-saccades.xml");
                         break;

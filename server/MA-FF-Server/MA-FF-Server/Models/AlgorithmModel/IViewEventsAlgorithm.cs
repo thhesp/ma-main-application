@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using WebAnalyzer.Models.AnalysisModel;
 using WebAnalyzer.Models.Base;
 using WebAnalyzer.Models.DataModel;
@@ -96,6 +97,13 @@ namespace WebAnalyzer.Models.AlgorithmModel
 
 
             return fixations;
+        }
+
+        public override XmlNode ToXML(XmlDocument xmlDoc)
+        {
+            XmlNode algorithm = xmlDoc.CreateElement("iview-events");
+
+            return algorithm;
         }
     }
 }

@@ -295,15 +295,15 @@ namespace WebAnalyzer.UI.InteractionObjects
             EvaluteJavaScript("hideSaveIndicator();");
         }
 
-        private void ExportData()
+        private void ExportData(Algorithm algorithm)
         {
             Boolean errorWhileExporting = false;
 
             try
             {
-                ExportController.SaveExperimentFixations(_testrun, _participant, _folderPath, _filename, _exportFormat, _containGazeData);
-                ExportController.SaveExperimentAOI(_exp, _testrun, _participant, _folderPath, _filename, _exportFormat, _containGazeData);
-                ExportController.SaveExperimentSaccades(_testrun, _participant, _folderPath, _filename, _exportFormat, _containGazeData);
+                ExportController.SaveExperimentFixations(_testrun, _participant, algorithm, _folderPath, _filename, _exportFormat, _containGazeData);
+                ExportController.SaveExperimentAOI(_exp, _testrun, _participant, algorithm, _folderPath, _filename, _exportFormat, _containGazeData);
+                ExportController.SaveExperimentSaccades(_testrun, _participant, algorithm, _folderPath, _filename, _exportFormat, _containGazeData);
             }
             catch (Exception e)
             {
@@ -340,7 +340,7 @@ namespace WebAnalyzer.UI.InteractionObjects
 
             _testrun.ExtractFixationsAndSaccades(algorithm);
 
-            ExportData();
+            ExportData(algorithm);
         }
 
         private void useIViewEvents()
@@ -359,7 +359,7 @@ namespace WebAnalyzer.UI.InteractionObjects
 
                 _testrun.ExtractFixationsAndSaccades(algorithm);
 
-                ExportData();
+                ExportData(algorithm);
             }
             else
             {
