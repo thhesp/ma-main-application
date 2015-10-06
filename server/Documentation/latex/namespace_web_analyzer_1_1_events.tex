@@ -3,96 +3,123 @@
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+class \hyperlink{class_web_analyzer_1_1_events_1_1_add_browser_event}{Add\+Browser\+Event}
+\begin{DoxyCompactList}\small\item\em Contains the data about an event which happend in the browser \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_add_connection_event}{Add\+Connection\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Informs the Connection\+Manager that a new connection has to be added to the connection queue. \end{DoxyCompactList}\item 
+class \hyperlink{class_web_analyzer_1_1_events_1_1_add_testrun_data_event}{Add\+Testrun\+Data\+Event}
+\begin{DoxyCompactList}\small\item\em Used for adding data to an testrun \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_add_tracking_event}{Add\+Tracking\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Trigger from the tracking component. Used for saving tracking events \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_add_webpage_event}{Add\+Webpage\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Event which is triggered from the connection, when a new webpage gets opened or an inactive website gets active \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_create_a_o_i_setting_event}{Create\+A\+O\+I\+Setting\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Used for saving new A\+O\+I Settings \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_create_domain_setting_event}{Create\+Domain\+Setting\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Used for actually saving the newly created domain setting \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_create_experiment_event}{Create\+Experiment\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Used for creating a new experiment \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_create_participant_event}{Create\+Participant\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Used for saving the newly created participant \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_create_rule_event}{Create\+Rule\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Used for saving the newly created setting rule \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_edit_application_settings_event}{Edit\+Application\+Settings\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Event for editing the application settings (opens the necessary window) \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event}{Edit\+Domain\+Setting\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Event which gets triggered while editing the domain settings \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event}{Edit\+Participant\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Event for editing participant \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_load_experiment_event}{Load\+Experiment\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Event which gets triggered when an experiment gets loaded from the experiment\+Wizard \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_message_sent_event}{Message\+Sent\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Event which informs the testcontroller that the message for this gaze was sent. \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event}{Prepare\+Gaze\+Data\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Event for sending gaze data from the tracking component to the testcontroller \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_save_testrun_event}{Save\+Testrun\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Event for saving the testrun \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_select_experiment_event}{Select\+Experiment\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Used for selecting an experiment from the experiment wizard \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_select_participant_for_test_event}{Select\+Participant\+For\+Test\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Used for selecting an participant for an testrun \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event}{Select\+Testrun\+To\+Load\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Event which is used for loading testrun data \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_testrun_event}{Testrun\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Event which controls the creating, starting and stopping of testruns \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_trigger_save_event}{Trigger\+Save\+Event}
-\item 
+\begin{DoxyCompactList}\small\item\em Event for triggering saves of data (to xml) \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_update_w_s_connection_count_event}{Update\+W\+S\+Connection\+Count\+Event}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Event to update the ws connection count \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+delegate void \hyperlink{namespace_web_analyzer_1_1_events_a7026c712fad5c0000a728950cb43c587}{Add\+Browser\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_add_browser_event}{Add\+Browser\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
+\begin{DoxyCompactList}\small\item\em Add\+Browser\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a902fba3fe7d4503704b73171cd38cf68}{Add\+Connection\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_add_connection_event}{Add\+Connection\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Add\+Connection\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
+delegate void \hyperlink{namespace_web_analyzer_1_1_events_af583a888201519b2fb2a3cce6723c095}{Add\+Testrun\+Data\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_add_testrun_data_event}{Add\+Testrun\+Data\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
+\begin{DoxyCompactList}\small\item\em Add\+Testrun\+Data\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_af9a78356c120c2e762b646299c47ece7}{Add\+Tracking\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_add_tracking_event}{Add\+Tracking\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Add\+Tracking\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a14e9ad6e502bcecfc5fa91d8b1fd2d1a}{Add\+Webpage\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_add_webpage_event}{Add\+Webpage\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Add\+Webpage\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a1da12d77ad447a64e9f63c4ce04040ff}{Create\+A\+O\+I\+Setting\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_create_a_o_i_setting_event}{Create\+A\+O\+I\+Setting\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Create\+A\+O\+I\+Setting\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a51e3882127acccb363a75b247db1d884}{Create\+Domain\+Setting\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_create_domain_setting_event}{Create\+Domain\+Setting\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Create\+Domain\+Setting\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a0d98385fddff10a46e47d4df06513bb1}{Create\+Experiment\+Event\+Handler} (\hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj}{Experiment\+Wizard\+Obj} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_create_experiment_event}{Create\+Experiment\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Create\+Experiment\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a0c2cd67965a3ab4b60d116945f0c6490}{Create\+Participant\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_create_participant_event}{Create\+Participant\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Create\+Participant\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a411dcf2260875859f1e6d4b3c3e3b46b}{Create\+Rule\+Eventt\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_create_rule_event}{Create\+Rule\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Create\+Rule\+Eventt\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a5fea12ab57b4d49c98080dae8ae699a6}{Edit\+Application\+Settings\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_edit_application_settings_event}{Edit\+Application\+Settings\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
-delegate void \hyperlink{namespace_web_analyzer_1_1_events_a3259c67827e152226cea5a7ddbb8ce99}{Edit\+Participant\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event}{Edit\+Participant\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Edit\+Application\+Settings\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a5fed3a7653709d0b4bd898915c660916}{Edit\+Domain\+Setting\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event}{Edit\+Domain\+Setting\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Edit\+Domain\+Setting\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
+delegate void \hyperlink{namespace_web_analyzer_1_1_events_a3259c67827e152226cea5a7ddbb8ce99}{Edit\+Participant\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event}{Edit\+Participant\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
+\begin{DoxyCompactList}\small\item\em Edit\+Participant\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a13d6989d83a09589cd3e1012c644fcfc}{Load\+Experiment\+Event\+Handler} (\hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj}{Experiment\+Wizard\+Obj} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_load_experiment_event}{Load\+Experiment\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Load\+Experiment\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_aea5ff6842ebd21bef8bcdc79762e6b3e}{Message\+Sent\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_message_sent_event}{Message\+Sent\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Message\+Sent\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a871ece28a52add18a0e49e988aae2444}{Prepare\+Gaze\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event}{Prepare\+Gaze\+Data\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Prepare\+Gaze\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a9098c4173b88eaba72d001027bf62247}{Save\+Testrun\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_save_testrun_event}{Save\+Testrun\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Save\+Testrun\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a9c2d51d41cfd94fb68f500d1f1a1bb10}{Select\+Experiment\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_select_experiment_event}{Select\+Experiment\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Select\+Experiment\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a9cc4b679de471119a1ec1586aa0540f9}{Select\+Participant\+For\+Test\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_select_participant_for_test_event}{Select\+Participant\+For\+Test\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Select\+Participant\+For\+Test\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_aa0653fa1d1d88eca5706ba8a8db7e7bb}{Select\+Testrun\+To\+Load\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event}{Select\+Testrun\+To\+Load\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Select\+Testrun\+To\+Load\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_ac749d30657662c0b107ea3e49caae8d9}{Testrun\+Event\+Handler} (\hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object}{Base\+Interaction\+Object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_testrun_event}{Testrun\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Testrun\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a8e8e2ff467a5d5522ce9d3df28198ccf}{Trigger\+Save\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_trigger_save_event}{Trigger\+Save\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Trigger\+Save\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a57dba5a59e0e}{Update\+W\+S\+Connection\+Count\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_update_w_s_connection_count_event}{Update\+W\+S\+Connection\+Count\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Update\+W\+S\+Connection\+Count\+Event\+Handler for sending the event \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
+\hypertarget{namespace_web_analyzer_1_1_events_a7026c712fad5c0000a728950cb43c587}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Add\+Browser\+Event\+Handler@{Add\+Browser\+Event\+Handler}}
+\index{Add\+Browser\+Event\+Handler@{Add\+Browser\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
+\subsubsection[{Add\+Browser\+Event\+Handler(object sender, Add\+Browser\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Add\+Browser\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf object}}]{sender, }
+\item[{{\bf Add\+Browser\+Event}}]{e}
+\end{DoxyParamCaption}
+)}\label{namespace_web_analyzer_1_1_events_a7026c712fad5c0000a728950cb43c587}
+
+
+Add\+Browser\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_add_browser_event}{Add\+Browser\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a902fba3fe7d4503704b73171cd38cf68}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Add\+Connection\+Event\+Handler@{Add\+Connection\+Event\+Handler}}
 \index{Add\+Connection\+Event\+Handler@{Add\+Connection\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Add\+Connection\+Event\+Handler(object sender, Add\+Connection\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Add\+Connection\+Event\+Handler (
@@ -101,6 +128,36 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Add\+Connection\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_a902fba3fe7d4503704b73171cd38cf68}
+
+
+Add\+Connection\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_add_connection_event}{Add\+Connection\+Event} which is sent\\
+\hline
+\end{DoxyParams}
+\hypertarget{namespace_web_analyzer_1_1_events_af583a888201519b2fb2a3cce6723c095}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Add\+Testrun\+Data\+Event\+Handler@{Add\+Testrun\+Data\+Event\+Handler}}
+\index{Add\+Testrun\+Data\+Event\+Handler@{Add\+Testrun\+Data\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
+\subsubsection[{Add\+Testrun\+Data\+Event\+Handler(object sender, Add\+Testrun\+Data\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Add\+Testrun\+Data\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf object}}]{sender, }
+\item[{{\bf Add\+Testrun\+Data\+Event}}]{e}
+\end{DoxyParamCaption}
+)}\label{namespace_web_analyzer_1_1_events_af583a888201519b2fb2a3cce6723c095}
+
+
+Add\+Testrun\+Data\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_add_testrun_data_event}{Add\+Testrun\+Data\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_af9a78356c120c2e762b646299c47ece7}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Add\+Tracking\+Event\+Handler@{Add\+Tracking\+Event\+Handler}}
 \index{Add\+Tracking\+Event\+Handler@{Add\+Tracking\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Add\+Tracking\+Event\+Handler(object sender, Add\+Tracking\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Add\+Tracking\+Event\+Handler (
@@ -109,6 +166,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Add\+Tracking\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_af9a78356c120c2e762b646299c47ece7}
+
+
+Add\+Tracking\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_add_tracking_event}{Add\+Tracking\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a14e9ad6e502bcecfc5fa91d8b1fd2d1a}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Add\+Webpage\+Event\+Handler@{Add\+Webpage\+Event\+Handler}}
 \index{Add\+Webpage\+Event\+Handler@{Add\+Webpage\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Add\+Webpage\+Event\+Handler(object sender, Add\+Webpage\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Add\+Webpage\+Event\+Handler (
@@ -117,6 +185,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Add\+Webpage\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_a14e9ad6e502bcecfc5fa91d8b1fd2d1a}
+
+
+Add\+Webpage\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_add_webpage_event}{Add\+Webpage\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a1da12d77ad447a64e9f63c4ce04040ff}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Create\+A\+O\+I\+Setting\+Event\+Handler@{Create\+A\+O\+I\+Setting\+Event\+Handler}}
 \index{Create\+A\+O\+I\+Setting\+Event\+Handler@{Create\+A\+O\+I\+Setting\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Create\+A\+O\+I\+Setting\+Event\+Handler(object sender, Create\+A\+O\+I\+Setting\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Create\+A\+O\+I\+Setting\+Event\+Handler (
@@ -125,6 +204,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Create\+A\+O\+I\+Setting\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_a1da12d77ad447a64e9f63c4ce04040ff}
+
+
+Create\+A\+O\+I\+Setting\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_create_a_o_i_setting_event}{Create\+A\+O\+I\+Setting\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a51e3882127acccb363a75b247db1d884}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Create\+Domain\+Setting\+Event\+Handler@{Create\+Domain\+Setting\+Event\+Handler}}
 \index{Create\+Domain\+Setting\+Event\+Handler@{Create\+Domain\+Setting\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Create\+Domain\+Setting\+Event\+Handler(object sender, Create\+Domain\+Setting\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Create\+Domain\+Setting\+Event\+Handler (
@@ -133,6 +223,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Create\+Domain\+Setting\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_a51e3882127acccb363a75b247db1d884}
+
+
+Create\+Domain\+Setting\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_create_domain_setting_event}{Create\+Domain\+Setting\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a0d98385fddff10a46e47d4df06513bb1}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Create\+Experiment\+Event\+Handler@{Create\+Experiment\+Event\+Handler}}
 \index{Create\+Experiment\+Event\+Handler@{Create\+Experiment\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Create\+Experiment\+Event\+Handler(\+Experiment\+Wizard\+Obj sender, Create\+Experiment\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Create\+Experiment\+Event\+Handler (
@@ -141,6 +242,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Create\+Experiment\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_a0d98385fddff10a46e47d4df06513bb1}
+
+
+Create\+Experiment\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_create_experiment_event}{Create\+Experiment\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a0c2cd67965a3ab4b60d116945f0c6490}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Create\+Participant\+Event\+Handler@{Create\+Participant\+Event\+Handler}}
 \index{Create\+Participant\+Event\+Handler@{Create\+Participant\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Create\+Participant\+Event\+Handler(object sender, Create\+Participant\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Create\+Participant\+Event\+Handler (
@@ -149,6 +261,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Create\+Participant\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_a0c2cd67965a3ab4b60d116945f0c6490}
+
+
+Create\+Participant\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_create_participant_event}{Create\+Participant\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a411dcf2260875859f1e6d4b3c3e3b46b}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Create\+Rule\+Eventt\+Handler@{Create\+Rule\+Eventt\+Handler}}
 \index{Create\+Rule\+Eventt\+Handler@{Create\+Rule\+Eventt\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Create\+Rule\+Eventt\+Handler(object sender, Create\+Rule\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Create\+Rule\+Eventt\+Handler (
@@ -157,6 +280,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Create\+Rule\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_a411dcf2260875859f1e6d4b3c3e3b46b}
+
+
+Create\+Rule\+Eventt\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_create_rule_event}{Create\+Rule\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a5fea12ab57b4d49c98080dae8ae699a6}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Edit\+Application\+Settings\+Event\+Handler@{Edit\+Application\+Settings\+Event\+Handler}}
 \index{Edit\+Application\+Settings\+Event\+Handler@{Edit\+Application\+Settings\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Edit\+Application\+Settings\+Event\+Handler(object sender, Edit\+Application\+Settings\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Edit\+Application\+Settings\+Event\+Handler (
@@ -165,6 +299,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Edit\+Application\+Settings\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_a5fea12ab57b4d49c98080dae8ae699a6}
+
+
+Edit\+Application\+Settings\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_edit_application_settings_event}{Edit\+Application\+Settings\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a5fed3a7653709d0b4bd898915c660916}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Edit\+Domain\+Setting\+Event\+Handler@{Edit\+Domain\+Setting\+Event\+Handler}}
 \index{Edit\+Domain\+Setting\+Event\+Handler@{Edit\+Domain\+Setting\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Edit\+Domain\+Setting\+Event\+Handler(object sender, Edit\+Domain\+Setting\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Edit\+Domain\+Setting\+Event\+Handler (
@@ -173,6 +318,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Edit\+Domain\+Setting\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_a5fed3a7653709d0b4bd898915c660916}
+
+
+Edit\+Domain\+Setting\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event}{Edit\+Domain\+Setting\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a3259c67827e152226cea5a7ddbb8ce99}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Edit\+Participant\+Event\+Handler@{Edit\+Participant\+Event\+Handler}}
 \index{Edit\+Participant\+Event\+Handler@{Edit\+Participant\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Edit\+Participant\+Event\+Handler(object sender, Edit\+Participant\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Edit\+Participant\+Event\+Handler (
@@ -181,6 +337,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Edit\+Participant\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_a3259c67827e152226cea5a7ddbb8ce99}
+
+
+Edit\+Participant\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event}{Edit\+Participant\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a13d6989d83a09589cd3e1012c644fcfc}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Load\+Experiment\+Event\+Handler@{Load\+Experiment\+Event\+Handler}}
 \index{Load\+Experiment\+Event\+Handler@{Load\+Experiment\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Load\+Experiment\+Event\+Handler(\+Experiment\+Wizard\+Obj sender, Load\+Experiment\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Load\+Experiment\+Event\+Handler (
@@ -189,6 +356,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Load\+Experiment\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_a13d6989d83a09589cd3e1012c644fcfc}
+
+
+Load\+Experiment\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_load_experiment_event}{Load\+Experiment\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_aea5ff6842ebd21bef8bcdc79762e6b3e}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Message\+Sent\+Event\+Handler@{Message\+Sent\+Event\+Handler}}
 \index{Message\+Sent\+Event\+Handler@{Message\+Sent\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Message\+Sent\+Event\+Handler(object sender, Message\+Sent\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Message\+Sent\+Event\+Handler (
@@ -197,6 +375,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Message\+Sent\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_aea5ff6842ebd21bef8bcdc79762e6b3e}
+
+
+Message\+Sent\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_message_sent_event}{Message\+Sent\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a871ece28a52add18a0e49e988aae2444}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Prepare\+Gaze\+Event\+Handler@{Prepare\+Gaze\+Event\+Handler}}
 \index{Prepare\+Gaze\+Event\+Handler@{Prepare\+Gaze\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Prepare\+Gaze\+Event\+Handler(object sender, Prepare\+Gaze\+Data\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Event\+Handler (
@@ -205,6 +394,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Prepare\+Gaze\+Data\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_a871ece28a52add18a0e49e988aae2444}
+
+
+Prepare\+Gaze\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event}{Prepare\+Gaze\+Data\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a9098c4173b88eaba72d001027bf62247}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Save\+Testrun\+Event\+Handler@{Save\+Testrun\+Event\+Handler}}
 \index{Save\+Testrun\+Event\+Handler@{Save\+Testrun\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Save\+Testrun\+Event\+Handler(object sender, Save\+Testrun\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Save\+Testrun\+Event\+Handler (
@@ -213,6 +413,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Save\+Testrun\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_a9098c4173b88eaba72d001027bf62247}
+
+
+Save\+Testrun\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_save_testrun_event}{Save\+Testrun\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a9c2d51d41cfd94fb68f500d1f1a1bb10}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Select\+Experiment\+Event\+Handler@{Select\+Experiment\+Event\+Handler}}
 \index{Select\+Experiment\+Event\+Handler@{Select\+Experiment\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Select\+Experiment\+Event\+Handler(object sender, Select\+Experiment\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Select\+Experiment\+Event\+Handler (
@@ -221,6 +432,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Select\+Experiment\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_a9c2d51d41cfd94fb68f500d1f1a1bb10}
+
+
+Select\+Experiment\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_select_experiment_event}{Select\+Experiment\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a9cc4b679de471119a1ec1586aa0540f9}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Select\+Participant\+For\+Test\+Event\+Handler@{Select\+Participant\+For\+Test\+Event\+Handler}}
 \index{Select\+Participant\+For\+Test\+Event\+Handler@{Select\+Participant\+For\+Test\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Select\+Participant\+For\+Test\+Event\+Handler(object sender, Select\+Participant\+For\+Test\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Select\+Participant\+For\+Test\+Event\+Handler (
@@ -229,6 +451,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Select\+Participant\+For\+Test\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_a9cc4b679de471119a1ec1586aa0540f9}
+
+
+Select\+Participant\+For\+Test\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_select_participant_for_test_event}{Select\+Participant\+For\+Test\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_aa0653fa1d1d88eca5706ba8a8db7e7bb}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Select\+Testrun\+To\+Load\+Event\+Handler@{Select\+Testrun\+To\+Load\+Event\+Handler}}
 \index{Select\+Testrun\+To\+Load\+Event\+Handler@{Select\+Testrun\+To\+Load\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Select\+Testrun\+To\+Load\+Event\+Handler(object sender, Select\+Testrun\+To\+Load\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Select\+Testrun\+To\+Load\+Event\+Handler (
@@ -237,6 +470,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Select\+Testrun\+To\+Load\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_aa0653fa1d1d88eca5706ba8a8db7e7bb}
+
+
+Select\+Testrun\+To\+Load\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event}{Select\+Testrun\+To\+Load\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_ac749d30657662c0b107ea3e49caae8d9}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Testrun\+Event\+Handler@{Testrun\+Event\+Handler}}
 \index{Testrun\+Event\+Handler@{Testrun\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Testrun\+Event\+Handler(\+Base\+Interaction\+Object sender, Testrun\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Testrun\+Event\+Handler (
@@ -245,6 +489,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Testrun\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_ac749d30657662c0b107ea3e49caae8d9}
+
+
+Testrun\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_testrun_event}{Testrun\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a8e8e2ff467a5d5522ce9d3df28198ccf}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Trigger\+Save\+Event\+Handler@{Trigger\+Save\+Event\+Handler}}
 \index{Trigger\+Save\+Event\+Handler@{Trigger\+Save\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Trigger\+Save\+Event\+Handler(object sender, Trigger\+Save\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Trigger\+Save\+Event\+Handler (
@@ -253,6 +508,17 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Trigger\+Save\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_a8e8e2ff467a5d5522ce9d3df28198ccf}
+
+
+Trigger\+Save\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_trigger_save_event}{Trigger\+Save\+Event} which is sent\\
+\hline
+\end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a57dba5a59e0e}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Update\+W\+S\+Connection\+Count\+Event\+Handler@{Update\+W\+S\+Connection\+Count\+Event\+Handler}}
 \index{Update\+W\+S\+Connection\+Count\+Event\+Handler@{Update\+W\+S\+Connection\+Count\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
 \subsubsection[{Update\+W\+S\+Connection\+Count\+Event\+Handler(object sender, Update\+W\+S\+Connection\+Count\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Update\+W\+S\+Connection\+Count\+Event\+Handler (
@@ -261,3 +527,14 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a
 \item[{{\bf Update\+W\+S\+Connection\+Count\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a57dba5a59e0e}
+
+
+Update\+W\+S\+Connection\+Count\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_update_w_s_connection_count_event}{Update\+W\+S\+Connection\+Count\+Event} which is sent\\
+\hline
+\end{DoxyParams}

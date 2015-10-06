@@ -1,0 +1,186 @@
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model}{}\section{Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model Class Reference}
+\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model}\index{Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model@{Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model}}
+Inheritance diagram for Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.937716cm]{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1a4a0f40cfe65595918f6a41023798ff}{T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S} \{ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1a4a0f40cfe65595918f6a41023798ffaf19bd0844e53369373385609e28dbf84}{T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S.\+eye}, 
+\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1a4a0f40cfe65595918f6a41023798ffa40203abe6e81ed98cbc97cdd6ec4f144}{T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S.\+mouse}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2875208b4f4b0ed643593152f4ec025c}{Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ae9cca2b18274747b70b51f0d1cc37532}{connect} ()
+\item 
+abstract \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2875208b4f4b0ed643593152f4ec025c}{Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1540c4d92ded2ce32aa485eafd9e3a12}{disconnect} ()
+\item 
+abstract void \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a772a6b05f3976114c432d746510c3ceb}{start\+Tracking} ()
+\item 
+abstract void \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a22286c5202de039794f020d3fed12ae1}{stop\+Tracking} ()
+\item 
+abstract double \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ab79ef77eec8b92c3c7e536e25642af56}{get\+Tracking\+Frequency} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model}{Base\+Tracking\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ae86fbecc03c9d2a2813b684ee2f2c8ee}{Get\+Tracking\+Model} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a841c667811d9923a91ca7837f72f8f19}{trigger\+Gaze\+Event} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} left\+Eye, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} right\+Eye)
+\item 
+void \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a497edbc82520c1c9582d2747baa6312f}{trigger\+Tracking\+Event} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event}{Raw\+Tracking\+Event} raw\+Event)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2875208b4f4b0ed643593152f4ec025c}{Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_aecba61dd2b171d2f6dcf3abc40229d39}{\+\_\+connection\+Status} = Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S.\+disconnected
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2875208b4f4b0ed643593152f4ec025c}{Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_aea243d67939ea7e2e62adbdecc525026}{Connection\+Status}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Prepare\+Gaze\+Event\+Handler \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_acf17194aca2875e9f69c15772af39417}{Prepare\+Gaze}
+\begin{DoxyCompactList}\small\item\em Event which is used for sending data to the test controller. \end{DoxyCompactList}\item 
+Add\+Tracking\+Event\+Handler \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a3c003ad3cd3902810994f53409a6aeb7}{Add\+Tracking\+Event}
+\begin{DoxyCompactList}\small\item\em Event which is used for sending events to the test controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1a4a0f40cfe65595918f6a41023798ff}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S@{T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S}}
+\index{T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S@{T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
+\subsubsection[{T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S}\hspace{0.3cm}{\ttfamily [strong]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1a4a0f40cfe65595918f6a41023798ff}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{eye@{eye}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!eye@{eye}}\item[{\em 
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1a4a0f40cfe65595918f6a41023798ffaf19bd0844e53369373385609e28dbf84}{}eye\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1a4a0f40cfe65595918f6a41023798ffaf19bd0844e53369373385609e28dbf84}
+}]\index{mouse@{mouse}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!mouse@{mouse}}\item[{\em 
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1a4a0f40cfe65595918f6a41023798ffa40203abe6e81ed98cbc97cdd6ec4f144}{}mouse\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1a4a0f40cfe65595918f6a41023798ffa40203abe6e81ed98cbc97cdd6ec4f144}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ae9cca2b18274747b70b51f0d1cc37532}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!connect@{connect}}
+\index{connect@{connect}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
+\subsubsection[{connect()}]{\setlength{\rightskip}{0pt plus 5cm}abstract {\bf Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+connect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ae9cca2b18274747b70b51f0d1cc37532}
+
+
+Implemented in \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a24496245bd949730f0f56d328ff74690}{Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model}, and \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_a147d911ce601efe3bf779cebaed106e9}{Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model}.
+
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1540c4d92ded2ce32aa485eafd9e3a12}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
+\subsubsection[{disconnect()}]{\setlength{\rightskip}{0pt plus 5cm}abstract {\bf Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+disconnect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1540c4d92ded2ce32aa485eafd9e3a12}
+
+
+Implemented in \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a8282209f61b0a45f09551ffe72cab136}{Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model}, and \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_a7928a4615bb62b6e4b273340bd224554}{Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model}.
+
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ab79ef77eec8b92c3c7e536e25642af56}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!get\+Tracking\+Frequency@{get\+Tracking\+Frequency}}
+\index{get\+Tracking\+Frequency@{get\+Tracking\+Frequency}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
+\subsubsection[{get\+Tracking\+Frequency()}]{\setlength{\rightskip}{0pt plus 5cm}abstract double Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+get\+Tracking\+Frequency (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ab79ef77eec8b92c3c7e536e25642af56}
+
+
+Implemented in \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a974f53dd33c205cf772d98eeb7adddd0}{Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model}, and \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_aa46691d72c894f0ba51943e37c8ce0a0}{Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model}.
+
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ae86fbecc03c9d2a2813b684ee2f2c8ee}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!Get\+Tracking\+Model@{Get\+Tracking\+Model}}
+\index{Get\+Tracking\+Model@{Get\+Tracking\+Model}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
+\subsubsection[{Get\+Tracking\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Base\+Tracking\+Model} Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+Get\+Tracking\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ae86fbecc03c9d2a2813b684ee2f2c8ee}
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a772a6b05f3976114c432d746510c3ceb}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!start\+Tracking@{start\+Tracking}}
+\index{start\+Tracking@{start\+Tracking}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
+\subsubsection[{start\+Tracking()}]{\setlength{\rightskip}{0pt plus 5cm}abstract void Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+start\+Tracking (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a772a6b05f3976114c432d746510c3ceb}
+
+
+Implemented in \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a73bde5a5915a3a33a368e5bdf1b203ca}{Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model}, and \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_ad2d20d7f2f302ef22e40da86a18dcaf9}{Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model}.
+
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a22286c5202de039794f020d3fed12ae1}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!stop\+Tracking@{stop\+Tracking}}
+\index{stop\+Tracking@{stop\+Tracking}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
+\subsubsection[{stop\+Tracking()}]{\setlength{\rightskip}{0pt plus 5cm}abstract void Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+stop\+Tracking (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a22286c5202de039794f020d3fed12ae1}
+
+
+Implemented in \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_ae65a98fe8a1ccd24838f7af022edd174}{Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model}, and \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_a025e9d3e6918ebe7b6a1fd1ccf019b8a}{Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model}.
+
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a841c667811d9923a91ca7837f72f8f19}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!trigger\+Gaze\+Event@{trigger\+Gaze\+Event}}
+\index{trigger\+Gaze\+Event@{trigger\+Gaze\+Event}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
+\subsubsection[{trigger\+Gaze\+Event(\+Base\+Tracking\+Data left\+Eye, Base\+Tracking\+Data right\+Eye)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+trigger\+Gaze\+Event (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\+Tracking\+Data}}]{left\+Eye, }
+\item[{{\bf Base\+Tracking\+Data}}]{right\+Eye}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a841c667811d9923a91ca7837f72f8f19}
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a497edbc82520c1c9582d2747baa6312f}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!trigger\+Tracking\+Event@{trigger\+Tracking\+Event}}
+\index{trigger\+Tracking\+Event@{trigger\+Tracking\+Event}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
+\subsubsection[{trigger\+Tracking\+Event(\+Raw\+Tracking\+Event raw\+Event)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+trigger\+Tracking\+Event (
+\begin{DoxyParamCaption}
+\item[{{\bf Raw\+Tracking\+Event}}]{raw\+Event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a497edbc82520c1c9582d2747baa6312f}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_aecba61dd2b171d2f6dcf3abc40229d39}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!\+\_\+connection\+Status@{\+\_\+connection\+Status}}
+\index{\+\_\+connection\+Status@{\+\_\+connection\+Status}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
+\subsubsection[{\+\_\+connection\+Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+\_\+connection\+Status = Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S.\+disconnected\hspace{0.3cm}{\ttfamily [protected]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_aecba61dd2b171d2f6dcf3abc40229d39}
+
+
+\subsection{Property Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_aea243d67939ea7e2e62adbdecc525026}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!Connection\+Status@{Connection\+Status}}
+\index{Connection\+Status@{Connection\+Status}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
+\subsubsection[{Connection\+Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+Connection\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_aea243d67939ea7e2e62adbdecc525026}
+
+
+\subsection{Event Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a3c003ad3cd3902810994f53409a6aeb7}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!Add\+Tracking\+Event@{Add\+Tracking\+Event}}
+\index{Add\+Tracking\+Event@{Add\+Tracking\+Event}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
+\subsubsection[{Add\+Tracking\+Event}]{\setlength{\rightskip}{0pt plus 5cm}Add\+Tracking\+Event\+Handler Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+Add\+Tracking\+Event}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a3c003ad3cd3902810994f53409a6aeb7}
+
+
+Event which is used for sending events to the test controller. 
+
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_acf17194aca2875e9f69c15772af39417}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!Prepare\+Gaze@{Prepare\+Gaze}}
+\index{Prepare\+Gaze@{Prepare\+Gaze}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
+\subsubsection[{Prepare\+Gaze}]{\setlength{\rightskip}{0pt plus 5cm}Prepare\+Gaze\+Event\+Handler Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+Prepare\+Gaze}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_acf17194aca2875e9f69c15772af39417}
+
+
+Event which is used for sending data to the test controller. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+M\+A-\/\+F\+F-\/\+Server/\+M\+A-\/\+F\+F-\/\+Server/\+Models/\+Base/\hyperlink{_base_tracking_model_8cs}{Base\+Tracking\+Model.\+cs}\end{DoxyCompactItemize}

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['webanalyzer',['WebAnalyzer',['../class_web_analyzer_1_1_web_analyzer.html#ac3c4730e70398623631f9d17daefc653',1,'WebAnalyzer::WebAnalyzer']]],
-  ['webpagemodel',['WebpageModel',['../class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#ae5054b6875654937144914f592802d9d',1,'WebAnalyzer.Models.DataModel.WebpageModel.WebpageModel(String url, String visitTimestamp)'],['../class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a613cfd755d739701df6cd2b05190d72f',1,'WebAnalyzer.Models.DataModel.WebpageModel.WebpageModel()']]],
+  ['webpagemodel',['WebpageModel',['../class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a2f7f76f4128b22b839f8858d40413067',1,'WebAnalyzer.Models.DataModel.WebpageModel.WebpageModel(String url, String connectionUID, String visitTimestamp)'],['../class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a613cfd755d739701df6cd2b05190d72f',1,'WebAnalyzer.Models.DataModel.WebpageModel.WebpageModel()']]],
   ['websocketconnection',['WebsocketConnection',['../class_web_analyzer_1_1_server_1_1_websocket_connection.html#af4ada0b7f2d032ad42da1d9238619ebd',1,'WebAnalyzer::Server::WebsocketConnection']]],
   ['websocketconnectionsobserver',['WebsocketConnectionsObserver',['../class_web_analyzer_1_1_server_1_1_websocket_connections_observer.html#ab58aac7b482c3830fe3b6011f5817252',1,'WebAnalyzer::Server::WebsocketConnectionsObserver']]],
   ['websocketserver',['WebsocketServer',['../class_web_analyzer_1_1_server_1_1_websocket_server.html#a3fddc08875cc188f4fb799ca4ccfe6ad',1,'WebAnalyzer::Server::WebsocketServer']]],

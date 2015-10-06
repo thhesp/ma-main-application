@@ -1,5 +1,7 @@
 var namespace_web_analyzer_1_1_models_1_1_base =
 [
+    [ "BaseTrackingData", "class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data.html", "class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data" ],
+    [ "BaseTrackingModel", "class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model.html", "class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model" ],
     [ "BasicData", "class_web_analyzer_1_1_models_1_1_base_1_1_basic_data.html", "class_web_analyzer_1_1_models_1_1_base_1_1_basic_data" ],
     [ "ExperimentModel", "class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html", "class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model" ],
     [ "ExperimentParticipant", "class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant.html", "class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant" ],

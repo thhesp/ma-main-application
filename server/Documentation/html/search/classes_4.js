@@ -12,6 +12,7 @@ var searchData=
   ['editruleform',['EditRuleForm',['../class_web_analyzer_1_1_u_i_1_1_edit_rule_form.html',1,'WebAnalyzer::UI']]],
   ['errormessage',['ErrorMessage',['../class_web_analyzer_1_1_models_1_1_message_model_1_1_error_message.html',1,'WebAnalyzer::Models::MessageModel']]],
   ['errormessagehandler',['ErrorMessageHandler',['../class_web_analyzer_1_1_server_1_1_message_handler_1_1_error_message_handler.html',1,'WebAnalyzer::Server::MessageHandler']]],
+  ['eventmessage',['EventMessage',['../class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message.html',1,'WebAnalyzer::Models::MessageModel']]],
   ['eventmessagehandler',['EventMessageHandler',['../class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler.html',1,'WebAnalyzer::Server::MessageHandler']]],
   ['eventstruct',['EventStruct',['../struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_event_struct.html',1,'WebAnalyzer::EyeTracking::EyeTrackingController']]],
   ['experimentmodel',['ExperimentModel',['../class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html',1,'WebAnalyzer::Models::Base']]],

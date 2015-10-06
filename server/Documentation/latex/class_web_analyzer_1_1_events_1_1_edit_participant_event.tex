@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_events_1_1_edit_participant_event}{}\section{Web\+Analyzer.\+Events.\+Edit\+Participant\+Event Class Reference}
 \label{class_web_analyzer_1_1_events_1_1_edit_participant_event}\index{Web\+Analyzer.\+Events.\+Edit\+Participant\+Event@{Web\+Analyzer.\+Events.\+Edit\+Participant\+Event}}
+
+
+Event for editing participant  
+
+
 Inheritance diagram for Web\+Analyzer.\+Events.\+Edit\+Participant\+Event\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -13,15 +18,15 @@ enum \hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event_a726475
 \hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event_a72647511d8ac40197121e93d14913a1aa7dce122004969d56ae2e0245cb754d35}{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S.\+Edit} = 1, 
 \hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event_a72647511d8ac40197121e93d14913a1aa5fb63579fc981698f97d55bfecb213ea}{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S.\+Copy} = 2, 
 \hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event_a72647511d8ac40197121e93d14913a1aaf2a6c498fb90ee345d997f888fce3b18}{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S.\+Delete} = 3
- \}
+ \}\begin{DoxyCompactList}\small\item\em Different possible Edit types \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event_a060c5e39919bd1efe735bd5fc9f7186a}{Edit\+Participant\+Event} (\hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event_a72647511d8ac40197121e93d14913a1a}{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S} type, String uid)
-\item 
-\hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event_a5567b80550abf0c9036094cd8f9c68dd}{Edit\+Participant\+Event} (\hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event_a72647511d8ac40197121e93d14913a1a}{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S} type)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Event\+Constructor \end{DoxyCompactList}\item 
+\hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event_ab3be8191a9ca9f6037ae024fb4d21802}{Edit\+Participant\+Event} ()
+\begin{DoxyCompactList}\small\item\em Event\+Constructor used for creating an participant \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -33,15 +38,24 @@ String \hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event_acef7
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event_a83110c23b64e39448d037e55486712b4}{\+\_\+uid}
-\item 
+\begin{DoxyCompactList}\small\item\em U\+I\+D of the participant \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event_a72647511d8ac40197121e93d14913a1a}{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S} \hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event_abe6fa80e6542cba6fbd7483ecffd154f}{\+\_\+type}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Edit type of the event \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Event for editing participant 
+
 
 
 \subsection{Member Enumeration Documentation}
 \hypertarget{class_web_analyzer_1_1_events_1_1_edit_participant_event_a72647511d8ac40197121e93d14913a1a}{}\index{Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event}!E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S@{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S}}
 \index{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S@{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S}!Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event}}
 \subsubsection[{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Web\+Analyzer.\+Events.\+Edit\+Participant\+Event.\+E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S}\hspace{0.3cm}{\ttfamily [strong]}}\label{class_web_analyzer_1_1_events_1_1_edit_participant_event_a72647511d8ac40197121e93d14913a1a}
+
+
+Different possible Edit types 
+
 \begin{Desc}
 \item[Enumerator]\par
 \begin{description}
@@ -66,22 +80,45 @@ String \hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event_a8311
 \item[{String}]{uid}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_events_1_1_edit_participant_event_a060c5e39919bd1efe735bd5fc9f7186a}
-\hypertarget{class_web_analyzer_1_1_events_1_1_edit_participant_event_a5567b80550abf0c9036094cd8f9c68dd}{}\index{Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event}!Edit\+Participant\+Event@{Edit\+Participant\+Event}}
+
+
+Event\+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Edit type of the event\\
+\hline
+{\em uid} & U\+I\+D of the participant\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_web_analyzer_1_1_events_1_1_edit_participant_event_ab3be8191a9ca9f6037ae024fb4d21802}{}\index{Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event}!Edit\+Participant\+Event@{Edit\+Participant\+Event}}
 \index{Edit\+Participant\+Event@{Edit\+Participant\+Event}!Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event}}
-\subsubsection[{Edit\+Participant\+Event(\+E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S type)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Events.\+Edit\+Participant\+Event.\+Edit\+Participant\+Event (
+\subsubsection[{Edit\+Participant\+Event()}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Events.\+Edit\+Participant\+Event.\+Edit\+Participant\+Event (
 \begin{DoxyParamCaption}
-\item[{{\bf E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S}}]{type}
+{}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_events_1_1_edit_participant_event_a5567b80550abf0c9036094cd8f9c68dd}
+)}\label{class_web_analyzer_1_1_events_1_1_edit_participant_event_ab3be8191a9ca9f6037ae024fb4d21802}
+
+
+Event\+Constructor used for creating an participant 
+
 
 
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_events_1_1_edit_participant_event_abe6fa80e6542cba6fbd7483ecffd154f}{}\index{Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event}!\+\_\+type@{\+\_\+type}}
 \index{\+\_\+type@{\+\_\+type}!Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event}}
 \subsubsection[{\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S} Web\+Analyzer.\+Events.\+Edit\+Participant\+Event.\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_edit_participant_event_abe6fa80e6542cba6fbd7483ecffd154f}
+
+
+Edit type of the event 
+
 \hypertarget{class_web_analyzer_1_1_events_1_1_edit_participant_event_a83110c23b64e39448d037e55486712b4}{}\index{Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event}!\+\_\+uid@{\+\_\+uid}}
 \index{\+\_\+uid@{\+\_\+uid}!Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event}}
 \subsubsection[{\+\_\+uid}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Edit\+Participant\+Event.\+\_\+uid\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_edit_participant_event_a83110c23b64e39448d037e55486712b4}
+
+
+U\+I\+D of the participant 
+
 
 
 \subsection{Property Documentation}
@@ -91,6 +128,10 @@ String \hyperlink{class_web_analyzer_1_1_events_1_1_edit_participant_event_a8311
 \hypertarget{class_web_analyzer_1_1_events_1_1_edit_participant_event_acef746eb86f5262d48b583822b20cfcc}{}\index{Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event}!U\+I\+D@{U\+I\+D}}
 \index{U\+I\+D@{U\+I\+D}!Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Participant\+Event}}
 \subsubsection[{U\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Edit\+Participant\+Event.\+U\+I\+D\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_edit_participant_event_acef746eb86f5262d48b583822b20cfcc}
+
+
+
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

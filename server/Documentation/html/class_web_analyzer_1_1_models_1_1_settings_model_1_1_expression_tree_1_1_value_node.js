@@ -7,6 +7,7 @@ var class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_val
     ] ],
     [ "ValueNode", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node.html#afafaa57c7b7f5cdc5447139118bd6d47", null ],
     [ "ValueNode", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node.html#a62cfbb11d38c3f17e240cb2c5a1ac6f1", null ],
+    [ "Copy", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node.html#ab8b25f08e20250c49c14f7dfeda7a96f", null ],
     [ "Evaluate", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node.html#a4372873a2359e8ef131624bad5bbaa58", null ],
     [ "EvaluateCaseSensitive", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node.html#a79986418c7a3439d1cb5d8f14ded199e", null ],
     [ "LoadFromXML", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node.html#adb68b0f5d8d1c99e3abca965f48a67d0", null ],

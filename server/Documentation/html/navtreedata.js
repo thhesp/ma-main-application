@@ -17,7 +17,7 @@ var NAVTREE =
         [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Enumerations", "functions_enum.html", null ],
-        [ "Properties", "functions_prop.html", null ],
+        [ "Properties", "functions_prop.html", "functions_prop" ],
         [ "Events", "functions_evnt.html", null ]
       ] ]
     ] ],
@@ -35,17 +35,18 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_o_i_setting_control_8cs.html",
-"_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#a9fe0b1645b09b3422031c5a99f9c33ba",
-"bin_2x64_2_debug_2_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#a5ce571e83f1de0cfeff3aae62e09147a",
-"bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#a22b8b55e43fb26c60f7a6d0037100a81",
-"class_web_analyzer_1_1_controller_1_1_test_controller.html#a0db36e46096d444386af0d357905f430",
-"class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller.html#a5929e7d4215d7396926176190269bf9f",
-"class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html#af7a368e96b98082d8b878222dbcac372",
-"class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message.html#a409dc72ec09e601fbbd9dc4db680932c",
-"class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler.html#a374dcd61092a8d072dac4a806d4148ad",
-"class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_application_settings_obj.html#a42c4eab832591c0046d0d9709742d79d",
-"class_web_analyzer_1_1_u_i_1_1_testrun_form.html#a672f94a3bc0ee13586c5543484a6e5bc",
-"globals_vars_w.html"
+"_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#a8b4c4831759bbe42052242af53be8b29",
+"bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#a3a0fb7abbab3bd5d9f2bd2e6a336f53a",
+"bin_2x86_2_release_2_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#a09aee2a38a4c691282695a5b57894144",
+"class_web_analyzer_1_1_controller_1_1_export_controller.html#a56bbd706bd4f1e32c603893c5216d132",
+"class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller.html#a07676501479b66f86c997cc9f25086fe",
+"class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_i_view_events_algorithm.html#aff1e838e0f623dbbeb6d856bffbf4b27",
+"class_web_analyzer_1_1_models_1_1_data_model_1_1_mouse_tracking_data.html#a38482ac54ba153ef229c8c6313462e08",
+"class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings.html#acf226641c18208967b6e193503bf1883",
+"class_web_analyzer_1_1_server_1_1_websocket_server.html#ae9083f25b4a1b713998b19eb68e35d6e",
+"class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object.html#a150c4672bd1ed68b1db01cf2391107ec",
+"class_web_analyzer_1_1_util_1_1_stopwatch_timer.html",
+"globals_z.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

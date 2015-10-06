@@ -17,9 +17,13 @@ enum \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experimen
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_ab4ec83c3bd5603ccc5f88d1e6a7638a2}{Experiment\+Object} ()
+\hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_aa99f1fedb72d6876d8d4020e89ca4315}{Experiment\+Object} (\hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i}{H\+T\+M\+L\+U\+I} form)
 \item 
 String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a5e02c96733933f6e14d50f48fcaf4edc}{get\+Name} ()
+\item 
+String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_af25a51caebf59867b0eeeb2680dfd1fd}{get\+Description} ()
+\item 
+void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_ac8daa908afe1e91d835d6df6c4d53caa}{update\+Description} (String description)
 \item 
 String\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a1a43f8d6cc9b6b773681f766d8273023}{participant\+Array} ()
 \item 
@@ -42,14 +46,40 @@ void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experimen
 int \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_aeb82fcd6bba971c2e08d59b236ee37c9}{get\+Connection\+Count} ()
 \item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a11b8d543111e03266b1c22d601131376}{Refresh\+Data} ()
+\item 
+void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a193718a840220a11a4f4e0778813716d}{import\+Participants} ()
+\item 
+void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_aabec73f1883a94c250de42c66dffcba0}{import\+Experiment\+Settings} ()
+\item 
+void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_ab72d5f594fdde151438483aa71ed69fa}{export\+Participants} ()
+\item 
+void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_afd490226e8e3dd94d51ac2d439c95ae4}{export\+Experiment\+Settings} ()
 \end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2b87e06b55663703f1017c95c19bfa29}{Experiment}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \end{DoxyCompactItemize}
+\subsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Trigger\+Save\+Event\+Handler \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a650d83ab59dbf1753939130f39bf27fa}{Trigger\+Save}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a0ccb4957ecd33c93abb3de68ea372b56}{check\+Save\+Timer} ()
+\item 
+void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a43412850f157306eed89cb600c7e8cec}{create\+Save\+Timer} ()
+\item 
+String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a496179a7d5d2ebc88beb1790e2258c8f}{load\+File\+Dialog} ()
+\item 
+String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a80ffb6140ccb91ccee84ccf9d67967cf}{save\+File\+Dialog} ()
+\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i}{H\+T\+M\+L\+U\+I} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a5a2cb9630e25671701fa7d900d4fec83}{\+\_\+form}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a8275ff9c2a3971c6250a462e7e248843}{\+\_\+exp}
 \item 
@@ -58,6 +88,10 @@ void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experimen
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2875208b4f4b0ed643593152f4ec025c}{C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a7cb71354914a07dab1f19146216aa777}{\+\_\+tracking\+Connection} = \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2875208b4f4b0ed643593152f4ec025ca3a561116f0c9675a3c83d21fa365050d}{C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S.\+disconnected}
 \item 
 int \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a1f1e01810382952ce7e524f55f8cbdd7}{\+\_\+connection\+Count} = 0
+\item 
+String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a418d4528d3345bae640856dcc7f0a5cf}{\+\_\+last\+Description\+Update\+Timestamp}
+\item 
+Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_af0ee137f0a5059a82a2b5ce160ec29d6}{\+\_\+save\+Timer} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
 \end{DoxyCompactItemize}
 
 
@@ -79,16 +113,30 @@ int \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_ab4ec83c3bd5603ccc5f88d1e6a7638a2}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!Experiment\+Object@{Experiment\+Object}}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_aa99f1fedb72d6876d8d4020e89ca4315}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!Experiment\+Object@{Experiment\+Object}}
 \index{Experiment\+Object@{Experiment\+Object}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
-\subsubsection[{Experiment\+Object()}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+Experiment\+Object (
+\subsubsection[{Experiment\+Object(\+H\+T\+M\+L\+U\+I form)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+Experiment\+Object (
 \begin{DoxyParamCaption}
-{}
+\item[{{\bf H\+T\+M\+L\+U\+I}}]{form}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_ab4ec83c3bd5603ccc5f88d1e6a7638a2}
+)}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_aa99f1fedb72d6876d8d4020e89ca4315}
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a0ccb4957ecd33c93abb3de68ea372b56}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!check\+Save\+Timer@{check\+Save\+Timer}}
+\index{check\+Save\+Timer@{check\+Save\+Timer}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
+\subsubsection[{check\+Save\+Timer()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+check\+Save\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a0ccb4957ecd33c93abb3de68ea372b56}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a43412850f157306eed89cb600c7e8cec}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!create\+Save\+Timer@{create\+Save\+Timer}}
+\index{create\+Save\+Timer@{create\+Save\+Timer}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
+\subsubsection[{create\+Save\+Timer()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+create\+Save\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a43412850f157306eed89cb600c7e8cec}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a150c4672bd1ed68b1db01cf2391107ec}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!domain\+Settings\+Array@{domain\+Settings\+Array}}
 \index{domain\+Settings\+Array@{domain\+Settings\+Array}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
 \subsubsection[{domain\+Settings\+Array()}]{\setlength{\rightskip}{0pt plus 5cm}String \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+domain\+Settings\+Array (
@@ -103,6 +151,20 @@ int \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_ad35fa2e95cd9c5b7f51a033bebe87beb}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_afd490226e8e3dd94d51ac2d439c95ae4}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!export\+Experiment\+Settings@{export\+Experiment\+Settings}}
+\index{export\+Experiment\+Settings@{export\+Experiment\+Settings}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
+\subsubsection[{export\+Experiment\+Settings()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+export\+Experiment\+Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_afd490226e8e3dd94d51ac2d439c95ae4}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_ab72d5f594fdde151438483aa71ed69fa}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!export\+Participants@{export\+Participants}}
+\index{export\+Participants@{export\+Participants}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
+\subsubsection[{export\+Participants()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+export\+Participants (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_ab72d5f594fdde151438483aa71ed69fa}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_aeb82fcd6bba971c2e08d59b236ee37c9}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!get\+Connection\+Count@{get\+Connection\+Count}}
 \index{get\+Connection\+Count@{get\+Connection\+Count}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
 \subsubsection[{get\+Connection\+Count()}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+get\+Connection\+Count (
@@ -110,6 +172,13 @@ int \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_aeb82fcd6bba971c2e08d59b236ee37c9}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_af25a51caebf59867b0eeeb2680dfd1fd}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!get\+Description@{get\+Description}}
+\index{get\+Description@{get\+Description}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
+\subsubsection[{get\+Description()}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+get\+Description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_af25a51caebf59867b0eeeb2680dfd1fd}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a5e02c96733933f6e14d50f48fcaf4edc}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!get\+Name@{get\+Name}}
 \index{get\+Name@{get\+Name}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
 \subsubsection[{get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+get\+Name (
@@ -131,6 +200,27 @@ int \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a752a6ca906248d36a0e4251a2bf16959}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_aabec73f1883a94c250de42c66dffcba0}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!import\+Experiment\+Settings@{import\+Experiment\+Settings}}
+\index{import\+Experiment\+Settings@{import\+Experiment\+Settings}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
+\subsubsection[{import\+Experiment\+Settings()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+import\+Experiment\+Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_aabec73f1883a94c250de42c66dffcba0}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a193718a840220a11a4f4e0778813716d}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!import\+Participants@{import\+Participants}}
+\index{import\+Participants@{import\+Participants}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
+\subsubsection[{import\+Participants()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+import\+Participants (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a193718a840220a11a4f4e0778813716d}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a496179a7d5d2ebc88beb1790e2258c8f}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!load\+File\+Dialog@{load\+File\+Dialog}}
+\index{load\+File\+Dialog@{load\+File\+Dialog}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
+\subsubsection[{load\+File\+Dialog()}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+load\+File\+Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a496179a7d5d2ebc88beb1790e2258c8f}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a1a43f8d6cc9b6b773681f766d8273023}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!participant\+Array@{participant\+Array}}
 \index{participant\+Array@{participant\+Array}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
 \subsubsection[{participant\+Array()}]{\setlength{\rightskip}{0pt plus 5cm}String \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+participant\+Array (
@@ -152,6 +242,13 @@ int \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a11b8d543111e03266b1c22d601131376}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a80ffb6140ccb91ccee84ccf9d67967cf}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!save\+File\+Dialog@{save\+File\+Dialog}}
+\index{save\+File\+Dialog@{save\+File\+Dialog}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
+\subsubsection[{save\+File\+Dialog()}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+save\+File\+Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a80ffb6140ccb91ccee84ccf9d67967cf}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2fb6e773317ff48802d4f5fda022005c}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!Set\+Tracking\+Connection\+Status@{Set\+Tracking\+Connection\+Status}}
 \index{Set\+Tracking\+Connection\+Status@{Set\+Tracking\+Connection\+Status}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
 \subsubsection[{Set\+Tracking\+Connection\+Status(\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S status)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+Set\+Tracking\+Connection\+Status (
@@ -173,6 +270,13 @@ int \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment
 \item[{{\bf C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S}}]{status}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_ad7c2424ce1f5611ec7fe303d362b959d}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_ac8daa908afe1e91d835d6df6c4d53caa}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!update\+Description@{update\+Description}}
+\index{update\+Description@{update\+Description}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
+\subsubsection[{update\+Description(\+String description)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+update\+Description (
+\begin{DoxyParamCaption}
+\item[{String}]{description}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_ac8daa908afe1e91d835d6df6c4d53caa}
 
 
 \subsection{Member Data Documentation}
@@ -182,6 +286,15 @@ int \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a8275ff9c2a3971c6250a462e7e248843}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!\+\_\+exp@{\+\_\+exp}}
 \index{\+\_\+exp@{\+\_\+exp}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
 \subsubsection[{\+\_\+exp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+Model} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+\_\+exp\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a8275ff9c2a3971c6250a462e7e248843}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a5a2cb9630e25671701fa7d900d4fec83}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!\+\_\+form@{\+\_\+form}}
+\index{\+\_\+form@{\+\_\+form}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
+\subsubsection[{\+\_\+form}]{\setlength{\rightskip}{0pt plus 5cm}{\bf H\+T\+M\+L\+U\+I} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+\_\+form\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a5a2cb9630e25671701fa7d900d4fec83}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a418d4528d3345bae640856dcc7f0a5cf}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!\+\_\+last\+Description\+Update\+Timestamp@{\+\_\+last\+Description\+Update\+Timestamp}}
+\index{\+\_\+last\+Description\+Update\+Timestamp@{\+\_\+last\+Description\+Update\+Timestamp}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
+\subsubsection[{\+\_\+last\+Description\+Update\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+\_\+last\+Description\+Update\+Timestamp\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a418d4528d3345bae640856dcc7f0a5cf}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_af0ee137f0a5059a82a2b5ce160ec29d6}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!\+\_\+save\+Timer@{\+\_\+save\+Timer}}
+\index{\+\_\+save\+Timer@{\+\_\+save\+Timer}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
+\subsubsection[{\+\_\+save\+Timer}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+\_\+save\+Timer = {\bf false}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_af0ee137f0a5059a82a2b5ce160ec29d6}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a7cb71354914a07dab1f19146216aa777}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!\+\_\+tracking\+Connection@{\+\_\+tracking\+Connection}}
 \index{\+\_\+tracking\+Connection@{\+\_\+tracking\+Connection}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
 \subsubsection[{\+\_\+tracking\+Connection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+\_\+tracking\+Connection = {\bf C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S.\+disconnected}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a7cb71354914a07dab1f19146216aa777}
@@ -194,6 +307,12 @@ int \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2b87e06b55663703f1017c95c19bfa29}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!Experiment@{Experiment}}
 \index{Experiment@{Experiment}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
 \subsubsection[{Experiment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+Model} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+Experiment\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2b87e06b55663703f1017c95c19bfa29}
+
+
+\subsection{Event Documentation}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a650d83ab59dbf1753939130f39bf27fa}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}!Trigger\+Save@{Trigger\+Save}}
+\index{Trigger\+Save@{Trigger\+Save}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Object}}
+\subsubsection[{Trigger\+Save}]{\setlength{\rightskip}{0pt plus 5cm}Trigger\+Save\+Event\+Handler Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Object.\+Trigger\+Save}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a650d83ab59dbf1753939130f39bf27fa}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

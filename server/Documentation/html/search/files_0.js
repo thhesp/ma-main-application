@@ -1,13 +1,16 @@
 var searchData=
 [
   ['activationmessage_2ecs',['ActivationMessage.cs',['../_activation_message_8cs.html',1,'']]],
-  ['activationnmessagehandler_2ecs',['ActivationnMessageHandler.cs',['../_activationn_message_handler_8cs.html',1,'']]],
+  ['activationmessagehandler_2ecs',['ActivationMessageHandler.cs',['../_activation_message_handler_8cs.html',1,'']]],
+  ['addbrowserevent_2ecs',['AddBrowserEvent.cs',['../_add_browser_event_8cs.html',1,'']]],
   ['addconnectionevent_2ecs',['AddConnectionEvent.cs',['../_add_connection_event_8cs.html',1,'']]],
+  ['addtestrundataevent_2ecs',['AddTestrunDataEvent.cs',['../_add_testrun_data_event_8cs.html',1,'']]],
   ['addtrackingevent_2ecs',['AddTrackingEvent.cs',['../_add_tracking_event_8cs.html',1,'']]],
   ['addwebpageevent_2ecs',['AddWebpageEvent.cs',['../_add_webpage_event_8cs.html',1,'']]],
   ['algorithm_2ecs',['Algorithm.cs',['../_algorithm_8cs.html',1,'']]],
-  ['analyse_2ejs',['analyse.js',['../bin_2x64_2_debug_2_u_i_2_h_t_m_l_resources_2js_2src_2analyse_8js.html',1,'']]],
+  ['analyse_2ejs',['analyse.js',['../bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2analyse_8js.html',1,'']]],
   ['analyse_2ejs',['analyse.js',['../_u_i_2_h_t_m_l_resources_2js_2src_2analyse_8js.html',1,'']]],
+  ['analyse_2ejs',['analyse.js',['../bin_2x86_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2analyse_8js.html',1,'']]],
   ['analysisexportcontrol_2ecs',['AnalysisExportControl.cs',['../_analysis_export_control_8cs.html',1,'']]],
   ['andnode_2ecs',['AndNode.cs',['../_and_node_8cs.html',1,'']]],
   ['aoisettingcontrol_2ecs',['AOISettingControl.cs',['../_a_o_i_setting_control_8cs.html',1,'']]],

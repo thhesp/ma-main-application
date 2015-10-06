@@ -9,7 +9,7 @@ Inheritance diagram for Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Messa
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a9f2737386e78cc6bafd9a38c132631a8}{Event\+Message\+Handler} (\hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager}{Connection\+Manager} connection\+Manager, \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Websocket\+Connection} connection)
+\hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_aad5a6a0c04c3734ed4f4f246429dcc96}{Event\+Message\+Handler} (\hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Websocket\+Connection} connection)
 \item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a19e447a4cbabc5a9f8b3a04af58c5d43}{On\+Completed} ()
 \item 
@@ -17,31 +17,37 @@ void \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_mess
 \item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ab517345494b9c59dcd2fefadcdc7b459}{On\+Next} (Object omsg\+In)
 \end{DoxyCompactItemize}
+\subsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+Add\+Webpage\+Event\+Handler \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_afe82749d8d848e38bb19ddc56f9c7fe6}{Add\+Webpage}
+\item 
+Add\+Browser\+Event\+Handler \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ab5371d9836863ebc41e4c86c9ebc348e}{Add\+Browser\+Event}
+\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a52530ca07c3d1bfc722b3906db0616a9}{process\+Click\+Event} (Object msg)
+void \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_abae5e602e947dc9b53479678117d5bed}{process\+Scroll\+Event} (\hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_scroll_event_message}{Scroll\+Event\+Message} msg)
 \item 
-void \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ad9e18e2cac18514602414d5a53ad79bd}{process\+Scroll\+Event} (Object msg)
+void \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a30a228c7b5ac5fa51f2b9f81fdd8908c}{process\+U\+R\+L\+Change\+Event} (\hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_u_r_l_change_event_message}{U\+R\+L\+Change\+Event\+Message} msg)
+\item 
+void \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_aae85692e0e424caf7a57f28c103c1f3f}{process\+Resize\+Change\+Event} (\hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_resize_event_message}{Resize\+Event\+Message} msg)
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
-\item 
-readonly \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager}{Connection\+Manager} \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ada36000f38728c974d1cbebc7f716936}{\+\_\+connection\+Manager}
 \item 
 readonly \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Websocket\+Connection} \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ab818f2be9cb81fd8854221cc1906d736}{\+\_\+connection}
 \end{DoxyCompactItemize}
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a9f2737386e78cc6bafd9a38c132631a8}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!Event\+Message\+Handler@{Event\+Message\+Handler}}
+\hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_aad5a6a0c04c3734ed4f4f246429dcc96}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!Event\+Message\+Handler@{Event\+Message\+Handler}}
 \index{Event\+Message\+Handler@{Event\+Message\+Handler}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
-\subsubsection[{Event\+Message\+Handler(\+Connection\+Manager connection\+Manager, Websocket\+Connection connection)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+Event\+Message\+Handler (
+\subsubsection[{Event\+Message\+Handler(\+Websocket\+Connection connection)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+Event\+Message\+Handler (
 \begin{DoxyParamCaption}
-\item[{{\bf Connection\+Manager}}]{connection\+Manager, }
 \item[{{\bf Websocket\+Connection}}]{connection}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a9f2737386e78cc6bafd9a38c132631a8}
+)}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_aad5a6a0c04c3734ed4f4f246429dcc96}
 
 
 \subsection{Member Function Documentation}
@@ -66,29 +72,42 @@ readonly \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Webs
 \item[{Object}]{omsg\+In}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ab517345494b9c59dcd2fefadcdc7b459}
-\hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a52530ca07c3d1bfc722b3906db0616a9}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!process\+Click\+Event@{process\+Click\+Event}}
-\index{process\+Click\+Event@{process\+Click\+Event}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
-\subsubsection[{process\+Click\+Event(\+Object msg)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+process\+Click\+Event (
+\hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_aae85692e0e424caf7a57f28c103c1f3f}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!process\+Resize\+Change\+Event@{process\+Resize\+Change\+Event}}
+\index{process\+Resize\+Change\+Event@{process\+Resize\+Change\+Event}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
+\subsubsection[{process\+Resize\+Change\+Event(\+Resize\+Event\+Message msg)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+process\+Resize\+Change\+Event (
 \begin{DoxyParamCaption}
-\item[{Object}]{msg}
+\item[{{\bf Resize\+Event\+Message}}]{msg}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a52530ca07c3d1bfc722b3906db0616a9}
-\hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ad9e18e2cac18514602414d5a53ad79bd}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!process\+Scroll\+Event@{process\+Scroll\+Event}}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_aae85692e0e424caf7a57f28c103c1f3f}
+\hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_abae5e602e947dc9b53479678117d5bed}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!process\+Scroll\+Event@{process\+Scroll\+Event}}
 \index{process\+Scroll\+Event@{process\+Scroll\+Event}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
-\subsubsection[{process\+Scroll\+Event(\+Object msg)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+process\+Scroll\+Event (
+\subsubsection[{process\+Scroll\+Event(\+Scroll\+Event\+Message msg)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+process\+Scroll\+Event (
 \begin{DoxyParamCaption}
-\item[{Object}]{msg}
+\item[{{\bf Scroll\+Event\+Message}}]{msg}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ad9e18e2cac18514602414d5a53ad79bd}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_abae5e602e947dc9b53479678117d5bed}
+\hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a30a228c7b5ac5fa51f2b9f81fdd8908c}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!process\+U\+R\+L\+Change\+Event@{process\+U\+R\+L\+Change\+Event}}
+\index{process\+U\+R\+L\+Change\+Event@{process\+U\+R\+L\+Change\+Event}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
+\subsubsection[{process\+U\+R\+L\+Change\+Event(\+U\+R\+L\+Change\+Event\+Message msg)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+process\+U\+R\+L\+Change\+Event (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+R\+L\+Change\+Event\+Message}}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a30a228c7b5ac5fa51f2b9f81fdd8908c}
 
 
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ab818f2be9cb81fd8854221cc1906d736}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!\+\_\+connection@{\+\_\+connection}}
 \index{\+\_\+connection@{\+\_\+connection}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
 \subsubsection[{\+\_\+connection}]{\setlength{\rightskip}{0pt plus 5cm}readonly {\bf Websocket\+Connection} Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+\_\+connection\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ab818f2be9cb81fd8854221cc1906d736}
-\hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ada36000f38728c974d1cbebc7f716936}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!\+\_\+connection\+Manager@{\+\_\+connection\+Manager}}
-\index{\+\_\+connection\+Manager@{\+\_\+connection\+Manager}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
-\subsubsection[{\+\_\+connection\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}readonly {\bf Connection\+Manager} Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+\_\+connection\+Manager\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ada36000f38728c974d1cbebc7f716936}
+
+
+\subsection{Event Documentation}
+\hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ab5371d9836863ebc41e4c86c9ebc348e}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!Add\+Browser\+Event@{Add\+Browser\+Event}}
+\index{Add\+Browser\+Event@{Add\+Browser\+Event}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
+\subsubsection[{Add\+Browser\+Event}]{\setlength{\rightskip}{0pt plus 5cm}Add\+Browser\+Event\+Handler Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+Add\+Browser\+Event}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ab5371d9836863ebc41e4c86c9ebc348e}
+\hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_afe82749d8d848e38bb19ddc56f9c7fe6}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!Add\+Webpage@{Add\+Webpage}}
+\index{Add\+Webpage@{Add\+Webpage}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
+\subsubsection[{Add\+Webpage}]{\setlength{\rightskip}{0pt plus 5cm}Add\+Webpage\+Event\+Handler Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+Add\+Webpage}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_afe82749d8d848e38bb19ddc56f9c7fe6}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

@@ -9,7 +9,7 @@ var class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings =
     [ "GetAOIs", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings.html#ab1d25299b3a24bad81acc44b1994f342", null ],
     [ "GetAOISettingByUid", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings.html#a5cd076f8ac19ba306443c66ea0a032a7", null ],
     [ "GetAOIUIDs", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings.html#a29e5b2dc3e3a0476dc5822615a949e21", null ],
-    [ "GetFittingAOI", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings.html#a0ca77de384f02fee8e6a0ba8934ef2a6", null ],
+    [ "GetFittingAOIs", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings.html#af25051da84e5c45e90ae3425963ed800", null ],
     [ "LoadFromXML", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings.html#aadf710ba6a63d9fa929c8994fb2ebb12", null ],
     [ "ToXML", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings.html#a493458b4a083d0aca8d573612c578e7f", null ],
     [ "URLFitsSetting", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings.html#a19cfec6016d0dbfe5a3b5a73efca93df", null ],

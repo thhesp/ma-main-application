@@ -6,6 +6,7 @@ var class_web_analyzer_1_1_models_1_1_message_model_1_1_message =
     [ "ConnectionMessageFromJson", "class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html#a314276c1b58a764cb8216c85aecbc251", null ],
     [ "DataMessageFromJson", "class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html#a09f5ab44d912bea7b3ae5e2a78eab490", null ],
     [ "ErrorMessageFromJson", "class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html#a8a0c7229b12b93ecea85d87799507906", null ],
+    [ "EventMessageFromJson", "class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html#a31e9c8cd83a705cfa9aa12561d2c6ac7", null ],
     [ "ExtractAttributes", "class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html#a9a2024f67011c88f2d831c4749d8ea06", null ],
     [ "ExtractElementData", "class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html#a8b1248666d8a8c1819b0920f1960f054", null ],
     [ "FromJson", "class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html#addad192b40719813b8b260cbea4b6a39", null ],

@@ -36,6 +36,8 @@ void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_se
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ade3c26de20eec061fccdbad1e33966e1}{copy\+A\+O\+I} (String uid)
 \item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a9eb07ab9de98ec5b9f4d2ef662fa2970}{delete\+A\+O\+I} (String uid)
+\item 
+Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab7498deab19b4b9ce1a05a98f670c801}{is\+Refreshing} ()
 \end{DoxyCompactItemize}
 \subsection*{Events}
 \begin{DoxyCompactItemize}
@@ -50,6 +52,8 @@ Trigger\+Save\+Event\+Handler \hyperlink{class_web_analyzer_1_1_u_i_1_1_interact
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a8482d6c6ca6f62a8182b8b9e7608ed92}{Show\+Edit\+A\+O\+I\+Setting\+Form} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings}{A\+O\+I\+Settings} setting, Boolean create\+New)
 \item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab03466aaad4776710ba6517f80329b12}{On\+\_\+\+Create\+A\+O\+I\+Setting} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} source, \hyperlink{class_web_analyzer_1_1_events_1_1_create_a_o_i_setting_event}{Create\+A\+O\+I\+Setting\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
+\item 
+void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a2f4338f90019c81d050af5e37be871de}{refresh\+Data} ()
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -59,6 +63,8 @@ void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_se
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings}{Domain\+Settings} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a3c559717deaa9cbc0575bd3a0407edbc}{\+\_\+setting}
 \item 
 Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_af65a88bba8daa8c7ff8fd80e6f46d3bc}{\+\_\+create}
+\item 
+Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a7a9d3a672767f8e4e7e81c3ad8948879}{\+\_\+refreshing} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
@@ -146,6 +152,13 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ad83ffda676c2290766597c60b18d1518}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab7498deab19b4b9ce1a05a98f670c801}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!is\+Refreshing@{is\+Refreshing}}
+\index{is\+Refreshing@{is\+Refreshing}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
+\subsubsection[{is\+Refreshing()}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+is\+Refreshing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab7498deab19b4b9ce1a05a98f670c801}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab03466aaad4776710ba6517f80329b12}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!On\+\_\+\+Create\+A\+O\+I\+Setting@{On\+\_\+\+Create\+A\+O\+I\+Setting}}
 \index{On\+\_\+\+Create\+A\+O\+I\+Setting@{On\+\_\+\+Create\+A\+O\+I\+Setting}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{On\+\_\+\+Create\+A\+O\+I\+Setting(object source, Create\+A\+O\+I\+Setting\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+On\+\_\+\+Create\+A\+O\+I\+Setting (
@@ -154,6 +167,13 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain
 \item[{{\bf Create\+A\+O\+I\+Setting\+Event}}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab03466aaad4776710ba6517f80329b12}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a2f4338f90019c81d050af5e37be871de}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!refresh\+Data@{refresh\+Data}}
+\index{refresh\+Data@{refresh\+Data}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
+\subsubsection[{refresh\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+refresh\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a2f4338f90019c81d050af5e37be871de}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a0f5c683be120524708ad1dcd570ed4d5}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!save\+Domain\+Setting@{save\+Domain\+Setting}}
 \index{save\+Domain\+Setting@{save\+Domain\+Setting}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{save\+Domain\+Setting()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+save\+Domain\+Setting (
@@ -192,6 +212,9 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ac5d9f6410b6d83ed5f01dd3f9a23f8b4}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!\+\_\+form@{\+\_\+form}}
 \index{\+\_\+form@{\+\_\+form}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{\+\_\+form}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Edit\+Domain\+Setting\+Form} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+\_\+form\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ac5d9f6410b6d83ed5f01dd3f9a23f8b4}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a7a9d3a672767f8e4e7e81c3ad8948879}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!\+\_\+refreshing@{\+\_\+refreshing}}
+\index{\+\_\+refreshing@{\+\_\+refreshing}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
+\subsubsection[{\+\_\+refreshing}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+\_\+refreshing = {\bf false}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a7a9d3a672767f8e4e7e81c3ad8948879}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a3c559717deaa9cbc0575bd3a0407edbc}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!\+\_\+setting@{\+\_\+setting}}
 \index{\+\_\+setting@{\+\_\+setting}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{\+\_\+setting}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Domain\+Settings} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+\_\+setting\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a3c559717deaa9cbc0575bd3a0407edbc}

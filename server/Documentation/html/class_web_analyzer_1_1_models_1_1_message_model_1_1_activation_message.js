@@ -7,6 +7,10 @@ var class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message =
     [ "ActivationMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#a20a171686a029b6466062511e4ca2fda", null ],
     [ "_type", "class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#a108e256eff9daab288b9c8c8f18d9792", null ],
     [ "_url", "class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#a7d5933c3187edc115317483ad31df6b4", null ],
+    [ "_windowHeight", "class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#a2c2e9dc30927ed3ee522d3a18dd4832d", null ],
+    [ "_windowWidth", "class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#a57c56a4024223834bf60bc90bce66327", null ],
     [ "Type", "class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#a0f68201fb8faad6d3a2a074bc7670313", null ],
-    [ "URL", "class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#a4df0cf1fbf60a7211a5ee55831adcb9e", null ]
+    [ "URL", "class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#a4df0cf1fbf60a7211a5ee55831adcb9e", null ],
+    [ "WindowHeight", "class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#aa7179d1f480e697fdd30d43b6919c076", null ],
+    [ "WindowWidth", "class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#adb9b326b9f17dd3dbe0ef8a645b7b38b", null ]
 ];

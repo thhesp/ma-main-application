@@ -110,6 +110,8 @@ $(document).ready(function(){initNavTree('class_web_analyzer_1_1_models_1_1_algo
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">WebAnalyzer.Models.AlgorithmModel.Algorithm Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -139,6 +141,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aed9ae492d1851815f79d9b2f3361711e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6607203b63241b68e2e4180c97de9a0"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model.html">SaccadeModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#ac6607203b63241b68e2e4180c97de9a0">ExtractSaccades</a> (List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a> &gt; positions, String eye)</td></tr>
 <tr class="separator:ac6607203b63241b68e2e4180c97de9a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:afbd5e3a6eb4bbcd142f6934ba6026b3b"><td class="memItemLeft" align="right" valign="top">double[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#afbd5e3a6eb4bbcd142f6934ba6026b3b">CalculateVector</a> (<a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a> gaze1, <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a> gaze2, String eye)</td></tr>
+<tr class="separator:afbd5e3a6eb4bbcd142f6934ba6026b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a2a618988f6a538ed55deee35243ee4"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#a4a2a618988f6a538ed55deee35243ee4">CompareVectors</a> (double[] vector1, double[] vector2)</td></tr>
+<tr class="separator:a4a2a618988f6a538ed55deee35243ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a3ac55aacffefb5f2459f6b43b44a595b"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model.html">SaccadeModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#a3ac55aacffefb5f2459f6b43b44a595b">ExtractRealSaccades</a> (List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a> &gt; gazes, String eye)</td></tr>
+<tr class="separator:a3ac55aacffefb5f2459f6b43b44a595b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a170e7786e033cbd0c09cabb30030794b"></a>
@@ -168,6 +182,80 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="afbd5e3a6eb4bbcd142f6934ba6026b3b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double [] WebAnalyzer.Models.AlgorithmModel.Algorithm.CalculateVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a>&#160;</td>
+          <td class="paramname"><em>gaze1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a>&#160;</td>
+          <td class="paramname"><em>gaze2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>eye</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4a2a618988f6a538ed55deee35243ee4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Boolean WebAnalyzer.Models.AlgorithmModel.Algorithm.CompareVectors </td>
+          <td>(</td>
+          <td class="paramtype">double[]&#160;</td>
+          <td class="paramname"><em>vector1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double[]&#160;</td>
+          <td class="paramname"><em>vector2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="aed9ae492d1851815f79d9b2f3361711e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -201,6 +289,40 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_distance_algorithm.html#ab8e0d7ad96104e40eb8079d180d1aa0c">WebAnalyzer.Models.AlgorithmModel.DistanceAlgorithm</a>, and <a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_i_view_events_algorithm.html#aff1e838e0f623dbbeb6d856bffbf4b27">WebAnalyzer.Models.AlgorithmModel.IViewEventsAlgorithm</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3ac55aacffefb5f2459f6b43b44a595b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model.html">SaccadeModel</a>&gt; WebAnalyzer.Models.AlgorithmModel.Algorithm.ExtractRealSaccades </td>
+          <td>(</td>
+          <td class="paramtype">List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a> &gt;&#160;</td>
+          <td class="paramname"><em>gazes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>eye</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

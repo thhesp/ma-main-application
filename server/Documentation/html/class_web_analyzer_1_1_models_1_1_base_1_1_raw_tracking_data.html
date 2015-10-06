@@ -126,10 +126,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab3a2654d87bb9a265b4f58ee3eddc7a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab923bf3a6c112dacfbfe7b81cd45cc17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data.html#ab923bf3a6c112dacfbfe7b81cd45cc17">AddEvent</a> (<a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event.html">RawTrackingEvent</a> rawEvent)</td></tr>
 <tr class="separator:ab923bf3a6c112dacfbfe7b81cd45cc17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18713a7b31b580b2a632b0a2d9328a4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data.html#a18713a7b31b580b2a632b0a2d9328a4f">AddRawGaze</a> (String callbackTimestamp, double leftX, double leftY, double rightX, double rightY)</td></tr>
-<tr class="separator:a18713a7b31b580b2a632b0a2d9328a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace73396d140d332459ad945ff17a0758"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data.html#ace73396d140d332459ad945ff17a0758">AddRawGaze</a> (String callbackTimestamp, double <a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#a81e910173af87b1161e719a504d52407">x</a>, double y)</td></tr>
-<tr class="separator:ace73396d140d332459ad945ff17a0758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad49451f7a582a47999c85666dd4ed879"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data.html#ad49451f7a582a47999c85666dd4ed879">AddRawGaze</a> (<a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data.html">BaseTrackingData</a> leftEye, <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data.html">BaseTrackingData</a> rightEye)</td></tr>
+<tr class="separator:ad49451f7a582a47999c85666dd4ed879"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae75cfde7e7b9a1e236b99c3f07f7487e"><td class="memItemLeft" align="right" valign="top">XmlNode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data.html#ae75cfde7e7b9a1e236b99c3f07f7487e">ToXML</a> (<a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant.html">ExperimentParticipant</a> participant, XmlDocument xmlDoc)</td></tr>
 <tr class="separator:ae75cfde7e7b9a1e236b99c3f07f7487e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -169,71 +167,21 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a18713a7b31b580b2a632b0a2d9328a4f"></a>
+<a class="anchor" id="ad49451f7a582a47999c85666dd4ed879"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void WebAnalyzer.Models.Base.RawTrackingData.AddRawGaze </td>
           <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>callbackTimestamp</em>, </td>
+          <td class="paramtype"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data.html">BaseTrackingData</a>&#160;</td>
+          <td class="paramname"><em>leftEye</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>leftX</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>leftY</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>rightX</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>rightY</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="ace73396d140d332459ad945ff17a0758"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void WebAnalyzer.Models.Base.RawTrackingData.AddRawGaze </td>
-          <td>(</td>
-          <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>callbackTimestamp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data.html">BaseTrackingData</a>&#160;</td>
+          <td class="paramname"><em>rightEye</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

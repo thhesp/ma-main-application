@@ -32,8 +32,6 @@ string \hyperlink{class_web_analyzer_1_1_properties_1_1_settings_a74498d33c881c0
 \item 
 string \hyperlink{class_web_analyzer_1_1_properties_1_1_settings_aa664153921c24bdaa3a4cf790c153924}{Statistics\+Location}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \item 
-bool \hyperlink{class_web_analyzer_1_1_properties_1_1_settings_a71904ddfdc9f4888c7da3b370acb0c4d}{Use\+Mouse\+Tracking}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
 int \hyperlink{class_web_analyzer_1_1_properties_1_1_settings_ab28fb58a6d2cf2841c86966c406a4ab3}{Websocket\+Port}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \item 
 bool \hyperlink{class_web_analyzer_1_1_properties_1_1_settings_ad251bc3f8eff9b6c353d759b4d28b8ef}{E\+T\+Connect\+Local}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
@@ -61,6 +59,24 @@ int \hyperlink{class_web_analyzer_1_1_properties_1_1_settings_a4fa938c23f0735874
 int \hyperlink{class_web_analyzer_1_1_properties_1_1_settings_a0c6ee531ecb7669be322d0b6adbbed8a}{Data\+Timeout}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \item 
 string \hyperlink{class_web_analyzer_1_1_properties_1_1_settings_ac417a6538207823d18cdddedf21e8313}{Experiment\+Data\+Location}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+int \hyperlink{class_web_analyzer_1_1_properties_1_1_settings_a65f41aa49303ec4c86675777f44ed32e}{Websocket\+Negotiation\+Timeout}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_web_analyzer_1_1_properties_1_1_settings_ae53e9129c252eb6a1d2d1c475e6cd8b7}{Websocket\+Sent\+Timeout}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_web_analyzer_1_1_properties_1_1_settings_adeca98009c11d4d6154200db60e347a9}{Websocket\+Receive\+Timeout}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_web_analyzer_1_1_properties_1_1_settings_a5fd4f365831db1d8338abbcaac13235c}{Websocket\+Ping\+Timeout}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \hyperlink{class_web_analyzer_1_1_properties_1_1_settings_afabd82687970641a0e6ac78e36cf83d6}{Websocket\+Use\+Nagle}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+string \hyperlink{class_web_analyzer_1_1_properties_1_1_settings_aadead79f8564c500dc5de1f7650254aa}{Tracking\+Model\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_web_analyzer_1_1_properties_1_1_settings_a7db527e5e557a63fa96cafc8b76b05d5}{Experiment\+Description\+Save\+Timeout}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \hyperlink{class_web_analyzer_1_1_properties_1_1_settings_a4ffaf53cd26be8670474783fbdaf380c}{Force\+Message\+Delay\+Settings}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+double \hyperlink{class_web_analyzer_1_1_properties_1_1_settings_a7c8084a45024f9b5bb40f0658bdf41cd}{Saccade\+Angle\+Similiarity}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -142,12 +158,18 @@ static \hyperlink{class_web_analyzer_1_1_properties_1_1_settings}{Settings} \hyp
 \hypertarget{class_web_analyzer_1_1_properties_1_1_settings_ac417a6538207823d18cdddedf21e8313}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!Experiment\+Data\+Location@{Experiment\+Data\+Location}}
 \index{Experiment\+Data\+Location@{Experiment\+Data\+Location}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
 \subsubsection[{Experiment\+Data\+Location}]{\setlength{\rightskip}{0pt plus 5cm}string Web\+Analyzer.\+Properties.\+Settings.\+Experiment\+Data\+Location\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_properties_1_1_settings_ac417a6538207823d18cdddedf21e8313}
+\hypertarget{class_web_analyzer_1_1_properties_1_1_settings_a7db527e5e557a63fa96cafc8b76b05d5}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!Experiment\+Description\+Save\+Timeout@{Experiment\+Description\+Save\+Timeout}}
+\index{Experiment\+Description\+Save\+Timeout@{Experiment\+Description\+Save\+Timeout}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
+\subsubsection[{Experiment\+Description\+Save\+Timeout}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Properties.\+Settings.\+Experiment\+Description\+Save\+Timeout\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_properties_1_1_settings_a7db527e5e557a63fa96cafc8b76b05d5}
 \hypertarget{class_web_analyzer_1_1_properties_1_1_settings_abf4e9e1c3119465ed8a31c82e0a7749c}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!Experiment\+Filename@{Experiment\+Filename}}
 \index{Experiment\+Filename@{Experiment\+Filename}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
 \subsubsection[{Experiment\+Filename}]{\setlength{\rightskip}{0pt plus 5cm}string Web\+Analyzer.\+Properties.\+Settings.\+Experiment\+Filename\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_properties_1_1_settings_abf4e9e1c3119465ed8a31c82e0a7749c}
 \hypertarget{class_web_analyzer_1_1_properties_1_1_settings_a73d8c78b58fba485b3989433986ae765}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!First\+Start@{First\+Start}}
 \index{First\+Start@{First\+Start}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
 \subsubsection[{First\+Start}]{\setlength{\rightskip}{0pt plus 5cm}bool Web\+Analyzer.\+Properties.\+Settings.\+First\+Start\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_properties_1_1_settings_a73d8c78b58fba485b3989433986ae765}
+\hypertarget{class_web_analyzer_1_1_properties_1_1_settings_a4ffaf53cd26be8670474783fbdaf380c}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!Force\+Message\+Delay\+Settings@{Force\+Message\+Delay\+Settings}}
+\index{Force\+Message\+Delay\+Settings@{Force\+Message\+Delay\+Settings}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
+\subsubsection[{Force\+Message\+Delay\+Settings}]{\setlength{\rightskip}{0pt plus 5cm}bool Web\+Analyzer.\+Properties.\+Settings.\+Force\+Message\+Delay\+Settings\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_properties_1_1_settings_a4ffaf53cd26be8670474783fbdaf380c}
 \hypertarget{class_web_analyzer_1_1_properties_1_1_settings_a6dce99dba5be76c9fcb1325e83b60f2d}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!Log\+Count@{Log\+Count}}
 \index{Log\+Count@{Log\+Count}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
 \subsubsection[{Log\+Count}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Properties.\+Settings.\+Log\+Count\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_properties_1_1_settings_a6dce99dba5be76c9fcb1325e83b60f2d}
@@ -163,6 +185,9 @@ static \hyperlink{class_web_analyzer_1_1_properties_1_1_settings}{Settings} \hyp
 \hypertarget{class_web_analyzer_1_1_properties_1_1_settings_a74498d33c881c07d79e0e1f1b0efe308}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!Rawdata\+Location@{Rawdata\+Location}}
 \index{Rawdata\+Location@{Rawdata\+Location}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
 \subsubsection[{Rawdata\+Location}]{\setlength{\rightskip}{0pt plus 5cm}string Web\+Analyzer.\+Properties.\+Settings.\+Rawdata\+Location\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_properties_1_1_settings_a74498d33c881c07d79e0e1f1b0efe308}
+\hypertarget{class_web_analyzer_1_1_properties_1_1_settings_a7c8084a45024f9b5bb40f0658bdf41cd}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!Saccade\+Angle\+Similiarity@{Saccade\+Angle\+Similiarity}}
+\index{Saccade\+Angle\+Similiarity@{Saccade\+Angle\+Similiarity}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
+\subsubsection[{Saccade\+Angle\+Similiarity}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Properties.\+Settings.\+Saccade\+Angle\+Similiarity\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_properties_1_1_settings_a7c8084a45024f9b5bb40f0658bdf41cd}
 \hypertarget{class_web_analyzer_1_1_properties_1_1_settings_ad083097d959dff8a09359e19f6524982}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!Settings\+Filename@{Settings\+Filename}}
 \index{Settings\+Filename@{Settings\+Filename}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
 \subsubsection[{Settings\+Filename}]{\setlength{\rightskip}{0pt plus 5cm}string Web\+Analyzer.\+Properties.\+Settings.\+Settings\+Filename\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_properties_1_1_settings_ad083097d959dff8a09359e19f6524982}
@@ -175,12 +200,27 @@ static \hyperlink{class_web_analyzer_1_1_properties_1_1_settings}{Settings} \hyp
 \hypertarget{class_web_analyzer_1_1_properties_1_1_settings_a3160d237b811df98aeb601487fa43943}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!Testrun\+Save\+Check\+Intervall@{Testrun\+Save\+Check\+Intervall}}
 \index{Testrun\+Save\+Check\+Intervall@{Testrun\+Save\+Check\+Intervall}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
 \subsubsection[{Testrun\+Save\+Check\+Intervall}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Properties.\+Settings.\+Testrun\+Save\+Check\+Intervall\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_properties_1_1_settings_a3160d237b811df98aeb601487fa43943}
-\hypertarget{class_web_analyzer_1_1_properties_1_1_settings_a71904ddfdc9f4888c7da3b370acb0c4d}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!Use\+Mouse\+Tracking@{Use\+Mouse\+Tracking}}
-\index{Use\+Mouse\+Tracking@{Use\+Mouse\+Tracking}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
-\subsubsection[{Use\+Mouse\+Tracking}]{\setlength{\rightskip}{0pt plus 5cm}bool Web\+Analyzer.\+Properties.\+Settings.\+Use\+Mouse\+Tracking\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_properties_1_1_settings_a71904ddfdc9f4888c7da3b370acb0c4d}
+\hypertarget{class_web_analyzer_1_1_properties_1_1_settings_aadead79f8564c500dc5de1f7650254aa}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!Tracking\+Model\+Type@{Tracking\+Model\+Type}}
+\index{Tracking\+Model\+Type@{Tracking\+Model\+Type}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
+\subsubsection[{Tracking\+Model\+Type}]{\setlength{\rightskip}{0pt plus 5cm}string Web\+Analyzer.\+Properties.\+Settings.\+Tracking\+Model\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_properties_1_1_settings_aadead79f8564c500dc5de1f7650254aa}
+\hypertarget{class_web_analyzer_1_1_properties_1_1_settings_a65f41aa49303ec4c86675777f44ed32e}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!Websocket\+Negotiation\+Timeout@{Websocket\+Negotiation\+Timeout}}
+\index{Websocket\+Negotiation\+Timeout@{Websocket\+Negotiation\+Timeout}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
+\subsubsection[{Websocket\+Negotiation\+Timeout}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Properties.\+Settings.\+Websocket\+Negotiation\+Timeout\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_properties_1_1_settings_a65f41aa49303ec4c86675777f44ed32e}
+\hypertarget{class_web_analyzer_1_1_properties_1_1_settings_a5fd4f365831db1d8338abbcaac13235c}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!Websocket\+Ping\+Timeout@{Websocket\+Ping\+Timeout}}
+\index{Websocket\+Ping\+Timeout@{Websocket\+Ping\+Timeout}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
+\subsubsection[{Websocket\+Ping\+Timeout}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Properties.\+Settings.\+Websocket\+Ping\+Timeout\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_properties_1_1_settings_a5fd4f365831db1d8338abbcaac13235c}
 \hypertarget{class_web_analyzer_1_1_properties_1_1_settings_ab28fb58a6d2cf2841c86966c406a4ab3}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!Websocket\+Port@{Websocket\+Port}}
 \index{Websocket\+Port@{Websocket\+Port}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
 \subsubsection[{Websocket\+Port}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Properties.\+Settings.\+Websocket\+Port\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_properties_1_1_settings_ab28fb58a6d2cf2841c86966c406a4ab3}
+\hypertarget{class_web_analyzer_1_1_properties_1_1_settings_adeca98009c11d4d6154200db60e347a9}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!Websocket\+Receive\+Timeout@{Websocket\+Receive\+Timeout}}
+\index{Websocket\+Receive\+Timeout@{Websocket\+Receive\+Timeout}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
+\subsubsection[{Websocket\+Receive\+Timeout}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Properties.\+Settings.\+Websocket\+Receive\+Timeout\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_properties_1_1_settings_adeca98009c11d4d6154200db60e347a9}
+\hypertarget{class_web_analyzer_1_1_properties_1_1_settings_ae53e9129c252eb6a1d2d1c475e6cd8b7}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!Websocket\+Sent\+Timeout@{Websocket\+Sent\+Timeout}}
+\index{Websocket\+Sent\+Timeout@{Websocket\+Sent\+Timeout}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
+\subsubsection[{Websocket\+Sent\+Timeout}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Properties.\+Settings.\+Websocket\+Sent\+Timeout\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_properties_1_1_settings_ae53e9129c252eb6a1d2d1c475e6cd8b7}
+\hypertarget{class_web_analyzer_1_1_properties_1_1_settings_afabd82687970641a0e6ac78e36cf83d6}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!Websocket\+Use\+Nagle@{Websocket\+Use\+Nagle}}
+\index{Websocket\+Use\+Nagle@{Websocket\+Use\+Nagle}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
+\subsubsection[{Websocket\+Use\+Nagle}]{\setlength{\rightskip}{0pt plus 5cm}bool Web\+Analyzer.\+Properties.\+Settings.\+Websocket\+Use\+Nagle\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_properties_1_1_settings_afabd82687970641a0e6ac78e36cf83d6}
 \hypertarget{class_web_analyzer_1_1_properties_1_1_settings_a62b7526a2c670219322da46a41f2ed4b}{}\index{Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}!W\+S\+Message\+Delay@{W\+S\+Message\+Delay}}
 \index{W\+S\+Message\+Delay@{W\+S\+Message\+Delay}!Web\+Analyzer\+::\+Properties\+::\+Settings@{Web\+Analyzer\+::\+Properties\+::\+Settings}}
 \subsubsection[{W\+S\+Message\+Delay}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Properties.\+Settings.\+W\+S\+Message\+Delay\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_properties_1_1_settings_a62b7526a2c670219322da46a41f2ed4b}

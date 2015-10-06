@@ -20,6 +20,18 @@ abstract List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1
 \item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model}{Saccade\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm_ac6607203b63241b68e2e4180c97de9a0}{Extract\+Saccades} (List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ positions, String eye)
 \end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm_afbd5e3a6eb4bbcd142f6934ba6026b3b}{Calculate\+Vector} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} gaze1, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} gaze2, String eye)
+\item 
+Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm_a4a2a618988f6a538ed55deee35243ee4}{Compare\+Vectors} (double\mbox{[}$\,$\mbox{]} vector1, double\mbox{[}$\,$\mbox{]} vector2)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model}{Saccade\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm_a3ac55aacffefb5f2459f6b43b44a595b}{Extract\+Real\+Saccades} (List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ gazes, String eye)
+\end{DoxyCompactItemize}
 
 
 \subsection{Member Enumeration Documentation}
@@ -38,6 +50,23 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm_afbd5e3a6eb4bbcd142f6934ba6026b3b}{}\index{Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm@{Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm}!Calculate\+Vector@{Calculate\+Vector}}
+\index{Calculate\+Vector@{Calculate\+Vector}!Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm@{Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm}}
+\subsubsection[{Calculate\+Vector(\+Gaze\+Model gaze1, Gaze\+Model gaze2, String eye)}]{\setlength{\rightskip}{0pt plus 5cm}double \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+Models.\+Algorithm\+Model.\+Algorithm.\+Calculate\+Vector (
+\begin{DoxyParamCaption}
+\item[{{\bf Gaze\+Model}}]{gaze1, }
+\item[{{\bf Gaze\+Model}}]{gaze2, }
+\item[{String}]{eye}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm_afbd5e3a6eb4bbcd142f6934ba6026b3b}
+\hypertarget{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm_a4a2a618988f6a538ed55deee35243ee4}{}\index{Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm@{Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm}!Compare\+Vectors@{Compare\+Vectors}}
+\index{Compare\+Vectors@{Compare\+Vectors}!Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm@{Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm}}
+\subsubsection[{Compare\+Vectors(double[] vector1, double[] vector2)}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Models.\+Algorithm\+Model.\+Algorithm.\+Compare\+Vectors (
+\begin{DoxyParamCaption}
+\item[{double\mbox{[}$\,$\mbox{]}}]{vector1, }
+\item[{double\mbox{[}$\,$\mbox{]}}]{vector2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm_a4a2a618988f6a538ed55deee35243ee4}
 \hypertarget{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm_aed9ae492d1851815f79d9b2f3361711e}{}\index{Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm@{Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm}!Extract\+Fixation@{Extract\+Fixation}}
 \index{Extract\+Fixation@{Extract\+Fixation}!Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm@{Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm}}
 \subsubsection[{Extract\+Fixation(\+List$<$ Gaze\+Model $>$ positions, String eye)}]{\setlength{\rightskip}{0pt plus 5cm}abstract List$<${\bf Fixation\+Model}$>$ Web\+Analyzer.\+Models.\+Algorithm\+Model.\+Algorithm.\+Extract\+Fixation (
@@ -50,6 +79,14 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 
 Implemented in \hyperlink{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_distance_algorithm_ab8e0d7ad96104e40eb8079d180d1aa0c}{Web\+Analyzer.\+Models.\+Algorithm\+Model.\+Distance\+Algorithm}, and \hyperlink{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_i_view_events_algorithm_aff1e838e0f623dbbeb6d856bffbf4b27}{Web\+Analyzer.\+Models.\+Algorithm\+Model.\+I\+View\+Events\+Algorithm}.
 
+\hypertarget{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm_a3ac55aacffefb5f2459f6b43b44a595b}{}\index{Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm@{Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm}!Extract\+Real\+Saccades@{Extract\+Real\+Saccades}}
+\index{Extract\+Real\+Saccades@{Extract\+Real\+Saccades}!Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm@{Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm}}
+\subsubsection[{Extract\+Real\+Saccades(\+List$<$ Gaze\+Model $>$ gazes, String eye)}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Saccade\+Model}$>$ Web\+Analyzer.\+Models.\+Algorithm\+Model.\+Algorithm.\+Extract\+Real\+Saccades (
+\begin{DoxyParamCaption}
+\item[{List$<$ {\bf Gaze\+Model} $>$}]{gazes, }
+\item[{String}]{eye}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm_a3ac55aacffefb5f2459f6b43b44a595b}
 \hypertarget{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm_ac6607203b63241b68e2e4180c97de9a0}{}\index{Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm@{Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm}!Extract\+Saccades@{Extract\+Saccades}}
 \index{Extract\+Saccades@{Extract\+Saccades}!Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm@{Web\+Analyzer\+::\+Models\+::\+Algorithm\+Model\+::\+Algorithm}}
 \subsubsection[{Extract\+Saccades(\+List$<$ Gaze\+Model $>$ positions, String eye)}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Saccade\+Model}$>$ Web\+Analyzer.\+Models.\+Algorithm\+Model.\+Algorithm.\+Extract\+Saccades (

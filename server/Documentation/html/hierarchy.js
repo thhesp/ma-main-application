@@ -27,10 +27,20 @@ var hierarchy =
       [ "WebAnalyzer.UI.InteractionObjects.SelectTestrunControl", "class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_testrun_control.html", null ],
       [ "WebAnalyzer.UI.InteractionObjects.TestrunControl", "class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control.html", null ]
     ] ],
+    [ "WebAnalyzer.Models.Base.BaseTrackingData", "class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data.html", [
+      [ "WebAnalyzer.Models.DataModel.EyeTrackingData", "class_web_analyzer_1_1_models_1_1_data_model_1_1_eye_tracking_data.html", null ],
+      [ "WebAnalyzer.Models.DataModel.MouseTrackingData", "class_web_analyzer_1_1_models_1_1_data_model_1_1_mouse_tracking_data.html", null ]
+    ] ],
+    [ "WebAnalyzer.Models.Base.BaseTrackingModel", "class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model.html", [
+      [ "WebAnalyzer.EyeTracking.EyeTrackingModel", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html", null ],
+      [ "WebAnalyzer.Test.Communication.MouseModel", "class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model.html", null ]
+    ] ],
     [ "WebAnalyzer.Models.Base.BasicData", "class_web_analyzer_1_1_models_1_1_base_1_1_basic_data.html", [
       [ "WebAnalyzer.Models.DataModel.GazeModel", "class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html", null ],
-      [ "WebAnalyzer.Models.EventModel.ClickEventModel", "class_web_analyzer_1_1_models_1_1_event_model_1_1_click_event_model.html", null ],
-      [ "WebAnalyzer.Models.EventModel.ScrollEventModel", "class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model.html", null ]
+      [ "WebAnalyzer.Models.EventModel.BaseEventModel", "class_web_analyzer_1_1_models_1_1_event_model_1_1_base_event_model.html", [
+        [ "WebAnalyzer.Models.EventModel.ResizeEventModel", "class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model.html", null ],
+        [ "WebAnalyzer.Models.EventModel.ScrollEventModel", "class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model.html", null ]
+      ] ]
     ] ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.CalibrationPointQualityStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_calibration_point_quality_struct.html", null ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.CalibrationPointStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_calibration_point_struct.html", null ],
@@ -40,7 +50,9 @@ var hierarchy =
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.DateStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_date_struct.html", null ],
     [ "WebAnalyzer.Models.DataModel.DOMElementModel", "class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model.html", null ],
     [ "EventArgs", null, [
+      [ "WebAnalyzer.Events.AddBrowserEvent", "class_web_analyzer_1_1_events_1_1_add_browser_event.html", null ],
       [ "WebAnalyzer.Events.AddConnectionEvent", "class_web_analyzer_1_1_events_1_1_add_connection_event.html", null ],
+      [ "WebAnalyzer.Events.AddTestrunDataEvent", "class_web_analyzer_1_1_events_1_1_add_testrun_data_event.html", null ],
       [ "WebAnalyzer.Events.AddTrackingEvent", "class_web_analyzer_1_1_events_1_1_add_tracking_event.html", null ],
       [ "WebAnalyzer.Events.AddWebpageEvent", "class_web_analyzer_1_1_events_1_1_add_webpage_event.html", null ],
       [ "WebAnalyzer.Events.CreateAOISettingEvent", "class_web_analyzer_1_1_events_1_1_create_a_o_i_setting_event.html", null ],
@@ -69,8 +81,6 @@ var hierarchy =
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.EyeDataStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_eye_data_struct.html", null ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.EyePositionStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_eye_position_struct.html", null ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingController", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller.html", null ],
-    [ "WebAnalyzer.Models.DataModel.EyeTrackingData", "class_web_analyzer_1_1_models_1_1_data_model_1_1_eye_tracking_data.html", null ],
-    [ "WebAnalyzer.EyeTracking.EyeTrackingModel", "class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model.html", null ],
     [ "WebAnalyzer.Util.FileIO", "class_web_analyzer_1_1_util_1_1_file_i_o.html", null ],
     [ "WebAnalyzer.Models.AnalysisModel.FixationModel", "class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model.html", null ],
     [ "Form", null, [
@@ -106,10 +116,14 @@ var hierarchy =
       [ "WebAnalyzer.Models.MessageModel.DataMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message.html", null ],
       [ "WebAnalyzer.Models.MessageModel.EchoMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_echo_message.html", null ],
       [ "WebAnalyzer.Models.MessageModel.ErrorMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_error_message.html", null ],
+      [ "WebAnalyzer.Models.MessageModel.EventMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message.html", [
+        [ "WebAnalyzer.Models.MessageModel.In.EventMessages.ResizeEventMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_resize_event_message.html", null ],
+        [ "WebAnalyzer.Models.MessageModel.In.EventMessages.ScrollEventMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_scroll_event_message.html", null ],
+        [ "WebAnalyzer.Models.MessageModel.In.EventMessages.URLChangeEventMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_u_r_l_change_event_message.html", null ]
+      ] ],
       [ "WebAnalyzer.Models.MessageModel.InDataMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message.html", null ],
       [ "WebAnalyzer.Models.MessageModel.SmallDataMessage", "class_web_analyzer_1_1_models_1_1_message_model_1_1_small_data_message.html", null ]
     ] ],
-    [ "WebAnalyzer.Test.Communication.MouseModel", "class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model.html", null ],
     [ "WebAnalyzer.Models.DataModel.PositionDataModel", "class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model.html", null ],
     [ "WebAnalyzer.Models.Base.RawTrackingData", "class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data.html", null ],
     [ "WebAnalyzer.Models.Base.RawTrackingEvent", "class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event.html", null ],
@@ -128,7 +142,6 @@ var hierarchy =
     [ "WebAnalyzer.Models.DataModel.TestModel", "class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model.html", null ],
     [ "WebAnalyzer.Util.Timestamp", "class_web_analyzer_1_1_util_1_1_timestamp.html", null ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.TrackingStatusStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_tracking_status_struct.html", null ],
-    [ "WebAnalyzer.Models.SettingsModel.ExpressionTree.TreeGenerator", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_tree_generator.html", null ],
     [ "WebAnalyzer.Models.Base.UIDBase", "class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base.html", [
       [ "WebAnalyzer.Models.Base.ExperimentParticipant", "class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant.html", null ],
       [ "WebAnalyzer.Models.SettingsModel.AOISettings", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings.html", null ],
@@ -139,12 +152,12 @@ var hierarchy =
         [ "WebAnalyzer.Models.SettingsModel.ExpressionTree.OrNode", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_or_node.html", null ],
         [ "WebAnalyzer.Models.SettingsModel.ExpressionTree.ValueNode", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node.html", null ]
       ] ],
-      [ "WebAnalyzer.Models.SettingsModel.SettingsRule", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule.html", null ]
+      [ "WebAnalyzer.Models.SettingsModel.SettingsRule", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule.html", null ],
+      [ "WebAnalyzer.Server.WebsocketConnection", "class_web_analyzer_1_1_server_1_1_websocket_connection.html", null ]
     ] ],
     [ "WebAnalyzer.Util.Utilities", "class_web_analyzer_1_1_util_1_1_utilities.html", null ],
     [ "WebAnalyzer.WebAnalyzer", "class_web_analyzer_1_1_web_analyzer.html", null ],
     [ "WebAnalyzer.Models.DataModel.WebpageModel", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html", null ],
-    [ "WebAnalyzer.Server.WebsocketConnection", "class_web_analyzer_1_1_server_1_1_websocket_connection.html", null ],
     [ "WebAnalyzer.Server.WebsocketServer", "class_web_analyzer_1_1_server_1_1_websocket_server.html", null ],
     [ "WebAnalyzer.Server.WsExtensions", "class_web_analyzer_1_1_server_1_1_ws_extensions.html", null ]
 ];

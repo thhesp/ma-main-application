@@ -3,6 +3,7 @@ var class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings =
     [ "AOISettings", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings.html#acc73516628d0ab05d5a8f5b838407e2e", null ],
     [ "AOISettings", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings.html#a2d797a5be30a7909bcc9c74be10dea3c", null ],
     [ "AddRule", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings.html#a90d2d9b1f0a445bf8d9d59838eeaae86", null ],
+    [ "Clone", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings.html#acf226641c18208967b6e193503bf1883", null ],
     [ "Copy", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings.html#a85c137ff1741cbd292804cb3ec94eca3", null ],
     [ "DeleteRule", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings.html#a2e4c0faead8b85ebf0db0aaf6fe65699", null ],
     [ "ElementBelongsToAOI", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings.html#aa2c30a095d9e8495a0ad2c0926130600", null ],

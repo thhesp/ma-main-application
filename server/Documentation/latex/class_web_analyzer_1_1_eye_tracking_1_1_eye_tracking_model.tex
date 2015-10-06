@@ -5,30 +5,27 @@
 This model contains all functionality necessary for using the E\+T controller for tests.  
 
 
+Inheritance diagram for Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a6be62a4dc74db08b88c80aa8603a06e2}{Eye\+Tracking\+Model} ()
 \begin{DoxyCompactList}\small\item\em Constructor which sets the E\+T\+Device Object and some Callbacks. \end{DoxyCompactList}\item 
-Boolean \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a6e9342c234b6000ba68c03464acb0f50}{connect} (String sendip, int sendport, String receiveip, int receiveport)
-\begin{DoxyCompactList}\small\item\em Method to connect to an \hyperlink{namespace_web_analyzer_1_1_eye_tracking}{Eye\+Tracking} \hyperlink{namespace_web_analyzer_1_1_server}{Server}. \end{DoxyCompactList}\item 
-Boolean \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a95814ec9f1a4f0d5da70a78c50dd9e22}{connect\+Local} ()
-\begin{DoxyCompactList}\small\item\em Method to connect to an \hyperlink{namespace_web_analyzer_1_1_eye_tracking}{Eye\+Tracking} \hyperlink{namespace_web_analyzer_1_1_server}{Server} locally. \end{DoxyCompactList}\item 
-int \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_ac340062e8376b59332ecc21e431fd6a1}{disconnect} ()
-\begin{DoxyCompactList}\small\item\em Disconnet from the Eye Tracking \hyperlink{namespace_web_analyzer_1_1_server}{Server} (Important Note\+: You must disconnect your Application from the server to avoid critical crashed and problems with the Portsettings) \end{DoxyCompactList}\item 
-void \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a5f49386b161f435472133e2d1f4762e0}{start\+Tracking} ()
-\begin{DoxyCompactList}\small\item\em Starts the Tracking by setting the necessary callbacks. \end{DoxyCompactList}\item 
-void \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_aef3a60c497edbedc9fe8b350f46696b1}{stop\+Tracking} ()
-\begin{DoxyCompactList}\small\item\em Stops the Tracking by removeing the callbacks. \end{DoxyCompactList}\item 
-int \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a29a7377e721b88fbd80553699e1d7228}{is\+Connected} ()
-\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{namespace_web_analyzer_1_1_eye_tracking}{Eye\+Tracking} Device is connected. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Events}
-\begin{DoxyCompactItemize}
+override \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2875208b4f4b0ed643593152f4ec025c}{Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a24496245bd949730f0f56d328ff74690}{connect} ()
 \item 
-Prepare\+Gaze\+Event\+Handler \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a170dd57ad1784737ddf34dc14f82293d}{Prepare\+Gaze}
-\begin{DoxyCompactList}\small\item\em Event which is used for sending data to the test controller. \end{DoxyCompactList}\item 
-Add\+Tracking\+Event\+Handler \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_af9985cde00e3f6c48694b7577e2689ea}{Add\+Tracking\+Event}
-\begin{DoxyCompactList}\small\item\em Event which is used for sending events to the test controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+override \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2875208b4f4b0ed643593152f4ec025c}{Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a8282209f61b0a45f09551ffe72cab136}{disconnect} ()
+\item 
+override void \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a73bde5a5915a3a33a368e5bdf1b203ca}{start\+Tracking} ()
+\begin{DoxyCompactList}\small\item\em Starts the Tracking by setting the necessary callbacks. \end{DoxyCompactList}\item 
+override void \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_ae65a98fe8a1ccd24838f7af022edd174}{stop\+Tracking} ()
+\begin{DoxyCompactList}\small\item\em Stops the Tracking by removeing the callbacks. \end{DoxyCompactList}\item 
+override double \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a974f53dd33c205cf772d98eeb7adddd0}{get\+Tracking\+Frequency} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the tracking frequency. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,6 +35,16 @@ delegate void \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_mo
 \item 
 delegate void \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a40785479d78104c591e53c7e2847e9ff}{Get\+Event\+Callback} (\hyperlink{struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_event_struct}{Eye\+Tracking\+Controller.\+Event\+Struct} event\+Data)
 \item 
+Boolean \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a6e9342c234b6000ba68c03464acb0f50}{connect} (String sendip, int sendport, String receiveip, int receiveport)
+\begin{DoxyCompactList}\small\item\em Method to connect to an \hyperlink{namespace_web_analyzer_1_1_eye_tracking}{Eye\+Tracking} \hyperlink{namespace_web_analyzer_1_1_server}{Server}. \end{DoxyCompactList}\item 
+Boolean \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a95814ec9f1a4f0d5da70a78c50dd9e22}{connect\+Local} ()
+\begin{DoxyCompactList}\small\item\em Method to connect to an \hyperlink{namespace_web_analyzer_1_1_eye_tracking}{Eye\+Tracking} \hyperlink{namespace_web_analyzer_1_1_server}{Server} locally. \end{DoxyCompactList}\item 
+Boolean \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_ac71c3384b693045561ec20be26951fc6}{intern\+Disconnect} ()
+\begin{DoxyCompactList}\small\item\em Disconnet from the Eye Tracking \hyperlink{namespace_web_analyzer_1_1_server}{Server} (Important Note\+: You must disconnect your Application from the server to avoid critical crashed and problems with the Portsettings) \end{DoxyCompactList}\item 
+int \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a29a7377e721b88fbd80553699e1d7228}{is\+Connected} ()
+\begin{DoxyCompactList}\small\item\em Checks if the \hyperlink{namespace_web_analyzer_1_1_eye_tracking}{Eye\+Tracking} Device is connected. \end{DoxyCompactList}\item 
+int \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a699dac245ea96b5b2426e395d9bb93fd}{get\+Tracking\+Frequency\+In\+Hz} ()
+\begin{DoxyCompactList}\small\item\em Function which returns the tracking frequency in hertz. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a88d3a53476fe1dc652fbbb7ce8b30fdd}{Get\+Sample\+Callback\+Function} (\hyperlink{struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_sample_struct}{Eye\+Tracking\+Controller.\+Sample\+Struct} sample\+Data)
 \begin{DoxyCompactList}\small\item\em Callback function for sample Data. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a01a7efee3ea0a2a06c1c7405d8fb9598}{Get\+Event\+Callback\+Function} (\hyperlink{struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_event_struct}{Eye\+Tracking\+Controller.\+Event\+Struct} event\+Data)
@@ -55,6 +62,7 @@ void \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a64c9
 \item 
 \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a40785479d78104c591e53c7e2847e9ff}{Get\+Event\+Callback} \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a806e6c2c97d1e27187755e8d22f87d86}{m\+\_\+\+Event\+Callback}
 \end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
@@ -95,6 +103,17 @@ Constructor which sets the E\+T\+Device Object and some Callbacks.
 
 Callback function for calibration Data. 
 
+\hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a24496245bd949730f0f56d328ff74690}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!connect@{connect}}
+\index{connect@{connect}!Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}}
+\subsubsection[{connect()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model.\+connect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a24496245bd949730f0f56d328ff74690}
+
+
+Implements \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ae9cca2b18274747b70b51f0d1cc37532}{Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model}.
+
 \hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a6e9342c234b6000ba68c03464acb0f50}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!connect@{connect}}
 \index{connect@{connect}!Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}}
 \subsubsection[{connect(\+String sendip, int sendport, String receiveip, int receiveport)}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model.\+connect (
@@ -104,7 +123,7 @@ Callback function for calibration Data.
 \item[{String}]{receiveip, }
 \item[{int}]{receiveport}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a6e9342c234b6000ba68c03464acb0f50}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a6e9342c234b6000ba68c03464acb0f50}
 
 
 Method to connect to an \hyperlink{namespace_web_analyzer_1_1_eye_tracking}{Eye\+Tracking} \hyperlink{namespace_web_analyzer_1_1_server}{Server}. 
@@ -126,21 +145,21 @@ Method to connect to an \hyperlink{namespace_web_analyzer_1_1_eye_tracking}{Eye\
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a95814ec9f1a4f0d5da70a78c50dd9e22}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a95814ec9f1a4f0d5da70a78c50dd9e22}
 
 
 Method to connect to an \hyperlink{namespace_web_analyzer_1_1_eye_tracking}{Eye\+Tracking} \hyperlink{namespace_web_analyzer_1_1_server}{Server} locally. 
 
-\hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_ac340062e8376b59332ecc21e431fd6a1}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!disconnect@{disconnect}}
+\hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a8282209f61b0a45f09551ffe72cab136}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!disconnect@{disconnect}}
 \index{disconnect@{disconnect}!Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}}
-\subsubsection[{disconnect()}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model.\+disconnect (
+\subsubsection[{disconnect()}]{\setlength{\rightskip}{0pt plus 5cm}override {\bf Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model.\+disconnect (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_ac340062e8376b59332ecc21e431fd6a1}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a8282209f61b0a45f09551ffe72cab136}
 
 
-Disconnet from the Eye Tracking \hyperlink{namespace_web_analyzer_1_1_server}{Server} (Important Note\+: You must disconnect your Application from the server to avoid critical crashed and problems with the Portsettings) 
+Implements \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1540c4d92ded2ce32aa485eafd9e3a12}{Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model}.
 
 \hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a40785479d78104c591e53c7e2847e9ff}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!Get\+Event\+Callback@{Get\+Event\+Callback}}
 \index{Get\+Event\+Callback@{Get\+Event\+Callback}!Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}}
@@ -178,38 +197,83 @@ The data is for mainly fixations. Timestamps in microseconds if normale samplest
 
 Callback function for sample Data. 
 
-The data is for one tracking point. Timestamps in microseconds if normale samplestruct, if 32 bit sample struct its in milliseconds... \hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a29a7377e721b88fbd80553699e1d7228}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!is\+Connected@{is\+Connected}}
+The data is for one tracking point. Timestamps in microseconds if normale samplestruct, if 32 bit sample struct its in milliseconds... \hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a974f53dd33c205cf772d98eeb7adddd0}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!get\+Tracking\+Frequency@{get\+Tracking\+Frequency}}
+\index{get\+Tracking\+Frequency@{get\+Tracking\+Frequency}!Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}}
+\subsubsection[{get\+Tracking\+Frequency()}]{\setlength{\rightskip}{0pt plus 5cm}override double Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model.\+get\+Tracking\+Frequency (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a974f53dd33c205cf772d98eeb7adddd0}
+
+
+Function which returns the tracking frequency. 
+
+
+
+Implements \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ab79ef77eec8b92c3c7e536e25642af56}{Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model}.
+
+\hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a699dac245ea96b5b2426e395d9bb93fd}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!get\+Tracking\+Frequency\+In\+Hz@{get\+Tracking\+Frequency\+In\+Hz}}
+\index{get\+Tracking\+Frequency\+In\+Hz@{get\+Tracking\+Frequency\+In\+Hz}!Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}}
+\subsubsection[{get\+Tracking\+Frequency\+In\+Hz()}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model.\+get\+Tracking\+Frequency\+In\+Hz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a699dac245ea96b5b2426e395d9bb93fd}
+
+
+Function which returns the tracking frequency in hertz. 
+
+\hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_ac71c3384b693045561ec20be26951fc6}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!intern\+Disconnect@{intern\+Disconnect}}
+\index{intern\+Disconnect@{intern\+Disconnect}!Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}}
+\subsubsection[{intern\+Disconnect()}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model.\+intern\+Disconnect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_ac71c3384b693045561ec20be26951fc6}
+
+
+Disconnet from the Eye Tracking \hyperlink{namespace_web_analyzer_1_1_server}{Server} (Important Note\+: You must disconnect your Application from the server to avoid critical crashed and problems with the Portsettings) 
+
+\hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a29a7377e721b88fbd80553699e1d7228}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!is\+Connected@{is\+Connected}}
 \index{is\+Connected@{is\+Connected}!Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}}
 \subsubsection[{is\+Connected()}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model.\+is\+Connected (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a29a7377e721b88fbd80553699e1d7228}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a29a7377e721b88fbd80553699e1d7228}
 
 
 Checks if the \hyperlink{namespace_web_analyzer_1_1_eye_tracking}{Eye\+Tracking} Device is connected. 
 
-\hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a5f49386b161f435472133e2d1f4762e0}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!start\+Tracking@{start\+Tracking}}
+\hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a73bde5a5915a3a33a368e5bdf1b203ca}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!start\+Tracking@{start\+Tracking}}
 \index{start\+Tracking@{start\+Tracking}!Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}}
-\subsubsection[{start\+Tracking()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model.\+start\+Tracking (
+\subsubsection[{start\+Tracking()}]{\setlength{\rightskip}{0pt plus 5cm}override void Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model.\+start\+Tracking (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a5f49386b161f435472133e2d1f4762e0}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a73bde5a5915a3a33a368e5bdf1b203ca}
 
 
 Starts the Tracking by setting the necessary callbacks. 
 
-\hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_aef3a60c497edbedc9fe8b350f46696b1}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!stop\+Tracking@{stop\+Tracking}}
+
+
+Implements \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a772a6b05f3976114c432d746510c3ceb}{Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model}.
+
+\hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_ae65a98fe8a1ccd24838f7af022edd174}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!stop\+Tracking@{stop\+Tracking}}
 \index{stop\+Tracking@{stop\+Tracking}!Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}}
-\subsubsection[{stop\+Tracking()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model.\+stop\+Tracking (
+\subsubsection[{stop\+Tracking()}]{\setlength{\rightskip}{0pt plus 5cm}override void Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model.\+stop\+Tracking (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_aef3a60c497edbedc9fe8b350f46696b1}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_ae65a98fe8a1ccd24838f7af022edd174}
 
 
 Stops the Tracking by removeing the callbacks. 
+
+
+
+Implements \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a22286c5202de039794f020d3fed12ae1}{Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model}.
 
 
 
@@ -230,23 +294,6 @@ Object of the \hyperlink{namespace_web_analyzer_1_1_eye_tracking}{Eye\+Tracking}
 \hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a968cb8269069b117054c23c913671380}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!m\+\_\+\+Sample\+Callback@{m\+\_\+\+Sample\+Callback}}
 \index{m\+\_\+\+Sample\+Callback@{m\+\_\+\+Sample\+Callback}!Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}}
 \subsubsection[{m\+\_\+\+Sample\+Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Get\+Sample\+Callback} Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model.\+m\+\_\+\+Sample\+Callback\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a968cb8269069b117054c23c913671380}
-
-
-\subsection{Event Documentation}
-\hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_af9985cde00e3f6c48694b7577e2689ea}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!Add\+Tracking\+Event@{Add\+Tracking\+Event}}
-\index{Add\+Tracking\+Event@{Add\+Tracking\+Event}!Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}}
-\subsubsection[{Add\+Tracking\+Event}]{\setlength{\rightskip}{0pt plus 5cm}Add\+Tracking\+Event\+Handler Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model.\+Add\+Tracking\+Event}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_af9985cde00e3f6c48694b7577e2689ea}
-
-
-Event which is used for sending events to the test controller. 
-
-\hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a170dd57ad1784737ddf34dc14f82293d}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!Prepare\+Gaze@{Prepare\+Gaze}}
-\index{Prepare\+Gaze@{Prepare\+Gaze}!Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}}
-\subsubsection[{Prepare\+Gaze}]{\setlength{\rightskip}{0pt plus 5cm}Prepare\+Gaze\+Event\+Handler Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model.\+Prepare\+Gaze}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a170dd57ad1784737ddf34dc14f82293d}
-
-
-Event which is used for sending data to the test controller. 
-
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

@@ -12,6 +12,8 @@ var class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_nod
     [ "Node", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node.html#a5ac174eb5648c594f80c5ca3e74a6687", null ],
     [ "Node", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node.html#a8f431fec0565dbc38cf63b8c469ff9b6", null ],
     [ "Node", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node.html#a499c9647efddf11d1fe3bd3c8759e5d3", null ],
+    [ "Copy", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node.html#a22898ea14ec232d9b7ef9f77f70e7be1", null ],
+    [ "CreateNode", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node.html#a137870d8c98d82705273158fab0f4fcb", null ],
     [ "CreateNodeFromXML", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node.html#a1ca08dcd343feb5bf309c2702fcfa46e", null ],
     [ "Evaluate", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node.html#aa07f08b4a2299c2b9752a1eba59e245d", null ],
     [ "EvaluateCaseSensitive", "class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node.html#a5cf0b866812c017ef1d0feb5f594499e", null ],

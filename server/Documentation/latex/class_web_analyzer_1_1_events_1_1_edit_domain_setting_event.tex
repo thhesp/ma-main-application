@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event}{}\section{Web\+Analyzer.\+Events.\+Edit\+Domain\+Setting\+Event Class Reference}
 \label{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event}\index{Web\+Analyzer.\+Events.\+Edit\+Domain\+Setting\+Event@{Web\+Analyzer.\+Events.\+Edit\+Domain\+Setting\+Event}}
+
+
+Event which gets triggered while editing the domain settings  
+
+
 Inheritance diagram for Web\+Analyzer.\+Events.\+Edit\+Domain\+Setting\+Event\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -13,35 +18,44 @@ enum \hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a1a2
 \hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a1a22be020f4b06370ab3a64893272b44a7dce122004969d56ae2e0245cb754d35}{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S.\+Edit} = 1, 
 \hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a1a22be020f4b06370ab3a64893272b44a5fb63579fc981698f97d55bfecb213ea}{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S.\+Copy} = 2, 
 \hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a1a22be020f4b06370ab3a64893272b44af2a6c498fb90ee345d997f888fce3b18}{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S.\+Delete} = 3
- \}
+ \}\begin{DoxyCompactList}\small\item\em Different edit types like create, edit, copy and delete \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_ad3da8a162d7b3cb9e02b350d79f6d2b8}{Edit\+Domain\+Setting\+Event} (\hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a1a22be020f4b06370ab3a64893272b44}{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S} type, String uid)
-\item 
-\hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a5b19e6d92e7d9281cb57461d6451c24c}{Edit\+Domain\+Setting\+Event} (\hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a1a22be020f4b06370ab3a64893272b44}{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S} type)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Event Constructor \end{DoxyCompactList}\item 
+\hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a655e4143dd9e0e787a73fe4163b168ed}{Edit\+Domain\+Setting\+Event} ()
+\begin{DoxyCompactList}\small\item\em Event\+Constructor used for creating an domain setting \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_ad1c58d61b04b924664078c684161f861}{U\+I\+D}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter for the domain setting U\+I\+D \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a1a22be020f4b06370ab3a64893272b44}{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S} \hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a36f36d7fa2adf9fb69c62c4dbdcf034e}{Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Edit type of the current event \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_aa086a99df55cd981e1d841edb844ebcc}{\+\_\+uid}
-\item 
+\begin{DoxyCompactList}\small\item\em U\+I\+D of the domain setting \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a1a22be020f4b06370ab3a64893272b44}{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S} \hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_afe924ff1d33b89646a5e3de2110a0f14}{\+\_\+type}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Edit type of the event \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Event which gets triggered while editing the domain settings 
+
 
 
 \subsection{Member Enumeration Documentation}
 \hypertarget{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a1a22be020f4b06370ab3a64893272b44}{}\index{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event}!E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S@{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S}}
 \index{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S@{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S}!Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event}}
 \subsubsection[{E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Web\+Analyzer.\+Events.\+Edit\+Domain\+Setting\+Event.\+E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S}\hspace{0.3cm}{\ttfamily [strong]}}\label{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a1a22be020f4b06370ab3a64893272b44}
+
+
+Different edit types like create, edit, copy and delete 
+
 \begin{Desc}
 \item[Enumerator]\par
 \begin{description}
@@ -66,33 +80,64 @@ String \hyperlink{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_aa
 \item[{String}]{uid}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_ad3da8a162d7b3cb9e02b350d79f6d2b8}
-\hypertarget{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a5b19e6d92e7d9281cb57461d6451c24c}{}\index{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event}!Edit\+Domain\+Setting\+Event@{Edit\+Domain\+Setting\+Event}}
+
+
+Event Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Edit type of the event\\
+\hline
+{\em uid} & U\+I\+D of the domain setting\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a655e4143dd9e0e787a73fe4163b168ed}{}\index{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event}!Edit\+Domain\+Setting\+Event@{Edit\+Domain\+Setting\+Event}}
 \index{Edit\+Domain\+Setting\+Event@{Edit\+Domain\+Setting\+Event}!Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event}}
-\subsubsection[{Edit\+Domain\+Setting\+Event(\+E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S type)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Events.\+Edit\+Domain\+Setting\+Event.\+Edit\+Domain\+Setting\+Event (
+\subsubsection[{Edit\+Domain\+Setting\+Event()}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Events.\+Edit\+Domain\+Setting\+Event.\+Edit\+Domain\+Setting\+Event (
 \begin{DoxyParamCaption}
-\item[{{\bf E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S}}]{type}
+{}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a5b19e6d92e7d9281cb57461d6451c24c}
+)}\label{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a655e4143dd9e0e787a73fe4163b168ed}
+
+
+Event\+Constructor used for creating an domain setting 
+
 
 
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_afe924ff1d33b89646a5e3de2110a0f14}{}\index{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event}!\+\_\+type@{\+\_\+type}}
 \index{\+\_\+type@{\+\_\+type}!Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event}}
 \subsubsection[{\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S} Web\+Analyzer.\+Events.\+Edit\+Domain\+Setting\+Event.\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_afe924ff1d33b89646a5e3de2110a0f14}
+
+
+Edit type of the event 
+
 \hypertarget{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_aa086a99df55cd981e1d841edb844ebcc}{}\index{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event}!\+\_\+uid@{\+\_\+uid}}
 \index{\+\_\+uid@{\+\_\+uid}!Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event}}
 \subsubsection[{\+\_\+uid}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Edit\+Domain\+Setting\+Event.\+\_\+uid\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_aa086a99df55cd981e1d841edb844ebcc}
+
+
+U\+I\+D of the domain setting 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a36f36d7fa2adf9fb69c62c4dbdcf034e}{}\index{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event}!Type@{Type}}
 \index{Type@{Type}!Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event}}
 \subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+D\+I\+T\+\_\+\+T\+Y\+P\+E\+S} Web\+Analyzer.\+Events.\+Edit\+Domain\+Setting\+Event.\+Type\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_a36f36d7fa2adf9fb69c62c4dbdcf034e}
+
+
+Edit type of the current event 
+
 \hypertarget{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_ad1c58d61b04b924664078c684161f861}{}\index{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event}!U\+I\+D@{U\+I\+D}}
 \index{U\+I\+D@{U\+I\+D}!Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event@{Web\+Analyzer\+::\+Events\+::\+Edit\+Domain\+Setting\+Event}}
 \subsubsection[{U\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Edit\+Domain\+Setting\+Event.\+U\+I\+D\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_edit_domain_setting_event_ad1c58d61b04b924664078c684161f861}
 
 
+Getter for the domain setting U\+I\+D 
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-M\+A-\/\+F\+F-\/\+Server/\+M\+A-\/\+F\+F-\/\+Server/\+Events/\hyperlink{_edit_setting_event_8cs}{Edit\+Setting\+Event.\+cs}\end{DoxyCompactItemize}
+M\+A-\/\+F\+F-\/\+Server/\+M\+A-\/\+F\+F-\/\+Server/\+Events/\hyperlink{_edit_domain_setting_event_8cs}{Edit\+Domain\+Setting\+Event.\+cs}\end{DoxyCompactItemize}

@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_events_1_1_message_sent_event}{}\section{Web\+Analyzer.\+Events.\+Message\+Sent\+Event Class Reference}
 \label{class_web_analyzer_1_1_events_1_1_message_sent_event}\index{Web\+Analyzer.\+Events.\+Message\+Sent\+Event@{Web\+Analyzer.\+Events.\+Message\+Sent\+Event}}
+
+
+Event which informs the testcontroller that the message for this gaze was sent.  
+
+
 Inheritance diagram for Web\+Analyzer.\+Events.\+Message\+Sent\+Event\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,21 +15,26 @@ Inheritance diagram for Web\+Analyzer.\+Events.\+Message\+Sent\+Event\+:\begin{f
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_events_1_1_message_sent_event_a20f49da5ed8a32d8af10923a0e3b1f0b}{Message\+Sent\+Event} (String uid)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Event\+Constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_events_1_1_message_sent_event_a04217696019822bcc61e6890810b8442}{U\+I\+D}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter of the gaze U\+I\+D \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_events_1_1_message_sent_event_a7408640c7a1d8de43f36ca70b01c49b0}{Sent\+Timestamp}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Timestamp on which the message was sent \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_events_1_1_message_sent_event_a38d54d167e7fbe337cfe766aa47c1229}{\+\_\+uid}
-\item 
+\begin{DoxyCompactList}\small\item\em U\+I\+D of the gaze to which the message belongs \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_events_1_1_message_sent_event_acd4496065b9d2763ba985dfa43b15cfe}{\+\_\+sent\+Timestamp}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Timestamp on which the message was sent \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Event which informs the testcontroller that the message for this gaze was sent. 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -37,22 +47,47 @@ String \hyperlink{class_web_analyzer_1_1_events_1_1_message_sent_event_acd449606
 )}\label{class_web_analyzer_1_1_events_1_1_message_sent_event_a20f49da5ed8a32d8af10923a0e3b1f0b}
 
 
+Event\+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uid} & U\+I\+D of the gaze to which the message belongs\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_events_1_1_message_sent_event_acd4496065b9d2763ba985dfa43b15cfe}{}\index{Web\+Analyzer\+::\+Events\+::\+Message\+Sent\+Event@{Web\+Analyzer\+::\+Events\+::\+Message\+Sent\+Event}!\+\_\+sent\+Timestamp@{\+\_\+sent\+Timestamp}}
 \index{\+\_\+sent\+Timestamp@{\+\_\+sent\+Timestamp}!Web\+Analyzer\+::\+Events\+::\+Message\+Sent\+Event@{Web\+Analyzer\+::\+Events\+::\+Message\+Sent\+Event}}
 \subsubsection[{\+\_\+sent\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Message\+Sent\+Event.\+\_\+sent\+Timestamp\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_message_sent_event_acd4496065b9d2763ba985dfa43b15cfe}
+
+
+Timestamp on which the message was sent 
+
 \hypertarget{class_web_analyzer_1_1_events_1_1_message_sent_event_a38d54d167e7fbe337cfe766aa47c1229}{}\index{Web\+Analyzer\+::\+Events\+::\+Message\+Sent\+Event@{Web\+Analyzer\+::\+Events\+::\+Message\+Sent\+Event}!\+\_\+uid@{\+\_\+uid}}
 \index{\+\_\+uid@{\+\_\+uid}!Web\+Analyzer\+::\+Events\+::\+Message\+Sent\+Event@{Web\+Analyzer\+::\+Events\+::\+Message\+Sent\+Event}}
 \subsubsection[{\+\_\+uid}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Message\+Sent\+Event.\+\_\+uid\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_message_sent_event_a38d54d167e7fbe337cfe766aa47c1229}
+
+
+U\+I\+D of the gaze to which the message belongs 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_events_1_1_message_sent_event_a7408640c7a1d8de43f36ca70b01c49b0}{}\index{Web\+Analyzer\+::\+Events\+::\+Message\+Sent\+Event@{Web\+Analyzer\+::\+Events\+::\+Message\+Sent\+Event}!Sent\+Timestamp@{Sent\+Timestamp}}
 \index{Sent\+Timestamp@{Sent\+Timestamp}!Web\+Analyzer\+::\+Events\+::\+Message\+Sent\+Event@{Web\+Analyzer\+::\+Events\+::\+Message\+Sent\+Event}}
 \subsubsection[{Sent\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Message\+Sent\+Event.\+Sent\+Timestamp\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_message_sent_event_a7408640c7a1d8de43f36ca70b01c49b0}
+
+
+Timestamp on which the message was sent 
+
 \hypertarget{class_web_analyzer_1_1_events_1_1_message_sent_event_a04217696019822bcc61e6890810b8442}{}\index{Web\+Analyzer\+::\+Events\+::\+Message\+Sent\+Event@{Web\+Analyzer\+::\+Events\+::\+Message\+Sent\+Event}!U\+I\+D@{U\+I\+D}}
 \index{U\+I\+D@{U\+I\+D}!Web\+Analyzer\+::\+Events\+::\+Message\+Sent\+Event@{Web\+Analyzer\+::\+Events\+::\+Message\+Sent\+Event}}
 \subsubsection[{U\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Message\+Sent\+Event.\+U\+I\+D\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_message_sent_event_a04217696019822bcc61e6890810b8442}
+
+
+Getter of the gaze U\+I\+D 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

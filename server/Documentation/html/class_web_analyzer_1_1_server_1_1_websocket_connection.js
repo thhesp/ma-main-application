@@ -7,6 +7,7 @@ var class_web_analyzer_1_1_server_1_1_websocket_connection =
     [ "workMessageQueue", "class_web_analyzer_1_1_server_1_1_websocket_connection.html#a325a5138c2af5d5296360cf0abdd1942", null ],
     [ "_active", "class_web_analyzer_1_1_server_1_1_websocket_connection.html#aad4b4619cdb766c16e900ee792fd2fc8", null ],
     [ "_messageQueue", "class_web_analyzer_1_1_server_1_1_websocket_connection.html#a876416b6c825d37d39ec966b022883b3", null ],
+    [ "_uid", "class_web_analyzer_1_1_server_1_1_websocket_connection.html#add4db0c0ee59a7f22c8f2638099e3217", null ],
     [ "_writing", "class_web_analyzer_1_1_server_1_1_websocket_connection.html#a19b519a7ec81f0898724fcdefb8c6f62", null ],
     [ "_ws", "class_web_analyzer_1_1_server_1_1_websocket_connection.html#a8b3efea13ab70fe8a5c866930ef7a263", null ],
     [ "Active", "class_web_analyzer_1_1_server_1_1_websocket_connection.html#af64b83d9aec7d436a262f732e3b03e0b", null ],

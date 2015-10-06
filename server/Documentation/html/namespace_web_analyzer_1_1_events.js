@@ -1,6 +1,8 @@
 var namespace_web_analyzer_1_1_events =
 [
+    [ "AddBrowserEvent", "class_web_analyzer_1_1_events_1_1_add_browser_event.html", "class_web_analyzer_1_1_events_1_1_add_browser_event" ],
     [ "AddConnectionEvent", "class_web_analyzer_1_1_events_1_1_add_connection_event.html", "class_web_analyzer_1_1_events_1_1_add_connection_event" ],
+    [ "AddTestrunDataEvent", "class_web_analyzer_1_1_events_1_1_add_testrun_data_event.html", "class_web_analyzer_1_1_events_1_1_add_testrun_data_event" ],
     [ "AddTrackingEvent", "class_web_analyzer_1_1_events_1_1_add_tracking_event.html", "class_web_analyzer_1_1_events_1_1_add_tracking_event" ],
     [ "AddWebpageEvent", "class_web_analyzer_1_1_events_1_1_add_webpage_event.html", "class_web_analyzer_1_1_events_1_1_add_webpage_event" ],
     [ "CreateAOISettingEvent", "class_web_analyzer_1_1_events_1_1_create_a_o_i_setting_event.html", "class_web_analyzer_1_1_events_1_1_create_a_o_i_setting_event" ],

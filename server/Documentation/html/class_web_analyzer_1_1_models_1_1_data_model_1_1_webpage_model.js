@@ -1,6 +1,6 @@
 var class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model =
 [
-    [ "WebpageModel", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#ae5054b6875654937144914f592802d9d", null ],
+    [ "WebpageModel", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a2f7f76f4128b22b839f8858d40413067", null ],
     [ "WebpageModel", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a613cfd755d739701df6cd2b05190d72f", null ],
     [ "AddGazeData", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a7169078e11bdd8867dc0f507c9a65b9e", null ],
     [ "CreateWebpageStatistics", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#af8b9bb060e28384f7ecf0635856187d4", null ],
@@ -12,6 +12,8 @@ var class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model =
     [ "InsertArrayStatistics", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a52e372578a17a8174ba376ca4d699b31", null ],
     [ "LoadFromXML", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a26999baeddbe48b5c6f10a0b7510c807", null ],
     [ "ToXML", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a056bc9895b2a1c83631c24d100353ef2", null ],
+    [ "_connectionUID", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#af8a807db15e54cbc83463f814c6b4f59", null ],
+    [ "_eventData", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a6f183590ba34744b4cec4c8cfb126af5", null ],
     [ "_leftFixationData", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#aeef627527c26ccf4d8caa6e65101970f", null ],
     [ "_leftSaccadesData", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#ae5f64734db7ab52273fa0cd24ca0a31a", null ],
     [ "_positionData", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a1830061eb9c3046a86386306ac467f25", null ],
@@ -19,9 +21,15 @@ var class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model =
     [ "_rightSaccadesnData", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#aa2ee1cf77db6f7e7f68fbf8c971109cf", null ],
     [ "_url", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#aea93808218833baaf68514071c973ae4", null ],
     [ "_visitTimestamp", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#ac030b9fb9430a41677eb845ceabd5b26", null ],
+    [ "_windowHeight", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a8950b0fab5ad1e804970a6197737e31a", null ],
+    [ "_windowWidth", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#ae9604da5bff18321d117bae9c29d19b1", null ],
+    [ "ConnectionUID", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a5f1bed3947c7e7b6a5fe34fdd23f3841", null ],
+    [ "Events", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#aa80b98da4b9e9c2d6b6950f4e52c0b61", null ],
     [ "Gazes", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#acb4a6ecac0e4ef9ed2df7b33e4694b31", null ],
     [ "LeftFixationData", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#af4888add7ed76fe7b841410abc944b99", null ],
     [ "RightFixationData", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#abe8cc7ad2f30655dbd1ba0c1111429d6", null ],
     [ "Url", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a956b067ed12f422f646b7e2a4b6bb42d", null ],
-    [ "VisitTimestamp", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#ac3378fdc78273706547ec3a9d377ef9a", null ]
+    [ "VisitTimestamp", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#ac3378fdc78273706547ec3a9d377ef9a", null ],
+    [ "WindowHeight", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a76b6e0896f14f8d7c0d7bf94b94ec058", null ],
+    [ "WindowWidth", "class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a3e3926562c05a94a3111f3a07cd8e131", null ]
 ];

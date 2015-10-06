@@ -12,6 +12,9 @@ var dir_b95da6996b9aa18aa7e96ff8d94e3bed =
     [ "GazeModel.cs", "_gaze_model_8cs.html", [
       [ "GazeModel", "class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html", "class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model" ]
     ] ],
+    [ "MouseTrackingData.cs", "_mouse_tracking_data_8cs.html", [
+      [ "MouseTrackingData", "class_web_analyzer_1_1_models_1_1_data_model_1_1_mouse_tracking_data.html", "class_web_analyzer_1_1_models_1_1_data_model_1_1_mouse_tracking_data" ]
+    ] ],
     [ "PositionDataModel.cs", "_position_data_model_8cs.html", [
       [ "PositionDataModel", "class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model.html", "class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model" ]
     ] ],

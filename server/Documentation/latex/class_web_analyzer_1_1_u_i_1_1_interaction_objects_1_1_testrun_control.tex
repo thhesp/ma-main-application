@@ -11,6 +11,16 @@ Inheritance diagram for Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Testrun\+C
 \item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a4c7cc1fb505c57b84d0247abb85eb424}{Testrun\+Control} (\hyperlink{class_web_analyzer_1_1_u_i_1_1_testrun_form}{Testrun\+Form} form)
 \item 
+void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_afe75adb92ec988b41703ce1f4756f0cb}{update\+Label} (String label)
+\item 
+void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a4d48e389fa01651d00601014fd26abc2}{update\+Protocol} (String protocol)
+\item 
+String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_ab200223a2ab56282c3312d2d4019b689}{get\+Label} ()
+\item 
+String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a8a702b4953fe5cb8d9de125a1004f003}{get\+Protocol} ()
+\item 
+void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a2ca0a1cab51ceaef19727b11a22c2394}{add\+Testrun\+Data} ()
+\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_afa240c157d4dca3e5399625cf59afd8c}{end\+Test} ()
 \item 
 Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_ae1dacc2d3e11d88116b3dbf9c45ea403}{test\+Running} ()
@@ -40,6 +50,8 @@ void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_c
 Testrun\+Event\+Handler \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_aec90f2bc94369619608e0059453752d3}{Testrun}
 \item 
 Select\+Participant\+For\+Test\+Event\+Handler \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_abf256e52c1a039ca329f7c749a9087e4}{Select\+Participant}
+\item 
+Add\+Testrun\+Data\+Event\+Handler \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_ae68ced3ba48613d9aa1469c128e62419}{Add\+Testrun\+Data}
 \end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -51,6 +63,10 @@ Select\+Participant\+For\+Test\+Event\+Handler \hyperlink{class_web_analyzer_1_1
 Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a476e0340bbef94992b2a976db6f37d25}{\+\_\+running} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a6f2545f1b64a0d78e4584e5482dbd8b2}{\+\_\+participant}
+\item 
+String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a68cf522d277fa8003eb8f0e59d237101}{\+\_\+label}
+\item 
+String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_afe133f8d5d0ccc48edb3790d044b0537}{\+\_\+protocol}
 \end{DoxyCompactItemize}
 
 
@@ -65,6 +81,13 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testru
 
 
 \subsection{Member Function Documentation}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a2ca0a1cab51ceaef19727b11a22c2394}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}!add\+Testrun\+Data@{add\+Testrun\+Data}}
+\index{add\+Testrun\+Data@{add\+Testrun\+Data}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}}
+\subsubsection[{add\+Testrun\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Testrun\+Control.\+add\+Testrun\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a2ca0a1cab51ceaef19727b11a22c2394}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_afa240c157d4dca3e5399625cf59afd8c}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}!end\+Test@{end\+Test}}
 \index{end\+Test@{end\+Test}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}}
 \subsubsection[{end\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Testrun\+Control.\+end\+Test (
@@ -72,6 +95,13 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testru
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_afa240c157d4dca3e5399625cf59afd8c}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_ab200223a2ab56282c3312d2d4019b689}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}!get\+Label@{get\+Label}}
+\index{get\+Label@{get\+Label}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}}
+\subsubsection[{get\+Label()}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Testrun\+Control.\+get\+Label (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_ab200223a2ab56282c3312d2d4019b689}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a91ae8944392f8e0aef79106e157091a6}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}!get\+Participant\+Identifier@{get\+Participant\+Identifier}}
 \index{get\+Participant\+Identifier@{get\+Participant\+Identifier}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}}
 \subsubsection[{get\+Participant\+Identifier()}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Testrun\+Control.\+get\+Participant\+Identifier (
@@ -79,6 +109,13 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testru
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a91ae8944392f8e0aef79106e157091a6}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a8a702b4953fe5cb8d9de125a1004f003}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}!get\+Protocol@{get\+Protocol}}
+\index{get\+Protocol@{get\+Protocol}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}}
+\subsubsection[{get\+Protocol()}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Testrun\+Control.\+get\+Protocol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a8a702b4953fe5cb8d9de125a1004f003}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a607f5823a334e7a7bed326085fb65bc6}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}!Hide\+Save\+Indicator@{Hide\+Save\+Indicator}}
 \index{Hide\+Save\+Indicator@{Hide\+Save\+Indicator}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}}
 \subsubsection[{Hide\+Save\+Indicator()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Testrun\+Control.\+Hide\+Save\+Indicator (
@@ -129,6 +166,20 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testru
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_ae1dacc2d3e11d88116b3dbf9c45ea403}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_afe75adb92ec988b41703ce1f4756f0cb}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}!update\+Label@{update\+Label}}
+\index{update\+Label@{update\+Label}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}}
+\subsubsection[{update\+Label(\+String label)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Testrun\+Control.\+update\+Label (
+\begin{DoxyParamCaption}
+\item[{String}]{label}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_afe75adb92ec988b41703ce1f4756f0cb}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a4d48e389fa01651d00601014fd26abc2}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}!update\+Protocol@{update\+Protocol}}
+\index{update\+Protocol@{update\+Protocol}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}}
+\subsubsection[{update\+Protocol(\+String protocol)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Testrun\+Control.\+update\+Protocol (
+\begin{DoxyParamCaption}
+\item[{String}]{protocol}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a4d48e389fa01651d00601014fd26abc2}
 
 
 \subsection{Member Data Documentation}
@@ -138,9 +189,15 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testru
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_add6c2a6d01609147fdd302fece571636}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}!\+\_\+form@{\+\_\+form}}
 \index{\+\_\+form@{\+\_\+form}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}}
 \subsubsection[{\+\_\+form}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Testrun\+Form} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Testrun\+Control.\+\_\+form\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_add6c2a6d01609147fdd302fece571636}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a68cf522d277fa8003eb8f0e59d237101}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}!\+\_\+label@{\+\_\+label}}
+\index{\+\_\+label@{\+\_\+label}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}}
+\subsubsection[{\+\_\+label}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Testrun\+Control.\+\_\+label\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a68cf522d277fa8003eb8f0e59d237101}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a6f2545f1b64a0d78e4584e5482dbd8b2}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}!\+\_\+participant@{\+\_\+participant}}
 \index{\+\_\+participant@{\+\_\+participant}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}}
 \subsubsection[{\+\_\+participant}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+Participant} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Testrun\+Control.\+\_\+participant\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a6f2545f1b64a0d78e4584e5482dbd8b2}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_afe133f8d5d0ccc48edb3790d044b0537}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}!\+\_\+protocol@{\+\_\+protocol}}
+\index{\+\_\+protocol@{\+\_\+protocol}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}}
+\subsubsection[{\+\_\+protocol}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Testrun\+Control.\+\_\+protocol\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_afe133f8d5d0ccc48edb3790d044b0537}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a476e0340bbef94992b2a976db6f37d25}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}!\+\_\+running@{\+\_\+running}}
 \index{\+\_\+running@{\+\_\+running}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}}
 \subsubsection[{\+\_\+running}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Testrun\+Control.\+\_\+running = {\bf false}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_a476e0340bbef94992b2a976db6f37d25}
@@ -153,6 +210,9 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testru
 
 
 \subsection{Event Documentation}
+\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_ae68ced3ba48613d9aa1469c128e62419}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}!Add\+Testrun\+Data@{Add\+Testrun\+Data}}
+\index{Add\+Testrun\+Data@{Add\+Testrun\+Data}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}}
+\subsubsection[{Add\+Testrun\+Data}]{\setlength{\rightskip}{0pt plus 5cm}Add\+Testrun\+Data\+Event\+Handler Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Testrun\+Control.\+Add\+Testrun\+Data}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_ae68ced3ba48613d9aa1469c128e62419}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_abf256e52c1a039ca329f7c749a9087e4}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}!Select\+Participant@{Select\+Participant}}
 \index{Select\+Participant@{Select\+Participant}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Testrun\+Control}}
 \subsubsection[{Select\+Participant}]{\setlength{\rightskip}{0pt plus 5cm}Select\+Participant\+For\+Test\+Event\+Handler Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Testrun\+Control.\+Select\+Participant}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control_abf256e52c1a039ca329f7c749a9087e4}

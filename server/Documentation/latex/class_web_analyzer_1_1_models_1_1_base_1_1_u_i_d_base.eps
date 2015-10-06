@@ -179,6 +179,7 @@ boxfont setfont
 (WebAnalyzer.Models.SettingsModel.DomainSettings) cw
 (WebAnalyzer.Models.SettingsModel.ExpressionTree.Node) cw
 (WebAnalyzer.Models.SettingsModel.SettingsRule) cw
+(WebAnalyzer.Server.WebsocketConnection) cw
 (WebAnalyzer.Models.SettingsModel.ExpressionTree.AndNode) cw
 (WebAnalyzer.Models.SettingsModel.ExpressionTree.NotNode) cw
 (WebAnalyzer.Models.SettingsModel.ExpressionTree.OrNode) cw
@@ -194,12 +195,13 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (WebAnalyzer.Models.Base.UIDBase) 2.000000 2.000000 box
+ (WebAnalyzer.Models.Base.UIDBase) 2.500000 2.000000 box
  (WebAnalyzer.Models.Base.ExperimentParticipant) 0.000000 1.000000 box
  (WebAnalyzer.Models.SettingsModel.AOISettings) 1.000000 1.000000 box
  (WebAnalyzer.Models.SettingsModel.DomainSettings) 2.000000 1.000000 box
  (WebAnalyzer.Models.SettingsModel.ExpressionTree.Node) 3.000000 1.000000 box
  (WebAnalyzer.Models.SettingsModel.SettingsRule) 4.000000 1.000000 box
+ (WebAnalyzer.Server.WebsocketConnection) 5.000000 1.000000 box
  (WebAnalyzer.Models.SettingsModel.ExpressionTree.AndNode) 1.500000 0.000000 box
  (WebAnalyzer.Models.SettingsModel.ExpressionTree.NotNode) 2.500000 0.000000 box
  (WebAnalyzer.Models.SettingsModel.ExpressionTree.OrNode) 3.500000 0.000000 box
@@ -208,9 +210,9 @@ boundx scalefactor div boundy scalefactor div scale
 % ----- relations -----
 
 solid
-1 2.000000 1.250000 out
+1 2.500000 1.250000 out
 solid
-0.000000 4.000000 2.000000 conn
+0.000000 5.000000 2.000000 conn
 solid
 0 0.000000 1.750000 in
 solid
@@ -225,6 +227,8 @@ solid
 1.500000 4.500000 1.000000 conn
 solid
 0 4.000000 1.750000 in
+solid
+0 5.000000 1.750000 in
 solid
 0 1.500000 0.750000 in
 solid

@@ -184,7 +184,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="class_web_analyzer_1_1_util_1_1_stopwatch_timer.html#a54307d4a1466d1d52cf487d3e9988105">WebAnalyzer.Util.StopwatchTimer</a>
 </li>
 <li>_callbackTimestamp
-: <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_eye_tracking_data.html#a97d12e2f65f19ac9e0e216d03be819f2">WebAnalyzer.Models.DataModel.EyeTrackingData</a>
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data.html#a97cfad26e3a27a528776bcccbe7da68d">WebAnalyzer.Models.Base.BaseTrackingData</a>
 </li>
 <li>_caseSensitive
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule.html#ac71facd988cb48bac19773a22150f934">WebAnalyzer.Models.SettingsModel.SettingsRule</a>
@@ -221,17 +221,27 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>_connectionManager
 : <a class="el" href="class_web_analyzer_1_1_server_1_1_message_handler_1_1_echo_message_handler.html#a936f408ce4e67d13029830db8a3cd398">WebAnalyzer.Server.MessageHandler.EchoMessageHandler</a>
-, <a class="el" href="class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler.html#ada36000f38728c974d1cbebc7f716936">WebAnalyzer.Server.MessageHandler.EventMessageHandler</a>
 , <a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connections_observer.html#a12deecceed19d790d4f3a07bb121f519">WebAnalyzer.Server.WebsocketConnectionsObserver</a>
 </li>
 <li>_connections
 : <a class="el" href="class_web_analyzer_1_1_server_1_1_connection_manager.html#a4d1d80f0e1bca824c36908efcc4f9dc0">WebAnalyzer.Server.ConnectionManager</a>
+</li>
+<li>_connectionStatus
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model.html#aecba61dd2b171d2f6dcf3abc40229d39">WebAnalyzer.Models.Base.BaseTrackingModel</a>
+</li>
+<li>_connectionUID
+: <a class="el" href="class_web_analyzer_1_1_events_1_1_add_browser_event.html#ab10f41d4f0eb3043a6be0c1c1c5f96e8">WebAnalyzer.Events.AddBrowserEvent</a>
+, <a class="el" href="class_web_analyzer_1_1_events_1_1_add_webpage_event.html#a20bc73ad665fa032bc1d2e7f6d34db17">WebAnalyzer.Events.AddWebpageEvent</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#af8a807db15e54cbc83463f814c6b4f59">WebAnalyzer.Models.DataModel.WebpageModel</a>
 </li>
 <li>_connManager
 : <a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_server.html#ac98422e37a10a6c4fd3900a09b003b5e">WebAnalyzer.Server.WebsocketServer</a>
 </li>
 <li>_containGazeData
 : <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control.html#aa58521f4baa630aee5ccf3034f74b543">WebAnalyzer.UI.InteractionObjects.AnalysisExportControl</a>
+</li>
+<li>_control
+: <a class="el" href="class_web_analyzer_1_1_u_i_1_1_testrun_form.html#a9bf46961e50ac86c57418e529e87c561">WebAnalyzer.UI.TestrunForm</a>
 </li>
 <li>_controller
 : <a class="el" href="class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler.html#ae67a8ffd73f0ae8ff422db335a7e7924">WebAnalyzer.Server.MessageHandler.DataMessageHandler</a>
@@ -274,8 +284,11 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>_dataRequestedTimestamp
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_basic_data.html#aa600b76f390c856cbe15c8ba6bd7ccf8">WebAnalyzer.Models.Base.BasicData</a>
 </li>
-<li>_debugModel
-: <a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a1c615e40201210940f07312bcc993ef5">WebAnalyzer.Controller.TestController</a>
+<li>_description
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html#a55777bd2fa8b71c034d49baad38c6ea3">WebAnalyzer.Models.Base.ExperimentModel</a>
+</li>
+<li>_diameter
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_eye_tracking_data.html#a3cdac1c3e4271e126c3310dc4e61ab0b">WebAnalyzer.Models.DataModel.EyeTrackingData</a>
 </li>
 <li>_domain
 : <a class="el" href="class_web_analyzer_1_1_events_1_1_create_domain_setting_event.html#a5b8ba22cce1bd494bd41634f6338801e">WebAnalyzer.Events.CreateDomainSettingEvent</a>
@@ -311,9 +324,6 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>_ETConnectLocal
 : <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_application_settings_obj.html#aa7925653fa500c2ca2eeba8196660b30">WebAnalyzer.UI.InteractionObjects.ApplicationSettingsObj</a>
 </li>
-<li>_etModel
-: <a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a0db36e46096d444386af0d357905f430">WebAnalyzer.Controller.TestController</a>
-</li>
 <li>_ETReceiveIP
 : <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_application_settings_obj.html#a0c3a4992e4a62a97fc4623d379dfb7fb">WebAnalyzer.UI.InteractionObjects.ApplicationSettingsObj</a>
 </li>
@@ -326,18 +336,21 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>_ETSentPort
 : <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_application_settings_obj.html#a8101f556b9e66c46b27ade6cb57bdddd">WebAnalyzer.UI.InteractionObjects.ApplicationSettingsObj</a>
 </li>
-<li>_ETWarning
-: <a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a33b43014ccf6b9f7cdd1e3136ac19d3a">WebAnalyzer.Controller.TestController</a>
-</li>
 <li>_event
 : <a class="el" href="class_web_analyzer_1_1_events_1_1_add_tracking_event.html#ae4254416e365751f3187a64e68ff4fc2">WebAnalyzer.Events.AddTrackingEvent</a>
+</li>
+<li>_eventData
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a6f183590ba34744b4cec4c8cfb126af5">WebAnalyzer.Models.DataModel.WebpageModel</a>
+</li>
+<li>_eventModel
+: <a class="el" href="class_web_analyzer_1_1_events_1_1_add_browser_event.html#a69a19a4ef8398fb9710d0d0f0a69ad1f">WebAnalyzer.Events.AddBrowserEvent</a>
 </li>
 <li>_events
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data.html#ab00b8549401b2116e14913d21c271322">WebAnalyzer.Models.Base.RawTrackingData</a>
 </li>
 <li>_eventTimestamp
-: <a class="el" href="class_web_analyzer_1_1_models_1_1_event_model_1_1_click_event_model.html#a2ead35d91f12d179afb24ca91f2b2dad">WebAnalyzer.Models.EventModel.ClickEventModel</a>
-, <a class="el" href="class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model.html#a9574e426bd05e1c1779624e7a0db15cd">WebAnalyzer.Models.EventModel.ScrollEventModel</a>
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_event_model_1_1_base_event_model.html#ab4e25a53d20e317344a9df113ec2aab7">WebAnalyzer.Models.EventModel.BaseEventModel</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message.html#a48a2a6f84fb71c7083b757af773fc183">WebAnalyzer.Models.MessageModel.EventMessage</a>
 </li>
 <li>_eventType
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event.html#a3ee648e74d655dafd488eef0c9ee0aeb">WebAnalyzer.Models.Base.RawTrackingEvent</a>
@@ -375,8 +388,14 @@ $(document).ready(function(){initNavTree('functions.html','');});
 , <a class="el" href="class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model.html#ad26094ad3aa83c781182f2bce5d0fb13">WebAnalyzer.Models.AnalysisModel.SaccadeModel</a>
 , <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event.html#a710dcc04f5eb33ccc9c6ba2b7cd991ed">WebAnalyzer.Models.Base.RawTrackingEvent</a>
 </li>
-<li>_eyeTrackingData
-: <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model.html#aba3211d99c8dfac3553ce40a8bbeda06">WebAnalyzer.Models.DataModel.PositionDataModel</a>
+<li>_eyePostionX
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_eye_tracking_data.html#af659819843df096a6d7cb0a1529dff17">WebAnalyzer.Models.DataModel.EyeTrackingData</a>
+</li>
+<li>_eyePostionY
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_eye_tracking_data.html#a6cd742d66dfc6b47af922538b8b9aed1">WebAnalyzer.Models.DataModel.EyeTrackingData</a>
+</li>
+<li>_eyePostionZ
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_eye_tracking_data.html#add61d5594941d08aa4e1a8d2b8912690">WebAnalyzer.Models.DataModel.EyeTrackingData</a>
 </li>
 <li>_filename
 : <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control.html#a281522ffdb5738b1c5f7609bc61e6358">WebAnalyzer.UI.InteractionObjects.AnalysisExportControl</a>
@@ -389,6 +408,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 , <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_a_o_i_setting_control.html#ac5dbfb65b9f423acacde7281bd52dfa2">WebAnalyzer.UI.InteractionObjects.AOISettingControl</a>
 , <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_application_settings_obj.html#a6b08a377c6dc1e9f0e32d0c786012756">WebAnalyzer.UI.InteractionObjects.ApplicationSettingsObj</a>
 , <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control.html#ac5d9f6410b6d83ed5f01dd3f9a23f8b4">WebAnalyzer.UI.InteractionObjects.DomainSettingControl</a>
+, <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object.html#a5a2cb9630e25671701fa7d900d4fec83">WebAnalyzer.UI.InteractionObjects.ExperimentObject</a>
 , <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj.html#a28ba1f710b9aa6bc477784dc03994b75">WebAnalyzer.UI.InteractionObjects.ExperimentWizardObj</a>
 , <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_participant_control.html#ab9a43552c6e7c3b421ddc4d1a4c3dc2b">WebAnalyzer.UI.InteractionObjects.ParticipantControl</a>
 , <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_rule_control.html#a438aa401b03c23242fce60f06efb3b48">WebAnalyzer.UI.InteractionObjects.RuleControl</a>
@@ -400,11 +420,14 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>_gazes
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data.html#a74e9bb3eb14735e880cb53a28483538a">WebAnalyzer.Models.Base.RawTrackingData</a>
 </li>
-<li>_generator
-: <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_rule_control.html#a7506ed9c62fe4a21cbb4cd3bfcd79e55">WebAnalyzer.UI.InteractionObjects.RuleControl</a>
-</li>
 <li>_height
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model.html#a271887d24b632402d029618d0a208cfe">WebAnalyzer.Models.DataModel.DOMElementModel</a>
+</li>
+<li>_htmlX
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model.html#a8c54222edebcf6248dc410d83bc2dccb">WebAnalyzer.Models.DataModel.DOMElementModel</a>
+</li>
+<li>_htmlY
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model.html#ac6d9264bac06b6653533e492138e8160">WebAnalyzer.Models.DataModel.DOMElementModel</a>
 </li>
 <li>_id
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model.html#a4f824d5be5dd68766e0a50d5f27a8dfc">WebAnalyzer.Models.DataModel.DOMElementModel</a>
@@ -437,8 +460,16 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>_intervalInMS
 : <a class="el" href="class_web_analyzer_1_1_util_1_1_stopwatch_timer.html#a22d6806aa912ee0bfcd6e2071c45caac">WebAnalyzer.Util.StopwatchTimer</a>
 </li>
+<li>_label
+: <a class="el" href="class_web_analyzer_1_1_events_1_1_add_testrun_data_event.html#a9d17f924b52596182aca3ea492b590d4">WebAnalyzer.Events.AddTestrunDataEvent</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model.html#a00ce1716b13b35172fb8ac3498d6f04b">WebAnalyzer.Models.DataModel.TestModel</a>
+, <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control.html#a68cf522d277fa8003eb8f0e59d237101">WebAnalyzer.UI.InteractionObjects.TestrunControl</a>
+</li>
 <li>_lastConnectionCount
 : <a class="el" href="class_web_analyzer_1_1_server_1_1_connection_manager.html#a26374e3936745ea45ecf5f77e4d8884f">WebAnalyzer.Server.ConnectionManager</a>
+</li>
+<li>_lastDescriptionUpdateTimestamp
+: <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object.html#a418d4528d3345bae640856dcc7f0a5cf">WebAnalyzer.UI.InteractionObjects.ExperimentObject</a>
 </li>
 <li>_lastGazeActionTimestamp
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model.html#a9969004441000c661fe533b8d954ec54">WebAnalyzer.Models.DataModel.TestModel</a>
@@ -453,7 +484,8 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message.html#a95db3eadcb298b75ea183c5bbf042a57">WebAnalyzer.Models.MessageModel.InDataMessage</a>
 </li>
 <li>_leftEye
-: <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze.html#a37ae5430421d7d8e9ff864f2b0091361">WebAnalyzer.Models.Base.RawTrackingGaze</a>
+: <a class="el" href="class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event.html#a125f124a2790762c2fdbfae8f5f4720b">WebAnalyzer.Events.PrepareGazeDataEvent</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze.html#a50d308230da6fdb235fa19273a8264da">WebAnalyzer.Models.Base.RawTrackingGaze</a>
 , <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html#a95213ed60e16c99277c83349acbba88d">WebAnalyzer.Models.DataModel.GazeModel</a>
 </li>
 <li>_leftFixationData
@@ -463,18 +495,19 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#ae5f64734db7ab52273fa0cd24ca0a31a">WebAnalyzer.Models.DataModel.WebpageModel</a>
 </li>
 <li>_leftX
-: <a class="el" href="class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event.html#a590d9b88e061f7627f6aaf77a125ac3d">WebAnalyzer.Events.PrepareGazeDataEvent</a>
-, <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message.html#ac9721293fa81833e18b244b11c6eed11">WebAnalyzer.Models.MessageModel.DataMessage</a>
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message.html#ac9721293fa81833e18b244b11c6eed11">WebAnalyzer.Models.MessageModel.DataMessage</a>
 </li>
 <li>_leftY
-: <a class="el" href="class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event.html#aad152c324dfcd09a233d7feff08ed406">WebAnalyzer.Events.PrepareGazeDataEvent</a>
-, <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message.html#a093686b36f2a672787a3d2a7b03709c8">WebAnalyzer.Models.MessageModel.DataMessage</a>
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message.html#a093686b36f2a672787a3d2a7b03709c8">WebAnalyzer.Models.MessageModel.DataMessage</a>
 </li>
 <li>_mainUI
 : <a class="el" href="class_web_analyzer_1_1_controller_1_1_main_controller.html#a8f4b51e26bd6810c2103a75a9116c7f6">WebAnalyzer.Controller.MainController</a>
 </li>
 <li>_messageQueue
 : <a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#a876416b6c825d37d39ec966b022883b3">WebAnalyzer.Server.WebsocketConnection</a>
+</li>
+<li>_messageSentInterval
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model.html#a7ef435f4317bf383688e0d6c672581d4">WebAnalyzer.Models.DataModel.TestModel</a>
 </li>
 <li>_minimumDuration
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_distance_algorithm.html#a46a88e251cce797e2419069e89c230c8">WebAnalyzer.Models.AlgorithmModel.DistanceAlgorithm</a>
@@ -516,9 +549,18 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>_positionData
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a1830061eb9c3046a86386306ac467f25">WebAnalyzer.Models.DataModel.WebpageModel</a>
 </li>
+<li>_protocol
+: <a class="el" href="class_web_analyzer_1_1_events_1_1_add_testrun_data_event.html#aeb05943e77268d71ccbb2807685989d2">WebAnalyzer.Events.AddTestrunDataEvent</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model.html#ac85ac6bfbbd03a3e1860822a74ce8649">WebAnalyzer.Models.DataModel.TestModel</a>
+, <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control.html#afe133f8d5d0ccc48edb3790d044b0537">WebAnalyzer.UI.InteractionObjects.TestrunControl</a>
+</li>
 <li>_rawData
 : <a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#ac2155d50816dddd7e62689655d3a978f">WebAnalyzer.Controller.TestController</a>
 , <a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_i_view_events_algorithm.html#a61794c588714f70bca962727c730b52c">WebAnalyzer.Models.AlgorithmModel.IViewEventsAlgorithm</a>
+</li>
+<li>_refreshing
+: <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_a_o_i_setting_control.html#a84039727f675ce1ff9e96e21ff3a9be4">WebAnalyzer.UI.InteractionObjects.AOISettingControl</a>
+, <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control.html#a7a9d3a672767f8e4e7e81c3ad8948879">WebAnalyzer.UI.InteractionObjects.DomainSettingControl</a>
 </li>
 <li>_relatedGazes
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model.html#a9ccd1c97cb1da60a5402db3d63e18150">WebAnalyzer.Models.AnalysisModel.FixationModel</a>
@@ -528,7 +570,8 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message.html#a888d6b4c7153dd3e469cd963567fb7c7">WebAnalyzer.Models.MessageModel.InDataMessage</a>
 </li>
 <li>_rightEye
-: <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze.html#a7c6004bf1c5302f318f13e1f98838ee3">WebAnalyzer.Models.Base.RawTrackingGaze</a>
+: <a class="el" href="class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event.html#a1399fd88106ee9c555156c524435406e">WebAnalyzer.Events.PrepareGazeDataEvent</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze.html#abd10432d6263254b7ebefe31ade87131">WebAnalyzer.Models.Base.RawTrackingGaze</a>
 , <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html#ac5b10c7779e4a0e426aba35246991cf9">WebAnalyzer.Models.DataModel.GazeModel</a>
 </li>
 <li>_rightFixationData
@@ -538,12 +581,10 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#aa2ee1cf77db6f7e7f68fbf8c971109cf">WebAnalyzer.Models.DataModel.WebpageModel</a>
 </li>
 <li>_rightX
-: <a class="el" href="class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event.html#ab9ffdfd6d3d382b410df14447bb3a55c">WebAnalyzer.Events.PrepareGazeDataEvent</a>
-, <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message.html#a2fea12857a3954edd96d248fa4dbb673">WebAnalyzer.Models.MessageModel.DataMessage</a>
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message.html#a2fea12857a3954edd96d248fa4dbb673">WebAnalyzer.Models.MessageModel.DataMessage</a>
 </li>
 <li>_rightY
-: <a class="el" href="class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event.html#a7e38aed1e4c3087bd7f43affe399c6f1">WebAnalyzer.Events.PrepareGazeDataEvent</a>
-, <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message.html#a898ed683213c5e3ad74d42b9ecd4e590">WebAnalyzer.Models.MessageModel.DataMessage</a>
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message.html#a898ed683213c5e3ad74d42b9ecd4e590">WebAnalyzer.Models.MessageModel.DataMessage</a>
 </li>
 <li>_rule
 : <a class="el" href="class_web_analyzer_1_1_events_1_1_create_rule_event.html#aa7ea8115af74d881c10cc99d44652340">WebAnalyzer.Events.CreateRuleEvent</a>
@@ -559,6 +600,17 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>_running
 : <a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a49aaaa975ccbeedcd52fb03288cea3ef">WebAnalyzer.Controller.TestController</a>
 , <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_testrun_control.html#a476e0340bbef94992b2a976db6f37d25">WebAnalyzer.UI.InteractionObjects.TestrunControl</a>
+</li>
+<li>_saveTimer
+: <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object.html#af0ee137f0a5059a82a2b5ce160ec29d6">WebAnalyzer.UI.InteractionObjects.ExperimentObject</a>
+</li>
+<li>_scrollX
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model.html#a1fa876768fe33fc66ba5cd358cd523e1">WebAnalyzer.Models.EventModel.ScrollEventModel</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_scroll_event_message.html#ae26b23f9f8124d2315604c26b57d9514">WebAnalyzer.Models.MessageModel.In.EventMessages.ScrollEventMessage</a>
+</li>
+<li>_scrollY
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model.html#a72e1d630edcd50e5f179faae87220ed6">WebAnalyzer.Models.EventModel.ScrollEventModel</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_scroll_event_message.html#aade3c2463574ef75166f23304ca467a1">WebAnalyzer.Models.MessageModel.In.EventMessages.ScrollEventMessage</a>
 </li>
 <li>_selector
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model.html#a1fba31f038cfcd20e7be095aa736695a">WebAnalyzer.Models.DataModel.DOMElementModel</a>
@@ -629,7 +681,6 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>_timestamp
 : <a class="el" href="class_web_analyzer_1_1_events_1_1_add_webpage_event.html#a6e60058cdea0a0ac86687e1a50eae2ed">WebAnalyzer.Events.AddWebpageEvent</a>
-, <a class="el" href="class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event.html#ae044ce4acf002ba1481881cd1d2e6add">WebAnalyzer.Events.PrepareGazeDataEvent</a>
 , <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html#a313637ceeff4c9c9bc46c03d9c2b7278">WebAnalyzer.Models.DataModel.GazeModel</a>
 , <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html#ae1e243f35e213e08ec2bdc54f64b0d2e">WebAnalyzer.Models.MessageModel.Message</a>
 </li>
@@ -641,6 +692,18 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>_trackingConnection
 : <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object.html#a7cb71354914a07dab1f19146216aa777">WebAnalyzer.UI.InteractionObjects.ExperimentObject</a>
+</li>
+<li>_trackingData
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model.html#a64809478becce669e0c67a035711df49">WebAnalyzer.Models.DataModel.PositionDataModel</a>
+</li>
+<li>_trackingInterval
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model.html#a7f6665a0e91e4a550aed5bf34765a990">WebAnalyzer.Models.DataModel.TestModel</a>
+</li>
+<li>_trackingModel
+: <a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a17ba537e2a4dc341401b513ca2afbcce">WebAnalyzer.Controller.TestController</a>
+</li>
+<li>_trackingModelType
+: <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_application_settings_obj.html#a46f28947ac5d858f82d174097a42f7ac">WebAnalyzer.UI.InteractionObjects.ApplicationSettingsObj</a>
 </li>
 <li>_type
 : <a class="el" href="class_web_analyzer_1_1_events_1_1_edit_domain_setting_event.html#afe924ff1d33b89646a5e3de2110a0f14">WebAnalyzer.Events.EditDomainSettingEvent</a>
@@ -658,6 +721,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 , <a class="el" href="class_web_analyzer_1_1_events_1_1_message_sent_event.html#a38d54d167e7fbe337cfe766aa47c1229">WebAnalyzer.Events.MessageSentEvent</a>
 , <a class="el" href="class_web_analyzer_1_1_events_1_1_select_participant_for_test_event.html#a22ee0c7588156074f32dce220259d041">WebAnalyzer.Events.SelectParticipantForTestEvent</a>
 , <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base.html#a9b64f6c1cf9fd460888fed19048b9224">WebAnalyzer.Models.Base.UIDBase</a>
+, <a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#add4db0c0ee59a7f22c8f2638099e3217">WebAnalyzer.Server.WebsocketConnection</a>
 </li>
 <li>_unassignedPositions
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model.html#a1eaf774e73692913671ff3cb85f5772e">WebAnalyzer.Models.DataModel.TestModel</a>
@@ -672,12 +736,11 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>_url
 : <a class="el" href="class_web_analyzer_1_1_events_1_1_add_webpage_event.html#a514a144e2cc984ecec6593547732c55f">WebAnalyzer.Events.AddWebpageEvent</a>
 , <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#aea93808218833baaf68514071c973ae4">WebAnalyzer.Models.DataModel.WebpageModel</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_event_model_1_1_base_event_model.html#a8cfc8644deaf4edfec7fcd7f08dfa20c">WebAnalyzer.Models.EventModel.BaseEventModel</a>
 , <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#a7d5933c3187edc115317483ad31df6b4">WebAnalyzer.Models.MessageModel.ActivationMessage</a>
 , <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_connection_message.html#a8b546b2299ebc28fbe93f158a7e1742a">WebAnalyzer.Models.MessageModel.ConnectionMessage</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message.html#aef3ed320a568084cd131451ccc71fc8b">WebAnalyzer.Models.MessageModel.EventMessage</a>
 , <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message.html#a8043e2e1b5fabe11fdcfe0c5dc2fee68">WebAnalyzer.Models.MessageModel.InDataMessage</a>
-</li>
-<li>_useMouseTracking
-: <a class="el" href="class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_application_settings_obj.html#a91a38f0e61ad09629d88131e49888523">WebAnalyzer.UI.InteractionObjects.ApplicationSettingsObj</a>
 </li>
 <li>_value
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model.html#a78fd60dadcd65ac87ef1fb49ec497055">WebAnalyzer.Models.DataModel.AttributeModel</a>
@@ -702,6 +765,24 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>_width
 : <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model.html#ad89c6f97d80115d398e26e76eb2ab7b7">WebAnalyzer.Models.DataModel.DOMElementModel</a>
 </li>
+<li>_windowHeight
+: <a class="el" href="class_web_analyzer_1_1_events_1_1_add_webpage_event.html#ad9982772f07111a104ab6a81d3704bb5">WebAnalyzer.Events.AddWebpageEvent</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#a8950b0fab5ad1e804970a6197737e31a">WebAnalyzer.Models.DataModel.WebpageModel</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model.html#ac7bc177aeb68fc0033b9d6f9061afc46">WebAnalyzer.Models.EventModel.ResizeEventModel</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#a2c2e9dc30927ed3ee522d3a18dd4832d">WebAnalyzer.Models.MessageModel.ActivationMessage</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_connection_message.html#a9a2326a089eb048ce429e3bcceb54918">WebAnalyzer.Models.MessageModel.ConnectionMessage</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_resize_event_message.html#a58970338091e26fc0321e00d6b72528e">WebAnalyzer.Models.MessageModel.In.EventMessages.ResizeEventMessage</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_u_r_l_change_event_message.html#ab9b0f38d44604e01d516fb9d70e54117">WebAnalyzer.Models.MessageModel.In.EventMessages.URLChangeEventMessage</a>
+</li>
+<li>_windowWidth
+: <a class="el" href="class_web_analyzer_1_1_events_1_1_add_webpage_event.html#a81172683920ef969d84914baff51a87b">WebAnalyzer.Events.AddWebpageEvent</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model.html#ae9604da5bff18321d117bae9c29d19b1">WebAnalyzer.Models.DataModel.WebpageModel</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model.html#a57e07c8f4dfe09d8ad8213760600e260">WebAnalyzer.Models.EventModel.ResizeEventModel</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message.html#a57c56a4024223834bf60bc90bce66327">WebAnalyzer.Models.MessageModel.ActivationMessage</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_connection_message.html#a0dd807c1966d8e6d90b0e764eacca950">WebAnalyzer.Models.MessageModel.ConnectionMessage</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_resize_event_message.html#a79fea760964664fd139e1f85302b2857">WebAnalyzer.Models.MessageModel.In.EventMessages.ResizeEventMessage</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_u_r_l_change_event_message.html#afc812d9d7f035f0cf2cdbce736e63ade">WebAnalyzer.Models.MessageModel.In.EventMessages.URLChangeEventMessage</a>
+</li>
 <li>_workMessages
 : <a class="el" href="class_web_analyzer_1_1_server_1_1_connection_manager.html#a23a1f3a046b14bcb1333c3ef846015d6">WebAnalyzer.Server.ConnectionManager</a>
 </li>
@@ -724,17 +805,13 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html#a517bab0ee0c22871788bd498de86c27e">WebAnalyzer.Controller.TestController</a>
 </li>
 <li>_x
-: <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event.html#a10d86c244a5c86ec2f1c29518a4db4b7">WebAnalyzer.Models.Base.RawTrackingEvent</a>
-, <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_eye_tracking_data.html#a040ec17c93661667ae300903426d0636">WebAnalyzer.Models.DataModel.EyeTrackingData</a>
-, <a class="el" href="class_web_analyzer_1_1_models_1_1_event_model_1_1_click_event_model.html#a2db07be85072c821e6ad796ff4e88aaf">WebAnalyzer.Models.EventModel.ClickEventModel</a>
-, <a class="el" href="class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model.html#a02e2cf6f7caeaacb56826407eb339cc9">WebAnalyzer.Models.EventModel.ScrollEventModel</a>
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data.html#a38d492dc01a8dbba23ec635874808081">WebAnalyzer.Models.Base.BaseTrackingData</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event.html#a10d86c244a5c86ec2f1c29518a4db4b7">WebAnalyzer.Models.Base.RawTrackingEvent</a>
 , <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_small_data_message.html#a88d0991ed95524d8e89f945516e859fe">WebAnalyzer.Models.MessageModel.SmallDataMessage</a>
 </li>
 <li>_y
-: <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event.html#a3c6afdca9f26e3549fbc847df3f5aab7">WebAnalyzer.Models.Base.RawTrackingEvent</a>
-, <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_eye_tracking_data.html#ac7453e0f55dabb4dfbde53d05e62c3e2">WebAnalyzer.Models.DataModel.EyeTrackingData</a>
-, <a class="el" href="class_web_analyzer_1_1_models_1_1_event_model_1_1_click_event_model.html#a870c2fa4e7d82ebf983a478014761d40">WebAnalyzer.Models.EventModel.ClickEventModel</a>
-, <a class="el" href="class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model.html#a33aaa5a78f8a0b917099d48358cc69e6">WebAnalyzer.Models.EventModel.ScrollEventModel</a>
+: <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data.html#a435fc601a4a55e8ff46b1e42724cc269">WebAnalyzer.Models.Base.BaseTrackingData</a>
+, <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event.html#a3c6afdca9f26e3549fbc847df3f5aab7">WebAnalyzer.Models.Base.RawTrackingEvent</a>
 , <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_small_data_message.html#aa0ed275ee89ea7ba8914cd611aae4c0d">WebAnalyzer.Models.MessageModel.SmallDataMessage</a>
 </li>
 </ul>

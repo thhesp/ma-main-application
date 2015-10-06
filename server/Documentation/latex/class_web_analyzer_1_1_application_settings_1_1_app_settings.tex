@@ -12,8 +12,10 @@ static void \hyperlink{class_web_analyzer_1_1_application_settings_1_1_app_setti
 \begin{DoxyCompactList}\small\item\em Resets all the environment variables. Currently thats only the data location. \end{DoxyCompactList}\item 
 static void \hyperlink{class_web_analyzer_1_1_application_settings_1_1_app_settings_aeb29103a92e6fbf8bd6be79de2294099}{Reset\+Data\+Location} ()
 \begin{DoxyCompactList}\small\item\em Resets the data location by using the My\+Documents folder of the user as a base. \end{DoxyCompactList}\item 
-static Boolean \hyperlink{class_web_analyzer_1_1_application_settings_1_1_app_settings_a3c885c79ecd2a5c3a47acfa26576101a}{Set\+Datalocation} (String \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path})
-\begin{DoxyCompactList}\small\item\em Sets the data location but checks first if the given path exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static Boolean \hyperlink{class_web_analyzer_1_1_application_settings_1_1_app_settings_a3c885c79ecd2a5c3a47acfa26576101a}{Set\+Datalocation} (String path)
+\begin{DoxyCompactList}\small\item\em Sets the data location but checks first if the given path exists. \end{DoxyCompactList}\item 
+static void \hyperlink{class_web_analyzer_1_1_application_settings_1_1_app_settings_a9514437749c644ae28ea615cab4cb758}{Reset\+Experiment\+Variables} ()
+\begin{DoxyCompactList}\small\item\em Resets all the experiment variables. Used from Experiment\+Model \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -44,7 +46,18 @@ Resets the data location by using the My\+Documents folder of the user as a base
 
 Resets all the environment variables. Currently thats only the data location. 
 
-Sets First\+Start to false, propably should do that here, since the name of the method doesn\textquotesingle{}t show it. \hypertarget{class_web_analyzer_1_1_application_settings_1_1_app_settings_a3c885c79ecd2a5c3a47acfa26576101a}{}\index{Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings@{Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings}!Set\+Datalocation@{Set\+Datalocation}}
+Sets First\+Start to false, propably should do that here, since the name of the method doesn\textquotesingle{}t show it. \hypertarget{class_web_analyzer_1_1_application_settings_1_1_app_settings_a9514437749c644ae28ea615cab4cb758}{}\index{Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings@{Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings}!Reset\+Experiment\+Variables@{Reset\+Experiment\+Variables}}
+\index{Reset\+Experiment\+Variables@{Reset\+Experiment\+Variables}!Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings@{Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings}}
+\subsubsection[{Reset\+Experiment\+Variables()}]{\setlength{\rightskip}{0pt plus 5cm}static void Web\+Analyzer.\+Application\+Settings.\+App\+Settings.\+Reset\+Experiment\+Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_application_settings_1_1_app_settings_a9514437749c644ae28ea615cab4cb758}
+
+
+Resets all the experiment variables. Used from Experiment\+Model 
+
+\hypertarget{class_web_analyzer_1_1_application_settings_1_1_app_settings_a3c885c79ecd2a5c3a47acfa26576101a}{}\index{Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings@{Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings}!Set\+Datalocation@{Set\+Datalocation}}
 \index{Set\+Datalocation@{Set\+Datalocation}!Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings@{Web\+Analyzer\+::\+Application\+Settings\+::\+App\+Settings}}
 \subsubsection[{Set\+Datalocation(\+String path)}]{\setlength{\rightskip}{0pt plus 5cm}static Boolean Web\+Analyzer.\+Application\+Settings.\+App\+Settings.\+Set\+Datalocation (
 \begin{DoxyParamCaption}

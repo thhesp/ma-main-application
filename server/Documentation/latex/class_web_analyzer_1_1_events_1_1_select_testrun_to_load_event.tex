@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event}{}\section{Web\+Analyzer.\+Events.\+Select\+Testrun\+To\+Load\+Event Class Reference}
 \label{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event}\index{Web\+Analyzer.\+Events.\+Select\+Testrun\+To\+Load\+Event@{Web\+Analyzer.\+Events.\+Select\+Testrun\+To\+Load\+Event}}
+
+
+Event which is used for loading testrun data  
+
+
 Inheritance diagram for Web\+Analyzer.\+Events.\+Select\+Testrun\+To\+Load\+Event\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,22 +14,27 @@ Inheritance diagram for Web\+Analyzer.\+Events.\+Select\+Testrun\+To\+Load\+Even
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event_a501c6eaae7adedfd08087018fe6e4e7c}{Select\+Testrun\+To\+Load\+Event} (String created, String \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path})
-\end{DoxyCompactItemize}
+\hyperlink{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event_a501c6eaae7adedfd08087018fe6e4e7c}{Select\+Testrun\+To\+Load\+Event} (String created, String path)
+\begin{DoxyCompactList}\small\item\em Event-\/\+Constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event_aa27c59c738823f2dce810a0b8f89259d}{Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter for the path to the directory in which the testrun is contained \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event_a330e145816f74dc95033cbd983552ca8}{Created}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter for the Timestamp on which the testrun was created (to identify the correct file) \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event_a27179b9153fc6745c533161d6c1d8e2e}{\+\_\+path}
-\item 
+\begin{DoxyCompactList}\small\item\em Path to the directory in which the testrun is contained \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event_a583a4f909c17711eea42d817cfebeab7}{\+\_\+created}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Timestamp on which the testrun was created (to identify the correct file) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Event which is used for loading testrun data 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -38,22 +48,49 @@ String \hyperlink{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event
 )}\label{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event_a501c6eaae7adedfd08087018fe6e4e7c}
 
 
+Event-\/\+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em created} & Timestamp on which the testrun was created (to identify the correct file)\\
+\hline
+{\em path} & Path to the directory in which the testrun is contained\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event_a583a4f909c17711eea42d817cfebeab7}{}\index{Web\+Analyzer\+::\+Events\+::\+Select\+Testrun\+To\+Load\+Event@{Web\+Analyzer\+::\+Events\+::\+Select\+Testrun\+To\+Load\+Event}!\+\_\+created@{\+\_\+created}}
 \index{\+\_\+created@{\+\_\+created}!Web\+Analyzer\+::\+Events\+::\+Select\+Testrun\+To\+Load\+Event@{Web\+Analyzer\+::\+Events\+::\+Select\+Testrun\+To\+Load\+Event}}
 \subsubsection[{\+\_\+created}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Select\+Testrun\+To\+Load\+Event.\+\_\+created\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event_a583a4f909c17711eea42d817cfebeab7}
+
+
+Timestamp on which the testrun was created (to identify the correct file) 
+
 \hypertarget{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event_a27179b9153fc6745c533161d6c1d8e2e}{}\index{Web\+Analyzer\+::\+Events\+::\+Select\+Testrun\+To\+Load\+Event@{Web\+Analyzer\+::\+Events\+::\+Select\+Testrun\+To\+Load\+Event}!\+\_\+path@{\+\_\+path}}
 \index{\+\_\+path@{\+\_\+path}!Web\+Analyzer\+::\+Events\+::\+Select\+Testrun\+To\+Load\+Event@{Web\+Analyzer\+::\+Events\+::\+Select\+Testrun\+To\+Load\+Event}}
 \subsubsection[{\+\_\+path}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Select\+Testrun\+To\+Load\+Event.\+\_\+path\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event_a27179b9153fc6745c533161d6c1d8e2e}
+
+
+Path to the directory in which the testrun is contained 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event_a330e145816f74dc95033cbd983552ca8}{}\index{Web\+Analyzer\+::\+Events\+::\+Select\+Testrun\+To\+Load\+Event@{Web\+Analyzer\+::\+Events\+::\+Select\+Testrun\+To\+Load\+Event}!Created@{Created}}
 \index{Created@{Created}!Web\+Analyzer\+::\+Events\+::\+Select\+Testrun\+To\+Load\+Event@{Web\+Analyzer\+::\+Events\+::\+Select\+Testrun\+To\+Load\+Event}}
 \subsubsection[{Created}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Select\+Testrun\+To\+Load\+Event.\+Created\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event_a330e145816f74dc95033cbd983552ca8}
+
+
+Getter for the Timestamp on which the testrun was created (to identify the correct file) 
+
 \hypertarget{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event_aa27c59c738823f2dce810a0b8f89259d}{}\index{Web\+Analyzer\+::\+Events\+::\+Select\+Testrun\+To\+Load\+Event@{Web\+Analyzer\+::\+Events\+::\+Select\+Testrun\+To\+Load\+Event}!Path@{Path}}
 \index{Path@{Path}!Web\+Analyzer\+::\+Events\+::\+Select\+Testrun\+To\+Load\+Event@{Web\+Analyzer\+::\+Events\+::\+Select\+Testrun\+To\+Load\+Event}}
 \subsubsection[{Path}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Select\+Testrun\+To\+Load\+Event.\+Path\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event_aa27c59c738823f2dce810a0b8f89259d}
+
+
+Getter for the path to the directory in which the testrun is contained 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

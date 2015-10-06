@@ -3,7 +3,7 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ae5054b6875654937144914f592802d9d}{Webpage\+Model} (String url, String visit\+Timestamp)
+\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a2f7f76f4128b22b839f8858d40413067}{Webpage\+Model} (String url, String connection\+U\+I\+D, String visit\+Timestamp)
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a613cfd755d739701df6cd2b05190d72f}{Webpage\+Model} ()
 \item 
@@ -31,9 +31,17 @@ static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a956b067ed12f422f646b7e2a4b6bb42d}{Url}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \item 
+String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a5f1bed3947c7e7b6a5fe34fdd23f3841}{Connection\+U\+I\+D}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac3378fdc78273706547ec3a9d377ef9a}{Visit\+Timestamp}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \item 
+int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a3e3926562c05a94a3111f3a07cd8e131}{Window\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a76b6e0896f14f8d7c0d7bf94b94ec058}{Window\+Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_acb4a6ecac0e4ef9ed2df7b33e4694b31}{Gazes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_base_event_model}{Base\+Event\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aa80b98da4b9e9c2d6b6950f4e52c0b61}{Events}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model}{Fixation\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_af4888add7ed76fe7b841410abc944b99}{Left\+Fixation\+Data}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \item 
@@ -51,9 +59,17 @@ void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aea93808218833baaf68514071c973ae4}{\+\_\+url}
 \item 
+int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ae9604da5bff18321d117bae9c29d19b1}{\+\_\+window\+Width} = 0
+\item 
+int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a8950b0fab5ad1e804970a6197737e31a}{\+\_\+window\+Height} = 0
+\item 
+String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_af8a807db15e54cbc83463f814c6b4f59}{\+\_\+connection\+U\+I\+D}
+\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac030b9fb9430a41677eb845ceabd5b26}{\+\_\+visit\+Timestamp}
 \item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a1830061eb9c3046a86386306ac467f25}{\+\_\+position\+Data} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model}$>$()
+\item 
+List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_base_event_model}{Base\+Event\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a6f183590ba34744b4cec4c8cfb126af5}{\+\_\+event\+Data} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_base_event_model}{Base\+Event\+Model}$>$()
 \item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model}{Fixation\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aeef627527c26ccf4d8caa6e65101970f}{\+\_\+left\+Fixation\+Data} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model}{Fixation\+Model}$>$()
 \item 
@@ -66,14 +82,15 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ae5054b6875654937144914f592802d9d}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Webpage\+Model@{Webpage\+Model}}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a2f7f76f4128b22b839f8858d40413067}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Webpage\+Model@{Webpage\+Model}}
 \index{Webpage\+Model@{Webpage\+Model}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
-\subsubsection[{Webpage\+Model(\+String url, String visit\+Timestamp)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Webpage\+Model (
+\subsubsection[{Webpage\+Model(\+String url, String connection\+U\+I\+D, String visit\+Timestamp)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Webpage\+Model (
 \begin{DoxyParamCaption}
 \item[{String}]{url, }
+\item[{String}]{connection\+U\+I\+D, }
 \item[{String}]{visit\+Timestamp}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ae5054b6875654937144914f592802d9d}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a2f7f76f4128b22b839f8858d40413067}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a613cfd755d739701df6cd2b05190d72f}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Webpage\+Model@{Webpage\+Model}}
 \index{Webpage\+Model@{Webpage\+Model}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Webpage\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Webpage\+Model (
@@ -164,6 +181,12 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 
 
 \subsection{Member Data Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_af8a807db15e54cbc83463f814c6b4f59}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+connection\+U\+I\+D@{\+\_\+connection\+U\+I\+D}}
+\index{\+\_\+connection\+U\+I\+D@{\+\_\+connection\+U\+I\+D}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{\+\_\+connection\+U\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+connection\+U\+I\+D\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_af8a807db15e54cbc83463f814c6b4f59}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a6f183590ba34744b4cec4c8cfb126af5}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+event\+Data@{\+\_\+event\+Data}}
+\index{\+\_\+event\+Data@{\+\_\+event\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{\+\_\+event\+Data}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Base\+Event\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+event\+Data = new List$<${\bf Base\+Event\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a6f183590ba34744b4cec4c8cfb126af5}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aeef627527c26ccf4d8caa6e65101970f}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+left\+Fixation\+Data@{\+\_\+left\+Fixation\+Data}}
 \index{\+\_\+left\+Fixation\+Data@{\+\_\+left\+Fixation\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{\+\_\+left\+Fixation\+Data}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Fixation\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+left\+Fixation\+Data = new List$<${\bf Fixation\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aeef627527c26ccf4d8caa6e65101970f}
@@ -185,9 +208,21 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac030b9fb9430a41677eb845ceabd5b26}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+visit\+Timestamp@{\+\_\+visit\+Timestamp}}
 \index{\+\_\+visit\+Timestamp@{\+\_\+visit\+Timestamp}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{\+\_\+visit\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+visit\+Timestamp\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac030b9fb9430a41677eb845ceabd5b26}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a8950b0fab5ad1e804970a6197737e31a}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+window\+Height@{\+\_\+window\+Height}}
+\index{\+\_\+window\+Height@{\+\_\+window\+Height}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{\+\_\+window\+Height}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+window\+Height = 0\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a8950b0fab5ad1e804970a6197737e31a}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ae9604da5bff18321d117bae9c29d19b1}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+window\+Width@{\+\_\+window\+Width}}
+\index{\+\_\+window\+Width@{\+\_\+window\+Width}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{\+\_\+window\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+window\+Width = 0\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ae9604da5bff18321d117bae9c29d19b1}
 
 
 \subsection{Property Documentation}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a5f1bed3947c7e7b6a5fe34fdd23f3841}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Connection\+U\+I\+D@{Connection\+U\+I\+D}}
+\index{Connection\+U\+I\+D@{Connection\+U\+I\+D}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Connection\+U\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Connection\+U\+I\+D\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a5f1bed3947c7e7b6a5fe34fdd23f3841}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aa80b98da4b9e9c2d6b6950f4e52c0b61}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Events@{Events}}
+\index{Events@{Events}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Events}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Base\+Event\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Events\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aa80b98da4b9e9c2d6b6950f4e52c0b61}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_acb4a6ecac0e4ef9ed2df7b33e4694b31}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Gazes@{Gazes}}
 \index{Gazes@{Gazes}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Gazes}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Gaze\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Gazes\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_acb4a6ecac0e4ef9ed2df7b33e4694b31}
@@ -203,6 +238,12 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac3378fdc78273706547ec3a9d377ef9a}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Visit\+Timestamp@{Visit\+Timestamp}}
 \index{Visit\+Timestamp@{Visit\+Timestamp}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Visit\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Visit\+Timestamp\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac3378fdc78273706547ec3a9d377ef9a}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a76b6e0896f14f8d7c0d7bf94b94ec058}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Window\+Height@{Window\+Height}}
+\index{Window\+Height@{Window\+Height}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Window\+Height}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Window\+Height\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a76b6e0896f14f8d7c0d7bf94b94ec058}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a3e3926562c05a94a3111f3a07cd8e131}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Window\+Width@{Window\+Width}}
+\index{Window\+Width@{Window\+Width}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
+\subsubsection[{Window\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Window\+Width\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a3e3926562c05a94a3111f3a07cd8e131}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

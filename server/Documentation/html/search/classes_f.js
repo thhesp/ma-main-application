@@ -3,6 +3,7 @@ var searchData=
   ['saccademodel',['SaccadeModel',['../class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model.html',1,'WebAnalyzer::Models::AnalysisModel']]],
   ['samplestruct',['SampleStruct',['../struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_sample_struct.html',1,'WebAnalyzer::EyeTracking::EyeTrackingController']]],
   ['savetestrunevent',['SaveTestrunEvent',['../class_web_analyzer_1_1_events_1_1_save_testrun_event.html',1,'WebAnalyzer::Events']]],
+  ['scrolleventmessage',['ScrollEventMessage',['../class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_scroll_event_message.html',1,'WebAnalyzer::Models::MessageModel::In::EventMessages']]],
   ['scrolleventmodel',['ScrollEventModel',['../class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model.html',1,'WebAnalyzer::Models::EventModel']]],
   ['selectexperimentcontrol',['SelectExperimentControl',['../class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control.html',1,'WebAnalyzer::UI::InteractionObjects']]],
   ['selectexperimentevent',['SelectExperimentEvent',['../class_web_analyzer_1_1_events_1_1_select_experiment_event.html',1,'WebAnalyzer::Events']]],

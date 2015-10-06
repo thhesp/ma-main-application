@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_events_1_1_create_experiment_event}{}\section{Web\+Analyzer.\+Events.\+Create\+Experiment\+Event Class Reference}
 \label{class_web_analyzer_1_1_events_1_1_create_experiment_event}\index{Web\+Analyzer.\+Events.\+Create\+Experiment\+Event@{Web\+Analyzer.\+Events.\+Create\+Experiment\+Event}}
+
+
+Used for creating a new experiment  
+
+
 Inheritance diagram for Web\+Analyzer.\+Events.\+Create\+Experiment\+Event\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,35 +15,40 @@ Inheritance diagram for Web\+Analyzer.\+Events.\+Create\+Experiment\+Event\+:\be
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_events_1_1_create_experiment_event_a5f3b337a20585c39e7e0470429807d23}{Create\+Experiment\+Event} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_adac2bcb4f01b574cbc63fe8ee2c56bf0}{name})
-\item 
+\begin{DoxyCompactList}\small\item\em Event\+Constructor \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_events_1_1_create_experiment_event_a4b2a92153369ad87f92fd19b1ae8398a}{Set\+Import\+Data} (String import\+Experiment\+Path, Boolean import\+Participants, Boolean import\+Settings)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method for setting additional data \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_events_1_1_create_experiment_event_a6e6e3eee6e63143be6e5ab7b329533c6}{Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter for the experiment name \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_events_1_1_create_experiment_event_a23ca6eb22cf95423be8b35c4b200da90}{Import\+Data}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter if the data shall be imported \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_events_1_1_create_experiment_event_a9b9c24f0a0c60406c0f83ffbeefead50}{Import\+Experiment\+Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter to the path of the experiment from which data shall be imported \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_events_1_1_create_experiment_event_ac0f034fcfe34ab152d713b42e83c3125}{Import\+Participants}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter if the participants shall be imported \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_events_1_1_create_experiment_event_ad7acdf21b15a8eb496b29b2ee4cd5d35}{Import\+Settings}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter if the experiment settings shall be imported \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_events_1_1_create_experiment_event_a9b05cacff687a5907c457a8ae95164b7}{\+\_\+name}
-\item 
+\begin{DoxyCompactList}\small\item\em Name of the experiment \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_events_1_1_create_experiment_event_ae1fce6913b5681e97a9d07978e1faab2}{\+\_\+import\+Data} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
-\item 
+\begin{DoxyCompactList}\small\item\em Shall data be imported \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_events_1_1_create_experiment_event_a8c0fe703fb96fa2fa1f90d2610a8b22a}{\+\_\+import\+Experiment\+Path}
-\item 
+\begin{DoxyCompactList}\small\item\em Path to the experiment from which data shall be imported \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_events_1_1_create_experiment_event_a59d45ed4f6d0829f185a23dca49f6f12}{\+\_\+import\+Participants} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
-\item 
+\begin{DoxyCompactList}\small\item\em Shall the participants be imported \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_events_1_1_create_experiment_event_a0306b88d62bbb8558674ba1c9c2d1b00}{\+\_\+import\+Settings} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Shall the experiment settings be imported \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used for creating a new experiment 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -49,6 +59,15 @@ Boolean \hyperlink{class_web_analyzer_1_1_events_1_1_create_experiment_event_a03
 \item[{String}]{name}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_events_1_1_create_experiment_event_a5f3b337a20585c39e7e0470429807d23}
+
+
+Event\+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the experiment\\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
@@ -63,40 +82,93 @@ Boolean \hyperlink{class_web_analyzer_1_1_events_1_1_create_experiment_event_a03
 )}\label{class_web_analyzer_1_1_events_1_1_create_experiment_event_a4b2a92153369ad87f92fd19b1ae8398a}
 
 
+Method for setting additional data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em import\+Experiment\+Path} & Path to the experiment from which data shall be imported\\
+\hline
+{\em import\+Participants} & Shall the participants be imported\\
+\hline
+{\em import\+Settings} & Shall the experiment settings be imported\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_events_1_1_create_experiment_event_ae1fce6913b5681e97a9d07978e1faab2}{}\index{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}!\+\_\+import\+Data@{\+\_\+import\+Data}}
 \index{\+\_\+import\+Data@{\+\_\+import\+Data}!Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}}
 \subsubsection[{\+\_\+import\+Data}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Events.\+Create\+Experiment\+Event.\+\_\+import\+Data = {\bf false}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_create_experiment_event_ae1fce6913b5681e97a9d07978e1faab2}
+
+
+Shall data be imported 
+
 \hypertarget{class_web_analyzer_1_1_events_1_1_create_experiment_event_a8c0fe703fb96fa2fa1f90d2610a8b22a}{}\index{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}!\+\_\+import\+Experiment\+Path@{\+\_\+import\+Experiment\+Path}}
 \index{\+\_\+import\+Experiment\+Path@{\+\_\+import\+Experiment\+Path}!Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}}
 \subsubsection[{\+\_\+import\+Experiment\+Path}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Create\+Experiment\+Event.\+\_\+import\+Experiment\+Path\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_create_experiment_event_a8c0fe703fb96fa2fa1f90d2610a8b22a}
+
+
+Path to the experiment from which data shall be imported 
+
 \hypertarget{class_web_analyzer_1_1_events_1_1_create_experiment_event_a59d45ed4f6d0829f185a23dca49f6f12}{}\index{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}!\+\_\+import\+Participants@{\+\_\+import\+Participants}}
 \index{\+\_\+import\+Participants@{\+\_\+import\+Participants}!Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}}
 \subsubsection[{\+\_\+import\+Participants}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Events.\+Create\+Experiment\+Event.\+\_\+import\+Participants = {\bf false}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_create_experiment_event_a59d45ed4f6d0829f185a23dca49f6f12}
+
+
+Shall the participants be imported 
+
 \hypertarget{class_web_analyzer_1_1_events_1_1_create_experiment_event_a0306b88d62bbb8558674ba1c9c2d1b00}{}\index{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}!\+\_\+import\+Settings@{\+\_\+import\+Settings}}
 \index{\+\_\+import\+Settings@{\+\_\+import\+Settings}!Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}}
 \subsubsection[{\+\_\+import\+Settings}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Events.\+Create\+Experiment\+Event.\+\_\+import\+Settings = {\bf false}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_create_experiment_event_a0306b88d62bbb8558674ba1c9c2d1b00}
+
+
+Shall the experiment settings be imported 
+
 \hypertarget{class_web_analyzer_1_1_events_1_1_create_experiment_event_a9b05cacff687a5907c457a8ae95164b7}{}\index{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}!\+\_\+name@{\+\_\+name}}
 \index{\+\_\+name@{\+\_\+name}!Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}}
 \subsubsection[{\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Create\+Experiment\+Event.\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_create_experiment_event_a9b05cacff687a5907c457a8ae95164b7}
+
+
+Name of the experiment 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_events_1_1_create_experiment_event_a23ca6eb22cf95423be8b35c4b200da90}{}\index{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}!Import\+Data@{Import\+Data}}
 \index{Import\+Data@{Import\+Data}!Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}}
 \subsubsection[{Import\+Data}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Events.\+Create\+Experiment\+Event.\+Import\+Data\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_create_experiment_event_a23ca6eb22cf95423be8b35c4b200da90}
+
+
+Getter if the data shall be imported 
+
 \hypertarget{class_web_analyzer_1_1_events_1_1_create_experiment_event_a9b9c24f0a0c60406c0f83ffbeefead50}{}\index{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}!Import\+Experiment\+Path@{Import\+Experiment\+Path}}
 \index{Import\+Experiment\+Path@{Import\+Experiment\+Path}!Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}}
 \subsubsection[{Import\+Experiment\+Path}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Create\+Experiment\+Event.\+Import\+Experiment\+Path\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_create_experiment_event_a9b9c24f0a0c60406c0f83ffbeefead50}
+
+
+Getter to the path of the experiment from which data shall be imported 
+
 \hypertarget{class_web_analyzer_1_1_events_1_1_create_experiment_event_ac0f034fcfe34ab152d713b42e83c3125}{}\index{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}!Import\+Participants@{Import\+Participants}}
 \index{Import\+Participants@{Import\+Participants}!Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}}
 \subsubsection[{Import\+Participants}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Events.\+Create\+Experiment\+Event.\+Import\+Participants\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_create_experiment_event_ac0f034fcfe34ab152d713b42e83c3125}
+
+
+Getter if the participants shall be imported 
+
 \hypertarget{class_web_analyzer_1_1_events_1_1_create_experiment_event_ad7acdf21b15a8eb496b29b2ee4cd5d35}{}\index{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}!Import\+Settings@{Import\+Settings}}
 \index{Import\+Settings@{Import\+Settings}!Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}}
 \subsubsection[{Import\+Settings}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Events.\+Create\+Experiment\+Event.\+Import\+Settings\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_create_experiment_event_ad7acdf21b15a8eb496b29b2ee4cd5d35}
+
+
+Getter if the experiment settings shall be imported 
+
 \hypertarget{class_web_analyzer_1_1_events_1_1_create_experiment_event_a6e6e3eee6e63143be6e5ab7b329533c6}{}\index{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}!Name@{Name}}
 \index{Name@{Name}!Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event@{Web\+Analyzer\+::\+Events\+::\+Create\+Experiment\+Event}}
 \subsubsection[{Name}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Create\+Experiment\+Event.\+Name\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_create_experiment_event_a6e6e3eee6e63143be6e5ab7b329533c6}
+
+
+Getter for the experiment name 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

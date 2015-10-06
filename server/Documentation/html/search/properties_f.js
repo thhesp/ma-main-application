@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['saccadeanglesimiliarity',['SaccadeAngleSimiliarity',['../class_web_analyzer_1_1_properties_1_1_settings.html#a7c8084a45024f9b5bb40f0658bdf41cd',1,'WebAnalyzer::Properties::Settings']]],
+  ['scrollx',['ScrollX',['../class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model.html#a76d4f01379c721923cb59d88e2c0fc4a',1,'WebAnalyzer.Models.EventModel.ScrollEventModel.ScrollX()'],['../class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_scroll_event_message.html#a4cee20f8724b3bff5aeca63bc6f3ac83',1,'WebAnalyzer.Models.MessageModel.In.EventMessages.ScrollEventMessage.ScrollX()']]],
+  ['scrolly',['ScrollY',['../class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model.html#a3e94660e7ec7eb2af5fc06022fbddbcd',1,'WebAnalyzer.Models.EventModel.ScrollEventModel.ScrollY()'],['../class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_scroll_event_message.html#ab7c3211d465e80a5d8f1cf40a0a690ff',1,'WebAnalyzer.Models.MessageModel.In.EventMessages.ScrollEventMessage.ScrollY()']]],
   ['selector',['Selector',['../class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model.html#a0de31ca5aa5fef2bf8ddcacef47cb379',1,'WebAnalyzer::Models::DataModel::DOMElementModel']]],
   ['senttimestamp',['SentTimestamp',['../class_web_analyzer_1_1_events_1_1_message_sent_event.html#a7408640c7a1d8de43f36ca70b01c49b0',1,'WebAnalyzer::Events::MessageSentEvent']]],
   ['serverreceived',['ServerReceived',['../class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message.html#ae6ff5467025cab4867de27d450d48c55',1,'WebAnalyzer::Models::MessageModel::InDataMessage']]],

@@ -35,16 +35,34 @@ static \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{E
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_ac638be077683d6707e49ca4ae481a0b1}{Experiment\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \item 
+String \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a3f18f9046fa10178e80e77cb433af681}{Description}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
 Date\+Time \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a8f50de0ba85fe31f3db2a194a66ed084}{Created\+At}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a2429c903e1bd2b062452cfa648238380}{Participants}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings}{Experiment\+Settings} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a00e6e2b80147ab73fc0eee0e7c20d856}{Settings}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a08740ebbb438a9d8300bc537017c72c2}{$\sim$\+Experiment\+Model} ()
+\item 
+void \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a7a634ff267195bc2b3af083d6d20d81c}{Save\+Intern\+Settings} (Xml\+Node intern\+Settings, Xml\+Document xml\+Doc)
+\item 
+void \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_acf8637b65ca6f75a4fc412f7290e0091}{Reset\+Intern\+Settings} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a63429921e06c48ec66370f615d235bea}{Load\+Setting} (Xml\+Node setting)
+\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a2e9168576a6110f27ea44886e19ff5da}{\+\_\+experiment\+Name}
+\item 
+String \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a55777bd2fa8b71c034d49baad38c6ea3}{\+\_\+description}
 \item 
 Date\+Time \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a406cd5a0a10b170f9182492f493cc05a}{\+\_\+created\+At}
 \item 
@@ -69,6 +87,13 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_partici
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a261ba587472913ad4f34f60c13ee3904}
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a08740ebbb438a9d8300bc537017c72c2}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!````~Experiment\+Model@{$\sim$\+Experiment\+Model}}
+\index{````~Experiment\+Model@{$\sim$\+Experiment\+Model}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
+\subsubsection[{$\sim$\+Experiment\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.$\sim$\+Experiment\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a08740ebbb438a9d8300bc537017c72c2}
 
 
 \subsection{Member Function Documentation}
@@ -135,6 +160,28 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_partici
 \item[{Xml\+Document}]{doc}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a1ae79d69f4572920b709fa3f925ccf71}
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a63429921e06c48ec66370f615d235bea}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Load\+Setting@{Load\+Setting}}
+\index{Load\+Setting@{Load\+Setting}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
+\subsubsection[{Load\+Setting(\+Xml\+Node setting)}]{\setlength{\rightskip}{0pt plus 5cm}static void Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Load\+Setting (
+\begin{DoxyParamCaption}
+\item[{Xml\+Node}]{setting}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a63429921e06c48ec66370f615d235bea}
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_acf8637b65ca6f75a4fc412f7290e0091}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Reset\+Intern\+Settings@{Reset\+Intern\+Settings}}
+\index{Reset\+Intern\+Settings@{Reset\+Intern\+Settings}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
+\subsubsection[{Reset\+Intern\+Settings()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Reset\+Intern\+Settings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_acf8637b65ca6f75a4fc412f7290e0091}
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a7a634ff267195bc2b3af083d6d20d81c}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Save\+Intern\+Settings@{Save\+Intern\+Settings}}
+\index{Save\+Intern\+Settings@{Save\+Intern\+Settings}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
+\subsubsection[{Save\+Intern\+Settings(\+Xml\+Node intern\+Settings, Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Save\+Intern\+Settings (
+\begin{DoxyParamCaption}
+\item[{Xml\+Node}]{intern\+Settings, }
+\item[{Xml\+Document}]{xml\+Doc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a7a634ff267195bc2b3af083d6d20d81c}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a28b8ebb68293b7ab351bcd5734c7960c}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!To\+X\+M\+L@{To\+X\+M\+L}}
 \index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+To\+X\+M\+L (
@@ -148,6 +195,9 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_partici
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a406cd5a0a10b170f9182492f493cc05a}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!\+\_\+created\+At@{\+\_\+created\+At}}
 \index{\+\_\+created\+At@{\+\_\+created\+At}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{\+\_\+created\+At}]{\setlength{\rightskip}{0pt plus 5cm}Date\+Time Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+\_\+created\+At\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a406cd5a0a10b170f9182492f493cc05a}
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a55777bd2fa8b71c034d49baad38c6ea3}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!\+\_\+description@{\+\_\+description}}
+\index{\+\_\+description@{\+\_\+description}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
+\subsubsection[{\+\_\+description}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+\_\+description\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a55777bd2fa8b71c034d49baad38c6ea3}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a2e9168576a6110f27ea44886e19ff5da}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!\+\_\+experiment\+Name@{\+\_\+experiment\+Name}}
 \index{\+\_\+experiment\+Name@{\+\_\+experiment\+Name}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{\+\_\+experiment\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+\_\+experiment\+Name\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a2e9168576a6110f27ea44886e19ff5da}
@@ -163,6 +213,9 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_partici
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a8f50de0ba85fe31f3db2a194a66ed084}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Created\+At@{Created\+At}}
 \index{Created\+At@{Created\+At}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Created\+At}]{\setlength{\rightskip}{0pt plus 5cm}Date\+Time Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Created\+At\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a8f50de0ba85fe31f3db2a194a66ed084}
+\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a3f18f9046fa10178e80e77cb433af681}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Description@{Description}}
+\index{Description@{Description}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
+\subsubsection[{Description}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a3f18f9046fa10178e80e77cb433af681}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_ac638be077683d6707e49ca4ae481a0b1}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Experiment\+Name@{Experiment\+Name}}
 \index{Experiment\+Name@{Experiment\+Name}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Experiment\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Experiment\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_ac638be077683d6707e49ca4ae481a0b1}

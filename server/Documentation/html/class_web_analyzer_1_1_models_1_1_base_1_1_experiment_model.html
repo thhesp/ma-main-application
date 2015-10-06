@@ -111,6 +111,8 @@ $(document).ready(function(){initNavTree('class_web_analyzer_1_1_models_1_1_base
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -152,6 +154,8 @@ Static Public Member Functions</h2></td></tr>
 Properties</h2></td></tr>
 <tr class="memitem:ac638be077683d6707e49ca4ae481a0b1"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html#ac638be077683d6707e49ca4ae481a0b1">ExperimentName</a><code> [get, set]</code></td></tr>
 <tr class="separator:ac638be077683d6707e49ca4ae481a0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f18f9046fa10178e80e77cb433af681"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html#a3f18f9046fa10178e80e77cb433af681">Description</a><code> [get, set]</code></td></tr>
+<tr class="separator:a3f18f9046fa10178e80e77cb433af681"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f50de0ba85fe31f3db2a194a66ed084"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html#a8f50de0ba85fe31f3db2a194a66ed084">CreatedAt</a><code> [get, set]</code></td></tr>
 <tr class="separator:a8f50de0ba85fe31f3db2a194a66ed084"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2429c903e1bd2b062452cfa648238380"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant.html">ExperimentParticipant</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html#a2429c903e1bd2b062452cfa648238380">Participants</a><code> [get, set]</code></td></tr>
@@ -159,10 +163,26 @@ Properties</h2></td></tr>
 <tr class="memitem:a00e6e2b80147ab73fc0eee0e7c20d856"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings.html">ExperimentSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html#a00e6e2b80147ab73fc0eee0e7c20d856">Settings</a><code> [get, set]</code></td></tr>
 <tr class="separator:a00e6e2b80147ab73fc0eee0e7c20d856"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a08740ebbb438a9d8300bc537017c72c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html#a08740ebbb438a9d8300bc537017c72c2">~ExperimentModel</a> ()</td></tr>
+<tr class="separator:a08740ebbb438a9d8300bc537017c72c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a634ff267195bc2b3af083d6d20d81c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html#a7a634ff267195bc2b3af083d6d20d81c">SaveInternSettings</a> (XmlNode internSettings, XmlDocument xmlDoc)</td></tr>
+<tr class="separator:a7a634ff267195bc2b3af083d6d20d81c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf8637b65ca6f75a4fc412f7290e0091"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html#acf8637b65ca6f75a4fc412f7290e0091">ResetInternSettings</a> ()</td></tr>
+<tr class="separator:acf8637b65ca6f75a4fc412f7290e0091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a63429921e06c48ec66370f615d235bea"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html#a63429921e06c48ec66370f615d235bea">LoadSetting</a> (XmlNode setting)</td></tr>
+<tr class="separator:a63429921e06c48ec66370f615d235bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a2e9168576a6110f27ea44886e19ff5da"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html#a2e9168576a6110f27ea44886e19ff5da">_experimentName</a></td></tr>
 <tr class="separator:a2e9168576a6110f27ea44886e19ff5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55777bd2fa8b71c034d49baad38c6ea3"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html#a55777bd2fa8b71c034d49baad38c6ea3">_description</a></td></tr>
+<tr class="separator:a55777bd2fa8b71c034d49baad38c6ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a406cd5a0a10b170f9182492f493cc05a"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html#a406cd5a0a10b170f9182492f493cc05a">_createdAt</a></td></tr>
 <tr class="separator:a406cd5a0a10b170f9182492f493cc05a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9f31e30ec2c655a5c06de17f1e40a7c"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant.html">ExperimentParticipant</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html#ae9f31e30ec2c655a5c06de17f1e40a7c">_participants</a> = new List&lt;<a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant.html">ExperimentParticipant</a>&gt;()</td></tr>
@@ -198,6 +218,29 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a08740ebbb438a9d8300bc537017c72c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WebAnalyzer.Models.Base.ExperimentModel.~ExperimentModel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -358,6 +401,87 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a63429921e06c48ec66370f615d235bea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void WebAnalyzer.Models.Base.ExperimentModel.LoadSetting </td>
+          <td>(</td>
+          <td class="paramtype">XmlNode&#160;</td>
+          <td class="paramname"><em>setting</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="acf8637b65ca6f75a4fc412f7290e0091"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebAnalyzer.Models.Base.ExperimentModel.ResetInternSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7a634ff267195bc2b3af083d6d20d81c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebAnalyzer.Models.Base.ExperimentModel.SaveInternSettings </td>
+          <td>(</td>
+          <td class="paramtype">XmlNode&#160;</td>
+          <td class="paramname"><em>internSettings</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">XmlDocument&#160;</td>
+          <td class="paramname"><em>xmlDoc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a28b8ebb68293b7ab351bcd5734c7960c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -384,6 +508,26 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">DateTime WebAnalyzer.Models.Base.ExperimentModel._createdAt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a55777bd2fa8b71c034d49baad38c6ea3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String WebAnalyzer.Models.Base.ExperimentModel._description</td>
         </tr>
       </table>
   </td>
@@ -465,6 +609,26 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">DateTime WebAnalyzer.Models.Base.ExperimentModel.CreatedAt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3f18f9046fa10178e80e77cb433af681"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String WebAnalyzer.Models.Base.ExperimentModel.Description</td>
         </tr>
       </table>
   </td>

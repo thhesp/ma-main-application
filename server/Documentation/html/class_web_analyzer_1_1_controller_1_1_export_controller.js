@@ -4,6 +4,9 @@ var class_web_analyzer_1_1_controller_1_1_export_controller =
       [ "XML", "class_web_analyzer_1_1_controller_1_1_export_controller.html#a8cea4a311ecaf495f305f9d7829a57aaa3501bb093d363810b671059b9cfed3f8", null ],
       [ "CSV", "class_web_analyzer_1_1_controller_1_1_export_controller.html#a8cea4a311ecaf495f305f9d7829a57aaacc8d68c551c4a9a6d5313e07de4deafd", null ]
     ] ],
+    [ "ExportExperimentParticipants", "class_web_analyzer_1_1_controller_1_1_export_controller.html#a7c0f91af885d253606a2b66dc2502dea", null ],
+    [ "ExportExperimentRawData", "class_web_analyzer_1_1_controller_1_1_export_controller.html#a67bc9f73d2b99277aa598fd6857ba3d4", null ],
+    [ "ExportExperimentSettings", "class_web_analyzer_1_1_controller_1_1_export_controller.html#a07d9ecbb84733af809963c54cb03640a", null ],
     [ "ExportExperimentTestRun", "class_web_analyzer_1_1_controller_1_1_export_controller.html#a9f312de4f46d4bfb9c33b4f7ce79e79d", null ],
     [ "SaveExperiment", "class_web_analyzer_1_1_controller_1_1_export_controller.html#a4b85a3cd4921ac619d484d0c3d2b031b", null ],
     [ "SaveExperimentAOI", "class_web_analyzer_1_1_controller_1_1_export_controller.html#a3bf67d51c5be3abf110a145a472049f8", null ],

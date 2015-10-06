@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 16.326531
+%%BoundingBox: 0 0 500 257.142857
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,13 +19,13 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 30.625000 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 1.944444 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 2 def
-/cols 7 def
+/rows 9 def
+/cols 2 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -179,6 +179,7 @@ boxfont setfont
 (WebAnalyzer.Models.MessageModel.DataMessage) cw
 (WebAnalyzer.Models.MessageModel.EchoMessage) cw
 (WebAnalyzer.Models.MessageModel.ErrorMessage) cw
+(WebAnalyzer.Models.MessageModel.EventMessage) cw
 (WebAnalyzer.Models.MessageModel.InDataMessage) cw
 (WebAnalyzer.Models.MessageModel.SmallDataMessage) cw
 /boxwidth boxwidth marginwidth 2 mul add def
@@ -192,32 +193,36 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (WebAnalyzer.Models.MessageModel.Message) 3.000000 1.000000 box
- (WebAnalyzer.Models.MessageModel.ActivationMessage) 0.000000 0.000000 box
- (WebAnalyzer.Models.MessageModel.ConnectionMessage) 1.000000 0.000000 box
- (WebAnalyzer.Models.MessageModel.DataMessage) 2.000000 0.000000 box
- (WebAnalyzer.Models.MessageModel.EchoMessage) 3.000000 0.000000 box
- (WebAnalyzer.Models.MessageModel.ErrorMessage) 4.000000 0.000000 box
- (WebAnalyzer.Models.MessageModel.InDataMessage) 5.000000 0.000000 box
- (WebAnalyzer.Models.MessageModel.SmallDataMessage) 6.000000 0.000000 box
+ (WebAnalyzer.Models.MessageModel.Message) 0.000000 8.000000 box
+ (WebAnalyzer.Models.MessageModel.ActivationMessage) 1.000000 7.000000 box
+ (WebAnalyzer.Models.MessageModel.ConnectionMessage) 1.000000 6.000000 box
+ (WebAnalyzer.Models.MessageModel.DataMessage) 1.000000 5.000000 box
+ (WebAnalyzer.Models.MessageModel.EchoMessage) 1.000000 4.000000 box
+ (WebAnalyzer.Models.MessageModel.ErrorMessage) 1.000000 3.000000 box
+ (WebAnalyzer.Models.MessageModel.EventMessage) 1.000000 2.000000 box
+1.000000 2.000000 mark
+ (WebAnalyzer.Models.MessageModel.InDataMessage) 1.000000 1.000000 box
+ (WebAnalyzer.Models.MessageModel.SmallDataMessage) 1.000000 0.000000 box
 
 % ----- relations -----
 
 solid
-1 3.000000 0.250000 out
+1 0.000000 7.250000 out
 solid
-0.000000 6.000000 1.000000 conn
+0 0.000000 7.500000 hedge
 solid
-0 0.000000 0.750000 in
+0 0.000000 6.500000 hedge
 solid
-0 1.000000 0.750000 in
+0 0.000000 5.500000 hedge
 solid
-0 2.000000 0.750000 in
+0 0.000000 4.500000 hedge
 solid
-0 3.000000 0.750000 in
+0 0.000000 3.500000 hedge
 solid
-0 4.000000 0.750000 in
+0 0.000000 2.500000 hedge
 solid
-0 5.000000 0.750000 in
+0 0.000000 1.500000 hedge
 solid
-0 6.000000 0.750000 in
+0 0.000000 0.500000 hedge
+solid
+0.000000 8.000000 0.500000 vedge

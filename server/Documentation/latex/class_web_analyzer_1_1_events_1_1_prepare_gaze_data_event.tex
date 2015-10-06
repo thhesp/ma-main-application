@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event}{}\section{Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event Class Reference}
 \label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event}\index{Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event}}
+
+
+Event for sending gaze data from the tracking component to the testcontroller  
+
+
 Inheritance diagram for Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,96 +14,81 @@ Inheritance diagram for Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event\+:\b
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a4454a93dfb1027db1d538b35c0294d93}{Prepare\+Gaze\+Data\+Event} (String timestamp, double left\+X, double left\+Y, double right\+X, double right\+Y)
-\item 
-\hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a668ee572e96806690256b509f09b6091}{Prepare\+Gaze\+Data\+Event} (double left\+X, double left\+Y, double right\+X, double right\+Y)
-\end{DoxyCompactItemize}
+\hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a32284ed19ddefa066e42baa6cabded49}{Prepare\+Gaze\+Data\+Event} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} left\+Eye, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} right\+Eye)
+\begin{DoxyCompactList}\small\item\em Event\+Constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-String \hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_ace28cb2b0e169c973f7c6ffef8aa2901}{Gaze\+Timestamp}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
-double \hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a9e790efc1d1cd1dccf130c138e8700c4}{Left\+X}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
-double \hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a60ae4df2f77ec34f2f4b7ae2241e8791}{Left\+Y}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
-double \hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a680a99afeb211df3bbeb59ba505478c1}{Right\+X}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
-double \hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a6e215a1ac2257a554a0af8c4adb11096}{Right\+Y}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\end{DoxyCompactItemize}
+\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} \hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a9da235ea57d2c7496c0ef49772f93340}{Left\+Eye}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Getter for the left eye data \end{DoxyCompactList}\item 
+\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} \hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a1ceb216d55fdabbf5372f1a600f3ecac}{Right\+Eye}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Getter for the right eye data \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-String \hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_ae044ce4acf002ba1481881cd1d2e6add}{\+\_\+timestamp}
-\item 
-double \hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a590d9b88e061f7627f6aaf77a125ac3d}{\+\_\+left\+X}
-\item 
-double \hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_aad152c324dfcd09a233d7feff08ed406}{\+\_\+left\+Y}
-\item 
-double \hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_ab9ffdfd6d3d382b410df14447bb3a55c}{\+\_\+right\+X}
-\item 
-double \hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a7e38aed1e4c3087bd7f43affe399c6f1}{\+\_\+right\+Y}
+\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} \hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a125f124a2790762c2fdbfae8f5f4720b}{\+\_\+left\+Eye}
+\begin{DoxyCompactList}\small\item\em Data about the left and right eye \end{DoxyCompactList}\item 
+\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} \hyperlink{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a1399fd88106ee9c555156c524435406e}{\+\_\+right\+Eye}
 \end{DoxyCompactItemize}
 
 
-\subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a4454a93dfb1027db1d538b35c0294d93}{}\index{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}!Prepare\+Gaze\+Data\+Event@{Prepare\+Gaze\+Data\+Event}}
-\index{Prepare\+Gaze\+Data\+Event@{Prepare\+Gaze\+Data\+Event}!Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}}
-\subsubsection[{Prepare\+Gaze\+Data\+Event(\+String timestamp, double left\+X, double left\+Y, double right\+X, double right\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event.\+Prepare\+Gaze\+Data\+Event (
-\begin{DoxyParamCaption}
-\item[{String}]{timestamp, }
-\item[{double}]{left\+X, }
-\item[{double}]{left\+Y, }
-\item[{double}]{right\+X, }
-\item[{double}]{right\+Y}
-\end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a4454a93dfb1027db1d538b35c0294d93}
-\hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a668ee572e96806690256b509f09b6091}{}\index{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}!Prepare\+Gaze\+Data\+Event@{Prepare\+Gaze\+Data\+Event}}
-\index{Prepare\+Gaze\+Data\+Event@{Prepare\+Gaze\+Data\+Event}!Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}}
-\subsubsection[{Prepare\+Gaze\+Data\+Event(double left\+X, double left\+Y, double right\+X, double right\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event.\+Prepare\+Gaze\+Data\+Event (
-\begin{DoxyParamCaption}
-\item[{double}]{left\+X, }
-\item[{double}]{left\+Y, }
-\item[{double}]{right\+X, }
-\item[{double}]{right\+Y}
-\end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a668ee572e96806690256b509f09b6091}
+\subsection{Detailed Description}
+Event for sending gaze data from the tracking component to the testcontroller 
 
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a32284ed19ddefa066e42baa6cabded49}{}\index{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}!Prepare\+Gaze\+Data\+Event@{Prepare\+Gaze\+Data\+Event}}
+\index{Prepare\+Gaze\+Data\+Event@{Prepare\+Gaze\+Data\+Event}!Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}}
+\subsubsection[{Prepare\+Gaze\+Data\+Event(\+Base\+Tracking\+Data left\+Eye, Base\+Tracking\+Data right\+Eye)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event.\+Prepare\+Gaze\+Data\+Event (
+\begin{DoxyParamCaption}
+\item[{{\bf Base\+Tracking\+Data}}]{left\+Eye, }
+\item[{{\bf Base\+Tracking\+Data}}]{right\+Eye}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a32284ed19ddefa066e42baa6cabded49}
+
+
+Event\+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left\+Eye} & Trackingdata about the left eye\\
+\hline
+{\em right\+Eye} & Trackingdata about the right eye\\
+\hline
+\end{DoxyParams}
+
+
+The object classes depend on the tracking component but must extend Base\+Tracking\+Data
 
 \subsection{Member Data Documentation}
-\hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a590d9b88e061f7627f6aaf77a125ac3d}{}\index{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}!\+\_\+left\+X@{\+\_\+left\+X}}
-\index{\+\_\+left\+X@{\+\_\+left\+X}!Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}}
-\subsubsection[{\+\_\+left\+X}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event.\+\_\+left\+X\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a590d9b88e061f7627f6aaf77a125ac3d}
-\hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_aad152c324dfcd09a233d7feff08ed406}{}\index{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}!\+\_\+left\+Y@{\+\_\+left\+Y}}
-\index{\+\_\+left\+Y@{\+\_\+left\+Y}!Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}}
-\subsubsection[{\+\_\+left\+Y}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event.\+\_\+left\+Y\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_aad152c324dfcd09a233d7feff08ed406}
-\hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_ab9ffdfd6d3d382b410df14447bb3a55c}{}\index{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}!\+\_\+right\+X@{\+\_\+right\+X}}
-\index{\+\_\+right\+X@{\+\_\+right\+X}!Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}}
-\subsubsection[{\+\_\+right\+X}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event.\+\_\+right\+X\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_ab9ffdfd6d3d382b410df14447bb3a55c}
-\hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a7e38aed1e4c3087bd7f43affe399c6f1}{}\index{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}!\+\_\+right\+Y@{\+\_\+right\+Y}}
-\index{\+\_\+right\+Y@{\+\_\+right\+Y}!Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}}
-\subsubsection[{\+\_\+right\+Y}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event.\+\_\+right\+Y\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a7e38aed1e4c3087bd7f43affe399c6f1}
-\hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_ae044ce4acf002ba1481881cd1d2e6add}{}\index{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}!\+\_\+timestamp@{\+\_\+timestamp}}
-\index{\+\_\+timestamp@{\+\_\+timestamp}!Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}}
-\subsubsection[{\+\_\+timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event.\+\_\+timestamp\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_ae044ce4acf002ba1481881cd1d2e6add}
+\hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a125f124a2790762c2fdbfae8f5f4720b}{}\index{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}!\+\_\+left\+Eye@{\+\_\+left\+Eye}}
+\index{\+\_\+left\+Eye@{\+\_\+left\+Eye}!Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}}
+\subsubsection[{\+\_\+left\+Eye}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\+Tracking\+Data} Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event.\+\_\+left\+Eye\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a125f124a2790762c2fdbfae8f5f4720b}
+
+
+Data about the left and right eye 
+
+\hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a1399fd88106ee9c555156c524435406e}{}\index{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}!\+\_\+right\+Eye@{\+\_\+right\+Eye}}
+\index{\+\_\+right\+Eye@{\+\_\+right\+Eye}!Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}}
+\subsubsection[{\+\_\+right\+Eye}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\+Tracking\+Data} Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event.\+\_\+right\+Eye\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a1399fd88106ee9c555156c524435406e}
 
 
 \subsection{Property Documentation}
-\hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_ace28cb2b0e169c973f7c6ffef8aa2901}{}\index{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}!Gaze\+Timestamp@{Gaze\+Timestamp}}
-\index{Gaze\+Timestamp@{Gaze\+Timestamp}!Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}}
-\subsubsection[{Gaze\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event.\+Gaze\+Timestamp\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_ace28cb2b0e169c973f7c6ffef8aa2901}
-\hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a9e790efc1d1cd1dccf130c138e8700c4}{}\index{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}!Left\+X@{Left\+X}}
-\index{Left\+X@{Left\+X}!Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}}
-\subsubsection[{Left\+X}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event.\+Left\+X\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a9e790efc1d1cd1dccf130c138e8700c4}
-\hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a60ae4df2f77ec34f2f4b7ae2241e8791}{}\index{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}!Left\+Y@{Left\+Y}}
-\index{Left\+Y@{Left\+Y}!Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}}
-\subsubsection[{Left\+Y}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event.\+Left\+Y\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a60ae4df2f77ec34f2f4b7ae2241e8791}
-\hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a680a99afeb211df3bbeb59ba505478c1}{}\index{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}!Right\+X@{Right\+X}}
-\index{Right\+X@{Right\+X}!Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}}
-\subsubsection[{Right\+X}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event.\+Right\+X\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a680a99afeb211df3bbeb59ba505478c1}
-\hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a6e215a1ac2257a554a0af8c4adb11096}{}\index{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}!Right\+Y@{Right\+Y}}
-\index{Right\+Y@{Right\+Y}!Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}}
-\subsubsection[{Right\+Y}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event.\+Right\+Y\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a6e215a1ac2257a554a0af8c4adb11096}
+\hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a9da235ea57d2c7496c0ef49772f93340}{}\index{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}!Left\+Eye@{Left\+Eye}}
+\index{Left\+Eye@{Left\+Eye}!Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}}
+\subsubsection[{Left\+Eye}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\+Tracking\+Data} Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event.\+Left\+Eye\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a9da235ea57d2c7496c0ef49772f93340}
+
+
+Getter for the left eye data 
+
+\hypertarget{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a1ceb216d55fdabbf5372f1a600f3ecac}{}\index{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}!Right\+Eye@{Right\+Eye}}
+\index{Right\+Eye@{Right\+Eye}!Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event@{Web\+Analyzer\+::\+Events\+::\+Prepare\+Gaze\+Data\+Event}}
+\subsubsection[{Right\+Eye}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\+Tracking\+Data} Web\+Analyzer.\+Events.\+Prepare\+Gaze\+Data\+Event.\+Right\+Eye\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_events_1_1_prepare_gaze_data_event_a1ceb216d55fdabbf5372f1a600f3ecac}
+
+
+Getter for the right eye data 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

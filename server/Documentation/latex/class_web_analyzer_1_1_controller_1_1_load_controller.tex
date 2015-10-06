@@ -8,19 +8,23 @@ Class which is used for loading data from files.
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_a4ccfcc1eddcf758a1d9c3df334750a05}{Validate\+Experiment\+Folder} (String \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path})
+static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_a4ccfcc1eddcf758a1d9c3df334750a05}{Validate\+Experiment\+Folder} (String path)
 \begin{DoxyCompactList}\small\item\em Validates if the given path contains experiment data. \end{DoxyCompactList}\item 
 static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_a2cf58e1b4a77099dc5fa14f4743fcb16}{Validate\+If\+Experiment\+Does\+Not\+Exist} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} exp)
 \begin{DoxyCompactList}\small\item\em Validates if a experiment already exists by checking the path. \end{DoxyCompactList}\item 
-static \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_a49122060869d7d678c3f0518f70bbe04}{Load\+Experiment} (String \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path})
+static \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_a49122060869d7d678c3f0518f70bbe04}{Load\+Experiment} (String path)
 \begin{DoxyCompactList}\small\item\em Loads the experiment from path. \end{DoxyCompactList}\item 
-static List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} $>$ \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_adc9166c45bf2b2a3fe1b89dc72e539bc}{Load\+Participants} (String \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path})
+static List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} $>$ \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_adc9166c45bf2b2a3fe1b89dc72e539bc}{Load\+Participants} (String path)
 \begin{DoxyCompactList}\small\item\em Loads the Participants and returns them as a list. \end{DoxyCompactList}\item 
-static \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings}{Experiment\+Settings} \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_aac7916dc05a2869790dd010a8f5477d4}{Load\+Settings} (String \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path})
+static List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} $>$ \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_aa27ea8be14f2856fad6a18b0d9ad1418}{Import\+Participants} (String file)
+\begin{DoxyCompactList}\small\item\em Loads the Participants and returns them as a list. \end{DoxyCompactList}\item 
+static \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings}{Experiment\+Settings} \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_aac7916dc05a2869790dd010a8f5477d4}{Load\+Settings} (String path)
 \begin{DoxyCompactList}\small\item\em Loads the Settings and returns them as a Experiment\+Settings object. \end{DoxyCompactList}\item 
-static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{Test\+Model} \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_ac708d0fc98accf17574e97f1e59a7dc9}{Load\+Test} (String \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path})
+static \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings}{Experiment\+Settings} \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_a24780ee8066a3138c3782791cf7a8a00}{Import\+Settings} (String file)
+\begin{DoxyCompactList}\small\item\em Loads the Settings and returns them as a Experiment\+Settings object. \end{DoxyCompactList}\item 
+static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{Test\+Model} \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_ac708d0fc98accf17574e97f1e59a7dc9}{Load\+Test} (String path)
 \begin{DoxyCompactList}\small\item\em Loads test data and returns it as an Test\+Model object. \end{DoxyCompactList}\item 
-static \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data}{Raw\+Tracking\+Data} \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_a3c0d32fd4c9a0137ecc56d8950f03e68}{Load\+Raw\+Data} (String \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path})
+static \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data}{Raw\+Tracking\+Data} \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_a3c0d32fd4c9a0137ecc56d8950f03e68}{Load\+Raw\+Data} (String path)
 \begin{DoxyCompactList}\small\item\em Loads raw data and returns it as an Raw\+Data object. \end{DoxyCompactList}\item 
 static String \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_a3f5424c02e41a6ea9e0edfd300dc3442}{Get\+Testdata\+Location} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} experiment, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant)
 \begin{DoxyCompactList}\small\item\em Generates Path to Testdata Location of Testrun \end{DoxyCompactList}\item 
@@ -28,7 +32,7 @@ static String \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_a
 \begin{DoxyCompactList}\small\item\em Generates Path to Rawdata Location of Testrun \end{DoxyCompactList}\item 
 static String \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_a2c83ce274c328d5115152e09e0d32e56}{Get\+Associated\+Raw\+Data\+For\+Testdata} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} experiment, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant, String filename)
 \begin{DoxyCompactList}\small\item\em Generates Path to Rawdata Location of Testrun \end{DoxyCompactList}\item 
-static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_a1ef9f09d7997062e6c84ebd1b99f588f}{Validate\+X\+M\+L\+File} (String \hyperlink{bin_2x64_2_release_2_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_aa72e0c8a20e6bcc571d3a1c51846e627}{path})
+static Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_load_controller_a1ef9f09d7997062e6c84ebd1b99f588f}{Validate\+X\+M\+L\+File} (String path)
 \begin{DoxyCompactList}\small\item\em Validates if the given path contains testrun data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -96,6 +100,42 @@ Generates Path to Testdata Location of Testrun
 {\em experiment} & Current experiment to get the data from\\
 \hline
 {\em participant} & Current participant to get the data from\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_load_controller_aa27ea8be14f2856fad6a18b0d9ad1418}{}\index{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller}!Import\+Participants@{Import\+Participants}}
+\index{Import\+Participants@{Import\+Participants}!Web\+Analyzer\+::\+Controller\+::\+Load\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller}}
+\subsubsection[{Import\+Participants(\+String file)}]{\setlength{\rightskip}{0pt plus 5cm}static List$<${\bf Experiment\+Participant}$>$ Web\+Analyzer.\+Controller.\+Load\+Controller.\+Import\+Participants (
+\begin{DoxyParamCaption}
+\item[{String}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_controller_1_1_load_controller_aa27ea8be14f2856fad6a18b0d9ad1418}
+
+
+Loads the Participants and returns them as a list. 
+
+Used when importing data from an existing experiment.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & File from which to load the experiment participants.\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_load_controller_a24780ee8066a3138c3782791cf7a8a00}{}\index{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller}!Import\+Settings@{Import\+Settings}}
+\index{Import\+Settings@{Import\+Settings}!Web\+Analyzer\+::\+Controller\+::\+Load\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller}}
+\subsubsection[{Import\+Settings(\+String file)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Experiment\+Settings} Web\+Analyzer.\+Controller.\+Load\+Controller.\+Import\+Settings (
+\begin{DoxyParamCaption}
+\item[{String}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_controller_1_1_load_controller_a24780ee8066a3138c3782791cf7a8a00}
+
+
+Loads the Settings and returns them as a Experiment\+Settings object. 
+
+Used when importing data from an existing experiment.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & File from which to load the experiment settings.\\
 \hline
 \end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_controller_1_1_load_controller_a49122060869d7d678c3f0518f70bbe04}{}\index{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Load\+Controller}!Load\+Experiment@{Load\+Experiment}}

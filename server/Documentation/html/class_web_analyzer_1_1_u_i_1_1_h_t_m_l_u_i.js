@@ -24,5 +24,6 @@ var class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i =
     [ "EditApplicationSetting", "class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i.html#ab0a670a0a2407499af7b073c9f180657", null ],
     [ "EditDomainSetting", "class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i.html#aec067a24868c0ce06c3dd5ca4caccd8b", null ],
     [ "EditParticipant", "class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i.html#a41d7bba18de0e030779e1bc57de9d267", null ],
-    [ "Testrun", "class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i.html#adb77cf3b6fe81466fc13561570764024", null ]
+    [ "Testrun", "class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i.html#adb77cf3b6fe81466fc13561570764024", null ],
+    [ "TriggerSave", "class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i.html#a88837323ee334b87422f0d8cf1897952", null ]
 ];
