@@ -27,6 +27,12 @@ namespace WebAnalyzer.Models.AlgorithmModel
         {
             List<FixationModel> fixations = new List<FixationModel>();
 
+            if (positions.Count == 0)
+            {
+                Logger.Log("Not position data");
+                return fixations;
+            }
+
             List<RawTrackingEvent> rawFixations = RawData.GetFixationsForEye(eye);
 
             foreach (RawTrackingEvent fixationEvent in rawFixations)

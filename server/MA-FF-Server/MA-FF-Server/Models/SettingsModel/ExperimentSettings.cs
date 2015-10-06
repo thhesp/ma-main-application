@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using System.Xml;
 using WebAnalyzer.Models.DataModel;
+using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.SettingsModel
 {
@@ -85,10 +86,13 @@ namespace WebAnalyzer.Models.SettingsModel
             {
                 if (setting.URLFitsSetting(webpage.Url))
                 {
+                    Logger.Log("Domainsettings found: " + setting.Domain);
                     return setting;
                 }
 
             }
+
+            Logger.Log("No fitting Domain for " + webpage.Url + " found.");
 
             return null;
         }
@@ -99,36 +103,39 @@ namespace WebAnalyzer.Models.SettingsModel
             {
                 if (setting.URLFitsSetting(url))
                 {
+                    Logger.Log("Domainsettings found: " + setting.Domain);
                     return setting;
                 }
 
             }
 
+            Logger.Log("No fitting Domain for " + url + " found.");
+
             return null;
         }
 
-        public String GetAOI(String url, DOMElementModel el)
+        public String[] GetAOIs(String url, DOMElementModel el)
         {
             DomainSettings setting = GetSettings(url);
 
             if (setting != null)
             {
-                return setting.GetFittingAOI(el);
+                return setting.GetFittingAOIs(el);
             }
 
-            return "";
+            return new String[0];
         }
 
-        public String GetAOI(WebpageModel webpage, DOMElementModel el)
+        public String[] GetAOIs(WebpageModel webpage, DOMElementModel el)
         {
             DomainSettings setting = GetSettings(webpage);
 
             if (setting != null)
             {
-                return setting.GetFittingAOI(el);
+                return setting.GetFittingAOIs(el);
             }
 
-            return "";
+            return new String[0];
         }
 
         public XmlNode ToXML(XmlDocument xmlDoc)

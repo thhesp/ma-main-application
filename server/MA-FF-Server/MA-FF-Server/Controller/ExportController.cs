@@ -343,7 +343,7 @@ namespace WebAnalyzer.Controller
             if (Directory.Exists(dir))
             {
 
-                Logger.Log("Exporting to: " + dir + "\\" + filename + ".xml");
+                Logger.Log("Exporting fixations to: " + dir + "\\" + filename + "-fixations.xml");
                 switch (format)
                 {
                     case EXPORT_FORMATS.XML:
@@ -384,7 +384,7 @@ namespace WebAnalyzer.Controller
             if (Directory.Exists(dir))
             {
 
-                Logger.Log("Exporting to: " + dir + "\\" + filename + ".xml");
+                Logger.Log("Exporting AOIs to: " + dir + "\\" + filename + "-aois.xml");
                 switch (format)
                 {
                     case EXPORT_FORMATS.XML:
@@ -423,7 +423,7 @@ namespace WebAnalyzer.Controller
             if (Directory.Exists(dir))
             {
 
-                Logger.Log("Exporting to: " + dir + "\\" + filename + ".xml");
+                Logger.Log("Exporting Saccades to: " + dir + "\\" + filename + "-saccades.xml");
                 switch (format)
                 {
                     case EXPORT_FORMATS.XML:

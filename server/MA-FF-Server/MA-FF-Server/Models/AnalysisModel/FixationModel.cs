@@ -7,6 +7,7 @@ using System.Xml;
 
 using WebAnalyzer.Models.DataModel;
 using WebAnalyzer.Models.SettingsModel;
+using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.AnalysisModel
 {
@@ -162,7 +163,7 @@ namespace WebAnalyzer.Models.AnalysisModel
         public XmlNode ToAOIXML(ExperimentSettings settings, WebpageModel page, String eye, XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
 
-            String aoi = "";
+            String[] aois = new String[0];
 
             if (GetRelatedGazes().Count == 0)
             {
@@ -170,71 +171,72 @@ namespace WebAnalyzer.Models.AnalysisModel
             }
 
             if(eye == "left"){
-                 aoi = settings.GetAOI(page, GetRelatedGazes()[0].LeftEye.Element);
+                 aois = settings.GetAOIs(page, GetRelatedGazes()[0].LeftEye.Element);
             }else if(eye == "right"){
-                 aoi = settings.GetAOI(page, GetRelatedGazes()[0].RightEye.Element);
+                 aois = settings.GetAOIs(page, GetRelatedGazes()[0].RightEye.Element);
             }
 
-            if(aoi == ""){
+            if(aois.Length == 0){
+                Logger.Log("No aois found?");
                 return null;
             }
 
-            XmlNode aoiNode = xmlDoc.CreateElement("aoi");
+            XmlNode aoisNode = xmlDoc.CreateElement("aois");
 
-            XmlAttribute identifier = xmlDoc.CreateAttribute("identifier");
+            XmlAttribute identifier = xmlDoc.CreateAttribute("identifiers");
 
-            identifier.Value = aoi;
+            identifier.Value = string.Join(",", aois);
 
-            aoiNode.Attributes.Append(identifier);
+            aoisNode.Attributes.Append(identifier);
 
             XmlAttribute startTimestamp = xmlDoc.CreateAttribute("start-timestamp");
 
             startTimestamp.Value = _startTimestamp;
 
-            aoiNode.Attributes.Append(startTimestamp);
+            aoisNode.Attributes.Append(startTimestamp);
 
             XmlAttribute endTimestamp = xmlDoc.CreateAttribute("end-timestamp");
 
             endTimestamp.Value = _endTimestamp;
 
-            aoiNode.Attributes.Append(endTimestamp);
+            aoisNode.Attributes.Append(endTimestamp);
 
             XmlAttribute duration = xmlDoc.CreateAttribute("duration");
 
             duration.Value = this.Duration.ToString();
 
-            aoiNode.Attributes.Append(duration);
+            aoisNode.Attributes.Append(duration);
 
 
             XmlAttribute startX = xmlDoc.CreateAttribute("startX");
 
             startX.Value = this.StartX.ToString();
 
-            aoiNode.Attributes.Append(startX);
+            aoisNode.Attributes.Append(startX);
 
             XmlAttribute startY = xmlDoc.CreateAttribute("startY");
 
             startY.Value = this.StartY.ToString();
 
-            aoiNode.Attributes.Append(startY);
+            aoisNode.Attributes.Append(startY);
 
             XmlAttribute endX = xmlDoc.CreateAttribute("endX");
 
             endX.Value = this.EndX.ToString();
 
-            aoiNode.Attributes.Append(endX);
+            aoisNode.Attributes.Append(endX);
 
             XmlAttribute endY = xmlDoc.CreateAttribute("endY");
 
             endY.Value = this.EndY.ToString();
 
-            aoiNode.Attributes.Append(endY);
+            aoisNode.Attributes.Append(endY);
 
             XmlAttribute countOfGazes = xmlDoc.CreateAttribute("count-of-gazes");
 
             countOfGazes.Value = this.RelatedGazes.Count.ToString();
 
-            aoiNode.Attributes.Append(countOfGazes);
+            aoisNode.Attributes.Append(countOfGazes);
 
             if (includeSingleGazeData)
             {
@@ -245,10 +247,10 @@ namespace WebAnalyzer.Models.AnalysisModel
                     gazesNode.AppendChild(gaze.ToXML(xmlDoc));
                 }
 
-                aoiNode.AppendChild(gazesNode);
+                aoisNode.AppendChild(gazesNode);
             }
 
-            return aoiNode;
+            return aoisNode;
         }
 
         #endregion

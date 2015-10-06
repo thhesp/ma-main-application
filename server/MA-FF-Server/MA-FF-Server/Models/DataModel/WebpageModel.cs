@@ -560,8 +560,14 @@ namespace WebAnalyzer.Models.DataModel
             _leftFixationData = algorithm.ExtractFixation(_positionData, "left");
             _rightFixationData = algorithm.ExtractFixation(_positionData, "right");
 
+            Logger.Log("Count of left eye fixations: " + _leftFixationData.Count);
+            Logger.Log("Count of right eye fixations: " + _rightFixationData.Count);
+
             _leftSaccadesData = algorithm.ExtractSaccades(_positionData, "left");
             _rightSaccadesnData = algorithm.ExtractSaccades(_positionData, "right");
+
+            Logger.Log("Count of left eye saccades: " + _leftSaccadesData.Count);
+            Logger.Log("Count of right eye saccades: " + _rightSaccadesnData.Count);
         }
 
         #endregion

@@ -19,6 +19,12 @@ namespace WebAnalyzer.Models.AlgorithmModel
         {
             List<SaccadeModel> saccades = new List<SaccadeModel>();
 
+            if (positions.Count == 0)
+            {
+                Logger.Log("Not position data");
+                return saccades;
+            }
+
             List<FixationModel> fixations = ExtractFixation(positions, eye);
 
             List<GazeModel> relatedGazes = new List<GazeModel>();

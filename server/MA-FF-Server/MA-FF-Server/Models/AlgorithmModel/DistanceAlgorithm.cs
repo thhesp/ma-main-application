@@ -31,9 +31,14 @@ namespace WebAnalyzer.Models.AlgorithmModel
         {
             List<FixationModel> fixations = new List<FixationModel>();
 
+            if (positions.Count == 0)
+            {
+                Logger.Log("Not position data");
+                return fixations;
+            }
+
             long duration = 0;
             List<GazeModel> relatedGazes = new List<GazeModel>();
-
 
             // iniate with first gaze data element
             PositionDataModel posModel = positions[0].GetEyeData(eye);
