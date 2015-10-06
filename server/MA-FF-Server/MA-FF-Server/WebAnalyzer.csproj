@@ -171,7 +171,7 @@
     <Compile Include="Events\PrepareGazeDataEvent.cs" />
     <Compile Include="Events\TestrunEvent.cs" />
     <Compile Include="Events\TriggerSaveEvent.cs" />
-    <Compile Include="Events\EditSettingEvent.cs" />
+    <Compile Include="Events\EditDomainSettingEvent.cs" />
     <Compile Include="Events\EditParticipantEvent.cs" />
     <Compile Include="Events\LoadExperimentEvent.cs" />
     <Compile Include="Controller\TestController.cs" />

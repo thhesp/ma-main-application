@@ -65,7 +65,7 @@ namespace WebAnalyzer.UI.InteractionObjects
         public void createParticipant()
         {
             Logger.Log("Create participant?");
-            EditParticipant(this, new EditParticipantEvent(EditParticipantEvent.EDIT_TYPES.Create));
+            EditParticipant(this, new EditParticipantEvent());
         }
 
         public void editParticipant(String uid){
@@ -85,7 +85,7 @@ namespace WebAnalyzer.UI.InteractionObjects
         public void createDomainSetting()
         {
             Logger.Log("Create domain setting?");
-            EditDomainSetting(this, new EditDomainSettingEvent(EditDomainSettingEvent.EDIT_TYPES.Create));
+            EditDomainSetting(this, new EditDomainSettingEvent());
         }
 
         public void editDomainSetting(String uid)
