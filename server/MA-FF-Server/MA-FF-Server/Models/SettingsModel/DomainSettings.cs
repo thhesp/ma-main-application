@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using WebAnalyzer.Models.Base;
 using WebAnalyzer.Models.DataModel;
+using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.SettingsModel
 {
@@ -19,7 +20,8 @@ namespace WebAnalyzer.Models.SettingsModel
 
         private List<AOISettings> _aois = new List<AOISettings>();
 
-        public DomainSettings() : base()
+        public DomainSettings()
+            : base()
         {
 
         }
@@ -33,7 +35,7 @@ namespace WebAnalyzer.Models.SettingsModel
         public Boolean IncludesSubdomains
         {
             get { return _includesSubdomains; }
-            set { _includesSubdomains = value;  }
+            set { _includesSubdomains = value; }
         }
 
         public DomainSettings(String domain)
@@ -102,45 +104,56 @@ namespace WebAnalyzer.Models.SettingsModel
 
         public Boolean URLFitsSetting(String url)
         {
-            Uri urlURI = new Uri(url);
-            string urlHost = urlURI.Host;
-
-            Uri domainURI = new Uri(url);
-            string domainHost = domainURI.Host;
-
-            // check if the url host is the same as the domain host
-            if (urlHost.Equals(domainHost))
+            try
             {
-                return true;
-            }
+                Uri urlURI = new Uri(url);
+                string urlHost = urlURI.Host;
 
-            //if subdomains are included
-            if (IncludesSubdomains)
-            {
-                //check if url on the same domain
-                // if it is the top level domain like google.com
-                // subdomains like maps.google.com must contain google.com
-                if (urlHost.Contains(domainHost))
+                Uri domainURI = new Uri(_domain);
+                string domainHost = domainURI.Host;
+
+                // check if the url host is the same as the domain host
+                if (urlHost.Equals(domainHost))
                 {
+                    Logger.Log("setting host " + domainHost + " fits webpage host " + urlHost);
                     return true;
                 }
+
+                //if subdomains are included
+                if (IncludesSubdomains)
+                {
+                    Logger.Log("check if subdomain fits");
+                    //check if url on the same domain
+                    // if it is the top level domain like google.com
+                    // subdomains like maps.google.com must contain google.com
+                    if (urlHost.Contains(domainHost))
+                    {
+                        Logger.Log(urlHost + " contains " + domainHost);
+                        return true;
+                    }
+                }
             }
+            catch (UriFormatException e)
+            {
+                Logger.Log("UriFormatException while checking domain settings for: " + _domain + " --- " + e.Message);
+            }
+            
 
             return false;
         }
 
-        public String GetFittingAOI(DOMElementModel el)
+        public String[] GetFittingAOIs(DOMElementModel el)
         {
+            List<String> aois = new List<String>();
             foreach (AOISettings setting in AOIS)
             {
                 if (setting.ElementBelongsToAOI(el))
                 {
-                    return setting.Identifier;
+                    aois.Add(setting.Identifier);
                 }
-
             }
 
-            return "";
+            return aois.ToArray<String>();
         }
 
         public XmlNode ToXML(XmlDocument xmlDoc)
