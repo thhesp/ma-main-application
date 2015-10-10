@@ -68,7 +68,7 @@
         <script type="text/template" id="extra-data-template" class="template">
             <tr>
                 <td>
-                    <input class='key' type='text' placeholder='Bezeichnung' value="<%= key %>"/>
+                    <input class='key' type='text' pattern="[a-zA-Z][a-zA-Z0-9]*" placeholder='Bezeichnung' value="<%= key %>" />
                 </td>
                 <td>
                     <input class='value' type='text' placeholder='Wert' value="<%= value %>"/>

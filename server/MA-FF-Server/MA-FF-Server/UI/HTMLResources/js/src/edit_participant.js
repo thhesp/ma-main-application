@@ -56,6 +56,8 @@ function validateData() {
 function validateExtraData() {
     var keys = [];
 
+    var valid = true;
+
     $('#extra-data-table tr .key').each(function () {
         $(this).removeClass('invalid');
         keys.push($(this).val());
@@ -63,9 +65,7 @@ function validateExtraData() {
 
     var duplicates = getDuplicates(keys);
 
-    if (duplicates.length == 0) {
-        return true;
-    } else {
+    if (duplicates.length > 0) {
         console.log('duplicates found', duplicates);
         //mark duplicates
         $('#extra-data-table tr .key').each(function () {
@@ -76,8 +76,20 @@ function validateExtraData() {
 
         alert("Bezeichnungen für Zusatzdaten dürfen pro Teilnehmer nur einmal verwendet werden.");
 
-        return false;
+        valid = false;
     }
+
+    $('#extra-data-table tr .key').each(function () {
+        console.log("Check Validity: ", this.checkValidity());
+        if (!this.checkValidity()) {
+            valid = false;
+            $(this).addClass('invalid');
+        }
+        
+    });
+
+
+    return valid;
 }
 
 function extractExtraData() {
