@@ -53,7 +53,15 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             if (Browser != null && script != null)
             {
-                Browser.EvaluateScriptAsync(script);
+                try
+                {
+                    Browser.EvaluateScriptAsync(script);
+                }
+                catch (NullReferenceException e)
+                {
+                    Logger.Log("Problems while executing javascript: " + e.Message);
+                }
+                
             }
         }
 
