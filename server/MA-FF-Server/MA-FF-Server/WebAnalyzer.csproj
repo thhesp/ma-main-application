@@ -384,13 +384,31 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Schemata\aois.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemata\enriched-data.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Schemata\experiment.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemata\fixations.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Schemata\participants.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Schemata\saccades.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Schemata\settings.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemata\raw-data.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemata\statistics.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="UI\HTMLResources\fonts\fontawesome-webfont.eot">
