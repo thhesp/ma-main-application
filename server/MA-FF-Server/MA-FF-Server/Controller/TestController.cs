@@ -34,6 +34,11 @@ namespace WebAnalyzer.Controller
         public event UpdateWSConnectionCountEventHandler UpdateWSConnectionCount;
 
         /// <summary>
+        ///  Event for updating the service stati.
+        /// </summary>
+        public event UpdateServiceStatiEventHandler UpdateServiceStati;
+
+        /// <summary>
         /// Reference to the test data for current test.
         /// </summary>
         private TestModel _test;
@@ -68,7 +73,12 @@ namespace WebAnalyzer.Controller
         /// <summary>
         /// Reference to an timer used for checking if all communication is done and the data can be saved.
         /// </summary>
-        private System.Timers.Timer saveTimer;
+        private System.Timers.Timer _saveTimer;
+
+        /// <summary>
+        /// Reference to an timer used for checking if services are running and are connected.
+        /// </summary>
+        private System.Timers.Timer _serviceTimer;
 
         /// <summary>
         /// Contains the raw data of the tracking device, without any extra informations.
@@ -81,7 +91,8 @@ namespace WebAnalyzer.Controller
         public TestController()
         {
             _test = new TestModel();
-            PrepareServices();
+            InitialiseServices();
+            CreateServiceTimer();
             CreateSaveTimer();
         }
 
@@ -91,19 +102,31 @@ namespace WebAnalyzer.Controller
         /// </summary>
         ~TestController()
         {
-            EndServices();
+            _serviceTimer.Stop();
+            _saveTimer.Stop();
+            EndServices(); 
         }
 
+        /// <summary>
+        /// Creates the Timer used for checking if services are working correctly.
+        /// </summary>
+        private void CreateServiceTimer()
+        {
+            _serviceTimer = new System.Timers.Timer();
+            _serviceTimer.Enabled = true;
+            _serviceTimer.Interval = Properties.Settings.Default.ServicesCheckIntervall;
+            _serviceTimer.Elapsed += new ElapsedEventHandler(CheckServices);
+        }
 
         /// <summary>
         /// Creates the Timer used when checking if data can now be saved.
         /// </summary>
         private void CreateSaveTimer()
         {
-            saveTimer = new System.Timers.Timer();
-            saveTimer.Enabled = true;
-            saveTimer.Interval = Properties.Settings.Default.TestrunSaveCheckIntervall;
-            saveTimer.Elapsed += new ElapsedEventHandler(CheckForSave);
+            _saveTimer = new System.Timers.Timer();
+            _saveTimer.Enabled = true;
+            _saveTimer.Interval = Properties.Settings.Default.TestrunSaveCheckIntervall;
+            _saveTimer.Elapsed += new ElapsedEventHandler(CheckForSave);
         }
 
         /// <summary>
@@ -182,20 +205,32 @@ namespace WebAnalyzer.Controller
         /// <summary>
         /// Methods for Refreshing Services.
         /// </summary>
-        /// <remarks>Only calls EndServices and then PrepareServices.</remarks>
+        /// <remarks>Only calls EndServices and then InitialiseServices.</remarks>
         public void RefreshServices()
         {
             EndServices();
-            PrepareServices();
+            InitialiseServices();
         }
 
         /// <summary>
-        /// Prepares all Websocket Server and Tracking Interface for the test.
+        /// Initialises all Websocket Server and Tracking Interface for the test.
         /// </summary>
         /// <remarks>Uses the settings to choose what to prepare and what to use for preparing.</remarks>
-        public void PrepareServices()
+        public void InitialiseServices()
         {
-            Logger.Log("Prepare Services");
+            Logger.Log("Initialising Services");
+
+            InitialiseWSServer();
+
+            InitialiseTrackingComponent();
+        }
+
+        /// <summary>
+        /// Initialises the WebSocket Server
+        /// </summary>
+        private void InitialiseWSServer()
+        {
+            Logger.Log("Initialising WebSocket Server");
 
             try
             {
@@ -211,8 +246,14 @@ namespace WebAnalyzer.Controller
 
                 _WSWarning = true;
             }
+        }
 
-
+        /// <summary>
+        /// Initialises the TrackingComponent
+        /// </summary>
+        private void InitialiseTrackingComponent()
+        {
+            Logger.Log("Initialising Tracking Component");
             try
             {
                 _trackingModel = BaseTrackingModel.GetTrackingModel();
@@ -223,7 +264,7 @@ namespace WebAnalyzer.Controller
 
                 _trackingModel.connect();
 
-                CheckTrackingFrequency();
+
             }
             catch (Exception e)
             {
@@ -233,7 +274,11 @@ namespace WebAnalyzer.Controller
                 {
                     _trackingModel.ConnectionStatus = ExperimentObject.CONNECTION_STATUS.warning;
                 }
-               
+            }
+
+            if (_trackingModel.ConnectionStatus == ExperimentObject.CONNECTION_STATUS.connected)
+            {
+                CheckTrackingFrequency();
             }
         }
 
@@ -285,7 +330,6 @@ namespace WebAnalyzer.Controller
         /// <summary>
         /// Stops all Websocket Server and Tracking Interface.
         /// </summary>
-        /// <remarks>Uses the settings to choose what to prepare and what to use for preparing.</remarks>
         private void EndServices()
         {
             if (_running)
@@ -296,6 +340,8 @@ namespace WebAnalyzer.Controller
             if (_wsServer != null)
             {
                 _wsServer.stop();
+
+                _wsServer = null;
             }
 
             _trackingModel.PrepareGaze -= On_PrepareGazeData;
@@ -337,7 +383,7 @@ namespace WebAnalyzer.Controller
             }
 
             //start timer to check if saving is possible
-            saveTimer.Start();
+            _saveTimer.Start();
         }
 
         /// <summary>
@@ -441,7 +487,7 @@ namespace WebAnalyzer.Controller
         {
             if (_test.CheckForSave())
             {
-                saveTimer.Stop();
+                _saveTimer.Stop();
                 SaveTestrun(this, new SaveTestrunEvent());
             }
         }
@@ -523,9 +569,34 @@ namespace WebAnalyzer.Controller
                 _test.Protocol = e.Protocol;
 
                 // save testrun if data was already saved
-                if(_dataCollected && !saveTimer.Enabled){
+                if(_dataCollected && !_saveTimer.Enabled){
                     SaveTestrun(this, new SaveTestrunEvent());
                 }
+            }
+        }
+
+        /// <summary>
+        /// Checks if all needed services are running and okay. If not tries to start them/ connect.
+        /// </summary>
+        /// <param name="sender">Object from which the method is called</param>
+        /// <param name="e">Event</param>
+        public void CheckServices(object sender, ElapsedEventArgs e)
+        {
+            //check if services are running
+            bool update = false;
+
+            //mainly the tracking component...
+            if (_trackingModel != null && 
+                _trackingModel.ConnectionStatus != ExperimentObject.CONNECTION_STATUS.connected)
+            {
+                InitialiseTrackingComponent();
+                update = true;
+            }
+
+            if (update)
+            {
+                //trigger update event
+                UpdateServiceStati(this, new UpdateServiceStatiEvent());
             }
         }
     }

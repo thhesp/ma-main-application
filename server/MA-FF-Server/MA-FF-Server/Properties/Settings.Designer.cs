@@ -325,7 +325,7 @@ namespace WebAnalyzer.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("mouse")]
+        [global::System.Configuration.DefaultSettingValueAttribute("eye")]
         public string TrackingModelType {
             get {
                 return ((string)(this["TrackingModelType"]));
@@ -368,6 +368,18 @@ namespace WebAnalyzer.Properties {
             }
             set {
                 this["SaccadeAngleSimiliarity"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3000")]
+        public double ServicesCheckIntervall {
+            get {
+                return ((double)(this["ServicesCheckIntervall"]));
+            }
+            set {
+                this["ServicesCheckIntervall"] = value;
             }
         }
     }

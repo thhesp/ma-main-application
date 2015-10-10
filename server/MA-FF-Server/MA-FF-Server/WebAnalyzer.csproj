@@ -164,6 +164,7 @@
     <Compile Include="Events\MessageSentEvent.cs" />
     <Compile Include="Events\SelectTestrunToLoadEvent.cs" />
     <Compile Include="Events\SelectExperimentEvent.cs" />
+    <Compile Include="Events\UpdateServiceStatiEvent.cs" />
     <Compile Include="Events\UpdateWSConnectionCountEvent.cs" />
     <Compile Include="Events\SaveTestrunEvent.cs" />
     <Compile Include="Events\EditApplicationSettingsEvent.cs" />

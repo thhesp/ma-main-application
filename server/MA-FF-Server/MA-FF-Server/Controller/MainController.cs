@@ -66,6 +66,7 @@ namespace WebAnalyzer.Controller
             _testController = new TestController();
             _testController.SaveTestrun += On_SaveTestrun;
             _testController.UpdateWSConnectionCount += On_UpdateConnectionCount;
+            _testController.UpdateServiceStati += On_UpdateServiceStati;
         }
 
        
@@ -417,6 +418,20 @@ namespace WebAnalyzer.Controller
             if (_mainUI != null)
             {
                 _mainUI.SetWSConnectionCount(e.Count);
+                _mainUI.RefreshData();
+            }
+        }
+
+        /// <summary>
+        /// Callback for Update Service Status
+        /// </summary>
+        /// <param name="sender">Object from which the event gets triggered.</param>
+        /// <param name="e">The event</param>
+        private void On_UpdateServiceStati(object sender, UpdateServiceStatiEvent e)
+        {
+            if (_mainUI != null)
+            {
+                SetConnectionStati();
                 _mainUI.RefreshData();
             }
         }

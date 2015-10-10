@@ -84,7 +84,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="TrackingModelType" Type="System.String" Scope="User">
-      <Value Profile="(Default)">mouse</Value>
+      <Value Profile="(Default)">eye</Value>
     </Setting>
     <Setting Name="ExperimentDescriptionSaveTimeout" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">3000</Value>
@@ -94,6 +94,9 @@
     </Setting>
     <Setting Name="SaccadeAngleSimiliarity" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0.5</Value>
+    </Setting>
+    <Setting Name="ServicesCheckIntervall" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">3000</Value>
     </Setting>
   </Settings>
 </SettingsFile>
