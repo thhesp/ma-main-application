@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="settings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="domain-setting">
+          <xs:complexType>
+            <xs:sequence minOccurs="0">
+              <xs:element maxOccurs="unbounded" name="aoi-setting">
+                <xs:complexType>
+                  <xs:sequence minOccurs="0">
+                    <xs:element maxOccurs="unbounded" name="rule">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="node" type="nodeType"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="case-sensitive" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="identifier" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="domain" type="xs:string" use="required" />
+            <xs:attribute name="include-subdomains" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="nodeType">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="node" type="nodeType"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string" use="required" />
+    <xs:attribute name="value-type" type="xs:string" use="optional" />
+    <xs:attribute name="value" type="xs:string" use="optional" />
+  </xs:complexType>
+</xs:schema>

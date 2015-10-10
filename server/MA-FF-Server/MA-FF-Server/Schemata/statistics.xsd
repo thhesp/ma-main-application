@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="statistics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="global-stats">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="request-till-sent">
+                <xs:complexType>
+                  <xs:attribute name="mean" type="xs:string" use="required" />
+                  <xs:attribute name="median" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="min" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="max" type="xs:unsignedShort" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="server-sent-to-received">
+                <xs:complexType>
+                  <xs:attribute name="mean" type="xs:string" use="required" />
+                  <xs:attribute name="median" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="min" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="max" type="xs:unsignedShort" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="client-received-to-sent">
+                <xs:complexType>
+                  <xs:attribute name="mean" type="xs:string" use="required" />
+                  <xs:attribute name="median" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="min" type="xs:unsignedByte" use="required" />
+                  <xs:attribute name="max" type="xs:unsignedByte" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="webpages">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="webpage">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="webpage-stats">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="request-till-sent">
+                            <xs:complexType>
+                              <xs:attribute name="mean" type="xs:string" use="required" />
+                              <xs:attribute name="median" type="xs:unsignedByte" use="required" />
+                              <xs:attribute name="min" type="xs:unsignedByte" use="required" />
+                              <xs:attribute name="max" type="xs:unsignedShort" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="server-sent-to-received">
+                            <xs:complexType>
+                              <xs:attribute name="mean" type="xs:string" use="required" />
+                              <xs:attribute name="median" type="xs:unsignedByte" use="required" />
+                              <xs:attribute name="min" type="xs:unsignedByte" use="required" />
+                              <xs:attribute name="max" type="xs:unsignedShort" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="client-received-to-sent">
+                            <xs:complexType>
+                              <xs:attribute name="mean" type="xs:string" use="required" />
+                              <xs:attribute name="median" type="xs:unsignedByte" use="required" />
+                              <xs:attribute name="min" type="xs:unsignedByte" use="required" />
+                              <xs:attribute name="max" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="url" type="xs:string" use="required" />
+                  <xs:attribute name="visited" type="xs:unsignedLong" use="required" />
+                  <xs:attribute name="number-of-gazes" type="xs:unsignedShort" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="started" type="xs:string" use="required" />
+      <xs:attribute name="stopped" type="xs:string" use="required" />
+      <xs:attribute name="duration" type="xs:time" use="required" />
+      <xs:attribute name="count-of-visited-pages" type="xs:unsignedByte" use="required" />
+      <xs:attribute name="number-of-gazes" type="xs:unsignedShort" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

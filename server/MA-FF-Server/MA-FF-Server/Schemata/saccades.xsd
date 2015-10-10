@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="experiment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="participant">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="extra-attributes">
+                <xs:complexType>
+                  <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                    <xs:any processContents="lax"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="identifier" type="xs:string" use="required" />
+            <xs:attribute name="created-at" type="xs:string" use="required" />
+            <xs:attribute name="sex" type="xs:string" use="required" />
+            <xs:attribute name="birthyear" type="xs:unsignedShort" use="required" />
+            <xs:attribute name="education" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="algorithm">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:choice>
+                <xs:element name="distance">
+                  <xs:complexType>
+                    <xs:attribute name="minimum-duration" type="xs:unsignedByte" use="required" />
+                    <xs:attribute name="acceptable-deviation" type="xs:unsignedByte" use="required" />
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="iview-events"></xs:element>
+              </xs:choice>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="webpages">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="webpage">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="saccades">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="left-eye">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element maxOccurs="unbounded" name="saccade">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="related-gazes">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element maxOccurs="unbounded" name="gaze">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="left-eye">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element name="position">
+                                                          <xs:complexType>
+                                                            <xs:sequence>
+                                                              <xs:choice>
+                                                                <xs:element name="mousetracking-data">
+                                                                  <xs:complexType>
+                                                                    <xs:attribute name="x" type="xs:unsignedShort" use="required" />
+                                                                    <xs:attribute name="y" type="xs:unsignedShort" use="required" />
+                                                                    <xs:attribute name="callback" type="xs:unsignedLong" use="required" />
+                                                                  </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="eyetracking-data">
+                                                                  <xs:complexType>
+                                                                    <xs:attribute name="x" type="xs:string" use="required" />
+                                                                    <xs:attribute name="y" type="xs:string" use="required" />
+                                                                    <xs:attribute name="callback" type="xs:unsignedInt" use="required" />
+                                                                    <xs:attribute name="diameter" type="xs:string" use="required" />
+                                                                    <xs:attribute name="eye-position-x" type="xs:string" use="required" />
+                                                                    <xs:attribute name="eye-position-y" type="xs:string" use="required" />
+                                                                    <xs:attribute name="eye-position-z" type="xs:string" use="required" />
+                                                                  </xs:complexType>
+                                                                </xs:element>
+                                                              </xs:choice>
+                                                              <xs:element name="element">
+                                                                <xs:complexType>
+                                                                  <xs:sequence>
+                                                                    <xs:element name="classes">
+                                                                      <xs:complexType>
+                                                                        <xs:sequence minOccurs="0">
+                                                                          <xs:element maxOccurs="unbounded" name="class" type="xs:string" />
+                                                                        </xs:sequence>
+                                                                      </xs:complexType>
+                                                                    </xs:element>
+                                                                    <xs:element name="attributes">
+                                                                      <xs:complexType>
+                                                                        <xs:sequence>
+                                                                          <xs:element maxOccurs="unbounded" name="attribute">
+                                                                            <xs:complexType>
+                                                                              <xs:attribute name="name" type="xs:string" use="required" />
+                                                                              <xs:attribute name="value" type="xs:string" use="required" />
+                                                                            </xs:complexType>
+                                                                          </xs:element>
+                                                                        </xs:sequence>
+                                                                      </xs:complexType>
+                                                                    </xs:element>
+                                                                  </xs:sequence>
+                                                                  <xs:attribute name="tag" type="xs:string" use="required" />
+                                                                  <xs:attribute name="path" type="xs:string" use="required" />
+                                                                  <xs:attribute name="selector" type="xs:string" use="required" />
+                                                                  <xs:attribute name="id" type="xs:string" use="required" />
+                                                                  <xs:attribute name="title" type="xs:string" use="required" />
+                                                                  <xs:attribute name="html-x" type="xs:unsignedShort" use="required" />
+                                                                  <xs:attribute name="html-y" type="xs:unsignedShort" use="required" />
+                                                                  <xs:attribute name="left" type="xs:string" use="required" />
+                                                                  <xs:attribute name="top" type="xs:string" use="required" />
+                                                                  <xs:attribute name="width" type="xs:string" use="required" />
+                                                                  <xs:attribute name="height" type="xs:string" use="required" />
+                                                                  <xs:attribute name="outerHeight" type="xs:string" use="required" />
+                                                                  <xs:attribute name="outerWidth" type="xs:unsignedShort" use="required" />
+                                                                </xs:complexType>
+                                                              </xs:element>
+                                                            </xs:sequence>
+                                                          </xs:complexType>
+                                                        </xs:element>
+                                                      </xs:sequence>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="right-eye">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element name="position">
+                                                          <xs:complexType>
+                                                            <xs:sequence>
+                                                              <xs:choice>
+                                                                <xs:element name="mousetracking-data">
+                                                                  <xs:complexType>
+                                                                    <xs:attribute name="x" type="xs:unsignedShort" use="required" />
+                                                                    <xs:attribute name="y" type="xs:unsignedShort" use="required" />
+                                                                    <xs:attribute name="callback" type="xs:unsignedLong" use="required" />
+                                                                  </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="eyetracking-data">
+                                                                  <xs:complexType>
+                                                                    <xs:attribute name="x" type="xs:string" use="required" />
+                                                                    <xs:attribute name="y" type="xs:string" use="required" />
+                                                                    <xs:attribute name="callback" type="xs:unsignedInt" use="required" />
+                                                                    <xs:attribute name="diameter" type="xs:string" use="required" />
+                                                                    <xs:attribute name="eye-position-x" type="xs:string" use="required" />
+                                                                    <xs:attribute name="eye-position-y" type="xs:string" use="required" />
+                                                                    <xs:attribute name="eye-position-z" type="xs:string" use="required" />
+                                                                  </xs:complexType>
+                                                                </xs:element>
+                                                              </xs:choice>
+                                                              <xs:element name="element">
+                                                                <xs:complexType>
+                                                                  <xs:sequence>
+                                                                    <xs:element name="classes">
+                                                                      <xs:complexType>
+                                                                        <xs:sequence minOccurs="0">
+                                                                          <xs:element maxOccurs="unbounded" name="class" type="xs:string" />
+                                                                        </xs:sequence>
+                                                                      </xs:complexType>
+                                                                    </xs:element>
+                                                                    <xs:element name="attributes">
+                                                                      <xs:complexType>
+                                                                        <xs:sequence>
+                                                                          <xs:element maxOccurs="unbounded" name="attribute">
+                                                                            <xs:complexType>
+                                                                              <xs:attribute name="name" type="xs:string" use="required" />
+                                                                              <xs:attribute name="value" type="xs:string" use="required" />
+                                                                            </xs:complexType>
+                                                                          </xs:element>
+                                                                        </xs:sequence>
+                                                                      </xs:complexType>
+                                                                    </xs:element>
+                                                                  </xs:sequence>
+                                                                  <xs:attribute name="tag" type="xs:string" use="required" />
+                                                                  <xs:attribute name="path" type="xs:string" use="required" />
+                                                                  <xs:attribute name="selector" type="xs:string" use="required" />
+                                                                  <xs:attribute name="id" type="xs:string" use="required" />
+                                                                  <xs:attribute name="title" type="xs:string" use="required" />
+                                                                  <xs:attribute name="html-x" type="xs:unsignedShort" use="required" />
+                                                                  <xs:attribute name="html-y" type="xs:unsignedShort" use="required" />
+                                                                  <xs:attribute name="left" type="xs:string" use="required" />
+                                                                  <xs:attribute name="top" type="xs:string" use="required" />
+                                                                  <xs:attribute name="width" type="xs:string" use="required" />
+                                                                  <xs:attribute name="height" type="xs:string" use="required" />
+                                                                  <xs:attribute name="outerHeight" type="xs:string" use="required" />
+                                                                  <xs:attribute name="outerWidth" type="xs:unsignedShort" use="required" />
+                                                                </xs:complexType>
+                                                              </xs:element>
+                                                            </xs:sequence>
+                                                          </xs:complexType>
+                                                        </xs:element>
+                                                      </xs:sequence>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="timestamp" type="xs:unsignedLong" use="required" />
+                                                <xs:attribute name="data-requested-timestamp" type="xs:unsignedLong" use="required" />
+                                                <xs:attribute name="server-sent-timestamp" type="xs:unsignedLong" use="required" />
+                                                <xs:attribute name="server-received-timestamp" type="xs:unsignedLong" use="required" />
+                                                <xs:attribute name="client-sent-timestamp" type="xs:unsignedLong" use="required" />
+                                                <xs:attribute name="client-received-timestamp" type="xs:unsignedLong" use="required" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="start-timestamp" type="xs:unsignedLong" use="required" />
+                                    <xs:attribute name="end-timestamp" type="xs:unsignedLong" use="required" />
+                                    <xs:attribute name="duration" type="xs:unsignedShort" use="required" />
+                                    <xs:attribute name="count-of-gazes" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="count-of-saccades" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="right-eye">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element maxOccurs="unbounded" name="saccade">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="related-gazes">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element maxOccurs="unbounded" name="gaze">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="left-eye">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element name="position">
+                                                          <xs:complexType>
+                                                            <xs:sequence>
+                                                              <xs:choice>
+                                                                <xs:element name="mousetracking-data">
+                                                                  <xs:complexType>
+                                                                    <xs:attribute name="x" type="xs:unsignedShort" use="required" />
+                                                                    <xs:attribute name="y" type="xs:unsignedShort" use="required" />
+                                                                    <xs:attribute name="callback" type="xs:unsignedLong" use="required" />
+                                                                  </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="eyetracking-data">
+                                                                  <xs:complexType>
+                                                                    <xs:attribute name="x" type="xs:string" use="required" />
+                                                                    <xs:attribute name="y" type="xs:string" use="required" />
+                                                                    <xs:attribute name="callback" type="xs:unsignedInt" use="required" />
+                                                                    <xs:attribute name="diameter" type="xs:string" use="required" />
+                                                                    <xs:attribute name="eye-position-x" type="xs:string" use="required" />
+                                                                    <xs:attribute name="eye-position-y" type="xs:string" use="required" />
+                                                                    <xs:attribute name="eye-position-z" type="xs:string" use="required" />
+                                                                  </xs:complexType>
+                                                                </xs:element>
+                                                              </xs:choice>
+                                                              <xs:element name="element">
+                                                                <xs:complexType>
+                                                                  <xs:sequence>
+                                                                    <xs:element name="classes">
+                                                                      <xs:complexType>
+                                                                        <xs:sequence minOccurs="0">
+                                                                          <xs:element maxOccurs="unbounded" name="class" type="xs:string" />
+                                                                        </xs:sequence>
+                                                                      </xs:complexType>
+                                                                    </xs:element>
+                                                                    <xs:element name="attributes">
+                                                                      <xs:complexType>
+                                                                        <xs:sequence>
+                                                                          <xs:element maxOccurs="unbounded" name="attribute">
+                                                                            <xs:complexType>
+                                                                              <xs:attribute name="name" type="xs:string" use="required" />
+                                                                              <xs:attribute name="value" type="xs:string" use="required" />
+                                                                            </xs:complexType>
+                                                                          </xs:element>
+                                                                        </xs:sequence>
+                                                                      </xs:complexType>
+                                                                    </xs:element>
+                                                                  </xs:sequence>
+                                                                  <xs:attribute name="tag" type="xs:string" use="required" />
+                                                                  <xs:attribute name="path" type="xs:string" use="required" />
+                                                                  <xs:attribute name="selector" type="xs:string" use="required" />
+                                                                  <xs:attribute name="id" type="xs:string" use="required" />
+                                                                  <xs:attribute name="title" type="xs:string" use="required" />
+                                                                  <xs:attribute name="html-x" type="xs:unsignedShort" use="required" />
+                                                                  <xs:attribute name="html-y" type="xs:unsignedShort" use="required" />
+                                                                  <xs:attribute name="left" type="xs:string" use="required" />
+                                                                  <xs:attribute name="top" type="xs:string" use="required" />
+                                                                  <xs:attribute name="width" type="xs:string" use="required" />
+                                                                  <xs:attribute name="height" type="xs:string" use="required" />
+                                                                  <xs:attribute name="outerHeight" type="xs:string" use="required" />
+                                                                  <xs:attribute name="outerWidth" type="xs:unsignedShort" use="required" />
+                                                                </xs:complexType>
+                                                              </xs:element>
+                                                            </xs:sequence>
+                                                          </xs:complexType>
+                                                        </xs:element>
+                                                      </xs:sequence>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="right-eye">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element name="position">
+                                                          <xs:complexType>
+                                                            <xs:sequence>
+                                                              <xs:choice>
+                                                                <xs:element name="mousetracking-data">
+                                                                  <xs:complexType>
+                                                                    <xs:attribute name="x" type="xs:unsignedShort" use="required" />
+                                                                    <xs:attribute name="y" type="xs:unsignedShort" use="required" />
+                                                                    <xs:attribute name="callback" type="xs:unsignedLong" use="required" />
+                                                                  </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="eyetracking-data">
+                                                                  <xs:complexType>
+                                                                    <xs:attribute name="x" type="xs:string" use="required" />
+                                                                    <xs:attribute name="y" type="xs:string" use="required" />
+                                                                    <xs:attribute name="callback" type="xs:unsignedInt" use="required" />
+                                                                    <xs:attribute name="diameter" type="xs:string" use="required" />
+                                                                    <xs:attribute name="eye-position-x" type="xs:string" use="required" />
+                                                                    <xs:attribute name="eye-position-y" type="xs:string" use="required" />
+                                                                    <xs:attribute name="eye-position-z" type="xs:string" use="required" />
+                                                                  </xs:complexType>
+                                                                </xs:element>
+                                                              </xs:choice>
+                                                              <xs:element name="element">
+                                                                <xs:complexType>
+                                                                  <xs:sequence>
+                                                                    <xs:element name="classes">
+                                                                      <xs:complexType>
+                                                                        <xs:sequence minOccurs="0">
+                                                                          <xs:element maxOccurs="unbounded" name="class" type="xs:string" />
+                                                                        </xs:sequence>
+                                                                      </xs:complexType>
+                                                                    </xs:element>
+                                                                    <xs:element name="attributes">
+                                                                      <xs:complexType>
+                                                                        <xs:sequence>
+                                                                          <xs:element maxOccurs="unbounded" name="attribute">
+                                                                            <xs:complexType>
+                                                                              <xs:attribute name="name" type="xs:string" use="required" />
+                                                                              <xs:attribute name="value" type="xs:string" use="required" />
+                                                                            </xs:complexType>
+                                                                          </xs:element>
+                                                                        </xs:sequence>
+                                                                      </xs:complexType>
+                                                                    </xs:element>
+                                                                  </xs:sequence>
+                                                                  <xs:attribute name="tag" type="xs:string" use="required" />
+                                                                  <xs:attribute name="path" type="xs:string" use="required" />
+                                                                  <xs:attribute name="selector" type="xs:string" use="required" />
+                                                                  <xs:attribute name="id" type="xs:string" use="required" />
+                                                                  <xs:attribute name="title" type="xs:string" use="required" />
+                                                                  <xs:attribute name="html-x" type="xs:unsignedShort" use="required" />
+                                                                  <xs:attribute name="html-y" type="xs:unsignedShort" use="required" />
+                                                                  <xs:attribute name="left" type="xs:string" use="required" />
+                                                                  <xs:attribute name="top" type="xs:string" use="required" />
+                                                                  <xs:attribute name="width" type="xs:string" use="required" />
+                                                                  <xs:attribute name="height" type="xs:string" use="required" />
+                                                                  <xs:attribute name="outerHeight" type="xs:string" use="required" />
+                                                                  <xs:attribute name="outerWidth" type="xs:unsignedShort" use="required" />
+                                                                </xs:complexType>
+                                                              </xs:element>
+                                                            </xs:sequence>
+                                                          </xs:complexType>
+                                                        </xs:element>
+                                                      </xs:sequence>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="timestamp" type="xs:unsignedLong" use="required" />
+                                                <xs:attribute name="data-requested-timestamp" type="xs:unsignedLong" use="required" />
+                                                <xs:attribute name="server-sent-timestamp" type="xs:unsignedLong" use="required" />
+                                                <xs:attribute name="server-received-timestamp" type="xs:unsignedLong" use="required" />
+                                                <xs:attribute name="client-sent-timestamp" type="xs:unsignedLong" use="required" />
+                                                <xs:attribute name="client-received-timestamp" type="xs:unsignedLong" use="required" />
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="start-timestamp" type="xs:unsignedLong" use="required" />
+                                    <xs:attribute name="end-timestamp" type="xs:unsignedLong" use="required" />
+                                    <xs:attribute name="duration" type="xs:unsignedShort" use="required" />
+                                    <xs:attribute name="count-of-gazes" type="xs:unsignedByte" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="count-of-saccades" type="xs:unsignedByte" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="url" type="xs:string" use="required" />
+                  <xs:attribute name="visited" type="xs:unsignedLong" use="required" />
+                  <xs:attribute name="window-width" type="xs:unsignedShort" use="required" />
+                  <xs:attribute name="window-height" type="xs:unsignedShort" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="started" type="xs:string" use="required" />
+      <xs:attribute name="stopped" type="xs:string" use="required" />
+      <xs:attribute name="duration" type="xs:time" use="required" />
+      <xs:attribute name="count-of-visited-pages" type="xs:unsignedByte" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

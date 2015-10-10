@@ -384,6 +384,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Schemata\experiment.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemata\participants.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemata\settings.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="UI\HTMLResources\fonts\fontawesome-webfont.eot">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
