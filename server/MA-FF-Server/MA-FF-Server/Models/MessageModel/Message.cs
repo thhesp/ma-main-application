@@ -13,28 +13,50 @@ using WebAnalyzer.Events;
 namespace WebAnalyzer.Models.MessageModel
 {
 
+    /// <summary>
+    /// Abstract parent class for all messages (incoming and outgoing)
+    /// </summary>
     abstract public class Message
     {
-
+        /// <summary>
+        /// Timestamp of the message
+        /// </summary>
+        /// <remarks>Most of the time it is the request timestamp of the gaze</remarks>
         private String _timestamp;
 
+        /// <summary>
+        /// Empty message constructor
+        /// </summary>
         public Message()
         {
 
         }
 
+        /// <summary>
+        /// Constructor with message timestamp
+        /// </summary>
+        /// <param name="timestamp">Message timestamp</param>
         public Message(String timestamp)
         {
             _timestamp = timestamp;
         }
 
 
+        /// <summary>
+        /// Getter / Setter for the message timestamp
+        /// </summary>
         public String Timestamp
         {
             get { return _timestamp; }
             set { _timestamp = value; }
         }
 
+        /// <summary>
+        /// Creates a message from JSON
+        /// </summary>
+        /// <param name="reader">The json reader</param>
+        /// <returns></returns>
+        /// <remarks>Used for receiving messages</remarks>
         public static Message FromJson(JsonTextReader reader)
         {
             String property = string.Empty;
@@ -79,14 +101,21 @@ namespace WebAnalyzer.Models.MessageModel
             return null;
         }
 
-        private static ConnectionMessage ConnectionMessageFromJson(ConnectionMessage.CONNECTION_MESSAGE_TYPE type, JsonTextReader reader){
+        /// <summary>
+        /// Creates a connection message from JSON
+        /// </summary>
+        /// <param name="type">Connection Message Type</param>
+        /// <param name="reader">Reference to the json reader</param>
+        /// <returns></returns>
+        private static ConnectionMessage ConnectionMessageFromJson(ConnectionMessage.CONNECTION_MESSAGE_TYPE type, JsonTextReader reader)
+        {
             //Logger.Log("connection message found!");
 
             if (type == ConnectionMessage.CONNECTION_MESSAGE_TYPE.REQUEST)
             {
                 return new ConnectionMessage(type);
             }
-            
+
 
             String property = string.Empty;
 
@@ -117,6 +146,12 @@ namespace WebAnalyzer.Models.MessageModel
             return msg;
         }
 
+        /// <summary>
+        /// Creates an activation message from JSON
+        /// </summary>
+        /// <param name="type">Activation Message Type</param>
+        /// <param name="reader">Reference to the json reader</param>
+        /// <returns></returns>
         private static ActivationMessage ActivationMessageFromJson(ActivationMessage.ACTIVATION_MESSAGE_TYPE type, JsonTextReader reader)
         {
             //Logger.Log("Activation message found!");
@@ -139,7 +174,7 @@ namespace WebAnalyzer.Models.MessageModel
 
                     if (property == "url" && reader.TokenType == JsonToken.String)
                     {
-                        msg.URL = reader.Value.ToString();                        
+                        msg.URL = reader.Value.ToString();
                     }
                     else if (property == "height" && reader.TokenType == JsonToken.Integer)
                     {
@@ -155,6 +190,11 @@ namespace WebAnalyzer.Models.MessageModel
             return msg;
         }
 
+        /// <summary>
+        /// Creates a error message from JSON
+        /// </summary>
+        /// <param name="reader">Reference to the json reader</param>
+        /// <returns></returns>
         private static ErrorMessage ErrorMessageFromJson(JsonTextReader reader)
         {
             //Logger.Log("Error message found!");
@@ -182,6 +222,11 @@ namespace WebAnalyzer.Models.MessageModel
             return null;
         }
 
+        /// <summary>
+        /// Creates a data message from JSON
+        /// </summary>
+        /// <param name="reader">Reference to the json reader</param>
+        /// <returns></returns>
         private static InDataMessage DataMessageFromJson(JsonTextReader reader)
         {
             String property = string.Empty;
@@ -324,6 +369,11 @@ namespace WebAnalyzer.Models.MessageModel
             return msg;
         }
 
+        /// <summary>
+        /// Extract attributes for HTML element from the JSON
+        /// </summary>
+        /// <param name="reader">Reference to the json reader</param>
+        /// <param name="element">Reference to the HTML Element representation</param>
         private static void ExtractAttributes(JsonTextReader reader, DOMElementModel element)
         {
 
@@ -395,6 +445,11 @@ namespace WebAnalyzer.Models.MessageModel
 
         }
 
+        /// <summary>
+        /// Extracts data about an HTML element
+        /// </summary>
+        /// <param name="reader">Reference to the json reader</param>
+        /// <param name="element">Element for which the data is extracted</param>
         private static void ExtractElementData(JsonTextReader reader, DOMElementModel element)
         {
             //@TODO: ERROR checking in complex message?
@@ -451,7 +506,8 @@ namespace WebAnalyzer.Models.MessageModel
                     else if (reader.TokenType == JsonToken.String && property == "tag")
                     {
                         element.Tag = reader.Value.ToString();
-                    } else if (reader.TokenType == JsonToken.String && property == "path")
+                    }
+                    else if (reader.TokenType == JsonToken.String && property == "path")
                     {
                         element.Path = reader.Value.ToString();
                     }
@@ -490,6 +546,11 @@ namespace WebAnalyzer.Models.MessageModel
             }
         }
 
+        /// <summary>
+        /// Creates an event message from JSON.
+        /// </summary>
+        /// <param name="reader">Reference to the json reader</param>
+        /// <returns></returns>
         private static EventMessage EventMessageFromJson(JsonTextReader reader)
         {
             //Logger.Log("event message found!");

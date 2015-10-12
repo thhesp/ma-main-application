@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace WebAnalyzer.Models.MessageModel
 {
+    /// <summary>
+    /// Model for the error messages
+    /// </summary>
     class ErrorMessage : Message
     {
 
@@ -16,13 +19,14 @@ namespace WebAnalyzer.Models.MessageModel
          * Message Data
          * 
          */
-
+        /// <summary>
+        /// Uniqueid of the message
+        /// </summary>
         private String _uniqueId;
 
-        public ErrorMessage()
-        {
-        }
-
+        /// <summary>
+        /// Getter / Setter for the unique id
+        /// </summary>
         public String UniqueID
         {
             get { return _uniqueId; }

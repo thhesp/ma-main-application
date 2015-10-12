@@ -10,19 +10,33 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.MessageModel
 {
+    /// <summary>
+    /// Abstract base class for event messages
+    /// </summary>
     public abstract class EventMessage : Message
     {
-
+        /// <summary>
+        /// URL of the webpage
+        /// </summary>
         protected String _url;
 
+        /// <summary>
+        /// Event Timestamp
+        /// </summary>
         protected String _eventTimestamp;
 
+        /// <summary>
+        /// Getter/ Setter for the webpage URL
+        /// </summary>
         public String URL
         {
             get { return _url; }
             set { _url = value; }
         }
 
+        /// <summary>
+        /// Getter / Setter for the event timestamp
+        /// </summary>
         public String EventTimestamp
         {
             get { return _eventTimestamp; }
@@ -35,6 +49,11 @@ namespace WebAnalyzer.Models.MessageModel
          * 
          */
 
+        /// <summary>
+        /// Creates a URLChangeEventMessage from a json reader
+        /// </summary>
+        /// <param name="reader">JSON Reader</param>
+        /// <returns></returns>
         public static URLChangeEventMessage URLChangeEventMessageFromJson(JsonTextReader reader)
         {
             //Logger.Log("URL Change message found!");
@@ -68,6 +87,12 @@ namespace WebAnalyzer.Models.MessageModel
             return msg;
         }
 
+
+        /// <summary>
+        /// Creates a ScrollEventMessage from a json reader
+        /// </summary>
+        /// <param name="reader">JSON Reader</param>
+        /// <returns></returns>
         public static ScrollEventMessage ScrollEventMessageFromJson(JsonTextReader reader)
         {
             //Logger.Log("Scroll event message found!");
@@ -105,6 +130,12 @@ namespace WebAnalyzer.Models.MessageModel
             return msg;
         }
 
+
+        /// <summary>
+        /// Creates a ResizeEventMessage from a json reader
+        /// </summary>
+        /// <param name="reader">JSON Reader</param>
+        /// <returns></returns>
         public static ResizeEventMessage ResizeEventMessageFromJson(JsonTextReader reader)
         {
             //Logger.Log("resize event message found!");
