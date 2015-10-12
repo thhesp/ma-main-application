@@ -43,7 +43,6 @@ namespace WebAnalyzer.Models.AlgorithmModel
         /// <returns>List of Saccades</returns>
         public List<SaccadeModel> ExtractSaccades(List<GazeModel> positions, String eye)
         {
-            Console.WriteLine("Extract saccades");
             List<SaccadeModel> saccades = new List<SaccadeModel>();
 
             if (positions.Count == 0)
@@ -134,7 +133,6 @@ namespace WebAnalyzer.Models.AlgorithmModel
         /// </remarks>
         private List<SaccadeModel> ExtractRealSaccades(List<GazeModel> gazes, String eye)
         {
-            Console.WriteLine("Extract real saccades");
             List<SaccadeModel> saccades = new List<SaccadeModel>();
 
             if (gazes.Count == 0)

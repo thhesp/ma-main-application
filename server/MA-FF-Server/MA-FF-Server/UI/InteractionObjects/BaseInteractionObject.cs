@@ -39,7 +39,7 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             //EvaluteJavaScript("alert('" + message + "');");
 
-            MessageBox.Show(message, "Ein Fehler ist aufgetragen");
+            MessageBox.Show(message, "Ein Fehler ist aufgetragen", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace WebAnalyzer.UI.InteractionObjects
         {
             //EvaluteJavaScript("alert('" + message + "');");
 
-            MessageBox.Show(message, title);
+            MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         /// <summary>
