@@ -14,37 +14,81 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.UI.InteractionObjects
 {
+    /// <summary>
+    /// Interaction object for representing the currently loaded experiment
+    /// </summary>
     public class ExperimentObject : BaseInteractionObject
     {
 
+        /// <summary>
+        /// Method used for triggering a save to xml
+        /// </summary>
         public event TriggerSaveEventHandler TriggerSave;
 
+        /// <summary>
+        /// Reference to the main UI
+        /// </summary>
         private HTMLUI _form;
 
+        /// <summary>
+        /// The different connection stati used for websocket connection and tracking component
+        /// </summary>
         public enum CONNECTION_STATUS { connected = 0, disconnected = 1, warning = 2 };
 
+
+        /// <summary>
+        /// Reference to the actual loaded experiment
+        /// </summary>
         private ExperimentModel _exp;
 
+        /// <summary>
+        /// Current status of the websocket connection
+        /// </summary>
         private CONNECTION_STATUS _wsConnection = CONNECTION_STATUS.disconnected;
 
+        /// <summary>
+        /// Current status of the tracking component
+        /// </summary>
         private CONNECTION_STATUS _trackingConnection = CONNECTION_STATUS.disconnected;
 
+        /// <summary>
+        /// Current connection count of the websocket server
+        /// </summary>
         private int _connectionCount = 0;
 
+        /// <summary>
+        /// timestamp for the last time the description was updated
+        /// </summary>
         private String _lastDescriptionUpdateTimestamp;
+
+        /// <summary>
+        /// timer which checks if the description needs to be saved again
+        /// </summary>
         private Boolean _saveTimer = false;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="form">Reference to the main ui window</param>
         public ExperimentObject(HTMLUI form)
         {
             _form = form;
         }
 
+        /// <summary>
+        /// Getter / Setter for the currently loaded experiment
+        /// </summary>
         public ExperimentModel Experiment
         {
             get { return _exp; }
             set { _exp = value; }
         }
 
+        /// <summary>
+        /// Returns the name of the current experiment
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>Called from javascript</remarks>
         public String getName()
         {
             if (_exp != null)
@@ -53,6 +97,11 @@ namespace WebAnalyzer.UI.InteractionObjects
             return null;
         }
 
+        /// <summary>
+        /// Returns the description of the current experiment
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>Called from javascript</remarks>
         public String getDescription()
         {
             if (_exp != null)
@@ -61,6 +110,12 @@ namespace WebAnalyzer.UI.InteractionObjects
             return null;
         }
 
+        /// <summary>
+        /// Updates the description of the experiment
+        /// </summary>
+        /// <param name="description">The new description</param>
+        /// <returns></returns>
+        /// <remarks>Called from javascript</remarks>
         public void updateDescription(String description)
         {
             _exp.Description = description;
@@ -69,6 +124,9 @@ namespace WebAnalyzer.UI.InteractionObjects
             checkSaveTimer();
         }
 
+        /// <summary>
+        /// Checks the save timer
+        /// </summary>
         private void checkSaveTimer()
         {
             if (!_saveTimer)
@@ -78,6 +136,9 @@ namespace WebAnalyzer.UI.InteractionObjects
             }
         }
 
+        /// <summary>
+        /// Creates the save timer
+        /// </summary>
         private void createSaveTimer()
         {
             int interval = Properties.Settings.Default.ExperimentDescriptionSaveTimeout;
@@ -101,6 +162,13 @@ namespace WebAnalyzer.UI.InteractionObjects
             });
         }
 
+        /// <summary>
+        /// Returns an array of participant identifiers
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>
+        /// Called from javascript
+        /// </remarks>
         public String[] participantArray()
         {
             if (_exp != null)
@@ -109,6 +177,13 @@ namespace WebAnalyzer.UI.InteractionObjects
             return null;
         }
 
+        /// <summary>
+        /// Returns an array of participant uids
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>
+        /// Called from javascript
+        /// </remarks>
         public String[] participantUIDs()
         {
             if (_exp != null)
@@ -117,6 +192,13 @@ namespace WebAnalyzer.UI.InteractionObjects
             return null;
         }
 
+        /// <summary>
+        /// Returns an array of domain setting identifiers
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>
+        /// Called from javascript
+        /// </remarks>
         public String[] domainSettingsArray()
         {
             if (_exp != null)
@@ -125,6 +207,13 @@ namespace WebAnalyzer.UI.InteractionObjects
             return null;
         }
 
+        /// <summary>
+        /// Returns an array of domain setting uids
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>
+        /// Called from javascript
+        /// </remarks>
         public String[] domainSettingUIDs()
         {
             if (_exp != null)
@@ -133,42 +222,76 @@ namespace WebAnalyzer.UI.InteractionObjects
             return null;
         }
 
+        /// <summary>
+        /// Returns the ws connection status as a string
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>Called from javascript</remarks>
         public String getWSConnectionStatus()
         {
             return _wsConnection.ToString();
         }
 
 
+        /// <summary>
+        /// Returns the tracking component status as a string
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>Called from javascript</remarks>
         public String getTrackingConnectionStatus()
         {
             return _trackingConnection.ToString();
         }
 
+        /// <summary>
+        /// Updates the status of the websocket connection
+        /// </summary>
+        /// <param name="status">The new status</param>
         public void SetWSConnectionStatus(CONNECTION_STATUS status)
         {
             _wsConnection = status;
         }
 
+        /// <summary>
+        /// Updates the status of the tracking component
+        /// </summary>
+        /// <param name="status">The new status</param>
         public void SetTrackingConnectionStatus(CONNECTION_STATUS status)
         {
             _trackingConnection = status;
         }
 
+        /// <summary>
+        /// Sets the websocket connection count
+        /// </summary>
+        /// <param name="count">The new count</param>
         public void SetWSConnectionCount(int count)
         {
             _connectionCount = count;
         }
 
+        /// <summary>
+        /// Returns the websocket connection count
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>Called from javascript</remarks>
         public int getConnectionCount()
         {
             return _connectionCount;
         }
 
+        /// <summary>
+        /// Refreshes the data in the browser
+        /// </summary>
         public void RefreshData()
         {
             EvaluteJavaScript("initialize();");
         }
 
+        /// <summary>
+        /// Called for importing a participant xml
+        /// </summary>
+        /// <remarks>Called from javascript</remarks>
         public void importParticipants()
         {
             Logger.Log("Import Participants");
@@ -211,6 +334,10 @@ namespace WebAnalyzer.UI.InteractionObjects
             }
         }
 
+        /// <summary>
+        /// Called for importing a experiment settings xml
+        /// </summary>
+        /// <remarks>Called from javascript</remarks>
         public void importExperimentSettings()
         {
             Logger.Log("Import Experimentsettings");
@@ -252,6 +379,10 @@ namespace WebAnalyzer.UI.InteractionObjects
             }
         }
 
+        /// <summary>
+        /// Called for exporting the participants
+        /// </summary>
+        /// <remarks>Called from javascript</remarks>
         public void exportParticipants()
         {
             Logger.Log("Export Participants");
@@ -267,6 +398,10 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         }
 
+        /// <summary>
+        /// Called for exporting the experiment settings
+        /// </summary>
+        /// <remarks>Called from javascript</remarks>
         public void exportExperimentSettings()
         {
             Logger.Log("Export Experimentsettings");
@@ -281,6 +416,11 @@ namespace WebAnalyzer.UI.InteractionObjects
             }
         }
 
+        /// <summary>
+        /// Dialog for loading a file
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>Used for importing participants and settings</remarks>
         private String loadFileDialog()
         {
             String filePath = "";
@@ -308,6 +448,11 @@ namespace WebAnalyzer.UI.InteractionObjects
             return filePath;
         }
 
+        /// <summary>
+        /// Dialog for saving a file
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>Used for exporting the settings and participants</remarks>
         private String saveFileDialog()
         {
             String filePath = "";

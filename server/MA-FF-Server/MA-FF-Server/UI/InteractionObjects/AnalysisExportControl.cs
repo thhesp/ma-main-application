@@ -18,43 +18,92 @@ using WebAnalyzer.Models.AlgorithmModel;
 
 namespace WebAnalyzer.UI.InteractionObjects
 {
+    /// <summary>
+    /// Interaction object for analysing and exporting testdata
+    /// </summary>
     public class AnalysisExportControl : BaseInteractionObject
     {
 
+        /// <summary>
+        /// Reference to the main ui of the application
+        /// </summary>
         private HTMLUI _form;
 
+        /// <summary>
+        /// Reference to the currently loaded experiment
+        /// </summary>
         private ExperimentModel _exp;
 
+        /// <summary>
+        /// Reference to the selected participant
+        /// </summary>
         private ExperimentParticipant _participant;
 
+        /// <summary>
+        /// Folderpath to save the data to
+        /// </summary>
         private String _folderPath;
 
+        /// <summary>
+        /// Reference to the selected testrun
+        /// </summary>
         private TestModel _testrun;
 
+        /// <summary>
+        /// Filename to use as a base when saving
+        /// </summary>
         private String _filename;
 
+        /// <summary>
+        /// Selected Exportformat
+        /// </summary>
         private ExportController.EXPORT_FORMATS _exportFormat;
 
+        /// <summary>
+        /// Selected algorithm type
+        /// </summary>
+        /// <remarks>Only used when analysing data</remarks>
         private Algorithm.ALGORITHM_TYPES _algorithmType;
 
+        /// <summary>
+        /// Shall data about each gaze be added
+        /// </summary>
+        /// <remarks>ONly used when analysing data</remarks>
         private Boolean _containGazeData = false;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="form">Reference to the main UI</param>
         public AnalysisExportControl(HTMLUI form)
         {
             _form = form;
         }
 
+        /// <summary>
+        /// Getter / Setter for the currently loaded experiment
+        /// </summary>
         public ExperimentModel Experiment
         {
             get { return _exp; }
             set { _exp = value; }
         }
 
+        /// <summary>
+        /// Method to set the filename
+        /// </summary>
+        /// <param name="filename">The new filename</param>
+        /// <remarks>Called from Javascript</remarks>
         public void setFilename(String filename)
         {
             _filename = filename;
         }
 
+        /// <summary>
+        /// Sets the export format
+        /// </summary>
+        /// <param name="format">The new format</param>
+        /// <remarks>Called from javascript</remarks>
         public void setExportFormat(String format)
         {
             _exportFormat = (ExportController.EXPORT_FORMATS) Enum.Parse(typeof(ExportController.EXPORT_FORMATS), format, true);
@@ -65,9 +114,14 @@ namespace WebAnalyzer.UI.InteractionObjects
             }
         }
 
-        public void setAlgorithmType(String format)
+        /// <summary>
+        /// Used for updating the algorithm type
+        /// </summary>
+        /// <param name="algorithmType">new algorithm type</param>
+        /// <remarks>Called from javascript</remarks>
+        public void setAlgorithmType(String algorithmType)
         {
-            switch (format)
+            switch (algorithmType)
             {
                 case "distance":
                     _algorithmType = Algorithm.ALGORITHM_TYPES.DISTANCE;
@@ -78,11 +132,20 @@ namespace WebAnalyzer.UI.InteractionObjects
             }
         }
 
+        /// <summary>
+        /// Sets if gaze data shall be included for each gaze
+        /// </summary>
+        /// <param name="containGazeData"></param>
+        /// <remarks>Called from javascript</remarks>
         public void setContainGazeData(Boolean containGazeData)
         {
             _containGazeData = containGazeData;
         }
 
+        /// <summary>
+        /// Used for starting the export
+        /// </summary>
+        /// <remarks>Called from javascript</remarks>
         public void export()
         {
             Boolean errorWhileExporting = false;
@@ -153,6 +216,10 @@ namespace WebAnalyzer.UI.InteractionObjects
             }
         }
 
+        /// <summary>
+        /// Used for starting the analysis
+        /// </summary>
+        /// <remarks>Called from javascript</remarks>
         public void analyse()
         {
             ShowSaveIndicator();
@@ -174,6 +241,9 @@ namespace WebAnalyzer.UI.InteractionObjects
             }
         }
 
+        /// <summary>
+        /// Extracts the data which is needed for the algorithm from the HTML.
+        /// </summary>
         private void extractAlgorithmData()
         {
             switch (_algorithmType)
@@ -187,6 +257,10 @@ namespace WebAnalyzer.UI.InteractionObjects
             }
         }
 
+        /// <summary>
+        /// Used for selecting a participant
+        /// </summary>
+        /// <remarks>Called from javascript</remarks>
         public void selectParticipant()
         {
             _form.BeginInvoke((Action)delegate
@@ -203,6 +277,10 @@ namespace WebAnalyzer.UI.InteractionObjects
             });
         }
 
+        /// <summary>
+        /// Used for selecting a testrun
+        /// </summary>
+        /// <remarks>Called from javascript</remarks>
         public void selectTestrun()
         {
             _form.BeginInvoke((Action)delegate
@@ -219,6 +297,10 @@ namespace WebAnalyzer.UI.InteractionObjects
             });
         }
 
+        /// <summary>
+        /// Used for selecting a folder
+        /// </summary>
+        /// <remarks>Called from javascript</remarks>
         public void selectFolder()
         {
             _folderPath = @SelectFolderDialog();
@@ -227,6 +309,10 @@ namespace WebAnalyzer.UI.InteractionObjects
             this.EvaluteJavaScript("setFolderPath('" + _folderPath + "');");
         }
 
+        /// <summary>
+        /// Creates a select folder dialog.
+        /// </summary>
+        /// <returns></returns>
         private String SelectFolderDialog()
         {
             // done in a new thread (kinda is a hack) because of the STAThread problem.
@@ -253,6 +339,11 @@ namespace WebAnalyzer.UI.InteractionObjects
             return selectedPath;
         }
 
+        /// <summary>
+        /// Callback when a participant was selected
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="e"></param>
         private void On_SelectParticipant(object source, SelectParticipantForTestEvent e)
         {
             Logger.Log("Selected Participant " + e.UID);
@@ -262,6 +353,11 @@ namespace WebAnalyzer.UI.InteractionObjects
             this.EvaluteJavaScript("setParticipant('"+_participant.Identifier+"');");
         }
 
+        /// <summary>
+        /// Callback when a testrun was selected
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="e"></param>
         private void On_SelectTestrun(object source, SelectTestrunToLoadEvent e)
         {
             Logger.Log("Selected Testrun " + e.Path);
@@ -282,6 +378,9 @@ namespace WebAnalyzer.UI.InteractionObjects
             
         }
 
+        /// <summary>
+        /// Shows the saving indicator
+        /// </summary>
         public void ShowSaveIndicator()
         {
             Logger.Log("show save indicator");
@@ -289,12 +388,19 @@ namespace WebAnalyzer.UI.InteractionObjects
 
         }
 
+        /// <summary>
+        /// Hides the saving indicator
+        /// </summary>
         public void HideSaveIndicator()
         {
             Logger.Log("hide save indicator");
             EvaluteJavaScript("hideSaveIndicator();");
         }
 
+        /// <summary>
+        /// Exports the analysed data
+        /// </summary>
+        /// <param name="algorithm">For the analysis used algorithm</param>
         private void ExportData(Algorithm algorithm)
         {
             Boolean errorWhileExporting = false;
@@ -328,6 +434,12 @@ namespace WebAnalyzer.UI.InteractionObjects
             }
         }
 
+        /// <summary>
+        /// Method for the distance algorithm
+        /// </summary>
+        /// <param name="minimumDuration">The minimumduration</param>
+        /// <param name="acceptableDeviation">The acceptable deviation</param>
+        /// <remarks>Called from javascript</remarks>
         public void useDistanceAlgorithm(double minimumDuration, double acceptableDeviation)
         {
             Logger.Log("Use minimumDuration: " + minimumDuration);
@@ -343,6 +455,9 @@ namespace WebAnalyzer.UI.InteractionObjects
             ExportData(algorithm);
         }
 
+        /// <summary>
+        /// Use the iview events
+        /// </summary>
         private void useIViewEvents()
         {
             Logger.Log("Loading RawData.. ");
