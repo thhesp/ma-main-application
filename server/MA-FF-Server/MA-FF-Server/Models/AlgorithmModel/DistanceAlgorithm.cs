@@ -10,24 +10,44 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.AlgorithmModel
 {
+    /// <summary>
+    /// Algorithm which calculates the distance between the gazes and generates fixations based on these distances and a minimum duration
+    /// </summary>
     public class DistanceAlgorithm : Algorithm
     {
-
+        /// <summary>
+        /// Minimum duration of a fixation
+        /// </summary>
         private double _minimumDuration;
         
+        /// <summary>
+        /// Accecptable deviations between the coordinates
+        /// </summary>
         private double _acceptableDeviations;
 
+        /// <summary>
+        /// Getter/Setter for the Minimum duration
+        /// </summary>
         public Double MinimumDuration{
             get{ return _minimumDuration; }
             set {_minimumDuration = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the acceptable deviation
+        /// </summary>
         public Double AccetableDeviations
         {
             get { return _acceptableDeviations; }
             set { _acceptableDeviations = value; }
         }
 
+        /// <summary>
+        /// Extracts all fixations from the given list of positions
+        /// </summary>
+        /// <param name="positions">List of all gazes for this testrun</param>
+        /// <param name="eye">String identifier for the eye</param>
+        /// <returns>List of Fixations</returns>
         public override List<FixationModel> ExtractFixation(List<GazeModel> positions, String eye)
         {
             List<FixationModel> fixations = new List<FixationModel>();
@@ -131,6 +151,11 @@ namespace WebAnalyzer.Models.AlgorithmModel
             return fixations;
         }
 
+        /// <summary>
+        /// Returns an xml representation of the algorithm
+        /// </summary>
+        /// <param name="xmlDoc">The XML Document which will contain the xml</param>
+        /// <returns>XMLNode which contains the representation of the algorithm</returns>
         public override XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode algorithm = xmlDoc.CreateElement("distance");

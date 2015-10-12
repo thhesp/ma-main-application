@@ -9,38 +9,72 @@ using System.Xml;
 
 namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
 {
+    /// <summary>
+    /// Value node
+    /// </summary>
+    /// <remarks>
+    /// Always at the leafes of the rule tree.
+    /// </remarks>
     public class ValueNode : Node
     {
-
+        /// <summary>
+        /// The different value types.
+        /// </summary>
         public enum VALUE_TYPES { Tag, Class, ID };
 
+        /// <summary>
+        /// the value of the node
+        /// </summary>
         private String _value;
+
+        /// <summary>
+        /// The value type of the node
+        /// </summary>
         private VALUE_TYPES _valueType;
 
+        /// <summary>
+        /// Empty Constructor for loading from xml
+        /// </summary>
         public ValueNode()
             : base(Node.NODE_TYPES.VALUE)
         {
 
         }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="valueType">Type of the node</param>
+        /// <param name="value">Value of the node</param>
         public ValueNode(VALUE_TYPES valueType, String value) : base(Node.NODE_TYPES.VALUE)
         {
             _valueType = valueType;
             _value = value;
         }
 
+        /// <summary>
+        /// Getter/ Setter for the value of the node
+        /// </summary>
         public String Value
         {
             get { return _value; }
             set { _value = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the value type of the node
+        /// </summary>
         public VALUE_TYPES ValueType
         {
             get { return _valueType; }
             set { _valueType = value; }
         }
 
+        /// <summary>
+        /// Method for evaluating if the element fits the node rule
+        /// </summary>
+        /// <param name="el">Element to check</param>
+        /// <returns></returns>
         public override bool Evaluate(DOMElementModel el)
         {
             String loweredValue = Value.ToLower();
@@ -60,6 +94,11 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             return false;
         }
 
+        /// <summary>
+        /// Method for evaluating case sensitive if the element fits the node rule
+        /// </summary>
+        /// <param name="el">Element to check</param>
+        /// <returns></returns>
         public override bool EvaluateCaseSensitive(DOMElementModel el)
         {
             if (VALUE_TYPES.Tag == ValueType)
@@ -78,6 +117,11 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             return false;
         }
 
+        /// <summary>
+        /// Creates an xml representation of the object
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns></returns>
         public override XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode node = xmlDoc.CreateElement("node");
@@ -103,6 +147,11 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             return node;
         }
 
+        /// <summary>
+        /// Creates an object from XML
+        /// </summary>
+        /// <param name="nodeNode">The node which contains the data</param>
+        /// <returns>The loaded object</returns>
         public static new ValueNode LoadFromXML(XmlNode nodeNode)
         {
 
@@ -124,7 +173,11 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             return node;
         }
 
-
+        /// <summary>
+        /// Creates a copy of the given value node
+        /// </summary>
+        /// <param name="orig">value node to copy</param>
+        /// <returns></returns>
         public static ValueNode Copy(ValueNode orig)
         {
             ValueNode copy = new ValueNode();

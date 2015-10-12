@@ -9,56 +9,101 @@ using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.Models.DataModel
 {
+    /// <summary>
+    /// Class for the eyetracking data
+    /// </summary>
     public class EyeTrackingData : BaseTrackingData
     {
-
+        /// <summary>
+        /// Diameter of the eye
+        /// </summary>
         private double _diameter;
 
+        /// <summary>
+        /// eye position x
+        /// </summary>
         private double _eyePostionX;
+
+        /// <summary>
+        /// eye position y
+        /// </summary>
         private double _eyePostionY;
+
+        /// <summary>
+        /// eye position z
+        /// </summary>
         private double _eyePostionZ;
 
+        /// <summary>
+        /// Constructor for loading from xml
+        /// </summary>
         public EyeTrackingData() : base()
         {
 
         }
 
+        /// <summary>
+        /// Constructor with x and y coordinates
+        /// </summary>
+        /// <param name="x">X coordinate</param>
+        /// <param name="y">Y coordinate</param>
         public EyeTrackingData(double x, double y) : base(x,y)
         {
         }
 
+        /// <summary>
+        /// Constructor with x and y coordinates and the callback timestamp
+        /// </summary>
+        /// <param name="x">X coordinate</param>
+        /// <param name="y">Y coordinate</param>
+        /// <param name="callbackTimestamp">Callback timestamp</param>
         public EyeTrackingData(double x, double y, String callbackTimestamp)
             : base(x, y, callbackTimestamp)
         {
             
         }
 
+        /// <summary>
+        /// Getter/ Setter for the eye diameter
+        /// </summary>
         public Double Diameter
         {
             get { return _diameter; }
             set { _diameter = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the x position of the eye
+        /// </summary>
         public Double EyePositionX
         {
             get { return _eyePostionX; }
             set { _eyePostionX = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the y position of the eye
+        /// </summary>
         public Double EyePositionY
         {
             get { return _eyePostionY; }
             set { _eyePostionY = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the z position of the eye
+        /// </summary>
         public Double EyePositionZ
         {
             get { return _eyePostionZ; }
             set { _eyePostionZ = value; }
         }
 
-        #region XMLFunctions
-
+        /// <summary>
+        /// Creates an xml representation of the object
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns></returns>
         public override XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode eyetrackingDataNode = xmlDoc.CreateElement("eyetracking-data");
@@ -118,6 +163,11 @@ namespace WebAnalyzer.Models.DataModel
             return eyetrackingDataNode;
         }
 
+        /// <summary>
+        /// Creates an object from XML
+        /// </summary>
+        /// <param name="etNode">The node which contains the data</param>
+        /// <returns>The loaded object</returns>
         public static EyeTrackingData LoadFromXML(XmlNode etNode)
         {
             if (etNode.Name == "eyetracking-data")
@@ -160,6 +210,5 @@ namespace WebAnalyzer.Models.DataModel
 
             return null;
         }
-        #endregion
     }
 }

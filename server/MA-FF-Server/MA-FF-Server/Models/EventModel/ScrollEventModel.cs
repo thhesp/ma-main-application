@@ -9,11 +9,27 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.EventModel
 {
+    /// <summary>
+    /// Class for representing browser scroll events
+    /// </summary>
     public class ScrollEventModel : BaseEventModel
     {
+        /// <summary>
+        /// X value of the scroll event
+        /// </summary>
         private int _scrollX;
+
+        /// <summary>
+        /// Y value of the scroll event
+        /// </summary>
         private int _scrollY;
 
+        /// <summary>
+        /// Constructor 
+        /// </summary>
+        /// <param name="scrollX">X Value</param>
+        /// <param name="scrollY">Y Value</param>
+        /// <param name="serverReceivedTimestamp">Timestamp when the server received the data</param>
         public ScrollEventModel(int scrollX, int scrollY, String serverReceivedTimestamp)
         {
             _scrollX = scrollX;
@@ -21,24 +37,37 @@ namespace WebAnalyzer.Models.EventModel
             _serverReceivedTimestamp = serverReceivedTimestamp;
         }
 
+        /// <summary>
+        /// Empty constructor for loading from the xml
+        /// </summary>
         public ScrollEventModel()
         {
 
         }
 
+        /// <summary>
+        /// Getter/ Setter for the X Value of the scroll event
+        /// </summary>
         public int ScrollX
         {
             get { return _scrollX; }
             set { _scrollX = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the Y Value of the scroll event
+        /// </summary>
         public int ScrollY
         {
             get { return _scrollY; }
             set { _scrollY = value; }
         }
 
-
+        /// <summary>
+        /// Creates an xml representation of the object
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns></returns>
         public override XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode resizeEventNode = xmlDoc.CreateElement("scroll-event");
@@ -78,6 +107,11 @@ namespace WebAnalyzer.Models.EventModel
             return resizeEventNode;
         }
 
+        /// <summary>
+        /// Creates an object from XML
+        /// </summary>
+        /// <param name="eventNode">The node which contains the data</param>
+        /// <returns>The loaded object</returns>
         public static ScrollEventModel LoadFromXML(XmlNode eventNode)
         {
             if (eventNode.Name == "scroll-event")

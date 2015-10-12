@@ -9,26 +9,45 @@ using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.Models.DataModel
 {
+    /// <summary>
+    /// Class for mousetracking data
+    /// </summary>
     public class MouseTrackingData : BaseTrackingData
     {
-
+        /// <summary>
+        /// Constructor for loading from xml
+        /// </summary>
         public MouseTrackingData() : base()
         {
 
         }
 
+        /// <summary>
+        /// Constructor with x and y coordinates
+        /// </summary>
+        /// <param name="x">X coordinate</param>
+        /// <param name="y">Y coordinate</param>
         public MouseTrackingData(double x, double y) : base(x,y)
         {
         }
 
+        /// <summary>
+        /// Constructor with x and y coordinates and the callback timestamp
+        /// </summary>
+        /// <param name="x">X coordinate</param>
+        /// <param name="y">Y coordinate</param>
+        /// <param name="callbackTimestamp">Callback timestamp</param>
         public MouseTrackingData(double x, double y, String callbackTimestamp)
             : base(x, y, callbackTimestamp)
         {
             
         }
 
-        #region XMLFunctions
-
+        /// <summary>
+        /// Creates an xml representation of the object
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns></returns>
         public override XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode eyetrackingDataNode = xmlDoc.CreateElement("mousetracking-data");
@@ -60,6 +79,11 @@ namespace WebAnalyzer.Models.DataModel
             return eyetrackingDataNode;
         }
 
+        /// <summary>
+        /// Creates an object from XML
+        /// </summary>
+        /// <param name="etNode">The node which contains the data</param>
+        /// <returns>The loaded object</returns>
         public static MouseTrackingData LoadFromXML(XmlNode etNode)
         {
             if (etNode.Name == "mousetracking-data")
@@ -90,6 +114,5 @@ namespace WebAnalyzer.Models.DataModel
 
             return null;
         }
-        #endregion
     }
 }

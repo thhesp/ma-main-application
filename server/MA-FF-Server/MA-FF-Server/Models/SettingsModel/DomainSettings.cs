@@ -11,44 +11,78 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.SettingsModel
 {
+    /// <summary>
+    /// Class which represents all settings for the domain
+    /// </summary>
     public class DomainSettings : UIDBase
     {
-
+        /// <summary>
+        /// The domain for this setting
+        /// </summary>
         private String _domain;
 
+        /// <summary>
+        /// Should the settings include subdomains
+        /// </summary>
         private Boolean _includesSubdomains;
 
+        /// <summary>
+        /// List of aoi settings
+        /// </summary>
         private List<AOISettings> _aois = new List<AOISettings>();
 
+        /// <summary>
+        /// Empty Constructor used for loading from xml
+        /// </summary>
         public DomainSettings()
             : base()
         {
 
         }
 
+        /// <summary>
+        /// Getter/ Setter for the domain
+        /// </summary>
         public String Domain
         {
             get { return _domain; }
             set { _domain = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter if subdomains are including or not
+        /// </summary>
         public Boolean IncludesSubdomains
         {
             get { return _includesSubdomains; }
             set { _includesSubdomains = value; }
         }
 
+        /// <summary>
+        /// Constructor for the domain setting
+        /// </summary>
+        /// <param name="domain">The domain</param>
         public DomainSettings(String domain)
         {
             _domain = domain;
         }
 
+        /// <summary>
+        /// Getter/ Setter for the list of aois
+        /// </summary>
         public List<AOISettings> AOIS
         {
             get { return _aois; }
             set { _aois = value; }
         }
 
+        /// <summary>
+        /// Creates an array of aoi identifiers
+        /// </summary>
+        /// <returns>Array of aoi identifiers</returns>
+        /// <remarks>
+        /// Used for the displaying of the domains in the ui
+        /// </remarks>
         public String[] GetAOIIdentifiers()
         {
             String[] aoiIdentifiers = new String[AOIS.Count];
@@ -61,6 +95,13 @@ namespace WebAnalyzer.Models.SettingsModel
             return aoiIdentifiers;
         }
 
+        /// <summary>
+        /// Creates an array of aoi uids
+        /// </summary>
+        /// <returns>Array of aoi uids</returns>
+        /// <remarks>
+        /// Used for the displaying of the domains in the ui
+        /// </remarks>
         public String[] GetAOIUIDs()
         {
             String[] aoiUID = new String[AOIS.Count];
@@ -73,6 +114,11 @@ namespace WebAnalyzer.Models.SettingsModel
             return aoiUID;
         }
 
+        /// <summary>
+        /// Returns the aoi setting for the given uid
+        /// </summary>
+        /// <param name="uid">UID of the aoi setting</param>
+        /// <returns></returns>
         public AOISettings GetAOISettingByUid(String uid)
         {
             foreach (AOISettings setting in AOIS)
@@ -87,21 +133,38 @@ namespace WebAnalyzer.Models.SettingsModel
             return null;
         }
 
+        /// <summary>
+        /// Returns the list of aois settings
+        /// </summary>
+        /// <returns></returns>
         public List<AOISettings> GetAOIs()
         {
             return _aois;
         }
 
+        /// <summary>
+        /// Adds the given aoi setting
+        /// </summary>
+        /// <param name="aoi">AOI setting to add</param>
         public void AddAOI(AOISettings aoi)
         {
             _aois.Add(aoi);
         }
 
+        /// <summary>
+        /// Deletes the given aoi setting
+        /// </summary>
+        /// <param name="aoi">AOI Setting to delete</param>
         public void DeleteRule(AOISettings aoi)
         {
             _aois.Remove(aoi);
         }
 
+        /// <summary>
+        /// Checks if the url fits the setting data
+        /// </summary>
+        /// <param name="url">URL to check</param>
+        /// <returns></returns>
         public Boolean URLFitsSetting(String url)
         {
             try
@@ -142,6 +205,11 @@ namespace WebAnalyzer.Models.SettingsModel
             return false;
         }
 
+        /// <summary>
+        /// Returns the aois for the given element
+        /// </summary>
+        /// <param name="el">Element to check</param>
+        /// <returns></returns>
         public String[] GetFittingAOIs(DOMElementModel el)
         {
             List<String> aois = new List<String>();
@@ -156,6 +224,11 @@ namespace WebAnalyzer.Models.SettingsModel
             return aois.ToArray<String>();
         }
 
+        /// <summary>
+        /// Creates an xml representation of the object
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns></returns>
         public XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode domain = xmlDoc.CreateElement("domain-setting");
@@ -181,6 +254,11 @@ namespace WebAnalyzer.Models.SettingsModel
             return domain;
         }
 
+        /// <summary>
+        /// Creates an object from XML
+        /// </summary>
+        /// <param name="domainNode">The node which contains the data</param>
+        /// <returns>The loaded object</returns>
         public static DomainSettings LoadFromXML(XmlNode domainNode)
         {
 
@@ -212,6 +290,11 @@ namespace WebAnalyzer.Models.SettingsModel
             return domain;
         }
 
+        /// <summary>
+        /// Creates a copy of the given domain setting
+        /// </summary>
+        /// <param name="orig">Domain setting to copy</param>
+        /// <returns></returns>
         public static DomainSettings Copy(DomainSettings orig)
         {
             DomainSettings copy = new DomainSettings();

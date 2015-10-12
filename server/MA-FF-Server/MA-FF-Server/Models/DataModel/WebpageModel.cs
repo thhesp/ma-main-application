@@ -13,30 +13,74 @@ using WebAnalyzer.Models.EventModel;
 
 namespace WebAnalyzer.Models.DataModel
 {
+    /// <summary>
+    /// Model for representing a visit of a webpage
+    /// </summary>
     public class WebpageModel
     {
-
+        /// <summary>
+        /// Url of th page
+        /// </summary>
         private String _url;
 
+        /// <summary>
+        /// width of the window on page visit
+        /// </summary>
         private int _windowWidth = 0;
+
+        /// <summary>
+        /// height of the window on page visit
+        /// </summary>
         private int _windowHeight = 0;
 
+        /// <summary>
+        /// UID of the websocket connection on which the data was received
+        /// </summary>
         private String _connectionUID;
 
+        /// <summary>
+        /// Timestamp on which the webpage was visited
+        /// </summary>
         private String _visitTimestamp;
 
+        /// <summary>
+        /// Data about all gazes
+        /// </summary>
         private List<GazeModel> _positionData = new List<GazeModel>();
 
+        /// <summary>
+        /// Data about all webpage events
+        /// </summary>
         private List<BaseEventModel> _eventData = new List<BaseEventModel>();
 
         /* Fixations */
+        /// <summary>
+        /// Fixations for the left eye
+        /// </summary>
         private List<FixationModel> _leftFixationData = new List<FixationModel>();
+
+        /// <summary>
+        /// Fixations for the right eye
+        /// </summary>
         private List<FixationModel> _rightFixationData = new List<FixationModel>();
 
         /* Saccades */
+        /// <summary>
+        /// Saccades for the left eye
+        /// </summary>
         private List<SaccadeModel> _leftSaccadesData = new List<SaccadeModel>();
+
+        /// <summary>
+        /// Saccades for the right eye
+        /// </summary>
         private List<SaccadeModel> _rightSaccadesnData = new List<SaccadeModel>();
 
+        /// <summary>
+        /// Constructor for the webpage
+        /// </summary>
+        /// <param name="url">URL of the webpage</param>
+        /// <param name="connectionUID">UID of the websocket connection which received the data</param>
+        /// <param name="visitTimestamp">Timestamp on which the webpage was visited</param>
         public WebpageModel(String url, String connectionUID, String visitTimestamp)
         {
             _url = url;
@@ -44,73 +88,107 @@ namespace WebAnalyzer.Models.DataModel
             _connectionUID = connectionUID;
         }
 
+        /// <summary>
+        /// Constructor used for loading from xml
+        /// </summary>
         public WebpageModel()
         {
 
         }
 
-        #region GetterSetterFunctions
-
+        /// <summary>
+        /// Getter/ Setter for the Url of the webpage
+        /// </summary>
         public String Url
         {
             get { return _url; }
             set { _url = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the UID of the websocket connection which receives the data
+        /// </summary>
         public String ConnectionUID
         {
             get { return _connectionUID; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the Timestamp on which the webpage was visited
+        /// </summary>
         public String VisitTimestamp
         {
             get { return _visitTimestamp; }
             set { _visitTimestamp = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the Width of the browser window
+        /// </summary>
         public int WindowWidth
         {
             get { return _windowWidth; }
             set { _windowWidth = value; }
         }
 
+
+        /// <summary>
+        /// Getter/ Setter for the Height of the browser window
+        /// </summary>
         public int WindowHeight
         {
             get { return _windowHeight; }
             set { _windowHeight = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the gazes of this webpage
+        /// </summary>
         public List<GazeModel> Gazes
         {
             get { return _positionData; }
         }
 
+        /// <summary>
+        ///Getter/ Setter for the events of this webpage
+        /// </summary>
         public List<BaseEventModel> Events
         {
             get { return _eventData; }
         }
 
+        /// <summary>
+        /// Add gaze to this webpage
+        /// </summary>
+        /// <param name="data">Gaze to add</param>
         public void AddGazeData(GazeModel data)
         {
             _positionData.Add(data);
         }
 
+        /// <summary>
+        /// Getter/ Setter for the fixations of the left eye
+        /// </summary>
         public List<FixationModel> LeftFixationData
         {
             get { return _leftFixationData; }
             set { _leftFixationData = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the fixations of the right eye
+        /// </summary>
         public List<FixationModel> RightFixationData
         {
             get { return _rightFixationData; }
             set { _rightFixationData = value; }
         }
 
-        #endregion
-
-        #region XMLFunctions
-
+        /// <summary>
+        /// Creates an xml representation of the object
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns></returns>
         public XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode webpageNode = xmlDoc.CreateElement("webpage");
@@ -166,6 +244,11 @@ namespace WebAnalyzer.Models.DataModel
             return webpageNode;
         }
 
+        /// <summary>
+        /// Creates an object from XML
+        /// </summary>
+        /// <param name="webpageNode">The node which contains the data</param>
+        /// <returns>The loaded object</returns>
         public static WebpageModel LoadFromXML(XmlNode webpageNode)
         {
             if (webpageNode.Name == "webpage")
@@ -228,6 +311,12 @@ namespace WebAnalyzer.Models.DataModel
             return null;
         }
 
+        /// <summary>
+        /// Generates a statistics xml for the webpage
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <param name="includeSingleGazeData">Should the xml contain data about each gaze</param>
+        /// <returns></returns>
         public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode webpageNode = xmlDoc.CreateElement("webpage");
@@ -269,6 +358,11 @@ namespace WebAnalyzer.Models.DataModel
             return webpageNode;
         }
 
+        /// <summary>
+        /// Generates the statistics on a webpage level
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns></returns>
         private XmlNode CreateWebpageStatistics(XmlDocument xmlDoc)
         {
             // sum of statistics?
@@ -296,6 +390,12 @@ namespace WebAnalyzer.Models.DataModel
             return statsNode;
         }
 
+        /// <summary>
+        /// Generates the statistics for the given array
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <param name="node">Node in which data shall be inserted</param>
+        /// <param name="array">Array with data which shall be analysed</param>
         private void InsertArrayStatistics(XmlDocument xmlDoc, XmlNode node, long[] array)
         {
             XmlAttribute mean = xmlDoc.CreateAttribute("mean");
@@ -325,6 +425,12 @@ namespace WebAnalyzer.Models.DataModel
 
         }
 
+        /// <summary>
+        /// Generates fixation xml
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <param name="includeSingleGazeData">Shall the xml contain data about each single gaze</param>
+        /// <returns></returns>
         public XmlNode GenerateFixationXML(XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode webpageNode = xmlDoc.CreateElement("webpage");
@@ -394,6 +500,13 @@ namespace WebAnalyzer.Models.DataModel
             return webpageNode;
         }
 
+        /// <summary>
+        /// Generates aoi xml
+        /// </summary>
+        /// <param name="settings">Settings to be used for the generation</param>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <param name="includeSingleGazeData">Shall the xml contain data about each single gaze</param>
+        /// <returns></returns>
         public XmlNode GenerateAOIXML(ExperimentSettings settings, XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode webpageNode = xmlDoc.CreateElement("webpage");
@@ -481,6 +594,12 @@ namespace WebAnalyzer.Models.DataModel
             return webpageNode;
         }
 
+        /// <summary>
+        /// Generates saccades xml
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <param name="includeSingleGazeData">Shall the xml contain data about each single gaze</param>
+        /// <returns></returns>
         public XmlNode GenerateSaccadesXML(XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode webpageNode = xmlDoc.CreateElement("webpage");
@@ -550,11 +669,10 @@ namespace WebAnalyzer.Models.DataModel
             return webpageNode;
         }
 
-        #endregion
-
-
-        #region FixationFunctions
-
+        /// <summary>
+        /// Method for extracting fixations and saccades
+        /// </summary>
+        /// <param name="algorithm">The algorithm to use for the extraction</param>
         public void ExtractFixationsAndSaccades(Algorithm algorithm)
         {
             _leftFixationData = algorithm.ExtractFixation(_positionData, "left");
@@ -569,7 +687,5 @@ namespace WebAnalyzer.Models.DataModel
             Logger.Log("Count of left eye saccades: " + _leftSaccadesData.Count);
             Logger.Log("Count of right eye saccades: " + _rightSaccadesnData.Count);
         }
-
-        #endregion
     }
 }

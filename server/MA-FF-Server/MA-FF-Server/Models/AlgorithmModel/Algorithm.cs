@@ -10,14 +10,37 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.AlgorithmModel
 {
+    /// <summary>
+    /// Abstract base class for all algorithms
+    /// </summary>
     public abstract class Algorithm
     {
+        /// <summary>
+        /// Enumeration of all implemented algorithms
+        /// </summary>
         public enum ALGORITHM_TYPES { DISTANCE, IVIEW_EVENTS };
 
+        /// <summary>
+        /// Abstract base for the ExtractFixation Method
+        /// </summary>
+        /// <param name="positions">List of all gazes for this testrun</param>
+        /// <param name="eye">String identifier for the eye</param>
+        /// <returns>List of Fixations</returns>
         public abstract List<FixationModel> ExtractFixation(List<GazeModel> positions, String eye);
 
+        /// <summary>
+        /// Method for creating an xml representation of the algorithm
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns>XMLNode which contains the information about the algorithm</returns>
         public abstract XmlNode ToXML(XmlDocument xmlDoc);
 
+        /// <summary>
+        /// Method which extracts all saccades
+        /// </summary>
+        /// <param name="positions">List of all gazes for this testrun</param>
+        /// <param name="eye">String identifier for the eye</param>
+        /// <returns>List of Saccades</returns>
         public List<SaccadeModel> ExtractSaccades(List<GazeModel> positions, String eye)
         {
             List<SaccadeModel> saccades = new List<SaccadeModel>();
@@ -93,6 +116,15 @@ namespace WebAnalyzer.Models.AlgorithmModel
             return saccades;
         }
 
+        /// <summary>
+        /// Intern Method which extracts the real saccades for a subset of all gazes.
+        /// </summary>
+        /// <param name="gazes">List of gazes between to fixations</param>
+        /// <param name="eye">String identifier for the eye</param>
+        /// <returns>List of Saccades</returns>
+        /// <remarks>
+        /// Uses the vector of the saccades to determine which gazes contain to the same saccade and which don't.
+        /// </remarks>
         private List<SaccadeModel> ExtractRealSaccades(List<GazeModel> gazes, String eye)
         {
             List<SaccadeModel> saccades = new List<SaccadeModel>();
@@ -204,6 +236,13 @@ namespace WebAnalyzer.Models.AlgorithmModel
             return saccades;
         }
 
+        /// <summary>
+        /// Calculates the vector between to gazes for the given eye
+        /// </summary>
+        /// <param name="gaze1">First gaze</param>
+        /// <param name="gaze2">Second gaze</param>
+        /// <param name="eye">String identifier for the eye</param>
+        /// <returns>Vector for a two dimensional realm</returns>
         protected double[] CalculateVector(GazeModel gaze1, GazeModel gaze2, String eye)
         {
             double deltaX = gaze2.GetEyeData(eye).TrackingData.X - gaze1.GetEyeData(eye).TrackingData.X;
@@ -212,6 +251,12 @@ namespace WebAnalyzer.Models.AlgorithmModel
             return new double[] { deltaX, deltaY };
         }
 
+        /// <summary>
+        /// Compares two two dimensional vectors
+        /// </summary>
+        /// <param name="vector1">First vector</param>
+        /// <param name="vector2">Second vector</param>
+        /// <returns>If the vectors are similar or not</returns>
         protected Boolean CompareVectors(double[] vector1, double[] vector2)
         {
             //https://de.wikipedia.org/wiki/Kosinus-%C3%84hnlichkeit

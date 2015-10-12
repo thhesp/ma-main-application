@@ -10,33 +10,64 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.DataModel
 {
+    /// <summary>
+    /// Representation of a gaze with data about both eyes.
+    /// </summary>
     public class GazeModel : BasicData
     {
-        
+
+        /// <summary>
+        /// Uniqueid of the gaze object
+        /// </summary>
         private String _uniqueId;
 
-
+        /// <summary>
+        /// Data about the left eye
+        /// </summary>
         private PositionDataModel _leftEye;
+
+        /// <summary>
+        /// Data about the right eye
+        /// </summary>
         private PositionDataModel _rightEye;
 
+        /// <summary>
+        /// Timestamp of the gaze
+        /// </summary>
         private String _timestamp;
 
+        /// <summary>
+        /// Constructor which creates the uid
+        /// </summary>
+        /// <param name="timestamp">Request timestamp</param>
         public GazeModel(String timestamp)
         {
-             _uniqueId = this.GetUniqueId();
+            _uniqueId = this.GetUniqueId();
             _timestamp = timestamp;
         }
 
+        /// <summary>
+        /// Constructor for loading from xml
+        /// </summary>
         public GazeModel()
         {
 
         }
-        
+
+        /// <summary>
+        /// Creates a uniqueid
+        /// </summary>
+        /// <returns>Uniqueid</returns>
         private String GetUniqueId()
         {
             return Guid.NewGuid().ToString();
         }
 
+        /// <summary>
+        /// Returns data for the given eye
+        /// </summary>
+        /// <param name="eye">String representation of the eye</param>
+        /// <returns></returns>
         public PositionDataModel GetEyeData(String eye)
         {
 
@@ -53,35 +84,47 @@ namespace WebAnalyzer.Models.DataModel
             return null;
         }
 
-        #region GetterSetterFunctions
-
+        /// <summary>
+        /// Getter/ Setter for the uniqueid
+        /// </summary>
         public String UniqueId
         {
             get { return _uniqueId; }
             set { _uniqueId = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the timestamp
+        /// </summary>
         public String Timestamp
         {
             get { return _timestamp; }
             set { _timestamp = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the left eye
+        /// </summary>
         public PositionDataModel LeftEye
         {
             get { return _leftEye; }
             set { _leftEye = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the right eye
+        /// </summary>
         public PositionDataModel RightEye
         {
             get { return _rightEye; }
             set { _rightEye = value; }
         }
-        #endregion
 
-        #region XMLFunctions
-
+        /// <summary>
+        /// Creates an xml representation of the object
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns></returns>
         public XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode gazeNode = xmlDoc.CreateElement("gaze");
@@ -158,6 +201,11 @@ namespace WebAnalyzer.Models.DataModel
             return gazeNode;
         }
 
+        /// <summary>
+        /// Creates an object from XML
+        /// </summary>
+        /// <param name="gazeNode">The node which contains the data</param>
+        /// <returns>The loaded object</returns>
         public static GazeModel LoadFromXML(XmlNode gazeNode)
         {
             if (gazeNode.Name == "gaze")
@@ -219,6 +267,11 @@ namespace WebAnalyzer.Models.DataModel
             return null;
         }
 
+        /// <summary>
+        /// Generates a statistics xml node for the gaze
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns></returns>
         public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc)
         {
             XmlNode gazeNode = xmlDoc.CreateElement("gaze");
@@ -247,7 +300,5 @@ namespace WebAnalyzer.Models.DataModel
 
             return gazeNode;
         }
-
-        #endregion
     }
 }

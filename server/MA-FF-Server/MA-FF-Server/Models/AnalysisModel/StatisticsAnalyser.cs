@@ -7,9 +7,17 @@ using WebAnalyzer.Models.DataModel;
 
 namespace WebAnalyzer.Models.AnalysisModel
 {
+    /// <summary>
+    /// Collection of methods used for calculating statistics
+    /// </summary>
     public class StatisticsAnalyser
     {
 
+        /// <summary>
+        /// Calculates the durations between request and sent values from the given list of positions
+        /// </summary>
+        /// <param name="positions">List of gazes</param>
+        /// <returns>array of durations</returns>
         public static long[] ArrayOfDurationFromRequestTillSent(List<GazeModel> positions)
         {
             long[] durations = new long[positions.Count];
@@ -21,6 +29,11 @@ namespace WebAnalyzer.Models.AnalysisModel
             return durations;
         }
 
+        /// <summary>
+        /// Calculates the durations between server sent and received values from the given list of positions
+        /// </summary>
+        /// <param name="positions">List of gazes</param>
+        /// <returns>array of durations</returns>
         public static long[] ArrayOfDurationFromServerSentToReceived(List<GazeModel> positions)
         {
             long[] durations = new long[positions.Count];
@@ -33,6 +46,11 @@ namespace WebAnalyzer.Models.AnalysisModel
         }
 
 
+        /// <summary>
+        /// Calculates the durations between client received and client sent values from the given list of positions
+        /// </summary>
+        /// <param name="positions">List of gazes</param>
+        /// <returns>array of durations</returns>
         public static long[] ArrayOfDurationFromClientReceivedToClientSent(List<GazeModel> positions)
         {
             long[] durations = new long[positions.Count];

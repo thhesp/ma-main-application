@@ -7,63 +7,123 @@ using System.Xml;
 
 namespace WebAnalyzer.Models.Base
 {
+    /// <summary>
+    /// The raw event sent from the tracking-component
+    /// </summary>
     public class RawTrackingEvent
     {
+        /// <summary>
+        /// The Event type (currently only F in use)
+        /// </summary>
         private String _eventType;
+
+        /// <summary>
+        /// The eye for which the event occurred
+        /// </summary>
         private String _eye;
+
+        /// <summary>
+        /// The start timestamp of the event
+        /// </summary>
         private String _startTime;
+
+        /// <summary>
+        /// The end timestamp of the event
+        /// </summary>
         private String _endTime;
+
+        /// <summary>
+        /// The duration of the event
+        /// </summary>
         private String _duration;
+
+        /// <summary>
+        /// x coordinates of the event
+        /// </summary>
         private double _x;
+
+        /// <summary>
+        /// y coordinates of the event
+        /// </summary>
         private double _y;
 
+        /// <summary>
+        /// Getter/ Setter for the event type
+        /// </summary>
         public String EventType
         {
             get { return _eventType; }
             set { _eventType = value; }
         }
 
+        /// <summary>
+        /// Getter/Setter for the eye
+        /// </summary>
         public String Eye
         {
             get { return _eye; }
             set { _eye = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the starttime
+        /// </summary>
         public String StartTime
         {
             get { return _startTime; }
             set { _startTime = value; }
         }
 
+        /// <summary>
+        /// Getter/Setter for the endtime
+        /// </summary>
         public String EndTime
         {
             get { return _endTime; }
             set { _endTime = value; }
         }
 
+        /// <summary>
+        /// Getter/Setter for the duration
+        /// </summary>
         public String Duration
         {
             get { return _duration; }
             set { _duration = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the x coordinate
+        /// </summary>
         public Double X
         {
             get { return _x; }
             set { _x = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the y coordinate
+        /// </summary>
         public Double Y
         {
             get { return _y; }
             set { _y = value; }
         }
 
+        /// <summary>
+        /// Checks if the event is a fixation
+        /// </summary>
+        /// <returns></returns>
         public Boolean IsFixation()
         {
             return EventType == "F";
         }
 
+        /// <summary>
+        /// Checks if event belongs to eye
+        /// </summary>
+        /// <param name="eye">String for the eye</param>
+        /// <returns></returns>
         public Boolean BelongsToEye(String eye)
         {
             if (this.Eye == "l" && eye == "left")
@@ -78,6 +138,11 @@ namespace WebAnalyzer.Models.Base
             return false;
         }
 
+        /// <summary>
+        /// Creates an xml representation of the object
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns></returns>
         public XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode eventNode = xmlDoc.CreateElement("event");
@@ -143,6 +208,11 @@ namespace WebAnalyzer.Models.Base
             return eventNode;
         }
 
+        /// <summary>
+        /// Creates an object from XML
+        /// </summary>
+        /// <param name="eventNode">The node which contains the data</param>
+        /// <returns>The loaded object</returns>
         public static RawTrackingEvent LoadFromXML(XmlNode eventNode)
         {
             if (eventNode.Name == "event")

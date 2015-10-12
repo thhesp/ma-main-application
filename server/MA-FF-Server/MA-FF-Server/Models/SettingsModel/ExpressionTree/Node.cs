@@ -11,39 +11,70 @@ using WebAnalyzer.Models.DataModel;
 
 namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
 {
+    /// <summary>
+    /// Abstract base class for all tree nodes
+    /// </summary>
     public abstract class Node : UIDBase
     {
-
+        /// <summary>
+        /// All implemented node types
+        /// </summary>
         public enum NODE_TYPES { NONE = -1, VALUE = 0, NOT = 1, AND = 2, OR = 3 };
 
+        /// <summary>
+        /// Children of the node
+        /// </summary>
         protected List<Node> _children = new List<Node>();
 
+        /// <summary>
+        /// Type of the node
+        /// </summary>
         protected NODE_TYPES _type = NODE_TYPES.NONE;
 
+        /// <summary>
+        /// Empty constructor for loading from xml
+        /// </summary>
         public Node()
             : base()
         {
 
         }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="type">Type of the node</param>
         public Node(NODE_TYPES type)
             : base()
         {
             _type = type;
         }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="child">Child of the Node</param>
         public Node(Node child)
             : base()
         {
             _children.Add(child);
         }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="children">Children of the node</param>
         public Node(List<Node> children)
             : base()
         {
             _children = children;
         }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="type">Type of the Node</param>
+        /// <param name="children">Children of the node</param>
         public Node(NODE_TYPES type, List<Node> children)
             : base()
         {
@@ -51,18 +82,29 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             _children = children;
         }
 
+        /// <summary>
+        /// Getter / Setter for the node type
+        /// </summary>
         public NODE_TYPES NodeType
         {
             get { return _type; }
             set { _type = value; }
         }
 
+        /// <summary>
+        /// Getter / Setter for the node children
+        /// </summary>
         public List<Node> Children
         {
             get { return _children; }
             set { _children = value; }
         }
 
+        /// <summary>
+        /// Returns the node by uid
+        /// </summary>
+        /// <param name="uid">UID of the node</param>
+        /// <returns></returns>
         public Node FindNode(String uid)
         {
             if (this.UID == uid)
@@ -83,6 +125,11 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             return null;
         }
 
+        /// <summary>
+        /// Creates an xml representation of the object
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns></returns>
         public virtual XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode node = xmlDoc.CreateElement("node");
@@ -101,6 +148,11 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             return node;
         }
 
+        /// <summary>
+        /// Creates an object from XML
+        /// </summary>
+        /// <param name="nodeNode">The node which contains the data</param>
+        /// <returns>The loaded object</returns>
         public static Node LoadFromXML(XmlNode nodeNode)
         {
 
@@ -116,6 +168,11 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             }
         }
 
+        /// <summary>
+        /// Extracts the node type from the given XMLNode
+        /// </summary>
+        /// <param name="nodeNode">XMLNode with node data</param>
+        /// <returns></returns>
         private static NODE_TYPES ExtractNodeType(XmlNode nodeNode)
         {
             if (nodeNode != null)
@@ -133,6 +190,12 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             return NODE_TYPES.NONE;
         }
 
+        /// <summary>
+        /// Creates the node from the XMLNode and the nodeType
+        /// </summary>
+        /// <param name="nodeNode">Data about the node in XMLNode</param>
+        /// <param name="nodeType">Type of the node to create</param>
+        /// <returns></returns>
         private static Node CreateNodeFromXML(XmlNode nodeNode, NODE_TYPES nodeType)
         {
             if (nodeNode != null && nodeNode.ChildNodes != null)
@@ -166,6 +229,11 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             return null;
         }
 
+        /// <summary>
+        /// Creates a copy of the given node
+        /// </summary>
+        /// <param name="orig">node to copy</param>
+        /// <returns></returns>
         public static Node Copy(Node orig)
         {
             NODE_TYPES nodeType = orig._type;
@@ -180,6 +248,12 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             return copy;
         }
 
+        /// <summary>
+        /// Creates a node from the node type and the original data
+        /// </summary>
+        /// <param name="nodeType">Type of the node</param>
+        /// <param name="orig">original node</param>
+        /// <returns></returns>
         private static Node CreateNode(NODE_TYPES nodeType, Node orig)
         {
             switch (nodeType)
@@ -198,7 +272,18 @@ namespace WebAnalyzer.Models.SettingsModel.ExpressionTree
             return null;
         }
 
+        /// <summary>
+        /// Method for evaluating if the element fits the node rule
+        /// </summary>
+        /// <param name="el">Element to check</param>
+        /// <returns></returns>
         public abstract Boolean Evaluate(DOMElementModel el);
+
+        /// <summary>
+        /// Method for evaluating case sensitive if the element fits the node rule
+        /// </summary>
+        /// <param name="el">Element to check</param>
+        /// <returns></returns>
         public abstract Boolean EvaluateCaseSensitive(DOMElementModel el);
 
     }

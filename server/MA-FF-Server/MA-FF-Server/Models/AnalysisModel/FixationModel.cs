@@ -11,21 +11,51 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.AnalysisModel
 {
+    /// <summary>
+    /// Model for fixations
+    /// </summary>
     public class FixationModel
     {
 
+
+        /// <summary>
+        /// Start timestamp of the fixation
+        /// </summary>
         private String _startTimestamp;
+
+        /// <summary>
+        /// End timestamp of the fixation
+        /// </summary>
         private String _endTimestamp;
 
+        /// <summary>
+        /// duration of the fixation
+        /// </summary>
         private long _duration = 0;
 
+        /// <summary>
+        /// Eye to which the fixation belongs
+        /// </summary>
         private String _eye;
 
+        /// <summary>
+        /// Coordinates in which the fixation is contained
+        /// </summary>
         private double _startX, _endX, _startY, _endY;
 
+
+        /// <summary>
+        /// related gazes of the fixation
+        /// </summary>
         private List<GazeModel> _relatedGazes = new List<GazeModel>();
 
-
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="startTimestamp">Start timestamp of the fixation</param>
+        /// <param name="endTimestamp">End timestamp of the fixation</param>
+        /// <param name="duration">Duration of the fixation</param>
+        /// <param name="eye">Eye to which the fixation belongs</param>
         public FixationModel(String startTimestamp, String endTimestamp, long duration, String eye)
         {
             _startTimestamp = startTimestamp;
@@ -34,65 +64,101 @@ namespace WebAnalyzer.Models.AnalysisModel
             _eye = eye;
         }
 
-        #region GetterSetter
-
+        /// <summary>
+        /// Getter/Setter for the related gazes
+        /// </summary>
         public List<GazeModel> RelatedGazes
         {
             get { return _relatedGazes; }
             set { _relatedGazes = value; }
         }
 
+        /// <summary>
+        /// Method for adding a gaze to the list of the related gazes
+        /// </summary>
+        /// <param name="model">The gaze to add</param>
         public void AddRelatedGaze(GazeModel model)
         {
             _relatedGazes.Add(model);
         }
 
+        /// <summary>
+        /// Start for the fixation coordinates
+        /// </summary>
+        /// <param name="startX">start x coordinate</param>
+        /// <param name="startY">start y coordinate</param>
         public void From(double startX, double startY)
         {
             _startX = startX;
             _startY = startY;
         }
 
+        /// <summary>
+        /// End for the fixation coordinates
+        /// </summary>
+        /// <param name="endX">end x coordinate</param>
+        /// <param name="endY">end y coordinate</param>
         public void To(double endX, double endY)
         {
             _endX = endX;
             _endY = endY;
         }
 
+        /// <summary>
+        /// Getter for the duration of the fixation
+        /// </summary>
         public long Duration
         {
             get { return _duration; }
         }
 
+        /// <summary>
+        /// Getter for the start x coordinate of the fixation
+        /// </summary>
         public double StartX
         {
             get { return _startX; }
         }
 
+        /// <summary>
+        /// Getter for the start y coordinate of the fixation
+        /// </summary>
         public double StartY
         {
             get { return _startY; }
         }
 
+        /// <summary>
+        /// Getter for the end x coordinate of the fixation
+        /// </summary>
         public double EndX
         {
             get { return _endX; }
         }
 
+        /// <summary>
+        /// Getter for the end y coordinate of the fixation
+        /// </summary>
         public double EndY
         {
             get { return _endY; }
         }
 
+        /// <summary>
+        /// Getter for the related gazes
+        /// </summary>
+        /// <returns>List of Gazes</returns>
         public List<GazeModel> GetRelatedGazes()
         {
             return _relatedGazes;
         }
 
-        #endregion
-
-        #region XMLFunctions
-
+        /// <summary>
+        /// Creates an XML Representation of the fixation
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <param name="includeSingleGazeData">Shall data about the related gazes be included</param>
+        /// <returns>XMLNode which contains the representation of the model</returns>
         public XmlNode ToXML(XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode fixationNode = xmlDoc.CreateElement("fixation");
@@ -160,6 +226,15 @@ namespace WebAnalyzer.Models.AnalysisModel
             return fixationNode;
         }
 
+        /// <summary>
+        /// Creates an XML Representation of the aois
+        /// </summary>
+        /// <param name="settings">Experiment settings which are used for the aois</param>
+        /// <param name="page">Webpage to which the gazes belong</param>
+        /// <param name="eye">Eye to which the gazes belong</param>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <param name="includeSingleGazeData">Shall data about the related gazes be included</param>
+        /// <returns>XMLNode which contains the representation of the aois for these fixations</returns>
         public XmlNode ToAOIXML(ExperimentSettings settings, WebpageModel page, String eye, XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
 
@@ -252,7 +327,5 @@ namespace WebAnalyzer.Models.AnalysisModel
 
             return aoisNode;
         }
-
-        #endregion
     }
 }

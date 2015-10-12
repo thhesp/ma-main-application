@@ -10,65 +10,116 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.Base
 {
+    /// <summary>
+    /// Class which represents a experiment
+    /// </summary>
     public class ExperimentModel
     {
 
+        /// <summary>
+        /// Name of the experiment
+        /// </summary>
         private String _experimentName;
 
+        /// <summary>
+        /// Description of the experiment
+        /// </summary>
         private String _description;
 
+        /// <summary>
+        /// Creationdate of the experiment
+        /// </summary>
         private DateTime _createdAt;
 
+        /// <summary>
+        /// List of participants
+        /// </summary>
         private List<ExperimentParticipant> _participants = new List<ExperimentParticipant>();
 
+        /// <summary>
+        /// Reference to experiment settings
+        /// </summary>
         private ExperimentSettings _settings = new ExperimentSettings();
 
+        /// <summary>
+        /// Constructor for creating a new experiment
+        /// </summary>
+        /// <param name="experimentName">Name of the experiment</param>
         public ExperimentModel(String experimentName)
         {
             _experimentName = experimentName;
             _createdAt = DateTime.Now;
         }
 
+        /// <summary>
+        /// Constructor used for loading the experiment
+        /// </summary>
         public ExperimentModel()
         {
             _createdAt = DateTime.Now;
         }
 
+        /// <summary>
+        /// Destructor which resets hidden settings
+        /// </summary>
         ~ExperimentModel()
         {
             ResetInternSettings();
         }
 
+        /// <summary>
+        /// Getter/ Setter for the experiment name
+        /// </summary>
         public String ExperimentName
         {
             get { return _experimentName; }
             set { _experimentName = value;  }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the experiment description
+        /// </summary>
         public String Description
         {
             get { return _description; }
             set { _description = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the creation date
+        /// </summary>
         public DateTime CreatedAt
         {
             get { return _createdAt; }
             set { _createdAt = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the experiment participants
+        /// </summary>
         public List<ExperimentParticipant> Participants
         {
             get { return _participants; }
             set { _participants = value; }
         }
 
+
+        /// <summary>
+        /// Getter/ Setter for the experiment settings
+        /// </summary>
         public ExperimentSettings Settings
         {
             get { return _settings; }
             set { _settings = value; }
         }
 
+        /// <summary>
+        /// Returns an array with all participant identifiers
+        /// </summary>
+        /// <returns>Array of participant identifiers</returns>
+        /// <remarks>
+        /// Used for displaying participants in the ui
+        /// </remarks>
         public String[] GetParticipantArray()
         {
             String[] participantArray = new String[Participants.Count];
@@ -81,6 +132,13 @@ namespace WebAnalyzer.Models.Base
             return participantArray;
         }
 
+        /// <summary>
+        /// Returns an array of participant uids
+        /// </summary>
+        /// <returns>Array of participant uids</returns>
+        /// <remarks>
+        /// Used for displaying participants in the ui
+        /// </remarks>
         public String[] GetParticipantUIDs()
         {
             String[] uidArray = new String[Participants.Count];
@@ -93,21 +151,45 @@ namespace WebAnalyzer.Models.Base
             return uidArray;
         }
 
+        /// <summary>
+        /// Returns an array with all domains
+        /// </summary>
+        /// <returns>Array of domains</returns>
+        /// <remarks>
+        /// Used for displaying domains in the ui
+        /// </remarks>
         public String[] GetDomainSettingArray()
         {
             return Settings.GetDomainIdentifiers();
         }
 
+        /// <summary>
+        /// Returns an array with all domain uids
+        /// </summary>
+        /// <returns>Array of domain uids</returns>
+        /// <remarks>
+        /// Used for displaying domains in the ui
+        /// </remarks>
         public String[] GetDomainSettingUIDs()
         {
             return Settings.GetDomainUIDs();
         }
 
+        /// <summary>
+        /// Returns the domain setting for the given uid
+        /// </summary>
+        /// <param name="uid">UID of the domain</param>
+        /// <returns>The domain setting for the uid</returns>
         public DomainSettings GetDomainSettingByUid(String uid)
         {
             return Settings.GetDomainSettingByUid(uid);
         }
 
+        /// <summary>
+        /// Returns the participant for the given uid
+        /// </summary>
+        /// <param name="uid">UID of the participant</param>
+        /// <returns>The participant for the uid</returns>
         public ExperimentParticipant GetParticipantByUID(String uid)
         {
             foreach (ExperimentParticipant par in Participants)
@@ -122,11 +204,23 @@ namespace WebAnalyzer.Models.Base
             return null;
         }
 
+        /// <summary>
+        /// Returns the base experiment location
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>
+        /// Uses the experiment settings and the experiment name.
+        /// </remarks>
         public String GetBaseExperimentLocation()
         {
             return Properties.Settings.Default.Datalocation + _experimentName + "\\";
         }
 
+        /// <summary>
+        /// Creates an xml representation of the object
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns></returns>
         public XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode experiment = xmlDoc.CreateElement("experiment");
@@ -167,6 +261,11 @@ namespace WebAnalyzer.Models.Base
             return experiment;
         }
 
+        /// <summary>
+        /// Creates an xml representation of the hidden experiment settings
+        /// </summary>
+        /// <param name="internSettings">XMLNode for the settings</param>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
         private void SaveInternSettings(XmlNode internSettings, XmlDocument xmlDoc)
         {
 
@@ -235,6 +334,11 @@ namespace WebAnalyzer.Models.Base
 
         }
 
+        /// <summary>
+        /// Creates an object from XML
+        /// </summary>
+        /// <param name="doc">XML Document which contains the data</param>
+        /// <returns>The loaded object</returns>
         public static ExperimentModel LoadFromXML(XmlDocument doc)
         {
             ExperimentModel experiment = new ExperimentModel();
@@ -278,6 +382,10 @@ namespace WebAnalyzer.Models.Base
             return experiment;
         }
 
+        /// <summary>
+        /// Loads the settings from the xml
+        /// </summary>
+        /// <param name="setting">XMLNode containing the setting</param>
         private static void LoadSetting(XmlNode setting)
         {
             switch (setting.Name)
@@ -300,10 +408,18 @@ namespace WebAnalyzer.Models.Base
             }
         }
 
+        /// <summary>
+        /// Resets the experiment variables
+        /// </summary>
         private void ResetInternSettings(){
             AppSettings.ResetExperimentVariables();
         }
 
+        /// <summary>
+        /// Creates a new experiment with the given name
+        /// </summary>
+        /// <param name="name">The name for the new experiment</param>
+        /// <returns>The new experiment</returns>
         public static ExperimentModel CreateExperiment(String name)
         {
             ExperimentModel experiment = new ExperimentModel(name);

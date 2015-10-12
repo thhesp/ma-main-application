@@ -11,19 +11,32 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.AlgorithmModel
 {
+    /// <summary>
+    /// Algorithm which uses the raw fixation events from the smi eyetracker
+    /// </summary>
     public class IViewEventsAlgorithm : Algorithm
     {
 
+        /// <summary>
+        /// Reference to the rawdata which contain the fixation events
+        /// </summary>
         private RawTrackingData _rawData;
 
-
+        /// <summary>
+        /// Getter/Setter for the rawdata
+        /// </summary>
         public RawTrackingData RawData
         {
             get { return _rawData; }
             set { _rawData = value; }
         }
 
-
+        /// <summary>
+        /// Extracts all fixations from the given list of positions
+        /// </summary>
+        /// <param name="positions">List of all gazes for this testrun</param>
+        /// <param name="eye">String identifier for the eye</param>
+        /// <returns>List of Fixations</returns>
         public override List<FixationModel> ExtractFixation(List<GazeModel> positions, String eye)
         {
             List<FixationModel> fixations = new List<FixationModel>();
@@ -99,6 +112,11 @@ namespace WebAnalyzer.Models.AlgorithmModel
             return fixations;
         }
 
+        /// <summary>
+        /// Returns an xml representation of the algorithm
+        /// </summary>
+        /// <param name="xmlDoc">The XML Document which will contain the xml</param>
+        /// <returns>XMLNode which contains the representation of the algorithm</returns>
         public override XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode algorithm = xmlDoc.CreateElement("iview-events");

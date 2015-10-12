@@ -9,11 +9,26 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.EventModel
 {
-    class ResizeEventModel : BaseEventModel
+    /// <summary>
+    /// Class for representing browser resize events
+    /// </summary>
+    public class ResizeEventModel : BaseEventModel
     {
+        /// <summary>
+        /// Window width
+        /// </summary>
         private int _windowWidth = 0;
+        /// <summary>
+        /// Window height
+        /// </summary>
         private int _windowHeight = 0;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="windowHeight">window height</param>
+        /// <param name="windowWidth">window width</param>
+        /// <param name="serverReceivedTimestamp">Timestamp when the server received the event</param>
         public ResizeEventModel(int windowHeight, int windowWidth, String serverReceivedTimestamp)
         {
             _windowWidth = windowWidth;
@@ -21,23 +36,37 @@ namespace WebAnalyzer.Models.EventModel
             _serverReceivedTimestamp = serverReceivedTimestamp;
         }
 
+        /// <summary>
+        /// Constructor for loading from the xml
+        /// </summary>
         public ResizeEventModel()
         {
 
         }
 
+        /// <summary>
+        /// Getter/ Setter for the window width
+        /// </summary>
         public int WindowWidth
         {
             get { return _windowWidth; }
             set { _windowWidth = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the window height
+        /// </summary>
         public int WindowHeight
         {
             get { return _windowHeight; }
             set { _windowHeight = value; }
         }
 
+        /// <summary>
+        /// Creates an xml representation of the object
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns></returns>
         public override XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode resizeEventNode = xmlDoc.CreateElement("resize-event");
@@ -77,6 +106,11 @@ namespace WebAnalyzer.Models.EventModel
             return resizeEventNode;
         }
 
+        /// <summary>
+        /// Creates an object from XML
+        /// </summary>
+        /// <param name="eventNode">The node which contains the data</param>
+        /// <returns>The loaded object</returns>
         public static ResizeEventModel LoadFromXML(XmlNode eventNode)
         {
             if (eventNode.Name == "resize-event")

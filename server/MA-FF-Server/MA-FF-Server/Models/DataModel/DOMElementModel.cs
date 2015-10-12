@@ -8,124 +8,225 @@ using WebAnalyzer.Util;
 
 namespace WebAnalyzer.Models.DataModel
 {
+    /// <summary>
+    /// Representation of the html element
+    /// </summary>
     public class DOMElementModel
     {
 
+        /// <summary>
+        /// X coordinate which were calculated for the html
+        /// </summary>
         private double _htmlX;
+
+        /// <summary>
+        /// Y coordinate which were calculated for the html
+        /// </summary>
         private double _htmlY;
 
+        /// <summary>
+        /// Tag of the element
+        /// </summary>
         private String _tag;
 
+        /// <summary>
+        /// Path from Base HTML to the element
+        /// </summary>
         private String _path;
+
+        /// <summary>
+        /// Unique selector of the element
+        /// </summary>
         private String _selector;
 
+        /// <summary>
+        /// ID of the element
+        /// </summary>
         private String _id;
+
+        /// <summary>
+        /// title of the element
+        /// </summary>
         private String _title;
 
+        /// <summary>
+        /// left coordinate of the element
+        /// </summary>
         private double _left;
+
+        /// <summary>
+        /// top coordinate of the element
+        /// </summary>
         private double _top;
 
+        /// <summary>
+        /// width of the element
+        /// </summary>
         private double _width;
+
+        /// <summary>
+        /// height of the element
+        /// </summary>
         private double _height;
 
+        /// <summary>
+        /// outer width of the element
+        /// </summary>
         private double _outerWidth;
+
+        /// <summary>
+        /// outer height of the element
+        /// </summary>
         private double _outerHeight;
 
+        /// <summary>
+        /// Classes of the element
+        /// </summary>
         private List<String> _classes = new List<String>();
+
+        /// <summary>
+        /// All attributes of the element
+        /// </summary>
         private List<AttributeModel> _attributes = new List<AttributeModel>();
 
-
+        /// <summary>
+        /// Constructor for loading from the xml
+        /// </summary>
         public DOMElementModel()
         {
 
         }
 
-        #region GetterSetterFunctions
-
+        /// <summary>
+        /// Getter/ Setter for the html x
+        /// </summary>
         public Double HTMLX
         {
             get { return _htmlX; }
             set { _htmlX = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the html y
+        /// </summary>
         public Double HTMLY
         {
             get { return _htmlY; }
             set { _htmlY = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the element tag
+        /// </summary>
         public String Tag
         {
             get { return _tag; }
             set { _tag = value.ToLower(); }
         }
 
-
+        /// <summary>
+        /// Getter / Setter for the element id
+        /// </summary>
         public String ID
         {
             get { return _id; }
             set { _id = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the element title
+        /// </summary>
         public String Title
         {
             get { return _title; }
             set { _title = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the element path
+        /// </summary>
         public String Path
         {
             get { return _path; }
             set { _path = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the element selector
+        /// </summary>
         public String Selector
         {
             get { return _selector; }
             set { _selector = value; }
         }
 
+        /// <summary>
+        /// Getter / Setter for the element left
+        /// </summary>
         public double Left
         {
             get { return _left; }
             set { _left = value; }
         }
 
+        /// <summary>
+        /// Getter / Setter for the element top
+        /// </summary>
         public double Top
         {
             get { return _top; }
             set { _top = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the element width
+        /// </summary>
         public double Width
         {
             get { return _width; }
             set { _width = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the element height
+        /// </summary>
         public double Height
         {
             get { return _height; }
             set { _height = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the element outer width
+        /// </summary>
         public double OuterWidth
         {
             get { return _outerWidth; }
             set { _outerWidth = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the element outer height
+        /// </summary>
         public double OuterHeight
         {
             get { return _outerHeight; }
             set { _outerHeight = value; }
         }
 
+        /// <summary>
+        /// Method for adding a class
+        /// </summary>
+        /// <param name="className">class to add</param>
         public void AddClass(String className)
         {
             _classes.Add(className);
         }
 
+        /// <summary>
+        /// Adds classes
+        /// </summary>
+        /// <param name="classes">String representation of classes to add</param>
         public void AddClasses(String classes)
         {
             String[] classesArray = classes.Split(null);
@@ -136,11 +237,20 @@ namespace WebAnalyzer.Models.DataModel
             }
         }
 
+        /// <summary>
+        /// Returns the List of classes
+        /// </summary>
+        /// <returns>List of classes</returns>
         public List<String> GetClasses()
         {
             return _classes;
         }
 
+        /// <summary>
+        /// adds an attribute
+        /// </summary>
+        /// <param name="name">attribute name</param>
+        /// <param name="value">attribute value</param>
         public void AddAttribute(String name, String value)
         {
             AttributeModel attrModel = new AttributeModel(name, value);
@@ -148,16 +258,20 @@ namespace WebAnalyzer.Models.DataModel
             _attributes.Add(attrModel);
         }
 
+        /// <summary>
+        /// Returns the list of attributes
+        /// </summary>
+        /// <returns>List of attributes</returns>
         public List<AttributeModel> GetAttributes()
         {
             return _attributes;
         }
 
-        #endregion
-
-
-        #region XMLFunctions
-
+        /// <summary>
+        /// Creates an xml representation of the object
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns></returns>
         public XmlNode ToXML(XmlDocument xmlDoc)
         {
             XmlNode elementNode = xmlDoc.CreateElement("element");
@@ -295,7 +409,11 @@ namespace WebAnalyzer.Models.DataModel
             return elementNode;
         }
 
-
+        /// <summary>
+        /// Creates an object from XML
+        /// </summary>
+        /// <param name="elementNode">The node which contains the data</param>
+        /// <returns>The loaded object</returns>
         public static DOMElementModel LoadFromXML(XmlNode elementNode)
         {
             if (elementNode.Name == "element")
@@ -379,7 +497,5 @@ namespace WebAnalyzer.Models.DataModel
 
             return null;
         }
-
-        #endregion
     }
 }

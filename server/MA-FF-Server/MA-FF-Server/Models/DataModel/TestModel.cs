@@ -15,24 +15,62 @@ using WebAnalyzer.Models.EventModel;
 
 namespace WebAnalyzer.Models.DataModel
 {
+    /// <summary>
+    /// Class which represents a testrun
+    /// </summary>
     public class TestModel
     {
+        /// <summary>
+        /// Timestamp when the testrun was started
+        /// </summary>
         private String _started;
+
+        /// <summary>
+        /// Timestamp when the testrun was stopped
+        /// </summary>
         private String _stopped;
 
+        /// <summary>
+        /// Label of the testrun
+        /// </summary>
         private String _label;
 
+        /// <summary>
+        /// Protocol of the testrun
+        /// </summary>
         private String _protocol;
 
+        /// <summary>
+        /// List of visited Pages during the test
+        /// </summary>
         private List<WebpageModel> _visitedPages = new List<WebpageModel>();
 
+        /// <summary>
+        /// Unassigned gaze positions
+        /// </summary>
         private Dictionary<String, GazeModel> _unassignedPositions = new Dictionary<String, GazeModel>();
 
+        /// <summary>
+        /// Timestamp of last action relating to a gaze
+        /// </summary>
+        /// <remarks>
+        /// Used for checking if saving is already possible or not
+        /// </remarks>
         private String _lastGazeActionTimestamp = "";
 
+        /// <summary>
+        /// tracking interval of the tracking component
+        /// </summary>
         private double _trackingInterval = 0;
+
+        /// <summary>
+        /// interval in which messages are sent
+        /// </summary>
         private int _messageSentInterval = 0;
 
+        /// <summary>
+        /// Getter for the testrun filename
+        /// </summary>
         public String Filename
         {
             get
@@ -41,7 +79,9 @@ namespace WebAnalyzer.Models.DataModel
             }
         }
 
-
+        /// <summary>
+        /// Getter for the testrun filename without fileextension
+        /// </summary>
         public String FilenameWithoutExtension
         {
             get
@@ -50,42 +90,64 @@ namespace WebAnalyzer.Models.DataModel
             }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the started timestamp
+        /// </summary>
         public String Started
         {
             get { return _started; }
             set { _started = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the stopped timestamp
+        /// </summary>
         public String Stopped
         {
             get { return _stopped; }
             set { _stopped = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the label
+        /// </summary>
         public String Label
         {
             get { return _label; }
             set { _label = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the protocol
+        /// </summary>
         public String Protocol
         {
             get { return _protocol; }
             set { _protocol = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the tracking interval
+        /// </summary>
         public double TrackingInterval
         {
             get { return _trackingInterval; }
             set { _trackingInterval = value; }
         }
 
+        /// <summary>
+        /// Getter/ Setter for the message interval
+        /// </summary>
         public int MessageSentInterval
         {
             get { return _messageSentInterval; }
             set { _messageSentInterval = value; }
         }
         
+        /// <summary>
+        /// Method which checks if data was colleted and if its reasonable to export the data
+        /// </summary>
+        /// <returns></returns>
         public Boolean Exportable()
         {
             if(_visitedPages.Count > 0)
@@ -96,6 +158,12 @@ namespace WebAnalyzer.Models.DataModel
             return false;
         }
 
+        /// <summary>
+        /// Creates an xml representation of the object
+        /// </summary>
+        /// <param name="participant">Participant to which the testrun belongs</param>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns></returns>
         public XmlNode ToXML(ExperimentParticipant participant, XmlDocument xmlDoc)
         {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
@@ -167,6 +235,11 @@ namespace WebAnalyzer.Models.DataModel
             return experimentNode;
         }
 
+        /// <summary>
+        /// Creates an object from XML
+        /// </summary>
+        /// <param name="doc">Document which contains the data</param>
+        /// <returns>The loaded object</returns>
         public static TestModel LoadFromXML(XmlDocument doc)
         {
             TestModel test = new TestModel();
@@ -223,11 +296,22 @@ namespace WebAnalyzer.Models.DataModel
             return test;
         }
 
+        /// <summary>
+        /// Generates a statistics xml for the testrun
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns></returns>
         public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc)
         {
             return GenerateStatisticsXML(xmlDoc, true);
         }
 
+        /// <summary>
+        /// Generates a statistics xml for the testrun
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <param name="includeSingleGazeData">Should the xml contain data about each gaze</param>
+        /// <returns></returns>
         public XmlNode GenerateStatisticsXML(XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode statisticsNode = xmlDoc.CreateElement("statistics");
@@ -288,6 +372,11 @@ namespace WebAnalyzer.Models.DataModel
             return statisticsNode;
         }
 
+        /// <summary>
+        /// Generates the statistics on a testrun level
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <returns></returns>
         private XmlNode CreateExperimentStatistics(XmlDocument xmlDoc) 
         { 
             // number of revisited pages?
@@ -318,6 +407,12 @@ namespace WebAnalyzer.Models.DataModel
 
         }
 
+        /// <summary>
+        /// Generates the statistics for the given array
+        /// </summary>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <param name="node">Node in which data shall be inserted</param>
+        /// <param name="array">Array with data which shall be analysed</param>
         private void InsertArrayStatistics(XmlDocument xmlDoc, XmlNode node, long[] array)
         {
             XmlAttribute mean = xmlDoc.CreateAttribute("mean");
@@ -347,6 +442,10 @@ namespace WebAnalyzer.Models.DataModel
 
         }
 
+        /// <summary>
+        /// Generates an array of all durations from request till sent for all gazes in all webpages
+        /// </summary>
+        /// <returns></returns>
         public long[] ArrayOfDurationFromRequestTillSent()
         {
             long[] durations = new long[0];
@@ -360,6 +459,10 @@ namespace WebAnalyzer.Models.DataModel
             return durations;
         }
 
+        /// <summary>
+        /// Generates an array of all durations from server sent to received for all gazes in all webpages
+        /// </summary>
+        /// <returns></returns>
         public long[] ArrayOfDurationFromServerSentToReceived()
         {
             long[] durations = new long[0];
@@ -371,7 +474,10 @@ namespace WebAnalyzer.Models.DataModel
             return durations;
         }
 
-
+        /// <summary>
+        /// Generates an array of all durations from client received to sent for all gazes in all webpages
+        /// </summary>
+        /// <returns></returns>
         public long[] ArrayOfDurationFromClientReceivedToClientSent()
         {
             long[] durations = new long[0];
@@ -383,6 +489,14 @@ namespace WebAnalyzer.Models.DataModel
             return durations;
         }
 
+        /// <summary>
+        /// Generates fixation xml
+        /// </summary>
+        /// <param name="participant">Participant to which the data belongs</param>
+        /// <param name="algorithm">Algorithm which was used for the fixation extraction</param>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <param name="includeSingleGazeData">Shall the xml contain data about each single gaze</param>
+        /// <returns></returns>
         public XmlNode GenerateFixationXML(ExperimentParticipant participant, Algorithm algorithm, XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
@@ -437,6 +551,15 @@ namespace WebAnalyzer.Models.DataModel
             return experimentNode;
         }
 
+        /// <summary>
+        /// Generates aoi xml
+        /// </summary>
+        /// <param name="settings">Settings to be used for the generation</param>
+        /// <param name="participant">Participant to which the data belongs</param>
+        /// <param name="algorithm">Algorithm which was used for the fixation extraction</param>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <param name="includeSingleGazeData">Shall the xml contain data about each single gaze</param>
+        /// <returns></returns>
         public XmlNode GenerateAOIXML(ExperimentSettings settings, ExperimentParticipant participant, Algorithm algorithm, XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
@@ -493,6 +616,14 @@ namespace WebAnalyzer.Models.DataModel
             return experimentNode;
         }
 
+        /// <summary>
+        /// Generates saccades xml
+        /// </summary>
+        /// <param name="participant">Participant to which the data belongs</param>
+        /// <param name="algorithm">Algorithm which was used for the fixation extraction</param>
+        /// <param name="xmlDoc">XML Document which will contain the representation</param>
+        /// <param name="includeSingleGazeData">Shall the xml contain data about each single gaze</param>
+        /// <returns></returns>
         public XmlNode GenerateSaccadesXML(ExperimentParticipant participant, Algorithm algorithm, XmlDocument xmlDoc, Boolean includeSingleGazeData)
         {
             XmlNode experimentNode = xmlDoc.CreateElement("experiment");
@@ -547,6 +678,13 @@ namespace WebAnalyzer.Models.DataModel
             return experimentNode;
         }
 
+        /// <summary>
+        /// Checks if it is already possible to save.
+        /// </summary>
+        /// <returns></returns>
+        /// <remarks>
+        /// Checks if the last gaze action is older than the wait timeout.
+        /// </remarks>
         public Boolean CheckForSave(){
             if(_unassignedPositions.Count == 0){
                 return true;
@@ -569,11 +707,22 @@ namespace WebAnalyzer.Models.DataModel
             return false;
         }
 
+        /// <summary>
+        /// Removes all webpages which don't contain data
+        /// </summary>
         private void RemoveEmptyPages()
         {
             _visitedPages.RemoveAll(page => page.Gazes.Count == 0);
         }
 
+        /// <summary>
+        /// Returns the gaze model to the given uniqueid from the unassgined positions
+        /// </summary>
+        /// <param name="uniqueId">Uniqueid from the gaze model</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Used to assign messages to gazes in the DataMessageHandler
+        /// </remarks>
         public GazeModel GetGazeModel(String uniqueId)
         {
             if (_unassignedPositions.ContainsKey(uniqueId))
@@ -586,6 +735,16 @@ namespace WebAnalyzer.Models.DataModel
             return null;
         }
 
+        /// <summary>
+        /// Adds the gaze with the given uniqueid to the webpage with the given url
+        /// </summary>
+        /// <param name="uniqueId">UniqueID of the gaze</param>
+        /// <param name="url">URL of the webpage</param>
+        /// <param name="connectionUID">ConnectionUID of the websocket connection</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Removes the gaze from the unassigned positions
+        /// </remarks>
         public Boolean AssignGazeToWebpage(String uniqueId, String url, String connectionUID)
         {
             if (!_unassignedPositions.ContainsKey(uniqueId))
@@ -606,6 +765,16 @@ namespace WebAnalyzer.Models.DataModel
             return true;
         }
 
+        /// <summary>
+        /// Adds the gaze to the webpage with the given url
+        /// </summary>
+        /// <param name="gazeModel">The gaze to assign</param>
+        /// <param name="url">URL of the webpage</param>
+        /// <param name="connectionUID">ConnectionUID of the websocket connection</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Removes the gaze from the unassigned positions
+        /// </remarks>
         public Boolean AssignGazeToWebpage(GazeModel gazeModel, String url, String connectionUID)
         {
             if (!_unassignedPositions.ContainsKey(gazeModel.UniqueId))
@@ -625,6 +794,12 @@ namespace WebAnalyzer.Models.DataModel
             return true;
         }
 
+        /// <summary>
+        /// Assigns the given event to a webpage
+        /// </summary>
+        /// <param name="eventModel">Event to add</param>
+        /// <param name="url">URL of the webpage</param>
+        /// <param name="connectionUID">ConnectionUID of the websocket connection</param>
         public void AssignEventToWebpage(BaseEventModel eventModel, String url, String connectionUID)
         {
             WebpageModel pageModel = this.GetPageModel(url, connectionUID, eventModel.ServerReceivedTimestamp);
@@ -640,6 +815,11 @@ namespace WebAnalyzer.Models.DataModel
 
         }
 
+        /// <summary>
+        /// Removes the gaze with the given uniqueid from the unassigned positions
+        /// </summary>
+        /// <param name="uniqueId">Uniqueid of gaze to remove</param>
+        /// <returns></returns>
         public Boolean DisposeOfGazeData(String uniqueId)
         {
             if (!_unassignedPositions.ContainsKey(uniqueId))
@@ -657,6 +837,11 @@ namespace WebAnalyzer.Models.DataModel
             return true;
         }
 
+        /// <summary>
+        /// Removes the given gaze from the unassigned positions
+        /// </summary>
+        /// <param name="gazeModel">Gaze to remove</param>
+        /// <returns></returns>
         public Boolean DisposeOfGazeData(GazeModel gazeModel)
         {
             if (_unassignedPositions.ContainsKey(gazeModel.UniqueId))
@@ -676,6 +861,12 @@ namespace WebAnalyzer.Models.DataModel
             return false;
         }
 
+        /// <summary>
+        /// Prepares gaze data before requesting the data over the websocket
+        /// </summary>
+        /// <param name="leftEye">Data of the left eye</param>
+        /// <param name="rightEye">Data of the right eye</param>
+        /// <returns></returns>
         public String PrepareGazeData(BaseTrackingData leftEye, BaseTrackingData rightEye)
         {
             String requestedTimestamp = Timestamp.GetMillisecondsUnixTimestamp();
@@ -715,6 +906,16 @@ namespace WebAnalyzer.Models.DataModel
             return gaze.UniqueId;
         }
 
+        /// <summary>
+        /// Adds the gaze to the webpage with the given url
+        /// </summary>
+        /// <param name="gazeModel">Gaze to add</param>
+        /// <param name="url">URL of the webpage</param>
+        /// <param name="connectionUID">ConnectionUID of the websocket connection</param>
+        /// <returns></returns>
+        /// <remarks>
+        /// Removes the gaze from the unassigned positions
+        /// </remarks>
         private GazeModel AddGazeData(String url, String connectionUID, GazeModel gazeModel)
         {
             WebpageModel pageModel = this.GetPageModel(url, connectionUID, gazeModel.DataRequestedTimestamp);
@@ -731,6 +932,13 @@ namespace WebAnalyzer.Models.DataModel
             return gazeModel;
         }
 
+        /// <summary>
+        /// Returns the pagemodel for the url
+        /// </summary>
+        /// <param name="url">URL of the webpage</param>
+        /// <param name="connectionUID">Connection UID of the websocket connection which received the data</param>
+        /// <param name="timestamp">Timestamp on which the data was requested</param>
+        /// <returns></returns>
         private WebpageModel GetPageModel(String url, String connectionUID, String timestamp)
         {
             // reiterate from the back of the list, so that the newest page gets used
@@ -773,6 +981,14 @@ namespace WebAnalyzer.Models.DataModel
             return null;
         }
 
+        /// <summary>
+        /// Event callback for the message sent event
+        /// </summary>
+        /// <param name="uniqueId">Uniqueid of the gaze</param>
+        /// <param name="sentTimestamp">Messagesent timestamp</param>
+        /// <remarks>
+        /// Adds the message sent timestamp to the gaze
+        /// </remarks>
         public void MessageSent(String uniqueId, String sentTimestamp)
         {
             if (uniqueId != null)
@@ -784,6 +1000,10 @@ namespace WebAnalyzer.Models.DataModel
             }
         }
 
+        /// <summary>
+        /// Method for extracting fixations and saccades
+        /// </summary>
+        /// <param name="algorithm">Algorithm to use for the extraction</param>
         public void ExtractFixationsAndSaccades(Algorithm algorithm)
         {
             foreach (WebpageModel page in _visitedPages)
@@ -792,6 +1012,10 @@ namespace WebAnalyzer.Models.DataModel
             }
         }
 
+        /// <summary>
+        /// Adds the given webpage to the visited pages
+        /// </summary>
+        /// <param name="pageModel">Webpage to add</param>
         public void AddWebpage(WebpageModel pageModel)
         {
             lock (_visitedPages)
