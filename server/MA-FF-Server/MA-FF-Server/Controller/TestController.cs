@@ -585,7 +585,14 @@ namespace WebAnalyzer.Controller
             //check if services are running
             bool update = false;
 
-            //mainly the tracking component...
+            //websocket server
+            if (_WSWarning)
+            {
+                InitialiseWSServer();
+                update = true;
+            }
+
+            //tracking component...
             if (_trackingModel != null && 
                 _trackingModel.ConnectionStatus != ExperimentObject.CONNECTION_STATUS.connected)
             {
