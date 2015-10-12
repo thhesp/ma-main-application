@@ -117,67 +117,87 @@ $(document).ready(function(){initNavTree('class_web_analyzer_1_1_server_1_1_webs
 <div class="title">WebAnalyzer.Server.WebsocketConnection Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The websocket connection class  
+ <a href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for WebAnalyzer.Server.WebsocketConnection:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_web_analyzer_1_1_server_1_1_websocket_connection.png" usemap="#WebAnalyzer.Server.WebsocketConnection_map" alt=""/>
   <map id="WebAnalyzer.Server.WebsocketConnection_map" name="WebAnalyzer.Server.WebsocketConnection_map">
-<area href="class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base.html" alt="WebAnalyzer.Models.Base.UIDBase" shape="rect" coords="0,0,260,24"/>
+<area href="class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base.html" title="Abstract base which creates a uid " alt="WebAnalyzer.Models.Base.UIDBase" shape="rect" coords="0,0,260,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af4ada0b7f2d032ad42da1d9238619ebd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#af4ada0b7f2d032ad42da1d9238619ebd">WebsocketConnection</a> (WebSocket ws)</td></tr>
+<tr class="memdesc:af4ada0b7f2d032ad42da1d9238619ebd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the connection  <a href="#af4ada0b7f2d032ad42da1d9238619ebd">More...</a><br /></td></tr>
 <tr class="separator:af4ada0b7f2d032ad42da1d9238619ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0450a1a608d5dcb62bddfe2a75aee305"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#a0450a1a608d5dcb62bddfe2a75aee305">EnqueueMessage</a> (<a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html">Message</a> message)</td></tr>
+<tr class="memdesc:a0450a1a608d5dcb62bddfe2a75aee305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the given message to the list  <a href="#a0450a1a608d5dcb62bddfe2a75aee305">More...</a><br /></td></tr>
 <tr class="separator:a0450a1a608d5dcb62bddfe2a75aee305"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a325a5138c2af5d5296360cf0abdd1942"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#a325a5138c2af5d5296360cf0abdd1942">workMessageQueue</a> ()</td></tr>
+<tr class="memdesc:a325a5138c2af5d5296360cf0abdd1942"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tries to send the next message from the list  <a href="#a325a5138c2af5d5296360cf0abdd1942">More...</a><br /></td></tr>
 <tr class="separator:a325a5138c2af5d5296360cf0abdd1942"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base.html">WebAnalyzer.Models.Base.UIDBase</a></td></tr>
 <tr class="memitem:af8ee5eded0b2f646e19b26bf3728fea5 inherit pub_methods_class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base.html#af8ee5eded0b2f646e19b26bf3728fea5">UIDBase</a> ()</td></tr>
+<tr class="memdesc:af8ee5eded0b2f646e19b26bf3728fea5 inherit pub_methods_class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor which creates the uid for this object  <a href="#af8ee5eded0b2f646e19b26bf3728fea5">More...</a><br /></td></tr>
 <tr class="separator:af8ee5eded0b2f646e19b26bf3728fea5 inherit pub_methods_class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:aaff532a55d94eaddd75a2619da307c6a"><td class="memItemLeft" align="right" valign="top">IObservable&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#aaff532a55d94eaddd75a2619da307c6a">In</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aaff532a55d94eaddd75a2619da307c6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Messages which are received on this connection  <a href="#aaff532a55d94eaddd75a2619da307c6a">More...</a><br /></td></tr>
 <tr class="separator:aaff532a55d94eaddd75a2619da307c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f0be7b1ff80c5b742204d0883157578"><td class="memItemLeft" align="right" valign="top">IObserver&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#a1f0be7b1ff80c5b742204d0883157578">Out</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a1f0be7b1ff80c5b742204d0883157578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Messages which are sent over this connection  <a href="#a1f0be7b1ff80c5b742204d0883157578">More...</a><br /></td></tr>
 <tr class="separator:a1f0be7b1ff80c5b742204d0883157578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54d71b7e50589c027fff5441dea6ca54"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#a54d71b7e50589c027fff5441dea6ca54">IsConnected</a><code> [get]</code></td></tr>
+<tr class="memdesc:a54d71b7e50589c027fff5441dea6ca54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the websocket is connected  <a href="#a54d71b7e50589c027fff5441dea6ca54">More...</a><br /></td></tr>
 <tr class="separator:a54d71b7e50589c027fff5441dea6ca54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a973edb4f0e5e1644f551bf132ae77183"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#a973edb4f0e5e1644f551bf132ae77183">Writing</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a973edb4f0e5e1644f551bf132ae77183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter/Setter if the connection is currently sending a message  <a href="#a973edb4f0e5e1644f551bf132ae77183">More...</a><br /></td></tr>
 <tr class="separator:a973edb4f0e5e1644f551bf132ae77183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af64b83d9aec7d436a262f732e3b03e0b"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#af64b83d9aec7d436a262f732e3b03e0b">Active</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:af64b83d9aec7d436a262f732e3b03e0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter/Setter if the connection is currently active  <a href="#af64b83d9aec7d436a262f732e3b03e0b">More...</a><br /></td></tr>
 <tr class="separator:af64b83d9aec7d436a262f732e3b03e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0351f67ba0d69e6d5701ef34395e0a59"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#a0351f67ba0d69e6d5701ef34395e0a59">MessageQueue</a><code> [get]</code></td></tr>
+<tr class="memdesc:a0351f67ba0d69e6d5701ef34395e0a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of messages which still need to be sent  <a href="#a0351f67ba0d69e6d5701ef34395e0a59">More...</a><br /></td></tr>
 <tr class="separator:a0351f67ba0d69e6d5701ef34395e0a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base"><td colspan="2" onclick="javascript:toggleInherit('properties_class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base.html">WebAnalyzer.Models.Base.UIDBase</a></td></tr>
 <tr class="memitem:a4ed4a066c028bebd3eb39175965c7d81 inherit properties_class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base.html#a4ed4a066c028bebd3eb39175965c7d81">UID</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a4ed4a066c028bebd3eb39175965c7d81 inherit properties_class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter/ Setter for the uid  <a href="#a4ed4a066c028bebd3eb39175965c7d81">More...</a><br /></td></tr>
 <tr class="separator:a4ed4a066c028bebd3eb39175965c7d81 inherit properties_class_web_analyzer_1_1_models_1_1_base_1_1_u_i_d_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a734b1ec862ae9693901fa28b99c03922"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#a734b1ec862ae9693901fa28b99c03922">~WebsocketConnection</a> ()</td></tr>
+<tr class="memdesc:a734b1ec862ae9693901fa28b99c03922"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor  <a href="#a734b1ec862ae9693901fa28b99c03922">More...</a><br /></td></tr>
 <tr class="separator:a734b1ec862ae9693901fa28b99c03922"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab856bbd336338d41ea2196df96a39521"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#ab856bbd336338d41ea2196df96a39521">removeOldMessages</a> ()</td></tr>
+<tr class="memdesc:ab856bbd336338d41ea2196df96a39521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all messages which are to old.  <a href="#ab856bbd336338d41ea2196df96a39521">More...</a><br /></td></tr>
 <tr class="separator:ab856bbd336338d41ea2196df96a39521"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a8b3efea13ab70fe8a5c866930ef7a263"><td class="memItemLeft" align="right" valign="top">readonly WebSocket&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#a8b3efea13ab70fe8a5c866930ef7a263">_ws</a></td></tr>
+<tr class="memdesc:a8b3efea13ab70fe8a5c866930ef7a263"><td class="mdescLeft">&#160;</td><td class="mdescRight">The websocket  <a href="#a8b3efea13ab70fe8a5c866930ef7a263">More...</a><br /></td></tr>
 <tr class="separator:a8b3efea13ab70fe8a5c866930ef7a263"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a876416b6c825d37d39ec966b022883b3"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#a876416b6c825d37d39ec966b022883b3">_messageQueue</a></td></tr>
+<tr class="memdesc:a876416b6c825d37d39ec966b022883b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of messages which need to be sent  <a href="#a876416b6c825d37d39ec966b022883b3">More...</a><br /></td></tr>
 <tr class="separator:a876416b6c825d37d39ec966b022883b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add4db0c0ee59a7f22c8f2638099e3217"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#add4db0c0ee59a7f22c8f2638099e3217">_uid</a></td></tr>
-<tr class="separator:add4db0c0ee59a7f22c8f2638099e3217"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad4b4619cdb766c16e900ee792fd2fc8"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#aad4b4619cdb766c16e900ee792fd2fc8">_active</a> = <a class="el" href="_u_i_2_h_t_m_l_resources_2js_2src_2export_8js.html#ae6c865df784842196d411c1466b01686">false</a></td></tr>
+<tr class="memdesc:aad4b4619cdb766c16e900ee792fd2fc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag if the connection is active  <a href="#aad4b4619cdb766c16e900ee792fd2fc8">More...</a><br /></td></tr>
 <tr class="separator:aad4b4619cdb766c16e900ee792fd2fc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19b519a7ec81f0898724fcdefb8c6f62"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html#a19b519a7ec81f0898724fcdefb8c6f62">_writing</a> = <a class="el" href="_u_i_2_h_t_m_l_resources_2js_2src_2export_8js.html#ae6c865df784842196d411c1466b01686">false</a></td></tr>
+<tr class="memdesc:a19b519a7ec81f0898724fcdefb8c6f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag if currently a message is being sent  <a href="#a19b519a7ec81f0898724fcdefb8c6f62">More...</a><br /></td></tr>
 <tr class="separator:a19b519a7ec81f0898724fcdefb8c6f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The websocket connection class </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af4ada0b7f2d032ad42da1d9238619ebd"></a>
 <div class="memitem">
 <div class="memproto">
@@ -191,6 +211,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor for the connection </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ws</td><td>The websocket</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -215,6 +243,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Destructor </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -231,6 +261,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Adds the given message to the list </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Message to be added</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -255,6 +293,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Removes all messages which are to old. </p>
+
 </div>
 </div>
 <a class="anchor" id="a325a5138c2af5d5296360cf0abdd1942"></a>
@@ -269,6 +309,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Tries to send the next message from the list </p>
 
 </div>
 </div>
@@ -291,6 +333,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Flag if the connection is active </p>
+
 </div>
 </div>
 <a class="anchor" id="a876416b6c825d37d39ec966b022883b3"></a>
@@ -311,25 +355,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="add4db0c0ee59a7f22c8f2638099e3217"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">String WebAnalyzer.Server.WebsocketConnection._uid</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>The list of messages which need to be sent </p>
 
 </div>
 </div>
@@ -351,6 +377,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Flag if currently a message is being sent </p>
+
 </div>
 </div>
 <a class="anchor" id="a8b3efea13ab70fe8a5c866930ef7a263"></a>
@@ -370,6 +398,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The websocket </p>
 
 </div>
 </div>
@@ -392,6 +422,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Getter/Setter if the connection is currently active </p>
+
 </div>
 </div>
 <a class="anchor" id="aaff532a55d94eaddd75a2619da307c6a"></a>
@@ -411,6 +443,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Messages which are received on this connection </p>
 
 </div>
 </div>
@@ -432,6 +466,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Checks if the websocket is connected </p>
+
 </div>
 </div>
 <a class="anchor" id="a0351f67ba0d69e6d5701ef34395e0a59"></a>
@@ -451,6 +487,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The list of messages which still need to be sent </p>
 
 </div>
 </div>
@@ -472,6 +510,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Messages which are sent over this connection </p>
+
 </div>
 </div>
 <a class="anchor" id="a973edb4f0e5e1644f551bf132ae77183"></a>
@@ -491,6 +531,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Getter/Setter if the connection is currently sending a message </p>
 
 </div>
 </div>

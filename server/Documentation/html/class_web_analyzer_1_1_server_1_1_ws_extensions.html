@@ -114,15 +114,22 @@ $(document).ready(function(){initNavTree('class_web_analyzer_1_1_server_1_1_ws_e
 <div class="title">WebAnalyzer.Server.WsExtensions Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Methodes for receiving and sending messages  
+ <a href="class_web_analyzer_1_1_server_1_1_ws_extensions.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a770900a0eaa564c76e90d5fe04443f7f"><td class="memItemLeft" align="right" valign="top">static async Task&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_message.html">Message</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_ws_extensions.html#a770900a0eaa564c76e90d5fe04443f7f">ReadDynamicAsync</a> (this WebSocket ws, CancellationToken <a class="el" href="_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js.html#a6bb6c6d36178f7806d97319e35438412">cancel</a>)</td></tr>
+<tr class="memdesc:a770900a0eaa564c76e90d5fe04443f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for receiving a message  <a href="#a770900a0eaa564c76e90d5fe04443f7f">More...</a><br /></td></tr>
 <tr class="separator:a770900a0eaa564c76e90d5fe04443f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8b42dc8c1a11d59f820217e399351db"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_ws_extensions.html#ad8b42dc8c1a11d59f820217e399351db">WriteString</a> (this WebSocket ws, String data)</td></tr>
+<tr class="memdesc:ad8b42dc8c1a11d59f820217e399351db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for sending a message  <a href="#ad8b42dc8c1a11d59f820217e399351db">More...</a><br /></td></tr>
 <tr class="separator:ad8b42dc8c1a11d59f820217e399351db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Methodes for receiving and sending messages </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a770900a0eaa564c76e90d5fe04443f7f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -154,6 +161,16 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Method for receiving a message </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ws</td><td>the websocket which receives the message</td></tr>
+    <tr><td class="paramname">cancel</td><td>the cancelation</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -188,6 +205,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Method for sending a message </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ws</td><td>the ws which shall send the message</td></tr>
+    <tr><td class="paramname">data</td><td>the json string which represents the message</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -1,26 +1,36 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze}{}\section{Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Gaze Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze}\index{Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Gaze@{Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Gaze}}
+
+
+Class which represents a raw gaze sent from the tracking component  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze_a5fa23875741ccd08b26a5b66721f3822}{Raw\+Tracking\+Gaze} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Empty constructor used for loading from xml \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze_aa36c796e4cea747e212c785a2cddd08f}{Raw\+Tracking\+Gaze} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} left\+Eye, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} right\+Eye)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze_a0de790ba2edb091bde241007be981427}{To\+X\+M\+L} (Xml\+Document xml\+Doc)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an xml representation of the object \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze}{Raw\+Tracking\+Gaze} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze_a2a7621cda0221f638008c67561d17f3a}{Load\+From\+X\+M\+L} (Xml\+Node gaze\+Node)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an object from X\+M\+L \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze_a50d308230da6fdb235fa19273a8264da}{\+\_\+left\+Eye}
-\item 
+\begin{DoxyCompactList}\small\item\em Gaze data for the left eye \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze_abd10432d6263254b7ebefe31ade87131}{\+\_\+right\+Eye}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gaze data for the right eye \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class which represents a raw gaze sent from the tracking component 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -31,6 +41,10 @@ static \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze}{
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze_a5fa23875741ccd08b26a5b66721f3822}
+
+
+Empty constructor used for loading from xml 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze_aa36c796e4cea747e212c785a2cddd08f}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze}!Raw\+Tracking\+Gaze@{Raw\+Tracking\+Gaze}}
 \index{Raw\+Tracking\+Gaze@{Raw\+Tracking\+Gaze}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze}}
 \subsubsection[{Raw\+Tracking\+Gaze(\+Base\+Tracking\+Data left\+Eye, Base\+Tracking\+Data right\+Eye)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Gaze.\+Raw\+Tracking\+Gaze (
@@ -41,6 +55,17 @@ static \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze}{
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze_aa36c796e4cea747e212c785a2cddd08f}
 
 
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left\+Eye} & Data about the left eye\\
+\hline
+{\em right\+Eye} & Data about the right eye\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze_a2a7621cda0221f638008c67561d17f3a}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze}!Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}}
 \index{Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze}}
@@ -49,6 +74,18 @@ static \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze}{
 \item[{Xml\+Node}]{gaze\+Node}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze_a2a7621cda0221f638008c67561d17f3a}
+
+
+Creates an object from X\+M\+L 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gaze\+Node} & The node which contains the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded object
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze_a0de790ba2edb091bde241007be981427}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze}!To\+X\+M\+L@{To\+X\+M\+L}}
 \index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze}}
 \subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Gaze.\+To\+X\+M\+L (
@@ -58,13 +95,33 @@ static \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze}{
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze_a0de790ba2edb091bde241007be981427}
 
 
+Creates an xml representation of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze_a50d308230da6fdb235fa19273a8264da}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze}!\+\_\+left\+Eye@{\+\_\+left\+Eye}}
 \index{\+\_\+left\+Eye@{\+\_\+left\+Eye}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze}}
 \subsubsection[{\+\_\+left\+Eye}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\+Tracking\+Data} Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Gaze.\+\_\+left\+Eye\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze_a50d308230da6fdb235fa19273a8264da}
+
+
+Gaze data for the left eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze_abd10432d6263254b7ebefe31ade87131}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze}!\+\_\+right\+Eye@{\+\_\+right\+Eye}}
 \index{\+\_\+right\+Eye@{\+\_\+right\+Eye}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Gaze}}
 \subsubsection[{\+\_\+right\+Eye}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\+Tracking\+Data} Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Gaze.\+\_\+right\+Eye\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze_abd10432d6263254b7ebefe31ade87131}
+
+
+Gaze data for the right eye 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

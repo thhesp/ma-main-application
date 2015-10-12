@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_rule_form}{}\section{Web\+Analyzer.\+U\+I.\+Edit\+Rule\+Form Class Reference}
 \label{class_web_analyzer_1_1_u_i_1_1_edit_rule_form}\index{Web\+Analyzer.\+U\+I.\+Edit\+Rule\+Form@{Web\+Analyzer.\+U\+I.\+Edit\+Rule\+Form}}
+
+
+Used for creating and editing aoi rules  
+
+
 Inheritance diagram for Web\+Analyzer.\+U\+I.\+Edit\+Rule\+Form\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,45 +15,50 @@ Inheritance diagram for Web\+Analyzer.\+U\+I.\+Edit\+Rule\+Form\+:\begin{figure}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a808eb0a4efc018629ec1c5ce337d4533}{Edit\+Rule\+Form} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule}{Settings\+Rule} rule, Boolean \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_a8bd5981157799459d39a59e8c4a0de04}{create})
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_ac8507e10ea396307c0519ae8e13d8378}{Reload\+Page} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Reloads the page in the browser \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 override void \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a17f361a8d574576a1c2753b6cf70ca52}{Wnd\+Proc} (ref Message m)
-\item 
+\begin{DoxyCompactList}\small\item\em Needed for enabling the use of the chromium dev tools \end{DoxyCompactList}\item 
 override void \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_ab1eaea9ca9d285938a31d96a5ada8a6a}{Dispose} (bool disposing)
 \begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Events}
 \begin{DoxyCompactItemize}
 \item 
 Create\+Rule\+Eventt\+Handler \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a270cf87236a05ce56741d8df75a16a0c}{Create\+Rule}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Eventhandler for creating the rule \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a095a5a7e340a8e6f743e286f43edd488}{Browser\+\_\+\+Load} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, Event\+Args \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Callback for when the form loads \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_ab13a2417f3c0ddaa74027b8597cd8225}{Browser\+\_\+\+Closing} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, Form\+Closing\+Event\+Args \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Callback called when the form is closing. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a17969a02d4de3eaf67143a99e9bf55c8}{Form\+\_\+\+Key\+Down} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, Key\+Event\+Args \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Should enable the opening of the chromium dev tools on pressing the F12 key. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a53385d178cdcd4fb8b813d7da0ae31d5}{Initialize\+Component} ()
 \begin{DoxyCompactList}\small\item\em Required method for Designer support -\/ do not modify the contents of this method with the code editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Chromium\+Web\+Browser \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a13a68bf348e8745e5ea013dc3a3f4ea6}{my\+Browser} = null
-\item 
+\begin{DoxyCompactList}\small\item\em Reference to the chromium browser \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule}{Settings\+Rule} \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_ac499572f8fdddf891c36254e9701f754}{\+\_\+rule} = null
-\item 
+\begin{DoxyCompactList}\small\item\em Reference to the A\+O\+I rule which is being edited or is being created \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a72f32003adafdc9ead00b22eefbf647b}{\+\_\+create} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
-\item 
+\begin{DoxyCompactList}\small\item\em Flag if it is a new rule \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_rule_control}{Rule\+Control} \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a9d1ff11c0ffd1f01406c687f6b10a873}{control} = null
-\item 
+\begin{DoxyCompactList}\small\item\em Reference to the interaction object rule control \end{DoxyCompactList}\item 
 System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_ab218f619b261a307316cbb5b01a79c1b}{components} = null
 \begin{DoxyCompactList}\small\item\em Required designer variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used for creating and editing aoi rules 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -62,6 +72,17 @@ System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1
 )}\label{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a808eb0a4efc018629ec1c5ce337d4533}
 
 
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rule} & The rule, which is being created or edited\\
+\hline
+{\em create} & Flag if it is being created\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_ab13a2417f3c0ddaa74027b8597cd8225}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}!Browser\+\_\+\+Closing@{Browser\+\_\+\+Closing}}
 \index{Browser\+\_\+\+Closing@{Browser\+\_\+\+Closing}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}}
@@ -71,6 +92,17 @@ System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1
 \item[{Form\+Closing\+Event\+Args}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_ab13a2417f3c0ddaa74027b8597cd8225}
+
+
+Callback called when the form is closing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender\\
+\hline
+{\em e} & event data\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a095a5a7e340a8e6f743e286f43edd488}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}!Browser\+\_\+\+Load@{Browser\+\_\+\+Load}}
 \index{Browser\+\_\+\+Load@{Browser\+\_\+\+Load}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}}
 \subsubsection[{Browser\+\_\+\+Load(object sender, Event\+Args e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Edit\+Rule\+Form.\+Browser\+\_\+\+Load (
@@ -79,6 +111,17 @@ System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1
 \item[{Event\+Args}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a095a5a7e340a8e6f743e286f43edd488}
+
+
+Callback for when the form loads 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_ab1eaea9ca9d285938a31d96a5ada8a6a}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}!Dispose@{Dispose}}
 \index{Dispose@{Dispose}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}}
 \subsubsection[{Dispose(bool disposing)}]{\setlength{\rightskip}{0pt plus 5cm}override void Web\+Analyzer.\+U\+I.\+Edit\+Rule\+Form.\+Dispose (
@@ -103,7 +146,20 @@ Clean up any resources being used.
 \item[{Key\+Event\+Args}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a17969a02d4de3eaf67143a99e9bf55c8}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a53385d178cdcd4fb8b813d7da0ae31d5}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}!Initialize\+Component@{Initialize\+Component}}
+
+
+Should enable the opening of the chromium dev tools on pressing the F12 key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+
+
+Currently doesn\textquotesingle{}t work as intended \+:( \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a53385d178cdcd4fb8b813d7da0ae31d5}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}!Initialize\+Component@{Initialize\+Component}}
 \index{Initialize\+Component@{Initialize\+Component}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}}
 \subsubsection[{Initialize\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Edit\+Rule\+Form.\+Initialize\+Component (
 \begin{DoxyParamCaption}
@@ -121,6 +177,10 @@ Required method for Designer support -\/ do not modify the contents of this meth
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_ac8507e10ea396307c0519ae8e13d8378}
+
+
+Reloads the page in the browser 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a17f361a8d574576a1c2753b6cf70ca52}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}!Wnd\+Proc@{Wnd\+Proc}}
 \index{Wnd\+Proc@{Wnd\+Proc}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}}
 \subsubsection[{Wnd\+Proc(ref Message m)}]{\setlength{\rightskip}{0pt plus 5cm}override void Web\+Analyzer.\+U\+I.\+Edit\+Rule\+Form.\+Wnd\+Proc (
@@ -130,13 +190,30 @@ Required method for Designer support -\/ do not modify the contents of this meth
 )\hspace{0.3cm}{\ttfamily [protected]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a17f361a8d574576a1c2753b6cf70ca52}
 
 
+Needed for enabling the use of the chromium dev tools 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a72f32003adafdc9ead00b22eefbf647b}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}!\+\_\+create@{\+\_\+create}}
 \index{\+\_\+create@{\+\_\+create}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}}
 \subsubsection[{\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+U\+I.\+Edit\+Rule\+Form.\+\_\+create = {\bf false}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a72f32003adafdc9ead00b22eefbf647b}
+
+
+Flag if it is a new rule 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_ac499572f8fdddf891c36254e9701f754}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}!\+\_\+rule@{\+\_\+rule}}
 \index{\+\_\+rule@{\+\_\+rule}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}}
 \subsubsection[{\+\_\+rule}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Settings\+Rule} Web\+Analyzer.\+U\+I.\+Edit\+Rule\+Form.\+\_\+rule = null\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_ac499572f8fdddf891c36254e9701f754}
+
+
+Reference to the A\+O\+I rule which is being edited or is being created 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_ab218f619b261a307316cbb5b01a79c1b}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}!components@{components}}
 \index{components@{components}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}}
 \subsubsection[{components}]{\setlength{\rightskip}{0pt plus 5cm}System.\+Component\+Model.\+I\+Container Web\+Analyzer.\+U\+I.\+Edit\+Rule\+Form.\+components = null\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_ab218f619b261a307316cbb5b01a79c1b}
@@ -147,15 +224,27 @@ Required designer variable.
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a9d1ff11c0ffd1f01406c687f6b10a873}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}!control@{control}}
 \index{control@{control}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}}
 \subsubsection[{control}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rule\+Control} Web\+Analyzer.\+U\+I.\+Edit\+Rule\+Form.\+control = null\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a9d1ff11c0ffd1f01406c687f6b10a873}
+
+
+Reference to the interaction object rule control 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a13a68bf348e8745e5ea013dc3a3f4ea6}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}!my\+Browser@{my\+Browser}}
 \index{my\+Browser@{my\+Browser}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}}
 \subsubsection[{my\+Browser}]{\setlength{\rightskip}{0pt plus 5cm}Chromium\+Web\+Browser Web\+Analyzer.\+U\+I.\+Edit\+Rule\+Form.\+my\+Browser = null\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a13a68bf348e8745e5ea013dc3a3f4ea6}
+
+
+Reference to the chromium browser 
+
 
 
 \subsection{Event Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a270cf87236a05ce56741d8df75a16a0c}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}!Create\+Rule@{Create\+Rule}}
 \index{Create\+Rule@{Create\+Rule}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+Rule\+Form}}
 \subsubsection[{Create\+Rule}]{\setlength{\rightskip}{0pt plus 5cm}Create\+Rule\+Eventt\+Handler Web\+Analyzer.\+U\+I.\+Edit\+Rule\+Form.\+Create\+Rule}\label{class_web_analyzer_1_1_u_i_1_1_edit_rule_form_a270cf87236a05ce56741d8df75a16a0c}
+
+
+Eventhandler for creating the rule 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -22,5 +22,6 @@ var dir_4515509a8d9057af3df85240cd1b25d9 =
     [ "SelectTestrunToLoadEvent.cs", "_select_testrun_to_load_event_8cs.html", "_select_testrun_to_load_event_8cs" ],
     [ "TestrunEvent.cs", "_testrun_event_8cs.html", "_testrun_event_8cs" ],
     [ "TriggerSaveEvent.cs", "_trigger_save_event_8cs.html", "_trigger_save_event_8cs" ],
+    [ "UpdateServiceStatiEvent.cs", "_update_service_stati_event_8cs.html", "_update_service_stati_event_8cs" ],
     [ "UpdateWSConnectionCountEvent.cs", "_update_w_s_connection_count_event_8cs.html", "_update_w_s_connection_count_event_8cs" ]
 ];

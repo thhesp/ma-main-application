@@ -72,6 +72,7 @@ var hierarchy =
       [ "WebAnalyzer.Events.SelectTestrunToLoadEvent", "class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event.html", null ],
       [ "WebAnalyzer.Events.TestrunEvent", "class_web_analyzer_1_1_events_1_1_testrun_event.html", null ],
       [ "WebAnalyzer.Events.TriggerSaveEvent", "class_web_analyzer_1_1_events_1_1_trigger_save_event.html", null ],
+      [ "WebAnalyzer.Events.UpdateServiceStatiEvent", "class_web_analyzer_1_1_events_1_1_update_service_stati_event.html", null ],
       [ "WebAnalyzer.Events.UpdateWSConnectionCountEvent", "class_web_analyzer_1_1_events_1_1_update_w_s_connection_count_event.html", null ]
     ] ],
     [ "WebAnalyzer.EyeTracking.EyeTrackingController.EventStruct", "struct_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_controller_1_1_event_struct.html", null ],

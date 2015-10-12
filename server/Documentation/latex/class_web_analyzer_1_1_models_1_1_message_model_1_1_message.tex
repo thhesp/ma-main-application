@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{}\section{Web\+Analyzer.\+Models.\+Message\+Model.\+Message Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}\index{Web\+Analyzer.\+Models.\+Message\+Model.\+Message@{Web\+Analyzer.\+Models.\+Message\+Model.\+Message}}
+
+
+Abstract parent class for all messages (incoming and outgoing)  
+
+
 Inheritance diagram for Web\+Analyzer.\+Models.\+Message\+Model.\+Message\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,41 +15,46 @@ Inheritance diagram for Web\+Analyzer.\+Models.\+Message\+Model.\+Message\+:\beg
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_ad1fc3e795c7af522dbf12792f621abfd}{Message} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Empty message constructor \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_af05222ad929359946a4ce5d983bf7b22}{Message} (String timestamp)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Constructor with message timestamp \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_addad192b40719813b8b260cbea4b6a39}{From\+Json} (Json\+Text\+Reader reader)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates a message from J\+S\+O\+N \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a9054d90256bf9ad8de33d975d2a188d3}{Timestamp}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the message timestamp \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_connection_message}{Connection\+Message} \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a314276c1b58a764cb8216c85aecbc251}{Connection\+Message\+From\+Json} (\hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_connection_message_a0b8ebc456d3aed9c51235f2a1a1a1cdb}{Connection\+Message.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E} type, Json\+Text\+Reader reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a connection message from J\+S\+O\+N \end{DoxyCompactList}\item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message}{Activation\+Message} \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a00da0edc16e3cd335dbc128c04d865de}{Activation\+Message\+From\+Json} (\hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_activation_message_ad3b5847039dd26527a842c6f7675b1b2}{Activation\+Message.\+A\+C\+T\+I\+V\+A\+T\+I\+O\+N\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E} type, Json\+Text\+Reader reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an activation message from J\+S\+O\+N \end{DoxyCompactList}\item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_error_message}{Error\+Message} \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a8a0c7229b12b93ecea85d87799507906}{Error\+Message\+From\+Json} (Json\+Text\+Reader reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a error message from J\+S\+O\+N \end{DoxyCompactList}\item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message}{In\+Data\+Message} \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a09f5ab44d912bea7b3ae5e2a78eab490}{Data\+Message\+From\+Json} (Json\+Text\+Reader reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a data message from J\+S\+O\+N \end{DoxyCompactList}\item 
 static void \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a9a2024f67011c88f2d831c4749d8ea06}{Extract\+Attributes} (Json\+Text\+Reader reader, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{D\+O\+M\+Element\+Model} element)
-\item 
+\begin{DoxyCompactList}\small\item\em Extract attributes for H\+T\+M\+L element from the J\+S\+O\+N \end{DoxyCompactList}\item 
 static void \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a8b1248666d8a8c1819b0920f1960f054}{Extract\+Element\+Data} (Json\+Text\+Reader reader, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{D\+O\+M\+Element\+Model} element)
-\item 
+\begin{DoxyCompactList}\small\item\em Extracts data about an H\+T\+M\+L element \end{DoxyCompactList}\item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message}{Event\+Message} \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a31e9c8cd83a705cfa9aa12561d2c6ac7}{Event\+Message\+From\+Json} (Json\+Text\+Reader reader)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an event message from J\+S\+O\+N. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_ae1e243f35e213e08ec2bdc54f64b0d2e}{\+\_\+timestamp}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Timestamp of the message \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract parent class for all messages (incoming and outgoing) 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -55,6 +65,10 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_ae
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_ad1fc3e795c7af522dbf12792f621abfd}
+
+
+Empty message constructor 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_af05222ad929359946a4ce5d983bf7b22}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}!Message@{Message}}
 \index{Message@{Message}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}}
 \subsubsection[{Message(\+String timestamp)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Message\+Model.\+Message.\+Message (
@@ -62,6 +76,15 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_ae
 \item[{String}]{timestamp}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_af05222ad929359946a4ce5d983bf7b22}
+
+
+Constructor with message timestamp 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timestamp} & \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} timestamp\\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
@@ -73,6 +96,20 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_ae
 \item[{Json\+Text\+Reader}]{reader}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a00da0edc16e3cd335dbc128c04d865de}
+
+
+Creates an activation message from J\+S\+O\+N 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Activation \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} Type\\
+\hline
+{\em reader} & Reference to the json reader\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a314276c1b58a764cb8216c85aecbc251}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}!Connection\+Message\+From\+Json@{Connection\+Message\+From\+Json}}
 \index{Connection\+Message\+From\+Json@{Connection\+Message\+From\+Json}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}}
 \subsubsection[{Connection\+Message\+From\+Json(\+Connection\+Message.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E type, Json\+Text\+Reader reader)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Connection\+Message} Web\+Analyzer.\+Models.\+Message\+Model.\+Message.\+Connection\+Message\+From\+Json (
@@ -81,6 +118,20 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_ae
 \item[{Json\+Text\+Reader}]{reader}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a314276c1b58a764cb8216c85aecbc251}
+
+
+Creates a connection message from J\+S\+O\+N 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Connection \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} Type\\
+\hline
+{\em reader} & Reference to the json reader\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a09f5ab44d912bea7b3ae5e2a78eab490}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}!Data\+Message\+From\+Json@{Data\+Message\+From\+Json}}
 \index{Data\+Message\+From\+Json@{Data\+Message\+From\+Json}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}}
 \subsubsection[{Data\+Message\+From\+Json(\+Json\+Text\+Reader reader)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf In\+Data\+Message} Web\+Analyzer.\+Models.\+Message\+Model.\+Message.\+Data\+Message\+From\+Json (
@@ -88,6 +139,18 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_ae
 \item[{Json\+Text\+Reader}]{reader}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a09f5ab44d912bea7b3ae5e2a78eab490}
+
+
+Creates a data message from J\+S\+O\+N 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & Reference to the json reader\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a8a0c7229b12b93ecea85d87799507906}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}!Error\+Message\+From\+Json@{Error\+Message\+From\+Json}}
 \index{Error\+Message\+From\+Json@{Error\+Message\+From\+Json}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}}
 \subsubsection[{Error\+Message\+From\+Json(\+Json\+Text\+Reader reader)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Error\+Message} Web\+Analyzer.\+Models.\+Message\+Model.\+Message.\+Error\+Message\+From\+Json (
@@ -95,6 +158,18 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_ae
 \item[{Json\+Text\+Reader}]{reader}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a8a0c7229b12b93ecea85d87799507906}
+
+
+Creates a error message from J\+S\+O\+N 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & Reference to the json reader\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a31e9c8cd83a705cfa9aa12561d2c6ac7}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}!Event\+Message\+From\+Json@{Event\+Message\+From\+Json}}
 \index{Event\+Message\+From\+Json@{Event\+Message\+From\+Json}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}}
 \subsubsection[{Event\+Message\+From\+Json(\+Json\+Text\+Reader reader)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Event\+Message} Web\+Analyzer.\+Models.\+Message\+Model.\+Message.\+Event\+Message\+From\+Json (
@@ -102,6 +177,18 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_ae
 \item[{Json\+Text\+Reader}]{reader}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a31e9c8cd83a705cfa9aa12561d2c6ac7}
+
+
+Creates an event message from J\+S\+O\+N. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & Reference to the json reader\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a9a2024f67011c88f2d831c4749d8ea06}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}!Extract\+Attributes@{Extract\+Attributes}}
 \index{Extract\+Attributes@{Extract\+Attributes}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}}
 \subsubsection[{Extract\+Attributes(\+Json\+Text\+Reader reader, D\+O\+M\+Element\+Model element)}]{\setlength{\rightskip}{0pt plus 5cm}static void Web\+Analyzer.\+Models.\+Message\+Model.\+Message.\+Extract\+Attributes (
@@ -110,6 +197,17 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_ae
 \item[{{\bf D\+O\+M\+Element\+Model}}]{element}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a9a2024f67011c88f2d831c4749d8ea06}
+
+
+Extract attributes for H\+T\+M\+L element from the J\+S\+O\+N 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & Reference to the json reader\\
+\hline
+{\em element} & Reference to the H\+T\+M\+L Element representation\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a8b1248666d8a8c1819b0920f1960f054}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}!Extract\+Element\+Data@{Extract\+Element\+Data}}
 \index{Extract\+Element\+Data@{Extract\+Element\+Data}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}}
 \subsubsection[{Extract\+Element\+Data(\+Json\+Text\+Reader reader, D\+O\+M\+Element\+Model element)}]{\setlength{\rightskip}{0pt plus 5cm}static void Web\+Analyzer.\+Models.\+Message\+Model.\+Message.\+Extract\+Element\+Data (
@@ -118,6 +216,17 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_ae
 \item[{{\bf D\+O\+M\+Element\+Model}}]{element}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a8b1248666d8a8c1819b0920f1960f054}
+
+
+Extracts data about an H\+T\+M\+L element 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & Reference to the json reader\\
+\hline
+{\em element} & Element for which the data is extracted\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_addad192b40719813b8b260cbea4b6a39}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}!From\+Json@{From\+Json}}
 \index{From\+Json@{From\+Json}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}}
 \subsubsection[{From\+Json(\+Json\+Text\+Reader reader)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Message} Web\+Analyzer.\+Models.\+Message\+Model.\+Message.\+From\+Json (
@@ -127,16 +236,38 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_ae
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_addad192b40719813b8b260cbea4b6a39}
 
 
+Creates a message from J\+S\+O\+N 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & The json reader\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Used for receiving messages
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_ae1e243f35e213e08ec2bdc54f64b0d2e}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}!\+\_\+timestamp@{\+\_\+timestamp}}
 \index{\+\_\+timestamp@{\+\_\+timestamp}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}}
 \subsubsection[{\+\_\+timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+Message.\+\_\+timestamp\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_ae1e243f35e213e08ec2bdc54f64b0d2e}
 
 
+Timestamp of the message 
+
+Most of the time it is the request timestamp of the gaze
+
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a9054d90256bf9ad8de33d975d2a188d3}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}!Timestamp@{Timestamp}}
 \index{Timestamp@{Timestamp}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Message}}
 \subsubsection[{Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+Message.\+Timestamp\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_a9054d90256bf9ad8de33d975d2a188d3}
+
+
+Getter / Setter for the message timestamp 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

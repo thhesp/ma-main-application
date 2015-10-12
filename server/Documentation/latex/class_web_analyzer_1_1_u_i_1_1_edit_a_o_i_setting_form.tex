@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form}{}\section{Web\+Analyzer.\+U\+I.\+Edit\+A\+O\+I\+Setting\+Form Class Reference}
 \label{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form}\index{Web\+Analyzer.\+U\+I.\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer.\+U\+I.\+Edit\+A\+O\+I\+Setting\+Form}}
+
+
+Window for editing/creating aoi settings  
+
+
 Inheritance diagram for Web\+Analyzer.\+U\+I.\+Edit\+A\+O\+I\+Setting\+Form\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,47 +15,52 @@ Inheritance diagram for Web\+Analyzer.\+U\+I.\+Edit\+A\+O\+I\+Setting\+Form\+:\b
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_abd1be33a9bb08df8876f4c6058ccfda6}{Edit\+A\+O\+I\+Setting\+Form} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings}{A\+O\+I\+Settings} setting, Boolean \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_a8bd5981157799459d39a59e8c4a0de04}{create})
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a292d49b250e34569220541736df0659c}{Reload\+Page} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Reloads the page in the browser \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 override void \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ac3f025da2408c167bf806f47caaebb4b}{Wnd\+Proc} (ref Message m)
-\item 
+\begin{DoxyCompactList}\small\item\em Needed for enabling the use of the chromium dev tools \end{DoxyCompactList}\item 
 override void \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a082405816f59a1c2f6ece128a29dd3eb}{Dispose} (bool disposing)
 \begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Events}
 \begin{DoxyCompactItemize}
 \item 
 Create\+A\+O\+I\+Setting\+Event\+Handler \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a1841845af65ba0e224742710ddefb772}{Create\+A\+O\+I\+Setting}
-\item 
+\begin{DoxyCompactList}\small\item\em Eventhandler for creating an A\+O\+I setting \end{DoxyCompactList}\item 
 Trigger\+Save\+Event\+Handler \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a5333229783b91948ba94f0ed0a947c6d}{Trigger\+Save}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Eventhandler for triggering a save \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ab47fff9e8c4851429319cc9fb46c0eb1}{Browser\+\_\+\+Load} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, Event\+Args \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Callback for when the form loads \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ae93f58e17512c90018b3e95803e90cd3}{Browser\+\_\+\+Closing} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, Form\+Closing\+Event\+Args \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Callback called when the form is closing. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a7319ca9688de4712cb96969ece791b79}{Form\+\_\+\+Key\+Down} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, Key\+Event\+Args \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Should enable the opening of the chromium dev tools on pressing the F12 key. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ada0ce372ca35664f19e52301a3809853}{Initialize\+Component} ()
 \begin{DoxyCompactList}\small\item\em Required method for Designer support -\/ do not modify the contents of this method with the code editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Chromium\+Web\+Browser \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a358334bc4849d212f301f7d3caeab179}{my\+Browser} = null
-\item 
+\begin{DoxyCompactList}\small\item\em Reference to the chromium browser \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings}{A\+O\+I\+Settings} \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ae746fef4ad5f71f921e0b1b9cec61cb7}{\+\_\+setting} = null
-\item 
+\begin{DoxyCompactList}\small\item\em A\+O\+I Setting which is being edited / created \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ab015b083786c8c388a0b70b9e2174b45}{\+\_\+create} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
-\item 
+\begin{DoxyCompactList}\small\item\em Flag if the setting is being created \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_a_o_i_setting_control}{A\+O\+I\+Setting\+Control} \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a0b225becaa2adede20adbbc37c0263ee}{control} = null
-\item 
+\begin{DoxyCompactList}\small\item\em Reference to the aoi setting control interaction object \end{DoxyCompactList}\item 
 System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a985bf45ba62ed1ac142143a2cf1abe1d}{components} = null
 \begin{DoxyCompactList}\small\item\em Required designer variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Window for editing/creating aoi settings 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -64,6 +74,17 @@ System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1
 )}\label{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_abd1be33a9bb08df8876f4c6058ccfda6}
 
 
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em setting} & A\+O\+I Setting, which is being edited/ created\\
+\hline
+{\em create} & Flag if it is a new A\+O\+I Setting\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ae93f58e17512c90018b3e95803e90cd3}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}!Browser\+\_\+\+Closing@{Browser\+\_\+\+Closing}}
 \index{Browser\+\_\+\+Closing@{Browser\+\_\+\+Closing}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}}
@@ -73,6 +94,17 @@ System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1
 \item[{Form\+Closing\+Event\+Args}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ae93f58e17512c90018b3e95803e90cd3}
+
+
+Callback called when the form is closing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender\\
+\hline
+{\em e} & event data\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ab47fff9e8c4851429319cc9fb46c0eb1}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}!Browser\+\_\+\+Load@{Browser\+\_\+\+Load}}
 \index{Browser\+\_\+\+Load@{Browser\+\_\+\+Load}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}}
 \subsubsection[{Browser\+\_\+\+Load(object sender, Event\+Args e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Edit\+A\+O\+I\+Setting\+Form.\+Browser\+\_\+\+Load (
@@ -81,6 +113,17 @@ System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1
 \item[{Event\+Args}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ab47fff9e8c4851429319cc9fb46c0eb1}
+
+
+Callback for when the form loads 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a082405816f59a1c2f6ece128a29dd3eb}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}!Dispose@{Dispose}}
 \index{Dispose@{Dispose}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}}
 \subsubsection[{Dispose(bool disposing)}]{\setlength{\rightskip}{0pt plus 5cm}override void Web\+Analyzer.\+U\+I.\+Edit\+A\+O\+I\+Setting\+Form.\+Dispose (
@@ -105,7 +148,20 @@ Clean up any resources being used.
 \item[{Key\+Event\+Args}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a7319ca9688de4712cb96969ece791b79}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ada0ce372ca35664f19e52301a3809853}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}!Initialize\+Component@{Initialize\+Component}}
+
+
+Should enable the opening of the chromium dev tools on pressing the F12 key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+
+
+Currently doesn\textquotesingle{}t work as intended \+:( \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ada0ce372ca35664f19e52301a3809853}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}!Initialize\+Component@{Initialize\+Component}}
 \index{Initialize\+Component@{Initialize\+Component}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}}
 \subsubsection[{Initialize\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Edit\+A\+O\+I\+Setting\+Form.\+Initialize\+Component (
 \begin{DoxyParamCaption}
@@ -123,6 +179,10 @@ Required method for Designer support -\/ do not modify the contents of this meth
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a292d49b250e34569220541736df0659c}
+
+
+Reloads the page in the browser 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ac3f025da2408c167bf806f47caaebb4b}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}!Wnd\+Proc@{Wnd\+Proc}}
 \index{Wnd\+Proc@{Wnd\+Proc}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}}
 \subsubsection[{Wnd\+Proc(ref Message m)}]{\setlength{\rightskip}{0pt plus 5cm}override void Web\+Analyzer.\+U\+I.\+Edit\+A\+O\+I\+Setting\+Form.\+Wnd\+Proc (
@@ -132,13 +192,30 @@ Required method for Designer support -\/ do not modify the contents of this meth
 )\hspace{0.3cm}{\ttfamily [protected]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ac3f025da2408c167bf806f47caaebb4b}
 
 
+Needed for enabling the use of the chromium dev tools 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ab015b083786c8c388a0b70b9e2174b45}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}!\+\_\+create@{\+\_\+create}}
 \index{\+\_\+create@{\+\_\+create}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}}
 \subsubsection[{\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+U\+I.\+Edit\+A\+O\+I\+Setting\+Form.\+\_\+create = {\bf false}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ab015b083786c8c388a0b70b9e2174b45}
+
+
+Flag if the setting is being created 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ae746fef4ad5f71f921e0b1b9cec61cb7}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}!\+\_\+setting@{\+\_\+setting}}
 \index{\+\_\+setting@{\+\_\+setting}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}}
 \subsubsection[{\+\_\+setting}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+O\+I\+Settings} Web\+Analyzer.\+U\+I.\+Edit\+A\+O\+I\+Setting\+Form.\+\_\+setting = null\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_ae746fef4ad5f71f921e0b1b9cec61cb7}
+
+
+A\+O\+I Setting which is being edited / created 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a985bf45ba62ed1ac142143a2cf1abe1d}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}!components@{components}}
 \index{components@{components}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}}
 \subsubsection[{components}]{\setlength{\rightskip}{0pt plus 5cm}System.\+Component\+Model.\+I\+Container Web\+Analyzer.\+U\+I.\+Edit\+A\+O\+I\+Setting\+Form.\+components = null\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a985bf45ba62ed1ac142143a2cf1abe1d}
@@ -149,18 +226,34 @@ Required designer variable.
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a0b225becaa2adede20adbbc37c0263ee}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}!control@{control}}
 \index{control@{control}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}}
 \subsubsection[{control}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+O\+I\+Setting\+Control} Web\+Analyzer.\+U\+I.\+Edit\+A\+O\+I\+Setting\+Form.\+control = null\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a0b225becaa2adede20adbbc37c0263ee}
+
+
+Reference to the aoi setting control interaction object 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a358334bc4849d212f301f7d3caeab179}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}!my\+Browser@{my\+Browser}}
 \index{my\+Browser@{my\+Browser}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}}
 \subsubsection[{my\+Browser}]{\setlength{\rightskip}{0pt plus 5cm}Chromium\+Web\+Browser Web\+Analyzer.\+U\+I.\+Edit\+A\+O\+I\+Setting\+Form.\+my\+Browser = null\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a358334bc4849d212f301f7d3caeab179}
+
+
+Reference to the chromium browser 
+
 
 
 \subsection{Event Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a1841845af65ba0e224742710ddefb772}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}!Create\+A\+O\+I\+Setting@{Create\+A\+O\+I\+Setting}}
 \index{Create\+A\+O\+I\+Setting@{Create\+A\+O\+I\+Setting}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}}
 \subsubsection[{Create\+A\+O\+I\+Setting}]{\setlength{\rightskip}{0pt plus 5cm}Create\+A\+O\+I\+Setting\+Event\+Handler Web\+Analyzer.\+U\+I.\+Edit\+A\+O\+I\+Setting\+Form.\+Create\+A\+O\+I\+Setting}\label{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a1841845af65ba0e224742710ddefb772}
+
+
+Eventhandler for creating an A\+O\+I setting 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a5333229783b91948ba94f0ed0a947c6d}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}!Trigger\+Save@{Trigger\+Save}}
 \index{Trigger\+Save@{Trigger\+Save}!Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Edit\+A\+O\+I\+Setting\+Form}}
 \subsubsection[{Trigger\+Save}]{\setlength{\rightskip}{0pt plus 5cm}Trigger\+Save\+Event\+Handler Web\+Analyzer.\+U\+I.\+Edit\+A\+O\+I\+Setting\+Form.\+Trigger\+Save}\label{class_web_analyzer_1_1_u_i_1_1_edit_a_o_i_setting_form_a5333229783b91948ba94f0ed0a947c6d}
+
+
+Eventhandler for triggering a save 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

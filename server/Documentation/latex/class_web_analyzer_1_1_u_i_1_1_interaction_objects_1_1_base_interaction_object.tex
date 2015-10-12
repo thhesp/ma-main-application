@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object}{}\section{Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Base\+Interaction\+Object Class Reference}
 \label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object}\index{Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Base\+Interaction\+Object@{Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Base\+Interaction\+Object}}
+
+
+Base class for all interaction objects  
+
+
 Inheritance diagram for Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Base\+Interaction\+Object\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,27 +15,32 @@ Inheritance diagram for Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Base\+Inte
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_ab7fc25e42888acfba791389cbba16069}{Display\+Error} (String message)
-\item 
+\begin{DoxyCompactList}\small\item\em Method used for displaying a error message \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_ae5aa6b0b986b2e3a47bf27a67eb79ca1}{Display\+Error} (String message, String title)
-\item 
+\begin{DoxyCompactList}\small\item\em Method used for displaying a error message \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_a362619127fbab55c978fe11d1778f4ae}{Display\+Success} (String message, String title)
-\item 
+\begin{DoxyCompactList}\small\item\em Method used for display a success message \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_afea2b7dc8ced6dababfd23381af7485d}{Display\+Yes\+No\+Question} (String message, String title)
-\item 
+\begin{DoxyCompactList}\small\item\em Method for displaying a yes no question box \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_af86a8726164ce830fa14f49160bb3f05}{Evalute\+Java\+Script} (String script)
-\item 
+\begin{DoxyCompactList}\small\item\em Executes the given javascript in the browser \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_acec4cefdd4842652a61bc0cb62746a0d}{javascript\+Log} (String message)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Used for logging to the javascript log file \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 Chromium\+Web\+Browser \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_aac4f2f8441547dc677f700485c295259}{Browser}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the chromium browser \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Chromium\+Web\+Browser \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_aa56933a7ca14c6251019e27c6ec97813}{\+\_\+browser} = null
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Reference to the chromium browser of the window \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for all interaction objects 
+
 
 
 \subsection{Member Function Documentation}
@@ -41,6 +51,15 @@ Chromium\+Web\+Browser \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_obj
 \item[{String}]{message}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_ab7fc25e42888acfba791389cbba16069}
+
+
+Method used for displaying a error message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to display\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_ae5aa6b0b986b2e3a47bf27a67eb79ca1}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object}!Display\+Error@{Display\+Error}}
 \index{Display\+Error@{Display\+Error}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object}}
 \subsubsection[{Display\+Error(\+String message, String title)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Base\+Interaction\+Object.\+Display\+Error (
@@ -49,6 +68,17 @@ Chromium\+Web\+Browser \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_obj
 \item[{String}]{title}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_ae5aa6b0b986b2e3a47bf27a67eb79ca1}
+
+
+Method used for displaying a error message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to display\\
+\hline
+{\em title} & The title of the message box\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_a362619127fbab55c978fe11d1778f4ae}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object}!Display\+Success@{Display\+Success}}
 \index{Display\+Success@{Display\+Success}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object}}
 \subsubsection[{Display\+Success(\+String message, String title)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Base\+Interaction\+Object.\+Display\+Success (
@@ -57,6 +87,17 @@ Chromium\+Web\+Browser \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_obj
 \item[{String}]{title}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_a362619127fbab55c978fe11d1778f4ae}
+
+
+Method used for display a success message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message\\
+\hline
+{\em title} & Title of the message box\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_afea2b7dc8ced6dababfd23381af7485d}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object}!Display\+Yes\+No\+Question@{Display\+Yes\+No\+Question}}
 \index{Display\+Yes\+No\+Question@{Display\+Yes\+No\+Question}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object}}
 \subsubsection[{Display\+Yes\+No\+Question(\+String message, String title)}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Base\+Interaction\+Object.\+Display\+Yes\+No\+Question (
@@ -65,6 +106,20 @@ Chromium\+Web\+Browser \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_obj
 \item[{String}]{title}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_afea2b7dc8ced6dababfd23381af7485d}
+
+
+Method for displaying a yes no question box 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message of the box\\
+\hline
+{\em title} & Title of the box\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the user answers \char`\"{}\+Yes\char`\"{}, False if \char`\"{}\+No\char`\"{}
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_af86a8726164ce830fa14f49160bb3f05}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object}!Evalute\+Java\+Script@{Evalute\+Java\+Script}}
 \index{Evalute\+Java\+Script@{Evalute\+Java\+Script}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object}}
 \subsubsection[{Evalute\+Java\+Script(\+String script)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Base\+Interaction\+Object.\+Evalute\+Java\+Script (
@@ -72,6 +127,15 @@ Chromium\+Web\+Browser \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_obj
 \item[{String}]{script}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_af86a8726164ce830fa14f49160bb3f05}
+
+
+Executes the given javascript in the browser 
+
+
+\begin{DoxyParams}{Parameters}
+{\em script} & Java\+Script Code to execute\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_acec4cefdd4842652a61bc0cb62746a0d}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object}!javascript\+Log@{javascript\+Log}}
 \index{javascript\+Log@{javascript\+Log}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object}}
 \subsubsection[{javascript\+Log(\+String message)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Base\+Interaction\+Object.\+javascript\+Log (
@@ -81,16 +145,33 @@ Chromium\+Web\+Browser \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_obj
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_acec4cefdd4842652a61bc0cb62746a0d}
 
 
+Used for logging to the javascript log file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_aa56933a7ca14c6251019e27c6ec97813}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object}!\+\_\+browser@{\+\_\+browser}}
 \index{\+\_\+browser@{\+\_\+browser}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object}}
 \subsubsection[{\+\_\+browser}]{\setlength{\rightskip}{0pt plus 5cm}Chromium\+Web\+Browser Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Base\+Interaction\+Object.\+\_\+browser = null\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_aa56933a7ca14c6251019e27c6ec97813}
 
 
+Reference to the chromium browser of the window 
+
+
+
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_aac4f2f8441547dc677f700485c295259}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object}!Browser@{Browser}}
 \index{Browser@{Browser}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Base\+Interaction\+Object}}
 \subsubsection[{Browser}]{\setlength{\rightskip}{0pt plus 5cm}Chromium\+Web\+Browser Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Base\+Interaction\+Object.\+Browser\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_base_interaction_object_aac4f2f8441547dc677f700485c295259}
+
+
+Getter / Setter for the chromium browser 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

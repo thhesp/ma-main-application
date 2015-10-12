@@ -17,9 +17,9 @@ Inheritance diagram for Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model\+:\
 \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a6be62a4dc74db08b88c80aa8603a06e2}{Eye\+Tracking\+Model} ()
 \begin{DoxyCompactList}\small\item\em Constructor which sets the E\+T\+Device Object and some Callbacks. \end{DoxyCompactList}\item 
 override \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2875208b4f4b0ed643593152f4ec025c}{Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a24496245bd949730f0f56d328ff74690}{connect} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Method for connecting to the eyetracker \end{DoxyCompactList}\item 
 override \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2875208b4f4b0ed643593152f4ec025c}{Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a8282209f61b0a45f09551ffe72cab136}{disconnect} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Used for disconnecting from the eyetracker. \end{DoxyCompactList}\item 
 override void \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a73bde5a5915a3a33a368e5bdf1b203ca}{start\+Tracking} ()
 \begin{DoxyCompactList}\small\item\em Starts the Tracking by setting the necessary callbacks. \end{DoxyCompactList}\item 
 override void \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_ae65a98fe8a1ccd24838f7af022edd174}{stop\+Tracking} ()
@@ -112,6 +112,15 @@ Callback function for calibration Data.
 )\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a24496245bd949730f0f56d328ff74690}
 
 
+Method for connecting to the eyetracker 
+
+\begin{DoxyReturn}{Returns}
+Information about the Connection Status
+\end{DoxyReturn}
+
+
+Uses the application settings for connecting. 
+
 Implements \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ae9cca2b18274747b70b51f0d1cc37532}{Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model}.
 
 \hypertarget{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a6e9342c234b6000ba68c03464acb0f50}{}\index{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model@{Web\+Analyzer\+::\+Eye\+Tracking\+::\+Eye\+Tracking\+Model}!connect@{connect}}
@@ -157,6 +166,13 @@ Method to connect to an \hyperlink{namespace_web_analyzer_1_1_eye_tracking}{Eye\
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a8282209f61b0a45f09551ffe72cab136}
+
+
+Used for disconnecting from the eyetracker. 
+
+\begin{DoxyReturn}{Returns}
+Returns the connection status
+\end{DoxyReturn}
 
 
 Implements \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1540c4d92ded2ce32aa485eafd9e3a12}{Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model}.

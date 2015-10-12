@@ -117,14 +117,17 @@ $(document).ready(function(){initNavTree('class_web_analyzer_1_1_models_1_1_algo
 <div class="title">WebAnalyzer.Models.AlgorithmModel.Algorithm Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Abstract base class for all algorithms  
+ <a href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for WebAnalyzer.Models.AlgorithmModel.Algorithm:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.png" usemap="#WebAnalyzer.Models.AlgorithmModel.Algorithm_map" alt=""/>
   <map id="WebAnalyzer.Models.AlgorithmModel.Algorithm_map" name="WebAnalyzer.Models.AlgorithmModel.Algorithm_map">
-<area href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_distance_algorithm.html" alt="WebAnalyzer.Models.AlgorithmModel.DistanceAlgorithm" shape="rect" coords="0,56,351,80"/>
-<area href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_i_view_events_algorithm.html" alt="WebAnalyzer.Models.AlgorithmModel.IViewEventsAlgorithm" shape="rect" coords="361,56,712,80"/>
+<area href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_distance_algorithm.html" title="Algorithm which calculates the distance between the gazes and generates fixations based on these dist..." alt="WebAnalyzer.Models.AlgorithmModel.DistanceAlgorithm" shape="rect" coords="0,56,351,80"/>
+<area href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_i_view_events_algorithm.html" title="Algorithm which uses the raw fixation events from the smi eyetracker " alt="WebAnalyzer.Models.AlgorithmModel.IViewEventsAlgorithm" shape="rect" coords="361,56,712,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -132,29 +135,40 @@ Inheritance diagram for WebAnalyzer.Models.AlgorithmModel.Algorithm:</div>
 Public Types</h2></td></tr>
 <tr class="memitem:a170e7786e033cbd0c09cabb30030794b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#a170e7786e033cbd0c09cabb30030794b">ALGORITHM_TYPES</a> { <a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#a170e7786e033cbd0c09cabb30030794bab06c2037eb7a58030a42212c8244d477">ALGORITHM_TYPES.DISTANCE</a>, 
 <a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#a170e7786e033cbd0c09cabb30030794bac26c9f91b65d50d7c790272029d7dd49">ALGORITHM_TYPES.IVIEW_EVENTS</a>
- }<tr class="separator:a170e7786e033cbd0c09cabb30030794b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+ }<tr class="memdesc:a170e7786e033cbd0c09cabb30030794b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of all implemented algorithms  <a href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#a170e7786e033cbd0c09cabb30030794b">More...</a><br /></td></tr>
+<tr class="separator:a170e7786e033cbd0c09cabb30030794b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aed9ae492d1851815f79d9b2f3361711e"><td class="memItemLeft" align="right" valign="top">abstract List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model.html">FixationModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#aed9ae492d1851815f79d9b2f3361711e">ExtractFixation</a> (List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a> &gt; positions, String eye)</td></tr>
+<tr class="memdesc:aed9ae492d1851815f79d9b2f3361711e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract base for the ExtractFixation Method  <a href="#aed9ae492d1851815f79d9b2f3361711e">More...</a><br /></td></tr>
 <tr class="separator:aed9ae492d1851815f79d9b2f3361711e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84b84152621c8e87b7068bcbfeeaa1f9"><td class="memItemLeft" align="right" valign="top">abstract XmlNode&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#a84b84152621c8e87b7068bcbfeeaa1f9">ToXML</a> (XmlDocument xmlDoc)</td></tr>
+<tr class="memdesc:a84b84152621c8e87b7068bcbfeeaa1f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for creating an xml representation of the algorithm  <a href="#a84b84152621c8e87b7068bcbfeeaa1f9">More...</a><br /></td></tr>
+<tr class="separator:a84b84152621c8e87b7068bcbfeeaa1f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6607203b63241b68e2e4180c97de9a0"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model.html">SaccadeModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#ac6607203b63241b68e2e4180c97de9a0">ExtractSaccades</a> (List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a> &gt; positions, String eye)</td></tr>
+<tr class="memdesc:ac6607203b63241b68e2e4180c97de9a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method which extracts all saccades  <a href="#ac6607203b63241b68e2e4180c97de9a0">More...</a><br /></td></tr>
 <tr class="separator:ac6607203b63241b68e2e4180c97de9a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:afbd5e3a6eb4bbcd142f6934ba6026b3b"><td class="memItemLeft" align="right" valign="top">double[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#afbd5e3a6eb4bbcd142f6934ba6026b3b">CalculateVector</a> (<a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a> gaze1, <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a> gaze2, String eye)</td></tr>
+<tr class="memdesc:afbd5e3a6eb4bbcd142f6934ba6026b3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the vector between to gazes for the given eye  <a href="#afbd5e3a6eb4bbcd142f6934ba6026b3b">More...</a><br /></td></tr>
 <tr class="separator:afbd5e3a6eb4bbcd142f6934ba6026b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a2a618988f6a538ed55deee35243ee4"><td class="memItemLeft" align="right" valign="top">Boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#a4a2a618988f6a538ed55deee35243ee4">CompareVectors</a> (double[] vector1, double[] vector2)</td></tr>
+<tr class="memdesc:a4a2a618988f6a538ed55deee35243ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two two dimensional vectors  <a href="#a4a2a618988f6a538ed55deee35243ee4">More...</a><br /></td></tr>
 <tr class="separator:a4a2a618988f6a538ed55deee35243ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a3ac55aacffefb5f2459f6b43b44a595b"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model.html">SaccadeModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#a3ac55aacffefb5f2459f6b43b44a595b">ExtractRealSaccades</a> (List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a> &gt; gazes, String eye)</td></tr>
+<tr class="memdesc:a3ac55aacffefb5f2459f6b43b44a595b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intern Method which extracts the real saccades for a subset of all gazes.  <a href="#a3ac55aacffefb5f2459f6b43b44a595b">More...</a><br /></td></tr>
 <tr class="separator:a3ac55aacffefb5f2459f6b43b44a595b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Abstract base class for all algorithms </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a170e7786e033cbd0c09cabb30030794b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -172,6 +186,8 @@ Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Enumeration of all implemented algorithms </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a170e7786e033cbd0c09cabb30030794bab06c2037eb7a58030a42212c8244d477"></a>DISTANCE&#160;</td><td class="fielddoc">
 </td></tr>
@@ -220,6 +236,17 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Calculates the vector between to gazes for the given eye </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gaze1</td><td>First gaze</td></tr>
+    <tr><td class="paramname">gaze2</td><td>Second gaze</td></tr>
+    <tr><td class="paramname">eye</td><td>String identifier for the eye</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector for a two dimensional realm</dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a4a2a618988f6a538ed55deee35243ee4"></a>
@@ -254,6 +281,16 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Compares two two dimensional vectors </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vector1</td><td>First vector</td></tr>
+    <tr><td class="paramname">vector2</td><td>Second vector</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the vectors are similar or not</dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="aed9ae492d1851815f79d9b2f3361711e"></a>
@@ -287,6 +324,16 @@ Private Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Abstract base for the ExtractFixation Method </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">positions</td><td>List of all gazes for this testrun</td></tr>
+    <tr><td class="paramname">eye</td><td>String identifier for the eye</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of Fixations</dd></dl>
 
 <p>Implemented in <a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_distance_algorithm.html#ab8e0d7ad96104e40eb8079d180d1aa0c">WebAnalyzer.Models.AlgorithmModel.DistanceAlgorithm</a>, and <a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_i_view_events_algorithm.html#aff1e838e0f623dbbeb6d856bffbf4b27">WebAnalyzer.Models.AlgorithmModel.IViewEventsAlgorithm</a>.</p>
 
@@ -324,6 +371,17 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Intern Method which extracts the real saccades for a subset of all gazes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gazes</td><td>List of gazes between to fixations</td></tr>
+    <tr><td class="paramname">eye</td><td>String identifier for the eye</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of Saccades</dd></dl>
+<p>Uses the vector of the saccades to determine which gazes contain to the same saccade and which don't. </p>
+
 </div>
 </div>
 <a class="anchor" id="ac6607203b63241b68e2e4180c97de9a0"></a>
@@ -349,6 +407,51 @@ Private Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Method which extracts all saccades </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">positions</td><td>List of all gazes for this testrun</td></tr>
+    <tr><td class="paramname">eye</td><td>String identifier for the eye</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of Saccades</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a84b84152621c8e87b7068bcbfeeaa1f9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract XmlNode WebAnalyzer.Models.AlgorithmModel.Algorithm.ToXML </td>
+          <td>(</td>
+          <td class="paramtype">XmlDocument&#160;</td>
+          <td class="paramname"><em>xmlDoc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method for creating an xml representation of the algorithm </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xmlDoc</td><td>XML Document which will contain the representation</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>XMLNode which contains the information about the algorithm</dd></dl>
+
+<p>Implemented in <a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_distance_algorithm.html#ad5882c45e12a53507c8c9ac86ad94776">WebAnalyzer.Models.AlgorithmModel.DistanceAlgorithm</a>, and <a class="el" href="class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_i_view_events_algorithm.html#aaac2b9b4e6b08e6b6628155ca4f4da7e">WebAnalyzer.Models.AlgorithmModel.IViewEventsAlgorithm</a>.</p>
 
 </div>
 </div>

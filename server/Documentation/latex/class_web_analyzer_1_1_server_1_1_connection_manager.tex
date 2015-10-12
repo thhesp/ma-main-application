@@ -1,62 +1,60 @@
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager}{}\section{Web\+Analyzer.\+Server.\+Connection\+Manager Class Reference}
 \label{class_web_analyzer_1_1_server_1_1_connection_manager}\index{Web\+Analyzer.\+Server.\+Connection\+Manager@{Web\+Analyzer.\+Server.\+Connection\+Manager}}
+
+
+Connection Manager which holds a list of all current connections.  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_ae034fe5148cccbcc759a56abd68bb51a}{Connection\+Manager} ()
-\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a7fa4617d21e13ed0302001e70ff0f79c}{Reset\+Connections} ()
-\item 
+\begin{DoxyCompactList}\small\item\em clears the list of connections \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a6f743e94d77ce575913e2c504cab5057}{Start\+Message\+Thread} ()
-\item 
+\begin{DoxyCompactList}\small\item\em starts the message sending thread \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a8cbad625ff934cf233a70ecc2af26d95}{Stop\+Message\+Thread} ()
-\item 
+\begin{DoxyCompactList}\small\item\em stops the message sending thread \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a2237bfa6cf4791e578b37e75624b70df}{Request\+Data} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af690ff5521d79c7128861033ae80ae17}{unique\+Id}, double left\+X, double left\+Y, double right\+X, double right\+Y)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an message for requesting the given data \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a8b3ba4008dc9ee54a092c532132df757}{Request\+Data} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af690ff5521d79c7128861033ae80ae17}{unique\+Id}, double x\+Pos, double y\+Pos)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an small message for requesting the given data \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a912992bce817cbf9177db239f7716a1e}{On\+\_\+\+Add\+Connection} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} source, \hyperlink{class_web_analyzer_1_1_events_1_1_add_connection_event}{Add\+Connection\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Adds the given connection to the list of connections \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Events}
 \begin{DoxyCompactItemize}
 \item 
 Message\+Sent\+Event\+Handler \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a2eb5de18882e69a65b4b7ce3ee458af1}{Message\+Sent}
-\item 
+\begin{DoxyCompactList}\small\item\em Handler which is used when a message was sent \end{DoxyCompactList}\item 
 Update\+W\+S\+Connection\+Count\+Event\+Handler \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_ab583440105517709081698d731b2bdcd}{Update\+W\+S\+Connection\+Count}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Handler used for triggering an update of the connection count \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a68db2e8493dd838aec226f40db1d5a6e}{Update\+Connection\+Count} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Checks if the connection count needs to be updated and if triggers the update event. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a802503ffd29cf9a18a2bfae95adc4b4e}{Broadcast} (\hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} message)
-\item 
+\begin{DoxyCompactList}\small\item\em Enqueues the data for all actives connections (should only be one) \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a773422b69490cf64139d8237a9122eaa}{Work\+Connection\+Message\+Queues} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Triggers the sending of a message for all connections \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a2c3ef15396b89a8ec145e62158348faf}{Remove\+Old\+Connections} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em removes all connections which aren\textquotesingle{}t connected anymore \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a23a1f3a046b14bcb1333c3ef846015d6}{\+\_\+work\+Messages} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
-\item 
+\begin{DoxyCompactList}\small\item\em Used for indicating if messages need to be sent \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Websocket\+Connection} $>$ \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a4d1d80f0e1bca824c36908efcc4f9dc0}{\+\_\+connections} = new List$<$\hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Websocket\+Connection}$>$()
-\item 
+\begin{DoxyCompactList}\small\item\em List of all open websocket connections \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_util_1_1_stopwatch_timer}{Stopwatch\+Timer} \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_aa639f32d7193a808bd9680359b325887}{timer}
-\item 
+\begin{DoxyCompactList}\small\item\em Timer for the message sending thread. \end{DoxyCompactList}\item 
 int \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a26374e3936745ea45ecf5f77e4d8884f}{\+\_\+last\+Connection\+Count} = 0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Count of the last connection count \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_ae034fe5148cccbcc759a56abd68bb51a}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Connection\+Manager@{Connection\+Manager}}
-\index{Connection\+Manager@{Connection\+Manager}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
-\subsubsection[{Connection\+Manager()}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Server.\+Connection\+Manager.\+Connection\+Manager (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_server_1_1_connection_manager_ae034fe5148cccbcc759a56abd68bb51a}
+\subsection{Detailed Description}
+Connection Manager which holds a list of all current connections. 
 
+Used for requesting data and managing all connections. 
 
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a802503ffd29cf9a18a2bfae95adc4b4e}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Broadcast@{Broadcast}}
@@ -66,6 +64,15 @@ int \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a26374e39367
 \item[{{\bf Message}}]{message}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a802503ffd29cf9a18a2bfae95adc4b4e}
+
+
+Enqueues the data for all actives connections (should only be one) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to broadcast\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a912992bce817cbf9177db239f7716a1e}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!On\+\_\+\+Add\+Connection@{On\+\_\+\+Add\+Connection}}
 \index{On\+\_\+\+Add\+Connection@{On\+\_\+\+Add\+Connection}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{On\+\_\+\+Add\+Connection(object source, Add\+Connection\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+On\+\_\+\+Add\+Connection (
@@ -74,6 +81,17 @@ int \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a26374e39367
 \item[{{\bf Add\+Connection\+Event}}]{e}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a912992bce817cbf9177db239f7716a1e}
+
+
+Adds the given connection to the list of connections 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Event sender\\
+\hline
+{\em e} & Event data with the connection\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a2c3ef15396b89a8ec145e62158348faf}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Remove\+Old\+Connections@{Remove\+Old\+Connections}}
 \index{Remove\+Old\+Connections@{Remove\+Old\+Connections}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{Remove\+Old\+Connections()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Remove\+Old\+Connections (
@@ -81,6 +99,10 @@ int \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a26374e39367
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a2c3ef15396b89a8ec145e62158348faf}
+
+
+removes all connections which aren\textquotesingle{}t connected anymore 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a2237bfa6cf4791e578b37e75624b70df}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Request\+Data@{Request\+Data}}
 \index{Request\+Data@{Request\+Data}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{Request\+Data(\+String unique\+Id, double left\+X, double left\+Y, double right\+X, double right\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Request\+Data (
@@ -92,6 +114,23 @@ int \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a26374e39367
 \item[{double}]{right\+Y}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a2237bfa6cf4791e578b37e75624b70df}
+
+
+Creates an message for requesting the given data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unique\+Id} & Unique\+I\+D of the gaze\\
+\hline
+{\em left\+X} & X coordinate for the left eye\\
+\hline
+{\em left\+Y} & Y coordinate for the left eye\\
+\hline
+{\em right\+X} & X coordinate for the right eye\\
+\hline
+{\em right\+Y} & Y coordinate for the right eye\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a8b3ba4008dc9ee54a092c532132df757}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Request\+Data@{Request\+Data}}
 \index{Request\+Data@{Request\+Data}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{Request\+Data(\+String unique\+Id, double x\+Pos, double y\+Pos)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Request\+Data (
@@ -101,6 +140,19 @@ int \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a26374e39367
 \item[{double}]{y\+Pos}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a8b3ba4008dc9ee54a092c532132df757}
+
+
+Creates an small message for requesting the given data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unique\+Id} & Unique\+I\+D of the gaze\\
+\hline
+{\em x\+Pos} & X coordinate\\
+\hline
+{\em y\+Pos} & Y coordinate\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a7fa4617d21e13ed0302001e70ff0f79c}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Reset\+Connections@{Reset\+Connections}}
 \index{Reset\+Connections@{Reset\+Connections}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{Reset\+Connections()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Reset\+Connections (
@@ -108,6 +160,10 @@ int \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a26374e39367
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a7fa4617d21e13ed0302001e70ff0f79c}
+
+
+clears the list of connections 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a6f743e94d77ce575913e2c504cab5057}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Start\+Message\+Thread@{Start\+Message\+Thread}}
 \index{Start\+Message\+Thread@{Start\+Message\+Thread}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{Start\+Message\+Thread()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Start\+Message\+Thread (
@@ -115,6 +171,10 @@ int \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a26374e39367
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a6f743e94d77ce575913e2c504cab5057}
+
+
+starts the message sending thread 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a8cbad625ff934cf233a70ecc2af26d95}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Stop\+Message\+Thread@{Stop\+Message\+Thread}}
 \index{Stop\+Message\+Thread@{Stop\+Message\+Thread}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{Stop\+Message\+Thread()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Stop\+Message\+Thread (
@@ -122,6 +182,10 @@ int \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a26374e39367
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a8cbad625ff934cf233a70ecc2af26d95}
+
+
+stops the message sending thread 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a68db2e8493dd838aec226f40db1d5a6e}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Update\+Connection\+Count@{Update\+Connection\+Count}}
 \index{Update\+Connection\+Count@{Update\+Connection\+Count}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{Update\+Connection\+Count()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Update\+Connection\+Count (
@@ -129,6 +193,10 @@ int \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a26374e39367
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a68db2e8493dd838aec226f40db1d5a6e}
+
+
+Checks if the connection count needs to be updated and if triggers the update event. 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a773422b69490cf64139d8237a9122eaa}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Work\+Connection\+Message\+Queues@{Work\+Connection\+Message\+Queues}}
 \index{Work\+Connection\+Message\+Queues@{Work\+Connection\+Message\+Queues}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{Work\+Connection\+Message\+Queues()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Connection\+Manager.\+Work\+Connection\+Message\+Queues (
@@ -138,28 +206,56 @@ int \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager_a26374e39367
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a773422b69490cf64139d8237a9122eaa}
 
 
+Triggers the sending of a message for all connections 
+
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a4d1d80f0e1bca824c36908efcc4f9dc0}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!\+\_\+connections@{\+\_\+connections}}
 \index{\+\_\+connections@{\+\_\+connections}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{\+\_\+connections}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Websocket\+Connection}$>$ Web\+Analyzer.\+Server.\+Connection\+Manager.\+\_\+connections = new List$<${\bf Websocket\+Connection}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a4d1d80f0e1bca824c36908efcc4f9dc0}
+
+
+List of all open websocket connections 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a26374e3936745ea45ecf5f77e4d8884f}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!\+\_\+last\+Connection\+Count@{\+\_\+last\+Connection\+Count}}
 \index{\+\_\+last\+Connection\+Count@{\+\_\+last\+Connection\+Count}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{\+\_\+last\+Connection\+Count}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Server.\+Connection\+Manager.\+\_\+last\+Connection\+Count = 0\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a26374e3936745ea45ecf5f77e4d8884f}
-\hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a23a1f3a046b14bcb1333c3ef846015d6}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!\+\_\+work\+Messages@{\+\_\+work\+Messages}}
+
+
+Count of the last connection count 
+
+Used for checking if an update in the ui is necessary or not. \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a23a1f3a046b14bcb1333c3ef846015d6}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!\+\_\+work\+Messages@{\+\_\+work\+Messages}}
 \index{\+\_\+work\+Messages@{\+\_\+work\+Messages}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{\+\_\+work\+Messages}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Connection\+Manager.\+\_\+work\+Messages = {\bf false}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a23a1f3a046b14bcb1333c3ef846015d6}
+
+
+Used for indicating if messages need to be sent 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_aa639f32d7193a808bd9680359b325887}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!timer@{timer}}
 \index{timer@{timer}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{timer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Stopwatch\+Timer} Web\+Analyzer.\+Server.\+Connection\+Manager.\+timer\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_connection_manager_aa639f32d7193a808bd9680359b325887}
+
+
+Timer for the message sending thread. 
+
 
 
 \subsection{Event Documentation}
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_a2eb5de18882e69a65b4b7ce3ee458af1}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Message\+Sent@{Message\+Sent}}
 \index{Message\+Sent@{Message\+Sent}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{Message\+Sent}]{\setlength{\rightskip}{0pt plus 5cm}Message\+Sent\+Event\+Handler Web\+Analyzer.\+Server.\+Connection\+Manager.\+Message\+Sent}\label{class_web_analyzer_1_1_server_1_1_connection_manager_a2eb5de18882e69a65b4b7ce3ee458af1}
+
+
+Handler which is used when a message was sent 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_connection_manager_ab583440105517709081698d731b2bdcd}{}\index{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}!Update\+W\+S\+Connection\+Count@{Update\+W\+S\+Connection\+Count}}
 \index{Update\+W\+S\+Connection\+Count@{Update\+W\+S\+Connection\+Count}!Web\+Analyzer\+::\+Server\+::\+Connection\+Manager@{Web\+Analyzer\+::\+Server\+::\+Connection\+Manager}}
 \subsubsection[{Update\+W\+S\+Connection\+Count}]{\setlength{\rightskip}{0pt plus 5cm}Update\+W\+S\+Connection\+Count\+Event\+Handler Web\+Analyzer.\+Server.\+Connection\+Manager.\+Update\+W\+S\+Connection\+Count}\label{class_web_analyzer_1_1_server_1_1_connection_manager_ab583440105517709081698d731b2bdcd}
+
+
+Handler used for triggering an update of the connection count 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

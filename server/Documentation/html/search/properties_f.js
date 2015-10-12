@@ -8,6 +8,7 @@ var searchData=
   ['serverreceived',['ServerReceived',['../class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message.html#ae6ff5467025cab4867de27d450d48c55',1,'WebAnalyzer::Models::MessageModel::InDataMessage']]],
   ['serverreceivedtimestamp',['ServerReceivedTimestamp',['../class_web_analyzer_1_1_models_1_1_base_1_1_basic_data.html#ad2317294c8861a75447de02e23886999',1,'WebAnalyzer::Models::Base::BasicData']]],
   ['serversenttimestamp',['ServerSentTimestamp',['../class_web_analyzer_1_1_models_1_1_base_1_1_basic_data.html#af2791f5084f56826a6d6987e3a939c94',1,'WebAnalyzer::Models::Base::BasicData']]],
+  ['servicescheckintervall',['ServicesCheckIntervall',['../class_web_analyzer_1_1_properties_1_1_settings.html#a66420ac2f6c7a2eb88499bb9978b7d63',1,'WebAnalyzer::Properties::Settings']]],
   ['settings',['Settings',['../class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model.html#a00e6e2b80147ab73fc0eee0e7c20d856',1,'WebAnalyzer::Models::Base::ExperimentModel']]],
   ['settingsfilename',['SettingsFilename',['../class_web_analyzer_1_1_properties_1_1_settings.html#ad083097d959dff8a09359e19f6524982',1,'WebAnalyzer::Properties::Settings']]],
   ['sex',['Sex',['../class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant.html#af836bfc33d73671eec06864ce395b9a2',1,'WebAnalyzer::Models::Base::ExperimentParticipant']]],

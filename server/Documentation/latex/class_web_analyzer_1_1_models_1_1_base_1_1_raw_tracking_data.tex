@@ -1,37 +1,47 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data}{}\section{Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Data Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data}\index{Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Data@{Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Data}}
+
+
+Class for all raw data  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event}{Raw\+Tracking\+Event} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_a7b99eb9ecc19bc3dc012deecb687dc70}{Get\+Events\+For\+Eye} (String eye)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns all events for the eye \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event}{Raw\+Tracking\+Event} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_ab3a2654d87bb9a265b4f58ee3eddc7a5}{Get\+Fixations\+For\+Eye} (String eye)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns all fixations for the given eye \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_ab923bf3a6c112dacfbfe7b81cd45cc17}{Add\+Event} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event}{Raw\+Tracking\+Event} raw\+Event)
-\item 
+\begin{DoxyCompactList}\small\item\em Adds raw event to the list of raw events \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_ad49451f7a582a47999c85666dd4ed879}{Add\+Raw\+Gaze} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} left\+Eye, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} right\+Eye)
-\item 
+\begin{DoxyCompactList}\small\item\em Adds raw gaze to the list of raw gazes \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_ae75cfde7e7b9a1e236b99c3f07f7487e}{To\+X\+M\+L} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant, Xml\+Document xml\+Doc)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an xml representation of the object \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data}{Raw\+Tracking\+Data} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_a9fb7d2281fb635efb2779dc6e502cb9e}{Load\+From\+X\+M\+L} (Xml\+Document doc)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an object from X\+M\+L \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze}{Raw\+Tracking\+Gaze} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_a709969dfa88f800747d1bbabbdfb334e}{Gazes}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the raw gazes \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event}{Raw\+Tracking\+Event} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_a288234f675cdfe067ec0667aa2be36c3}{Events}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the raw events \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze}{Raw\+Tracking\+Gaze} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_a74e9bb3eb14735e880cb53a28483538a}{\+\_\+gazes} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_gaze}{Raw\+Tracking\+Gaze}$>$()
-\item 
+\begin{DoxyCompactList}\small\item\em List of raw gazes \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event}{Raw\+Tracking\+Event} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_ab00b8549401b2116e14913d21c271322}{\+\_\+events} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event}{Raw\+Tracking\+Event}$>$()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em List of raw events \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for all raw data 
+
 
 
 \subsection{Member Function Documentation}
@@ -42,6 +52,15 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event
 \item[{{\bf Raw\+Tracking\+Event}}]{raw\+Event}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_ab923bf3a6c112dacfbfe7b81cd45cc17}
+
+
+Adds raw event to the list of raw events 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+Event} & Event to add\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_ad49451f7a582a47999c85666dd4ed879}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}!Add\+Raw\+Gaze@{Add\+Raw\+Gaze}}
 \index{Add\+Raw\+Gaze@{Add\+Raw\+Gaze}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}}
 \subsubsection[{Add\+Raw\+Gaze(\+Base\+Tracking\+Data left\+Eye, Base\+Tracking\+Data right\+Eye)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Data.\+Add\+Raw\+Gaze (
@@ -50,6 +69,17 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event
 \item[{{\bf Base\+Tracking\+Data}}]{right\+Eye}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_ad49451f7a582a47999c85666dd4ed879}
+
+
+Adds raw gaze to the list of raw gazes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left\+Eye} & Data for the left eye\\
+\hline
+{\em right\+Eye} & Data for the right eye\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_a7b99eb9ecc19bc3dc012deecb687dc70}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}!Get\+Events\+For\+Eye@{Get\+Events\+For\+Eye}}
 \index{Get\+Events\+For\+Eye@{Get\+Events\+For\+Eye}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}}
 \subsubsection[{Get\+Events\+For\+Eye(\+String eye)}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Raw\+Tracking\+Event}$>$ Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Data.\+Get\+Events\+For\+Eye (
@@ -57,6 +87,18 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event
 \item[{String}]{eye}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_a7b99eb9ecc19bc3dc012deecb687dc70}
+
+
+Returns all events for the eye 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eye} & String for the eye\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of raw events
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_ab3a2654d87bb9a265b4f58ee3eddc7a5}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}!Get\+Fixations\+For\+Eye@{Get\+Fixations\+For\+Eye}}
 \index{Get\+Fixations\+For\+Eye@{Get\+Fixations\+For\+Eye}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}}
 \subsubsection[{Get\+Fixations\+For\+Eye(\+String eye)}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Raw\+Tracking\+Event}$>$ Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Data.\+Get\+Fixations\+For\+Eye (
@@ -64,6 +106,18 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event
 \item[{String}]{eye}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_ab3a2654d87bb9a265b4f58ee3eddc7a5}
+
+
+Returns all fixations for the given eye 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eye} & String representation of the eye\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of raw events
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_a9fb7d2281fb635efb2779dc6e502cb9e}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}!Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}}
 \index{Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}}
 \subsubsection[{Load\+From\+X\+M\+L(\+Xml\+Document doc)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Raw\+Tracking\+Data} Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Data.\+Load\+From\+X\+M\+L (
@@ -71,6 +125,18 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event
 \item[{Xml\+Document}]{doc}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_a9fb7d2281fb635efb2779dc6e502cb9e}
+
+
+Creates an object from X\+M\+L 
+
+
+\begin{DoxyParams}{Parameters}
+{\em doc} & X\+M\+L Document which contains the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded object
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_ae75cfde7e7b9a1e236b99c3f07f7487e}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}!To\+X\+M\+L@{To\+X\+M\+L}}
 \index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}}
 \subsubsection[{To\+X\+M\+L(\+Experiment\+Participant participant, Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Data.\+To\+X\+M\+L (
@@ -81,22 +147,52 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_ae75cfde7e7b9a1e236b99c3f07f7487e}
 
 
+Creates an xml representation of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em participant} & Participant to which the rwa tracking data belongs\\
+\hline
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_ab00b8549401b2116e14913d21c271322}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}!\+\_\+events@{\+\_\+events}}
 \index{\+\_\+events@{\+\_\+events}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}}
 \subsubsection[{\+\_\+events}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Raw\+Tracking\+Event}$>$ Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Data.\+\_\+events = new List$<${\bf Raw\+Tracking\+Event}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_ab00b8549401b2116e14913d21c271322}
+
+
+List of raw events 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_a74e9bb3eb14735e880cb53a28483538a}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}!\+\_\+gazes@{\+\_\+gazes}}
 \index{\+\_\+gazes@{\+\_\+gazes}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}}
 \subsubsection[{\+\_\+gazes}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Raw\+Tracking\+Gaze}$>$ Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Data.\+\_\+gazes = new List$<${\bf Raw\+Tracking\+Gaze}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_a74e9bb3eb14735e880cb53a28483538a}
+
+
+List of raw gazes 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_a288234f675cdfe067ec0667aa2be36c3}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}!Events@{Events}}
 \index{Events@{Events}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}}
 \subsubsection[{Events}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Raw\+Tracking\+Event}$>$ Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Data.\+Events\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_a288234f675cdfe067ec0667aa2be36c3}
+
+
+Getter/ Setter for the raw events 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_a709969dfa88f800747d1bbabbdfb334e}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}!Gazes@{Gazes}}
 \index{Gazes@{Gazes}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Raw\+Tracking\+Data}}
 \subsubsection[{Gazes}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Raw\+Tracking\+Gaze}$>$ Web\+Analyzer.\+Models.\+Base.\+Raw\+Tracking\+Data.\+Gazes\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data_a709969dfa88f800747d1bbabbdfb334e}
+
+
+Getter/ Setter for the raw gazes 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

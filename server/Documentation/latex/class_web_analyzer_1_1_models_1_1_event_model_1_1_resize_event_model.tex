@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model}{}\section{Web\+Analyzer.\+Models.\+Event\+Model.\+Resize\+Event\+Model Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model}\index{Web\+Analyzer.\+Models.\+Event\+Model.\+Resize\+Event\+Model@{Web\+Analyzer.\+Models.\+Event\+Model.\+Resize\+Event\+Model}}
+
+
+Class for representing browser resize events  
+
+
 Inheritance diagram for Web\+Analyzer.\+Models.\+Event\+Model.\+Resize\+Event\+Model\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,31 +15,36 @@ Inheritance diagram for Web\+Analyzer.\+Models.\+Event\+Model.\+Resize\+Event\+M
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_ae60fbe903d44770db6d6f3999658eca2}{Resize\+Event\+Model} (int window\+Height, int window\+Width, String server\+Received\+Timestamp)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_ac851f00528b0f87058e64b64945e464e}{Resize\+Event\+Model} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor for loading from the xml \end{DoxyCompactList}\item 
 override Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_a55f5533548b548490cfb7342f075f8e0}{To\+X\+M\+L} (Xml\+Document xml\+Doc)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an xml representation of the object \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model}{Resize\+Event\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_a85d357e36f33991ea33642934eb98463}{Load\+From\+X\+M\+L} (Xml\+Node event\+Node)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an object from X\+M\+L \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 int \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_a4af3fc44a8ef02d431323fc2bce6c2e6}{Window\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the window width \end{DoxyCompactList}\item 
 int \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_ad65a672d91446cf683d40bbe83cd6c0b}{Window\+Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the window height \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 int \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_a57e07c8f4dfe09d8ad8213760600e260}{\+\_\+window\+Width} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em Window width \end{DoxyCompactList}\item 
 int \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_ac7bc177aeb68fc0033b9d6f9061afc46}{\+\_\+window\+Height} = 0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Window height \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class for representing browser resize events 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -47,6 +57,19 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_mo
 \item[{String}]{server\+Received\+Timestamp}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_ae60fbe903d44770db6d6f3999658eca2}
+
+
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+Height} & window height\\
+\hline
+{\em window\+Width} & window width\\
+\hline
+{\em server\+Received\+Timestamp} & Timestamp when the server received the event\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_ac851f00528b0f87058e64b64945e464e}{}\index{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model}!Resize\+Event\+Model@{Resize\+Event\+Model}}
 \index{Resize\+Event\+Model@{Resize\+Event\+Model}!Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model}}
 \subsubsection[{Resize\+Event\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Event\+Model.\+Resize\+Event\+Model.\+Resize\+Event\+Model (
@@ -54,6 +77,10 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_mo
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_ac851f00528b0f87058e64b64945e464e}
+
+
+Constructor for loading from the xml 
+
 
 
 \subsection{Member Function Documentation}
@@ -64,6 +91,18 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_mo
 \item[{Xml\+Node}]{event\+Node}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_a85d357e36f33991ea33642934eb98463}
+
+
+Creates an object from X\+M\+L 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Node} & The node which contains the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded object
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_a55f5533548b548490cfb7342f075f8e0}{}\index{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model}!To\+X\+M\+L@{To\+X\+M\+L}}
 \index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model}}
 \subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}override Xml\+Node Web\+Analyzer.\+Models.\+Event\+Model.\+Resize\+Event\+Model.\+To\+X\+M\+L (
@@ -71,6 +110,18 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_mo
 \item[{Xml\+Document}]{xml\+Doc}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_a55f5533548b548490cfb7342f075f8e0}
+
+
+Creates an xml representation of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 Implements \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_base_event_model_a8e39cb407315d0f6eca3fb8e854e8dba}{Web\+Analyzer.\+Models.\+Event\+Model.\+Base\+Event\+Model}.
@@ -81,18 +132,34 @@ Implements \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_base_eve
 \hypertarget{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_ac7bc177aeb68fc0033b9d6f9061afc46}{}\index{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model}!\+\_\+window\+Height@{\+\_\+window\+Height}}
 \index{\+\_\+window\+Height@{\+\_\+window\+Height}!Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model}}
 \subsubsection[{\+\_\+window\+Height}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Event\+Model.\+Resize\+Event\+Model.\+\_\+window\+Height = 0\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_ac7bc177aeb68fc0033b9d6f9061afc46}
+
+
+Window height 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_a57e07c8f4dfe09d8ad8213760600e260}{}\index{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model}!\+\_\+window\+Width@{\+\_\+window\+Width}}
 \index{\+\_\+window\+Width@{\+\_\+window\+Width}!Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model}}
 \subsubsection[{\+\_\+window\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Event\+Model.\+Resize\+Event\+Model.\+\_\+window\+Width = 0\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_a57e07c8f4dfe09d8ad8213760600e260}
+
+
+Window width 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_ad65a672d91446cf683d40bbe83cd6c0b}{}\index{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model}!Window\+Height@{Window\+Height}}
 \index{Window\+Height@{Window\+Height}!Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model}}
 \subsubsection[{Window\+Height}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Event\+Model.\+Resize\+Event\+Model.\+Window\+Height\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_ad65a672d91446cf683d40bbe83cd6c0b}
+
+
+Getter/ Setter for the window height 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_a4af3fc44a8ef02d431323fc2bce6c2e6}{}\index{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model}!Window\+Width@{Window\+Width}}
 \index{Window\+Width@{Window\+Width}!Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Resize\+Event\+Model}}
 \subsubsection[{Window\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Event\+Model.\+Resize\+Event\+Model.\+Window\+Width\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_event_model_1_1_resize_event_model_a4af3fc44a8ef02d431323fc2bce6c2e6}
+
+
+Getter/ Setter for the window width 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

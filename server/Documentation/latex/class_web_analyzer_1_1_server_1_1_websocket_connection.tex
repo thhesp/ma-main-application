@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection}{}\section{Web\+Analyzer.\+Server.\+Websocket\+Connection Class Reference}
 \label{class_web_analyzer_1_1_server_1_1_websocket_connection}\index{Web\+Analyzer.\+Server.\+Websocket\+Connection@{Web\+Analyzer.\+Server.\+Websocket\+Connection}}
+
+
+The websocket connection class  
+
+
 Inheritance diagram for Web\+Analyzer.\+Server.\+Websocket\+Connection\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,46 +15,49 @@ Inheritance diagram for Web\+Analyzer.\+Server.\+Websocket\+Connection\+:\begin{
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_af4ada0b7f2d032ad42da1d9238619ebd}{Websocket\+Connection} (Web\+Socket ws)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor for the connection \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a0450a1a608d5dcb62bddfe2a75aee305}{Enqueue\+Message} (\hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} message)
-\item 
+\begin{DoxyCompactList}\small\item\em Adds the given message to the list \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a325a5138c2af5d5296360cf0abdd1942}{work\+Message\+Queue} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Tries to send the next message from the list \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 I\+Observable$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} $>$ \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_aaff532a55d94eaddd75a2619da307c6a}{In}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Messages which are received on this connection \end{DoxyCompactList}\item 
 I\+Observer$<$ String $>$ \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a1f0be7b1ff80c5b742204d0883157578}{Out}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Messages which are sent over this connection \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a54d71b7e50589c027fff5441dea6ca54}{Is\+Connected}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Checks if the websocket is connected \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a973edb4f0e5e1644f551bf132ae77183}{Writing}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/\+Setter if the connection is currently sending a message \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_af64b83d9aec7d436a262f732e3b03e0b}{Active}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/\+Setter if the connection is currently active \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} $>$ \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a0351f67ba0d69e6d5701ef34395e0a59}{Message\+Queue}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The list of messages which still need to be sent \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a734b1ec862ae9693901fa28b99c03922}{$\sim$\+Websocket\+Connection} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destructor \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_ab856bbd336338d41ea2196df96a39521}{remove\+Old\+Messages} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Removes all messages which are to old. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 readonly Web\+Socket \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a8b3efea13ab70fe8a5c866930ef7a263}{\+\_\+ws}
-\item 
+\begin{DoxyCompactList}\small\item\em The websocket \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} $>$ \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a876416b6c825d37d39ec966b022883b3}{\+\_\+message\+Queue}
-\item 
-String \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_add4db0c0ee59a7f22c8f2638099e3217}{\+\_\+uid}
-\item 
+\begin{DoxyCompactList}\small\item\em The list of messages which need to be sent \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_aad4b4619cdb766c16e900ee792fd2fc8}{\+\_\+active} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
-\item 
+\begin{DoxyCompactList}\small\item\em Flag if the connection is active \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a19b519a7ec81f0898724fcdefb8c6f62}{\+\_\+writing} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Flag if currently a message is being sent \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The websocket connection class 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -60,6 +68,15 @@ Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a19b51
 \item[{Web\+Socket}]{ws}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_af4ada0b7f2d032ad42da1d9238619ebd}
+
+
+Constructor for the connection 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ws} & The websocket\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a734b1ec862ae9693901fa28b99c03922}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!````~Websocket\+Connection@{$\sim$\+Websocket\+Connection}}
 \index{````~Websocket\+Connection@{$\sim$\+Websocket\+Connection}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{$\sim$\+Websocket\+Connection()}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Server.\+Websocket\+Connection.$\sim$\+Websocket\+Connection (
@@ -67,6 +84,10 @@ Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a19b51
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a734b1ec862ae9693901fa28b99c03922}
+
+
+Destructor 
+
 
 
 \subsection{Member Function Documentation}
@@ -77,6 +98,15 @@ Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a19b51
 \item[{{\bf Message}}]{message}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a0450a1a608d5dcb62bddfe2a75aee305}
+
+
+Adds the given message to the list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to be added\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_ab856bbd336338d41ea2196df96a39521}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!remove\+Old\+Messages@{remove\+Old\+Messages}}
 \index{remove\+Old\+Messages@{remove\+Old\+Messages}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{remove\+Old\+Messages()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Websocket\+Connection.\+remove\+Old\+Messages (
@@ -84,6 +114,10 @@ Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a19b51
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_ab856bbd336338d41ea2196df96a39521}
+
+
+Removes all messages which are to old. 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a325a5138c2af5d5296360cf0abdd1942}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!work\+Message\+Queue@{work\+Message\+Queue}}
 \index{work\+Message\+Queue@{work\+Message\+Queue}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{work\+Message\+Queue()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Websocket\+Connection.\+work\+Message\+Queue (
@@ -93,43 +127,84 @@ Boolean \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection_a19b51
 )}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a325a5138c2af5d5296360cf0abdd1942}
 
 
+Tries to send the next message from the list 
+
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_aad4b4619cdb766c16e900ee792fd2fc8}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!\+\_\+active@{\+\_\+active}}
 \index{\+\_\+active@{\+\_\+active}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{\+\_\+active}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Websocket\+Connection.\+\_\+active = {\bf false}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_aad4b4619cdb766c16e900ee792fd2fc8}
+
+
+Flag if the connection is active 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a876416b6c825d37d39ec966b022883b3}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!\+\_\+message\+Queue@{\+\_\+message\+Queue}}
 \index{\+\_\+message\+Queue@{\+\_\+message\+Queue}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{\+\_\+message\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Message}$>$ Web\+Analyzer.\+Server.\+Websocket\+Connection.\+\_\+message\+Queue\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a876416b6c825d37d39ec966b022883b3}
-\hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_add4db0c0ee59a7f22c8f2638099e3217}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!\+\_\+uid@{\+\_\+uid}}
-\index{\+\_\+uid@{\+\_\+uid}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
-\subsubsection[{\+\_\+uid}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Server.\+Websocket\+Connection.\+\_\+uid\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_add4db0c0ee59a7f22c8f2638099e3217}
+
+
+The list of messages which need to be sent 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a19b519a7ec81f0898724fcdefb8c6f62}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!\+\_\+writing@{\+\_\+writing}}
 \index{\+\_\+writing@{\+\_\+writing}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{\+\_\+writing}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Websocket\+Connection.\+\_\+writing = {\bf false}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a19b519a7ec81f0898724fcdefb8c6f62}
+
+
+Flag if currently a message is being sent 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a8b3efea13ab70fe8a5c866930ef7a263}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!\+\_\+ws@{\+\_\+ws}}
 \index{\+\_\+ws@{\+\_\+ws}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{\+\_\+ws}]{\setlength{\rightskip}{0pt plus 5cm}readonly Web\+Socket Web\+Analyzer.\+Server.\+Websocket\+Connection.\+\_\+ws\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a8b3efea13ab70fe8a5c866930ef7a263}
+
+
+The websocket 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_af64b83d9aec7d436a262f732e3b03e0b}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!Active@{Active}}
 \index{Active@{Active}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{Active}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Websocket\+Connection.\+Active\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_af64b83d9aec7d436a262f732e3b03e0b}
+
+
+Getter/\+Setter if the connection is currently active 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_aaff532a55d94eaddd75a2619da307c6a}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!In@{In}}
 \index{In@{In}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{In}]{\setlength{\rightskip}{0pt plus 5cm}I\+Observable$<${\bf Message}$>$ Web\+Analyzer.\+Server.\+Websocket\+Connection.\+In\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_aaff532a55d94eaddd75a2619da307c6a}
+
+
+Messages which are received on this connection 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a54d71b7e50589c027fff5441dea6ca54}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!Is\+Connected@{Is\+Connected}}
 \index{Is\+Connected@{Is\+Connected}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{Is\+Connected}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Websocket\+Connection.\+Is\+Connected\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a54d71b7e50589c027fff5441dea6ca54}
+
+
+Checks if the websocket is connected 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a0351f67ba0d69e6d5701ef34395e0a59}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!Message\+Queue@{Message\+Queue}}
 \index{Message\+Queue@{Message\+Queue}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{Message\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Message}$>$ Web\+Analyzer.\+Server.\+Websocket\+Connection.\+Message\+Queue\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a0351f67ba0d69e6d5701ef34395e0a59}
+
+
+The list of messages which still need to be sent 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a1f0be7b1ff80c5b742204d0883157578}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!Out@{Out}}
 \index{Out@{Out}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{Out}]{\setlength{\rightskip}{0pt plus 5cm}I\+Observer$<$String$>$ Web\+Analyzer.\+Server.\+Websocket\+Connection.\+Out\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a1f0be7b1ff80c5b742204d0883157578}
+
+
+Messages which are sent over this connection 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connection_a973edb4f0e5e1644f551bf132ae77183}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}!Writing@{Writing}}
 \index{Writing@{Writing}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connection}}
 \subsubsection[{Writing}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Server.\+Websocket\+Connection.\+Writing\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connection_a973edb4f0e5e1644f551bf132ae77183}
+
+
+Getter/\+Setter if the connection is currently sending a message 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

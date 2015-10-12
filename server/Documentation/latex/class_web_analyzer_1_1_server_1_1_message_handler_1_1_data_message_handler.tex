@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler}{}\section{Web\+Analyzer.\+Server.\+Message\+Handler.\+Data\+Message\+Handler Class Reference}
 \label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler}\index{Web\+Analyzer.\+Server.\+Message\+Handler.\+Data\+Message\+Handler@{Web\+Analyzer.\+Server.\+Message\+Handler.\+Data\+Message\+Handler}}
+
+
+\hyperlink{namespace_web_analyzer_1_1_server_1_1_message_handler}{Message\+Handler} for Data messages  
+
+
 Inheritance diagram for Web\+Analyzer.\+Server.\+Message\+Handler.\+Data\+Message\+Handler\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,25 +15,30 @@ Inheritance diagram for Web\+Analyzer.\+Server.\+Message\+Handler.\+Data\+Messag
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_a5fe3823e540e3dbecaf9899d81ce8074}{Data\+Message\+Handler} (\hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller}{Test\+Controller} controller, \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Websocket\+Connection} connection)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor with the websocket connection and the test controller \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_a6604e45715842b5c95ec421de45cf2cc}{On\+Completed} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Method which gets called once the processing of the message is completed. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_aa93b7e36208ccfd2253985652accc2c9}{On\+Error} (Exception error)
-\item 
+\begin{DoxyCompactList}\small\item\em Method which gets called if an error occurs while processing the message. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_a30be217815bd3c9f1bd1550ec72be01d}{On\+Next} (Object omsg\+In)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method used for processing the message \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_a374dcd61092a8d072dac4a806d4148ad}{Extract\+Gaze\+Data} (\hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message}{In\+Data\+Message} msg\+In)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Loads the gaze model for the uniqueid of the data message with the help of the testcontroller \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 readonly \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Websocket\+Connection} \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_a7699c0f75aee40ba03a6be8ea3592df8}{\+\_\+connection}
-\item 
+\begin{DoxyCompactList}\small\item\em Readonly reference to the websocket connection \end{DoxyCompactList}\item 
 readonly \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller}{Test\+Controller} \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_ae67a8ffd73f0ae8ff422db335a7e7924}{\+\_\+controller}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Readonly reference to the testcontroller used for sending data \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{namespace_web_analyzer_1_1_server_1_1_message_handler}{Message\+Handler} for Data messages 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -42,6 +52,17 @@ readonly \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller}{Test\
 )}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_a5fe3823e540e3dbecaf9899d81ce8074}
 
 
+Constructor with the websocket connection and the test controller 
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller} & The testcontroller\\
+\hline
+{\em connection} & The connection which received the message\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_a374dcd61092a8d072dac4a806d4148ad}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler}!Extract\+Gaze\+Data@{Extract\+Gaze\+Data}}
 \index{Extract\+Gaze\+Data@{Extract\+Gaze\+Data}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler}}
@@ -50,6 +71,18 @@ readonly \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller}{Test\
 \item[{{\bf In\+Data\+Message}}]{msg\+In}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_a374dcd61092a8d072dac4a806d4148ad}
+
+
+Loads the gaze model for the uniqueid of the data message with the help of the testcontroller 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg\+In} & The data Message\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The corresponding gaze model
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_a6604e45715842b5c95ec421de45cf2cc}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler}!On\+Completed@{On\+Completed}}
 \index{On\+Completed@{On\+Completed}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler}}
 \subsubsection[{On\+Completed()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Message\+Handler.\+Data\+Message\+Handler.\+On\+Completed (
@@ -57,6 +90,10 @@ readonly \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller}{Test\
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_a6604e45715842b5c95ec421de45cf2cc}
+
+
+Method which gets called once the processing of the message is completed. 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_aa93b7e36208ccfd2253985652accc2c9}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler}!On\+Error@{On\+Error}}
 \index{On\+Error@{On\+Error}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler}}
 \subsubsection[{On\+Error(\+Exception error)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Message\+Handler.\+Data\+Message\+Handler.\+On\+Error (
@@ -64,6 +101,15 @@ readonly \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller}{Test\
 \item[{Exception}]{error}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_aa93b7e36208ccfd2253985652accc2c9}
+
+
+Method which gets called if an error occurs while processing the message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & Errorexception which occured\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_a30be217815bd3c9f1bd1550ec72be01d}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler}!On\+Next@{On\+Next}}
 \index{On\+Next@{On\+Next}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler}}
 \subsubsection[{On\+Next(\+Object omsg\+In)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Message\+Handler.\+Data\+Message\+Handler.\+On\+Next (
@@ -73,13 +119,30 @@ readonly \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller}{Test\
 )}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_a30be217815bd3c9f1bd1550ec72be01d}
 
 
+Method used for processing the message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em omsg\+In} & The Message which was received\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_a7699c0f75aee40ba03a6be8ea3592df8}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler}!\+\_\+connection@{\+\_\+connection}}
 \index{\+\_\+connection@{\+\_\+connection}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler}}
 \subsubsection[{\+\_\+connection}]{\setlength{\rightskip}{0pt plus 5cm}readonly {\bf Websocket\+Connection} Web\+Analyzer.\+Server.\+Message\+Handler.\+Data\+Message\+Handler.\+\_\+connection\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_a7699c0f75aee40ba03a6be8ea3592df8}
+
+
+Readonly reference to the websocket connection 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_ae67a8ffd73f0ae8ff422db335a7e7924}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler}!\+\_\+controller@{\+\_\+controller}}
 \index{\+\_\+controller@{\+\_\+controller}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Data\+Message\+Handler}}
 \subsubsection[{\+\_\+controller}]{\setlength{\rightskip}{0pt plus 5cm}readonly {\bf Test\+Controller} Web\+Analyzer.\+Server.\+Message\+Handler.\+Data\+Message\+Handler.\+\_\+controller\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler_ae67a8ffd73f0ae8ff422db335a7e7924}
+
+
+Readonly reference to the testcontroller used for sending data 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

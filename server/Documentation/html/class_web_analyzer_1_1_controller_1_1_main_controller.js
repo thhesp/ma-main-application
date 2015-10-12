@@ -16,6 +16,7 @@ var class_web_analyzer_1_1_controller_1_1_main_controller =
     [ "On_TestrunEvent", "class_web_analyzer_1_1_controller_1_1_main_controller.html#a8f86c27064bd088e28cf0aa0308bda2b", null ],
     [ "On_TriggerSave", "class_web_analyzer_1_1_controller_1_1_main_controller.html#aadab56b24729cdfeeac6474825289c83", null ],
     [ "On_UpdateConnectionCount", "class_web_analyzer_1_1_controller_1_1_main_controller.html#aa5f17af11b8604a5bb8d78d3f7ec5d7a", null ],
+    [ "On_UpdateServiceStati", "class_web_analyzer_1_1_controller_1_1_main_controller.html#a6c6a8a0a61003fb31ac7f1a64813d4cc", null ],
     [ "RefreshMainUI", "class_web_analyzer_1_1_controller_1_1_main_controller.html#adaf2d5b304f6a713b9f08c9b4c7a6b62", null ],
     [ "SetConnectionStati", "class_web_analyzer_1_1_controller_1_1_main_controller.html#af163fb2f694b612e5bf4a854f09b119f", null ],
     [ "SetExpiermentData", "class_web_analyzer_1_1_controller_1_1_main_controller.html#a9834e917d2a61f4d5adb424ed76e0622", null ],

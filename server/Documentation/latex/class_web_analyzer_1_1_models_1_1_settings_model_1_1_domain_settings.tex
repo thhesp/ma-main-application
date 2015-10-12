@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings}{}\section{Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings}\index{Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings@{Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings}}
+
+
+Class which represents all settings for the domain  
+
+
 Inheritance diagram for Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,52 +15,57 @@ Inheritance diagram for Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Setti
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a8ffad3f7b78462d687db4f95dd484953}{Domain\+Settings} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Empty Constructor used for loading from xml \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_af6797984cc6e12c59f276558864db719}{Domain\+Settings} (String domain)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor for the domain setting \end{DoxyCompactList}\item 
 String\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a7ff89407de4e9ea34dc9535194dc3ca5}{Get\+A\+O\+I\+Identifiers} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an array of aoi identifiers \end{DoxyCompactList}\item 
 String\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a29e5b2dc3e3a0476dc5822615a949e21}{Get\+A\+O\+I\+U\+I\+Ds} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an array of aoi uids \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings}{A\+O\+I\+Settings} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a5cd076f8ac19ba306443c66ea0a032a7}{Get\+A\+O\+I\+Setting\+By\+Uid} (String uid)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the aoi setting for the given uid \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings}{A\+O\+I\+Settings} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_ab1d25299b3a24bad81acc44b1994f342}{Get\+A\+O\+Is} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the list of aois settings \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a339c77553bc0005a04e1f054f78d4e16}{Add\+A\+O\+I} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings}{A\+O\+I\+Settings} aoi)
-\item 
+\begin{DoxyCompactList}\small\item\em Adds the given aoi setting \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_ab2f91f58d7deeaabda24138cb92999e9}{Delete\+Rule} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings}{A\+O\+I\+Settings} aoi)
-\item 
+\begin{DoxyCompactList}\small\item\em Deletes the given aoi setting \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a19cfec6016d0dbfe5a3b5a73efca93df}{U\+R\+L\+Fits\+Setting} (String url)
-\item 
+\begin{DoxyCompactList}\small\item\em Checks if the url fits the setting data \end{DoxyCompactList}\item 
 String\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_af25051da84e5c45e90ae3425963ed800}{Get\+Fitting\+A\+O\+Is} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{D\+O\+M\+Element\+Model} el)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the aois for the given element \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a493458b4a083d0aca8d573612c578e7f}{To\+X\+M\+L} (Xml\+Document xml\+Doc)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an xml representation of the object \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings}{Domain\+Settings} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_aadf710ba6a63d9fa929c8994fb2ebb12}{Load\+From\+X\+M\+L} (Xml\+Node domain\+Node)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an object from X\+M\+L \end{DoxyCompactList}\item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings}{Domain\+Settings} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a1640b4ee95916081bf83ba1802c74c07}{Copy} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings}{Domain\+Settings} orig)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates a copy of the given domain setting \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_ad85a389026a0f62a909f96456ac0cc80}{Domain}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the domain \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a55ea049e39a701dd4664daa1a53b1a92}{Includes\+Subdomains}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter if subdomains are including or not \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings}{A\+O\+I\+Settings} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a70194a26a56aee579702914bdd7e5963}{A\+O\+I\+S}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the list of aois \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_afa680d53400203a363281f43b9ec7bff}{\+\_\+domain}
-\item 
+\begin{DoxyCompactList}\small\item\em The domain for this setting \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_ab1ad21ee7235f8b303bb0196bd3ede4f}{\+\_\+includes\+Subdomains}
-\item 
+\begin{DoxyCompactList}\small\item\em Should the settings include subdomains \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings}{A\+O\+I\+Settings} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a67344a2db4f2e9ee7951eb7cad18f96e}{\+\_\+aois} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings}{A\+O\+I\+Settings}$>$()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em List of aoi settings \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class which represents all settings for the domain 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -66,6 +76,10 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_se
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a8ffad3f7b78462d687db4f95dd484953}
+
+
+Empty Constructor used for loading from xml 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_af6797984cc6e12c59f276558864db719}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!Domain\+Settings@{Domain\+Settings}}
 \index{Domain\+Settings@{Domain\+Settings}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}}
 \subsubsection[{Domain\+Settings(\+String domain)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings.\+Domain\+Settings (
@@ -73,6 +87,15 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_se
 \item[{String}]{domain}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_af6797984cc6e12c59f276558864db719}
+
+
+Constructor for the domain setting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em domain} & The domain\\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
@@ -83,6 +106,15 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_se
 \item[{{\bf A\+O\+I\+Settings}}]{aoi}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a339c77553bc0005a04e1f054f78d4e16}
+
+
+Adds the given aoi setting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aoi} & A\+O\+I setting to add\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a1640b4ee95916081bf83ba1802c74c07}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!Copy@{Copy}}
 \index{Copy@{Copy}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}}
 \subsubsection[{Copy(\+Domain\+Settings orig)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Domain\+Settings} Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings.\+Copy (
@@ -90,6 +122,18 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_se
 \item[{{\bf Domain\+Settings}}]{orig}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a1640b4ee95916081bf83ba1802c74c07}
+
+
+Creates a copy of the given domain setting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orig} & Domain setting to copy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_ab2f91f58d7deeaabda24138cb92999e9}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!Delete\+Rule@{Delete\+Rule}}
 \index{Delete\+Rule@{Delete\+Rule}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}}
 \subsubsection[{Delete\+Rule(\+A\+O\+I\+Settings aoi)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings.\+Delete\+Rule (
@@ -97,6 +141,15 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_se
 \item[{{\bf A\+O\+I\+Settings}}]{aoi}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_ab2f91f58d7deeaabda24138cb92999e9}
+
+
+Deletes the given aoi setting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aoi} & A\+O\+I Setting to delete\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a7ff89407de4e9ea34dc9535194dc3ca5}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!Get\+A\+O\+I\+Identifiers@{Get\+A\+O\+I\+Identifiers}}
 \index{Get\+A\+O\+I\+Identifiers@{Get\+A\+O\+I\+Identifiers}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}}
 \subsubsection[{Get\+A\+O\+I\+Identifiers()}]{\setlength{\rightskip}{0pt plus 5cm}String \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings.\+Get\+A\+O\+I\+Identifiers (
@@ -104,13 +157,29 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_se
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a7ff89407de4e9ea34dc9535194dc3ca5}
-\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_ab1d25299b3a24bad81acc44b1994f342}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!Get\+A\+O\+Is@{Get\+A\+O\+Is}}
+
+
+Creates an array of aoi identifiers 
+
+\begin{DoxyReturn}{Returns}
+Array of aoi identifiers
+\end{DoxyReturn}
+
+
+Used for the displaying of the domains in the ui \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_ab1d25299b3a24bad81acc44b1994f342}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!Get\+A\+O\+Is@{Get\+A\+O\+Is}}
 \index{Get\+A\+O\+Is@{Get\+A\+O\+Is}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}}
 \subsubsection[{Get\+A\+O\+Is()}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf A\+O\+I\+Settings}$>$ Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings.\+Get\+A\+O\+Is (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_ab1d25299b3a24bad81acc44b1994f342}
+
+
+Returns the list of aois settings 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a5cd076f8ac19ba306443c66ea0a032a7}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!Get\+A\+O\+I\+Setting\+By\+Uid@{Get\+A\+O\+I\+Setting\+By\+Uid}}
 \index{Get\+A\+O\+I\+Setting\+By\+Uid@{Get\+A\+O\+I\+Setting\+By\+Uid}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}}
 \subsubsection[{Get\+A\+O\+I\+Setting\+By\+Uid(\+String uid)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf A\+O\+I\+Settings} Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings.\+Get\+A\+O\+I\+Setting\+By\+Uid (
@@ -118,6 +187,18 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_se
 \item[{String}]{uid}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a5cd076f8ac19ba306443c66ea0a032a7}
+
+
+Returns the aoi setting for the given uid 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uid} & U\+I\+D of the aoi setting\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a29e5b2dc3e3a0476dc5822615a949e21}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!Get\+A\+O\+I\+U\+I\+Ds@{Get\+A\+O\+I\+U\+I\+Ds}}
 \index{Get\+A\+O\+I\+U\+I\+Ds@{Get\+A\+O\+I\+U\+I\+Ds}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}}
 \subsubsection[{Get\+A\+O\+I\+U\+I\+Ds()}]{\setlength{\rightskip}{0pt plus 5cm}String \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings.\+Get\+A\+O\+I\+U\+I\+Ds (
@@ -125,13 +206,34 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_se
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a29e5b2dc3e3a0476dc5822615a949e21}
-\hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_af25051da84e5c45e90ae3425963ed800}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!Get\+Fitting\+A\+O\+Is@{Get\+Fitting\+A\+O\+Is}}
+
+
+Creates an array of aoi uids 
+
+\begin{DoxyReturn}{Returns}
+Array of aoi uids
+\end{DoxyReturn}
+
+
+Used for the displaying of the domains in the ui \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_af25051da84e5c45e90ae3425963ed800}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!Get\+Fitting\+A\+O\+Is@{Get\+Fitting\+A\+O\+Is}}
 \index{Get\+Fitting\+A\+O\+Is@{Get\+Fitting\+A\+O\+Is}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}}
 \subsubsection[{Get\+Fitting\+A\+O\+Is(\+D\+O\+M\+Element\+Model el)}]{\setlength{\rightskip}{0pt plus 5cm}String \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings.\+Get\+Fitting\+A\+O\+Is (
 \begin{DoxyParamCaption}
 \item[{{\bf D\+O\+M\+Element\+Model}}]{el}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_af25051da84e5c45e90ae3425963ed800}
+
+
+Returns the aois for the given element 
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & Element to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_aadf710ba6a63d9fa929c8994fb2ebb12}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}}
 \index{Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}}
 \subsubsection[{Load\+From\+X\+M\+L(\+Xml\+Node domain\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Domain\+Settings} Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings.\+Load\+From\+X\+M\+L (
@@ -139,6 +241,18 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_se
 \item[{Xml\+Node}]{domain\+Node}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_aadf710ba6a63d9fa929c8994fb2ebb12}
+
+
+Creates an object from X\+M\+L 
+
+
+\begin{DoxyParams}{Parameters}
+{\em domain\+Node} & The node which contains the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded object
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a493458b4a083d0aca8d573612c578e7f}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!To\+X\+M\+L@{To\+X\+M\+L}}
 \index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}}
 \subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings.\+To\+X\+M\+L (
@@ -146,6 +260,18 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_se
 \item[{Xml\+Document}]{xml\+Doc}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a493458b4a083d0aca8d573612c578e7f}
+
+
+Creates an xml representation of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a19cfec6016d0dbfe5a3b5a73efca93df}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!U\+R\+L\+Fits\+Setting@{U\+R\+L\+Fits\+Setting}}
 \index{U\+R\+L\+Fits\+Setting@{U\+R\+L\+Fits\+Setting}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}}
 \subsubsection[{U\+R\+L\+Fits\+Setting(\+String url)}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings.\+U\+R\+L\+Fits\+Setting (
@@ -155,28 +281,64 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_se
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a19cfec6016d0dbfe5a3b5a73efca93df}
 
 
+Checks if the url fits the setting data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & U\+R\+L to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a67344a2db4f2e9ee7951eb7cad18f96e}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!\+\_\+aois@{\+\_\+aois}}
 \index{\+\_\+aois@{\+\_\+aois}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}}
 \subsubsection[{\+\_\+aois}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf A\+O\+I\+Settings}$>$ Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings.\+\_\+aois = new List$<${\bf A\+O\+I\+Settings}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a67344a2db4f2e9ee7951eb7cad18f96e}
+
+
+List of aoi settings 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_afa680d53400203a363281f43b9ec7bff}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!\+\_\+domain@{\+\_\+domain}}
 \index{\+\_\+domain@{\+\_\+domain}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}}
 \subsubsection[{\+\_\+domain}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings.\+\_\+domain\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_afa680d53400203a363281f43b9ec7bff}
+
+
+The domain for this setting 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_ab1ad21ee7235f8b303bb0196bd3ede4f}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!\+\_\+includes\+Subdomains@{\+\_\+includes\+Subdomains}}
 \index{\+\_\+includes\+Subdomains@{\+\_\+includes\+Subdomains}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}}
 \subsubsection[{\+\_\+includes\+Subdomains}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings.\+\_\+includes\+Subdomains\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_ab1ad21ee7235f8b303bb0196bd3ede4f}
+
+
+Should the settings include subdomains 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a70194a26a56aee579702914bdd7e5963}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!A\+O\+I\+S@{A\+O\+I\+S}}
 \index{A\+O\+I\+S@{A\+O\+I\+S}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}}
 \subsubsection[{A\+O\+I\+S}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf A\+O\+I\+Settings}$>$ Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings.\+A\+O\+I\+S\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a70194a26a56aee579702914bdd7e5963}
+
+
+Getter/ Setter for the list of aois 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_ad85a389026a0f62a909f96456ac0cc80}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!Domain@{Domain}}
 \index{Domain@{Domain}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}}
 \subsubsection[{Domain}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings.\+Domain\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_ad85a389026a0f62a909f96456ac0cc80}
+
+
+Getter/ Setter for the domain 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a55ea049e39a701dd4664daa1a53b1a92}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}!Includes\+Subdomains@{Includes\+Subdomains}}
 \index{Includes\+Subdomains@{Includes\+Subdomains}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Domain\+Settings}}
 \subsubsection[{Includes\+Subdomains}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Models.\+Settings\+Model.\+Domain\+Settings.\+Includes\+Subdomains\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings_a55ea049e39a701dd4664daa1a53b1a92}
+
+
+Getter/ Setter if subdomains are including or not 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

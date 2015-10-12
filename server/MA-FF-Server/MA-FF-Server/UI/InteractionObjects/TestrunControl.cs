@@ -94,7 +94,7 @@ namespace WebAnalyzer.UI.InteractionObjects
         /// <summary>
         /// Method for updating the protocol
         /// </summary>
-        /// <param name="label">the current protocol</param>
+        /// <param name="protocol">the current protocol</param>
         /// <remarks>Called from Javascript</remarks>
         public void updateProtocol(String protocol)
         {

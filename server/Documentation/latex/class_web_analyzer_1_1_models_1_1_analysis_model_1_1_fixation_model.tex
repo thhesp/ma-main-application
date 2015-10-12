@@ -1,50 +1,55 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model}{}\section{Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model}\index{Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model@{Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model}}
+
+
+Model for fixations  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a462b5af1ba7cf2fd227cd570ced6a654}{Fixation\+Model} (String start\+Timestamp, String end\+Timestamp, long duration, String eye)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a8960e4d69b3c8782d89af1195220f911}{Add\+Related\+Gaze} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} model)
-\item 
+\begin{DoxyCompactList}\small\item\em Method for adding a gaze to the list of the related gazes \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_aa11ed7734ed0da8d4bbb86b89a986a75}{From} (double start\+X, double start\+Y)
-\item 
+\begin{DoxyCompactList}\small\item\em Start for the fixation coordinates \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a3a34442019813f39e6acbbb881017808}{To} (double end\+X, double end\+Y)
-\item 
+\begin{DoxyCompactList}\small\item\em End for the fixation coordinates \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_afd82114a1c8126e23215962e4cf135f8}{Get\+Related\+Gazes} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Getter for the related gazes \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a4f11e23a31e060973c751e67f9a2ff9f}{To\+X\+M\+L} (Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an X\+M\+L Representation of the fixation \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_ac235ff98ad7edc4465c7efa9d919630e}{To\+A\+O\+I\+X\+M\+L} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings}{Experiment\+Settings} settings, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model}{Webpage\+Model} page, String eye, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an X\+M\+L Representation of the aois \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a478001ceab5fb747d7d33cbd81382932}{Related\+Gazes}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/\+Setter for the related gazes \end{DoxyCompactList}\item 
 long \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a045eca17df1de4d293b5d38b1c812040}{Duration}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter for the duration of the fixation \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_af8b292c9e9e04c3b1b1c617fe3a44e06}{Start\+X}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter for the start x coordinate of the fixation \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a187714460ee0851def122bd776fbda91}{Start\+Y}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter for the start y coordinate of the fixation \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a0b77bda45070dad7347eaa90daf29247}{End\+X}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter for the end x coordinate of the fixation \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a431705c50a74006b786fbcf7e357567f}{End\+Y}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter for the end y coordinate of the fixation \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a91602e50b7f2a77eaaae995b5f605d5e}{\+\_\+start\+Timestamp}
-\item 
+\begin{DoxyCompactList}\small\item\em Start timestamp of the fixation \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_ab06c88b23bfd1ab3974e50cb7028eac5}{\+\_\+end\+Timestamp}
-\item 
+\begin{DoxyCompactList}\small\item\em End timestamp of the fixation \end{DoxyCompactList}\item 
 long \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a237ba81a634b4460d754da0a8cafb2ef}{\+\_\+duration} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em duration of the fixation \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a88b40bce62fdbc793553ec4f6926b758}{\+\_\+eye}
-\item 
+\begin{DoxyCompactList}\small\item\em Eye to which the fixation belongs \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_aae6ca5737e71e087a0adc04a748b3d4a}{\+\_\+start\+X}
-\item 
+\begin{DoxyCompactList}\small\item\em Coordinates in which the fixation is contained \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a7e2e27ddcd00e7cf48253e9a37faf180}{\+\_\+end\+X}
 \item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_aba4f10b5ecaf1bef32a74d00c569ec79}{\+\_\+start\+Y}
@@ -52,7 +57,12 @@ double \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_
 double \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a3925ac88fde0915d24f5c3c9ae62e535}{\+\_\+end\+Y}
 \item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a9ccd1c97cb1da60a5402db3d63e18150}{\+\_\+related\+Gazes} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model}$>$()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em related gazes of the fixation \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Model for fixations 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -68,6 +78,21 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{
 )}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a462b5af1ba7cf2fd227cd570ced6a654}
 
 
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Timestamp} & Start timestamp of the fixation\\
+\hline
+{\em end\+Timestamp} & End timestamp of the fixation\\
+\hline
+{\em duration} & Duration of the fixation\\
+\hline
+{\em eye} & Eye to which the fixation belongs\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a8960e4d69b3c8782d89af1195220f911}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!Add\+Related\+Gaze@{Add\+Related\+Gaze}}
 \index{Add\+Related\+Gaze@{Add\+Related\+Gaze}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
@@ -76,6 +101,15 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{
 \item[{{\bf Gaze\+Model}}]{model}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a8960e4d69b3c8782d89af1195220f911}
+
+
+Method for adding a gaze to the list of the related gazes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & The gaze to add\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_aa11ed7734ed0da8d4bbb86b89a986a75}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!From@{From}}
 \index{From@{From}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{From(double start\+X, double start\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+From (
@@ -84,6 +118,17 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{
 \item[{double}]{start\+Y}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_aa11ed7734ed0da8d4bbb86b89a986a75}
+
+
+Start for the fixation coordinates 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+X} & start x coordinate\\
+\hline
+{\em start\+Y} & start y coordinate\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_afd82114a1c8126e23215962e4cf135f8}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!Get\+Related\+Gazes@{Get\+Related\+Gazes}}
 \index{Get\+Related\+Gazes@{Get\+Related\+Gazes}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{Get\+Related\+Gazes()}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Gaze\+Model}$>$ Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+Get\+Related\+Gazes (
@@ -91,6 +136,13 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_afd82114a1c8126e23215962e4cf135f8}
+
+
+Getter for the related gazes 
+
+\begin{DoxyReturn}{Returns}
+List of Gazes
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a3a34442019813f39e6acbbb881017808}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!To@{To}}
 \index{To@{To}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{To(double end\+X, double end\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+To (
@@ -99,6 +151,17 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{
 \item[{double}]{end\+Y}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a3a34442019813f39e6acbbb881017808}
+
+
+End for the fixation coordinates 
+
+
+\begin{DoxyParams}{Parameters}
+{\em end\+X} & end x coordinate\\
+\hline
+{\em end\+Y} & end y coordinate\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_ac235ff98ad7edc4465c7efa9d919630e}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!To\+A\+O\+I\+X\+M\+L@{To\+A\+O\+I\+X\+M\+L}}
 \index{To\+A\+O\+I\+X\+M\+L@{To\+A\+O\+I\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{To\+A\+O\+I\+X\+M\+L(\+Experiment\+Settings settings, Webpage\+Model page, String eye, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+To\+A\+O\+I\+X\+M\+L (
@@ -110,6 +173,26 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{
 \item[{Boolean}]{include\+Single\+Gaze\+Data}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_ac235ff98ad7edc4465c7efa9d919630e}
+
+
+Creates an X\+M\+L Representation of the aois 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & Experiment settings which are used for the aois\\
+\hline
+{\em page} & Webpage to which the gazes belong\\
+\hline
+{\em eye} & Eye to which the gazes belong\\
+\hline
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+{\em include\+Single\+Gaze\+Data} & Shall data about the related gazes be included\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+X\+M\+L\+Node which contains the representation of the aois for these fixations
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a4f11e23a31e060973c751e67f9a2ff9f}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!To\+X\+M\+L@{To\+X\+M\+L}}
 \index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+To\+X\+M\+L (
@@ -120,13 +203,35 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{
 )}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a4f11e23a31e060973c751e67f9a2ff9f}
 
 
+Creates an X\+M\+L Representation of the fixation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+{\em include\+Single\+Gaze\+Data} & Shall data about the related gazes be included\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+X\+M\+L\+Node which contains the representation of the model
+\end{DoxyReturn}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a237ba81a634b4460d754da0a8cafb2ef}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!\+\_\+duration@{\+\_\+duration}}
 \index{\+\_\+duration@{\+\_\+duration}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{\+\_\+duration}]{\setlength{\rightskip}{0pt plus 5cm}long Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+\_\+duration = 0\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a237ba81a634b4460d754da0a8cafb2ef}
+
+
+duration of the fixation 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_ab06c88b23bfd1ab3974e50cb7028eac5}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!\+\_\+end\+Timestamp@{\+\_\+end\+Timestamp}}
 \index{\+\_\+end\+Timestamp@{\+\_\+end\+Timestamp}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{\+\_\+end\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+\_\+end\+Timestamp\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_ab06c88b23bfd1ab3974e50cb7028eac5}
+
+
+End timestamp of the fixation 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a7e2e27ddcd00e7cf48253e9a37faf180}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!\+\_\+end\+X@{\+\_\+end\+X}}
 \index{\+\_\+end\+X@{\+\_\+end\+X}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{\+\_\+end\+X}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+\_\+end\+X\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a7e2e27ddcd00e7cf48253e9a37faf180}
@@ -136,15 +241,31 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a88b40bce62fdbc793553ec4f6926b758}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!\+\_\+eye@{\+\_\+eye}}
 \index{\+\_\+eye@{\+\_\+eye}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{\+\_\+eye}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+\_\+eye\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a88b40bce62fdbc793553ec4f6926b758}
+
+
+Eye to which the fixation belongs 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a9ccd1c97cb1da60a5402db3d63e18150}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!\+\_\+related\+Gazes@{\+\_\+related\+Gazes}}
 \index{\+\_\+related\+Gazes@{\+\_\+related\+Gazes}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{\+\_\+related\+Gazes}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Gaze\+Model}$>$ Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+\_\+related\+Gazes = new List$<${\bf Gaze\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a9ccd1c97cb1da60a5402db3d63e18150}
+
+
+related gazes of the fixation 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a91602e50b7f2a77eaaae995b5f605d5e}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!\+\_\+start\+Timestamp@{\+\_\+start\+Timestamp}}
 \index{\+\_\+start\+Timestamp@{\+\_\+start\+Timestamp}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{\+\_\+start\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+\_\+start\+Timestamp\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a91602e50b7f2a77eaaae995b5f605d5e}
+
+
+Start timestamp of the fixation 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_aae6ca5737e71e087a0adc04a748b3d4a}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!\+\_\+start\+X@{\+\_\+start\+X}}
 \index{\+\_\+start\+X@{\+\_\+start\+X}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{\+\_\+start\+X}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+\_\+start\+X\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_aae6ca5737e71e087a0adc04a748b3d4a}
+
+
+Coordinates in which the fixation is contained 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_aba4f10b5ecaf1bef32a74d00c569ec79}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!\+\_\+start\+Y@{\+\_\+start\+Y}}
 \index{\+\_\+start\+Y@{\+\_\+start\+Y}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{\+\_\+start\+Y}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+\_\+start\+Y\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_aba4f10b5ecaf1bef32a74d00c569ec79}
@@ -154,21 +275,45 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a045eca17df1de4d293b5d38b1c812040}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!Duration@{Duration}}
 \index{Duration@{Duration}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{Duration}]{\setlength{\rightskip}{0pt plus 5cm}long Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+Duration\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a045eca17df1de4d293b5d38b1c812040}
+
+
+Getter for the duration of the fixation 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a0b77bda45070dad7347eaa90daf29247}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!End\+X@{End\+X}}
 \index{End\+X@{End\+X}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{End\+X}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+End\+X\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a0b77bda45070dad7347eaa90daf29247}
+
+
+Getter for the end x coordinate of the fixation 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a431705c50a74006b786fbcf7e357567f}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!End\+Y@{End\+Y}}
 \index{End\+Y@{End\+Y}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{End\+Y}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+End\+Y\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a431705c50a74006b786fbcf7e357567f}
+
+
+Getter for the end y coordinate of the fixation 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a478001ceab5fb747d7d33cbd81382932}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!Related\+Gazes@{Related\+Gazes}}
 \index{Related\+Gazes@{Related\+Gazes}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{Related\+Gazes}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Gaze\+Model}$>$ Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+Related\+Gazes\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a478001ceab5fb747d7d33cbd81382932}
+
+
+Getter/\+Setter for the related gazes 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_af8b292c9e9e04c3b1b1c617fe3a44e06}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!Start\+X@{Start\+X}}
 \index{Start\+X@{Start\+X}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{Start\+X}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+Start\+X\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_af8b292c9e9e04c3b1b1c617fe3a44e06}
+
+
+Getter for the start x coordinate of the fixation 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a187714460ee0851def122bd776fbda91}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}!Start\+Y@{Start\+Y}}
 \index{Start\+Y@{Start\+Y}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Fixation\+Model}}
 \subsubsection[{Start\+Y}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Analysis\+Model.\+Fixation\+Model.\+Start\+Y\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model_a187714460ee0851def122bd776fbda91}
+
+
+Getter for the start y coordinate of the fixation 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

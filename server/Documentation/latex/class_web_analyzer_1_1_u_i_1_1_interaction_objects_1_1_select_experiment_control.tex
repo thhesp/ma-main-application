@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control}{}\section{Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Select\+Experiment\+Control Class Reference}
 \label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control}\index{Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Select\+Experiment\+Control@{Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Select\+Experiment\+Control}}
+
+
+window for selecting or loading an experiment  
+
+
 Inheritance diagram for Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Select\+Experiment\+Control\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,33 +15,38 @@ Inheritance diagram for Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Select\+Ex
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a0ec8c7149c5fc197768a0def5c1cf3ab}{Select\+Experiment\+Control} (\hyperlink{class_web_analyzer_1_1_u_i_1_1_select_experiment_form}{Select\+Experiment\+Form} form)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a1bf6dae0d6ce2c7c6dcf63dfe72e7d58}{select\+Experiment} (String path)
-\item 
+\begin{DoxyCompactList}\small\item\em Used for selecting an experiment \end{DoxyCompactList}\item 
 String\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_aa7dda6b33c3fa7d8f154af6722ed61e9}{get\+Experiment\+Names} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns an array of experiment names \end{DoxyCompactList}\item 
 String\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a51d3afa57c307c296f8a2ed27a0f106c}{get\+Experiment\+Paths} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns an array of experiment paths \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Events}
 \begin{DoxyCompactItemize}
 \item 
 Select\+Experiment\+Event\+Handler \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a7062e7537081a90d11a7c26cefe79651}{Select\+Experiment}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Eventhandler for selecting the experiment \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a37e45871530bf2689954cba405277eb8}{create\+Experiment\+List} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Fills the list of experiment data \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_select_experiment_form}{Select\+Experiment\+Form} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_ac6586d336cac091bf139064cf7a72a13}{\+\_\+form}
-\item 
+\begin{DoxyCompactList}\small\item\em Reference to the select experiment form \end{DoxyCompactList}\item 
 List$<$ String $>$ \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a00919951dc14d3a906f7da01402894b1}{\+\_\+experiment\+Names} = new List$<$String$>$()
-\item 
+\begin{DoxyCompactList}\small\item\em List of all experiments \end{DoxyCompactList}\item 
 List$<$ String $>$ \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a30f40ad6a4ba11a6cf945175cdda7f74}{\+\_\+experiment\+Paths} = new List$<$String$>$()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em List of paths to all experiments \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+window for selecting or loading an experiment 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -49,6 +59,15 @@ List$<$ String $>$ \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a0ec8c7149c5fc197768a0def5c1cf3ab}
 
 
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em form} & Reference to the select experiment form\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a37e45871530bf2689954cba405277eb8}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}!create\+Experiment\+List@{create\+Experiment\+List}}
 \index{create\+Experiment\+List@{create\+Experiment\+List}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}}
@@ -57,6 +76,10 @@ List$<$ String $>$ \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a37e45871530bf2689954cba405277eb8}
+
+
+Fills the list of experiment data 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_aa7dda6b33c3fa7d8f154af6722ed61e9}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}!get\+Experiment\+Names@{get\+Experiment\+Names}}
 \index{get\+Experiment\+Names@{get\+Experiment\+Names}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}}
 \subsubsection[{get\+Experiment\+Names()}]{\setlength{\rightskip}{0pt plus 5cm}String \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Select\+Experiment\+Control.\+get\+Experiment\+Names (
@@ -64,14 +87,32 @@ List$<$ String $>$ \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_aa7dda6b33c3fa7d8f154af6722ed61e9}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a51d3afa57c307c296f8a2ed27a0f106c}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}!get\+Experiment\+Paths@{get\+Experiment\+Paths}}
+
+
+Returns an array of experiment names 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a51d3afa57c307c296f8a2ed27a0f106c}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}!get\+Experiment\+Paths@{get\+Experiment\+Paths}}
 \index{get\+Experiment\+Paths@{get\+Experiment\+Paths}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}}
 \subsubsection[{get\+Experiment\+Paths()}]{\setlength{\rightskip}{0pt plus 5cm}String \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Select\+Experiment\+Control.\+get\+Experiment\+Paths (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a51d3afa57c307c296f8a2ed27a0f106c}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a1bf6dae0d6ce2c7c6dcf63dfe72e7d58}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}!select\+Experiment@{select\+Experiment}}
+
+
+Returns an array of experiment paths 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a1bf6dae0d6ce2c7c6dcf63dfe72e7d58}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}!select\+Experiment@{select\+Experiment}}
 \index{select\+Experiment@{select\+Experiment}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}}
 \subsubsection[{select\+Experiment(\+String path)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Select\+Experiment\+Control.\+select\+Experiment (
 \begin{DoxyParamCaption}
@@ -80,22 +121,49 @@ List$<$ String $>$ \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a1bf6dae0d6ce2c7c6dcf63dfe72e7d58}
 
 
+Used for selecting an experiment 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the experiment\\
+\hline
+\end{DoxyParams}
+
+
+Called from javascript
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a00919951dc14d3a906f7da01402894b1}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}!\+\_\+experiment\+Names@{\+\_\+experiment\+Names}}
 \index{\+\_\+experiment\+Names@{\+\_\+experiment\+Names}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}}
 \subsubsection[{\+\_\+experiment\+Names}]{\setlength{\rightskip}{0pt plus 5cm}List$<$String$>$ Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Select\+Experiment\+Control.\+\_\+experiment\+Names = new List$<$String$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a00919951dc14d3a906f7da01402894b1}
+
+
+List of all experiments 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a30f40ad6a4ba11a6cf945175cdda7f74}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}!\+\_\+experiment\+Paths@{\+\_\+experiment\+Paths}}
 \index{\+\_\+experiment\+Paths@{\+\_\+experiment\+Paths}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}}
 \subsubsection[{\+\_\+experiment\+Paths}]{\setlength{\rightskip}{0pt plus 5cm}List$<$String$>$ Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Select\+Experiment\+Control.\+\_\+experiment\+Paths = new List$<$String$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a30f40ad6a4ba11a6cf945175cdda7f74}
+
+
+List of paths to all experiments 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_ac6586d336cac091bf139064cf7a72a13}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}!\+\_\+form@{\+\_\+form}}
 \index{\+\_\+form@{\+\_\+form}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}}
 \subsubsection[{\+\_\+form}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Select\+Experiment\+Form} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Select\+Experiment\+Control.\+\_\+form\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_ac6586d336cac091bf139064cf7a72a13}
+
+
+Reference to the select experiment form 
+
 
 
 \subsection{Event Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a7062e7537081a90d11a7c26cefe79651}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}!Select\+Experiment@{Select\+Experiment}}
 \index{Select\+Experiment@{Select\+Experiment}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Select\+Experiment\+Control}}
 \subsubsection[{Select\+Experiment}]{\setlength{\rightskip}{0pt plus 5cm}Select\+Experiment\+Event\+Handler Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Select\+Experiment\+Control.\+Select\+Experiment}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_select_experiment_control_a7062e7537081a90d11a7c26cefe79651}
+
+
+Eventhandler for selecting the experiment 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

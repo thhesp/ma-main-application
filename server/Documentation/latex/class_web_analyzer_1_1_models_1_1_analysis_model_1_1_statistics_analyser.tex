@@ -1,14 +1,24 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_statistics_analyser}{}\section{Web\+Analyzer.\+Models.\+Analysis\+Model.\+Statistics\+Analyser Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_statistics_analyser}\index{Web\+Analyzer.\+Models.\+Analysis\+Model.\+Statistics\+Analyser@{Web\+Analyzer.\+Models.\+Analysis\+Model.\+Statistics\+Analyser}}
+
+
+Collection of methods used for calculating statistics  
+
+
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static long\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_statistics_analyser_a0a19416111599cf25b18e2cd862600a9}{Array\+Of\+Duration\+From\+Request\+Till\+Sent} (List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ positions)
-\item 
+\begin{DoxyCompactList}\small\item\em Calculates the durations between request and sent values from the given list of positions \end{DoxyCompactList}\item 
 static long\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_statistics_analyser_ae555b28e5931d366687c66153cb9cb11}{Array\+Of\+Duration\+From\+Server\+Sent\+To\+Received} (List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ positions)
-\item 
+\begin{DoxyCompactList}\small\item\em Calculates the durations between server sent and received values from the given list of positions \end{DoxyCompactList}\item 
 static long\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_statistics_analyser_aa360f68023a2d70d0efb9de8e0c9f749}{Array\+Of\+Duration\+From\+Client\+Received\+To\+Client\+Sent} (List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ positions)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Calculates the durations between client received and client sent values from the given list of positions \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Collection of methods used for calculating statistics 
+
 
 
 \subsection{Member Function Documentation}
@@ -19,6 +29,18 @@ static long\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_ana
 \item[{List$<$ {\bf Gaze\+Model} $>$}]{positions}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_statistics_analyser_aa360f68023a2d70d0efb9de8e0c9f749}
+
+
+Calculates the durations between client received and client sent values from the given list of positions 
+
+
+\begin{DoxyParams}{Parameters}
+{\em positions} & List of gazes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of durations
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_statistics_analyser_a0a19416111599cf25b18e2cd862600a9}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Statistics\+Analyser@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Statistics\+Analyser}!Array\+Of\+Duration\+From\+Request\+Till\+Sent@{Array\+Of\+Duration\+From\+Request\+Till\+Sent}}
 \index{Array\+Of\+Duration\+From\+Request\+Till\+Sent@{Array\+Of\+Duration\+From\+Request\+Till\+Sent}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Statistics\+Analyser@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Statistics\+Analyser}}
 \subsubsection[{Array\+Of\+Duration\+From\+Request\+Till\+Sent(\+List$<$ Gaze\+Model $>$ positions)}]{\setlength{\rightskip}{0pt plus 5cm}static long \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+Models.\+Analysis\+Model.\+Statistics\+Analyser.\+Array\+Of\+Duration\+From\+Request\+Till\+Sent (
@@ -26,6 +48,18 @@ static long\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_ana
 \item[{List$<$ {\bf Gaze\+Model} $>$}]{positions}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_statistics_analyser_a0a19416111599cf25b18e2cd862600a9}
+
+
+Calculates the durations between request and sent values from the given list of positions 
+
+
+\begin{DoxyParams}{Parameters}
+{\em positions} & List of gazes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of durations
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_statistics_analyser_ae555b28e5931d366687c66153cb9cb11}{}\index{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Statistics\+Analyser@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Statistics\+Analyser}!Array\+Of\+Duration\+From\+Server\+Sent\+To\+Received@{Array\+Of\+Duration\+From\+Server\+Sent\+To\+Received}}
 \index{Array\+Of\+Duration\+From\+Server\+Sent\+To\+Received@{Array\+Of\+Duration\+From\+Server\+Sent\+To\+Received}!Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Statistics\+Analyser@{Web\+Analyzer\+::\+Models\+::\+Analysis\+Model\+::\+Statistics\+Analyser}}
 \subsubsection[{Array\+Of\+Duration\+From\+Server\+Sent\+To\+Received(\+List$<$ Gaze\+Model $>$ positions)}]{\setlength{\rightskip}{0pt plus 5cm}static long \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+Models.\+Analysis\+Model.\+Statistics\+Analyser.\+Array\+Of\+Duration\+From\+Server\+Sent\+To\+Received (
@@ -33,6 +67,18 @@ static long\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_ana
 \item[{List$<$ {\bf Gaze\+Model} $>$}]{positions}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_statistics_analyser_ae555b28e5931d366687c66153cb9cb11}
+
+
+Calculates the durations between server sent and received values from the given list of positions 
+
+
+\begin{DoxyParams}{Parameters}
+{\em positions} & List of gazes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of durations
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

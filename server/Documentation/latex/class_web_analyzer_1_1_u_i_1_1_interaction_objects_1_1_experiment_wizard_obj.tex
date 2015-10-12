@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj}{}\section{Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Wizard\+Obj Class Reference}
 \label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj}\index{Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Wizard\+Obj@{Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Wizard\+Obj}}
+
+
+Interaction object for the experiment wizard  
+
+
 Inheritance diagram for Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Wizard\+Obj\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,55 +17,64 @@ Inheritance diagram for Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment
 enum \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a8d68b0ff79197613c58d75f6323bb6ba}{S\+E\+L\+E\+C\+T\+\_\+\+A\+C\+T\+I\+O\+N} \{ \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a8d68b0ff79197613c58d75f6323bb6baab50339a10e1de285ac99d4c3990b8693}{S\+E\+L\+E\+C\+T\+\_\+\+A\+C\+T\+I\+O\+N.\+N\+O\+N\+E} = -\/1, 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a8d68b0ff79197613c58d75f6323bb6baa047c0adfe72f2a351a143b7b46b0519b}{S\+E\+L\+E\+C\+T\+\_\+\+A\+C\+T\+I\+O\+N.\+F\+O\+R\+\_\+\+L\+O\+A\+D\+I\+N\+G} = 0, 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a8d68b0ff79197613c58d75f6323bb6baa05c8a6868499ead96ace0a258e3fb238}{S\+E\+L\+E\+C\+T\+\_\+\+A\+C\+T\+I\+O\+N.\+F\+O\+R\+\_\+\+I\+M\+P\+O\+R\+T\+I\+N\+G} = 1
- \}
+ \}\begin{DoxyCompactList}\small\item\em Enumeration to check if the select experiment window is for loading or importing \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a556f5d452c9c8f983949604ecdd9e9e5}{Experiment\+Wizard\+Obj} (\hyperlink{class_web_analyzer_1_1_u_i_1_1_experiment_wizard}{Experiment\+Wizard} form)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a5df5c95c1b33e86c7b095a4af6861994}{back} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Method for going back in the browser \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_ab31f1a51792e84018e1dcce87903551e}{load\+Create\+Experiment\+Screen} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Method for changing to the create experiment screen \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_ade6772af7c7187e6296a727f11108581}{create\+Experiment} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_adac2bcb4f01b574cbc63fe8ee2c56bf0}{name})
-\item 
+\begin{DoxyCompactList}\small\item\em Method for creating an experiment \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a1e559426b9c210c4bc189c087869e466}{create\+Experiment\+With\+Import} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_adac2bcb4f01b574cbc63fe8ee2c56bf0}{name}, Boolean import\+Settings, Boolean import\+Participants)
-\item 
+\begin{DoxyCompactList}\small\item\em Method for creating an experiment while importing data \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a65595483af6122f00e4caa0b0bc5138a}{select\+Experiment\+To\+Import\+Data} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Method for opening the select experiment window for importing \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a187c4039f4ed7c0bdca88b2abbebc606}{select\+Experiment\+To\+Load} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method for opening the select experiment window for loading the experiment \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Events}
 \begin{DoxyCompactItemize}
 \item 
 Create\+Experiment\+Event\+Handler \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a95676a614efb19092a4522290e47ef96}{Create\+Experiment}
-\item 
+\begin{DoxyCompactList}\small\item\em Eventhandler for creating an experiment \end{DoxyCompactList}\item 
 Load\+Experiment\+Event\+Handler \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a4ab54f4e59198b7ff3e9b91ad5049642}{Load\+Experiment}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Eventhandler for loading an experiment \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a4a69da48d96c3f49f78ab58ff1f608f8}{Select\+Experiment\+Dialog} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Opens the Select Experiment Dialog \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a5c7f45e1b85d3eaa1f2c78e650a64012}{On\+\_\+\+Select\+Experiment} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_select_experiment_event}{Select\+Experiment\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Callback for when an experiment was selected \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_experiment_wizard}{Experiment\+Wizard} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a28ba1f710b9aa6bc477784dc03994b75}{\+\_\+form}
-\item 
+\begin{DoxyCompactList}\small\item\em Reference to the experiment wizard window \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_ac39fd1cef0cdfe82f059db09b97cc0f2}{\+\_\+import\+Path}
-\item 
+\begin{DoxyCompactList}\small\item\em Path to the experiment from which data shall be imported \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a8d68b0ff79197613c58d75f6323bb6ba}{S\+E\+L\+E\+C\+T\+\_\+\+A\+C\+T\+I\+O\+N} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a2b5cdca2be4cecb230b3107d69ddd322}{\+\_\+current\+Action} = \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a8d68b0ff79197613c58d75f6323bb6baab50339a10e1de285ac99d4c3990b8693}{S\+E\+L\+E\+C\+T\+\_\+\+A\+C\+T\+I\+O\+N.\+N\+O\+N\+E}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Flag to check if the select participant window is for importing or loading \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Interaction object for the experiment wizard 
+
 
 
 \subsection{Member Enumeration Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a8d68b0ff79197613c58d75f6323bb6ba}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!S\+E\+L\+E\+C\+T\+\_\+\+A\+C\+T\+I\+O\+N@{S\+E\+L\+E\+C\+T\+\_\+\+A\+C\+T\+I\+O\+N}}
 \index{S\+E\+L\+E\+C\+T\+\_\+\+A\+C\+T\+I\+O\+N@{S\+E\+L\+E\+C\+T\+\_\+\+A\+C\+T\+I\+O\+N}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}}
 \subsubsection[{S\+E\+L\+E\+C\+T\+\_\+\+A\+C\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Wizard\+Obj.\+S\+E\+L\+E\+C\+T\+\_\+\+A\+C\+T\+I\+O\+N}\hspace{0.3cm}{\ttfamily [strong]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a8d68b0ff79197613c58d75f6323bb6ba}
+
+
+Enumeration to check if the select experiment window is for loading or importing 
+
 \begin{Desc}
 \item[Enumerator]\par
 \begin{description}
@@ -84,6 +98,15 @@ String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experim
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a556f5d452c9c8f983949604ecdd9e9e5}
 
 
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em form} & Reference to the experiment wizard form\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a5df5c95c1b33e86c7b095a4af6861994}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!back@{back}}
 \index{back@{back}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}}
@@ -92,14 +115,29 @@ String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experim
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a5df5c95c1b33e86c7b095a4af6861994}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_ade6772af7c7187e6296a727f11108581}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!create\+Experiment@{create\+Experiment}}
+
+
+Method for going back in the browser 
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_ade6772af7c7187e6296a727f11108581}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!create\+Experiment@{create\+Experiment}}
 \index{create\+Experiment@{create\+Experiment}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}}
 \subsubsection[{create\+Experiment(\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Wizard\+Obj.\+create\+Experiment (
 \begin{DoxyParamCaption}
 \item[{String}]{name}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_ade6772af7c7187e6296a727f11108581}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a1e559426b9c210c4bc189c087869e466}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!create\+Experiment\+With\+Import@{create\+Experiment\+With\+Import}}
+
+
+Method for creating an experiment 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the new experiment\\
+\hline
+\end{DoxyParams}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a1e559426b9c210c4bc189c087869e466}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!create\+Experiment\+With\+Import@{create\+Experiment\+With\+Import}}
 \index{create\+Experiment\+With\+Import@{create\+Experiment\+With\+Import}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}}
 \subsubsection[{create\+Experiment\+With\+Import(\+String name, Boolean import\+Settings, Boolean import\+Participants)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Wizard\+Obj.\+create\+Experiment\+With\+Import (
 \begin{DoxyParamCaption}
@@ -108,14 +146,33 @@ String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experim
 \item[{Boolean}]{import\+Participants}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a1e559426b9c210c4bc189c087869e466}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_ab31f1a51792e84018e1dcce87903551e}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!load\+Create\+Experiment\+Screen@{load\+Create\+Experiment\+Screen}}
+
+
+Method for creating an experiment while importing data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the experiment\\
+\hline
+{\em import\+Settings} & Shall settings be imported\\
+\hline
+{\em import\+Participants} & Shall participants be imported\\
+\hline
+\end{DoxyParams}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_ab31f1a51792e84018e1dcce87903551e}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!load\+Create\+Experiment\+Screen@{load\+Create\+Experiment\+Screen}}
 \index{load\+Create\+Experiment\+Screen@{load\+Create\+Experiment\+Screen}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}}
 \subsubsection[{load\+Create\+Experiment\+Screen()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Wizard\+Obj.\+load\+Create\+Experiment\+Screen (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_ab31f1a51792e84018e1dcce87903551e}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a5c7f45e1b85d3eaa1f2c78e650a64012}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!On\+\_\+\+Select\+Experiment@{On\+\_\+\+Select\+Experiment}}
+
+
+Method for changing to the create experiment screen 
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a5c7f45e1b85d3eaa1f2c78e650a64012}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!On\+\_\+\+Select\+Experiment@{On\+\_\+\+Select\+Experiment}}
 \index{On\+\_\+\+Select\+Experiment@{On\+\_\+\+Select\+Experiment}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}}
 \subsubsection[{On\+\_\+\+Select\+Experiment(object sender, Select\+Experiment\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Wizard\+Obj.\+On\+\_\+\+Select\+Experiment (
 \begin{DoxyParamCaption}
@@ -123,6 +180,17 @@ String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experim
 \item[{{\bf Select\+Experiment\+Event}}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a5c7f45e1b85d3eaa1f2c78e650a64012}
+
+
+Callback for when an experiment was selected 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a4a69da48d96c3f49f78ab58ff1f608f8}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!Select\+Experiment\+Dialog@{Select\+Experiment\+Dialog}}
 \index{Select\+Experiment\+Dialog@{Select\+Experiment\+Dialog}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}}
 \subsubsection[{Select\+Experiment\+Dialog()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Wizard\+Obj.\+Select\+Experiment\+Dialog (
@@ -130,6 +198,10 @@ String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experim
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a4a69da48d96c3f49f78ab58ff1f608f8}
+
+
+Opens the Select Experiment Dialog 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a65595483af6122f00e4caa0b0bc5138a}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!select\+Experiment\+To\+Import\+Data@{select\+Experiment\+To\+Import\+Data}}
 \index{select\+Experiment\+To\+Import\+Data@{select\+Experiment\+To\+Import\+Data}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}}
 \subsubsection[{select\+Experiment\+To\+Import\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Wizard\+Obj.\+select\+Experiment\+To\+Import\+Data (
@@ -137,7 +209,11 @@ String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experim
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a65595483af6122f00e4caa0b0bc5138a}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a187c4039f4ed7c0bdca88b2abbebc606}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!select\+Experiment\+To\+Load@{select\+Experiment\+To\+Load}}
+
+
+Method for opening the select experiment window for importing 
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a187c4039f4ed7c0bdca88b2abbebc606}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!select\+Experiment\+To\+Load@{select\+Experiment\+To\+Load}}
 \index{select\+Experiment\+To\+Load@{select\+Experiment\+To\+Load}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}}
 \subsubsection[{select\+Experiment\+To\+Load()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Wizard\+Obj.\+select\+Experiment\+To\+Load (
 \begin{DoxyParamCaption}
@@ -146,25 +222,49 @@ String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experim
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a187c4039f4ed7c0bdca88b2abbebc606}
 
 
+Method for opening the select experiment window for loading the experiment 
+
+Called from javascript
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a2b5cdca2be4cecb230b3107d69ddd322}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!\+\_\+current\+Action@{\+\_\+current\+Action}}
 \index{\+\_\+current\+Action@{\+\_\+current\+Action}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}}
 \subsubsection[{\+\_\+current\+Action}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+E\+L\+E\+C\+T\+\_\+\+A\+C\+T\+I\+O\+N} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Wizard\+Obj.\+\_\+current\+Action = {\bf S\+E\+L\+E\+C\+T\+\_\+\+A\+C\+T\+I\+O\+N.\+N\+O\+N\+E}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a2b5cdca2be4cecb230b3107d69ddd322}
+
+
+Flag to check if the select participant window is for importing or loading 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a28ba1f710b9aa6bc477784dc03994b75}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!\+\_\+form@{\+\_\+form}}
 \index{\+\_\+form@{\+\_\+form}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}}
 \subsubsection[{\+\_\+form}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+Wizard} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Wizard\+Obj.\+\_\+form\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a28ba1f710b9aa6bc477784dc03994b75}
+
+
+Reference to the experiment wizard window 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_ac39fd1cef0cdfe82f059db09b97cc0f2}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!\+\_\+import\+Path@{\+\_\+import\+Path}}
 \index{\+\_\+import\+Path@{\+\_\+import\+Path}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}}
 \subsubsection[{\+\_\+import\+Path}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Wizard\+Obj.\+\_\+import\+Path\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_ac39fd1cef0cdfe82f059db09b97cc0f2}
 
 
+Path to the experiment from which data shall be imported 
+
+Only used when creating a new experiment
+
 \subsection{Event Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a95676a614efb19092a4522290e47ef96}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!Create\+Experiment@{Create\+Experiment}}
 \index{Create\+Experiment@{Create\+Experiment}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}}
 \subsubsection[{Create\+Experiment}]{\setlength{\rightskip}{0pt plus 5cm}Create\+Experiment\+Event\+Handler Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Wizard\+Obj.\+Create\+Experiment}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a95676a614efb19092a4522290e47ef96}
+
+
+Eventhandler for creating an experiment 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a4ab54f4e59198b7ff3e9b91ad5049642}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}!Load\+Experiment@{Load\+Experiment}}
 \index{Load\+Experiment@{Load\+Experiment}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Experiment\+Wizard\+Obj}}
 \subsubsection[{Load\+Experiment}]{\setlength{\rightskip}{0pt plus 5cm}Load\+Experiment\+Event\+Handler Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Experiment\+Wizard\+Obj.\+Load\+Experiment}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_wizard_obj_a4ab54f4e59198b7ff3e9b91ad5049642}
+
+
+Eventhandler for loading an experiment 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

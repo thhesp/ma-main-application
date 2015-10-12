@@ -1,75 +1,85 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{}\section{Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}\index{Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model@{Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model}}
+
+
+Class which represents a experiment  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a64aa31d07212ecda87fd557c051ea529}{Experiment\+Model} (String experiment\+Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor for creating a new experiment \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a261ba587472913ad4f34f60c13ee3904}{Experiment\+Model} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor used for loading the experiment \end{DoxyCompactList}\item 
 String\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_af7a368e96b98082d8b878222dbcac372}{Get\+Participant\+Array} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns an array with all participant identifiers \end{DoxyCompactList}\item 
 String\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a6199a670aff6e00209ed3fdaa7020ecd}{Get\+Participant\+U\+I\+Ds} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns an array of participant uids \end{DoxyCompactList}\item 
 String\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_abb3bdca255c65bedcd3e48c03b618dae}{Get\+Domain\+Setting\+Array} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns an array with all domains \end{DoxyCompactList}\item 
 String\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_aadb028e75684f16bd92456a883bb1d6a}{Get\+Domain\+Setting\+U\+I\+Ds} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns an array with all domain uids \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings}{Domain\+Settings} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a8054747fc8c5ff6a0cc2a7d0fed7a11e}{Get\+Domain\+Setting\+By\+Uid} (String uid)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the domain setting for the given uid \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a1598095ae1e7e07f44c91db79d751666}{Get\+Participant\+By\+U\+I\+D} (String uid)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the participant for the given uid \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a113bb9a3b5a24817086eca3dd1320a5c}{Get\+Base\+Experiment\+Location} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the base experiment location \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a28b8ebb68293b7ab351bcd5734c7960c}{To\+X\+M\+L} (Xml\+Document xml\+Doc)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an xml representation of the object \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a1ae79d69f4572920b709fa3f925ccf71}{Load\+From\+X\+M\+L} (Xml\+Document doc)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an object from X\+M\+L \end{DoxyCompactList}\item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a0e5b2b7b9b003ff62ace53c4fb2da8cf}{Create\+Experiment} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_adac2bcb4f01b574cbc63fe8ee2c56bf0}{name})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates a new experiment with the given name \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_ac638be077683d6707e49ca4ae481a0b1}{Experiment\+Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the experiment name \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a3f18f9046fa10178e80e77cb433af681}{Description}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the experiment description \end{DoxyCompactList}\item 
 Date\+Time \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a8f50de0ba85fe31f3db2a194a66ed084}{Created\+At}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the creation date \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a2429c903e1bd2b062452cfa648238380}{Participants}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the experiment participants \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings}{Experiment\+Settings} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a00e6e2b80147ab73fc0eee0e7c20d856}{Settings}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the experiment settings \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a08740ebbb438a9d8300bc537017c72c2}{$\sim$\+Experiment\+Model} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Destructor which resets hidden settings \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a7a634ff267195bc2b3af083d6d20d81c}{Save\+Intern\+Settings} (Xml\+Node intern\+Settings, Xml\+Document xml\+Doc)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an xml representation of the hidden experiment settings \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_acf8637b65ca6f75a4fc412f7290e0091}{Reset\+Intern\+Settings} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Resets the experiment variables \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static void \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a63429921e06c48ec66370f615d235bea}{Load\+Setting} (Xml\+Node setting)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Loads the settings from the xml \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a2e9168576a6110f27ea44886e19ff5da}{\+\_\+experiment\+Name}
-\item 
+\begin{DoxyCompactList}\small\item\em Name of the experiment \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a55777bd2fa8b71c034d49baad38c6ea3}{\+\_\+description}
-\item 
+\begin{DoxyCompactList}\small\item\em Description of the experiment \end{DoxyCompactList}\item 
 Date\+Time \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a406cd5a0a10b170f9182492f493cc05a}{\+\_\+created\+At}
-\item 
+\begin{DoxyCompactList}\small\item\em Creationdate of the experiment \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_ae9f31e30ec2c655a5c06de17f1e40a7c}{\+\_\+participants} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant}$>$()
-\item 
+\begin{DoxyCompactList}\small\item\em List of participants \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings}{Experiment\+Settings} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_ae907589850044fa39b4f1991c60d95ad}{\+\_\+settings} = new \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings}{Experiment\+Settings}()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Reference to experiment settings \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class which represents a experiment 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -80,6 +90,15 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_partici
 \item[{String}]{experiment\+Name}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a64aa31d07212ecda87fd557c051ea529}
+
+
+Constructor for creating a new experiment 
+
+
+\begin{DoxyParams}{Parameters}
+{\em experiment\+Name} & Name of the experiment\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a261ba587472913ad4f34f60c13ee3904}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Experiment\+Model@{Experiment\+Model}}
 \index{Experiment\+Model@{Experiment\+Model}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Experiment\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Experiment\+Model (
@@ -87,6 +106,10 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_partici
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a261ba587472913ad4f34f60c13ee3904}
+
+
+Constructor used for loading the experiment 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a08740ebbb438a9d8300bc537017c72c2}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!````~Experiment\+Model@{$\sim$\+Experiment\+Model}}
 \index{````~Experiment\+Model@{$\sim$\+Experiment\+Model}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{$\sim$\+Experiment\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.$\sim$\+Experiment\+Model (
@@ -94,6 +117,10 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_partici
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a08740ebbb438a9d8300bc537017c72c2}
+
+
+Destructor which resets hidden settings 
+
 
 
 \subsection{Member Function Documentation}
@@ -104,6 +131,18 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_partici
 \item[{String}]{name}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a0e5b2b7b9b003ff62ace53c4fb2da8cf}
+
+
+Creates a new experiment with the given name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name for the new experiment\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new experiment
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a113bb9a3b5a24817086eca3dd1320a5c}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Get\+Base\+Experiment\+Location@{Get\+Base\+Experiment\+Location}}
 \index{Get\+Base\+Experiment\+Location@{Get\+Base\+Experiment\+Location}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Get\+Base\+Experiment\+Location()}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Get\+Base\+Experiment\+Location (
@@ -111,20 +150,50 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_partici
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a113bb9a3b5a24817086eca3dd1320a5c}
-\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_abb3bdca255c65bedcd3e48c03b618dae}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Get\+Domain\+Setting\+Array@{Get\+Domain\+Setting\+Array}}
+
+
+Returns the base experiment location 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Uses the experiment settings and the experiment name. \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_abb3bdca255c65bedcd3e48c03b618dae}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Get\+Domain\+Setting\+Array@{Get\+Domain\+Setting\+Array}}
 \index{Get\+Domain\+Setting\+Array@{Get\+Domain\+Setting\+Array}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Get\+Domain\+Setting\+Array()}]{\setlength{\rightskip}{0pt plus 5cm}String \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Get\+Domain\+Setting\+Array (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_abb3bdca255c65bedcd3e48c03b618dae}
-\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a8054747fc8c5ff6a0cc2a7d0fed7a11e}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Get\+Domain\+Setting\+By\+Uid@{Get\+Domain\+Setting\+By\+Uid}}
+
+
+Returns an array with all domains 
+
+\begin{DoxyReturn}{Returns}
+Array of domains
+\end{DoxyReturn}
+
+
+Used for displaying domains in the ui \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a8054747fc8c5ff6a0cc2a7d0fed7a11e}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Get\+Domain\+Setting\+By\+Uid@{Get\+Domain\+Setting\+By\+Uid}}
 \index{Get\+Domain\+Setting\+By\+Uid@{Get\+Domain\+Setting\+By\+Uid}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Get\+Domain\+Setting\+By\+Uid(\+String uid)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Domain\+Settings} Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Get\+Domain\+Setting\+By\+Uid (
 \begin{DoxyParamCaption}
 \item[{String}]{uid}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a8054747fc8c5ff6a0cc2a7d0fed7a11e}
+
+
+Returns the domain setting for the given uid 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uid} & U\+I\+D of the domain\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The domain setting for the uid
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_aadb028e75684f16bd92456a883bb1d6a}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Get\+Domain\+Setting\+U\+I\+Ds@{Get\+Domain\+Setting\+U\+I\+Ds}}
 \index{Get\+Domain\+Setting\+U\+I\+Ds@{Get\+Domain\+Setting\+U\+I\+Ds}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Get\+Domain\+Setting\+U\+I\+Ds()}]{\setlength{\rightskip}{0pt plus 5cm}String \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Get\+Domain\+Setting\+U\+I\+Ds (
@@ -132,20 +201,50 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_partici
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_aadb028e75684f16bd92456a883bb1d6a}
-\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_af7a368e96b98082d8b878222dbcac372}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Get\+Participant\+Array@{Get\+Participant\+Array}}
+
+
+Returns an array with all domain uids 
+
+\begin{DoxyReturn}{Returns}
+Array of domain uids
+\end{DoxyReturn}
+
+
+Used for displaying domains in the ui \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_af7a368e96b98082d8b878222dbcac372}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Get\+Participant\+Array@{Get\+Participant\+Array}}
 \index{Get\+Participant\+Array@{Get\+Participant\+Array}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Get\+Participant\+Array()}]{\setlength{\rightskip}{0pt plus 5cm}String \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Get\+Participant\+Array (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_af7a368e96b98082d8b878222dbcac372}
-\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a1598095ae1e7e07f44c91db79d751666}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Get\+Participant\+By\+U\+I\+D@{Get\+Participant\+By\+U\+I\+D}}
+
+
+Returns an array with all participant identifiers 
+
+\begin{DoxyReturn}{Returns}
+Array of participant identifiers
+\end{DoxyReturn}
+
+
+Used for displaying participants in the ui \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a1598095ae1e7e07f44c91db79d751666}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Get\+Participant\+By\+U\+I\+D@{Get\+Participant\+By\+U\+I\+D}}
 \index{Get\+Participant\+By\+U\+I\+D@{Get\+Participant\+By\+U\+I\+D}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Get\+Participant\+By\+U\+I\+D(\+String uid)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+Participant} Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Get\+Participant\+By\+U\+I\+D (
 \begin{DoxyParamCaption}
 \item[{String}]{uid}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a1598095ae1e7e07f44c91db79d751666}
+
+
+Returns the participant for the given uid 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uid} & U\+I\+D of the participant\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The participant for the uid
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a6199a670aff6e00209ed3fdaa7020ecd}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Get\+Participant\+U\+I\+Ds@{Get\+Participant\+U\+I\+Ds}}
 \index{Get\+Participant\+U\+I\+Ds@{Get\+Participant\+U\+I\+Ds}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Get\+Participant\+U\+I\+Ds()}]{\setlength{\rightskip}{0pt plus 5cm}String \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Get\+Participant\+U\+I\+Ds (
@@ -153,13 +252,34 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_partici
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a6199a670aff6e00209ed3fdaa7020ecd}
-\hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a1ae79d69f4572920b709fa3f925ccf71}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}}
+
+
+Returns an array of participant uids 
+
+\begin{DoxyReturn}{Returns}
+Array of participant uids
+\end{DoxyReturn}
+
+
+Used for displaying participants in the ui \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a1ae79d69f4572920b709fa3f925ccf71}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}}
 \index{Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Load\+From\+X\+M\+L(\+Xml\+Document doc)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Experiment\+Model} Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Load\+From\+X\+M\+L (
 \begin{DoxyParamCaption}
 \item[{Xml\+Document}]{doc}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a1ae79d69f4572920b709fa3f925ccf71}
+
+
+Creates an object from X\+M\+L 
+
+
+\begin{DoxyParams}{Parameters}
+{\em doc} & X\+M\+L Document which contains the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded object
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a63429921e06c48ec66370f615d235bea}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Load\+Setting@{Load\+Setting}}
 \index{Load\+Setting@{Load\+Setting}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Load\+Setting(\+Xml\+Node setting)}]{\setlength{\rightskip}{0pt plus 5cm}static void Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Load\+Setting (
@@ -167,6 +287,15 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_partici
 \item[{Xml\+Node}]{setting}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a63429921e06c48ec66370f615d235bea}
+
+
+Loads the settings from the xml 
+
+
+\begin{DoxyParams}{Parameters}
+{\em setting} & X\+M\+L\+Node containing the setting\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_acf8637b65ca6f75a4fc412f7290e0091}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Reset\+Intern\+Settings@{Reset\+Intern\+Settings}}
 \index{Reset\+Intern\+Settings@{Reset\+Intern\+Settings}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Reset\+Intern\+Settings()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Reset\+Intern\+Settings (
@@ -174,6 +303,10 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_partici
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_acf8637b65ca6f75a4fc412f7290e0091}
+
+
+Resets the experiment variables 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a7a634ff267195bc2b3af083d6d20d81c}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Save\+Intern\+Settings@{Save\+Intern\+Settings}}
 \index{Save\+Intern\+Settings@{Save\+Intern\+Settings}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Save\+Intern\+Settings(\+Xml\+Node intern\+Settings, Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Save\+Intern\+Settings (
@@ -182,6 +315,17 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_partici
 \item[{Xml\+Document}]{xml\+Doc}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a7a634ff267195bc2b3af083d6d20d81c}
+
+
+Creates an xml representation of the hidden experiment settings 
+
+
+\begin{DoxyParams}{Parameters}
+{\em intern\+Settings} & X\+M\+L\+Node for the settings\\
+\hline
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a28b8ebb68293b7ab351bcd5734c7960c}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!To\+X\+M\+L@{To\+X\+M\+L}}
 \index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+To\+X\+M\+L (
@@ -191,40 +335,92 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_partici
 )}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a28b8ebb68293b7ab351bcd5734c7960c}
 
 
+Creates an xml representation of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a406cd5a0a10b170f9182492f493cc05a}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!\+\_\+created\+At@{\+\_\+created\+At}}
 \index{\+\_\+created\+At@{\+\_\+created\+At}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{\+\_\+created\+At}]{\setlength{\rightskip}{0pt plus 5cm}Date\+Time Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+\_\+created\+At\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a406cd5a0a10b170f9182492f493cc05a}
+
+
+Creationdate of the experiment 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a55777bd2fa8b71c034d49baad38c6ea3}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!\+\_\+description@{\+\_\+description}}
 \index{\+\_\+description@{\+\_\+description}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{\+\_\+description}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+\_\+description\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a55777bd2fa8b71c034d49baad38c6ea3}
+
+
+Description of the experiment 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a2e9168576a6110f27ea44886e19ff5da}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!\+\_\+experiment\+Name@{\+\_\+experiment\+Name}}
 \index{\+\_\+experiment\+Name@{\+\_\+experiment\+Name}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{\+\_\+experiment\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+\_\+experiment\+Name\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a2e9168576a6110f27ea44886e19ff5da}
+
+
+Name of the experiment 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_ae9f31e30ec2c655a5c06de17f1e40a7c}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!\+\_\+participants@{\+\_\+participants}}
 \index{\+\_\+participants@{\+\_\+participants}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{\+\_\+participants}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Experiment\+Participant}$>$ Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+\_\+participants = new List$<${\bf Experiment\+Participant}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_ae9f31e30ec2c655a5c06de17f1e40a7c}
+
+
+List of participants 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_ae907589850044fa39b4f1991c60d95ad}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!\+\_\+settings@{\+\_\+settings}}
 \index{\+\_\+settings@{\+\_\+settings}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{\+\_\+settings}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+Settings} Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+\_\+settings = new {\bf Experiment\+Settings}()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_ae907589850044fa39b4f1991c60d95ad}
+
+
+Reference to experiment settings 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a8f50de0ba85fe31f3db2a194a66ed084}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Created\+At@{Created\+At}}
 \index{Created\+At@{Created\+At}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Created\+At}]{\setlength{\rightskip}{0pt plus 5cm}Date\+Time Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Created\+At\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a8f50de0ba85fe31f3db2a194a66ed084}
+
+
+Getter/ Setter for the creation date 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a3f18f9046fa10178e80e77cb433af681}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Description@{Description}}
 \index{Description@{Description}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Description}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Description\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a3f18f9046fa10178e80e77cb433af681}
+
+
+Getter/ Setter for the experiment description 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_ac638be077683d6707e49ca4ae481a0b1}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Experiment\+Name@{Experiment\+Name}}
 \index{Experiment\+Name@{Experiment\+Name}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Experiment\+Name}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Experiment\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_ac638be077683d6707e49ca4ae481a0b1}
+
+
+Getter/ Setter for the experiment name 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a2429c903e1bd2b062452cfa648238380}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Participants@{Participants}}
 \index{Participants@{Participants}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Participants}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Experiment\+Participant}$>$ Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Participants\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a2429c903e1bd2b062452cfa648238380}
+
+
+Getter/ Setter for the experiment participants 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a00e6e2b80147ab73fc0eee0e7c20d856}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}!Settings@{Settings}}
 \index{Settings@{Settings}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Experiment\+Model}}
 \subsubsection[{Settings}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+Settings} Web\+Analyzer.\+Models.\+Base.\+Experiment\+Model.\+Settings\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model_a00e6e2b80147ab73fc0eee0e7c20d856}
+
+
+Getter/ Setter for the experiment settings 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

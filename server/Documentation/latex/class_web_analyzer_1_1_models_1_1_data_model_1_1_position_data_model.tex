@@ -1,31 +1,41 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model}{}\section{Web\+Analyzer.\+Models.\+Data\+Model.\+Position\+Data\+Model Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model}\index{Web\+Analyzer.\+Models.\+Data\+Model.\+Position\+Data\+Model@{Web\+Analyzer.\+Models.\+Data\+Model.\+Position\+Data\+Model}}
+
+
+Represents one position which was requested. Contains the tracking data as well as the element information  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_ad8fdd7054415f4211babc9a8b838ed22}{Position\+Data\+Model} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor for loading from xml \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a371659171eacec3ce6a1f641a11df165}{To\+X\+M\+L} (Xml\+Document xml\+Doc)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an xml representation of the object \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model}{Position\+Data\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a685b721ae7f666981d7da3e599641cb0}{Load\+From\+X\+M\+L} (Xml\+Node pos\+Node)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an object from X\+M\+L \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a1a065fa193e20137daa08472eefafd66}{Tracking\+Data}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the tracking data \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{D\+O\+M\+Element\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a4825afc0a1ecf3eeb0876be8611111ba}{Element}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the element \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a64809478becce669e0c67a035711df49}{\+\_\+tracking\+Data}
-\item 
+\begin{DoxyCompactList}\small\item\em Tracking data from the tracking component \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{D\+O\+M\+Element\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a2f78c931c2eaded13347f182a79968e4}{\+\_\+element}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Element data \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents one position which was requested. Contains the tracking data as well as the element information 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -38,6 +48,10 @@ static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_ad8fdd7054415f4211babc9a8b838ed22}
 
 
+Constructor for loading from xml 
+
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a685b721ae7f666981d7da3e599641cb0}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model}!Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}}
 \index{Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model}}
@@ -46,6 +60,18 @@ static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data
 \item[{Xml\+Node}]{pos\+Node}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a685b721ae7f666981d7da3e599641cb0}
+
+
+Creates an object from X\+M\+L 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\+Node} & The node which contains the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded object
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a371659171eacec3ce6a1f641a11df165}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model}!To\+X\+M\+L@{To\+X\+M\+L}}
 \index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model}}
 \subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Position\+Data\+Model.\+To\+X\+M\+L (
@@ -55,22 +81,50 @@ static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a371659171eacec3ce6a1f641a11df165}
 
 
+Creates an xml representation of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a2f78c931c2eaded13347f182a79968e4}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model}!\+\_\+element@{\+\_\+element}}
 \index{\+\_\+element@{\+\_\+element}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model}}
 \subsubsection[{\+\_\+element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+O\+M\+Element\+Model} Web\+Analyzer.\+Models.\+Data\+Model.\+Position\+Data\+Model.\+\_\+element\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a2f78c931c2eaded13347f182a79968e4}
+
+
+Element data 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a64809478becce669e0c67a035711df49}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model}!\+\_\+tracking\+Data@{\+\_\+tracking\+Data}}
 \index{\+\_\+tracking\+Data@{\+\_\+tracking\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model}}
 \subsubsection[{\+\_\+tracking\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\+Tracking\+Data} Web\+Analyzer.\+Models.\+Data\+Model.\+Position\+Data\+Model.\+\_\+tracking\+Data\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a64809478becce669e0c67a035711df49}
+
+
+Tracking data from the tracking component 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a4825afc0a1ecf3eeb0876be8611111ba}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model}!Element@{Element}}
 \index{Element@{Element}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model}}
 \subsubsection[{Element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+O\+M\+Element\+Model} Web\+Analyzer.\+Models.\+Data\+Model.\+Position\+Data\+Model.\+Element\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a4825afc0a1ecf3eeb0876be8611111ba}
+
+
+Getter / Setter for the element 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a1a065fa193e20137daa08472eefafd66}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model}!Tracking\+Data@{Tracking\+Data}}
 \index{Tracking\+Data@{Tracking\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Position\+Data\+Model}}
 \subsubsection[{Tracking\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\+Tracking\+Data} Web\+Analyzer.\+Models.\+Data\+Model.\+Position\+Data\+Model.\+Tracking\+Data\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model_a1a065fa193e20137daa08472eefafd66}
+
+
+Getter/ Setter for the tracking data 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{}\section{Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}\index{Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model@{Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model}}
+
+
+Representation of a gaze with data about both eyes.  
+
+
 Inheritance diagram for Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,48 +15,53 @@ Inheritance diagram for Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model\+:\be
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a66f9cf33a64b7fc07aba8203be3a481c}{Gaze\+Model} (String timestamp)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor which creates the uid \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a711f713288d82f87ee51b760d93e8cd6}{Gaze\+Model} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor for loading from xml \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model}{Position\+Data\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a0bde3b1a59828e2bc8680917872a89b1}{Get\+Eye\+Data} (String eye)
-\item 
+\begin{DoxyCompactList}\small\item\em Returns data for the given eye \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a0b04be81bba52c2b204aade39f0e945b}{To\+X\+M\+L} (Xml\+Document xml\+Doc)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an xml representation of the object \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a376ad99abf5742a4086e891a755a551c}{Generate\+Statistics\+X\+M\+L} (Xml\+Document xml\+Doc)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Generates a statistics xml node for the gaze \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_af6ae5c749db932c888009e906ea457d5}{Load\+From\+X\+M\+L} (Xml\+Node gaze\+Node)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an object from X\+M\+L \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a4fbd98b9986f70848075e65dec5fd8b4}{Unique\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the uniqueid \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_af6b9cc989b7eefd89d4070d1683c8539}{Timestamp}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the timestamp \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model}{Position\+Data\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_ac6313c8c1b0c33a8d08f5f1fe99faa2a}{Left\+Eye}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the left eye \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model}{Position\+Data\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a2303a593c1e6b377a480eb1903110452}{Right\+Eye}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the right eye \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_afd01f2bdad22ac2b2c667fef135b2ff9}{Get\+Unique\+Id} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates a uniqueid \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a6b834df87de0ac145676b7385f2bdcb4}{\+\_\+unique\+Id}
-\item 
+\begin{DoxyCompactList}\small\item\em Uniqueid of the gaze object \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model}{Position\+Data\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a95213ed60e16c99277c83349acbba88d}{\+\_\+left\+Eye}
-\item 
+\begin{DoxyCompactList}\small\item\em Data about the left eye \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_position_data_model}{Position\+Data\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_ac5b10c7779e4a0e426aba35246991cf9}{\+\_\+right\+Eye}
-\item 
+\begin{DoxyCompactList}\small\item\em Data about the right eye \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a313637ceeff4c9c9bc46c03d9c2b7278}{\+\_\+timestamp}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Timestamp of the gaze \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Representation of a gaze with data about both eyes. 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -62,6 +72,15 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a3
 \item[{String}]{timestamp}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a66f9cf33a64b7fc07aba8203be3a481c}
+
+
+Constructor which creates the uid 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timestamp} & Request timestamp\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a711f713288d82f87ee51b760d93e8cd6}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}!Gaze\+Model@{Gaze\+Model}}
 \index{Gaze\+Model@{Gaze\+Model}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}}
 \subsubsection[{Gaze\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model.\+Gaze\+Model (
@@ -69,6 +88,10 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a3
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a711f713288d82f87ee51b760d93e8cd6}
+
+
+Constructor for loading from xml 
+
 
 
 \subsection{Member Function Documentation}
@@ -79,6 +102,18 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a3
 \item[{Xml\+Document}]{xml\+Doc}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a376ad99abf5742a4086e891a755a551c}
+
+
+Generates a statistics xml node for the gaze 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a0bde3b1a59828e2bc8680917872a89b1}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}!Get\+Eye\+Data@{Get\+Eye\+Data}}
 \index{Get\+Eye\+Data@{Get\+Eye\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}}
 \subsubsection[{Get\+Eye\+Data(\+String eye)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position\+Data\+Model} Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model.\+Get\+Eye\+Data (
@@ -86,6 +121,18 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a3
 \item[{String}]{eye}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a0bde3b1a59828e2bc8680917872a89b1}
+
+
+Returns data for the given eye 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eye} & String representation of the eye\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_afd01f2bdad22ac2b2c667fef135b2ff9}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}!Get\+Unique\+Id@{Get\+Unique\+Id}}
 \index{Get\+Unique\+Id@{Get\+Unique\+Id}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}}
 \subsubsection[{Get\+Unique\+Id()}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model.\+Get\+Unique\+Id (
@@ -93,6 +140,13 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a3
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_afd01f2bdad22ac2b2c667fef135b2ff9}
+
+
+Creates a uniqueid 
+
+\begin{DoxyReturn}{Returns}
+Uniqueid
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_af6ae5c749db932c888009e906ea457d5}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}!Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}}
 \index{Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}}
 \subsubsection[{Load\+From\+X\+M\+L(\+Xml\+Node gaze\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Gaze\+Model} Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model.\+Load\+From\+X\+M\+L (
@@ -100,6 +154,18 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a3
 \item[{Xml\+Node}]{gaze\+Node}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_af6ae5c749db932c888009e906ea457d5}
+
+
+Creates an object from X\+M\+L 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gaze\+Node} & The node which contains the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded object
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a0b04be81bba52c2b204aade39f0e945b}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}!To\+X\+M\+L@{To\+X\+M\+L}}
 \index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}}
 \subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model.\+To\+X\+M\+L (
@@ -109,34 +175,78 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a3
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a0b04be81bba52c2b204aade39f0e945b}
 
 
+Creates an xml representation of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a95213ed60e16c99277c83349acbba88d}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}!\+\_\+left\+Eye@{\+\_\+left\+Eye}}
 \index{\+\_\+left\+Eye@{\+\_\+left\+Eye}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}}
 \subsubsection[{\+\_\+left\+Eye}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position\+Data\+Model} Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model.\+\_\+left\+Eye\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a95213ed60e16c99277c83349acbba88d}
+
+
+Data about the left eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_ac5b10c7779e4a0e426aba35246991cf9}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}!\+\_\+right\+Eye@{\+\_\+right\+Eye}}
 \index{\+\_\+right\+Eye@{\+\_\+right\+Eye}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}}
 \subsubsection[{\+\_\+right\+Eye}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position\+Data\+Model} Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model.\+\_\+right\+Eye\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_ac5b10c7779e4a0e426aba35246991cf9}
+
+
+Data about the right eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a313637ceeff4c9c9bc46c03d9c2b7278}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}!\+\_\+timestamp@{\+\_\+timestamp}}
 \index{\+\_\+timestamp@{\+\_\+timestamp}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}}
 \subsubsection[{\+\_\+timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model.\+\_\+timestamp\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a313637ceeff4c9c9bc46c03d9c2b7278}
+
+
+Timestamp of the gaze 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a6b834df87de0ac145676b7385f2bdcb4}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}!\+\_\+unique\+Id@{\+\_\+unique\+Id}}
 \index{\+\_\+unique\+Id@{\+\_\+unique\+Id}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}}
 \subsubsection[{\+\_\+unique\+Id}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model.\+\_\+unique\+Id\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a6b834df87de0ac145676b7385f2bdcb4}
+
+
+Uniqueid of the gaze object 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_ac6313c8c1b0c33a8d08f5f1fe99faa2a}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}!Left\+Eye@{Left\+Eye}}
 \index{Left\+Eye@{Left\+Eye}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}}
 \subsubsection[{Left\+Eye}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position\+Data\+Model} Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model.\+Left\+Eye\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_ac6313c8c1b0c33a8d08f5f1fe99faa2a}
+
+
+Getter/ Setter for the left eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a2303a593c1e6b377a480eb1903110452}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}!Right\+Eye@{Right\+Eye}}
 \index{Right\+Eye@{Right\+Eye}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}}
 \subsubsection[{Right\+Eye}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position\+Data\+Model} Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model.\+Right\+Eye\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a2303a593c1e6b377a480eb1903110452}
+
+
+Getter/ Setter for the right eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_af6b9cc989b7eefd89d4070d1683c8539}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}!Timestamp@{Timestamp}}
 \index{Timestamp@{Timestamp}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}}
 \subsubsection[{Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model.\+Timestamp\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_af6b9cc989b7eefd89d4070d1683c8539}
+
+
+Getter/ Setter for the timestamp 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a4fbd98b9986f70848075e65dec5fd8b4}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}!Unique\+Id@{Unique\+Id}}
 \index{Unique\+Id@{Unique\+Id}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Gaze\+Model}}
 \subsubsection[{Unique\+Id}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Gaze\+Model.\+Unique\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model_a4fbd98b9986f70848075e65dec5fd8b4}
+
+
+Getter/ Setter for the uniqueid 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

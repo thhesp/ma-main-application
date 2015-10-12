@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message}{}\section{Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message}\index{Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message@{Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message}}
+
+
+Outgoing data message for two eyes with different coordinates  
+
+
 Inheritance diagram for Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,45 +15,50 @@ Inheritance diagram for Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message\
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a3596e43b8f10bd9d32a939875cf9cfea}{Data\+Message} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_ac53ee1357e1980fd25ebeae30cee1014}{Data\+Message} (String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_ae1e243f35e213e08ec2bdc54f64b0d2e}{\+\_\+timestamp})
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor with request timestamp \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_ae33b7a50587d1e3579881f21660ac450}{Set\+Message\+Data} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af690ff5521d79c7128861033ae80ae17}{unique\+Id}, double left\+X, double left\+Y, double right\+X, double right\+Y)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor with uniqueid and coordinates about the eyes \end{DoxyCompactList}\item 
 string \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a0bd5c0828f6293f800603e292af890ce}{To\+Json} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The methods generates a J\+S\+O\+N representation of the message \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_af8ea083fd4035d8c786f5da12bc01917}{Unique\+I\+D}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the uniqueid of the message / gaze \end{DoxyCompactList}\item 
 Double \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_adadb413f3e7d845538561b2a65596722}{Left\+X}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the X Coordinate for the left eye \end{DoxyCompactList}\item 
 Double \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a409dc72ec09e601fbbd9dc4db680932c}{Left\+Y}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the Y Coordinate for the left eye \end{DoxyCompactList}\item 
 Double \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_ab650b2ca778810b8a6fbd0d7530318a9}{Right\+X}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the X Coordinate for the right eye \end{DoxyCompactList}\item 
 Double \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a3b554f231e24414cfa625552ff2635df}{Right\+Y}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the Y Coordinate for the right eye \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Events}
 \begin{DoxyCompactItemize}
 \item 
 Message\+Sent\+Event\+Handler \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a09dc25c903bc851fddabb0d075cca5f6}{Message\+Sent}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Handler for the message sent event \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a4c8a2ce0d65c6caae14863897eeb602d}{\+\_\+unique\+Id}
-\item 
+\begin{DoxyCompactList}\small\item\em Uniqueid of the message \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_ac9721293fa81833e18b244b11c6eed11}{\+\_\+left\+X}
-\item 
+\begin{DoxyCompactList}\small\item\em X Coordinate for the left eye \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a093686b36f2a672787a3d2a7b03709c8}{\+\_\+left\+Y}
-\item 
+\begin{DoxyCompactList}\small\item\em Y Coordinate for the left eye \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a2fea12857a3954edd96d248fa4dbb673}{\+\_\+right\+X}
-\item 
+\begin{DoxyCompactList}\small\item\em X Coordinate for the right eye \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a898ed683213c5e3ad74d42b9ecd4e590}{\+\_\+right\+Y}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Y Coordinate for the right eye \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Outgoing data message for two eyes with different coordinates 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -59,6 +69,10 @@ double \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_messa
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a3596e43b8f10bd9d32a939875cf9cfea}
+
+
+Constructor 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_ac53ee1357e1980fd25ebeae30cee1014}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}!Data\+Message@{Data\+Message}}
 \index{Data\+Message@{Data\+Message}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}}
 \subsubsection[{Data\+Message(\+String \+\_\+timestamp)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message.\+Data\+Message (
@@ -66,6 +80,15 @@ double \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_messa
 \item[{String}]{\+\_\+timestamp}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_ac53ee1357e1980fd25ebeae30cee1014}
+
+
+Constructor with request timestamp 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+timestamp} & Request timestamp of the data\\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
@@ -80,6 +103,26 @@ double \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_messa
 \item[{double}]{right\+Y}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_ae33b7a50587d1e3579881f21660ac450}
+
+
+Constructor with uniqueid and coordinates about the eyes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unique\+Id} & Unique\+I\+D of the message/ gaze\\
+\hline
+{\em left\+X} & X Coordinate for the left eye\\
+\hline
+{\em left\+Y} & Y Coordinate for the left eye\\
+\hline
+{\em right\+X} & X Coordinate for the right eye\\
+\hline
+{\em right\+Y} & Y Coordinate for the right eye\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a0bd5c0828f6293f800603e292af890ce}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}!To\+Json@{To\+Json}}
 \index{To\+Json@{To\+Json}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}}
 \subsubsection[{To\+Json()}]{\setlength{\rightskip}{0pt plus 5cm}string Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message.\+To\+Json (
@@ -89,46 +132,99 @@ double \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_messa
 )}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a0bd5c0828f6293f800603e292af890ce}
 
 
+The methods generates a J\+S\+O\+N representation of the message 
+
+\begin{DoxyReturn}{Returns}
+J\+S\+O\+N representation of the message
+\end{DoxyReturn}
+
+
+Used for sending the message 
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_ac9721293fa81833e18b244b11c6eed11}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}!\+\_\+left\+X@{\+\_\+left\+X}}
 \index{\+\_\+left\+X@{\+\_\+left\+X}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}}
 \subsubsection[{\+\_\+left\+X}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message.\+\_\+left\+X\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_ac9721293fa81833e18b244b11c6eed11}
+
+
+X Coordinate for the left eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a093686b36f2a672787a3d2a7b03709c8}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}!\+\_\+left\+Y@{\+\_\+left\+Y}}
 \index{\+\_\+left\+Y@{\+\_\+left\+Y}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}}
 \subsubsection[{\+\_\+left\+Y}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message.\+\_\+left\+Y\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a093686b36f2a672787a3d2a7b03709c8}
+
+
+Y Coordinate for the left eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a2fea12857a3954edd96d248fa4dbb673}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}!\+\_\+right\+X@{\+\_\+right\+X}}
 \index{\+\_\+right\+X@{\+\_\+right\+X}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}}
 \subsubsection[{\+\_\+right\+X}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message.\+\_\+right\+X\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a2fea12857a3954edd96d248fa4dbb673}
+
+
+X Coordinate for the right eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a898ed683213c5e3ad74d42b9ecd4e590}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}!\+\_\+right\+Y@{\+\_\+right\+Y}}
 \index{\+\_\+right\+Y@{\+\_\+right\+Y}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}}
 \subsubsection[{\+\_\+right\+Y}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message.\+\_\+right\+Y\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a898ed683213c5e3ad74d42b9ecd4e590}
+
+
+Y Coordinate for the right eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a4c8a2ce0d65c6caae14863897eeb602d}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}!\+\_\+unique\+Id@{\+\_\+unique\+Id}}
 \index{\+\_\+unique\+Id@{\+\_\+unique\+Id}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}}
 \subsubsection[{\+\_\+unique\+Id}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message.\+\_\+unique\+Id\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a4c8a2ce0d65c6caae14863897eeb602d}
+
+
+Uniqueid of the message 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_adadb413f3e7d845538561b2a65596722}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}!Left\+X@{Left\+X}}
 \index{Left\+X@{Left\+X}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}}
 \subsubsection[{Left\+X}]{\setlength{\rightskip}{0pt plus 5cm}Double Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message.\+Left\+X\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_adadb413f3e7d845538561b2a65596722}
+
+
+Getter/ Setter for the X Coordinate for the left eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a409dc72ec09e601fbbd9dc4db680932c}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}!Left\+Y@{Left\+Y}}
 \index{Left\+Y@{Left\+Y}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}}
 \subsubsection[{Left\+Y}]{\setlength{\rightskip}{0pt plus 5cm}Double Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message.\+Left\+Y\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a409dc72ec09e601fbbd9dc4db680932c}
+
+
+Getter/ Setter for the Y Coordinate for the left eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_ab650b2ca778810b8a6fbd0d7530318a9}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}!Right\+X@{Right\+X}}
 \index{Right\+X@{Right\+X}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}}
 \subsubsection[{Right\+X}]{\setlength{\rightskip}{0pt plus 5cm}Double Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message.\+Right\+X\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_ab650b2ca778810b8a6fbd0d7530318a9}
+
+
+Getter/ Setter for the X Coordinate for the right eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a3b554f231e24414cfa625552ff2635df}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}!Right\+Y@{Right\+Y}}
 \index{Right\+Y@{Right\+Y}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}}
 \subsubsection[{Right\+Y}]{\setlength{\rightskip}{0pt plus 5cm}Double Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message.\+Right\+Y\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a3b554f231e24414cfa625552ff2635df}
+
+
+Getter/ Setter for the Y Coordinate for the right eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_af8ea083fd4035d8c786f5da12bc01917}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}!Unique\+I\+D@{Unique\+I\+D}}
 \index{Unique\+I\+D@{Unique\+I\+D}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}}
 \subsubsection[{Unique\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message.\+Unique\+I\+D\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_af8ea083fd4035d8c786f5da12bc01917}
+
+
+Getter / Setter for the uniqueid of the message / gaze 
+
 
 
 \subsection{Event Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a09dc25c903bc851fddabb0d075cca5f6}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}!Message\+Sent@{Message\+Sent}}
 \index{Message\+Sent@{Message\+Sent}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Data\+Message}}
 \subsubsection[{Message\+Sent}]{\setlength{\rightskip}{0pt plus 5cm}Message\+Sent\+Event\+Handler Web\+Analyzer.\+Models.\+Message\+Model.\+Data\+Message.\+Message\+Sent}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_data_message_a09dc25c903bc851fddabb0d075cca5f6}
+
+
+Handler for the message sent event 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

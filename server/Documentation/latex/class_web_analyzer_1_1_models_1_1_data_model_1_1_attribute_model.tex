@@ -1,33 +1,43 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model}{}\section{Web\+Analyzer.\+Models.\+Data\+Model.\+Attribute\+Model Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model}\index{Web\+Analyzer.\+Models.\+Data\+Model.\+Attribute\+Model@{Web\+Analyzer.\+Models.\+Data\+Model.\+Attribute\+Model}}
+
+
+Model for representing H\+T\+M\+L element attributes  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_a7b736b820a7e06de49cf2d937a898579}{Attribute\+Model} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor for loading from xml \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_a9521c8ec3b53c8e617249323ecd2f291}{Attribute\+Model} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_adac2bcb4f01b574cbc63fe8ee2c56bf0}{name}, String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af7e1471ab89699458c4df8bb657298f6}{value})
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor with name and value \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_af9a4c1d421bd73f4c25edd4f6df7ad42}{To\+X\+M\+L} (Xml\+Document xml\+Doc)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an xml representation of the object \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model}{Attribute\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_a84e8555e8b89040f69ba84836aadeade}{Load\+From\+X\+M\+L} (Xml\+Node attr\+Node)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an object from X\+M\+L \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_aed6ff726ffc8f9848b312f1dcb03594b}{Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the name \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_a132abb603aaf2d5bd36c3c3477b1c21d}{Value}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the value \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_acaa56d04d7821e130c6f1d8a0036fd08}{\+\_\+name}
-\item 
+\begin{DoxyCompactList}\small\item\em Attribute name \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_a78fd60dadcd65ac87ef1fb49ec497055}{\+\_\+value}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em attribute value \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Model for representing H\+T\+M\+L element attributes 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -38,6 +48,10 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_mod
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_a7b736b820a7e06de49cf2d937a898579}
+
+
+Constructor for loading from xml 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_a9521c8ec3b53c8e617249323ecd2f291}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model}!Attribute\+Model@{Attribute\+Model}}
 \index{Attribute\+Model@{Attribute\+Model}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model}}
 \subsubsection[{Attribute\+Model(\+String name, String value)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Data\+Model.\+Attribute\+Model.\+Attribute\+Model (
@@ -48,6 +62,17 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_mod
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_a9521c8ec3b53c8e617249323ecd2f291}
 
 
+Constructor with name and value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Attribute name\\
+\hline
+{\em value} & attribute value\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_a84e8555e8b89040f69ba84836aadeade}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model}!Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}}
 \index{Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model}}
@@ -56,6 +81,18 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_mod
 \item[{Xml\+Node}]{attr\+Node}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_a84e8555e8b89040f69ba84836aadeade}
+
+
+Creates an object from X\+M\+L 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attr\+Node} & The node which contains the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded object
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_af9a4c1d421bd73f4c25edd4f6df7ad42}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model}!To\+X\+M\+L@{To\+X\+M\+L}}
 \index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model}}
 \subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Attribute\+Model.\+To\+X\+M\+L (
@@ -65,22 +102,50 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_mod
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_af9a4c1d421bd73f4c25edd4f6df7ad42}
 
 
+Creates an xml representation of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_acaa56d04d7821e130c6f1d8a0036fd08}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model}!\+\_\+name@{\+\_\+name}}
 \index{\+\_\+name@{\+\_\+name}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model}}
 \subsubsection[{\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Attribute\+Model.\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_acaa56d04d7821e130c6f1d8a0036fd08}
+
+
+Attribute name 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_a78fd60dadcd65ac87ef1fb49ec497055}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model}!\+\_\+value@{\+\_\+value}}
 \index{\+\_\+value@{\+\_\+value}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model}}
 \subsubsection[{\+\_\+value}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Attribute\+Model.\+\_\+value\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_a78fd60dadcd65ac87ef1fb49ec497055}
+
+
+attribute value 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_aed6ff726ffc8f9848b312f1dcb03594b}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model}!Name@{Name}}
 \index{Name@{Name}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model}}
 \subsubsection[{Name}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Attribute\+Model.\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_aed6ff726ffc8f9848b312f1dcb03594b}
+
+
+Getter/ Setter for the name 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_a132abb603aaf2d5bd36c3c3477b1c21d}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model}!Value@{Value}}
 \index{Value@{Value}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Attribute\+Model}}
 \subsubsection[{Value}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Attribute\+Model.\+Value\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model_a132abb603aaf2d5bd36c3c3477b1c21d}
+
+
+Getter/ Setter for the value 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

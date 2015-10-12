@@ -1,6 +1,5 @@
 var class_web_analyzer_1_1_server_1_1_connection_manager =
 [
-    [ "ConnectionManager", "class_web_analyzer_1_1_server_1_1_connection_manager.html#ae034fe5148cccbcc759a56abd68bb51a", null ],
     [ "Broadcast", "class_web_analyzer_1_1_server_1_1_connection_manager.html#a802503ffd29cf9a18a2bfae95adc4b4e", null ],
     [ "On_AddConnection", "class_web_analyzer_1_1_server_1_1_connection_manager.html#a912992bce817cbf9177db239f7716a1e", null ],
     [ "RemoveOldConnections", "class_web_analyzer_1_1_server_1_1_connection_manager.html#a2c3ef15396b89a8ec145e62158348faf", null ],

@@ -409,7 +409,6 @@ namespace WebAnalyzer.Controller
         /// <summary>
         /// Prepares the GazeData with the TestModel.
         /// </summary>
-        /// <param name="timestamp">Timestamp on which the gaze was requested</param>
         /// <param name="leftEye">Data about the left Eye</param>
         /// <param name="rightEye">Data about the right Eye</param>
         public String PrepareGazeData(BaseTrackingData leftEye, BaseTrackingData rightEye)
@@ -515,7 +514,7 @@ namespace WebAnalyzer.Controller
         /// <summary>
         /// Callback for Update WS Change Webpage Event
         /// </summary>
-        /// <param name="sender">Object from which the event gets triggered.</param>
+        /// <param name="source">Object from which the event gets triggered.</param>
         /// <param name="e">Data about the webpage</param>
         public void On_AddWebpage(object source, AddWebpageEvent e)
         {

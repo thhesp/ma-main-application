@@ -1,84 +1,94 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model}{}\section{Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model}\index{Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model@{Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model}}
+
+
+Model for representing a visit of a webpage  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a2f7f76f4128b22b839f8858d40413067}{Webpage\+Model} (String url, String connection\+U\+I\+D, String visit\+Timestamp)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor for the webpage \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a613cfd755d739701df6cd2b05190d72f}{Webpage\+Model} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor used for loading from xml \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a7169078e11bdd8867dc0f507c9a65b9e}{Add\+Gaze\+Data} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} data)
-\item 
+\begin{DoxyCompactList}\small\item\em Add gaze to this webpage \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a056bc9895b2a1c83631c24d100353ef2}{To\+X\+M\+L} (Xml\+Document xml\+Doc)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an xml representation of the object \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a32f7e53626e6dcec7a2261110456dde1}{Generate\+Statistics\+X\+M\+L} (Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
-\item 
+\begin{DoxyCompactList}\small\item\em Generates a statistics xml for the webpage \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a52e59f18909452181341e36e18bb57fb}{Generate\+Fixation\+X\+M\+L} (Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
-\item 
+\begin{DoxyCompactList}\small\item\em Generates fixation xml \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac77dcced8299e84a47feea280c9e9dee}{Generate\+A\+O\+I\+X\+M\+L} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings}{Experiment\+Settings} settings, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
-\item 
+\begin{DoxyCompactList}\small\item\em Generates aoi xml \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a123917bf5e44e719fb0e626615f030ab}{Generate\+Saccades\+X\+M\+L} (Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
-\item 
+\begin{DoxyCompactList}\small\item\em Generates saccades xml \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aebdfec61a00dd14845ee5e46bccbf268}{Extract\+Fixations\+And\+Saccades} (\hyperlink{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm}{Algorithm} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2analyse_8js_a1222cf9678e9ad6a699b071d3308f976}{algorithm})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method for extracting fixations and saccades \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model}{Webpage\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a26999baeddbe48b5c6f10a0b7510c807}{Load\+From\+X\+M\+L} (Xml\+Node webpage\+Node)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an object from X\+M\+L \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a956b067ed12f422f646b7e2a4b6bb42d}{Url}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the Url of the webpage \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a5f1bed3947c7e7b6a5fe34fdd23f3841}{Connection\+U\+I\+D}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the U\+I\+D of the websocket connection which receives the data \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac3378fdc78273706547ec3a9d377ef9a}{Visit\+Timestamp}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the Timestamp on which the webpage was visited \end{DoxyCompactList}\item 
 int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a3e3926562c05a94a3111f3a07cd8e131}{Window\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the Width of the browser window \end{DoxyCompactList}\item 
 int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a76b6e0896f14f8d7c0d7bf94b94ec058}{Window\+Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the Height of the browser window \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_acb4a6ecac0e4ef9ed2df7b33e4694b31}{Gazes}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the gazes of this webpage \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_base_event_model}{Base\+Event\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aa80b98da4b9e9c2d6b6950f4e52c0b61}{Events}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the events of this webpage \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model}{Fixation\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_af4888add7ed76fe7b841410abc944b99}{Left\+Fixation\+Data}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the fixations of the left eye \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model}{Fixation\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_abe8cc7ad2f30655dbd1ba0c1111429d6}{Right\+Fixation\+Data}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the fixations of the right eye \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_af8b9bb060e28384f7ecf0635856187d4}{Create\+Webpage\+Statistics} (Xml\+Document xml\+Doc)
-\item 
+\begin{DoxyCompactList}\small\item\em Generates the statistics on a webpage level \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a52e372578a17a8174ba376ca4d699b31}{Insert\+Array\+Statistics} (Xml\+Document xml\+Doc, Xml\+Node node, long\mbox{[}$\,$\mbox{]} array)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Generates the statistics for the given array \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aea93808218833baaf68514071c973ae4}{\+\_\+url}
-\item 
+\begin{DoxyCompactList}\small\item\em Url of th page \end{DoxyCompactList}\item 
 int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ae9604da5bff18321d117bae9c29d19b1}{\+\_\+window\+Width} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em width of the window on page visit \end{DoxyCompactList}\item 
 int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a8950b0fab5ad1e804970a6197737e31a}{\+\_\+window\+Height} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em height of the window on page visit \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_af8a807db15e54cbc83463f814c6b4f59}{\+\_\+connection\+U\+I\+D}
-\item 
+\begin{DoxyCompactList}\small\item\em U\+I\+D of the websocket connection on which the data was received \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac030b9fb9430a41677eb845ceabd5b26}{\+\_\+visit\+Timestamp}
-\item 
+\begin{DoxyCompactList}\small\item\em Timestamp on which the webpage was visited \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a1830061eb9c3046a86386306ac467f25}{\+\_\+position\+Data} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model}$>$()
-\item 
+\begin{DoxyCompactList}\small\item\em Data about all gazes \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_base_event_model}{Base\+Event\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a6f183590ba34744b4cec4c8cfb126af5}{\+\_\+event\+Data} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_base_event_model}{Base\+Event\+Model}$>$()
-\item 
+\begin{DoxyCompactList}\small\item\em Data about all webpage events \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model}{Fixation\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aeef627527c26ccf4d8caa6e65101970f}{\+\_\+left\+Fixation\+Data} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model}{Fixation\+Model}$>$()
-\item 
+\begin{DoxyCompactList}\small\item\em Fixations for the left eye \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model}{Fixation\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a5c341d7a7fd5074ddbd4cb7622914465}{\+\_\+right\+Fixation\+Data} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_fixation_model}{Fixation\+Model}$>$()
-\item 
+\begin{DoxyCompactList}\small\item\em Fixations for the right eye \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model}{Saccade\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ae5f64734db7ab52273fa0cd24ca0a31a}{\+\_\+left\+Saccades\+Data} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model}{Saccade\+Model}$>$()
-\item 
+\begin{DoxyCompactList}\small\item\em Saccades for the left eye \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model}{Saccade\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aa2ee1cf77db6f7e7f68fbf8c971109cf}{\+\_\+right\+Saccadesn\+Data} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_model}{Saccade\+Model}$>$()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Saccades for the right eye \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Model for representing a visit of a webpage 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -91,6 +101,19 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 \item[{String}]{visit\+Timestamp}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a2f7f76f4128b22b839f8858d40413067}
+
+
+Constructor for the webpage 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & U\+R\+L of the webpage\\
+\hline
+{\em connection\+U\+I\+D} & U\+I\+D of the websocket connection which received the data\\
+\hline
+{\em visit\+Timestamp} & Timestamp on which the webpage was visited\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a613cfd755d739701df6cd2b05190d72f}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Webpage\+Model@{Webpage\+Model}}
 \index{Webpage\+Model@{Webpage\+Model}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Webpage\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Webpage\+Model (
@@ -98,6 +121,10 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a613cfd755d739701df6cd2b05190d72f}
+
+
+Constructor used for loading from xml 
+
 
 
 \subsection{Member Function Documentation}
@@ -108,6 +135,15 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 \item[{{\bf Gaze\+Model}}]{data}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a7169078e11bdd8867dc0f507c9a65b9e}
+
+
+Add gaze to this webpage 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Gaze to add\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_af8b9bb060e28384f7ecf0635856187d4}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Create\+Webpage\+Statistics@{Create\+Webpage\+Statistics}}
 \index{Create\+Webpage\+Statistics@{Create\+Webpage\+Statistics}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Create\+Webpage\+Statistics(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Create\+Webpage\+Statistics (
@@ -115,6 +151,18 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 \item[{Xml\+Document}]{xml\+Doc}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_af8b9bb060e28384f7ecf0635856187d4}
+
+
+Generates the statistics on a webpage level 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aebdfec61a00dd14845ee5e46bccbf268}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Extract\+Fixations\+And\+Saccades@{Extract\+Fixations\+And\+Saccades}}
 \index{Extract\+Fixations\+And\+Saccades@{Extract\+Fixations\+And\+Saccades}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Extract\+Fixations\+And\+Saccades(\+Algorithm algorithm)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Extract\+Fixations\+And\+Saccades (
@@ -122,6 +170,15 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 \item[{{\bf Algorithm}}]{algorithm}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aebdfec61a00dd14845ee5e46bccbf268}
+
+
+Method for extracting fixations and saccades 
+
+
+\begin{DoxyParams}{Parameters}
+{\em algorithm} & The algorithm to use for the extraction\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac77dcced8299e84a47feea280c9e9dee}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Generate\+A\+O\+I\+X\+M\+L@{Generate\+A\+O\+I\+X\+M\+L}}
 \index{Generate\+A\+O\+I\+X\+M\+L@{Generate\+A\+O\+I\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Generate\+A\+O\+I\+X\+M\+L(\+Experiment\+Settings settings, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Generate\+A\+O\+I\+X\+M\+L (
@@ -131,6 +188,22 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 \item[{Boolean}]{include\+Single\+Gaze\+Data}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac77dcced8299e84a47feea280c9e9dee}
+
+
+Generates aoi xml 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & Settings to be used for the generation\\
+\hline
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+{\em include\+Single\+Gaze\+Data} & Shall the xml contain data about each single gaze\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a52e59f18909452181341e36e18bb57fb}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Generate\+Fixation\+X\+M\+L@{Generate\+Fixation\+X\+M\+L}}
 \index{Generate\+Fixation\+X\+M\+L@{Generate\+Fixation\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Generate\+Fixation\+X\+M\+L(\+Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Generate\+Fixation\+X\+M\+L (
@@ -139,6 +212,20 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 \item[{Boolean}]{include\+Single\+Gaze\+Data}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a52e59f18909452181341e36e18bb57fb}
+
+
+Generates fixation xml 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+{\em include\+Single\+Gaze\+Data} & Shall the xml contain data about each single gaze\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a123917bf5e44e719fb0e626615f030ab}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Generate\+Saccades\+X\+M\+L@{Generate\+Saccades\+X\+M\+L}}
 \index{Generate\+Saccades\+X\+M\+L@{Generate\+Saccades\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Generate\+Saccades\+X\+M\+L(\+Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Generate\+Saccades\+X\+M\+L (
@@ -147,6 +234,20 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 \item[{Boolean}]{include\+Single\+Gaze\+Data}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a123917bf5e44e719fb0e626615f030ab}
+
+
+Generates saccades xml 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+{\em include\+Single\+Gaze\+Data} & Shall the xml contain data about each single gaze\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a32f7e53626e6dcec7a2261110456dde1}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Generate\+Statistics\+X\+M\+L@{Generate\+Statistics\+X\+M\+L}}
 \index{Generate\+Statistics\+X\+M\+L@{Generate\+Statistics\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Generate\+Statistics\+X\+M\+L(\+Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Generate\+Statistics\+X\+M\+L (
@@ -155,6 +256,20 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 \item[{Boolean}]{include\+Single\+Gaze\+Data}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a32f7e53626e6dcec7a2261110456dde1}
+
+
+Generates a statistics xml for the webpage 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+{\em include\+Single\+Gaze\+Data} & Should the xml contain data about each gaze\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a52e372578a17a8174ba376ca4d699b31}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Insert\+Array\+Statistics@{Insert\+Array\+Statistics}}
 \index{Insert\+Array\+Statistics@{Insert\+Array\+Statistics}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Insert\+Array\+Statistics(\+Xml\+Document xml\+Doc, Xml\+Node node, long[] array)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Insert\+Array\+Statistics (
@@ -164,6 +279,19 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 \item[{long\mbox{[}$\,$\mbox{]}}]{array}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a52e372578a17a8174ba376ca4d699b31}
+
+
+Generates the statistics for the given array 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+{\em node} & Node in which data shall be inserted\\
+\hline
+{\em array} & Array with data which shall be analysed\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a26999baeddbe48b5c6f10a0b7510c807}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}}
 \index{Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Load\+From\+X\+M\+L(\+Xml\+Node webpage\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Webpage\+Model} Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Load\+From\+X\+M\+L (
@@ -171,6 +299,18 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 \item[{Xml\+Node}]{webpage\+Node}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a26999baeddbe48b5c6f10a0b7510c807}
+
+
+Creates an object from X\+M\+L 
+
+
+\begin{DoxyParams}{Parameters}
+{\em webpage\+Node} & The node which contains the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded object
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a056bc9895b2a1c83631c24d100353ef2}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!To\+X\+M\+L@{To\+X\+M\+L}}
 \index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+To\+X\+M\+L (
@@ -180,70 +320,162 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_analysis_model_1_1_saccade_
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a056bc9895b2a1c83631c24d100353ef2}
 
 
+Creates an xml representation of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_af8a807db15e54cbc83463f814c6b4f59}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+connection\+U\+I\+D@{\+\_\+connection\+U\+I\+D}}
 \index{\+\_\+connection\+U\+I\+D@{\+\_\+connection\+U\+I\+D}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{\+\_\+connection\+U\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+connection\+U\+I\+D\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_af8a807db15e54cbc83463f814c6b4f59}
+
+
+U\+I\+D of the websocket connection on which the data was received 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a6f183590ba34744b4cec4c8cfb126af5}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+event\+Data@{\+\_\+event\+Data}}
 \index{\+\_\+event\+Data@{\+\_\+event\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{\+\_\+event\+Data}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Base\+Event\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+event\+Data = new List$<${\bf Base\+Event\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a6f183590ba34744b4cec4c8cfb126af5}
+
+
+Data about all webpage events 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aeef627527c26ccf4d8caa6e65101970f}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+left\+Fixation\+Data@{\+\_\+left\+Fixation\+Data}}
 \index{\+\_\+left\+Fixation\+Data@{\+\_\+left\+Fixation\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{\+\_\+left\+Fixation\+Data}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Fixation\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+left\+Fixation\+Data = new List$<${\bf Fixation\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aeef627527c26ccf4d8caa6e65101970f}
+
+
+Fixations for the left eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ae5f64734db7ab52273fa0cd24ca0a31a}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+left\+Saccades\+Data@{\+\_\+left\+Saccades\+Data}}
 \index{\+\_\+left\+Saccades\+Data@{\+\_\+left\+Saccades\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{\+\_\+left\+Saccades\+Data}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Saccade\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+left\+Saccades\+Data = new List$<${\bf Saccade\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ae5f64734db7ab52273fa0cd24ca0a31a}
+
+
+Saccades for the left eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a1830061eb9c3046a86386306ac467f25}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+position\+Data@{\+\_\+position\+Data}}
 \index{\+\_\+position\+Data@{\+\_\+position\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{\+\_\+position\+Data}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Gaze\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+position\+Data = new List$<${\bf Gaze\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a1830061eb9c3046a86386306ac467f25}
+
+
+Data about all gazes 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a5c341d7a7fd5074ddbd4cb7622914465}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+right\+Fixation\+Data@{\+\_\+right\+Fixation\+Data}}
 \index{\+\_\+right\+Fixation\+Data@{\+\_\+right\+Fixation\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{\+\_\+right\+Fixation\+Data}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Fixation\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+right\+Fixation\+Data = new List$<${\bf Fixation\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a5c341d7a7fd5074ddbd4cb7622914465}
+
+
+Fixations for the right eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aa2ee1cf77db6f7e7f68fbf8c971109cf}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+right\+Saccadesn\+Data@{\+\_\+right\+Saccadesn\+Data}}
 \index{\+\_\+right\+Saccadesn\+Data@{\+\_\+right\+Saccadesn\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{\+\_\+right\+Saccadesn\+Data}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Saccade\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+right\+Saccadesn\+Data = new List$<${\bf Saccade\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aa2ee1cf77db6f7e7f68fbf8c971109cf}
+
+
+Saccades for the right eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aea93808218833baaf68514071c973ae4}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+url@{\+\_\+url}}
 \index{\+\_\+url@{\+\_\+url}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{\+\_\+url}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+url\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aea93808218833baaf68514071c973ae4}
+
+
+Url of th page 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac030b9fb9430a41677eb845ceabd5b26}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+visit\+Timestamp@{\+\_\+visit\+Timestamp}}
 \index{\+\_\+visit\+Timestamp@{\+\_\+visit\+Timestamp}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{\+\_\+visit\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+visit\+Timestamp\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac030b9fb9430a41677eb845ceabd5b26}
+
+
+Timestamp on which the webpage was visited 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a8950b0fab5ad1e804970a6197737e31a}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+window\+Height@{\+\_\+window\+Height}}
 \index{\+\_\+window\+Height@{\+\_\+window\+Height}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{\+\_\+window\+Height}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+window\+Height = 0\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a8950b0fab5ad1e804970a6197737e31a}
+
+
+height of the window on page visit 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ae9604da5bff18321d117bae9c29d19b1}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!\+\_\+window\+Width@{\+\_\+window\+Width}}
 \index{\+\_\+window\+Width@{\+\_\+window\+Width}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{\+\_\+window\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+\_\+window\+Width = 0\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ae9604da5bff18321d117bae9c29d19b1}
+
+
+width of the window on page visit 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a5f1bed3947c7e7b6a5fe34fdd23f3841}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Connection\+U\+I\+D@{Connection\+U\+I\+D}}
 \index{Connection\+U\+I\+D@{Connection\+U\+I\+D}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Connection\+U\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Connection\+U\+I\+D\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a5f1bed3947c7e7b6a5fe34fdd23f3841}
+
+
+Getter/ Setter for the U\+I\+D of the websocket connection which receives the data 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aa80b98da4b9e9c2d6b6950f4e52c0b61}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Events@{Events}}
 \index{Events@{Events}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Events}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Base\+Event\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Events\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_aa80b98da4b9e9c2d6b6950f4e52c0b61}
+
+
+Getter/ Setter for the events of this webpage 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_acb4a6ecac0e4ef9ed2df7b33e4694b31}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Gazes@{Gazes}}
 \index{Gazes@{Gazes}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Gazes}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Gaze\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Gazes\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_acb4a6ecac0e4ef9ed2df7b33e4694b31}
+
+
+Getter/ Setter for the gazes of this webpage 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_af4888add7ed76fe7b841410abc944b99}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Left\+Fixation\+Data@{Left\+Fixation\+Data}}
 \index{Left\+Fixation\+Data@{Left\+Fixation\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Left\+Fixation\+Data}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Fixation\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Left\+Fixation\+Data\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_af4888add7ed76fe7b841410abc944b99}
+
+
+Getter/ Setter for the fixations of the left eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_abe8cc7ad2f30655dbd1ba0c1111429d6}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Right\+Fixation\+Data@{Right\+Fixation\+Data}}
 \index{Right\+Fixation\+Data@{Right\+Fixation\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Right\+Fixation\+Data}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Fixation\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Right\+Fixation\+Data\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_abe8cc7ad2f30655dbd1ba0c1111429d6}
+
+
+Getter/ Setter for the fixations of the right eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a956b067ed12f422f646b7e2a4b6bb42d}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Url@{Url}}
 \index{Url@{Url}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Url}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Url\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a956b067ed12f422f646b7e2a4b6bb42d}
+
+
+Getter/ Setter for the Url of the webpage 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac3378fdc78273706547ec3a9d377ef9a}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Visit\+Timestamp@{Visit\+Timestamp}}
 \index{Visit\+Timestamp@{Visit\+Timestamp}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Visit\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Visit\+Timestamp\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_ac3378fdc78273706547ec3a9d377ef9a}
+
+
+Getter/ Setter for the Timestamp on which the webpage was visited 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a76b6e0896f14f8d7c0d7bf94b94ec058}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Window\+Height@{Window\+Height}}
 \index{Window\+Height@{Window\+Height}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Window\+Height}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Window\+Height\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a76b6e0896f14f8d7c0d7bf94b94ec058}
+
+
+Getter/ Setter for the Height of the browser window 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a3e3926562c05a94a3111f3a07cd8e131}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}!Window\+Width@{Window\+Width}}
 \index{Window\+Width@{Window\+Width}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Webpage\+Model}}
 \subsubsection[{Window\+Width}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Data\+Model.\+Webpage\+Model.\+Window\+Width\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model_a3e3926562c05a94a3111f3a07cd8e131}
+
+
+Getter/ Setter for the Width of the browser window 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

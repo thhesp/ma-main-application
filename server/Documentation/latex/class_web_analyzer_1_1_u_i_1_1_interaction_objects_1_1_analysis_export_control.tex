@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control}{}\section{Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control Class Reference}
 \label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control}\index{Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control@{Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control}}
+
+
+Interaction object for analysing and exporting testdata  
+
+
 Inheritance diagram for Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,72 +15,77 @@ Inheritance diagram for Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a2425c39535e55e12f4ee4975a3176f23}{Analysis\+Export\+Control} (\hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i}{H\+T\+M\+L\+U\+I} form)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ab99bfbf3692c2bf98659509acdd35dca}{set\+Filename} (String filename)
-\item 
+\begin{DoxyCompactList}\small\item\em Method to set the filename \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a905c7235a4fd676629321fd44716e6a9}{set\+Export\+Format} (String format)
-\item 
-void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ae48446e5cc2e80546f946109517b5321}{set\+Algorithm\+Type} (String format)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the export format \end{DoxyCompactList}\item 
+void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a1ddd89e1fa0069f73cc316189d4021dc}{set\+Algorithm\+Type} (String algorithm\+Type)
+\begin{DoxyCompactList}\small\item\em Used for updating the algorithm type \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a3017c2cba0f0082ffdd7781751f8baf5}{set\+Contain\+Gaze\+Data} (Boolean contain\+Gaze\+Data)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets if gaze data shall be included for each gaze \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aefc66bb4dc458b4ed4353eeb0b375275}{export} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Used for starting the export \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a6696015a547f10cae60a7703c4ec1819}{analyse} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Used for starting the analysis \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aa6c46c4213a2c07af6f40d6bc9fe7fdd}{select\+Participant} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Used for selecting a participant \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a657be9be6841e03ea141377622cb50f1}{select\+Testrun} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Used for selecting a testrun \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_adc83e194f06035232900d4a37ff5b7c5}{select\+Folder} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Used for selecting a folder \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aacb447300e2c8656dd8dae25486e84e9}{Show\+Save\+Indicator} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Shows the saving indicator \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ae0cebcc416faad0fc25e97969f567f59}{Hide\+Save\+Indicator} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Hides the saving indicator \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a3ab30329d20435c760ac9c6e21a796d6}{use\+Distance\+Algorithm} (double minimum\+Duration, double acceptable\+Deviation)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method for the distance algorithm \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a951604e49f2e9dfe33ec3cb1d8fdc4fa}{Experiment}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the currently loaded experiment \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a8b17d64f1b1f9992923cb0d15f9b1b18}{extract\+Algorithm\+Data} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Extracts the data which is needed for the algorithm from the H\+T\+M\+L. \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ad0c70b4203f88526cb2dc146eae6ac5c}{Select\+Folder\+Dialog} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a select folder dialog. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_afa9fed7468d8f513be28ec140f00b308}{On\+\_\+\+Select\+Participant} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} source, \hyperlink{class_web_analyzer_1_1_events_1_1_select_participant_for_test_event}{Select\+Participant\+For\+Test\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Callback when a participant was selected \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a3317d4651e2e761dd9a649abd1b5b5e6}{On\+\_\+\+Select\+Testrun} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} source, \hyperlink{class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event}{Select\+Testrun\+To\+Load\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
-void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a3ff0b8a577ef0ddba09b1f49ff7f4ceb}{Export\+Data} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Callback when a testrun was selected \end{DoxyCompactList}\item 
+void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aa6bbcacf875c5a4148ea0568b887e76c}{Export\+Data} (\hyperlink{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm}{Algorithm} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2analyse_8js_a1222cf9678e9ad6a699b071d3308f976}{algorithm})
+\begin{DoxyCompactList}\small\item\em Exports the analysed data \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a3cd03ba6847b807714b4c9b37524a783}{use\+I\+View\+Events} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Use the iview events \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_h_t_m_l_u_i}{H\+T\+M\+L\+U\+I} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ac37986028e8f14ebe20b3e70cc2bafe5}{\+\_\+form}
-\item 
+\begin{DoxyCompactList}\small\item\em Reference to the main ui of the application \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a7e42e87000b58fb02e37f994efc61259}{\+\_\+exp}
-\item 
+\begin{DoxyCompactList}\small\item\em Reference to the currently loaded experiment \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ace272af8988b6cfc198db79bb6c2cd13}{\+\_\+participant}
-\item 
+\begin{DoxyCompactList}\small\item\em Reference to the selected participant \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a52ae3dbae930a01e4ddb368fdd820ac7}{\+\_\+folder\+Path}
-\item 
+\begin{DoxyCompactList}\small\item\em Folderpath to save the data to \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{Test\+Model} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_adb1ac5a4139c8bee5b1c694983154936}{\+\_\+testrun}
-\item 
+\begin{DoxyCompactList}\small\item\em Reference to the selected testrun \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a281522ffdb5738b1c5f7609bc61e6358}{\+\_\+filename}
-\item 
+\begin{DoxyCompactList}\small\item\em Filename to use as a base when saving \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_controller_1_1_export_controller_a8cea4a311ecaf495f305f9d7829a57aa}{Export\+Controller.\+E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a941e74e9bf284b29110295a481b31697}{\+\_\+export\+Format}
-\item 
+\begin{DoxyCompactList}\small\item\em Selected Exportformat \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm_a170e7786e033cbd0c09cabb30030794b}{Algorithm.\+A\+L\+G\+O\+R\+I\+T\+H\+M\+\_\+\+T\+Y\+P\+E\+S} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a92c996b73e5cde9c50d25355e47fb423}{\+\_\+algorithm\+Type}
-\item 
+\begin{DoxyCompactList}\small\item\em Selected algorithm type \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aa58521f4baa630aee5ccf3034f74b543}{\+\_\+contain\+Gaze\+Data} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Shall data about each gaze be added \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interaction object for analysing and exporting testdata 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -88,6 +98,15 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analys
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a2425c39535e55e12f4ee4975a3176f23}
 
 
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em form} & Reference to the main \hyperlink{namespace_web_analyzer_1_1_u_i}{U\+I}\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a6696015a547f10cae60a7703c4ec1819}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!analyse@{analyse}}
 \index{analyse@{analyse}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
@@ -96,20 +115,37 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analys
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a6696015a547f10cae60a7703c4ec1819}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aefc66bb4dc458b4ed4353eeb0b375275}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!export@{export}}
+
+
+Used for starting the analysis 
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aefc66bb4dc458b4ed4353eeb0b375275}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!export@{export}}
 \index{export@{export}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{export()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+export (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aefc66bb4dc458b4ed4353eeb0b375275}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a3ff0b8a577ef0ddba09b1f49ff7f4ceb}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!Export\+Data@{Export\+Data}}
+
+
+Used for starting the export 
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aa6bbcacf875c5a4148ea0568b887e76c}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!Export\+Data@{Export\+Data}}
 \index{Export\+Data@{Export\+Data}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
-\subsubsection[{Export\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+Export\+Data (
+\subsubsection[{Export\+Data(\+Algorithm algorithm)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+Export\+Data (
 \begin{DoxyParamCaption}
-{}
+\item[{{\bf Algorithm}}]{algorithm}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a3ff0b8a577ef0ddba09b1f49ff7f4ceb}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aa6bbcacf875c5a4148ea0568b887e76c}
+
+
+Exports the analysed data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em algorithm} & For the analysis used algorithm\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a8b17d64f1b1f9992923cb0d15f9b1b18}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!extract\+Algorithm\+Data@{extract\+Algorithm\+Data}}
 \index{extract\+Algorithm\+Data@{extract\+Algorithm\+Data}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{extract\+Algorithm\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+extract\+Algorithm\+Data (
@@ -117,6 +153,10 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analys
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a8b17d64f1b1f9992923cb0d15f9b1b18}
+
+
+Extracts the data which is needed for the algorithm from the H\+T\+M\+L. 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ae0cebcc416faad0fc25e97969f567f59}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!Hide\+Save\+Indicator@{Hide\+Save\+Indicator}}
 \index{Hide\+Save\+Indicator@{Hide\+Save\+Indicator}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{Hide\+Save\+Indicator()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+Hide\+Save\+Indicator (
@@ -124,6 +164,10 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analys
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ae0cebcc416faad0fc25e97969f567f59}
+
+
+Hides the saving indicator 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_afa9fed7468d8f513be28ec140f00b308}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!On\+\_\+\+Select\+Participant@{On\+\_\+\+Select\+Participant}}
 \index{On\+\_\+\+Select\+Participant@{On\+\_\+\+Select\+Participant}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{On\+\_\+\+Select\+Participant(object source, Select\+Participant\+For\+Test\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+On\+\_\+\+Select\+Participant (
@@ -132,6 +176,17 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analys
 \item[{{\bf Select\+Participant\+For\+Test\+Event}}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_afa9fed7468d8f513be28ec140f00b308}
+
+
+Callback when a participant was selected 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a3317d4651e2e761dd9a649abd1b5b5e6}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!On\+\_\+\+Select\+Testrun@{On\+\_\+\+Select\+Testrun}}
 \index{On\+\_\+\+Select\+Testrun@{On\+\_\+\+Select\+Testrun}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{On\+\_\+\+Select\+Testrun(object source, Select\+Testrun\+To\+Load\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+On\+\_\+\+Select\+Testrun (
@@ -140,6 +195,17 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analys
 \item[{{\bf Select\+Testrun\+To\+Load\+Event}}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a3317d4651e2e761dd9a649abd1b5b5e6}
+
+
+Callback when a testrun was selected 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_adc83e194f06035232900d4a37ff5b7c5}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!select\+Folder@{select\+Folder}}
 \index{select\+Folder@{select\+Folder}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{select\+Folder()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+select\+Folder (
@@ -147,13 +213,24 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analys
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_adc83e194f06035232900d4a37ff5b7c5}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ad0c70b4203f88526cb2dc146eae6ac5c}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!Select\+Folder\+Dialog@{Select\+Folder\+Dialog}}
+
+
+Used for selecting a folder 
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ad0c70b4203f88526cb2dc146eae6ac5c}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!Select\+Folder\+Dialog@{Select\+Folder\+Dialog}}
 \index{Select\+Folder\+Dialog@{Select\+Folder\+Dialog}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{Select\+Folder\+Dialog()}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+Select\+Folder\+Dialog (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ad0c70b4203f88526cb2dc146eae6ac5c}
+
+
+Creates a select folder dialog. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aa6c46c4213a2c07af6f40d6bc9fe7fdd}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!select\+Participant@{select\+Participant}}
 \index{select\+Participant@{select\+Participant}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{select\+Participant()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+select\+Participant (
@@ -161,48 +238,104 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analys
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aa6c46c4213a2c07af6f40d6bc9fe7fdd}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a657be9be6841e03ea141377622cb50f1}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!select\+Testrun@{select\+Testrun}}
+
+
+Used for selecting a participant 
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a657be9be6841e03ea141377622cb50f1}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!select\+Testrun@{select\+Testrun}}
 \index{select\+Testrun@{select\+Testrun}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{select\+Testrun()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+select\+Testrun (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a657be9be6841e03ea141377622cb50f1}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ae48446e5cc2e80546f946109517b5321}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!set\+Algorithm\+Type@{set\+Algorithm\+Type}}
+
+
+Used for selecting a testrun 
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a1ddd89e1fa0069f73cc316189d4021dc}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!set\+Algorithm\+Type@{set\+Algorithm\+Type}}
 \index{set\+Algorithm\+Type@{set\+Algorithm\+Type}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
-\subsubsection[{set\+Algorithm\+Type(\+String format)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+set\+Algorithm\+Type (
+\subsubsection[{set\+Algorithm\+Type(\+String algorithm\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+set\+Algorithm\+Type (
 \begin{DoxyParamCaption}
-\item[{String}]{format}
+\item[{String}]{algorithm\+Type}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ae48446e5cc2e80546f946109517b5321}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a3017c2cba0f0082ffdd7781751f8baf5}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!set\+Contain\+Gaze\+Data@{set\+Contain\+Gaze\+Data}}
+)}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a1ddd89e1fa0069f73cc316189d4021dc}
+
+
+Used for updating the algorithm type 
+
+
+\begin{DoxyParams}{Parameters}
+{\em algorithm\+Type} & new algorithm type\\
+\hline
+\end{DoxyParams}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a3017c2cba0f0082ffdd7781751f8baf5}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!set\+Contain\+Gaze\+Data@{set\+Contain\+Gaze\+Data}}
 \index{set\+Contain\+Gaze\+Data@{set\+Contain\+Gaze\+Data}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{set\+Contain\+Gaze\+Data(\+Boolean contain\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+set\+Contain\+Gaze\+Data (
 \begin{DoxyParamCaption}
 \item[{Boolean}]{contain\+Gaze\+Data}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a3017c2cba0f0082ffdd7781751f8baf5}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a905c7235a4fd676629321fd44716e6a9}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!set\+Export\+Format@{set\+Export\+Format}}
+
+
+Sets if gaze data shall be included for each gaze 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contain\+Gaze\+Data} & \\
+\hline
+\end{DoxyParams}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a905c7235a4fd676629321fd44716e6a9}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!set\+Export\+Format@{set\+Export\+Format}}
 \index{set\+Export\+Format@{set\+Export\+Format}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{set\+Export\+Format(\+String format)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+set\+Export\+Format (
 \begin{DoxyParamCaption}
 \item[{String}]{format}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a905c7235a4fd676629321fd44716e6a9}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ab99bfbf3692c2bf98659509acdd35dca}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!set\+Filename@{set\+Filename}}
+
+
+Sets the export format 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & The new format\\
+\hline
+\end{DoxyParams}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ab99bfbf3692c2bf98659509acdd35dca}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!set\+Filename@{set\+Filename}}
 \index{set\+Filename@{set\+Filename}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{set\+Filename(\+String filename)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+set\+Filename (
 \begin{DoxyParamCaption}
 \item[{String}]{filename}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ab99bfbf3692c2bf98659509acdd35dca}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aacb447300e2c8656dd8dae25486e84e9}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!Show\+Save\+Indicator@{Show\+Save\+Indicator}}
+
+
+Method to set the filename 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The new filename\\
+\hline
+\end{DoxyParams}
+
+
+Called from Javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aacb447300e2c8656dd8dae25486e84e9}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!Show\+Save\+Indicator@{Show\+Save\+Indicator}}
 \index{Show\+Save\+Indicator@{Show\+Save\+Indicator}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{Show\+Save\+Indicator()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+Show\+Save\+Indicator (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aacb447300e2c8656dd8dae25486e84e9}
+
+
+Shows the saving indicator 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a3ab30329d20435c760ac9c6e21a796d6}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!use\+Distance\+Algorithm@{use\+Distance\+Algorithm}}
 \index{use\+Distance\+Algorithm@{use\+Distance\+Algorithm}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{use\+Distance\+Algorithm(double minimum\+Duration, double acceptable\+Deviation)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+use\+Distance\+Algorithm (
@@ -211,7 +344,20 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analys
 \item[{double}]{acceptable\+Deviation}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a3ab30329d20435c760ac9c6e21a796d6}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a3cd03ba6847b807714b4c9b37524a783}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!use\+I\+View\+Events@{use\+I\+View\+Events}}
+
+
+Method for the distance algorithm 
+
+
+\begin{DoxyParams}{Parameters}
+{\em minimum\+Duration} & The minimumduration\\
+\hline
+{\em acceptable\+Deviation} & The acceptable deviation\\
+\hline
+\end{DoxyParams}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a3cd03ba6847b807714b4c9b37524a783}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!use\+I\+View\+Events@{use\+I\+View\+Events}}
 \index{use\+I\+View\+Events@{use\+I\+View\+Events}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{use\+I\+View\+Events()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+use\+I\+View\+Events (
 \begin{DoxyParamCaption}
@@ -220,40 +366,84 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analys
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a3cd03ba6847b807714b4c9b37524a783}
 
 
+Use the iview events 
+
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a92c996b73e5cde9c50d25355e47fb423}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!\+\_\+algorithm\+Type@{\+\_\+algorithm\+Type}}
 \index{\+\_\+algorithm\+Type@{\+\_\+algorithm\+Type}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{\+\_\+algorithm\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Algorithm.\+A\+L\+G\+O\+R\+I\+T\+H\+M\+\_\+\+T\+Y\+P\+E\+S} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+\_\+algorithm\+Type\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a92c996b73e5cde9c50d25355e47fb423}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aa58521f4baa630aee5ccf3034f74b543}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!\+\_\+contain\+Gaze\+Data@{\+\_\+contain\+Gaze\+Data}}
+
+
+Selected algorithm type 
+
+Only used when analysing data\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aa58521f4baa630aee5ccf3034f74b543}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!\+\_\+contain\+Gaze\+Data@{\+\_\+contain\+Gaze\+Data}}
 \index{\+\_\+contain\+Gaze\+Data@{\+\_\+contain\+Gaze\+Data}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{\+\_\+contain\+Gaze\+Data}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+\_\+contain\+Gaze\+Data = {\bf false}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_aa58521f4baa630aee5ccf3034f74b543}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a7e42e87000b58fb02e37f994efc61259}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!\+\_\+exp@{\+\_\+exp}}
+
+
+Shall data about each gaze be added 
+
+O\+Nly used when analysing data\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a7e42e87000b58fb02e37f994efc61259}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!\+\_\+exp@{\+\_\+exp}}
 \index{\+\_\+exp@{\+\_\+exp}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{\+\_\+exp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+Model} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+\_\+exp\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a7e42e87000b58fb02e37f994efc61259}
+
+
+Reference to the currently loaded experiment 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a941e74e9bf284b29110295a481b31697}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!\+\_\+export\+Format@{\+\_\+export\+Format}}
 \index{\+\_\+export\+Format@{\+\_\+export\+Format}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{\+\_\+export\+Format}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Export\+Controller.\+E\+X\+P\+O\+R\+T\+\_\+\+F\+O\+R\+M\+A\+T\+S} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+\_\+export\+Format\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a941e74e9bf284b29110295a481b31697}
+
+
+Selected Exportformat 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a281522ffdb5738b1c5f7609bc61e6358}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!\+\_\+filename@{\+\_\+filename}}
 \index{\+\_\+filename@{\+\_\+filename}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{\+\_\+filename}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+\_\+filename\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a281522ffdb5738b1c5f7609bc61e6358}
+
+
+Filename to use as a base when saving 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a52ae3dbae930a01e4ddb368fdd820ac7}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!\+\_\+folder\+Path@{\+\_\+folder\+Path}}
 \index{\+\_\+folder\+Path@{\+\_\+folder\+Path}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{\+\_\+folder\+Path}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+\_\+folder\+Path\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a52ae3dbae930a01e4ddb368fdd820ac7}
+
+
+Folderpath to save the data to 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ac37986028e8f14ebe20b3e70cc2bafe5}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!\+\_\+form@{\+\_\+form}}
 \index{\+\_\+form@{\+\_\+form}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{\+\_\+form}]{\setlength{\rightskip}{0pt plus 5cm}{\bf H\+T\+M\+L\+U\+I} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+\_\+form\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ac37986028e8f14ebe20b3e70cc2bafe5}
+
+
+Reference to the main ui of the application 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ace272af8988b6cfc198db79bb6c2cd13}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!\+\_\+participant@{\+\_\+participant}}
 \index{\+\_\+participant@{\+\_\+participant}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{\+\_\+participant}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+Participant} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+\_\+participant\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_ace272af8988b6cfc198db79bb6c2cd13}
+
+
+Reference to the selected participant 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_adb1ac5a4139c8bee5b1c694983154936}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!\+\_\+testrun@{\+\_\+testrun}}
 \index{\+\_\+testrun@{\+\_\+testrun}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{\+\_\+testrun}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Test\+Model} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+\_\+testrun\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_adb1ac5a4139c8bee5b1c694983154936}
+
+
+Reference to the selected testrun 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a951604e49f2e9dfe33ec3cb1d8fdc4fa}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}!Experiment@{Experiment}}
 \index{Experiment@{Experiment}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Analysis\+Export\+Control}}
 \subsubsection[{Experiment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+Model} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Analysis\+Export\+Control.\+Experiment\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_analysis_export_control_a951604e49f2e9dfe33ec3cb1d8fdc4fa}
+
+
+Getter / Setter for the currently loaded experiment 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

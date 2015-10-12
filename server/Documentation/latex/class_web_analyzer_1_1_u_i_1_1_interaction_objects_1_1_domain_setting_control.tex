@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control}{}\section{Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control Class Reference}
 \label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control}\index{Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control@{Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control}}
+
+
+Interaction object for editing/ creating domain settings  
+
+
 Inheritance diagram for Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,63 +15,68 @@ Inheritance diagram for Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Se
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a301b531dda08a3e63de11d1fed1b8742}{Domain\+Setting\+Control} (\hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_domain_setting_form}{Edit\+Domain\+Setting\+Form} form, \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings}{Domain\+Settings} setting, Boolean \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_a8bd5981157799459d39a59e8c4a0de04}{create})
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a8216956129f4fc43850bbb38d1287ad4}{creating\+New\+Domain\+Setting} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns if a new domain setting is being created \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a0f5c683be120524708ad1dcd570ed4d5}{save\+Domain\+Setting} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Saves the domain setting \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a88a19e4077e5a695bb303d38401ffc7d}{cancel} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Used for canceling the process \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ad74139e31259a870a6937db206289f30}{get\+Domain} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the current domain identifier \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a0c63b0dc50c545f4f1f0a35a2391b855}{set\+Domain} (String domain)
-\item 
+\begin{DoxyCompactList}\small\item\em Used for updating the domain \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ad83ffda676c2290766597c60b18d1518}{get\+Include\+Subdomains} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns if the setting includes subdomains or not \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ac441d0f2d1d3b11027cea85d0c4a9e86}{set\+Include\+Subdomains} (Boolean include\+Subdomains)
-\item 
+\begin{DoxyCompactList}\small\item\em Update the setting if it includes subdomains or not \end{DoxyCompactList}\item 
 String\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab0d5543794158ae46676a22a7a26c969}{get\+A\+O\+I\+Identifiers} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns an array of aoi setting identifiers \end{DoxyCompactList}\item 
 String\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a8353bbc458740227e1ed2a3ab2eb0566}{get\+A\+O\+I\+U\+I\+Ds} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns an array of aoi setting uids \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_aaffb07c5ebd6252c650723134ac9c0f4}{edit\+A\+O\+I} (String uid)
-\item 
+\begin{DoxyCompactList}\small\item\em Used for editing an aoi setting \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a26803d2f4b4e6d9b3b9746d245d45190}{create\+A\+O\+I} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Create a new aoi \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ade3c26de20eec061fccdbad1e33966e1}{copy\+A\+O\+I} (String uid)
-\item 
+\begin{DoxyCompactList}\small\item\em Used for copying an aoi setting \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a9eb07ab9de98ec5b9f4d2ef662fa2970}{delete\+A\+O\+I} (String uid)
-\item 
+\begin{DoxyCompactList}\small\item\em Used for deleting an aoi setting \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab7498deab19b4b9ce1a05a98f670c801}{is\+Refreshing} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checks if the page is refreshing \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Events}
 \begin{DoxyCompactItemize}
 \item 
 Create\+Domain\+Setting\+Event\+Handler \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_aff18f63d7e7cb4b8c5d62b881bfc685c}{Create\+Domain\+Setting}
-\item 
+\begin{DoxyCompactList}\small\item\em Eventhandler for creating a new domain settings \end{DoxyCompactList}\item 
 Trigger\+Save\+Event\+Handler \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a1daa9c774e823427b39110bc42ff0ccd}{Trigger\+Save}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Eventhandler for triggering saves to xml \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a8482d6c6ca6f62a8182b8b9e7608ed92}{Show\+Edit\+A\+O\+I\+Setting\+Form} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_a_o_i_settings}{A\+O\+I\+Settings} setting, Boolean create\+New)
-\item 
+\begin{DoxyCompactList}\small\item\em Opens the edit aoi setting window \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab03466aaad4776710ba6517f80329b12}{On\+\_\+\+Create\+A\+O\+I\+Setting} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} source, \hyperlink{class_web_analyzer_1_1_events_1_1_create_a_o_i_setting_event}{Create\+A\+O\+I\+Setting\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Callback for when a new aoi was created \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a2f4338f90019c81d050af5e37be871de}{refresh\+Data} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Refreshes the data on the page \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_edit_domain_setting_form}{Edit\+Domain\+Setting\+Form} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ac5d9f6410b6d83ed5f01dd3f9a23f8b4}{\+\_\+form}
-\item 
+\begin{DoxyCompactList}\small\item\em Reference to the edit domain form \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_domain_settings}{Domain\+Settings} \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a3c559717deaa9cbc0575bd3a0407edbc}{\+\_\+setting}
-\item 
+\begin{DoxyCompactList}\small\item\em Reference to the domain settings which are being edited or created \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_af65a88bba8daa8c7ff8fd80e6f46d3bc}{\+\_\+create}
-\item 
+\begin{DoxyCompactList}\small\item\em Flag if it is a new domain setting \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a7a9d3a672767f8e4e7e81c3ad8948879}{\+\_\+refreshing} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Flag if refreshing is necessary \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Interaction object for editing/ creating domain settings 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -81,6 +91,19 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a301b531dda08a3e63de11d1fed1b8742}
 
 
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em form} & Reference to the edit domain form\\
+\hline
+{\em setting} & Reference to the domain setting\\
+\hline
+{\em create} & Flag if a new domain setting is being created\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a88a19e4077e5a695bb303d38401ffc7d}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!cancel@{cancel}}
 \index{cancel@{cancel}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
@@ -89,77 +112,172 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a88a19e4077e5a695bb303d38401ffc7d}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ade3c26de20eec061fccdbad1e33966e1}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!copy\+A\+O\+I@{copy\+A\+O\+I}}
+
+
+Used for canceling the process 
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ade3c26de20eec061fccdbad1e33966e1}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!copy\+A\+O\+I@{copy\+A\+O\+I}}
 \index{copy\+A\+O\+I@{copy\+A\+O\+I}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{copy\+A\+O\+I(\+String uid)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+copy\+A\+O\+I (
 \begin{DoxyParamCaption}
 \item[{String}]{uid}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ade3c26de20eec061fccdbad1e33966e1}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a26803d2f4b4e6d9b3b9746d245d45190}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!create\+A\+O\+I@{create\+A\+O\+I}}
+
+
+Used for copying an aoi setting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uid} & U\+I\+D of aoi setting\\
+\hline
+\end{DoxyParams}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a26803d2f4b4e6d9b3b9746d245d45190}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!create\+A\+O\+I@{create\+A\+O\+I}}
 \index{create\+A\+O\+I@{create\+A\+O\+I}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{create\+A\+O\+I()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+create\+A\+O\+I (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a26803d2f4b4e6d9b3b9746d245d45190}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a8216956129f4fc43850bbb38d1287ad4}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!creating\+New\+Domain\+Setting@{creating\+New\+Domain\+Setting}}
+
+
+Create a new aoi 
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a8216956129f4fc43850bbb38d1287ad4}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!creating\+New\+Domain\+Setting@{creating\+New\+Domain\+Setting}}
 \index{creating\+New\+Domain\+Setting@{creating\+New\+Domain\+Setting}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{creating\+New\+Domain\+Setting()}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+creating\+New\+Domain\+Setting (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a8216956129f4fc43850bbb38d1287ad4}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a9eb07ab9de98ec5b9f4d2ef662fa2970}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!delete\+A\+O\+I@{delete\+A\+O\+I}}
+
+
+Returns if a new domain setting is being created 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a9eb07ab9de98ec5b9f4d2ef662fa2970}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!delete\+A\+O\+I@{delete\+A\+O\+I}}
 \index{delete\+A\+O\+I@{delete\+A\+O\+I}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{delete\+A\+O\+I(\+String uid)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+delete\+A\+O\+I (
 \begin{DoxyParamCaption}
 \item[{String}]{uid}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a9eb07ab9de98ec5b9f4d2ef662fa2970}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_aaffb07c5ebd6252c650723134ac9c0f4}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!edit\+A\+O\+I@{edit\+A\+O\+I}}
+
+
+Used for deleting an aoi setting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uid} & U\+I\+D of aoi setting\\
+\hline
+\end{DoxyParams}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_aaffb07c5ebd6252c650723134ac9c0f4}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!edit\+A\+O\+I@{edit\+A\+O\+I}}
 \index{edit\+A\+O\+I@{edit\+A\+O\+I}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{edit\+A\+O\+I(\+String uid)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+edit\+A\+O\+I (
 \begin{DoxyParamCaption}
 \item[{String}]{uid}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_aaffb07c5ebd6252c650723134ac9c0f4}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab0d5543794158ae46676a22a7a26c969}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!get\+A\+O\+I\+Identifiers@{get\+A\+O\+I\+Identifiers}}
+
+
+Used for editing an aoi setting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uid} & U\+I\+D of the aoi setting\\
+\hline
+\end{DoxyParams}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab0d5543794158ae46676a22a7a26c969}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!get\+A\+O\+I\+Identifiers@{get\+A\+O\+I\+Identifiers}}
 \index{get\+A\+O\+I\+Identifiers@{get\+A\+O\+I\+Identifiers}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{get\+A\+O\+I\+Identifiers()}]{\setlength{\rightskip}{0pt plus 5cm}String \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+get\+A\+O\+I\+Identifiers (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab0d5543794158ae46676a22a7a26c969}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a8353bbc458740227e1ed2a3ab2eb0566}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!get\+A\+O\+I\+U\+I\+Ds@{get\+A\+O\+I\+U\+I\+Ds}}
+
+
+Returns an array of aoi setting identifiers 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a8353bbc458740227e1ed2a3ab2eb0566}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!get\+A\+O\+I\+U\+I\+Ds@{get\+A\+O\+I\+U\+I\+Ds}}
 \index{get\+A\+O\+I\+U\+I\+Ds@{get\+A\+O\+I\+U\+I\+Ds}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{get\+A\+O\+I\+U\+I\+Ds()}]{\setlength{\rightskip}{0pt plus 5cm}String \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+get\+A\+O\+I\+U\+I\+Ds (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a8353bbc458740227e1ed2a3ab2eb0566}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ad74139e31259a870a6937db206289f30}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!get\+Domain@{get\+Domain}}
+
+
+Returns an array of aoi setting uids 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ad74139e31259a870a6937db206289f30}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!get\+Domain@{get\+Domain}}
 \index{get\+Domain@{get\+Domain}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{get\+Domain()}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+get\+Domain (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ad74139e31259a870a6937db206289f30}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ad83ffda676c2290766597c60b18d1518}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!get\+Include\+Subdomains@{get\+Include\+Subdomains}}
+
+
+Returns the current domain identifier 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ad83ffda676c2290766597c60b18d1518}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!get\+Include\+Subdomains@{get\+Include\+Subdomains}}
 \index{get\+Include\+Subdomains@{get\+Include\+Subdomains}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{get\+Include\+Subdomains()}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+get\+Include\+Subdomains (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ad83ffda676c2290766597c60b18d1518}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab7498deab19b4b9ce1a05a98f670c801}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!is\+Refreshing@{is\+Refreshing}}
+
+
+Returns if the setting includes subdomains or not 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab7498deab19b4b9ce1a05a98f670c801}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!is\+Refreshing@{is\+Refreshing}}
 \index{is\+Refreshing@{is\+Refreshing}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{is\+Refreshing()}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+is\+Refreshing (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab7498deab19b4b9ce1a05a98f670c801}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab03466aaad4776710ba6517f80329b12}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!On\+\_\+\+Create\+A\+O\+I\+Setting@{On\+\_\+\+Create\+A\+O\+I\+Setting}}
+
+
+Checks if the page is refreshing 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab03466aaad4776710ba6517f80329b12}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!On\+\_\+\+Create\+A\+O\+I\+Setting@{On\+\_\+\+Create\+A\+O\+I\+Setting}}
 \index{On\+\_\+\+Create\+A\+O\+I\+Setting@{On\+\_\+\+Create\+A\+O\+I\+Setting}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{On\+\_\+\+Create\+A\+O\+I\+Setting(object source, Create\+A\+O\+I\+Setting\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+On\+\_\+\+Create\+A\+O\+I\+Setting (
 \begin{DoxyParamCaption}
@@ -167,6 +285,17 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain
 \item[{{\bf Create\+A\+O\+I\+Setting\+Event}}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ab03466aaad4776710ba6517f80329b12}
+
+
+Callback for when a new aoi was created 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a2f4338f90019c81d050af5e37be871de}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!refresh\+Data@{refresh\+Data}}
 \index{refresh\+Data@{refresh\+Data}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{refresh\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+refresh\+Data (
@@ -174,6 +303,10 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a2f4338f90019c81d050af5e37be871de}
+
+
+Refreshes the data on the page 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a0f5c683be120524708ad1dcd570ed4d5}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!save\+Domain\+Setting@{save\+Domain\+Setting}}
 \index{save\+Domain\+Setting@{save\+Domain\+Setting}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{save\+Domain\+Setting()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+save\+Domain\+Setting (
@@ -181,21 +314,47 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a0f5c683be120524708ad1dcd570ed4d5}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a0c63b0dc50c545f4f1f0a35a2391b855}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!set\+Domain@{set\+Domain}}
+
+
+Saves the domain setting 
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a0c63b0dc50c545f4f1f0a35a2391b855}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!set\+Domain@{set\+Domain}}
 \index{set\+Domain@{set\+Domain}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{set\+Domain(\+String domain)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+set\+Domain (
 \begin{DoxyParamCaption}
 \item[{String}]{domain}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a0c63b0dc50c545f4f1f0a35a2391b855}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ac441d0f2d1d3b11027cea85d0c4a9e86}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!set\+Include\+Subdomains@{set\+Include\+Subdomains}}
+
+
+Used for updating the domain 
+
+
+\begin{DoxyParams}{Parameters}
+{\em domain} & The new domain\\
+\hline
+\end{DoxyParams}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ac441d0f2d1d3b11027cea85d0c4a9e86}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!set\+Include\+Subdomains@{set\+Include\+Subdomains}}
 \index{set\+Include\+Subdomains@{set\+Include\+Subdomains}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{set\+Include\+Subdomains(\+Boolean include\+Subdomains)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+set\+Include\+Subdomains (
 \begin{DoxyParamCaption}
 \item[{Boolean}]{include\+Subdomains}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ac441d0f2d1d3b11027cea85d0c4a9e86}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a8482d6c6ca6f62a8182b8b9e7608ed92}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!Show\+Edit\+A\+O\+I\+Setting\+Form@{Show\+Edit\+A\+O\+I\+Setting\+Form}}
+
+
+Update the setting if it includes subdomains or not 
+
+
+\begin{DoxyParams}{Parameters}
+{\em include\+Subdomains} & New value\\
+\hline
+\end{DoxyParams}
+
+
+Called from javascript\hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a8482d6c6ca6f62a8182b8b9e7608ed92}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!Show\+Edit\+A\+O\+I\+Setting\+Form@{Show\+Edit\+A\+O\+I\+Setting\+Form}}
 \index{Show\+Edit\+A\+O\+I\+Setting\+Form@{Show\+Edit\+A\+O\+I\+Setting\+Form}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{Show\+Edit\+A\+O\+I\+Setting\+Form(\+A\+O\+I\+Settings setting, Boolean create\+New)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+Show\+Edit\+A\+O\+I\+Setting\+Form (
 \begin{DoxyParamCaption}
@@ -205,28 +364,63 @@ Boolean \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a8482d6c6ca6f62a8182b8b9e7608ed92}
 
 
+Opens the edit aoi setting window 
+
+
+\begin{DoxyParams}{Parameters}
+{\em setting} & Reference to the A\+O\+I setting\\
+\hline
+{\em create\+New} & Flag if its a new setting or not\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_af65a88bba8daa8c7ff8fd80e6f46d3bc}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!\+\_\+create@{\+\_\+create}}
 \index{\+\_\+create@{\+\_\+create}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+\_\+create\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_af65a88bba8daa8c7ff8fd80e6f46d3bc}
+
+
+Flag if it is a new domain setting 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ac5d9f6410b6d83ed5f01dd3f9a23f8b4}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!\+\_\+form@{\+\_\+form}}
 \index{\+\_\+form@{\+\_\+form}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{\+\_\+form}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Edit\+Domain\+Setting\+Form} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+\_\+form\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_ac5d9f6410b6d83ed5f01dd3f9a23f8b4}
+
+
+Reference to the edit domain form 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a7a9d3a672767f8e4e7e81c3ad8948879}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!\+\_\+refreshing@{\+\_\+refreshing}}
 \index{\+\_\+refreshing@{\+\_\+refreshing}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{\+\_\+refreshing}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+\_\+refreshing = {\bf false}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a7a9d3a672767f8e4e7e81c3ad8948879}
+
+
+Flag if refreshing is necessary 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a3c559717deaa9cbc0575bd3a0407edbc}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!\+\_\+setting@{\+\_\+setting}}
 \index{\+\_\+setting@{\+\_\+setting}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{\+\_\+setting}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Domain\+Settings} Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+\_\+setting\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a3c559717deaa9cbc0575bd3a0407edbc}
+
+
+Reference to the domain settings which are being edited or created 
+
 
 
 \subsection{Event Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_aff18f63d7e7cb4b8c5d62b881bfc685c}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!Create\+Domain\+Setting@{Create\+Domain\+Setting}}
 \index{Create\+Domain\+Setting@{Create\+Domain\+Setting}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{Create\+Domain\+Setting}]{\setlength{\rightskip}{0pt plus 5cm}Create\+Domain\+Setting\+Event\+Handler Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+Create\+Domain\+Setting}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_aff18f63d7e7cb4b8c5d62b881bfc685c}
+
+
+Eventhandler for creating a new domain settings 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a1daa9c774e823427b39110bc42ff0ccd}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}!Trigger\+Save@{Trigger\+Save}}
 \index{Trigger\+Save@{Trigger\+Save}!Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control@{Web\+Analyzer\+::\+U\+I\+::\+Interaction\+Objects\+::\+Domain\+Setting\+Control}}
 \subsubsection[{Trigger\+Save}]{\setlength{\rightskip}{0pt plus 5cm}Trigger\+Save\+Event\+Handler Web\+Analyzer.\+U\+I.\+Interaction\+Objects.\+Domain\+Setting\+Control.\+Trigger\+Save}\label{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_domain_setting_control_a1daa9c774e823427b39110bc42ff0ccd}
+
+
+Eventhandler for triggering saves to xml 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

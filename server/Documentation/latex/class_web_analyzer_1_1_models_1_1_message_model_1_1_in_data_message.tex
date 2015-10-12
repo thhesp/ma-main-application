@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message}{}\section{Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message}\index{Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message@{Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message}}
+
+
+Model for incoming data messages (answers to outgoing data messages aka request)  
+
+
 Inheritance diagram for Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,60 +16,69 @@ Inheritance diagram for Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Mess
 \item 
 enum \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a5c01620a5429c5eec75477e614c96f94}{M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E} \{ \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a5c01620a5429c5eec75477e614c96f94a9b9c17e13f0e3dc9860a26e08b59b2a7}{M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E.\+S\+M\+A\+L\+L} = 0, 
 \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a5c01620a5429c5eec75477e614c96f94a1e23852820b9154316c7c06e2b7ba051}{M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E.\+N\+O\+R\+M\+A\+L} = 1
- \}
+ \}\begin{DoxyCompactList}\small\item\em Data \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} Types \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_aeb6ca5c7fb12aee16cfc47a0bef803b4}{In\+Data\+Message} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a7fcbbb880450beda0bbe836ed3a95084}{In\+Data\+Message} (String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message_ae1e243f35e213e08ec2bdc54f64b0d2e}{\+\_\+timestamp})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a5c01620a5429c5eec75477e614c96f94}{M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E} \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a356594016758209b80a198d9839ba14b}{Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the message type \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_ad46f5d3693e3dc7de2a1a94def3f6259}{Unique\+I\+D}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the message/ gaze unique\+I\+D \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a16e5e70d5df3ff7cf9c32793809c9beb}{U\+R\+L}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the webpage url \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_ae6ff5467025cab4867de27d450d48c55}{Server\+Received}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the server received timestamp \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a85a3ae76fb0c23df0ec921708dbae75f}{Client\+Received}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the client received timestamp \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a5b1f5d74b767d71e004ceb28d04927ca}{Client\+Sent}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the client sent timestamp \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{D\+O\+M\+Element\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a7669353e9b42a3f58e3b17c00087eb21}{Left\+Element}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the left eye \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{D\+O\+M\+Element\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a8b8cd07f6ac3c4a5dd9a5d470b4a113c}{Right\+Element}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the right eye \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a5c01620a5429c5eec75477e614c96f94}{M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E} \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a4ec7837996a85d6843efb68bb7a7212f}{\+\_\+type} = \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a5c01620a5429c5eec75477e614c96f94a9b9c17e13f0e3dc9860a26e08b59b2a7}{M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E.\+S\+M\+A\+L\+L}
-\item 
+\begin{DoxyCompactList}\small\item\em Data \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} Type \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_ae7aa4bcdfbb85dea10b2bd9eb2065e55}{\+\_\+server\+Received}
-\item 
+\begin{DoxyCompactList}\small\item\em \hyperlink{namespace_web_analyzer_1_1_server}{Server} received timestamp \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a2cc19c547d536622b261fc8798e59dca}{\+\_\+client\+Received}
-\item 
+\begin{DoxyCompactList}\small\item\em Client received timestamp \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_ae2ac2367bd8e3d621aec791d923481f5}{\+\_\+client\+Sent}
-\item 
+\begin{DoxyCompactList}\small\item\em Client sent timestamp \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a8043e2e1b5fabe11fdcfe0c5dc2fee68}{\+\_\+url}
-\item 
+\begin{DoxyCompactList}\small\item\em Webpage url \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a65f5749322bf4e7ac43c6a4bf2702a55}{\+\_\+unique\+Id}
-\item 
+\begin{DoxyCompactList}\small\item\em Unique\+I\+D of message / gaze \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{D\+O\+M\+Element\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a95db3eadcb298b75ea183c5bbf042a57}{\+\_\+left\+Element}
-\item 
+\begin{DoxyCompactList}\small\item\em Data about the left eye \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{D\+O\+M\+Element\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a888d6b4c7153dd3e469cd963567fb7c7}{\+\_\+right\+Element}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Data about the right eye \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Model for incoming data messages (answers to outgoing data messages aka request) 
+
 
 
 \subsection{Member Enumeration Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a5c01620a5429c5eec75477e614c96f94}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E@{M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E}}
 \index{M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E@{M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E}\hspace{0.3cm}{\ttfamily [strong]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a5c01620a5429c5eec75477e614c96f94}
+
+
+Data \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} Types 
+
 \begin{Desc}
 \item[Enumerator]\par
 \begin{description}
@@ -84,6 +98,10 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_me
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_aeb6ca5c7fb12aee16cfc47a0bef803b4}
+
+
+Constructor 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a7fcbbb880450beda0bbe836ed3a95084}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!In\+Data\+Message@{In\+Data\+Message}}
 \index{In\+Data\+Message@{In\+Data\+Message}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{In\+Data\+Message(\+String \+\_\+timestamp)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+In\+Data\+Message (
@@ -93,58 +111,131 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_me
 )}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a7fcbbb880450beda0bbe836ed3a95084}
 
 
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+timestamp} & ???\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a2cc19c547d536622b261fc8798e59dca}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!\+\_\+client\+Received@{\+\_\+client\+Received}}
 \index{\+\_\+client\+Received@{\+\_\+client\+Received}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{\+\_\+client\+Received}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+\_\+client\+Received\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a2cc19c547d536622b261fc8798e59dca}
+
+
+Client received timestamp 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_ae2ac2367bd8e3d621aec791d923481f5}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!\+\_\+client\+Sent@{\+\_\+client\+Sent}}
 \index{\+\_\+client\+Sent@{\+\_\+client\+Sent}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{\+\_\+client\+Sent}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+\_\+client\+Sent\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_ae2ac2367bd8e3d621aec791d923481f5}
+
+
+Client sent timestamp 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a95db3eadcb298b75ea183c5bbf042a57}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!\+\_\+left\+Element@{\+\_\+left\+Element}}
 \index{\+\_\+left\+Element@{\+\_\+left\+Element}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{\+\_\+left\+Element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+O\+M\+Element\+Model} Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+\_\+left\+Element\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a95db3eadcb298b75ea183c5bbf042a57}
+
+
+Data about the left eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a888d6b4c7153dd3e469cd963567fb7c7}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!\+\_\+right\+Element@{\+\_\+right\+Element}}
 \index{\+\_\+right\+Element@{\+\_\+right\+Element}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{\+\_\+right\+Element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+O\+M\+Element\+Model} Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+\_\+right\+Element\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a888d6b4c7153dd3e469cd963567fb7c7}
+
+
+Data about the right eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_ae7aa4bcdfbb85dea10b2bd9eb2065e55}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!\+\_\+server\+Received@{\+\_\+server\+Received}}
 \index{\+\_\+server\+Received@{\+\_\+server\+Received}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{\+\_\+server\+Received}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+\_\+server\+Received\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_ae7aa4bcdfbb85dea10b2bd9eb2065e55}
+
+
+\hyperlink{namespace_web_analyzer_1_1_server}{Server} received timestamp 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a4ec7837996a85d6843efb68bb7a7212f}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!\+\_\+type@{\+\_\+type}}
 \index{\+\_\+type@{\+\_\+type}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E} Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+\_\+type = {\bf M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E.\+S\+M\+A\+L\+L}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a4ec7837996a85d6843efb68bb7a7212f}
+
+
+Data \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} Type 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a65f5749322bf4e7ac43c6a4bf2702a55}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!\+\_\+unique\+Id@{\+\_\+unique\+Id}}
 \index{\+\_\+unique\+Id@{\+\_\+unique\+Id}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{\+\_\+unique\+Id}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+\_\+unique\+Id\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a65f5749322bf4e7ac43c6a4bf2702a55}
+
+
+Unique\+I\+D of message / gaze 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a8043e2e1b5fabe11fdcfe0c5dc2fee68}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!\+\_\+url@{\+\_\+url}}
 \index{\+\_\+url@{\+\_\+url}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{\+\_\+url}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+\_\+url\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a8043e2e1b5fabe11fdcfe0c5dc2fee68}
+
+
+Webpage url 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a85a3ae76fb0c23df0ec921708dbae75f}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!Client\+Received@{Client\+Received}}
 \index{Client\+Received@{Client\+Received}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{Client\+Received}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+Client\+Received\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a85a3ae76fb0c23df0ec921708dbae75f}
+
+
+Getter / Setter for the client received timestamp 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a5b1f5d74b767d71e004ceb28d04927ca}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!Client\+Sent@{Client\+Sent}}
 \index{Client\+Sent@{Client\+Sent}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{Client\+Sent}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+Client\+Sent\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a5b1f5d74b767d71e004ceb28d04927ca}
+
+
+Getter / Setter for the client sent timestamp 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a7669353e9b42a3f58e3b17c00087eb21}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!Left\+Element@{Left\+Element}}
 \index{Left\+Element@{Left\+Element}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{Left\+Element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+O\+M\+Element\+Model} Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+Left\+Element\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a7669353e9b42a3f58e3b17c00087eb21}
+
+
+Getter / Setter for the left eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a8b8cd07f6ac3c4a5dd9a5d470b4a113c}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!Right\+Element@{Right\+Element}}
 \index{Right\+Element@{Right\+Element}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{Right\+Element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\+O\+M\+Element\+Model} Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+Right\+Element\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a8b8cd07f6ac3c4a5dd9a5d470b4a113c}
+
+
+Getter / Setter for the right eye 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_ae6ff5467025cab4867de27d450d48c55}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!Server\+Received@{Server\+Received}}
 \index{Server\+Received@{Server\+Received}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{Server\+Received}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+Server\+Received\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_ae6ff5467025cab4867de27d450d48c55}
+
+
+Getter / Setter for the server received timestamp 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a356594016758209b80a198d9839ba14b}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!Type@{Type}}
 \index{Type@{Type}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+Y\+P\+E} Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a356594016758209b80a198d9839ba14b}
+
+
+Getter / Setter for the message type 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_ad46f5d3693e3dc7de2a1a94def3f6259}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!Unique\+I\+D@{Unique\+I\+D}}
 \index{Unique\+I\+D@{Unique\+I\+D}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{Unique\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+Unique\+I\+D\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_ad46f5d3693e3dc7de2a1a94def3f6259}
+
+
+Getter / Setter for the message/ gaze unique\+I\+D 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a16e5e70d5df3ff7cf9c32793809c9beb}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}!U\+R\+L@{U\+R\+L}}
 \index{U\+R\+L@{U\+R\+L}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+In\+Data\+Message}}
 \subsubsection[{U\+R\+L}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+In\+Data\+Message.\+U\+R\+L\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message_a16e5e70d5df3ff7cf9c32793809c9beb}
+
+
+Getter / Setter for the webpage url 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

@@ -181,6 +181,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_events_1_1_trigger_save_event.html">TriggerSaveEvent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event for triggering saves of data (to xml)  <a href="class_web_analyzer_1_1_events_1_1_trigger_save_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_events_1_1_update_service_stati_event.html">UpdateServiceStatiEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event to update the status of the services  <a href="class_web_analyzer_1_1_events_1_1_update_service_stati_event.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_events_1_1_update_w_s_connection_count_event.html">UpdateWSConnectionCountEvent</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event to update the ws connection count  <a href="class_web_analyzer_1_1_events_1_1_update_w_s_connection_count_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -253,6 +256,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8e8e2ff467a5d5522ce9d3df28198ccf"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_web_analyzer_1_1_events.html#a8e8e2ff467a5d5522ce9d3df28198ccf">TriggerSaveEventHandler</a> (<a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#aae18b7515bb2bc4137586506e7c0c903">object</a> sender, <a class="el" href="class_web_analyzer_1_1_events_1_1_trigger_save_event.html">TriggerSaveEvent</a> <a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js.html#ab5902775854a8b8440bcd25e0fe1c120">e</a>)</td></tr>
 <tr class="memdesc:a8e8e2ff467a5d5522ce9d3df28198ccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">TriggerSaveEventHandler for sending the event  <a href="#a8e8e2ff467a5d5522ce9d3df28198ccf">More...</a><br /></td></tr>
 <tr class="separator:a8e8e2ff467a5d5522ce9d3df28198ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab82c3a878b6c73019388a394527e6306"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_web_analyzer_1_1_events.html#ab82c3a878b6c73019388a394527e6306">UpdateServiceStatiEventHandler</a> (<a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#aae18b7515bb2bc4137586506e7c0c903">object</a> sender, <a class="el" href="class_web_analyzer_1_1_events_1_1_update_service_stati_event.html">UpdateServiceStatiEvent</a> <a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js.html#ab5902775854a8b8440bcd25e0fe1c120">e</a>)</td></tr>
+<tr class="memdesc:ab82c3a878b6c73019388a394527e6306"><td class="mdescLeft">&#160;</td><td class="mdescRight">UpdateServiceStatiEventHandler for sending the event  <a href="#ab82c3a878b6c73019388a394527e6306">More...</a><br /></td></tr>
+<tr class="separator:ab82c3a878b6c73019388a394527e6306"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60ab58d669ec03a2518a57dba5a59e0e"><td class="memItemLeft" align="right" valign="top">delegate void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_web_analyzer_1_1_events.html#a60ab58d669ec03a2518a57dba5a59e0e">UpdateWSConnectionCountEventHandler</a> (<a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#aae18b7515bb2bc4137586506e7c0c903">object</a> sender, <a class="el" href="class_web_analyzer_1_1_events_1_1_update_w_s_connection_count_event.html">UpdateWSConnectionCountEvent</a> <a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js.html#ab5902775854a8b8440bcd25e0fe1c120">e</a>)</td></tr>
 <tr class="memdesc:a60ab58d669ec03a2518a57dba5a59e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">UpdateWSConnectionCountEventHandler for sending the event  <a href="#a60ab58d669ec03a2518a57dba5a59e0e">More...</a><br /></td></tr>
 <tr class="separator:a60ab58d669ec03a2518a57dba5a59e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1022,6 +1028,41 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">sender</td><td>Sender from which the Event gets triggered</td></tr>
     <tr><td class="paramname">e</td><td><a class="el" href="class_web_analyzer_1_1_events_1_1_trigger_save_event.html" title="Event for triggering saves of data (to xml) ">TriggerSaveEvent</a> which is sent</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab82c3a878b6c73019388a394527e6306"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">delegate void WebAnalyzer.Events.UpdateServiceStatiEventHandler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js.html#aae18b7515bb2bc4137586506e7c0c903">object</a>&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_web_analyzer_1_1_events_1_1_update_service_stati_event.html">UpdateServiceStatiEvent</a>&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>UpdateServiceStatiEventHandler for sending the event </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sender</td><td>Sender from which the Event gets triggered</td></tr>
+    <tr><td class="paramname">e</td><td><a class="el" href="class_web_analyzer_1_1_events_1_1_update_service_stati_event.html" title="Event to update the status of the services ">UpdateServiceStatiEvent</a> which is sent</td></tr>
   </table>
   </dd>
 </dl>

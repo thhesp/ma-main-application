@@ -8,5 +8,6 @@ var class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm =
     [ "CompareVectors", "class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#a4a2a618988f6a538ed55deee35243ee4", null ],
     [ "ExtractFixation", "class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#aed9ae492d1851815f79d9b2f3361711e", null ],
     [ "ExtractRealSaccades", "class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#a3ac55aacffefb5f2459f6b43b44a595b", null ],
-    [ "ExtractSaccades", "class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#ac6607203b63241b68e2e4180c97de9a0", null ]
+    [ "ExtractSaccades", "class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#ac6607203b63241b68e2e4180c97de9a0", null ],
+    [ "ToXML", "class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm.html#a84b84152621c8e87b7068bcbfeeaa1f9", null ]
 ];

@@ -47,6 +47,8 @@ class \hyperlink{class_web_analyzer_1_1_events_1_1_testrun_event}{Testrun\+Event
 \begin{DoxyCompactList}\small\item\em Event which controls the creating, starting and stopping of testruns \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_trigger_save_event}{Trigger\+Save\+Event}
 \begin{DoxyCompactList}\small\item\em Event for triggering saves of data (to xml) \end{DoxyCompactList}\item 
+class \hyperlink{class_web_analyzer_1_1_events_1_1_update_service_stati_event}{Update\+Service\+Stati\+Event}
+\begin{DoxyCompactList}\small\item\em Event to update the status of the services \end{DoxyCompactList}\item 
 class \hyperlink{class_web_analyzer_1_1_events_1_1_update_w_s_connection_count_event}{Update\+W\+S\+Connection\+Count\+Event}
 \begin{DoxyCompactList}\small\item\em Event to update the ws connection count \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
@@ -96,6 +98,8 @@ delegate void \hyperlink{namespace_web_analyzer_1_1_events_ac749d30657662c0b107e
 \begin{DoxyCompactList}\small\item\em Testrun\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a8e8e2ff467a5d5522ce9d3df28198ccf}{Trigger\+Save\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_trigger_save_event}{Trigger\+Save\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
 \begin{DoxyCompactList}\small\item\em Trigger\+Save\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
+delegate void \hyperlink{namespace_web_analyzer_1_1_events_ab82c3a878b6c73019388a394527e6306}{Update\+Service\+Stati\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_update_service_stati_event}{Update\+Service\+Stati\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
+\begin{DoxyCompactList}\small\item\em Update\+Service\+Stati\+Event\+Handler for sending the event \end{DoxyCompactList}\item 
 delegate void \hyperlink{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a57dba5a59e0e}{Update\+W\+S\+Connection\+Count\+Event\+Handler} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, \hyperlink{class_web_analyzer_1_1_events_1_1_update_w_s_connection_count_event}{Update\+W\+S\+Connection\+Count\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
 \begin{DoxyCompactList}\small\item\em Update\+W\+S\+Connection\+Count\+Event\+Handler for sending the event \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -517,6 +521,25 @@ Trigger\+Save\+Event\+Handler for sending the event
 {\em sender} & Sender from which the Event gets triggered\\
 \hline
 {\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_trigger_save_event}{Trigger\+Save\+Event} which is sent\\
+\hline
+\end{DoxyParams}
+\hypertarget{namespace_web_analyzer_1_1_events_ab82c3a878b6c73019388a394527e6306}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Update\+Service\+Stati\+Event\+Handler@{Update\+Service\+Stati\+Event\+Handler}}
+\index{Update\+Service\+Stati\+Event\+Handler@{Update\+Service\+Stati\+Event\+Handler}!Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}}
+\subsubsection[{Update\+Service\+Stati\+Event\+Handler(object sender, Update\+Service\+Stati\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}delegate void Web\+Analyzer.\+Events.\+Update\+Service\+Stati\+Event\+Handler (
+\begin{DoxyParamCaption}
+\item[{{\bf object}}]{sender, }
+\item[{{\bf Update\+Service\+Stati\+Event}}]{e}
+\end{DoxyParamCaption}
+)}\label{namespace_web_analyzer_1_1_events_ab82c3a878b6c73019388a394527e6306}
+
+
+Update\+Service\+Stati\+Event\+Handler for sending the event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender from which the Event gets triggered\\
+\hline
+{\em e} & \hyperlink{class_web_analyzer_1_1_events_1_1_update_service_stati_event}{Update\+Service\+Stati\+Event} which is sent\\
 \hline
 \end{DoxyParams}
 \hypertarget{namespace_web_analyzer_1_1_events_a60ab58d669ec03a2518a57dba5a59e0e}{}\index{Web\+Analyzer\+::\+Events@{Web\+Analyzer\+::\+Events}!Update\+W\+S\+Connection\+Count\+Event\+Handler@{Update\+W\+S\+Connection\+Count\+Event\+Handler}}

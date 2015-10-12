@@ -116,6 +116,9 @@ $(document).ready(function(){initNavTree('class_web_analyzer_1_1_server_1_1_mess
 <div class="title">WebAnalyzer.Server.MessageHandler.DataMessageHandler Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="namespace_web_analyzer_1_1_server_1_1_message_handler.html">MessageHandler</a> for Data messages  
+ <a href="class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for WebAnalyzer.Server.MessageHandler.DataMessageHandler:</div>
 <div class="dyncontent">
@@ -128,27 +131,36 @@ Inheritance diagram for WebAnalyzer.Server.MessageHandler.DataMessageHandler:</d
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5fe3823e540e3dbecaf9899d81ce8074"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler.html#a5fe3823e540e3dbecaf9899d81ce8074">DataMessageHandler</a> (<a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html">TestController</a> controller, <a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html">WebsocketConnection</a> connection)</td></tr>
+<tr class="memdesc:a5fe3823e540e3dbecaf9899d81ce8074"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with the websocket connection and the test controller  <a href="#a5fe3823e540e3dbecaf9899d81ce8074">More...</a><br /></td></tr>
 <tr class="separator:a5fe3823e540e3dbecaf9899d81ce8074"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6604e45715842b5c95ec421de45cf2cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler.html#a6604e45715842b5c95ec421de45cf2cc">OnCompleted</a> ()</td></tr>
+<tr class="memdesc:a6604e45715842b5c95ec421de45cf2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method which gets called once the processing of the message is completed.  <a href="#a6604e45715842b5c95ec421de45cf2cc">More...</a><br /></td></tr>
 <tr class="separator:a6604e45715842b5c95ec421de45cf2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa93b7e36208ccfd2253985652accc2c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler.html#aa93b7e36208ccfd2253985652accc2c9">OnError</a> (Exception error)</td></tr>
+<tr class="memdesc:aa93b7e36208ccfd2253985652accc2c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method which gets called if an error occurs while processing the message.  <a href="#aa93b7e36208ccfd2253985652accc2c9">More...</a><br /></td></tr>
 <tr class="separator:aa93b7e36208ccfd2253985652accc2c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30be217815bd3c9f1bd1550ec72be01d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler.html#a30be217815bd3c9f1bd1550ec72be01d">OnNext</a> (Object omsgIn)</td></tr>
+<tr class="memdesc:a30be217815bd3c9f1bd1550ec72be01d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method used for processing the message  <a href="#a30be217815bd3c9f1bd1550ec72be01d">More...</a><br /></td></tr>
 <tr class="separator:a30be217815bd3c9f1bd1550ec72be01d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a374dcd61092a8d072dac4a806d4148ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler.html#a374dcd61092a8d072dac4a806d4148ad">ExtractGazeData</a> (<a class="el" href="class_web_analyzer_1_1_models_1_1_message_model_1_1_in_data_message.html">InDataMessage</a> msgIn)</td></tr>
+<tr class="memdesc:a374dcd61092a8d072dac4a806d4148ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the gaze model for the uniqueid of the data message with the help of the testcontroller  <a href="#a374dcd61092a8d072dac4a806d4148ad">More...</a><br /></td></tr>
 <tr class="separator:a374dcd61092a8d072dac4a806d4148ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a7699c0f75aee40ba03a6be8ea3592df8"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html">WebsocketConnection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler.html#a7699c0f75aee40ba03a6be8ea3592df8">_connection</a></td></tr>
+<tr class="memdesc:a7699c0f75aee40ba03a6be8ea3592df8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Readonly reference to the websocket connection  <a href="#a7699c0f75aee40ba03a6be8ea3592df8">More...</a><br /></td></tr>
 <tr class="separator:a7699c0f75aee40ba03a6be8ea3592df8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae67a8ffd73f0ae8ff422db335a7e7924"><td class="memItemLeft" align="right" valign="top">readonly <a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html">TestController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_message_handler_1_1_data_message_handler.html#ae67a8ffd73f0ae8ff422db335a7e7924">_controller</a></td></tr>
+<tr class="memdesc:ae67a8ffd73f0ae8ff422db335a7e7924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Readonly reference to the testcontroller used for sending data  <a href="#ae67a8ffd73f0ae8ff422db335a7e7924">More...</a><br /></td></tr>
 <tr class="separator:ae67a8ffd73f0ae8ff422db335a7e7924"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="namespace_web_analyzer_1_1_server_1_1_message_handler.html">MessageHandler</a> for Data messages </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5fe3823e540e3dbecaf9899d81ce8074"></a>
 <div class="memitem">
 <div class="memproto">
@@ -172,6 +184,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor with the websocket connection and the test controller </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>The testcontroller</td></tr>
+    <tr><td class="paramname">connection</td><td>The connection which received the message</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -198,6 +219,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Loads the gaze model for the uniqueid of the data message with the help of the testcontroller </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">msgIn</td><td>The data Message</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The corresponding gaze model</dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="a6604e45715842b5c95ec421de45cf2cc"></a>
@@ -212,6 +242,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Method which gets called once the processing of the message is completed. </p>
 
 </div>
 </div>
@@ -229,6 +261,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Method which gets called if an error occurs while processing the message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">error</td><td>Errorexception which occured</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a30be217815bd3c9f1bd1550ec72be01d"></a>
@@ -244,6 +284,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Method used for processing the message </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">omsgIn</td><td>The Message which was received</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -266,6 +314,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Readonly reference to the websocket connection </p>
+
 </div>
 </div>
 <a class="anchor" id="ae67a8ffd73f0ae8ff422db335a7e7924"></a>
@@ -285,6 +335,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Readonly reference to the testcontroller used for sending data </p>
 
 </div>
 </div>

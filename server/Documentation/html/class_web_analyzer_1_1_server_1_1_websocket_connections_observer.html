@@ -115,6 +115,9 @@ $(document).ready(function(){initNavTree('class_web_analyzer_1_1_server_1_1_webs
 <div class="title">WebAnalyzer.Server.WebsocketConnectionsObserver Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class which is processes all messages on all connections  
+ <a href="class_web_analyzer_1_1_server_1_1_websocket_connections_observer.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for WebAnalyzer.Server.WebsocketConnectionsObserver:</div>
 <div class="dyncontent">
@@ -127,22 +130,30 @@ Inheritance diagram for WebAnalyzer.Server.WebsocketConnectionsObserver:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab58aac7b482c3830fe3b6011f5817252"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connections_observer.html#ab58aac7b482c3830fe3b6011f5817252">WebsocketConnectionsObserver</a> (<a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html">TestController</a> controller, <a class="el" href="class_web_analyzer_1_1_server_1_1_connection_manager.html">ConnectionManager</a> connectionManager)</td></tr>
+<tr class="memdesc:ab58aac7b482c3830fe3b6011f5817252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with reference to the testcontroller and the connection manager  <a href="#ab58aac7b482c3830fe3b6011f5817252">More...</a><br /></td></tr>
 <tr class="separator:ab58aac7b482c3830fe3b6011f5817252"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab390b748581070364777bb40976fd5f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connections_observer.html#ab390b748581070364777bb40976fd5f5">OnCompleted</a> ()</td></tr>
+<tr class="memdesc:ab390b748581070364777bb40976fd5f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method which gets called once the processing of the message is completed.  <a href="#ab390b748581070364777bb40976fd5f5">More...</a><br /></td></tr>
 <tr class="separator:ab390b748581070364777bb40976fd5f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5db5060833e71e8f9e33beedcf3ed353"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connections_observer.html#a5db5060833e71e8f9e33beedcf3ed353">OnError</a> (Exception error)</td></tr>
+<tr class="memdesc:a5db5060833e71e8f9e33beedcf3ed353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method which gets called if an error occurs while processing the message.  <a href="#a5db5060833e71e8f9e33beedcf3ed353">More...</a><br /></td></tr>
 <tr class="separator:a5db5060833e71e8f9e33beedcf3ed353"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a029ee7e7c62cb440b9a3fce8a0d041ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connections_observer.html#a029ee7e7c62cb440b9a3fce8a0d041ba">OnNext</a> (<a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connection.html">WebsocketConnection</a> connection)</td></tr>
+<tr class="memdesc:a029ee7e7c62cb440b9a3fce8a0d041ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method used for processing all messages on the connections  <a href="#a029ee7e7c62cb440b9a3fce8a0d041ba">More...</a><br /></td></tr>
 <tr class="separator:a029ee7e7c62cb440b9a3fce8a0d041ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a12deecceed19d790d4f3a07bb121f519"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_web_analyzer_1_1_server_1_1_connection_manager.html">ConnectionManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connections_observer.html#a12deecceed19d790d4f3a07bb121f519">_connectionManager</a></td></tr>
+<tr class="memdesc:a12deecceed19d790d4f3a07bb121f519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the connection manager  <a href="#a12deecceed19d790d4f3a07bb121f519">More...</a><br /></td></tr>
 <tr class="separator:a12deecceed19d790d4f3a07bb121f519"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4ce45307e4d81fc6902369aacd6fb0f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_web_analyzer_1_1_controller_1_1_test_controller.html">TestController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_server_1_1_websocket_connections_observer.html#ac4ce45307e4d81fc6902369aacd6fb0f">_controller</a></td></tr>
+<tr class="memdesc:ac4ce45307e4d81fc6902369aacd6fb0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the testcontroller  <a href="#ac4ce45307e4d81fc6902369aacd6fb0f">More...</a><br /></td></tr>
 <tr class="separator:ac4ce45307e4d81fc6902369aacd6fb0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class which is processes all messages on all connections </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ab58aac7b482c3830fe3b6011f5817252"></a>
 <div class="memitem">
 <div class="memproto">
@@ -167,6 +178,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructor with reference to the testcontroller and the connection manager </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>Reference to the testcontroller</td></tr>
+    <tr><td class="paramname">connectionManager</td><td>Reference to the connection manager</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -182,6 +202,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Method which gets called once the processing of the message is completed. </p>
 
 </div>
 </div>
@@ -199,6 +221,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Method which gets called if an error occurs while processing the message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">error</td><td>Errorexception which occured</td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a029ee7e7c62cb440b9a3fce8a0d041ba"></a>
@@ -214,6 +244,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Method used for processing all messages on the connections </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">connection</td><td>The connection which received the message</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -236,6 +274,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Reference to the connection manager </p>
+
 </div>
 </div>
 <a class="anchor" id="ac4ce45307e4d81fc6902369aacd6fb0f"></a>
@@ -255,6 +295,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Reference to the testcontroller </p>
 
 </div>
 </div>

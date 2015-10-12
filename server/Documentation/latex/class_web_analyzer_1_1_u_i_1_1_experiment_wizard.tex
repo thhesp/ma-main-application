@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_experiment_wizard}{}\section{Web\+Analyzer.\+U\+I.\+Experiment\+Wizard Class Reference}
 \label{class_web_analyzer_1_1_u_i_1_1_experiment_wizard}\index{Web\+Analyzer.\+U\+I.\+Experiment\+Wizard@{Web\+Analyzer.\+U\+I.\+Experiment\+Wizard}}
+
+
+Window for the experiment wizard  
+
+
 Inheritance diagram for Web\+Analyzer.\+U\+I.\+Experiment\+Wizard\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,39 +15,44 @@ Inheritance diagram for Web\+Analyzer.\+U\+I.\+Experiment\+Wizard\+:\begin{figur
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_adf341f79a31a375235d7afa3abf63030}{Experiment\+Wizard} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 override void \hyperlink{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_a96ad3b4f335a244f83f0c09636523989}{Wnd\+Proc} (ref Message m)
-\item 
+\begin{DoxyCompactList}\small\item\em Needed for enabling the use of the chromium dev tools \end{DoxyCompactList}\item 
 override void \hyperlink{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_a15f391a3ce1d14428480cbf98d7ed043}{Dispose} (bool disposing)
 \begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Events}
 \begin{DoxyCompactItemize}
 \item 
 Create\+Experiment\+Event\+Handler \hyperlink{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_ac18185c9d12c074d2b82c2426e545461}{Create\+Experiment}
-\item 
+\begin{DoxyCompactList}\small\item\em Eventhandler for creating an experiment \end{DoxyCompactList}\item 
 Load\+Experiment\+Event\+Handler \hyperlink{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_ad469bc433ee12cf551309f1b2ab37e65}{Load\+Experiment}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Eventhandler for loading an experiment \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_aeb5104fe8972a764582545e57feb047c}{Browser\+\_\+\+Load} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, Event\+Args \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Callback for when the form loads \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_aedf3743b17679113da0a06e2449f2cba}{Browser\+\_\+\+Closing} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, Form\+Closing\+Event\+Args \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Callback called when the form is closing. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_a238485396ddbea1d5daff782924fda61}{Form\+\_\+\+Key\+Down} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, Key\+Event\+Args \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Should enable the opening of the chromium dev tools on pressing the F12 key. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_ab3c6f752d514c5b4794b6e33f031b80b}{Initialize\+Component} ()
 \begin{DoxyCompactList}\small\item\em Required method for Designer support -\/ do not modify the contents of this method with the code editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Chromium\+Web\+Browser \hyperlink{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_a47b2b792a5aba1e3594b5ce6dca7156c}{my\+Browser} = null
-\item 
+\begin{DoxyCompactList}\small\item\em Reference to the chromium browser \end{DoxyCompactList}\item 
 System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_abaa55aeb99b0ed9ef11725d650cec317}{components} = null
 \begin{DoxyCompactList}\small\item\em Required designer variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Window for the experiment wizard 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -55,6 +65,10 @@ System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1
 )}\label{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_adf341f79a31a375235d7afa3abf63030}
 
 
+Constructor 
+
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_aedf3743b17679113da0a06e2449f2cba}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard@{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard}!Browser\+\_\+\+Closing@{Browser\+\_\+\+Closing}}
 \index{Browser\+\_\+\+Closing@{Browser\+\_\+\+Closing}!Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard@{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard}}
@@ -64,6 +78,17 @@ System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1
 \item[{Form\+Closing\+Event\+Args}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_aedf3743b17679113da0a06e2449f2cba}
+
+
+Callback called when the form is closing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender\\
+\hline
+{\em e} & event data\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_aeb5104fe8972a764582545e57feb047c}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard@{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard}!Browser\+\_\+\+Load@{Browser\+\_\+\+Load}}
 \index{Browser\+\_\+\+Load@{Browser\+\_\+\+Load}!Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard@{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard}}
 \subsubsection[{Browser\+\_\+\+Load(object sender, Event\+Args e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Experiment\+Wizard.\+Browser\+\_\+\+Load (
@@ -72,6 +97,17 @@ System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1
 \item[{Event\+Args}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_aeb5104fe8972a764582545e57feb047c}
+
+
+Callback for when the form loads 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_a15f391a3ce1d14428480cbf98d7ed043}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard@{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard}!Dispose@{Dispose}}
 \index{Dispose@{Dispose}!Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard@{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard}}
 \subsubsection[{Dispose(bool disposing)}]{\setlength{\rightskip}{0pt plus 5cm}override void Web\+Analyzer.\+U\+I.\+Experiment\+Wizard.\+Dispose (
@@ -96,7 +132,20 @@ Clean up any resources being used.
 \item[{Key\+Event\+Args}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_a238485396ddbea1d5daff782924fda61}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_ab3c6f752d514c5b4794b6e33f031b80b}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard@{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard}!Initialize\+Component@{Initialize\+Component}}
+
+
+Should enable the opening of the chromium dev tools on pressing the F12 key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+
+
+Currently doesn\textquotesingle{}t work as intended \+:( \hypertarget{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_ab3c6f752d514c5b4794b6e33f031b80b}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard@{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard}!Initialize\+Component@{Initialize\+Component}}
 \index{Initialize\+Component@{Initialize\+Component}!Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard@{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard}}
 \subsubsection[{Initialize\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Experiment\+Wizard.\+Initialize\+Component (
 \begin{DoxyParamCaption}
@@ -116,6 +165,15 @@ Required method for Designer support -\/ do not modify the contents of this meth
 )\hspace{0.3cm}{\ttfamily [protected]}}\label{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_a96ad3b4f335a244f83f0c09636523989}
 
 
+Needed for enabling the use of the chromium dev tools 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_abaa55aeb99b0ed9ef11725d650cec317}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard@{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard}!components@{components}}
 \index{components@{components}!Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard@{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard}}
@@ -129,13 +187,25 @@ Required designer variable.
 \subsubsection[{my\+Browser}]{\setlength{\rightskip}{0pt plus 5cm}Chromium\+Web\+Browser Web\+Analyzer.\+U\+I.\+Experiment\+Wizard.\+my\+Browser = null\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_a47b2b792a5aba1e3594b5ce6dca7156c}
 
 
+Reference to the chromium browser 
+
+
+
 \subsection{Event Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_ac18185c9d12c074d2b82c2426e545461}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard@{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard}!Create\+Experiment@{Create\+Experiment}}
 \index{Create\+Experiment@{Create\+Experiment}!Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard@{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard}}
 \subsubsection[{Create\+Experiment}]{\setlength{\rightskip}{0pt plus 5cm}Create\+Experiment\+Event\+Handler Web\+Analyzer.\+U\+I.\+Experiment\+Wizard.\+Create\+Experiment}\label{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_ac18185c9d12c074d2b82c2426e545461}
+
+
+Eventhandler for creating an experiment 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_ad469bc433ee12cf551309f1b2ab37e65}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard@{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard}!Load\+Experiment@{Load\+Experiment}}
 \index{Load\+Experiment@{Load\+Experiment}!Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard@{Web\+Analyzer\+::\+U\+I\+::\+Experiment\+Wizard}}
 \subsubsection[{Load\+Experiment}]{\setlength{\rightskip}{0pt plus 5cm}Load\+Experiment\+Event\+Handler Web\+Analyzer.\+U\+I.\+Experiment\+Wizard.\+Load\+Experiment}\label{class_web_analyzer_1_1_u_i_1_1_experiment_wizard_ad469bc433ee12cf551309f1b2ab37e65}
+
+
+Eventhandler for loading an experiment 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

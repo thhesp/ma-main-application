@@ -360,7 +360,7 @@ namespace WebAnalyzer.Controller
         /// <summary>
         /// Method used for showing the domain settings form
         /// </summary>
-        /// <param name="particpant">The domain setting (new or old)</param>
+        /// <param name="setting">The domain setting (new or old)</param>
         /// <param name="createNew">Boolean which defines if it is a new domain setting</param>
         private void ShowEditDomainSettingForm(DomainSettings setting, Boolean createNew)
         {

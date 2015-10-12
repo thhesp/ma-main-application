@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message}{}\section{Web\+Analyzer.\+Models.\+Message\+Model.\+Event\+Message Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message}\index{Web\+Analyzer.\+Models.\+Message\+Model.\+Event\+Message@{Web\+Analyzer.\+Models.\+Message\+Model.\+Event\+Message}}
+
+
+Abstract base class for event messages  
+
+
 Inheritance diagram for Web\+Analyzer.\+Models.\+Message\+Model.\+Event\+Message\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,26 +15,31 @@ Inheritance diagram for Web\+Analyzer.\+Models.\+Message\+Model.\+Event\+Message
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_u_r_l_change_event_message}{U\+R\+L\+Change\+Event\+Message} \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_a971a2b704c5e6ef67a48b2836d53fccb}{U\+R\+L\+Change\+Event\+Message\+From\+Json} (Json\+Text\+Reader reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a U\+R\+L\+Change\+Event\+Message from a json reader \end{DoxyCompactList}\item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_scroll_event_message}{Scroll\+Event\+Message} \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_a3c2e13ff9e1eba07492ee1406814077d}{Scroll\+Event\+Message\+From\+Json} (Json\+Text\+Reader reader)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a Scroll\+Event\+Message from a json reader \end{DoxyCompactList}\item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_resize_event_message}{Resize\+Event\+Message} \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_af72ae6f9dc1fec4f1c9ea68a90643be7}{Resize\+Event\+Message\+From\+Json} (Json\+Text\+Reader reader)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates a Resize\+Event\+Message from a json reader \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_aef3ed320a568084cd131451ccc71fc8b}{\+\_\+url}
-\item 
+\begin{DoxyCompactList}\small\item\em U\+R\+L of the webpage \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_a48a2a6f84fb71c7083b757af773fc183}{\+\_\+event\+Timestamp}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Event Timestamp \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_a29a86382ec9c22a11920131a9b1ab644}{U\+R\+L}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the webpage U\+R\+L \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_a5014b7357295d3607057ff71c949b913}{Event\+Timestamp}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the event timestamp \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Abstract base class for event messages 
+
 
 
 \subsection{Member Function Documentation}
@@ -40,6 +50,18 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_mess
 \item[{Json\+Text\+Reader}]{reader}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_af72ae6f9dc1fec4f1c9ea68a90643be7}
+
+
+Creates a Resize\+Event\+Message from a json reader 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & J\+S\+O\+N Reader\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_a3c2e13ff9e1eba07492ee1406814077d}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message}!Scroll\+Event\+Message\+From\+Json@{Scroll\+Event\+Message\+From\+Json}}
 \index{Scroll\+Event\+Message\+From\+Json@{Scroll\+Event\+Message\+From\+Json}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message}}
 \subsubsection[{Scroll\+Event\+Message\+From\+Json(\+Json\+Text\+Reader reader)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Scroll\+Event\+Message} Web\+Analyzer.\+Models.\+Message\+Model.\+Event\+Message.\+Scroll\+Event\+Message\+From\+Json (
@@ -47,6 +69,18 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_mess
 \item[{Json\+Text\+Reader}]{reader}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_a3c2e13ff9e1eba07492ee1406814077d}
+
+
+Creates a Scroll\+Event\+Message from a json reader 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & J\+S\+O\+N Reader\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_a971a2b704c5e6ef67a48b2836d53fccb}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message}!U\+R\+L\+Change\+Event\+Message\+From\+Json@{U\+R\+L\+Change\+Event\+Message\+From\+Json}}
 \index{U\+R\+L\+Change\+Event\+Message\+From\+Json@{U\+R\+L\+Change\+Event\+Message\+From\+Json}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message}}
 \subsubsection[{U\+R\+L\+Change\+Event\+Message\+From\+Json(\+Json\+Text\+Reader reader)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf U\+R\+L\+Change\+Event\+Message} Web\+Analyzer.\+Models.\+Message\+Model.\+Event\+Message.\+U\+R\+L\+Change\+Event\+Message\+From\+Json (
@@ -56,22 +90,50 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_mess
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_a971a2b704c5e6ef67a48b2836d53fccb}
 
 
+Creates a U\+R\+L\+Change\+Event\+Message from a json reader 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reader} & J\+S\+O\+N Reader\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_a48a2a6f84fb71c7083b757af773fc183}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message}!\+\_\+event\+Timestamp@{\+\_\+event\+Timestamp}}
 \index{\+\_\+event\+Timestamp@{\+\_\+event\+Timestamp}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message}}
 \subsubsection[{\+\_\+event\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+Event\+Message.\+\_\+event\+Timestamp\hspace{0.3cm}{\ttfamily [protected]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_a48a2a6f84fb71c7083b757af773fc183}
+
+
+Event Timestamp 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_aef3ed320a568084cd131451ccc71fc8b}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message}!\+\_\+url@{\+\_\+url}}
 \index{\+\_\+url@{\+\_\+url}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message}}
 \subsubsection[{\+\_\+url}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+Event\+Message.\+\_\+url\hspace{0.3cm}{\ttfamily [protected]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_aef3ed320a568084cd131451ccc71fc8b}
+
+
+U\+R\+L of the webpage 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_a5014b7357295d3607057ff71c949b913}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message}!Event\+Timestamp@{Event\+Timestamp}}
 \index{Event\+Timestamp@{Event\+Timestamp}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message}}
 \subsubsection[{Event\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+Event\+Message.\+Event\+Timestamp\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_a5014b7357295d3607057ff71c949b913}
+
+
+Getter / Setter for the event timestamp 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_a29a86382ec9c22a11920131a9b1ab644}{}\index{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message}!U\+R\+L@{U\+R\+L}}
 \index{U\+R\+L@{U\+R\+L}!Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message@{Web\+Analyzer\+::\+Models\+::\+Message\+Model\+::\+Event\+Message}}
 \subsubsection[{U\+R\+L}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Message\+Model.\+Event\+Message.\+U\+R\+L\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_message_model_1_1_event_message_a29a86382ec9c22a11920131a9b1ab644}
+
+
+Getter/ Setter for the webpage U\+R\+L 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

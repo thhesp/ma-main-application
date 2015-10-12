@@ -24,6 +24,7 @@ var class_web_analyzer_1_1_properties_1_1_settings =
     [ "ParticipantsFilename", "class_web_analyzer_1_1_properties_1_1_settings.html#a17faca9c89900a15e80dd65589977dc8", null ],
     [ "RawdataLocation", "class_web_analyzer_1_1_properties_1_1_settings.html#a74498d33c881c07d79e0e1f1b0efe308", null ],
     [ "SaccadeAngleSimiliarity", "class_web_analyzer_1_1_properties_1_1_settings.html#a7c8084a45024f9b5bb40f0658bdf41cd", null ],
+    [ "ServicesCheckIntervall", "class_web_analyzer_1_1_properties_1_1_settings.html#a66420ac2f6c7a2eb88499bb9978b7d63", null ],
     [ "SettingsFilename", "class_web_analyzer_1_1_properties_1_1_settings.html#ad083097d959dff8a09359e19f6524982", null ],
     [ "StatisticsLocation", "class_web_analyzer_1_1_properties_1_1_settings.html#aa664153921c24bdaa3a4cf790c153924", null ],
     [ "TestrunDataWaitDuration", "class_web_analyzer_1_1_properties_1_1_settings.html#a4fa938c23f07358746ab269d717fd087", null ],

@@ -22,5 +22,6 @@ var namespace_web_analyzer_1_1_events =
     [ "SelectTestrunToLoadEvent", "class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event.html", "class_web_analyzer_1_1_events_1_1_select_testrun_to_load_event" ],
     [ "TestrunEvent", "class_web_analyzer_1_1_events_1_1_testrun_event.html", "class_web_analyzer_1_1_events_1_1_testrun_event" ],
     [ "TriggerSaveEvent", "class_web_analyzer_1_1_events_1_1_trigger_save_event.html", "class_web_analyzer_1_1_events_1_1_trigger_save_event" ],
+    [ "UpdateServiceStatiEvent", "class_web_analyzer_1_1_events_1_1_update_service_stati_event.html", null ],
     [ "UpdateWSConnectionCountEvent", "class_web_analyzer_1_1_events_1_1_update_w_s_connection_count_event.html", "class_web_analyzer_1_1_events_1_1_update_w_s_connection_count_event" ]
 ];

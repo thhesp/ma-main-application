@@ -1,12 +1,22 @@
 \hypertarget{class_web_analyzer_1_1_server_1_1_ws_extensions}{}\section{Web\+Analyzer.\+Server.\+Ws\+Extensions Class Reference}
 \label{class_web_analyzer_1_1_server_1_1_ws_extensions}\index{Web\+Analyzer.\+Server.\+Ws\+Extensions@{Web\+Analyzer.\+Server.\+Ws\+Extensions}}
+
+
+Methodes for receiving and sending messages  
+
+
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static async Task$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_message}{Message} $>$ \hyperlink{class_web_analyzer_1_1_server_1_1_ws_extensions_a770900a0eaa564c76e90d5fe04443f7f}{Read\+Dynamic\+Async} (this Web\+Socket ws, Cancellation\+Token \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2edit__rule_8js_a6bb6c6d36178f7806d97319e35438412}{cancel})
-\item 
+\begin{DoxyCompactList}\small\item\em Method for receiving a message \end{DoxyCompactList}\item 
 static void \hyperlink{class_web_analyzer_1_1_server_1_1_ws_extensions_ad8b42dc8c1a11d59f820217e399351db}{Write\+String} (this Web\+Socket ws, String data)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method for sending a message \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Methodes for receiving and sending messages 
+
 
 
 \subsection{Member Function Documentation}
@@ -18,6 +28,20 @@ static void \hyperlink{class_web_analyzer_1_1_server_1_1_ws_extensions_ad8b42dc8
 \item[{Cancellation\+Token}]{cancel}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_server_1_1_ws_extensions_a770900a0eaa564c76e90d5fe04443f7f}
+
+
+Method for receiving a message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ws} & the websocket which receives the message\\
+\hline
+{\em cancel} & the cancelation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_server_1_1_ws_extensions_ad8b42dc8c1a11d59f820217e399351db}{}\index{Web\+Analyzer\+::\+Server\+::\+Ws\+Extensions@{Web\+Analyzer\+::\+Server\+::\+Ws\+Extensions}!Write\+String@{Write\+String}}
 \index{Write\+String@{Write\+String}!Web\+Analyzer\+::\+Server\+::\+Ws\+Extensions@{Web\+Analyzer\+::\+Server\+::\+Ws\+Extensions}}
 \subsubsection[{Write\+String(this Web\+Socket ws, String data)}]{\setlength{\rightskip}{0pt plus 5cm}static void Web\+Analyzer.\+Server.\+Ws\+Extensions.\+Write\+String (
@@ -26,6 +50,17 @@ static void \hyperlink{class_web_analyzer_1_1_server_1_1_ws_extensions_ad8b42dc8
 \item[{String}]{data}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_server_1_1_ws_extensions_ad8b42dc8c1a11d59f820217e399351db}
+
+
+Method for sending a message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ws} & the ws which shall send the message\\
+\hline
+{\em data} & the json string which represents the message\\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

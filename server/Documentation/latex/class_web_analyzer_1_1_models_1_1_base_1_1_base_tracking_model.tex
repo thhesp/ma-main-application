@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model}{}\section{Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model}\index{Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model@{Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model}}
+
+
+Abstract base class for all tracking components  
+
+
 Inheritance diagram for Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,43 +16,43 @@ Inheritance diagram for Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model\+:
 \item 
 enum \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1a4a0f40cfe65595918f6a41023798ff}{T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S} \{ \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1a4a0f40cfe65595918f6a41023798ffaf19bd0844e53369373385609e28dbf84}{T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S.\+eye}, 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1a4a0f40cfe65595918f6a41023798ffa40203abe6e81ed98cbc97cdd6ec4f144}{T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S.\+mouse}
- \}
+ \}\begin{DoxyCompactList}\small\item\em Enumeration of the implemented tracking components \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 abstract \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2875208b4f4b0ed643593152f4ec025c}{Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ae9cca2b18274747b70b51f0d1cc37532}{connect} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Abstract method for connecting the tracking component \end{DoxyCompactList}\item 
 abstract \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2875208b4f4b0ed643593152f4ec025c}{Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1540c4d92ded2ce32aa485eafd9e3a12}{disconnect} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Abstract method for disconnecting the tracking component \end{DoxyCompactList}\item 
 abstract void \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a772a6b05f3976114c432d746510c3ceb}{start\+Tracking} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Abstract method for starting the tracking \end{DoxyCompactList}\item 
 abstract void \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a22286c5202de039794f020d3fed12ae1}{stop\+Tracking} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Abstract method for stopping the tracking \end{DoxyCompactList}\item 
 abstract double \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ab79ef77eec8b92c3c7e536e25642af56}{get\+Tracking\+Frequency} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Abstract method for getting the tracking frequency of the component \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model}{Base\+Tracking\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ae86fbecc03c9d2a2813b684ee2f2c8ee}{Get\+Tracking\+Model} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the tracking component based on the application settings \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a841c667811d9923a91ca7837f72f8f19}{trigger\+Gaze\+Event} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} left\+Eye, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} right\+Eye)
-\item 
+\begin{DoxyCompactList}\small\item\em Method for triggering the prepare gaze event with the given data \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a497edbc82520c1c9582d2747baa6312f}{trigger\+Tracking\+Event} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_event}{Raw\+Tracking\+Event} raw\+Event)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method for triggering the add tracking event event with the given data \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2875208b4f4b0ed643593152f4ec025c}{Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_aecba61dd2b171d2f6dcf3abc40229d39}{\+\_\+connection\+Status} = Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S.\+disconnected
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Representation of the Status of the tracking component \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_interaction_objects_1_1_experiment_object_a2875208b4f4b0ed643593152f4ec025c}{Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_aea243d67939ea7e2e62adbdecc525026}{Connection\+Status}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the connection status \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Events}
 \begin{DoxyCompactItemize}
 \item 
@@ -57,10 +62,19 @@ Add\+Tracking\+Event\+Handler \hyperlink{class_web_analyzer_1_1_models_1_1_base_
 \begin{DoxyCompactList}\small\item\em Event which is used for sending events to the test controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Abstract base class for all tracking components 
+
+
+
 \subsection{Member Enumeration Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1a4a0f40cfe65595918f6a41023798ff}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S@{T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S}}
 \index{T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S@{T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
 \subsubsection[{T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+T\+R\+A\+C\+K\+I\+N\+G\+\_\+\+M\+O\+D\+E\+L\+S}\hspace{0.3cm}{\ttfamily [strong]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1a4a0f40cfe65595918f6a41023798ff}
+
+
+Enumeration of the implemented tracking components 
+
 \begin{Desc}
 \item[Enumerator]\par
 \begin{description}
@@ -82,6 +96,13 @@ Add\+Tracking\+Event\+Handler \hyperlink{class_web_analyzer_1_1_models_1_1_base_
 )\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ae9cca2b18274747b70b51f0d1cc37532}
 
 
+Abstract method for connecting the tracking component 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 Implemented in \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a24496245bd949730f0f56d328ff74690}{Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model}, and \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_a147d911ce601efe3bf779cebaed106e9}{Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model}.
 
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1540c4d92ded2ce32aa485eafd9e3a12}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!disconnect@{disconnect}}
@@ -91,6 +112,13 @@ Implemented in \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_m
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a1540c4d92ded2ce32aa485eafd9e3a12}
+
+
+Abstract method for disconnecting the tracking component 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 Implemented in \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a8282209f61b0a45f09551ffe72cab136}{Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model}, and \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_a7928a4615bb62b6e4b273340bd224554}{Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model}.
@@ -104,6 +132,10 @@ Implemented in \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_m
 )\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ab79ef77eec8b92c3c7e536e25642af56}
 
 
+Abstract method for getting the tracking frequency of the component 
+
+
+
 Implemented in \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a974f53dd33c205cf772d98eeb7adddd0}{Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model}, and \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_aa46691d72c894f0ba51943e37c8ce0a0}{Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model}.
 
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ae86fbecc03c9d2a2813b684ee2f2c8ee}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!Get\+Tracking\+Model@{Get\+Tracking\+Model}}
@@ -113,6 +145,13 @@ Implemented in \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_m
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_ae86fbecc03c9d2a2813b684ee2f2c8ee}
+
+
+Returns the tracking component based on the application settings 
+
+\begin{DoxyReturn}{Returns}
+Tracking Component
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a772a6b05f3976114c432d746510c3ceb}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!start\+Tracking@{start\+Tracking}}
 \index{start\+Tracking@{start\+Tracking}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
 \subsubsection[{start\+Tracking()}]{\setlength{\rightskip}{0pt plus 5cm}abstract void Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+start\+Tracking (
@@ -120,6 +159,10 @@ Implemented in \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_m
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a772a6b05f3976114c432d746510c3ceb}
+
+
+Abstract method for starting the tracking 
+
 
 
 Implemented in \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_a73bde5a5915a3a33a368e5bdf1b203ca}{Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model}, and \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_ad2d20d7f2f302ef22e40da86a18dcaf9}{Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model}.
@@ -133,6 +176,10 @@ Implemented in \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_m
 )\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a22286c5202de039794f020d3fed12ae1}
 
 
+Abstract method for stopping the tracking 
+
+
+
 Implemented in \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_model_ae65a98fe8a1ccd24838f7af022edd174}{Web\+Analyzer.\+Eye\+Tracking.\+Eye\+Tracking\+Model}, and \hyperlink{class_web_analyzer_1_1_test_1_1_communication_1_1_mouse_model_a025e9d3e6918ebe7b6a1fd1ccf019b8a}{Web\+Analyzer.\+Test.\+Communication.\+Mouse\+Model}.
 
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a841c667811d9923a91ca7837f72f8f19}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!trigger\+Gaze\+Event@{trigger\+Gaze\+Event}}
@@ -143,6 +190,17 @@ Implemented in \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_m
 \item[{{\bf Base\+Tracking\+Data}}]{right\+Eye}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [protected]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a841c667811d9923a91ca7837f72f8f19}
+
+
+Method for triggering the prepare gaze event with the given data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left\+Eye} & Data about the left eye\\
+\hline
+{\em right\+Eye} & Data about the right eye\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a497edbc82520c1c9582d2747baa6312f}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!trigger\+Tracking\+Event@{trigger\+Tracking\+Event}}
 \index{trigger\+Tracking\+Event@{trigger\+Tracking\+Event}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
 \subsubsection[{trigger\+Tracking\+Event(\+Raw\+Tracking\+Event raw\+Event)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+trigger\+Tracking\+Event (
@@ -152,16 +210,33 @@ Implemented in \hyperlink{class_web_analyzer_1_1_eye_tracking_1_1_eye_tracking_m
 )\hspace{0.3cm}{\ttfamily [protected]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_a497edbc82520c1c9582d2747baa6312f}
 
 
+Method for triggering the add tracking event event with the given data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+Event} & Data about the tracking event\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_aecba61dd2b171d2f6dcf3abc40229d39}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!\+\_\+connection\+Status@{\+\_\+connection\+Status}}
 \index{\+\_\+connection\+Status@{\+\_\+connection\+Status}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
 \subsubsection[{\+\_\+connection\+Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+\_\+connection\+Status = Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S.\+disconnected\hspace{0.3cm}{\ttfamily [protected]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_aecba61dd2b171d2f6dcf3abc40229d39}
 
 
+Representation of the Status of the tracking component 
+
+
+
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_aea243d67939ea7e2e62adbdecc525026}{}\index{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}!Connection\+Status@{Connection\+Status}}
 \index{Connection\+Status@{Connection\+Status}!Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model@{Web\+Analyzer\+::\+Models\+::\+Base\+::\+Base\+Tracking\+Model}}
 \subsubsection[{Connection\+Status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+Object.\+C\+O\+N\+N\+E\+C\+T\+I\+O\+N\+\_\+\+S\+T\+A\+T\+U\+S} Web\+Analyzer.\+Models.\+Base.\+Base\+Tracking\+Model.\+Connection\+Status\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_model_aea243d67939ea7e2e62adbdecc525026}
+
+
+Getter/ Setter for the connection status 
+
 
 
 \subsection{Event Documentation}

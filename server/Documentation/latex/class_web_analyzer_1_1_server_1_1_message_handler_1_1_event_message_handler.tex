@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler}{}\section{Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler Class Reference}
 \label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler}\index{Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler@{Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler}}
+
+
+\hyperlink{namespace_web_analyzer_1_1_server_1_1_message_handler}{Message\+Handler} for Event messages  
+
+
 Inheritance diagram for Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,34 +15,39 @@ Inheritance diagram for Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Messa
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_aad5a6a0c04c3734ed4f4f246429dcc96}{Event\+Message\+Handler} (\hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Websocket\+Connection} connection)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor with the websocket connection \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a19e447a4cbabc5a9f8b3a04af58c5d43}{On\+Completed} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Method which gets called once the processing of the message is completed. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a88c6d373560e656f48dd245a60dd5050}{On\+Error} (Exception error)
-\item 
+\begin{DoxyCompactList}\small\item\em Method which gets called if an error occurs while processing the message. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ab517345494b9c59dcd2fefadcdc7b459}{On\+Next} (Object omsg\+In)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method used for processing the message \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Events}
 \begin{DoxyCompactItemize}
 \item 
 Add\+Webpage\+Event\+Handler \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_afe82749d8d848e38bb19ddc56f9c7fe6}{Add\+Webpage}
-\item 
+\begin{DoxyCompactList}\small\item\em Eventhandler for the Add\+Webpage Event \end{DoxyCompactList}\item 
 Add\+Browser\+Event\+Handler \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ab5371d9836863ebc41e4c86c9ebc348e}{Add\+Browser\+Event}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Eventhandler for the Add\+Browser\+Event Event \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_abae5e602e947dc9b53479678117d5bed}{process\+Scroll\+Event} (\hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_scroll_event_message}{Scroll\+Event\+Message} msg)
-\item 
+\begin{DoxyCompactList}\small\item\em Processes scroll events \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a30a228c7b5ac5fa51f2b9f81fdd8908c}{process\+U\+R\+L\+Change\+Event} (\hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_u_r_l_change_event_message}{U\+R\+L\+Change\+Event\+Message} msg)
-\item 
+\begin{DoxyCompactList}\small\item\em Processes url change events \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_aae85692e0e424caf7a57f28c103c1f3f}{process\+Resize\+Change\+Event} (\hyperlink{class_web_analyzer_1_1_models_1_1_message_model_1_1_in_1_1_event_messages_1_1_resize_event_message}{Resize\+Event\+Message} msg)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Processes resize events \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 readonly \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Websocket\+Connection} \hyperlink{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ab818f2be9cb81fd8854221cc1906d736}{\+\_\+connection}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Readonly reference to the websocket connection \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{namespace_web_analyzer_1_1_server_1_1_message_handler}{Message\+Handler} for Event messages 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -50,6 +60,15 @@ readonly \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Webs
 )}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_aad5a6a0c04c3734ed4f4f246429dcc96}
 
 
+Constructor with the websocket connection 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & The connection which received the message\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a19e447a4cbabc5a9f8b3a04af58c5d43}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!On\+Completed@{On\+Completed}}
 \index{On\+Completed@{On\+Completed}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
@@ -58,6 +77,10 @@ readonly \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Webs
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a19e447a4cbabc5a9f8b3a04af58c5d43}
+
+
+Method which gets called once the processing of the message is completed. 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a88c6d373560e656f48dd245a60dd5050}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!On\+Error@{On\+Error}}
 \index{On\+Error@{On\+Error}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
 \subsubsection[{On\+Error(\+Exception error)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+On\+Error (
@@ -65,6 +88,15 @@ readonly \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Webs
 \item[{Exception}]{error}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a88c6d373560e656f48dd245a60dd5050}
+
+
+Method which gets called if an error occurs while processing the message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & Errorexception which occured\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ab517345494b9c59dcd2fefadcdc7b459}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!On\+Next@{On\+Next}}
 \index{On\+Next@{On\+Next}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
 \subsubsection[{On\+Next(\+Object omsg\+In)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+On\+Next (
@@ -72,6 +104,15 @@ readonly \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Webs
 \item[{Object}]{omsg\+In}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ab517345494b9c59dcd2fefadcdc7b459}
+
+
+Method used for processing the message 
+
+
+\begin{DoxyParams}{Parameters}
+{\em omsg\+In} & The Message which was received\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_aae85692e0e424caf7a57f28c103c1f3f}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!process\+Resize\+Change\+Event@{process\+Resize\+Change\+Event}}
 \index{process\+Resize\+Change\+Event@{process\+Resize\+Change\+Event}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
 \subsubsection[{process\+Resize\+Change\+Event(\+Resize\+Event\+Message msg)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+process\+Resize\+Change\+Event (
@@ -79,6 +120,15 @@ readonly \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Webs
 \item[{{\bf Resize\+Event\+Message}}]{msg}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_aae85692e0e424caf7a57f28c103c1f3f}
+
+
+Processes resize events 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The resize event message\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_abae5e602e947dc9b53479678117d5bed}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!process\+Scroll\+Event@{process\+Scroll\+Event}}
 \index{process\+Scroll\+Event@{process\+Scroll\+Event}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
 \subsubsection[{process\+Scroll\+Event(\+Scroll\+Event\+Message msg)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+process\+Scroll\+Event (
@@ -86,6 +136,15 @@ readonly \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Webs
 \item[{{\bf Scroll\+Event\+Message}}]{msg}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_abae5e602e947dc9b53479678117d5bed}
+
+
+Processes scroll events 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The scroll event message\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a30a228c7b5ac5fa51f2b9f81fdd8908c}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!process\+U\+R\+L\+Change\+Event@{process\+U\+R\+L\+Change\+Event}}
 \index{process\+U\+R\+L\+Change\+Event@{process\+U\+R\+L\+Change\+Event}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
 \subsubsection[{process\+U\+R\+L\+Change\+Event(\+U\+R\+L\+Change\+Event\+Message msg)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+process\+U\+R\+L\+Change\+Event (
@@ -95,19 +154,40 @@ readonly \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Webs
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_a30a228c7b5ac5fa51f2b9f81fdd8908c}
 
 
+Processes url change events 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The url change event message\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ab818f2be9cb81fd8854221cc1906d736}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!\+\_\+connection@{\+\_\+connection}}
 \index{\+\_\+connection@{\+\_\+connection}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
 \subsubsection[{\+\_\+connection}]{\setlength{\rightskip}{0pt plus 5cm}readonly {\bf Websocket\+Connection} Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+\_\+connection\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ab818f2be9cb81fd8854221cc1906d736}
 
 
+Readonly reference to the websocket connection 
+
+
+
 \subsection{Event Documentation}
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ab5371d9836863ebc41e4c86c9ebc348e}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!Add\+Browser\+Event@{Add\+Browser\+Event}}
 \index{Add\+Browser\+Event@{Add\+Browser\+Event}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
 \subsubsection[{Add\+Browser\+Event}]{\setlength{\rightskip}{0pt plus 5cm}Add\+Browser\+Event\+Handler Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+Add\+Browser\+Event}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_ab5371d9836863ebc41e4c86c9ebc348e}
+
+
+Eventhandler for the Add\+Browser\+Event Event 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_afe82749d8d848e38bb19ddc56f9c7fe6}{}\index{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}!Add\+Webpage@{Add\+Webpage}}
 \index{Add\+Webpage@{Add\+Webpage}!Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler@{Web\+Analyzer\+::\+Server\+::\+Message\+Handler\+::\+Event\+Message\+Handler}}
 \subsubsection[{Add\+Webpage}]{\setlength{\rightskip}{0pt plus 5cm}Add\+Webpage\+Event\+Handler Web\+Analyzer.\+Server.\+Message\+Handler.\+Event\+Message\+Handler.\+Add\+Webpage}\label{class_web_analyzer_1_1_server_1_1_message_handler_1_1_event_message_handler_afe82749d8d848e38bb19ddc56f9c7fe6}
+
+
+Eventhandler for the Add\+Webpage Event 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

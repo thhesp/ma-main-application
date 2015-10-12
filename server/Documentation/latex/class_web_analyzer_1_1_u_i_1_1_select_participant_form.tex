@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_select_participant_form}{}\section{Web\+Analyzer.\+U\+I.\+Select\+Participant\+Form Class Reference}
 \label{class_web_analyzer_1_1_u_i_1_1_select_participant_form}\index{Web\+Analyzer.\+U\+I.\+Select\+Participant\+Form@{Web\+Analyzer.\+U\+I.\+Select\+Participant\+Form}}
+
+
+Window for selecting an participant.  
+
+
 Inheritance diagram for Web\+Analyzer.\+U\+I.\+Select\+Participant\+Form\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,42 +15,51 @@ Inheritance diagram for Web\+Analyzer.\+U\+I.\+Select\+Participant\+Form\+:\begi
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_u_i_1_1_select_participant_form_a82850c88bc4d315c7fedd26333c844bd}{Select\+Participant\+Form} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} experiment)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_select_participant_form_a57b7487ec9db48f92f0d741566c68a24}{Reload\+Page} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Reloads the page in the browser \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 override void \hyperlink{class_web_analyzer_1_1_u_i_1_1_select_participant_form_a384ab9932611a45d7ad7e938104474c7}{Wnd\+Proc} (ref Message m)
-\item 
+\begin{DoxyCompactList}\small\item\em Needed for enabling the use of the chromium dev tools \end{DoxyCompactList}\item 
 override void \hyperlink{class_web_analyzer_1_1_u_i_1_1_select_participant_form_ae4a0da7ef5d15438618315aaa48fc565}{Dispose} (bool disposing)
 \begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Events}
 \begin{DoxyCompactItemize}
 \item 
 Select\+Participant\+For\+Test\+Event\+Handler \hyperlink{class_web_analyzer_1_1_u_i_1_1_select_participant_form_af1734ad8760e4e4f42579efafcb7299d}{Select\+Participant}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Eventhandler for selecting the participant \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_select_participant_form_aefcdb86bf5200fb949cc002a8add0316}{Browser\+\_\+\+Load} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, Event\+Args \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Callback for when the form loads \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_select_participant_form_a39ad877dec5c62b26919b009b2d43d6d}{Browser\+\_\+\+Closing} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, Form\+Closing\+Event\+Args \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Callback called when the form is closing. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_select_participant_form_aa267fe6901f149b1fabdbf066f39c0dc}{Form\+\_\+\+Key\+Down} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, Key\+Event\+Args \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\item 
+\begin{DoxyCompactList}\small\item\em Should enable the opening of the chromium dev tools on pressing the F12 key. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_u_i_1_1_select_participant_form_a2b1279836194db1d202398585f7a7712}{Initialize\+Component} ()
 \begin{DoxyCompactList}\small\item\em Required method for Designer support -\/ do not modify the contents of this method with the code editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Chromium\+Web\+Browser \hyperlink{class_web_analyzer_1_1_u_i_1_1_select_participant_form_af929c5af133ce3c9fd5b3f4a35ca5d4d}{my\+Browser} = null
-\item 
+\begin{DoxyCompactList}\small\item\em Reference to the chromium browser \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_model}{Experiment\+Model} \hyperlink{class_web_analyzer_1_1_u_i_1_1_select_participant_form_a4ed056aa554cc9190767e0498d94670e}{\+\_\+experiment}
-\item 
+\begin{DoxyCompactList}\small\item\em Reference to the current experiment \end{DoxyCompactList}\item 
 System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1_1_select_participant_form_ab40ec19ffcba7ebc9d14e90f8a14708e}{components} = null
 \begin{DoxyCompactList}\small\item\em Required designer variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Window for selecting an participant. 
+
+
+\begin{DoxyEnumerate}
+\item Used when selecting an participant for a testrun
+\item Used when selecting an participant for exporting or analysing 
+\end{DoxyEnumerate}
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_select_participant_form_a82850c88bc4d315c7fedd26333c844bd}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}!Select\+Participant\+Form@{Select\+Participant\+Form}}
@@ -57,6 +71,15 @@ System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1
 )}\label{class_web_analyzer_1_1_u_i_1_1_select_participant_form_a82850c88bc4d315c7fedd26333c844bd}
 
 
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em experiment} & Reference to the currently loaded experiment\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_select_participant_form_a39ad877dec5c62b26919b009b2d43d6d}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}!Browser\+\_\+\+Closing@{Browser\+\_\+\+Closing}}
 \index{Browser\+\_\+\+Closing@{Browser\+\_\+\+Closing}!Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}}
@@ -66,6 +89,17 @@ System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1
 \item[{Form\+Closing\+Event\+Args}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_select_participant_form_a39ad877dec5c62b26919b009b2d43d6d}
+
+
+Callback called when the form is closing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Sender\\
+\hline
+{\em e} & event data\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_select_participant_form_aefcdb86bf5200fb949cc002a8add0316}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}!Browser\+\_\+\+Load@{Browser\+\_\+\+Load}}
 \index{Browser\+\_\+\+Load@{Browser\+\_\+\+Load}!Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}}
 \subsubsection[{Browser\+\_\+\+Load(object sender, Event\+Args e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Select\+Participant\+Form.\+Browser\+\_\+\+Load (
@@ -74,6 +108,17 @@ System.\+Component\+Model.\+I\+Container \hyperlink{class_web_analyzer_1_1_u_i_1
 \item[{Event\+Args}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_select_participant_form_aefcdb86bf5200fb949cc002a8add0316}
+
+
+Callback for when the form loads 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_select_participant_form_ae4a0da7ef5d15438618315aaa48fc565}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}!Dispose@{Dispose}}
 \index{Dispose@{Dispose}!Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}}
 \subsubsection[{Dispose(bool disposing)}]{\setlength{\rightskip}{0pt plus 5cm}override void Web\+Analyzer.\+U\+I.\+Select\+Participant\+Form.\+Dispose (
@@ -98,7 +143,20 @@ Clean up any resources being used.
 \item[{Key\+Event\+Args}]{e}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_select_participant_form_aa267fe6901f149b1fabdbf066f39c0dc}
-\hypertarget{class_web_analyzer_1_1_u_i_1_1_select_participant_form_a2b1279836194db1d202398585f7a7712}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}!Initialize\+Component@{Initialize\+Component}}
+
+
+Should enable the opening of the chromium dev tools on pressing the F12 key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & \\
+\hline
+{\em e} & \\
+\hline
+\end{DoxyParams}
+
+
+Currently doesn\textquotesingle{}t work as intended \+:( \hypertarget{class_web_analyzer_1_1_u_i_1_1_select_participant_form_a2b1279836194db1d202398585f7a7712}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}!Initialize\+Component@{Initialize\+Component}}
 \index{Initialize\+Component@{Initialize\+Component}!Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}}
 \subsubsection[{Initialize\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+U\+I.\+Select\+Participant\+Form.\+Initialize\+Component (
 \begin{DoxyParamCaption}
@@ -116,6 +174,10 @@ Required method for Designer support -\/ do not modify the contents of this meth
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_u_i_1_1_select_participant_form_a57b7487ec9db48f92f0d741566c68a24}
+
+
+Reloads the page in the browser 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_select_participant_form_a384ab9932611a45d7ad7e938104474c7}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}!Wnd\+Proc@{Wnd\+Proc}}
 \index{Wnd\+Proc@{Wnd\+Proc}!Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}}
 \subsubsection[{Wnd\+Proc(ref Message m)}]{\setlength{\rightskip}{0pt plus 5cm}override void Web\+Analyzer.\+U\+I.\+Select\+Participant\+Form.\+Wnd\+Proc (
@@ -125,10 +187,23 @@ Required method for Designer support -\/ do not modify the contents of this meth
 )\hspace{0.3cm}{\ttfamily [protected]}}\label{class_web_analyzer_1_1_u_i_1_1_select_participant_form_a384ab9932611a45d7ad7e938104474c7}
 
 
+Needed for enabling the use of the chromium dev tools 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & \\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_select_participant_form_a4ed056aa554cc9190767e0498d94670e}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}!\+\_\+experiment@{\+\_\+experiment}}
 \index{\+\_\+experiment@{\+\_\+experiment}!Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}}
 \subsubsection[{\+\_\+experiment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+Model} Web\+Analyzer.\+U\+I.\+Select\+Participant\+Form.\+\_\+experiment\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_select_participant_form_a4ed056aa554cc9190767e0498d94670e}
+
+
+Reference to the current experiment 
+
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_select_participant_form_ab40ec19ffcba7ebc9d14e90f8a14708e}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}!components@{components}}
 \index{components@{components}!Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}}
 \subsubsection[{components}]{\setlength{\rightskip}{0pt plus 5cm}System.\+Component\+Model.\+I\+Container Web\+Analyzer.\+U\+I.\+Select\+Participant\+Form.\+components = null\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_select_participant_form_ab40ec19ffcba7ebc9d14e90f8a14708e}
@@ -141,10 +216,18 @@ Required designer variable.
 \subsubsection[{my\+Browser}]{\setlength{\rightskip}{0pt plus 5cm}Chromium\+Web\+Browser Web\+Analyzer.\+U\+I.\+Select\+Participant\+Form.\+my\+Browser = null\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_u_i_1_1_select_participant_form_af929c5af133ce3c9fd5b3f4a35ca5d4d}
 
 
+Reference to the chromium browser 
+
+
+
 \subsection{Event Documentation}
 \hypertarget{class_web_analyzer_1_1_u_i_1_1_select_participant_form_af1734ad8760e4e4f42579efafcb7299d}{}\index{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}!Select\+Participant@{Select\+Participant}}
 \index{Select\+Participant@{Select\+Participant}!Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form@{Web\+Analyzer\+::\+U\+I\+::\+Select\+Participant\+Form}}
 \subsubsection[{Select\+Participant}]{\setlength{\rightskip}{0pt plus 5cm}Select\+Participant\+For\+Test\+Event\+Handler Web\+Analyzer.\+U\+I.\+Select\+Participant\+Form.\+Select\+Participant}\label{class_web_analyzer_1_1_u_i_1_1_select_participant_form_af1734ad8760e4e4f42579efafcb7299d}
+
+
+Eventhandler for selecting the participant 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

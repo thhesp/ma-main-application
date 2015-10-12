@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_and_node}{}\section{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+And\+Node Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_and_node}\index{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+And\+Node@{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+And\+Node}}
+
+
+Represents an and condition in the tree  
+
+
 Inheritance diagram for Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+And\+Node\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,14 +15,19 @@ Inheritance diagram for Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+T
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_and_node_a615d3ee51170839291bd40488a3c98f6}{And\+Node} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Empty constructor for loading from xml \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_and_node_a377d2c58472a37379647d57188b566d8}{And\+Node} (List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node}{Node} $>$ children)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
 override bool \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_and_node_aaa094a884ae4408ec6d6379d3619e7b1}{Evaluate} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{D\+O\+M\+Element\+Model} el)
-\item 
+\begin{DoxyCompactList}\small\item\em Method for evaluating if the element fits the node rule \end{DoxyCompactList}\item 
 override bool \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_and_node_a03a2a4ac1c8f85f385682e3e5456fb05}{Evaluate\+Case\+Sensitive} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{D\+O\+M\+Element\+Model} el)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method for evaluating case sensitive if the element fits the node rule \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents an and condition in the tree 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -28,6 +38,10 @@ override bool \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_ex
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_and_node_a615d3ee51170839291bd40488a3c98f6}
+
+
+Empty constructor for loading from xml 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_and_node_a377d2c58472a37379647d57188b566d8}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+And\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+And\+Node}!And\+Node@{And\+Node}}
 \index{And\+Node@{And\+Node}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+And\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+And\+Node}}
 \subsubsection[{And\+Node(\+List$<$ Node $>$ children)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+And\+Node.\+And\+Node (
@@ -35,6 +49,15 @@ override bool \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_ex
 \item[{List$<$ {\bf Node} $>$}]{children}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_and_node_a377d2c58472a37379647d57188b566d8}
+
+
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em children} & Children of the node\\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
@@ -47,6 +70,18 @@ override bool \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_ex
 )\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_and_node_aaa094a884ae4408ec6d6379d3619e7b1}
 
 
+Method for evaluating if the element fits the node rule 
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & Element to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 Implements \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_aa07f08b4a2299c2b9752a1eba59e245d}{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node}.
 
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_and_node_a03a2a4ac1c8f85f385682e3e5456fb05}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+And\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+And\+Node}!Evaluate\+Case\+Sensitive@{Evaluate\+Case\+Sensitive}}
@@ -56,6 +91,18 @@ Implements \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expre
 \item[{{\bf D\+O\+M\+Element\+Model}}]{el}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_and_node_a03a2a4ac1c8f85f385682e3e5456fb05}
+
+
+Method for evaluating case sensitive if the element fits the node rule 
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & Element to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 Implements \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a5cf0b866812c017ef1d0feb5f594499e}{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node}.

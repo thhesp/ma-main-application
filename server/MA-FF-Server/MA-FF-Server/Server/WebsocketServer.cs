@@ -173,8 +173,8 @@ namespace WebAnalyzer.Server
         /// Used for requesting data
         /// </summary>
         /// <param name="uniqueId">UniqueID of the gaze</param>
-        /// <param name="leftX">X coordinate</param>
-        /// <param name="leftY">Y coordinate</param>
+        /// <param name="xPos">X coordinate</param>
+        /// <param name="yPos">Y coordinate</param>
         public void RequestData(String uniqueId, double xPos, double yPos)
         {
             _connManager.RequestData(uniqueId, xPos, yPos);

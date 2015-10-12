@@ -114,17 +114,25 @@ $(document).ready(function(){initNavTree('class_web_analyzer_1_1_models_1_1_anal
 <div class="title">WebAnalyzer.Models.AnalysisModel.StatisticsAnalyser Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Collection of methods used for calculating statistics  
+ <a href="class_web_analyzer_1_1_models_1_1_analysis_model_1_1_statistics_analyser.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a0a19416111599cf25b18e2cd862600a9"><td class="memItemLeft" align="right" valign="top">static long[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_analysis_model_1_1_statistics_analyser.html#a0a19416111599cf25b18e2cd862600a9">ArrayOfDurationFromRequestTillSent</a> (List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a> &gt; positions)</td></tr>
+<tr class="memdesc:a0a19416111599cf25b18e2cd862600a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the durations between request and sent values from the given list of positions  <a href="#a0a19416111599cf25b18e2cd862600a9">More...</a><br /></td></tr>
 <tr class="separator:a0a19416111599cf25b18e2cd862600a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae555b28e5931d366687c66153cb9cb11"><td class="memItemLeft" align="right" valign="top">static long[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_analysis_model_1_1_statistics_analyser.html#ae555b28e5931d366687c66153cb9cb11">ArrayOfDurationFromServerSentToReceived</a> (List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a> &gt; positions)</td></tr>
+<tr class="memdesc:ae555b28e5931d366687c66153cb9cb11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the durations between server sent and received values from the given list of positions  <a href="#ae555b28e5931d366687c66153cb9cb11">More...</a><br /></td></tr>
 <tr class="separator:ae555b28e5931d366687c66153cb9cb11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa360f68023a2d70d0efb9de8e0c9f749"><td class="memItemLeft" align="right" valign="top">static long[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_web_analyzer_1_1_models_1_1_analysis_model_1_1_statistics_analyser.html#aa360f68023a2d70d0efb9de8e0c9f749">ArrayOfDurationFromClientReceivedToClientSent</a> (List&lt; <a class="el" href="class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model.html">GazeModel</a> &gt; positions)</td></tr>
+<tr class="memdesc:aa360f68023a2d70d0efb9de8e0c9f749"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the durations between client received and client sent values from the given list of positions  <a href="#aa360f68023a2d70d0efb9de8e0c9f749">More...</a><br /></td></tr>
 <tr class="separator:aa360f68023a2d70d0efb9de8e0c9f749"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Collection of methods used for calculating statistics </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aa360f68023a2d70d0efb9de8e0c9f749"></a>
 <div class="memitem">
 <div class="memproto">
@@ -146,6 +154,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Calculates the durations between client received and client sent values from the given list of positions </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">positions</td><td>List of gazes</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>array of durations</dd></dl>
 
 </div>
 </div>
@@ -171,6 +188,15 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Calculates the durations between request and sent values from the given list of positions </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">positions</td><td>List of gazes</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>array of durations</dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="ae555b28e5931d366687c66153cb9cb11"></a>
@@ -194,6 +220,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Calculates the durations between server sent and received values from the given list of positions </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">positions</td><td>List of gazes</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>array of durations</dd></dl>
 
 </div>
 </div>

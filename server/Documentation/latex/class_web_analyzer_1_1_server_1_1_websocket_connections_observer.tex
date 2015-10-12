@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connections_observer}{}\section{Web\+Analyzer.\+Server.\+Websocket\+Connections\+Observer Class Reference}
 \label{class_web_analyzer_1_1_server_1_1_websocket_connections_observer}\index{Web\+Analyzer.\+Server.\+Websocket\+Connections\+Observer@{Web\+Analyzer.\+Server.\+Websocket\+Connections\+Observer}}
+
+
+Class which is processes all messages on all connections  
+
+
 Inheritance diagram for Web\+Analyzer.\+Server.\+Websocket\+Connections\+Observer\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,20 +15,25 @@ Inheritance diagram for Web\+Analyzer.\+Server.\+Websocket\+Connections\+Observe
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connections_observer_ab58aac7b482c3830fe3b6011f5817252}{Websocket\+Connections\+Observer} (\hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller}{Test\+Controller} controller, \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager}{Connection\+Manager} connection\+Manager)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor with reference to the testcontroller and the connection manager \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connections_observer_ab390b748581070364777bb40976fd5f5}{On\+Completed} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Method which gets called once the processing of the message is completed. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connections_observer_a5db5060833e71e8f9e33beedcf3ed353}{On\+Error} (Exception error)
-\item 
+\begin{DoxyCompactList}\small\item\em Method which gets called if an error occurs while processing the message. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connections_observer_a029ee7e7c62cb440b9a3fce8a0d041ba}{On\+Next} (\hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connection}{Websocket\+Connection} connection)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method used for processing all messages on the connections \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_server_1_1_connection_manager}{Connection\+Manager} \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connections_observer_a12deecceed19d790d4f3a07bb121f519}{\+\_\+connection\+Manager}
-\item 
+\begin{DoxyCompactList}\small\item\em Reference to the connection manager \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller}{Test\+Controller} \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connections_observer_ac4ce45307e4d81fc6902369aacd6fb0f}{\+\_\+controller}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Reference to the testcontroller \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class which is processes all messages on all connections 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -37,6 +47,17 @@ void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connections_observer
 )}\label{class_web_analyzer_1_1_server_1_1_websocket_connections_observer_ab58aac7b482c3830fe3b6011f5817252}
 
 
+Constructor with reference to the testcontroller and the connection manager 
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller} & Reference to the testcontroller\\
+\hline
+{\em connection\+Manager} & Reference to the connection manager\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connections_observer_ab390b748581070364777bb40976fd5f5}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer}!On\+Completed@{On\+Completed}}
 \index{On\+Completed@{On\+Completed}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer}}
@@ -45,6 +66,10 @@ void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connections_observer
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_websocket_connections_observer_ab390b748581070364777bb40976fd5f5}
+
+
+Method which gets called once the processing of the message is completed. 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connections_observer_a5db5060833e71e8f9e33beedcf3ed353}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer}!On\+Error@{On\+Error}}
 \index{On\+Error@{On\+Error}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer}}
 \subsubsection[{On\+Error(\+Exception error)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Websocket\+Connections\+Observer.\+On\+Error (
@@ -52,6 +77,15 @@ void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connections_observer
 \item[{Exception}]{error}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_server_1_1_websocket_connections_observer_a5db5060833e71e8f9e33beedcf3ed353}
+
+
+Method which gets called if an error occurs while processing the message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & Errorexception which occured\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connections_observer_a029ee7e7c62cb440b9a3fce8a0d041ba}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer}!On\+Next@{On\+Next}}
 \index{On\+Next@{On\+Next}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer}}
 \subsubsection[{On\+Next(\+Websocket\+Connection connection)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Server.\+Websocket\+Connections\+Observer.\+On\+Next (
@@ -61,13 +95,30 @@ void \hyperlink{class_web_analyzer_1_1_server_1_1_websocket_connections_observer
 )}\label{class_web_analyzer_1_1_server_1_1_websocket_connections_observer_a029ee7e7c62cb440b9a3fce8a0d041ba}
 
 
+Method used for processing all messages on the connections 
+
+
+\begin{DoxyParams}{Parameters}
+{\em connection} & The connection which received the message\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connections_observer_a12deecceed19d790d4f3a07bb121f519}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer}!\+\_\+connection\+Manager@{\+\_\+connection\+Manager}}
 \index{\+\_\+connection\+Manager@{\+\_\+connection\+Manager}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer}}
 \subsubsection[{\+\_\+connection\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Connection\+Manager} Web\+Analyzer.\+Server.\+Websocket\+Connections\+Observer.\+\_\+connection\+Manager\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connections_observer_a12deecceed19d790d4f3a07bb121f519}
+
+
+Reference to the connection manager 
+
 \hypertarget{class_web_analyzer_1_1_server_1_1_websocket_connections_observer_ac4ce45307e4d81fc6902369aacd6fb0f}{}\index{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer}!\+\_\+controller@{\+\_\+controller}}
 \index{\+\_\+controller@{\+\_\+controller}!Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer@{Web\+Analyzer\+::\+Server\+::\+Websocket\+Connections\+Observer}}
 \subsubsection[{\+\_\+controller}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Test\+Controller} Web\+Analyzer.\+Server.\+Websocket\+Connections\+Observer.\+\_\+controller\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_server_1_1_websocket_connections_observer_ac4ce45307e4d81fc6902369aacd6fb0f}
+
+
+Reference to the testcontroller 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

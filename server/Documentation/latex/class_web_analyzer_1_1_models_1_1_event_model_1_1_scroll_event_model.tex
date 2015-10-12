@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model}{}\section{Web\+Analyzer.\+Models.\+Event\+Model.\+Scroll\+Event\+Model Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model}\index{Web\+Analyzer.\+Models.\+Event\+Model.\+Scroll\+Event\+Model@{Web\+Analyzer.\+Models.\+Event\+Model.\+Scroll\+Event\+Model}}
+
+
+Class for representing browser scroll events  
+
+
 Inheritance diagram for Web\+Analyzer.\+Models.\+Event\+Model.\+Scroll\+Event\+Model\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,31 +15,36 @@ Inheritance diagram for Web\+Analyzer.\+Models.\+Event\+Model.\+Scroll\+Event\+M
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a3838b54daf2a7553722fb03bca9b69dc}{Scroll\+Event\+Model} (int scroll\+X, int scroll\+Y, String server\+Received\+Timestamp)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_af4f8c38ef631eca3764a8c9a64d3ed0b}{Scroll\+Event\+Model} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Empty constructor for loading from the xml \end{DoxyCompactList}\item 
 override Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a31a31878863b84ba68338278f0624c9f}{To\+X\+M\+L} (Xml\+Document xml\+Doc)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an xml representation of the object \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model}{Scroll\+Event\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a1ab3066559cf15e8a145e3d38aecc4ab}{Load\+From\+X\+M\+L} (Xml\+Node event\+Node)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an object from X\+M\+L \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 int \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a76d4f01379c721923cb59d88e2c0fc4a}{Scroll\+X}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the X Value of the scroll event \end{DoxyCompactList}\item 
 int \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a3e94660e7ec7eb2af5fc06022fbddbcd}{Scroll\+Y}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the Y Value of the scroll event \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 int \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a1fa876768fe33fc66ba5cd358cd523e1}{\+\_\+scroll\+X}
-\item 
+\begin{DoxyCompactList}\small\item\em X value of the scroll event \end{DoxyCompactList}\item 
 int \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a72e1d630edcd50e5f179faae87220ed6}{\+\_\+scroll\+Y}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Y value of the scroll event \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Class for representing browser scroll events 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -47,6 +57,19 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_mo
 \item[{String}]{server\+Received\+Timestamp}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a3838b54daf2a7553722fb03bca9b69dc}
+
+
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scroll\+X} & X Value\\
+\hline
+{\em scroll\+Y} & Y Value\\
+\hline
+{\em server\+Received\+Timestamp} & Timestamp when the server received the data\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_af4f8c38ef631eca3764a8c9a64d3ed0b}{}\index{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model}!Scroll\+Event\+Model@{Scroll\+Event\+Model}}
 \index{Scroll\+Event\+Model@{Scroll\+Event\+Model}!Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model}}
 \subsubsection[{Scroll\+Event\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Event\+Model.\+Scroll\+Event\+Model.\+Scroll\+Event\+Model (
@@ -54,6 +77,10 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_mo
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_af4f8c38ef631eca3764a8c9a64d3ed0b}
+
+
+Empty constructor for loading from the xml 
+
 
 
 \subsection{Member Function Documentation}
@@ -64,6 +91,18 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_mo
 \item[{Xml\+Node}]{event\+Node}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a1ab3066559cf15e8a145e3d38aecc4ab}
+
+
+Creates an object from X\+M\+L 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Node} & The node which contains the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded object
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a31a31878863b84ba68338278f0624c9f}{}\index{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model}!To\+X\+M\+L@{To\+X\+M\+L}}
 \index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model}}
 \subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}override Xml\+Node Web\+Analyzer.\+Models.\+Event\+Model.\+Scroll\+Event\+Model.\+To\+X\+M\+L (
@@ -71,6 +110,18 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_mo
 \item[{Xml\+Document}]{xml\+Doc}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a31a31878863b84ba68338278f0624c9f}
+
+
+Creates an xml representation of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 Implements \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_base_event_model_a8e39cb407315d0f6eca3fb8e854e8dba}{Web\+Analyzer.\+Models.\+Event\+Model.\+Base\+Event\+Model}.
@@ -81,18 +132,34 @@ Implements \hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_base_eve
 \hypertarget{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a1fa876768fe33fc66ba5cd358cd523e1}{}\index{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model}!\+\_\+scroll\+X@{\+\_\+scroll\+X}}
 \index{\+\_\+scroll\+X@{\+\_\+scroll\+X}!Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model}}
 \subsubsection[{\+\_\+scroll\+X}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Event\+Model.\+Scroll\+Event\+Model.\+\_\+scroll\+X\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a1fa876768fe33fc66ba5cd358cd523e1}
+
+
+X value of the scroll event 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a72e1d630edcd50e5f179faae87220ed6}{}\index{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model}!\+\_\+scroll\+Y@{\+\_\+scroll\+Y}}
 \index{\+\_\+scroll\+Y@{\+\_\+scroll\+Y}!Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model}}
 \subsubsection[{\+\_\+scroll\+Y}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Event\+Model.\+Scroll\+Event\+Model.\+\_\+scroll\+Y\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a72e1d630edcd50e5f179faae87220ed6}
+
+
+Y value of the scroll event 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a76d4f01379c721923cb59d88e2c0fc4a}{}\index{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model}!Scroll\+X@{Scroll\+X}}
 \index{Scroll\+X@{Scroll\+X}!Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model}}
 \subsubsection[{Scroll\+X}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Event\+Model.\+Scroll\+Event\+Model.\+Scroll\+X\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a76d4f01379c721923cb59d88e2c0fc4a}
+
+
+Getter/ Setter for the X Value of the scroll event 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a3e94660e7ec7eb2af5fc06022fbddbcd}{}\index{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model}!Scroll\+Y@{Scroll\+Y}}
 \index{Scroll\+Y@{Scroll\+Y}!Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model@{Web\+Analyzer\+::\+Models\+::\+Event\+Model\+::\+Scroll\+Event\+Model}}
 \subsubsection[{Scroll\+Y}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Event\+Model.\+Scroll\+Event\+Model.\+Scroll\+Y\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_event_model_1_1_scroll_event_model_a3e94660e7ec7eb2af5fc06022fbddbcd}
+
+
+Getter/ Setter for the Y Value of the scroll event 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

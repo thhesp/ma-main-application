@@ -1,108 +1,118 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{}\section{Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}\index{Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model@{Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model}}
+
+
+Class which represents a testrun  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_af8e1e55844cdb5e707ed4a0942448867}{Exportable} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Method which checks if data was colleted and if its reasonable to export the data \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a0320168b69827719088d63216b7cd07c}{To\+X\+M\+L} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant, Xml\+Document xml\+Doc)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an xml representation of the object \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a81c7aa756c48c0a577b9877ebbbb07b8}{Generate\+Statistics\+X\+M\+L} (Xml\+Document xml\+Doc)
-\item 
+\begin{DoxyCompactList}\small\item\em Generates a statistics xml for the testrun \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a59a7a3398a51963ffde94badae9bcc38}{Generate\+Statistics\+X\+M\+L} (Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
-\item 
+\begin{DoxyCompactList}\small\item\em Generates a statistics xml for the testrun \end{DoxyCompactList}\item 
 long\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ad9e6b0da3998485b11af3f532c429136}{Array\+Of\+Duration\+From\+Request\+Till\+Sent} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Generates an array of all durations from request till sent for all gazes in all webpages \end{DoxyCompactList}\item 
 long\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a6e300cf8b7c50571b1f99230d322fb78}{Array\+Of\+Duration\+From\+Server\+Sent\+To\+Received} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Generates an array of all durations from server sent to received for all gazes in all webpages \end{DoxyCompactList}\item 
 long\mbox{[}$\,$\mbox{]} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a2f272e9970feb3a1fbca147b34b8b3f7}{Array\+Of\+Duration\+From\+Client\+Received\+To\+Client\+Sent} ()
-\item 
-Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_abc99e17d851571723952cf1717d0a711}{Generate\+Fixation\+X\+M\+L} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
-\item 
-Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a5fbd82aef3cf27ecf196f7daff4422da}{Generate\+A\+O\+I\+X\+M\+L} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings}{Experiment\+Settings} settings, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
-\item 
-Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a07fd0a4cf43fd9c9dfca89d0583e4609}{Generate\+Saccades\+X\+M\+L} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
-\item 
+\begin{DoxyCompactList}\small\item\em Generates an array of all durations from client received to sent for all gazes in all webpages \end{DoxyCompactList}\item 
+Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a0015bdafb49d512f7b9048d099f11010}{Generate\+Fixation\+X\+M\+L} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant, \hyperlink{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm}{Algorithm} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2analyse_8js_a1222cf9678e9ad6a699b071d3308f976}{algorithm}, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
+\begin{DoxyCompactList}\small\item\em Generates fixation xml \end{DoxyCompactList}\item 
+Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_addcd4b918203bc9cbe3cd40f2d3713c6}{Generate\+A\+O\+I\+X\+M\+L} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_experiment_settings}{Experiment\+Settings} settings, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant, \hyperlink{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm}{Algorithm} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2analyse_8js_a1222cf9678e9ad6a699b071d3308f976}{algorithm}, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
+\begin{DoxyCompactList}\small\item\em Generates aoi xml \end{DoxyCompactList}\item 
+Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ab0396a32b51bbf18ead2223eae6d729c}{Generate\+Saccades\+X\+M\+L} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_experiment_participant}{Experiment\+Participant} participant, \hyperlink{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm}{Algorithm} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2analyse_8js_a1222cf9678e9ad6a699b071d3308f976}{algorithm}, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)
+\begin{DoxyCompactList}\small\item\em Generates saccades xml \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_abc6d6772659bfd91a6d1fe6923ca7a2b}{Check\+For\+Save} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Checks if it is already possible to save. \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a276585c6c2bdca3cf99058e2287636dc}{Get\+Gaze\+Model} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af690ff5521d79c7128861033ae80ae17}{unique\+Id})
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the gaze model to the given uniqueid from the unassgined positions \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_acb4622f0eb7451a866e94a8b29f13510}{Assign\+Gaze\+To\+Webpage} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af690ff5521d79c7128861033ae80ae17}{unique\+Id}, String url, String connection\+U\+I\+D)
-\item 
+\begin{DoxyCompactList}\small\item\em Adds the gaze with the given uniqueid to the webpage with the given url \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_adc538734c53c98df870c6cfee0fa6fb3}{Assign\+Gaze\+To\+Webpage} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} gaze\+Model, String url, String connection\+U\+I\+D)
-\item 
+\begin{DoxyCompactList}\small\item\em Adds the gaze to the webpage with the given url \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ad533cefe778bc7d604862cf9efeb70b1}{Assign\+Event\+To\+Webpage} (\hyperlink{class_web_analyzer_1_1_models_1_1_event_model_1_1_base_event_model}{Base\+Event\+Model} event\+Model, String url, String connection\+U\+I\+D)
-\item 
+\begin{DoxyCompactList}\small\item\em Assigns the given event to a webpage \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a4e84c40eeb26adae1fcacc4ffc291d2f}{Dispose\+Of\+Gaze\+Data} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af690ff5521d79c7128861033ae80ae17}{unique\+Id})
-\item 
+\begin{DoxyCompactList}\small\item\em Removes the gaze with the given uniqueid from the unassigned positions \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a5f84a8ffb744cbe5dc345e1f34bff9a6}{Dispose\+Of\+Gaze\+Data} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} gaze\+Model)
-\item 
+\begin{DoxyCompactList}\small\item\em Removes the given gaze from the unassigned positions \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a3557a6cfa17577cb62c9e711cff1625e}{Prepare\+Gaze\+Data} (\hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} left\+Eye, \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_base_tracking_data}{Base\+Tracking\+Data} right\+Eye)
-\item 
+\begin{DoxyCompactList}\small\item\em Prepares gaze data before requesting the data over the websocket \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_af5443d18d5c7d80edaf417ee28bb296e}{Message\+Sent} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af690ff5521d79c7128861033ae80ae17}{unique\+Id}, String sent\+Timestamp)
-\item 
+\begin{DoxyCompactList}\small\item\em Event callback for the message sent event \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_aca2998a693a880f8c1fd1457615988ac}{Extract\+Fixations\+And\+Saccades} (\hyperlink{class_web_analyzer_1_1_models_1_1_algorithm_model_1_1_algorithm}{Algorithm} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2analyse_8js_a1222cf9678e9ad6a699b071d3308f976}{algorithm})
-\item 
+\begin{DoxyCompactList}\small\item\em Method for extracting fixations and saccades \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a1bcf5235fe6f1f1b24ff74325742021e}{Add\+Webpage} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model}{Webpage\+Model} page\+Model)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Adds the given webpage to the visited pages \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model}{Test\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a0bf31831033b33d1e50ddd856c6a61aa}{Load\+From\+X\+M\+L} (Xml\+Document doc)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an object from X\+M\+L \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a4353d075e751f00ca785cf5702f00910}{Filename}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter for the testrun filename \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a91b896389e06b664e992c719f4d73e9b}{Filename\+Without\+Extension}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter for the testrun filename without fileextension \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_acdb09845b9c3bc8582f78d2729524216}{Started}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the started timestamp \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a636a8cedde376c835de9d909e8ec2c2d}{Stopped}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the stopped timestamp \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a2ac39416a04e9771399c9003ca669848}{Label}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the label \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a4811dcec47a39aca2cdb24447e7b232a}{Protocol}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the protocol \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a8f50461cf57a8d7c48b795b28335fbd3}{Tracking\+Interval}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the tracking interval \end{DoxyCompactList}\item 
 int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_afe3c73f555081b0e3aceb662c361fcab}{Message\+Sent\+Interval}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the message interval \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_aeb5429731ec41e1460952faf568e10be}{Create\+Experiment\+Statistics} (Xml\+Document xml\+Doc)
-\item 
+\begin{DoxyCompactList}\small\item\em Generates the statistics on a testrun level \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a285dda9a94c63de7c47203f47e69e372}{Insert\+Array\+Statistics} (Xml\+Document xml\+Doc, Xml\+Node node, long\mbox{[}$\,$\mbox{]} array)
-\item 
+\begin{DoxyCompactList}\small\item\em Generates the statistics for the given array \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a2fd8bf35c47c7fe3aee6537a1514ce10}{Remove\+Empty\+Pages} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Removes all webpages which don\textquotesingle{}t contain data \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ad58dc0c0e38b5663113167469c248796}{Add\+Gaze\+Data} (String url, String connection\+U\+I\+D, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} gaze\+Model)
-\item 
+\begin{DoxyCompactList}\small\item\em Adds the gaze to the webpage with the given url \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model}{Webpage\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a25af5415274c9119748a92459dac10da}{Get\+Page\+Model} (String url, String connection\+U\+I\+D, String timestamp)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the pagemodel for the url \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a81e009853a2999fac79631cfcd0ed4db}{\+\_\+started}
-\item 
+\begin{DoxyCompactList}\small\item\em Timestamp when the testrun was started \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a6253cabd7bb33c13da5927853cc8d228}{\+\_\+stopped}
-\item 
+\begin{DoxyCompactList}\small\item\em Timestamp when the testrun was stopped \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a00ce1716b13b35172fb8ac3498d6f04b}{\+\_\+label}
-\item 
+\begin{DoxyCompactList}\small\item\em Label of the testrun \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ac85ac6bfbbd03a3e1860822a74ce8649}{\+\_\+protocol}
-\item 
+\begin{DoxyCompactList}\small\item\em Protocol of the testrun \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model}{Webpage\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a849d23a83d37ac0e965c3946d8085aa2}{\+\_\+visited\+Pages} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_webpage_model}{Webpage\+Model}$>$()
-\item 
+\begin{DoxyCompactList}\small\item\em List of visited Pages during the test \end{DoxyCompactList}\item 
 Dictionary$<$ String, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a1eaf774e73692913671ff3cb85f5772e}{\+\_\+unassigned\+Positions} = new Dictionary$<$String, \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_gaze_model}{Gaze\+Model}$>$()
-\item 
+\begin{DoxyCompactList}\small\item\em Unassigned gaze positions \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a9969004441000c661fe533b8d954ec54}{\+\_\+last\+Gaze\+Action\+Timestamp} = \char`\"{}\char`\"{}
-\item 
+\begin{DoxyCompactList}\small\item\em Timestamp of last action relating to a gaze \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7f6665a0e91e4a550aed5bf34765a990}{\+\_\+tracking\+Interval} = 0
-\item 
+\begin{DoxyCompactList}\small\item\em tracking interval of the tracking component \end{DoxyCompactList}\item 
 int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef435f4317bf383688e0d6c672581d4}{\+\_\+message\+Sent\+Interval} = 0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em interval in which messages are sent \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class which represents a testrun 
+
 
 
 \subsection{Member Function Documentation}
@@ -115,13 +125,40 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 \item[{{\bf Gaze\+Model}}]{gaze\+Model}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ad58dc0c0e38b5663113167469c248796}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a1bcf5235fe6f1f1b24ff74325742021e}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Add\+Webpage@{Add\+Webpage}}
+
+
+Adds the gaze to the webpage with the given url 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gaze\+Model} & Gaze to add\\
+\hline
+{\em url} & U\+R\+L of the webpage\\
+\hline
+{\em connection\+U\+I\+D} & Connection\+U\+I\+D of the websocket connection\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Removes the gaze from the unassigned positions \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a1bcf5235fe6f1f1b24ff74325742021e}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Add\+Webpage@{Add\+Webpage}}
 \index{Add\+Webpage@{Add\+Webpage}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Add\+Webpage(\+Webpage\+Model page\+Model)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Add\+Webpage (
 \begin{DoxyParamCaption}
 \item[{{\bf Webpage\+Model}}]{page\+Model}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a1bcf5235fe6f1f1b24ff74325742021e}
+
+
+Adds the given webpage to the visited pages 
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+Model} & Webpage to add\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a2f272e9970feb3a1fbca147b34b8b3f7}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Array\+Of\+Duration\+From\+Client\+Received\+To\+Client\+Sent@{Array\+Of\+Duration\+From\+Client\+Received\+To\+Client\+Sent}}
 \index{Array\+Of\+Duration\+From\+Client\+Received\+To\+Client\+Sent@{Array\+Of\+Duration\+From\+Client\+Received\+To\+Client\+Sent}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Array\+Of\+Duration\+From\+Client\+Received\+To\+Client\+Sent()}]{\setlength{\rightskip}{0pt plus 5cm}long \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Array\+Of\+Duration\+From\+Client\+Received\+To\+Client\+Sent (
@@ -129,6 +166,13 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a2f272e9970feb3a1fbca147b34b8b3f7}
+
+
+Generates an array of all durations from client received to sent for all gazes in all webpages 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ad9e6b0da3998485b11af3f532c429136}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Array\+Of\+Duration\+From\+Request\+Till\+Sent@{Array\+Of\+Duration\+From\+Request\+Till\+Sent}}
 \index{Array\+Of\+Duration\+From\+Request\+Till\+Sent@{Array\+Of\+Duration\+From\+Request\+Till\+Sent}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Array\+Of\+Duration\+From\+Request\+Till\+Sent()}]{\setlength{\rightskip}{0pt plus 5cm}long \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Array\+Of\+Duration\+From\+Request\+Till\+Sent (
@@ -136,6 +180,13 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ad9e6b0da3998485b11af3f532c429136}
+
+
+Generates an array of all durations from request till sent for all gazes in all webpages 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a6e300cf8b7c50571b1f99230d322fb78}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Array\+Of\+Duration\+From\+Server\+Sent\+To\+Received@{Array\+Of\+Duration\+From\+Server\+Sent\+To\+Received}}
 \index{Array\+Of\+Duration\+From\+Server\+Sent\+To\+Received@{Array\+Of\+Duration\+From\+Server\+Sent\+To\+Received}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Array\+Of\+Duration\+From\+Server\+Sent\+To\+Received()}]{\setlength{\rightskip}{0pt plus 5cm}long \mbox{[}$\,$\mbox{]} Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Array\+Of\+Duration\+From\+Server\+Sent\+To\+Received (
@@ -143,6 +194,13 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a6e300cf8b7c50571b1f99230d322fb78}
+
+
+Generates an array of all durations from server sent to received for all gazes in all webpages 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ad533cefe778bc7d604862cf9efeb70b1}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Assign\+Event\+To\+Webpage@{Assign\+Event\+To\+Webpage}}
 \index{Assign\+Event\+To\+Webpage@{Assign\+Event\+To\+Webpage}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Assign\+Event\+To\+Webpage(\+Base\+Event\+Model event\+Model, String url, String connection\+U\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Assign\+Event\+To\+Webpage (
@@ -152,6 +210,19 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 \item[{String}]{connection\+U\+I\+D}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ad533cefe778bc7d604862cf9efeb70b1}
+
+
+Assigns the given event to a webpage 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+Model} & Event to add\\
+\hline
+{\em url} & U\+R\+L of the webpage\\
+\hline
+{\em connection\+U\+I\+D} & Connection\+U\+I\+D of the websocket connection\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_acb4622f0eb7451a866e94a8b29f13510}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Assign\+Gaze\+To\+Webpage@{Assign\+Gaze\+To\+Webpage}}
 \index{Assign\+Gaze\+To\+Webpage@{Assign\+Gaze\+To\+Webpage}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Assign\+Gaze\+To\+Webpage(\+String unique\+Id, String url, String connection\+U\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Assign\+Gaze\+To\+Webpage (
@@ -161,7 +232,25 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 \item[{String}]{connection\+U\+I\+D}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_acb4622f0eb7451a866e94a8b29f13510}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_adc538734c53c98df870c6cfee0fa6fb3}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Assign\+Gaze\+To\+Webpage@{Assign\+Gaze\+To\+Webpage}}
+
+
+Adds the gaze with the given uniqueid to the webpage with the given url 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unique\+Id} & Unique\+I\+D of the gaze\\
+\hline
+{\em url} & U\+R\+L of the webpage\\
+\hline
+{\em connection\+U\+I\+D} & Connection\+U\+I\+D of the websocket connection\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Removes the gaze from the unassigned positions \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_adc538734c53c98df870c6cfee0fa6fb3}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Assign\+Gaze\+To\+Webpage@{Assign\+Gaze\+To\+Webpage}}
 \index{Assign\+Gaze\+To\+Webpage@{Assign\+Gaze\+To\+Webpage}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Assign\+Gaze\+To\+Webpage(\+Gaze\+Model gaze\+Model, String url, String connection\+U\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Assign\+Gaze\+To\+Webpage (
 \begin{DoxyParamCaption}
@@ -170,20 +259,59 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 \item[{String}]{connection\+U\+I\+D}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_adc538734c53c98df870c6cfee0fa6fb3}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_abc6d6772659bfd91a6d1fe6923ca7a2b}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Check\+For\+Save@{Check\+For\+Save}}
+
+
+Adds the gaze to the webpage with the given url 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gaze\+Model} & The gaze to assign\\
+\hline
+{\em url} & U\+R\+L of the webpage\\
+\hline
+{\em connection\+U\+I\+D} & Connection\+U\+I\+D of the websocket connection\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Removes the gaze from the unassigned positions \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_abc6d6772659bfd91a6d1fe6923ca7a2b}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Check\+For\+Save@{Check\+For\+Save}}
 \index{Check\+For\+Save@{Check\+For\+Save}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Check\+For\+Save()}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Check\+For\+Save (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_abc6d6772659bfd91a6d1fe6923ca7a2b}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_aeb5429731ec41e1460952faf568e10be}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Create\+Experiment\+Statistics@{Create\+Experiment\+Statistics}}
+
+
+Checks if it is already possible to save. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Checks if the last gaze action is older than the wait timeout. \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_aeb5429731ec41e1460952faf568e10be}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Create\+Experiment\+Statistics@{Create\+Experiment\+Statistics}}
 \index{Create\+Experiment\+Statistics@{Create\+Experiment\+Statistics}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Create\+Experiment\+Statistics(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Create\+Experiment\+Statistics (
 \begin{DoxyParamCaption}
 \item[{Xml\+Document}]{xml\+Doc}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_aeb5429731ec41e1460952faf568e10be}
+
+
+Generates the statistics on a testrun level 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a4e84c40eeb26adae1fcacc4ffc291d2f}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Dispose\+Of\+Gaze\+Data@{Dispose\+Of\+Gaze\+Data}}
 \index{Dispose\+Of\+Gaze\+Data@{Dispose\+Of\+Gaze\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Dispose\+Of\+Gaze\+Data(\+String unique\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Dispose\+Of\+Gaze\+Data (
@@ -191,6 +319,18 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 \item[{String}]{unique\+Id}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a4e84c40eeb26adae1fcacc4ffc291d2f}
+
+
+Removes the gaze with the given uniqueid from the unassigned positions 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unique\+Id} & Uniqueid of gaze to remove\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a5f84a8ffb744cbe5dc345e1f34bff9a6}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Dispose\+Of\+Gaze\+Data@{Dispose\+Of\+Gaze\+Data}}
 \index{Dispose\+Of\+Gaze\+Data@{Dispose\+Of\+Gaze\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Dispose\+Of\+Gaze\+Data(\+Gaze\+Model gaze\+Model)}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Dispose\+Of\+Gaze\+Data (
@@ -198,6 +338,18 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 \item[{{\bf Gaze\+Model}}]{gaze\+Model}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a5f84a8ffb744cbe5dc345e1f34bff9a6}
+
+
+Removes the given gaze from the unassigned positions 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gaze\+Model} & Gaze to remove\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_af8e1e55844cdb5e707ed4a0942448867}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Exportable@{Exportable}}
 \index{Exportable@{Exportable}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Exportable()}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Exportable (
@@ -205,6 +357,13 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_af8e1e55844cdb5e707ed4a0942448867}
+
+
+Method which checks if data was colleted and if its reasonable to export the data 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_aca2998a693a880f8c1fd1457615988ac}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Extract\+Fixations\+And\+Saccades@{Extract\+Fixations\+And\+Saccades}}
 \index{Extract\+Fixations\+And\+Saccades@{Extract\+Fixations\+And\+Saccades}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Extract\+Fixations\+And\+Saccades(\+Algorithm algorithm)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Extract\+Fixations\+And\+Saccades (
@@ -212,34 +371,102 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 \item[{{\bf Algorithm}}]{algorithm}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_aca2998a693a880f8c1fd1457615988ac}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a5fbd82aef3cf27ecf196f7daff4422da}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Generate\+A\+O\+I\+X\+M\+L@{Generate\+A\+O\+I\+X\+M\+L}}
+
+
+Method for extracting fixations and saccades 
+
+
+\begin{DoxyParams}{Parameters}
+{\em algorithm} & Algorithm to use for the extraction\\
+\hline
+\end{DoxyParams}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_addcd4b918203bc9cbe3cd40f2d3713c6}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Generate\+A\+O\+I\+X\+M\+L@{Generate\+A\+O\+I\+X\+M\+L}}
 \index{Generate\+A\+O\+I\+X\+M\+L@{Generate\+A\+O\+I\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
-\subsubsection[{Generate\+A\+O\+I\+X\+M\+L(\+Experiment\+Settings settings, Experiment\+Participant participant, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Generate\+A\+O\+I\+X\+M\+L (
+\subsubsection[{Generate\+A\+O\+I\+X\+M\+L(\+Experiment\+Settings settings, Experiment\+Participant participant, Algorithm algorithm, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Generate\+A\+O\+I\+X\+M\+L (
 \begin{DoxyParamCaption}
 \item[{{\bf Experiment\+Settings}}]{settings, }
 \item[{{\bf Experiment\+Participant}}]{participant, }
+\item[{{\bf Algorithm}}]{algorithm, }
 \item[{Xml\+Document}]{xml\+Doc, }
 \item[{Boolean}]{include\+Single\+Gaze\+Data}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a5fbd82aef3cf27ecf196f7daff4422da}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_abc99e17d851571723952cf1717d0a711}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Generate\+Fixation\+X\+M\+L@{Generate\+Fixation\+X\+M\+L}}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_addcd4b918203bc9cbe3cd40f2d3713c6}
+
+
+Generates aoi xml 
+
+
+\begin{DoxyParams}{Parameters}
+{\em settings} & Settings to be used for the generation\\
+\hline
+{\em participant} & Participant to which the data belongs\\
+\hline
+{\em algorithm} & Algorithm which was used for the fixation extraction\\
+\hline
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+{\em include\+Single\+Gaze\+Data} & Shall the xml contain data about each single gaze\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a0015bdafb49d512f7b9048d099f11010}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Generate\+Fixation\+X\+M\+L@{Generate\+Fixation\+X\+M\+L}}
 \index{Generate\+Fixation\+X\+M\+L@{Generate\+Fixation\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
-\subsubsection[{Generate\+Fixation\+X\+M\+L(\+Experiment\+Participant participant, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Generate\+Fixation\+X\+M\+L (
+\subsubsection[{Generate\+Fixation\+X\+M\+L(\+Experiment\+Participant participant, Algorithm algorithm, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Generate\+Fixation\+X\+M\+L (
 \begin{DoxyParamCaption}
 \item[{{\bf Experiment\+Participant}}]{participant, }
+\item[{{\bf Algorithm}}]{algorithm, }
 \item[{Xml\+Document}]{xml\+Doc, }
 \item[{Boolean}]{include\+Single\+Gaze\+Data}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_abc99e17d851571723952cf1717d0a711}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a07fd0a4cf43fd9c9dfca89d0583e4609}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Generate\+Saccades\+X\+M\+L@{Generate\+Saccades\+X\+M\+L}}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a0015bdafb49d512f7b9048d099f11010}
+
+
+Generates fixation xml 
+
+
+\begin{DoxyParams}{Parameters}
+{\em participant} & Participant to which the data belongs\\
+\hline
+{\em algorithm} & Algorithm which was used for the fixation extraction\\
+\hline
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+{\em include\+Single\+Gaze\+Data} & Shall the xml contain data about each single gaze\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ab0396a32b51bbf18ead2223eae6d729c}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Generate\+Saccades\+X\+M\+L@{Generate\+Saccades\+X\+M\+L}}
 \index{Generate\+Saccades\+X\+M\+L@{Generate\+Saccades\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
-\subsubsection[{Generate\+Saccades\+X\+M\+L(\+Experiment\+Participant participant, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Generate\+Saccades\+X\+M\+L (
+\subsubsection[{Generate\+Saccades\+X\+M\+L(\+Experiment\+Participant participant, Algorithm algorithm, Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Generate\+Saccades\+X\+M\+L (
 \begin{DoxyParamCaption}
 \item[{{\bf Experiment\+Participant}}]{participant, }
+\item[{{\bf Algorithm}}]{algorithm, }
 \item[{Xml\+Document}]{xml\+Doc, }
 \item[{Boolean}]{include\+Single\+Gaze\+Data}
 \end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a07fd0a4cf43fd9c9dfca89d0583e4609}
+)}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ab0396a32b51bbf18ead2223eae6d729c}
+
+
+Generates saccades xml 
+
+
+\begin{DoxyParams}{Parameters}
+{\em participant} & Participant to which the data belongs\\
+\hline
+{\em algorithm} & Algorithm which was used for the fixation extraction\\
+\hline
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+{\em include\+Single\+Gaze\+Data} & Shall the xml contain data about each single gaze\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a81c7aa756c48c0a577b9877ebbbb07b8}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Generate\+Statistics\+X\+M\+L@{Generate\+Statistics\+X\+M\+L}}
 \index{Generate\+Statistics\+X\+M\+L@{Generate\+Statistics\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Generate\+Statistics\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Generate\+Statistics\+X\+M\+L (
@@ -247,6 +474,18 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 \item[{Xml\+Document}]{xml\+Doc}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a81c7aa756c48c0a577b9877ebbbb07b8}
+
+
+Generates a statistics xml for the testrun 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a59a7a3398a51963ffde94badae9bcc38}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Generate\+Statistics\+X\+M\+L@{Generate\+Statistics\+X\+M\+L}}
 \index{Generate\+Statistics\+X\+M\+L@{Generate\+Statistics\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Generate\+Statistics\+X\+M\+L(\+Xml\+Document xml\+Doc, Boolean include\+Single\+Gaze\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Generate\+Statistics\+X\+M\+L (
@@ -255,6 +494,20 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 \item[{Boolean}]{include\+Single\+Gaze\+Data}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a59a7a3398a51963ffde94badae9bcc38}
+
+
+Generates a statistics xml for the testrun 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+{\em include\+Single\+Gaze\+Data} & Should the xml contain data about each gaze\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a276585c6c2bdca3cf99058e2287636dc}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Get\+Gaze\+Model@{Get\+Gaze\+Model}}
 \index{Get\+Gaze\+Model@{Get\+Gaze\+Model}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Get\+Gaze\+Model(\+String unique\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gaze\+Model} Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Get\+Gaze\+Model (
@@ -262,7 +515,21 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 \item[{String}]{unique\+Id}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a276585c6c2bdca3cf99058e2287636dc}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a25af5415274c9119748a92459dac10da}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Get\+Page\+Model@{Get\+Page\+Model}}
+
+
+Returns the gaze model to the given uniqueid from the unassgined positions 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unique\+Id} & Uniqueid from the gaze model\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Used to assign messages to gazes in the Data\+Message\+Handler \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a25af5415274c9119748a92459dac10da}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Get\+Page\+Model@{Get\+Page\+Model}}
 \index{Get\+Page\+Model@{Get\+Page\+Model}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Get\+Page\+Model(\+String url, String connection\+U\+I\+D, String timestamp)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Webpage\+Model} Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Get\+Page\+Model (
 \begin{DoxyParamCaption}
@@ -271,6 +538,22 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 \item[{String}]{timestamp}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a25af5415274c9119748a92459dac10da}
+
+
+Returns the pagemodel for the url 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & U\+R\+L of the webpage\\
+\hline
+{\em connection\+U\+I\+D} & Connection U\+I\+D of the websocket connection which received the data\\
+\hline
+{\em timestamp} & Timestamp on which the data was requested\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a285dda9a94c63de7c47203f47e69e372}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Insert\+Array\+Statistics@{Insert\+Array\+Statistics}}
 \index{Insert\+Array\+Statistics@{Insert\+Array\+Statistics}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Insert\+Array\+Statistics(\+Xml\+Document xml\+Doc, Xml\+Node node, long[] array)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Insert\+Array\+Statistics (
@@ -280,6 +563,19 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 \item[{long\mbox{[}$\,$\mbox{]}}]{array}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a285dda9a94c63de7c47203f47e69e372}
+
+
+Generates the statistics for the given array 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+{\em node} & Node in which data shall be inserted\\
+\hline
+{\em array} & Array with data which shall be analysed\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a0bf31831033b33d1e50ddd856c6a61aa}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}}
 \index{Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Load\+From\+X\+M\+L(\+Xml\+Document doc)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Test\+Model} Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Load\+From\+X\+M\+L (
@@ -287,6 +583,18 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 \item[{Xml\+Document}]{doc}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a0bf31831033b33d1e50ddd856c6a61aa}
+
+
+Creates an object from X\+M\+L 
+
+
+\begin{DoxyParams}{Parameters}
+{\em doc} & Document which contains the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded object
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_af5443d18d5c7d80edaf417ee28bb296e}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Message\+Sent@{Message\+Sent}}
 \index{Message\+Sent@{Message\+Sent}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Message\+Sent(\+String unique\+Id, String sent\+Timestamp)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Message\+Sent (
@@ -295,7 +603,20 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 \item[{String}]{sent\+Timestamp}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_af5443d18d5c7d80edaf417ee28bb296e}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a3557a6cfa17577cb62c9e711cff1625e}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Prepare\+Gaze\+Data@{Prepare\+Gaze\+Data}}
+
+
+Event callback for the message sent event 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unique\+Id} & Uniqueid of the gaze\\
+\hline
+{\em sent\+Timestamp} & Messagesent timestamp\\
+\hline
+\end{DoxyParams}
+
+
+Adds the message sent timestamp to the gaze \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a3557a6cfa17577cb62c9e711cff1625e}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Prepare\+Gaze\+Data@{Prepare\+Gaze\+Data}}
 \index{Prepare\+Gaze\+Data@{Prepare\+Gaze\+Data}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Prepare\+Gaze\+Data(\+Base\+Tracking\+Data left\+Eye, Base\+Tracking\+Data right\+Eye)}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Prepare\+Gaze\+Data (
 \begin{DoxyParamCaption}
@@ -303,6 +624,20 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 \item[{{\bf Base\+Tracking\+Data}}]{right\+Eye}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a3557a6cfa17577cb62c9e711cff1625e}
+
+
+Prepares gaze data before requesting the data over the websocket 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left\+Eye} & Data of the left eye\\
+\hline
+{\em right\+Eye} & Data of the right eye\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a2fd8bf35c47c7fe3aee6537a1514ce10}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Remove\+Empty\+Pages@{Remove\+Empty\+Pages}}
 \index{Remove\+Empty\+Pages@{Remove\+Empty\+Pages}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Remove\+Empty\+Pages()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Remove\+Empty\+Pages (
@@ -310,6 +645,10 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a2fd8bf35c47c7fe3aee6537a1514ce10}
+
+
+Removes all webpages which don\textquotesingle{}t contain data 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a0320168b69827719088d63216b7cd07c}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!To\+X\+M\+L@{To\+X\+M\+L}}
 \index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{To\+X\+M\+L(\+Experiment\+Participant participant, Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+To\+X\+M\+L (
@@ -320,61 +659,143 @@ int \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef4
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a0320168b69827719088d63216b7cd07c}
 
 
+Creates an xml representation of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em participant} & Participant to which the testrun belongs\\
+\hline
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a00ce1716b13b35172fb8ac3498d6f04b}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+label@{\+\_\+label}}
 \index{\+\_\+label@{\+\_\+label}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{\+\_\+label}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+label\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a00ce1716b13b35172fb8ac3498d6f04b}
+
+
+Label of the testrun 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a9969004441000c661fe533b8d954ec54}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+last\+Gaze\+Action\+Timestamp@{\+\_\+last\+Gaze\+Action\+Timestamp}}
 \index{\+\_\+last\+Gaze\+Action\+Timestamp@{\+\_\+last\+Gaze\+Action\+Timestamp}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{\+\_\+last\+Gaze\+Action\+Timestamp}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+last\+Gaze\+Action\+Timestamp = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a9969004441000c661fe533b8d954ec54}
-\hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef435f4317bf383688e0d6c672581d4}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+message\+Sent\+Interval@{\+\_\+message\+Sent\+Interval}}
+
+
+Timestamp of last action relating to a gaze 
+
+Used for checking if saving is already possible or not \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef435f4317bf383688e0d6c672581d4}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+message\+Sent\+Interval@{\+\_\+message\+Sent\+Interval}}
 \index{\+\_\+message\+Sent\+Interval@{\+\_\+message\+Sent\+Interval}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{\+\_\+message\+Sent\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+message\+Sent\+Interval = 0\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7ef435f4317bf383688e0d6c672581d4}
+
+
+interval in which messages are sent 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ac85ac6bfbbd03a3e1860822a74ce8649}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+protocol@{\+\_\+protocol}}
 \index{\+\_\+protocol@{\+\_\+protocol}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{\+\_\+protocol}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+protocol\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_ac85ac6bfbbd03a3e1860822a74ce8649}
+
+
+Protocol of the testrun 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a81e009853a2999fac79631cfcd0ed4db}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+started@{\+\_\+started}}
 \index{\+\_\+started@{\+\_\+started}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{\+\_\+started}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+started\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a81e009853a2999fac79631cfcd0ed4db}
+
+
+Timestamp when the testrun was started 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a6253cabd7bb33c13da5927853cc8d228}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+stopped@{\+\_\+stopped}}
 \index{\+\_\+stopped@{\+\_\+stopped}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{\+\_\+stopped}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+stopped\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a6253cabd7bb33c13da5927853cc8d228}
+
+
+Timestamp when the testrun was stopped 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7f6665a0e91e4a550aed5bf34765a990}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+tracking\+Interval@{\+\_\+tracking\+Interval}}
 \index{\+\_\+tracking\+Interval@{\+\_\+tracking\+Interval}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{\+\_\+tracking\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+tracking\+Interval = 0\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a7f6665a0e91e4a550aed5bf34765a990}
+
+
+tracking interval of the tracking component 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a1eaf774e73692913671ff3cb85f5772e}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+unassigned\+Positions@{\+\_\+unassigned\+Positions}}
 \index{\+\_\+unassigned\+Positions@{\+\_\+unassigned\+Positions}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{\+\_\+unassigned\+Positions}]{\setlength{\rightskip}{0pt plus 5cm}Dictionary$<$String, {\bf Gaze\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+unassigned\+Positions = new Dictionary$<$String, {\bf Gaze\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a1eaf774e73692913671ff3cb85f5772e}
+
+
+Unassigned gaze positions 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a849d23a83d37ac0e965c3946d8085aa2}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!\+\_\+visited\+Pages@{\+\_\+visited\+Pages}}
 \index{\+\_\+visited\+Pages@{\+\_\+visited\+Pages}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{\+\_\+visited\+Pages}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Webpage\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+\_\+visited\+Pages = new List$<${\bf Webpage\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a849d23a83d37ac0e965c3946d8085aa2}
+
+
+List of visited Pages during the test 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a4353d075e751f00ca785cf5702f00910}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Filename@{Filename}}
 \index{Filename@{Filename}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Filename}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Filename\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a4353d075e751f00ca785cf5702f00910}
+
+
+Getter for the testrun filename 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a91b896389e06b664e992c719f4d73e9b}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Filename\+Without\+Extension@{Filename\+Without\+Extension}}
 \index{Filename\+Without\+Extension@{Filename\+Without\+Extension}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Filename\+Without\+Extension}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Filename\+Without\+Extension\hspace{0.3cm}{\ttfamily [get]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a91b896389e06b664e992c719f4d73e9b}
+
+
+Getter for the testrun filename without fileextension 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a2ac39416a04e9771399c9003ca669848}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Label@{Label}}
 \index{Label@{Label}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Label}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Label\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a2ac39416a04e9771399c9003ca669848}
+
+
+Getter/ Setter for the label 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_afe3c73f555081b0e3aceb662c361fcab}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Message\+Sent\+Interval@{Message\+Sent\+Interval}}
 \index{Message\+Sent\+Interval@{Message\+Sent\+Interval}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Message\+Sent\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}int Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Message\+Sent\+Interval\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_afe3c73f555081b0e3aceb662c361fcab}
+
+
+Getter/ Setter for the message interval 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a4811dcec47a39aca2cdb24447e7b232a}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Protocol@{Protocol}}
 \index{Protocol@{Protocol}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Protocol}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Protocol\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a4811dcec47a39aca2cdb24447e7b232a}
+
+
+Getter/ Setter for the protocol 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_acdb09845b9c3bc8582f78d2729524216}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Started@{Started}}
 \index{Started@{Started}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Started}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Started\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_acdb09845b9c3bc8582f78d2729524216}
+
+
+Getter/ Setter for the started timestamp 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a636a8cedde376c835de9d909e8ec2c2d}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Stopped@{Stopped}}
 \index{Stopped@{Stopped}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Stopped}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Stopped\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a636a8cedde376c835de9d909e8ec2c2d}
+
+
+Getter/ Setter for the stopped timestamp 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a8f50461cf57a8d7c48b795b28335fbd3}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}!Tracking\+Interval@{Tracking\+Interval}}
 \index{Tracking\+Interval@{Tracking\+Interval}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+Test\+Model}}
 \subsubsection[{Tracking\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Data\+Model.\+Test\+Model.\+Tracking\+Interval\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_test_model_a8f50461cf57a8d7c48b795b28335fbd3}
+
+
+Getter/ Setter for the tracking interval 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

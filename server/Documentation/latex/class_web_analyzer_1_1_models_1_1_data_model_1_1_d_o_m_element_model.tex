@@ -1,89 +1,99 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{}\section{Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}\index{Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model@{Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model}}
+
+
+Representation of the html element  
+
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_ab48617b264142c24cea4d7bb461961e6}{D\+O\+M\+Element\+Model} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor for loading from the xml \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_ae0a8230577329fb64c25b3a9b22a0967}{Add\+Class} (String class\+Name)
-\item 
+\begin{DoxyCompactList}\small\item\em Method for adding a class \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_aad9bb498768e58e7baf0d38d8f9fddf8}{Add\+Classes} (String classes)
-\item 
+\begin{DoxyCompactList}\small\item\em Adds classes \end{DoxyCompactList}\item 
 List$<$ String $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a21691fa37ebac85603f666e75b179c13}{Get\+Classes} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the List of classes \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a23a4fd979c26240cdc178518b372bbf9}{Add\+Attribute} (String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2create__experiment_8js_adac2bcb4f01b574cbc63fe8ee2c56bf0}{name}, String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af7e1471ab89699458c4df8bb657298f6}{value})
-\item 
+\begin{DoxyCompactList}\small\item\em adds an attribute \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model}{Attribute\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a26b205e403ba3838d31995d413424403}{Get\+Attributes} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the list of attributes \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a837f358bb57a34f2b0427b7b7adec954}{To\+X\+M\+L} (Xml\+Document xml\+Doc)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an xml representation of the object \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{D\+O\+M\+Element\+Model} \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a03824b9e7af2471a63594d4776d461ff}{Load\+From\+X\+M\+L} (Xml\+Node element\+Node)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an object from X\+M\+L \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 Double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a7aee1f5b1f3f0eafd2cd368a4c7165cf}{H\+T\+M\+L\+X}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the html x \end{DoxyCompactList}\item 
 Double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a179b7d7715dba28ac6c999208df994d8}{H\+T\+M\+L\+Y}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the html y \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_ace6ce5f6a7d2e39c59b256b2b2f5e6eb}{Tag}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the element tag \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a629f3bd5c81651e1ff284f526fabb069}{I\+D}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the element id \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a10a1c3ec9fceca5b4745cae7f9647c74}{Title}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the element title \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a51a4d9000890ebe19b35812780d3bf92}{Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the element path \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a0de31ca5aa5fef2bf8ddcacef47cb379}{Selector}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the element selector \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a8dffe5cd2a8e688eaf4f2f50a39dc07d}{Left}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the element left \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a1f17dcaf6e924292f3b6a8ade726941d}{Top}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the element top \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a34aa9812237c151017294753a8ee77a7}{Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the element width \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_aa5965b140e814fe18f8b9551f1a66b73}{Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the element height \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a3bf025c2cfc55086914d5f262b2f3e3e}{Outer\+Width}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the element outer width \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a9c280fbbc109f824b51ca934192da464}{Outer\+Height}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the element outer height \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a8c54222edebcf6248dc410d83bc2dccb}{\+\_\+html\+X}
-\item 
+\begin{DoxyCompactList}\small\item\em X coordinate which were calculated for the html \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_ac6d9264bac06b6653533e492138e8160}{\+\_\+html\+Y}
-\item 
+\begin{DoxyCompactList}\small\item\em Y coordinate which were calculated for the html \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a189cb52ec2fbbc5d2fad73187ffa9404}{\+\_\+tag}
-\item 
+\begin{DoxyCompactList}\small\item\em Tag of the element \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_adcfc13a3bc75b3efb29b7328115d2996}{\+\_\+path}
-\item 
+\begin{DoxyCompactList}\small\item\em Path from \hyperlink{namespace_web_analyzer_1_1_models_1_1_base}{Base} H\+T\+M\+L to the element \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a1fba31f038cfcd20e7be095aa736695a}{\+\_\+selector}
-\item 
+\begin{DoxyCompactList}\small\item\em Unique selector of the element \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a4f824d5be5dd68766e0a50d5f27a8dfc}{\+\_\+id}
-\item 
+\begin{DoxyCompactList}\small\item\em I\+D of the element \end{DoxyCompactList}\item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a1f78ca7c25fcb00ee45f23482ae92c3a}{\+\_\+title}
-\item 
+\begin{DoxyCompactList}\small\item\em title of the element \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_aeb026965e7f90ea485c57b8b78d019b0}{\+\_\+left}
-\item 
+\begin{DoxyCompactList}\small\item\em left coordinate of the element \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a2375d70647ec50aa1a497e9e9ab6aade}{\+\_\+top}
-\item 
+\begin{DoxyCompactList}\small\item\em top coordinate of the element \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_ad89c6f97d80115d398e26e76eb2ab7b7}{\+\_\+width}
-\item 
+\begin{DoxyCompactList}\small\item\em width of the element \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a271887d24b632402d029618d0a208cfe}{\+\_\+height}
-\item 
+\begin{DoxyCompactList}\small\item\em height of the element \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a4812f06ca8225b4386f5e5ea45370550}{\+\_\+outer\+Width}
-\item 
+\begin{DoxyCompactList}\small\item\em outer width of the element \end{DoxyCompactList}\item 
 double \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a4d8c5283f4625e042bb2a98cdec323ce}{\+\_\+outer\+Height}
-\item 
+\begin{DoxyCompactList}\small\item\em outer height of the element \end{DoxyCompactList}\item 
 List$<$ String $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a6df986d1bb481e6aba1ab17c5f6c2fce}{\+\_\+classes} = new List$<$String$>$()
-\item 
+\begin{DoxyCompactList}\small\item\em Classes of the element \end{DoxyCompactList}\item 
 List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model}{Attribute\+Model} $>$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_ac907634afc4fec9be436d2ad08865246}{\+\_\+attributes} = new List$<$\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_model}{Attribute\+Model}$>$()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em All attributes of the element \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Representation of the html element 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -96,6 +106,10 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_mo
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_ab48617b264142c24cea4d7bb461961e6}
 
 
+Constructor for loading from the xml 
+
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a23a4fd979c26240cdc178518b372bbf9}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!Add\+Attribute@{Add\+Attribute}}
 \index{Add\+Attribute@{Add\+Attribute}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
@@ -105,6 +119,17 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_mo
 \item[{String}]{value}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a23a4fd979c26240cdc178518b372bbf9}
+
+
+adds an attribute 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & attribute name\\
+\hline
+{\em value} & attribute value\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_ae0a8230577329fb64c25b3a9b22a0967}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!Add\+Class@{Add\+Class}}
 \index{Add\+Class@{Add\+Class}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{Add\+Class(\+String class\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+Add\+Class (
@@ -112,6 +137,15 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_mo
 \item[{String}]{class\+Name}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_ae0a8230577329fb64c25b3a9b22a0967}
+
+
+Method for adding a class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em class\+Name} & class to add\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_aad9bb498768e58e7baf0d38d8f9fddf8}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!Add\+Classes@{Add\+Classes}}
 \index{Add\+Classes@{Add\+Classes}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{Add\+Classes(\+String classes)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+Add\+Classes (
@@ -119,6 +153,15 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_mo
 \item[{String}]{classes}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_aad9bb498768e58e7baf0d38d8f9fddf8}
+
+
+Adds classes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em classes} & String representation of classes to add\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a26b205e403ba3838d31995d413424403}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!Get\+Attributes@{Get\+Attributes}}
 \index{Get\+Attributes@{Get\+Attributes}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{Get\+Attributes()}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Attribute\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+Get\+Attributes (
@@ -126,6 +169,13 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_mo
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a26b205e403ba3838d31995d413424403}
+
+
+Returns the list of attributes 
+
+\begin{DoxyReturn}{Returns}
+List of attributes
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a21691fa37ebac85603f666e75b179c13}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!Get\+Classes@{Get\+Classes}}
 \index{Get\+Classes@{Get\+Classes}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{Get\+Classes()}]{\setlength{\rightskip}{0pt plus 5cm}List$<$String$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+Get\+Classes (
@@ -133,6 +183,13 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_mo
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a21691fa37ebac85603f666e75b179c13}
+
+
+Returns the List of classes 
+
+\begin{DoxyReturn}{Returns}
+List of classes
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a03824b9e7af2471a63594d4776d461ff}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}}
 \index{Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{Load\+From\+X\+M\+L(\+Xml\+Node element\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf D\+O\+M\+Element\+Model} Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+Load\+From\+X\+M\+L (
@@ -140,6 +197,18 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_mo
 \item[{Xml\+Node}]{element\+Node}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a03824b9e7af2471a63594d4776d461ff}
+
+
+Creates an object from X\+M\+L 
+
+
+\begin{DoxyParams}{Parameters}
+{\em element\+Node} & The node which contains the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded object
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a837f358bb57a34f2b0427b7b7adec954}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!To\+X\+M\+L@{To\+X\+M\+L}}
 \index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+To\+X\+M\+L (
@@ -149,94 +218,218 @@ List$<$ \hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_attribute_mo
 )}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a837f358bb57a34f2b0427b7b7adec954}
 
 
+Creates an xml representation of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_ac907634afc4fec9be436d2ad08865246}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!\+\_\+attributes@{\+\_\+attributes}}
 \index{\+\_\+attributes@{\+\_\+attributes}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{\+\_\+attributes}]{\setlength{\rightskip}{0pt plus 5cm}List$<${\bf Attribute\+Model}$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+\_\+attributes = new List$<${\bf Attribute\+Model}$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_ac907634afc4fec9be436d2ad08865246}
+
+
+All attributes of the element 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a6df986d1bb481e6aba1ab17c5f6c2fce}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!\+\_\+classes@{\+\_\+classes}}
 \index{\+\_\+classes@{\+\_\+classes}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{\+\_\+classes}]{\setlength{\rightskip}{0pt plus 5cm}List$<$String$>$ Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+\_\+classes = new List$<$String$>$()\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a6df986d1bb481e6aba1ab17c5f6c2fce}
+
+
+Classes of the element 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a271887d24b632402d029618d0a208cfe}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!\+\_\+height@{\+\_\+height}}
 \index{\+\_\+height@{\+\_\+height}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{\+\_\+height}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+\_\+height\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a271887d24b632402d029618d0a208cfe}
+
+
+height of the element 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a8c54222edebcf6248dc410d83bc2dccb}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!\+\_\+html\+X@{\+\_\+html\+X}}
 \index{\+\_\+html\+X@{\+\_\+html\+X}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{\+\_\+html\+X}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+\_\+html\+X\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a8c54222edebcf6248dc410d83bc2dccb}
+
+
+X coordinate which were calculated for the html 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_ac6d9264bac06b6653533e492138e8160}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!\+\_\+html\+Y@{\+\_\+html\+Y}}
 \index{\+\_\+html\+Y@{\+\_\+html\+Y}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{\+\_\+html\+Y}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+\_\+html\+Y\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_ac6d9264bac06b6653533e492138e8160}
+
+
+Y coordinate which were calculated for the html 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a4f824d5be5dd68766e0a50d5f27a8dfc}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!\+\_\+id@{\+\_\+id}}
 \index{\+\_\+id@{\+\_\+id}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a4f824d5be5dd68766e0a50d5f27a8dfc}
+
+
+I\+D of the element 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_aeb026965e7f90ea485c57b8b78d019b0}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!\+\_\+left@{\+\_\+left}}
 \index{\+\_\+left@{\+\_\+left}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{\+\_\+left}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+\_\+left\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_aeb026965e7f90ea485c57b8b78d019b0}
+
+
+left coordinate of the element 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a4d8c5283f4625e042bb2a98cdec323ce}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!\+\_\+outer\+Height@{\+\_\+outer\+Height}}
 \index{\+\_\+outer\+Height@{\+\_\+outer\+Height}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{\+\_\+outer\+Height}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+\_\+outer\+Height\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a4d8c5283f4625e042bb2a98cdec323ce}
+
+
+outer height of the element 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a4812f06ca8225b4386f5e5ea45370550}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!\+\_\+outer\+Width@{\+\_\+outer\+Width}}
 \index{\+\_\+outer\+Width@{\+\_\+outer\+Width}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{\+\_\+outer\+Width}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+\_\+outer\+Width\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a4812f06ca8225b4386f5e5ea45370550}
+
+
+outer width of the element 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_adcfc13a3bc75b3efb29b7328115d2996}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!\+\_\+path@{\+\_\+path}}
 \index{\+\_\+path@{\+\_\+path}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{\+\_\+path}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+\_\+path\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_adcfc13a3bc75b3efb29b7328115d2996}
+
+
+Path from \hyperlink{namespace_web_analyzer_1_1_models_1_1_base}{Base} H\+T\+M\+L to the element 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a1fba31f038cfcd20e7be095aa736695a}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!\+\_\+selector@{\+\_\+selector}}
 \index{\+\_\+selector@{\+\_\+selector}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{\+\_\+selector}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+\_\+selector\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a1fba31f038cfcd20e7be095aa736695a}
+
+
+Unique selector of the element 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a189cb52ec2fbbc5d2fad73187ffa9404}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!\+\_\+tag@{\+\_\+tag}}
 \index{\+\_\+tag@{\+\_\+tag}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{\+\_\+tag}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+\_\+tag\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a189cb52ec2fbbc5d2fad73187ffa9404}
+
+
+Tag of the element 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a1f78ca7c25fcb00ee45f23482ae92c3a}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!\+\_\+title@{\+\_\+title}}
 \index{\+\_\+title@{\+\_\+title}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{\+\_\+title}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+\_\+title\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a1f78ca7c25fcb00ee45f23482ae92c3a}
+
+
+title of the element 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a2375d70647ec50aa1a497e9e9ab6aade}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!\+\_\+top@{\+\_\+top}}
 \index{\+\_\+top@{\+\_\+top}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{\+\_\+top}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+\_\+top\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a2375d70647ec50aa1a497e9e9ab6aade}
+
+
+top coordinate of the element 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_ad89c6f97d80115d398e26e76eb2ab7b7}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!\+\_\+width@{\+\_\+width}}
 \index{\+\_\+width@{\+\_\+width}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{\+\_\+width}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+\_\+width\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_ad89c6f97d80115d398e26e76eb2ab7b7}
+
+
+width of the element 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_aa5965b140e814fe18f8b9551f1a66b73}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!Height@{Height}}
 \index{Height@{Height}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{Height}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+Height\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_aa5965b140e814fe18f8b9551f1a66b73}
+
+
+Getter/ Setter for the element height 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a7aee1f5b1f3f0eafd2cd368a4c7165cf}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!H\+T\+M\+L\+X@{H\+T\+M\+L\+X}}
 \index{H\+T\+M\+L\+X@{H\+T\+M\+L\+X}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{H\+T\+M\+L\+X}]{\setlength{\rightskip}{0pt plus 5cm}Double Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+H\+T\+M\+L\+X\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a7aee1f5b1f3f0eafd2cd368a4c7165cf}
+
+
+Getter/ Setter for the html x 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a179b7d7715dba28ac6c999208df994d8}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!H\+T\+M\+L\+Y@{H\+T\+M\+L\+Y}}
 \index{H\+T\+M\+L\+Y@{H\+T\+M\+L\+Y}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{H\+T\+M\+L\+Y}]{\setlength{\rightskip}{0pt plus 5cm}Double Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+H\+T\+M\+L\+Y\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a179b7d7715dba28ac6c999208df994d8}
+
+
+Getter/ Setter for the html y 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a629f3bd5c81651e1ff284f526fabb069}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!I\+D@{I\+D}}
 \index{I\+D@{I\+D}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{I\+D}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+I\+D\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a629f3bd5c81651e1ff284f526fabb069}
+
+
+Getter / Setter for the element id 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a8dffe5cd2a8e688eaf4f2f50a39dc07d}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!Left@{Left}}
 \index{Left@{Left}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{Left}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+Left\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a8dffe5cd2a8e688eaf4f2f50a39dc07d}
+
+
+Getter / Setter for the element left 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a9c280fbbc109f824b51ca934192da464}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!Outer\+Height@{Outer\+Height}}
 \index{Outer\+Height@{Outer\+Height}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{Outer\+Height}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+Outer\+Height\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a9c280fbbc109f824b51ca934192da464}
+
+
+Getter/ Setter for the element outer height 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a3bf025c2cfc55086914d5f262b2f3e3e}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!Outer\+Width@{Outer\+Width}}
 \index{Outer\+Width@{Outer\+Width}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{Outer\+Width}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+Outer\+Width\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a3bf025c2cfc55086914d5f262b2f3e3e}
+
+
+Getter/ Setter for the element outer width 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a51a4d9000890ebe19b35812780d3bf92}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!Path@{Path}}
 \index{Path@{Path}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{Path}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+Path\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a51a4d9000890ebe19b35812780d3bf92}
+
+
+Getter/ Setter for the element path 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a0de31ca5aa5fef2bf8ddcacef47cb379}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!Selector@{Selector}}
 \index{Selector@{Selector}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{Selector}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+Selector\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a0de31ca5aa5fef2bf8ddcacef47cb379}
+
+
+Getter/ Setter for the element selector 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_ace6ce5f6a7d2e39c59b256b2b2f5e6eb}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!Tag@{Tag}}
 \index{Tag@{Tag}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{Tag}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+Tag\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_ace6ce5f6a7d2e39c59b256b2b2f5e6eb}
+
+
+Getter/ Setter for the element tag 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a10a1c3ec9fceca5b4745cae7f9647c74}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!Title@{Title}}
 \index{Title@{Title}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{Title}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+Title\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a10a1c3ec9fceca5b4745cae7f9647c74}
+
+
+Getter/ Setter for the element title 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a1f17dcaf6e924292f3b6a8ade726941d}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!Top@{Top}}
 \index{Top@{Top}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{Top}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+Top\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a1f17dcaf6e924292f3b6a8ade726941d}
+
+
+Getter / Setter for the element top 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a34aa9812237c151017294753a8ee77a7}{}\index{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}!Width@{Width}}
 \index{Width@{Width}!Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model@{Web\+Analyzer\+::\+Models\+::\+Data\+Model\+::\+D\+O\+M\+Element\+Model}}
 \subsubsection[{Width}]{\setlength{\rightskip}{0pt plus 5cm}double Web\+Analyzer.\+Models.\+Data\+Model.\+D\+O\+M\+Element\+Model.\+Width\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model_a34aa9812237c151017294753a8ee77a7}
+
+
+Getter/ Setter for the element width 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

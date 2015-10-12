@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule}{}\section{Web\+Analyzer.\+Models.\+Settings\+Model.\+Settings\+Rule Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule}\index{Web\+Analyzer.\+Models.\+Settings\+Model.\+Settings\+Rule@{Web\+Analyzer.\+Models.\+Settings\+Model.\+Settings\+Rule}}
+
+
+Represents a rule for the aoi  
+
+
 Inheritance diagram for Web\+Analyzer.\+Models.\+Settings\+Model.\+Settings\+Rule\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,32 +15,37 @@ Inheritance diagram for Web\+Analyzer.\+Models.\+Settings\+Model.\+Settings\+Rul
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_ada5165c9c6b7a30cea3b3b9607fe909b}{Settings\+Rule} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Empty constructor for loading from xml \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_a3969b337984b9bed7741dd778e842d1a}{Element\+Fits\+Rule} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{D\+O\+M\+Element\+Model} el)
-\item 
+\begin{DoxyCompactList}\small\item\em Checks if the given element fits the rule \end{DoxyCompactList}\item 
 Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_aaee1cf5ecd277bc0ff93b08136c971aa}{To\+X\+M\+L} (Xml\+Document xml\+Doc)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an xml representation of the object \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule}{Settings\+Rule} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_a444331f780bd89b144249f64148dc05e}{Load\+From\+X\+M\+L} (Xml\+Node rule\+Node)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an object from X\+M\+L \end{DoxyCompactList}\item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule}{Settings\+Rule} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_aa59768fb94258353389ed98f702c258f}{Copy} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule}{Settings\+Rule} orig)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates a copy of the given setting rule \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node}{Node} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_a4f1e8ed93d01d4d4bd68a8482286a0f3}{Rule\+Root}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter / Setter for the rule root \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_ae696484e3ef7781243fd1855d28a9816}{Case\+Sensitive}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter / Setter for Case sensitive \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_ac71facd988cb48bac19773a22150f934}{\+\_\+case\+Sensitive}
-\item 
+\begin{DoxyCompactList}\small\item\em Is the rule case sensitive \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node}{Node} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_ab5956bb652dc72145a5de339857f67af}{\+\_\+rule\+Root}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Root of the rule tree \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a rule for the aoi 
+
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -48,6 +58,10 @@ Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_ada5165c9c6b7a30cea3b3b9607fe909b}
 
 
+Empty constructor for loading from xml 
+
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_aa59768fb94258353389ed98f702c258f}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule}!Copy@{Copy}}
 \index{Copy@{Copy}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule}}
@@ -56,6 +70,18 @@ Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings
 \item[{{\bf Settings\+Rule}}]{orig}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_aa59768fb94258353389ed98f702c258f}
+
+
+Creates a copy of the given setting rule 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orig} & setting rule to copy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_a3969b337984b9bed7741dd778e842d1a}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule}!Element\+Fits\+Rule@{Element\+Fits\+Rule}}
 \index{Element\+Fits\+Rule@{Element\+Fits\+Rule}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule}}
 \subsubsection[{Element\+Fits\+Rule(\+D\+O\+M\+Element\+Model el)}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Models.\+Settings\+Model.\+Settings\+Rule.\+Element\+Fits\+Rule (
@@ -63,6 +89,18 @@ Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings
 \item[{{\bf D\+O\+M\+Element\+Model}}]{el}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_a3969b337984b9bed7741dd778e842d1a}
+
+
+Checks if the given element fits the rule 
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & Element to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_a444331f780bd89b144249f64148dc05e}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule}!Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}}
 \index{Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule}}
 \subsubsection[{Load\+From\+X\+M\+L(\+Xml\+Node rule\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Settings\+Rule} Web\+Analyzer.\+Models.\+Settings\+Model.\+Settings\+Rule.\+Load\+From\+X\+M\+L (
@@ -70,6 +108,18 @@ Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings
 \item[{Xml\+Node}]{rule\+Node}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_a444331f780bd89b144249f64148dc05e}
+
+
+Creates an object from X\+M\+L 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rule\+Node} & The node which contains the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded object
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_aaee1cf5ecd277bc0ff93b08136c971aa}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule}!To\+X\+M\+L@{To\+X\+M\+L}}
 \index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule}}
 \subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}Xml\+Node Web\+Analyzer.\+Models.\+Settings\+Model.\+Settings\+Rule.\+To\+X\+M\+L (
@@ -79,22 +129,50 @@ Boolean \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_aaee1cf5ecd277bc0ff93b08136c971aa}
 
 
+Creates an xml representation of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 \subsection{Member Data Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_ac71facd988cb48bac19773a22150f934}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule}!\+\_\+case\+Sensitive@{\+\_\+case\+Sensitive}}
 \index{\+\_\+case\+Sensitive@{\+\_\+case\+Sensitive}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule}}
 \subsubsection[{\+\_\+case\+Sensitive}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Models.\+Settings\+Model.\+Settings\+Rule.\+\_\+case\+Sensitive\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_ac71facd988cb48bac19773a22150f934}
+
+
+Is the rule case sensitive 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_ab5956bb652dc72145a5de339857f67af}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule}!\+\_\+rule\+Root@{\+\_\+rule\+Root}}
 \index{\+\_\+rule\+Root@{\+\_\+rule\+Root}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule}}
 \subsubsection[{\+\_\+rule\+Root}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node} Web\+Analyzer.\+Models.\+Settings\+Model.\+Settings\+Rule.\+\_\+rule\+Root\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_ab5956bb652dc72145a5de339857f67af}
+
+
+Root of the rule tree 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_ae696484e3ef7781243fd1855d28a9816}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule}!Case\+Sensitive@{Case\+Sensitive}}
 \index{Case\+Sensitive@{Case\+Sensitive}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule}}
 \subsubsection[{Case\+Sensitive}]{\setlength{\rightskip}{0pt plus 5cm}Boolean Web\+Analyzer.\+Models.\+Settings\+Model.\+Settings\+Rule.\+Case\+Sensitive\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_ae696484e3ef7781243fd1855d28a9816}
+
+
+Getter / Setter for Case sensitive 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_a4f1e8ed93d01d4d4bd68a8482286a0f3}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule}!Rule\+Root@{Rule\+Root}}
 \index{Rule\+Root@{Rule\+Root}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Settings\+Rule}}
 \subsubsection[{Rule\+Root}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node} Web\+Analyzer.\+Models.\+Settings\+Model.\+Settings\+Rule.\+Rule\+Root\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_settings_rule_a4f1e8ed93d01d4d4bd68a8482286a0f3}
+
+
+Getter / Setter for the rule root 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

@@ -12,8 +12,8 @@ Class used for controlling an test run.
 \begin{DoxyCompactList}\small\item\em Constructor which creates the Test\+Model, prepares all Servies (Websocket and Tracking) and creates the timer. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a7074ca580c48782cb944d4cde6bbe26e}{Refresh\+Services} ()
 \begin{DoxyCompactList}\small\item\em Methods for Refreshing Services. \end{DoxyCompactList}\item 
-void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_afe606c22838435b0b471cea3157a1a3e}{Prepare\+Services} ()
-\begin{DoxyCompactList}\small\item\em Prepares all Websocket \hyperlink{namespace_web_analyzer_1_1_server}{Server} and Tracking Interface for the test. \end{DoxyCompactList}\item 
+void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a3ca8d6304b4b53fa226ab5f23c6aeba5}{Initialise\+Services} ()
+\begin{DoxyCompactList}\small\item\em Initialises all Websocket \hyperlink{namespace_web_analyzer_1_1_server}{Server} and Tracking Interface for the test. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a2c41ced530712abfceaab3cea7f6bbac}{Start\+Test} ()
 \begin{DoxyCompactList}\small\item\em Starts the test. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a6ebdcf138dc6c394c8a5695da1f8de23}{Stop\+Test} ()
@@ -43,7 +43,9 @@ void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_afd9f2518f
 void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_abc70d071b611a185c582588460ec25fe}{On\+\_\+\+Add\+Browser\+Event} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} source, \hyperlink{class_web_analyzer_1_1_events_1_1_add_browser_event}{Add\+Browser\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
 \begin{DoxyCompactList}\small\item\em Event which gets triggered when an event from the browser gets received. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a6108f3e3fdb88e99209d916b9d7d89d4}{On\+\_\+\+Add\+Testrun\+Data} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} source, \hyperlink{class_web_analyzer_1_1_events_1_1_add_testrun_data_event}{Add\+Testrun\+Data\+Event} \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
-\begin{DoxyCompactList}\small\item\em Event which gets triggered to add data to the current testrun \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Event which gets triggered to add data to the current testrun \end{DoxyCompactList}\item 
+void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a6d70aa8b48cd7283d444e27c5b7ca8fa}{Check\+Services} (\hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_aae18b7515bb2bc4137586506e7c0c903}{object} sender, Elapsed\+Event\+Args \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2bootstrap_8min_8js_ab5902775854a8b8440bcd25e0fe1c120}{e})
+\begin{DoxyCompactList}\small\item\em Checks if all needed services are running and okay. If not tries to start them/ connect. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
@@ -65,14 +67,22 @@ Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a741cf9
 Save\+Testrun\+Event\+Handler \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a45f8340dcea78391a3f58e5c7996d126}{Save\+Testrun}
 \begin{DoxyCompactList}\small\item\em Event for saving the testrun. \end{DoxyCompactList}\item 
 Update\+W\+S\+Connection\+Count\+Event\+Handler \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a3b6d28efa43ed99a2bdf0db062ba46e1}{Update\+W\+S\+Connection\+Count}
-\begin{DoxyCompactList}\small\item\em Event for updating the connection count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Event for updating the connection count. \end{DoxyCompactList}\item 
+Update\+Service\+Stati\+Event\+Handler \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_aaf41a1a9569092d3c41a17a914607a7c}{Update\+Service\+Stati}
+\begin{DoxyCompactList}\small\item\em Event for updating the service stati. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a9404350d73eb0d40751b1bdee5171b71}{$\sim$\+Test\+Controller} ()
 \begin{DoxyCompactList}\small\item\em Destructor to ensure all services get stopped. \end{DoxyCompactList}\item 
+void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_acdb2666f061e4f9d78ee7f24e9516495}{Create\+Service\+Timer} ()
+\begin{DoxyCompactList}\small\item\em Creates the Timer used for checking if services are working correctly. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a448797a07babe883ab8d8e646272a6eb}{Create\+Save\+Timer} ()
 \begin{DoxyCompactList}\small\item\em Creates the Timer used when checking if data can now be saved. \end{DoxyCompactList}\item 
+void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_ade3e5f82b576f428d7c9faf22d831f1d}{Initialise\+W\+S\+Server} ()
+\begin{DoxyCompactList}\small\item\em Initialises the Web\+Socket \hyperlink{namespace_web_analyzer_1_1_server}{Server} \end{DoxyCompactList}\item 
+void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a6c1ad0ad7207cb09294e21a4b1cdaf6b}{Initialise\+Tracking\+Component} ()
+\begin{DoxyCompactList}\small\item\em Initialises the Tracking\+Component \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_ae6675c76b8af44f6c0ac8c9e9d2ee628}{Check\+Tracking\+Frequency} ()
 \begin{DoxyCompactList}\small\item\em Checks if tracking frequency and ws message interval values can work with the current settings. \end{DoxyCompactList}\item 
 void \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_af7260e39f8963732f38631dd618da497}{End\+Services} ()
@@ -94,8 +104,10 @@ Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a49aaaa
 \begin{DoxyCompactList}\small\item\em Boolean for indicating if the test is currently running. \end{DoxyCompactList}\item 
 Boolean \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a7d63bbfba4672d52414c318b397c504b}{\+\_\+data\+Collected} = \hyperlink{_u_i_2_h_t_m_l_resources_2js_2src_2export_8js_ae6c865df784842196d411c1466b01686}{false}
 \begin{DoxyCompactList}\small\item\em Boolean for indicating if any data was collected. \end{DoxyCompactList}\item 
-System.\+Timers.\+Timer \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_a484747e48ceb23e931111018ed87d8e1}{save\+Timer}
+System.\+Timers.\+Timer \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_afbf68de453036de4c7e50e3eb23f9ebb}{\+\_\+save\+Timer}
 \begin{DoxyCompactList}\small\item\em Reference to an timer used for checking if all communication is done and the data can be saved. \end{DoxyCompactList}\item 
+System.\+Timers.\+Timer \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_acf2cc373641944c352591c478cf2bd05}{\+\_\+service\+Timer}
+\begin{DoxyCompactList}\small\item\em Reference to an timer used for checking if services are running and are connected. \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data}{Raw\+Tracking\+Data} \hyperlink{class_web_analyzer_1_1_controller_1_1_test_controller_ac2155d50816dddd7e62689655d3a978f}{\+\_\+raw\+Data} = new \hyperlink{class_web_analyzer_1_1_models_1_1_base_1_1_raw_tracking_data}{Raw\+Tracking\+Data}()
 \begin{DoxyCompactList}\small\item\em Contains the raw data of the tracking device, without any extra informations. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -200,6 +212,25 @@ Check if all data is there and save if it is.
 {\em e} & Event\\
 \hline
 \end{DoxyParams}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a6d70aa8b48cd7283d444e27c5b7ca8fa}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Check\+Services@{Check\+Services}}
+\index{Check\+Services@{Check\+Services}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{Check\+Services(object sender, Elapsed\+Event\+Args e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+Check\+Services (
+\begin{DoxyParamCaption}
+\item[{{\bf object}}]{sender, }
+\item[{Elapsed\+Event\+Args}]{e}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a6d70aa8b48cd7283d444e27c5b7ca8fa}
+
+
+Checks if all needed services are running and okay. If not tries to start them/ connect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & Object from which the method is called\\
+\hline
+{\em e} & Event\\
+\hline
+\end{DoxyParams}
 \hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_ae6675c76b8af44f6c0ac8c9e9d2ee628}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Check\+Tracking\+Frequency@{Check\+Tracking\+Frequency}}
 \index{Check\+Tracking\+Frequency@{Check\+Tracking\+Frequency}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
 \subsubsection[{Check\+Tracking\+Frequency()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+Check\+Tracking\+Frequency (
@@ -221,6 +252,17 @@ Checks if tracking frequency and ws message interval values can work with the cu
 
 
 Creates the Timer used when checking if data can now be saved. 
+
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_acdb2666f061e4f9d78ee7f24e9516495}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Create\+Service\+Timer@{Create\+Service\+Timer}}
+\index{Create\+Service\+Timer@{Create\+Service\+Timer}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{Create\+Service\+Timer()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+Create\+Service\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_acdb2666f061e4f9d78ee7f24e9516495}
+
+
+Creates the Timer used for checking if services are working correctly. 
 
 \hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_ae88c0e776f3d18dc0c0cfc2106b2f1a5}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Dispose\+Of\+Gaze\+Data@{Dispose\+Of\+Gaze\+Data}}
 \index{Dispose\+Of\+Gaze\+Data@{Dispose\+Of\+Gaze\+Data}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
@@ -271,7 +313,7 @@ Dispose of gaze data (since its an error)
 
 Stops all Websocket \hyperlink{namespace_web_analyzer_1_1_server}{Server} and Tracking Interface. 
 
-Uses the settings to choose what to prepare and what to use for preparing.\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_ad375d558e5d63a79680f3fe53f1326b4}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Get\+Gaze\+Model@{Get\+Gaze\+Model}}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_ad375d558e5d63a79680f3fe53f1326b4}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Get\+Gaze\+Model@{Get\+Gaze\+Model}}
 \index{Get\+Gaze\+Model@{Get\+Gaze\+Model}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
 \subsubsection[{Get\+Gaze\+Model(\+String unique\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Gaze\+Model} Web\+Analyzer.\+Controller.\+Test\+Controller.\+Get\+Gaze\+Model (
 \begin{DoxyParamCaption}
@@ -290,6 +332,39 @@ Get the Gaze\+Model to an uniqueid
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a3ca8d6304b4b53fa226ab5f23c6aeba5}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Initialise\+Services@{Initialise\+Services}}
+\index{Initialise\+Services@{Initialise\+Services}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{Initialise\+Services()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+Initialise\+Services (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a3ca8d6304b4b53fa226ab5f23c6aeba5}
+
+
+Initialises all Websocket \hyperlink{namespace_web_analyzer_1_1_server}{Server} and Tracking Interface for the test. 
+
+Uses the settings to choose what to prepare and what to use for preparing.\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a6c1ad0ad7207cb09294e21a4b1cdaf6b}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Initialise\+Tracking\+Component@{Initialise\+Tracking\+Component}}
+\index{Initialise\+Tracking\+Component@{Initialise\+Tracking\+Component}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{Initialise\+Tracking\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+Initialise\+Tracking\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a6c1ad0ad7207cb09294e21a4b1cdaf6b}
+
+
+Initialises the Tracking\+Component 
+
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_ade3e5f82b576f428d7c9faf22d831f1d}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Initialise\+W\+S\+Server@{Initialise\+W\+S\+Server}}
+\index{Initialise\+W\+S\+Server@{Initialise\+W\+S\+Server}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{Initialise\+W\+S\+Server()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+Initialise\+W\+S\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_ade3e5f82b576f428d7c9faf22d831f1d}
+
+
+Initialises the Web\+Socket \hyperlink{namespace_web_analyzer_1_1_server}{Server} 
+
 \hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_abc70d071b611a185c582588460ec25fe}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!On\+\_\+\+Add\+Browser\+Event@{On\+\_\+\+Add\+Browser\+Event}}
 \index{On\+\_\+\+Add\+Browser\+Event@{On\+\_\+\+Add\+Browser\+Event}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
 \subsubsection[{On\+\_\+\+Add\+Browser\+Event(object source, Add\+Browser\+Event e)}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+On\+\_\+\+Add\+Browser\+Event (
@@ -344,7 +419,7 @@ Callback for Update W\+S Change Webpage Event
 
 
 \begin{DoxyParams}{Parameters}
-{\em sender} & Object from which the event gets triggered.\\
+{\em source} & Object from which the event gets triggered.\\
 \hline
 {\em e} & Data about the webpage\\
 \hline
@@ -441,25 +516,12 @@ Prepares the Gaze\+Data with the Test\+Model.
 
 
 \begin{DoxyParams}{Parameters}
-{\em timestamp} & Timestamp on which the gaze was requested\\
-\hline
 {\em left\+Eye} & Data about the left Eye\\
 \hline
 {\em right\+Eye} & Data about the right Eye\\
 \hline
 \end{DoxyParams}
-\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_afe606c22838435b0b471cea3157a1a3e}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Prepare\+Services@{Prepare\+Services}}
-\index{Prepare\+Services@{Prepare\+Services}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
-\subsubsection[{Prepare\+Services()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+Prepare\+Services (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}\label{class_web_analyzer_1_1_controller_1_1_test_controller_afe606c22838435b0b471cea3157a1a3e}
-
-
-Prepares all Websocket \hyperlink{namespace_web_analyzer_1_1_server}{Server} and Tracking Interface for the test. 
-
-Uses the settings to choose what to prepare and what to use for preparing.\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a7074ca580c48782cb944d4cde6bbe26e}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Refresh\+Services@{Refresh\+Services}}
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a7074ca580c48782cb944d4cde6bbe26e}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Refresh\+Services@{Refresh\+Services}}
 \index{Refresh\+Services@{Refresh\+Services}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
 \subsubsection[{Refresh\+Services()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+Refresh\+Services (
 \begin{DoxyParamCaption}
@@ -470,7 +532,7 @@ Uses the settings to choose what to prepare and what to use for preparing.\hyper
 
 Methods for Refreshing Services. 
 
-Only calls End\+Services and then Prepare\+Services.\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a2c41ced530712abfceaab3cea7f6bbac}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Start\+Test@{Start\+Test}}
+Only calls End\+Services and then Initialise\+Services.\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a2c41ced530712abfceaab3cea7f6bbac}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Start\+Test@{Start\+Test}}
 \index{Start\+Test@{Start\+Test}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
 \subsubsection[{Start\+Test()}]{\setlength{\rightskip}{0pt plus 5cm}void Web\+Analyzer.\+Controller.\+Test\+Controller.\+Start\+Test (
 \begin{DoxyParamCaption}
@@ -516,6 +578,20 @@ Contains the raw data of the tracking device, without any extra informations.
 
 Boolean for indicating if the test is currently running. 
 
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_afbf68de453036de4c7e50e3eb23f9ebb}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!\+\_\+save\+Timer@{\+\_\+save\+Timer}}
+\index{\+\_\+save\+Timer@{\+\_\+save\+Timer}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{\+\_\+save\+Timer}]{\setlength{\rightskip}{0pt plus 5cm}System.\+Timers.\+Timer Web\+Analyzer.\+Controller.\+Test\+Controller.\+\_\+save\+Timer\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_afbf68de453036de4c7e50e3eb23f9ebb}
+
+
+Reference to an timer used for checking if all communication is done and the data can be saved. 
+
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_acf2cc373641944c352591c478cf2bd05}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!\+\_\+service\+Timer@{\+\_\+service\+Timer}}
+\index{\+\_\+service\+Timer@{\+\_\+service\+Timer}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{\+\_\+service\+Timer}]{\setlength{\rightskip}{0pt plus 5cm}System.\+Timers.\+Timer Web\+Analyzer.\+Controller.\+Test\+Controller.\+\_\+service\+Timer\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_acf2cc373641944c352591c478cf2bd05}
+
+
+Reference to an timer used for checking if services are running and are connected. 
+
 \hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a6084bcc401d37f7f8861fc0e9fb771b6}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!\+\_\+test@{\+\_\+test}}
 \index{\+\_\+test@{\+\_\+test}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
 \subsubsection[{\+\_\+test}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Test\+Model} Web\+Analyzer.\+Controller.\+Test\+Controller.\+\_\+test\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a6084bcc401d37f7f8861fc0e9fb771b6}
@@ -543,13 +619,6 @@ Reference to the Websocket \hyperlink{namespace_web_analyzer_1_1_server}{Server}
 
 
 Boolean for indicating if there was a problem for the Web\+Socket \hyperlink{namespace_web_analyzer_1_1_server}{Server}. 
-
-\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a484747e48ceb23e931111018ed87d8e1}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!save\+Timer@{save\+Timer}}
-\index{save\+Timer@{save\+Timer}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
-\subsubsection[{save\+Timer}]{\setlength{\rightskip}{0pt plus 5cm}System.\+Timers.\+Timer Web\+Analyzer.\+Controller.\+Test\+Controller.\+save\+Timer\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_controller_1_1_test_controller_a484747e48ceb23e931111018ed87d8e1}
-
-
-Reference to an timer used for checking if all communication is done and the data can be saved. 
 
 
 
@@ -605,6 +674,13 @@ Used for the indicator of the main \hyperlink{namespace_web_analyzer_1_1_u_i}{U\
 
 
 Event for saving the testrun. 
+
+\hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_aaf41a1a9569092d3c41a17a914607a7c}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Update\+Service\+Stati@{Update\+Service\+Stati}}
+\index{Update\+Service\+Stati@{Update\+Service\+Stati}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}
+\subsubsection[{Update\+Service\+Stati}]{\setlength{\rightskip}{0pt plus 5cm}Update\+Service\+Stati\+Event\+Handler Web\+Analyzer.\+Controller.\+Test\+Controller.\+Update\+Service\+Stati}\label{class_web_analyzer_1_1_controller_1_1_test_controller_aaf41a1a9569092d3c41a17a914607a7c}
+
+
+Event for updating the service stati. 
 
 \hypertarget{class_web_analyzer_1_1_controller_1_1_test_controller_a3b6d28efa43ed99a2bdf0db062ba46e1}{}\index{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}!Update\+W\+S\+Connection\+Count@{Update\+W\+S\+Connection\+Count}}
 \index{Update\+W\+S\+Connection\+Count@{Update\+W\+S\+Connection\+Count}!Web\+Analyzer\+::\+Controller\+::\+Test\+Controller@{Web\+Analyzer\+::\+Controller\+::\+Test\+Controller}}

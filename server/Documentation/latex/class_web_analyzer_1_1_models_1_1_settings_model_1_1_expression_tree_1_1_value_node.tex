@@ -1,5 +1,10 @@
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node}{}\section{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Value\+Node Class Reference}
 \label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node}\index{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Value\+Node@{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Value\+Node}}
+
+
+Value node  
+
+
 Inheritance diagram for Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Value\+Node\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,49 +17,58 @@ Inheritance diagram for Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+T
 enum \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_ac18254d82bd6e0d754ed1a2484882d11}{V\+A\+L\+U\+E\+\_\+\+T\+Y\+P\+E\+S} \{ \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_ac18254d82bd6e0d754ed1a2484882d11ac101058e7ea21bbbf2a5ac893088e90b}{V\+A\+L\+U\+E\+\_\+\+T\+Y\+P\+E\+S.\+Tag}, 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_ac18254d82bd6e0d754ed1a2484882d11a9bd81329febf6efe22788e03ddeaf0af}{V\+A\+L\+U\+E\+\_\+\+T\+Y\+P\+E\+S.\+Class}, 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_ac18254d82bd6e0d754ed1a2484882d11ab718adec73e04ce3ec720dd11a06a308}{V\+A\+L\+U\+E\+\_\+\+T\+Y\+P\+E\+S.\+I\+D}
- \}
+ \}\begin{DoxyCompactList}\small\item\em The different value types. \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_afafaa57c7b7f5cdc5447139118bd6d47}{Value\+Node} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Empty Constructor for loading from xml \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a62cfbb11d38c3f17e240cb2c5a1ac6f1}{Value\+Node} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_ac18254d82bd6e0d754ed1a2484882d11}{V\+A\+L\+U\+E\+\_\+\+T\+Y\+P\+E\+S} value\+Type, String \hyperlink{_u_i_2_h_t_m_l_resources_2js_2lib_2underscore_8min_8js_af7e1471ab89699458c4df8bb657298f6}{value})
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor \end{DoxyCompactList}\item 
 override bool \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a4372873a2359e8ef131624bad5bbaa58}{Evaluate} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{D\+O\+M\+Element\+Model} el)
-\item 
+\begin{DoxyCompactList}\small\item\em Method for evaluating if the element fits the node rule \end{DoxyCompactList}\item 
 override bool \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a79986418c7a3439d1cb5d8f14ded199e}{Evaluate\+Case\+Sensitive} (\hyperlink{class_web_analyzer_1_1_models_1_1_data_model_1_1_d_o_m_element_model}{D\+O\+M\+Element\+Model} el)
-\item 
+\begin{DoxyCompactList}\small\item\em Method for evaluating case sensitive if the element fits the node rule \end{DoxyCompactList}\item 
 override Xml\+Node \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a801c7d0fdc559f12d8c8e6ae1943b59d}{To\+X\+M\+L} (Xml\+Document xml\+Doc)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates an xml representation of the object \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static new \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node}{Value\+Node} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_adb68b0f5d8d1c99e3abca965f48a67d0}{Load\+From\+X\+M\+L} (Xml\+Node node\+Node)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates an object from X\+M\+L \end{DoxyCompactList}\item 
 static \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node}{Value\+Node} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_ab8b25f08e20250c49c14f7dfeda7a96f}{Copy} (\hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node}{Value\+Node} orig)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates a copy of the given value node \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_abc4f8ff5dd972ce1c49f135273797926}{Value}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the value of the node \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_ac18254d82bd6e0d754ed1a2484882d11}{V\+A\+L\+U\+E\+\_\+\+T\+Y\+P\+E\+S} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_aa1c55c593ae80ac78221c1397ede5ab2}{Value\+Type}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter/ Setter for the value type of the node \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 String \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a2a3fb6174add907e160cef8eb0088d1c}{\+\_\+value}
-\item 
+\begin{DoxyCompactList}\small\item\em the value of the node \end{DoxyCompactList}\item 
 \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_ac18254d82bd6e0d754ed1a2484882d11}{V\+A\+L\+U\+E\+\_\+\+T\+Y\+P\+E\+S} \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a79b9df583576bec1fd1916ffb8613642}{\+\_\+value\+Type}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The value type of the node \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
+
+\subsection{Detailed Description}
+Value node 
+
+Always at the leafes of the rule tree. 
 
 \subsection{Member Enumeration Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_ac18254d82bd6e0d754ed1a2484882d11}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}!V\+A\+L\+U\+E\+\_\+\+T\+Y\+P\+E\+S@{V\+A\+L\+U\+E\+\_\+\+T\+Y\+P\+E\+S}}
 \index{V\+A\+L\+U\+E\+\_\+\+T\+Y\+P\+E\+S@{V\+A\+L\+U\+E\+\_\+\+T\+Y\+P\+E\+S}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}}
 \subsubsection[{V\+A\+L\+U\+E\+\_\+\+T\+Y\+P\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Value\+Node.\+V\+A\+L\+U\+E\+\_\+\+T\+Y\+P\+E\+S}\hspace{0.3cm}{\ttfamily [strong]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_ac18254d82bd6e0d754ed1a2484882d11}
+
+
+The different value types. 
+
 \begin{Desc}
 \item[Enumerator]\par
 \begin{description}
@@ -76,6 +90,10 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expressio
 {}
 \end{DoxyParamCaption}
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_afafaa57c7b7f5cdc5447139118bd6d47}
+
+
+Empty Constructor for loading from xml 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a62cfbb11d38c3f17e240cb2c5a1ac6f1}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}!Value\+Node@{Value\+Node}}
 \index{Value\+Node@{Value\+Node}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}}
 \subsubsection[{Value\+Node(\+V\+A\+L\+U\+E\+\_\+\+T\+Y\+P\+E\+S value\+Type, String value)}]{\setlength{\rightskip}{0pt plus 5cm}Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Value\+Node.\+Value\+Node (
@@ -86,6 +104,17 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expressio
 )}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a62cfbb11d38c3f17e240cb2c5a1ac6f1}
 
 
+Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value\+Type} & Type of the node\\
+\hline
+{\em value} & Value of the node\\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Member Function Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_ab8b25f08e20250c49c14f7dfeda7a96f}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}!Copy@{Copy}}
 \index{Copy@{Copy}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}}
@@ -94,6 +123,18 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expressio
 \item[{{\bf Value\+Node}}]{orig}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_ab8b25f08e20250c49c14f7dfeda7a96f}
+
+
+Creates a copy of the given value node 
+
+
+\begin{DoxyParams}{Parameters}
+{\em orig} & value node to copy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a4372873a2359e8ef131624bad5bbaa58}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}!Evaluate@{Evaluate}}
 \index{Evaluate@{Evaluate}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}}
 \subsubsection[{Evaluate(\+D\+O\+M\+Element\+Model el)}]{\setlength{\rightskip}{0pt plus 5cm}override bool Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Value\+Node.\+Evaluate (
@@ -101,6 +142,18 @@ String \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expressio
 \item[{{\bf D\+O\+M\+Element\+Model}}]{el}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a4372873a2359e8ef131624bad5bbaa58}
+
+
+Method for evaluating if the element fits the node rule 
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & Element to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 Implements \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_aa07f08b4a2299c2b9752a1eba59e245d}{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node}.
@@ -114,6 +167,18 @@ Implements \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expre
 )\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a79986418c7a3439d1cb5d8f14ded199e}
 
 
+Method for evaluating case sensitive if the element fits the node rule 
+
+
+\begin{DoxyParams}{Parameters}
+{\em el} & Element to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 Implements \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_a5cf0b866812c017ef1d0feb5f594499e}{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node}.
 
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_adb68b0f5d8d1c99e3abca965f48a67d0}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}!Load\+From\+X\+M\+L@{Load\+From\+X\+M\+L}}
@@ -123,6 +188,18 @@ Implements \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expre
 \item[{Xml\+Node}]{node\+Node}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_adb68b0f5d8d1c99e3abca965f48a67d0}
+
+
+Creates an object from X\+M\+L 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+Node} & The node which contains the data\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The loaded object
+\end{DoxyReturn}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a801c7d0fdc559f12d8c8e6ae1943b59d}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}!To\+X\+M\+L@{To\+X\+M\+L}}
 \index{To\+X\+M\+L@{To\+X\+M\+L}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}}
 \subsubsection[{To\+X\+M\+L(\+Xml\+Document xml\+Doc)}]{\setlength{\rightskip}{0pt plus 5cm}override Xml\+Node Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Value\+Node.\+To\+X\+M\+L (
@@ -130,6 +207,18 @@ Implements \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expre
 \item[{Xml\+Document}]{xml\+Doc}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a801c7d0fdc559f12d8c8e6ae1943b59d}
+
+
+Creates an xml representation of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & X\+M\+L Document which will contain the representation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
 
 
 Reimplemented from \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_node_afd5fd3184ae6075feac0012977e349b6}{Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Node}.
@@ -140,18 +229,34 @@ Reimplemented from \hyperlink{class_web_analyzer_1_1_models_1_1_settings_model_1
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a2a3fb6174add907e160cef8eb0088d1c}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}!\+\_\+value@{\+\_\+value}}
 \index{\+\_\+value@{\+\_\+value}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}}
 \subsubsection[{\+\_\+value}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Value\+Node.\+\_\+value\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a2a3fb6174add907e160cef8eb0088d1c}
+
+
+the value of the node 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a79b9df583576bec1fd1916ffb8613642}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}!\+\_\+value\+Type@{\+\_\+value\+Type}}
 \index{\+\_\+value\+Type@{\+\_\+value\+Type}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}}
 \subsubsection[{\+\_\+value\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf V\+A\+L\+U\+E\+\_\+\+T\+Y\+P\+E\+S} Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Value\+Node.\+\_\+value\+Type\hspace{0.3cm}{\ttfamily [private]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_a79b9df583576bec1fd1916ffb8613642}
+
+
+The value type of the node 
+
 
 
 \subsection{Property Documentation}
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_abc4f8ff5dd972ce1c49f135273797926}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}!Value@{Value}}
 \index{Value@{Value}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}}
 \subsubsection[{Value}]{\setlength{\rightskip}{0pt plus 5cm}String Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Value\+Node.\+Value\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_abc4f8ff5dd972ce1c49f135273797926}
+
+
+Getter/ Setter for the value of the node 
+
 \hypertarget{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_aa1c55c593ae80ac78221c1397ede5ab2}{}\index{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}!Value\+Type@{Value\+Type}}
 \index{Value\+Type@{Value\+Type}!Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node@{Web\+Analyzer\+::\+Models\+::\+Settings\+Model\+::\+Expression\+Tree\+::\+Value\+Node}}
 \subsubsection[{Value\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf V\+A\+L\+U\+E\+\_\+\+T\+Y\+P\+E\+S} Web\+Analyzer.\+Models.\+Settings\+Model.\+Expression\+Tree.\+Value\+Node.\+Value\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_web_analyzer_1_1_models_1_1_settings_model_1_1_expression_tree_1_1_value_node_aa1c55c593ae80ac78221c1397ede5ab2}
+
+
+Getter/ Setter for the value type of the node 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
