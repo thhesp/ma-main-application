@@ -24,15 +24,36 @@ using WebAnalyzer.Events;
 
 namespace WebAnalyzer.Server
 {
+    /// <summary>
+    /// The interface to the websocket server
+    /// </summary>
     class WebsocketServer
     {
 
+        /// <summary>
+        /// Reference to the connection manager
+        /// </summary>
         private ConnectionManager _connManager;
+
+        /// <summary>
+        /// Reference to the testcontroller
+        /// </summary>
         private TestController _controller;
 
+        /// <summary>
+        /// The "real" websocket server
+        /// </summary>
         private WebSocketListener server;
+
+        /// <summary>
+        /// Cancellation token to stop the server
+        /// </summary>
         private CancellationTokenSource cancellation;
 
+        /// <summary>
+        /// Constructor which creates the connection manager with necessary event listeners
+        /// </summary>
+        /// <param name="controller">Reference to the testcontroller</param>
         public WebsocketServer(TestController controller)
         {
             _connManager = new ConnectionManager();
@@ -41,6 +62,11 @@ namespace WebAnalyzer.Server
 
             _controller = controller;
         }
+
+        /// <summary>
+        /// Creates a reference to a websocket server which runs on the given port
+        /// </summary>
+        /// <param name="port">Port for the websocket server</param>
         private void CreateServer(int port)
         {
             if (server != null)
@@ -76,13 +102,20 @@ namespace WebAnalyzer.Server
            
         }
 
+        /// <summary>
+        /// Starts the websocket server with the given port
+        /// </summary>
+        /// <param name="port">The port to run the websocket server</param>
         public void start(int port)
         {
             CreateServer(port);
-            prepareServer();
+            StartServer();
         }
 
-        private void prepareServer()
+        /// <summary>
+        /// Starts the websocket server and the message working thread
+        /// </summary>
+        private void StartServer()
         {
             WebsocketConnectionsObserver messagesObserver = new WebsocketConnectionsObserver(_controller, _connManager);
 
@@ -105,6 +138,9 @@ namespace WebAnalyzer.Server
             Logger.Log("WS Socket Server started");
         }
 
+        /// <summary>
+        /// Stops the websocket server and the message thread
+        /// </summary>
         public void stop()
         {
             cancellation.Cancel();
@@ -120,11 +156,25 @@ namespace WebAnalyzer.Server
             Logger.Log("Server stopped");
         }
 
+        /// <summary>
+        /// Used for requesting data
+        /// </summary>
+        /// <param name="uniqueId">UniqueID of the gaze</param>
+        /// <param name="leftX">X coordinate for the left eye</param>
+        /// <param name="leftY">Y coordinate for the left eye</param>
+        /// <param name="rightX">X coordinate for the right eye</param>
+        /// <param name="rightY">Y coordinate for the right eye</param>
         public void RequestData(String uniqueId, double leftX, double leftY, double rightX, double rightY)
         {
             _connManager.RequestData(uniqueId, leftX, leftY, rightX, rightY);
         }
 
+        /// <summary>
+        /// Used for requesting data
+        /// </summary>
+        /// <param name="uniqueId">UniqueID of the gaze</param>
+        /// <param name="leftX">X coordinate</param>
+        /// <param name="leftY">Y coordinate</param>
         public void RequestData(String uniqueId, double xPos, double yPos)
         {
             _connManager.RequestData(uniqueId, xPos, yPos);

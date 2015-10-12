@@ -38,6 +38,10 @@ namespace WebAnalyzer.Test.Communication
             timer = new StopwatchTimer(Properties.Settings.Default.MouseTrackingInterval, timer_Tick);
         }
 
+        /// <summary>
+        /// Connects the mousetracker
+        /// </summary>
+        /// <returns>The current connection Status</returns>
         public override ExperimentObject.CONNECTION_STATUS connect()
         {
           _connectionStatus = ExperimentObject.CONNECTION_STATUS.connected;
@@ -45,6 +49,10 @@ namespace WebAnalyzer.Test.Communication
           return _connectionStatus;
         }
 
+        /// <summary>
+        /// Disconnects the mousetracker
+        /// </summary>
+        /// <returns>The current connection Status</returns>
         public override ExperimentObject.CONNECTION_STATUS disconnect()
         {
             _connectionStatus = ExperimentObject.CONNECTION_STATUS.disconnected;

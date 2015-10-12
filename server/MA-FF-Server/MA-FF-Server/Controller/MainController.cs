@@ -20,24 +20,52 @@ using WebAnalyzer.Server;
 
 namespace WebAnalyzer.Controller
 {
+    /// <summary>
+    /// The core of the software. Most interaction will trigger a method in here.
+    /// </summary>
     public class MainController
     {
+        /// <summary>
+        /// The currently loaded experiment.
+        /// </summary>
         private ExperimentModel _currentExperiment;
 
+        /// <summary>
+        /// Reference to the testcontroller
+        /// </summary>
         private TestController _testController;
 
+        /// <summary>
+        /// Reference to the main UI
+        /// </summary>
         private HTMLUI _mainUI;
+
+        /// <summary>
+        /// Reference to the experiment wizard
+        /// </summary>
         private ExperimentWizard _experimentWizard;
+
+        /// <summary>
+        /// Reference to the current participant
+        /// </summary>
         private ExperimentParticipant _currentParticipant;
 
-
+        /// <summary>
+        /// Reference to the testrun control ui
+        /// </summary>
         private TestrunControl _testrunControlUI;
 
+        /// <summary>
+        /// Starts the main controller
+        /// </summary>
         public void Start()
         {
             ShowMainUI();
         }
 
+        /// <summary>
+        /// Creates the main UI window and sets all necessary event listeners.
+        /// </summary>
         private void ShowMainUI()
         {
             Application.EnableVisualStyles();
@@ -55,12 +83,26 @@ namespace WebAnalyzer.Controller
             Application.Run(_mainUI);
         }
 
+        /// <summary>
+        /// Callback for when the main ui finished loading.
+        /// </summary>
+        /// <param name="sender">Event sender</param>
+        /// <param name="e">Event data</param>
+        /// <remarks>
+        /// Opens the experiment wizard when the main ui finished loading.
+        /// </remarks>
         private void MainUIFinishedLoading(object sender, EventArgs e)
         {
             InitializeTestController();
             ShowExperimentWizard();
         }
 
+        /// <summary>
+        /// Initializes the test controller and sets all necessary event listeners.
+        /// </summary>
+        /// <remarks>
+        /// Testcontroller will at this point start the services if possible.
+        /// </remarks>
         private void InitializeTestController()
         {
             _testController = new TestController();
@@ -69,7 +111,9 @@ namespace WebAnalyzer.Controller
             _testController.UpdateServiceStati += On_UpdateServiceStati;
         }
 
-       
+       /// <summary>
+       /// Initializes the Experiment wizards, sets all necessary event listeners and shows the experiment wizard.
+       /// </summary>
         private void ShowExperimentWizard()
         {
             Logger.Log("Show experiment wizard?");
@@ -93,6 +137,11 @@ namespace WebAnalyzer.Controller
             }
         }
 
+        /// <summary>
+        /// Callback when in the experiment wizard a experiment creation gets triggered.
+        /// </summary>
+        /// <param name="source">Reference to the experiment wizard</param>
+        /// <param name="e">Data about the experiment which shall be created</param>
         private void On_CreateExperiment(ExperimentWizardObj source, CreateExperimentEvent e)
         {
             Logger.Log("On create experiment event");
@@ -124,6 +173,11 @@ namespace WebAnalyzer.Controller
             }
         }
 
+        /// <summary>
+        /// Callback when in the experiment wizard an experiment gets selected for loading.
+        /// </summary>
+        /// <param name="source">Reference to the experiment wizard</param>
+        /// <param name="e">Data about the experiment which shall be loaded</param>
         private void On_LoadExperiment(ExperimentWizardObj source, LoadExperimentEvent e)
         {
             Logger.Log("On load experiment event");
@@ -156,12 +210,19 @@ namespace WebAnalyzer.Controller
 
         }
 
+        /// <summary>
+        /// Used for updating the connection stati in the main ui
+        /// </summary>
         private void SetConnectionStati()
         {
             _mainUI.SetWSConnectionStatus(_testController.WSStatus);
             _mainUI.SetTrackingConnectionStatus(_testController.TrackingStatus);
         }
 
+        /// <summary>
+        /// used for setting the experiment data in the main ui
+        /// </summary>
+        /// <param name="experiment">The current experiment</param>
         private void SetExpiermentData(ExperimentModel experiment)
         {
             _mainUI.SetExperimentData(experiment);
@@ -169,11 +230,17 @@ namespace WebAnalyzer.Controller
             _mainUI.ReloadPage();
         }
 
+        /// <summary>
+        /// Refershes the data in the main ui.
+        /// </summary>
         private void RefreshMainUI()
         {
             SetExpiermentData(_currentExperiment);
         }
 
+        /// <summary>
+        /// Closes the Experiment wizard.
+        /// </summary>
         private void CloseExperimentWizard()
         {
             _experimentWizard.Invoke((MethodInvoker)delegate
@@ -183,6 +250,11 @@ namespace WebAnalyzer.Controller
             });
         }
 
+        /// <summary>
+        /// Callback used when creating, editing, copying or deleting an participant from the participant overview.
+        /// </summary>
+        /// <param name="source">Sender</param>
+        /// <param name="e">Data about the event.</param>
         private void On_EditParticpant(object source, EditParticipantEvent e)
         {
             Logger.Log("edit participant?");
@@ -212,6 +284,11 @@ namespace WebAnalyzer.Controller
             }
         }
 
+        /// <summary>
+        /// Callback used when creating, editing, copying or deleting an domain setting from the settings overview.
+        /// </summary>
+        /// <param name="source">Sender</param>
+        /// <param name="e">Data about the event.</param>
         private void On_EditDomainSetting(object source, EditDomainSettingEvent e)
         {
             Logger.Log("edit domain setting?");
@@ -241,6 +318,14 @@ namespace WebAnalyzer.Controller
             }
         }
 
+        /// <summary>
+        /// Callback used when creating a new participant. 
+        /// </summary>
+        /// <param name="source">Sender</param>
+        /// <param name="e">Data about the event.</param>
+        /// <remarks>
+        /// Used for adding it to the experiment participants.
+        /// </remarks>
         private void On_CreateParticipant(object source, CreateParticipantEvent e)
         {
             Logger.Log("create participant?");
@@ -248,6 +333,11 @@ namespace WebAnalyzer.Controller
 
         }
 
+        /// <summary>
+        /// Method used for showing the participant form
+        /// </summary>
+        /// <param name="particpant">The participant (new or old)</param>
+        /// <param name="createNew">Boolean which defines if it is a new participant</param>
         private void ShowEditParticipantForm(ExperimentParticipant particpant, Boolean createNew)
         {
             _mainUI.BeginInvoke((Action)delegate
@@ -267,6 +357,11 @@ namespace WebAnalyzer.Controller
             });
         }
 
+        /// <summary>
+        /// Method used for showing the domain settings form
+        /// </summary>
+        /// <param name="particpant">The domain setting (new or old)</param>
+        /// <param name="createNew">Boolean which defines if it is a new domain setting</param>
         private void ShowEditDomainSettingForm(DomainSettings setting, Boolean createNew)
         {
             _mainUI.BeginInvoke((Action)delegate
@@ -286,7 +381,14 @@ namespace WebAnalyzer.Controller
             });
         }
 
-        
+        /// <summary>
+        /// Callback used when creating a new domain setting.
+        /// </summary>
+        /// <param name="source">Sender</param>
+        /// <param name="e">Data about the event.</param>
+        /// <remarks>
+        /// Used for adding it to the experiment settings.
+        /// </remarks>
         private void On_CreateDomainSetting(object source, CreateDomainSettingEvent e)
         {
             Logger.Log("create domain setting?");
@@ -294,7 +396,14 @@ namespace WebAnalyzer.Controller
 
         }
 
-
+        /// <summary>
+        /// Callback for saving data.
+        /// </summary>
+        /// <param name="source">Sender</param>
+        /// <param name="e">Data about the event</param>
+        /// <remarks>
+        /// Saves the data to xml.
+        /// </remarks>
         private void On_TriggerSave(object source, TriggerSaveEvent e)
         {
             switch (e.Type)
@@ -311,6 +420,14 @@ namespace WebAnalyzer.Controller
             }
         }
 
+        /// <summary>
+        /// Callback for creating, starting and stopping a testrun.
+        /// </summary>
+        /// <param name="source">Sender</param>
+        /// <param name="e">Data about the event</param>
+        /// <remarks>
+        /// Used for getting an reference to the testrunControl.
+        /// </remarks>
         private void On_TestrunEvent(BaseInteractionObject source, TestrunEvent e)
         {
             if(source is TestrunControl){
@@ -332,11 +449,14 @@ namespace WebAnalyzer.Controller
             }
         }
 
+        /// <summary>
+        /// Creates an testrun window.
+        /// </summary>
         private void CreateTestrun()
         {
             _mainUI.BeginInvoke((Action)delegate
             {
-                Logger.Log("Show edit application setting");
+                Logger.Log("Show testrun");
                 TestrunForm testrun = new TestrunForm(_currentExperiment);
                 testrun.Testrun += On_TestrunEvent;
                 testrun.SelectParticipant += On_SelectParticipantForTest;
@@ -349,12 +469,21 @@ namespace WebAnalyzer.Controller
             });
         }
 
+        /// <summary>
+        /// Starts the test in the testcontroller.
+        /// </summary>
         private void StartTest()
         {
 
             _testController.StartTest();
         }
 
+        /// <summary>
+        /// Stops the test in the testcontroller
+        /// </summary>
+        /// <remarks>
+        /// Shows saving indicator in the testrun control
+        /// </remarks>
         private void StopTest()
         {
             Logger.Log("Stop Test");
@@ -362,6 +491,11 @@ namespace WebAnalyzer.Controller
             _testrunControlUI.ShowSaveIndicator();
         }
 
+        /// <summary>
+        /// Callback for clicking on the application setting button. Shows the application settings window.
+        /// </summary>
+        /// <param name="source">Sender</param>
+        /// <param name="e">Eventdata</param>
         private void On_EditApplicationSettings(object source, EditApplicationSettingsEvent e)
         {
             _mainUI.BeginInvoke((Action)delegate
@@ -379,12 +513,22 @@ namespace WebAnalyzer.Controller
             });
         }
 
+        /// <summary>
+        /// Callback for selecting a participant for the test. Sets the _currentParticipant variable.
+        /// </summary>
+        /// <param name="source">Sender</param>
+        /// <param name="e">Data about the participant</param>
         private void On_SelectParticipantForTest(object source, SelectParticipantForTestEvent e)
         {
             Logger.Log("Select Participant....");
             _currentParticipant = _currentExperiment.GetParticipantByUID(e.UID);
         }
 
+        /// <summary>
+        /// Callback for saving the testrun. Called from the testcontroller.
+        /// </summary>
+        /// <param name="source">Sender</param>
+        /// <param name="e">Event</param>
         private void On_SaveTestrun(object source, SaveTestrunEvent e)
         {
             if (!_testController.DataCollected)

@@ -46,6 +46,13 @@ namespace WebAnalyzer.EyeTracking
             m_EventCallback = new GetEventCallback(GetEventCallbackFunction);
         }
 
+        /// <summary>
+        /// Method for connecting to the eyetracker
+        /// </summary>
+        /// <returns>Information about the Connection Status</returns>
+        /// <remarks>
+        /// Uses the application settings for connecting.
+        /// </remarks>
         public override ExperimentObject.CONNECTION_STATUS connect()
         {
             Boolean sucess = false;
@@ -128,6 +135,10 @@ namespace WebAnalyzer.EyeTracking
             return false;
         }
 
+        /// <summary>
+        /// Used for disconnecting from the eyetracker.
+        /// </summary>
+        /// <returns>Returns the connection status</returns>
         public override ExperimentObject.CONNECTION_STATUS disconnect()
         {
             Boolean sucess = internDisconnect();
