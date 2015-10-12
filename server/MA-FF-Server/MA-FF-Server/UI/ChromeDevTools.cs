@@ -8,6 +8,9 @@ using System.Windows.Forms;
 
 namespace WebAnalyzer.UI
 {
+    /// <summary>
+    /// Class used for displaying the chromium dev tools
+    /// </summary>
     public static class ChromeDevTools
     {
         // P/Invoke constants
@@ -25,9 +28,15 @@ namespace WebAnalyzer.UI
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         private static extern bool InsertMenu(IntPtr hMenu, int uPosition, int uFlags, int uIDNewItem, string lpNewItem);
 
-        // ID for the Chrome dev tools item on the system menu
+        /// <summary>
+        /// ID for the Chrome dev tools item on the system menu
+        /// </summary>
         public static int SYSMENU_CHROME_DEV_TOOLS = 0x1;
 
+        /// <summary>
+        /// Used for adding the chromium dev tools to the right click menu.
+        /// </summary>
+        /// <param name="frm"></param>
         public static void CreateSysMenu(Form frm)
         {
             // in your form override the OnHandleCreated function and call this method e.g:

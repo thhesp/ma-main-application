@@ -19,16 +19,39 @@ using WebAnalyzer.Models.SettingsModel;
 
 namespace WebAnalyzer.UI
 {
+    /// <summary>
+    /// Window for creating/ editing a domain setting
+    /// </summary>
     public partial class EditDomainSettingForm : Form
     {
+        /// <summary>
+        /// Reference to the chromium browser
+        /// </summary>
         private ChromiumWebBrowser myBrowser = null;
+
+        /// <summary>
+        /// Reference to the domain setting which is being edited/ created
+        /// </summary>
         private DomainSettings _setting = null;
+
+        /// <summary>
+        /// Flag if it is being created
+        /// </summary>
         private Boolean _create = false;
 
-
+        /// <summary>
+        /// Reference to the domain control interaction object
+        /// </summary>
         private DomainSettingControl control = null;
 
+        /// <summary>
+        /// Eventhandler for creating a domain setting
+        /// </summary>
         public event CreateDomainSettingEventHandler CreateDomainSetting;
+
+        /// <summary>
+        /// Eventhandler for triggering a save
+        /// </summary>
         public event TriggerSaveEventHandler TriggerSave;
 
         public EditDomainSettingForm(DomainSettings setting, Boolean create)
@@ -38,6 +61,11 @@ namespace WebAnalyzer.UI
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Callback for when the form loads
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Browser_Load(object sender, EventArgs e)
         {
             //Cef.Initialize();
@@ -62,12 +90,21 @@ namespace WebAnalyzer.UI
 
         }
 
+        /// <summary>
+        /// Callback called when the form is closing.
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">event data</param>
         private void Browser_Closing(object sender, FormClosingEventArgs e)
         {
 
             //Cef.Shutdown();
         }
 
+        /// <summary>
+        /// Needed for enabling the use of the chromium dev tools
+        /// </summary>
+        /// <param name="m"></param>
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
@@ -80,6 +117,14 @@ namespace WebAnalyzer.UI
             }
         }
 
+        /// <summary>
+        /// Should enable the opening of the chromium dev tools on pressing the F12 key.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <remarks>
+        /// Currently doesn't work as intended :(
+        /// </remarks>
         private void Form_KeyDown(object sender, KeyEventArgs e)
         {
             Logger.Log("Keydown?");
@@ -90,6 +135,9 @@ namespace WebAnalyzer.UI
             }
         }
 
+        /// <summary>
+        /// Reloads the page in the browser
+        /// </summary>
         public void ReloadPage()
         {
             if (myBrowser != null)

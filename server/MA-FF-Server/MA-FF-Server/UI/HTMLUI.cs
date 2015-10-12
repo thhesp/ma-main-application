@@ -19,24 +19,65 @@ using WebAnalyzer.Models.Base;
 
 namespace WebAnalyzer.UI
 {
+    /// <summary>
+    /// The main UI window of the application
+    /// </summary>
     public partial class HTMLUI : Form
     {
+
+        /// <summary>
+        /// Reference to the chromium browser
+        /// </summary>
         private ChromiumWebBrowser myBrowser = null;
+
+        /// <summary>
+        /// Reference to the interaction object representing the experiment
+        /// </summary>
         private ExperimentObject _exp = null;
+
+        /// <summary>
+        /// Reference to the interaction object for analysis and export
+        /// </summary>
         private AnalysisExportControl _analysisExportControl = null;
 
+        /// <summary>
+        /// EventHandler for editing participants
+        /// </summary>
         public event EditParticipantEventHandler EditParticipant;
+
+        /// <summary>
+        /// Eventhandler for editing domain settings
+        /// </summary>
         public event EditDomainSettingEventHandler EditDomainSetting;
+
+        /// <summary>
+        /// Eventhandler for creating a testrun
+        /// </summary>
         public event TestrunEventHandler Testrun;
+
+        /// <summary>
+        /// Eventhandler for opening the application settings
+        /// </summary>
         public event EditApplicationSettingsEventHandler EditApplicationSetting;
 
+        /// <summary>
+        /// Eventhandler for triggering saves to the xml
+        /// </summary>
         public event TriggerSaveEventHandler TriggerSave;
 
+
+        /// <summary>
+        /// Constructor of the main UI
+        /// </summary>
         public HTMLUI()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Sets the data about the loaded experiment
+        /// </summary>
+        /// <param name="experiment">The loaded experiment</param>
         public void SetExperimentData(ExperimentModel experiment)
         {
             if (_exp != null)
@@ -50,6 +91,10 @@ namespace WebAnalyzer.UI
             }
         }
 
+        /// <summary>
+        /// Sets the connection status of the websocket server
+        /// </summary>
+        /// <param name="status">Current status of the websocket server</param>
         public void SetWSConnectionStatus(ExperimentObject.CONNECTION_STATUS status)
         {
             if (_exp != null)
@@ -58,6 +103,10 @@ namespace WebAnalyzer.UI
             }
         }
 
+        /// <summary>
+        /// Sets the connection status of the tracking component
+        /// </summary>
+        /// <param name="status">Current status of the tracking component</param>
         public void SetTrackingConnectionStatus(ExperimentObject.CONNECTION_STATUS status)
         {
             if (_exp != null)
@@ -66,6 +115,10 @@ namespace WebAnalyzer.UI
             }
         }
 
+        /// <summary>
+        /// Sets the websocket connection count
+        /// </summary>
+        /// <param name="count">Count of open websocket connections</param>
         public void SetWSConnectionCount(int count)
         {
             if (_exp != null)
@@ -74,6 +127,9 @@ namespace WebAnalyzer.UI
             }
         }
 
+        /// <summary>
+        /// Refreshes the data in the experiment object
+        /// </summary>
         public void RefreshData()
         {
 
@@ -84,6 +140,9 @@ namespace WebAnalyzer.UI
             }
         }
 
+        /// <summary>
+        /// Reloads the page in the browser
+        /// </summary>
         public void ReloadPage()
         {
             if (myBrowser != null)
@@ -93,6 +152,11 @@ namespace WebAnalyzer.UI
             }
         }
 
+
+        /// <summary>
+        /// Creates the Browser and opens the given page
+        /// </summary>
+        /// <param name="page">Page to display in the browser</param>
         private void CreateBrowser(String page){
             myBrowser = new ChromiumWebBrowser(page);
 
@@ -103,6 +167,9 @@ namespace WebAnalyzer.UI
             }
         }
 
+        /// <summary>
+        /// Creates the interaction Object "navigation".
+        /// </summary>
         private void CreateNav(){
             Navigation nav = new Navigation();
             nav.Browser = myBrowser;
@@ -114,6 +181,9 @@ namespace WebAnalyzer.UI
             myBrowser.RegisterJsObject("nav", nav);
         }
 
+        /// <summary>
+        /// Creates the interaction object for analysis and export
+        /// </summary>
         private void CreateAnalysisAndExportObj()
         {
             _analysisExportControl = new AnalysisExportControl(this);
@@ -123,6 +193,9 @@ namespace WebAnalyzer.UI
             myBrowser.RegisterJsObject("analysisExportControl", _analysisExportControl);
         }
 
+        /// <summary>
+        /// Creates the interaction object for the experiment
+        /// </summary>
         private void CreateExperimentObj()
         {
             _exp = new ExperimentObject(this);
@@ -131,6 +204,11 @@ namespace WebAnalyzer.UI
             myBrowser.RegisterJsObject("experimentObj", _exp);
         }
 
+        /// <summary>
+        /// Callback for when the form loads
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Browser_Load(object sender, EventArgs e)
         {
             Cef.Initialize();
@@ -154,11 +232,20 @@ namespace WebAnalyzer.UI
             ChromeDevTools.CreateSysMenu(this);
         }
 
+        /// <summary>
+        /// Callback called when the form is closing.
+        /// </summary>
+        /// <param name="sender">Sender</param>
+        /// <param name="e">event data</param>
         private void Browser_Closing(object sender, FormClosingEventArgs e)
         {
             Cef.Shutdown();
         }
 
+        /// <summary>
+        /// Needed for enabling the use of the chromium dev tools
+        /// </summary>
+        /// <param name="m"></param>
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
@@ -171,6 +258,14 @@ namespace WebAnalyzer.UI
             }
         }
 
+        /// <summary>
+        /// Should enable the opening of the chromium dev tools on pressing the F12 key.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <remarks>
+        /// Currently doesn't work as intended :(
+        /// </remarks>
         private void Form_KeyDown(object sender, KeyEventArgs e)
         {
             Logger.Log("Keydown?");
