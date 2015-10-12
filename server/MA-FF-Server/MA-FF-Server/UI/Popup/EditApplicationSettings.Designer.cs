@@ -30,17 +30,17 @@
         {
             this.SuspendLayout();
             // 
-            // ExperimentWizard
+            // EditApplicationSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 374);
+            this.ClientSize = new System.Drawing.Size(594, 518);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.Name = "Software Einstellungen anpassen";
+            this.Name = "EditApplicationSettings";
             this.ShowIcon = false;
-            this.Text = "Software Einstellungen anpassen";
+            this.Text = "Softwareeinstellungen anpassen";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Browser_Closing);
             this.Load += new System.EventHandler(this.Browser_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_KeyDown);
