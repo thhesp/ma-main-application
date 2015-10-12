@@ -675,17 +675,32 @@ namespace WebAnalyzer.Models.DataModel
         /// <param name="algorithm">The algorithm to use for the extraction</param>
         public void ExtractFixationsAndSaccades(Algorithm algorithm)
         {
-            _leftFixationData = algorithm.ExtractFixation(_positionData, "left");
-            _rightFixationData = algorithm.ExtractFixation(_positionData, "right");
+            try
+            {
+                _leftFixationData = algorithm.ExtractFixation(_positionData, "left");
+                _rightFixationData = algorithm.ExtractFixation(_positionData, "right");
 
-            Logger.Log("Count of left eye fixations: " + _leftFixationData.Count);
-            Logger.Log("Count of right eye fixations: " + _rightFixationData.Count);
+                Logger.Log("Count of left eye fixations: " + _leftFixationData.Count);
+                Logger.Log("Count of right eye fixations: " + _rightFixationData.Count);
+            }
+            catch (Exception e)
+            {
+                Logger.Log("Exception while extracting fixations: " + e.Message);
+            }
 
-            _leftSaccadesData = algorithm.ExtractSaccades(_positionData, "left");
-            _rightSaccadesnData = algorithm.ExtractSaccades(_positionData, "right");
+            try
+            {
+                _leftSaccadesData = algorithm.ExtractSaccades(_positionData, "left");
+                _rightSaccadesnData = algorithm.ExtractSaccades(_positionData, "right");
 
-            Logger.Log("Count of left eye saccades: " + _leftSaccadesData.Count);
-            Logger.Log("Count of right eye saccades: " + _rightSaccadesnData.Count);
+                Logger.Log("Count of left eye saccades: " + _leftSaccadesData.Count);
+                Logger.Log("Count of right eye saccades: " + _rightSaccadesnData.Count);
+            }
+            catch (Exception e)
+            {
+                Logger.Log("Exception while extracting saccades: " + e.Message);
+            }
+
         }
     }
 }
