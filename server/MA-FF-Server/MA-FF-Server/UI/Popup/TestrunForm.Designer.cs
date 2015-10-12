@@ -34,11 +34,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 374);
+            this.ClientSize = new System.Drawing.Size(522, 544);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.KeyPreview = true;
             this.MaximizeBox = false;
-            this.Name = "Testlauf verwalten";
+            this.Name = "TestrunForm";
             this.ShowIcon = false;
             this.Text = "Testlauf verwalten";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Browser_Closing);
