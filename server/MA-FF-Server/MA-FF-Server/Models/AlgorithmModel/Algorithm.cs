@@ -43,6 +43,7 @@ namespace WebAnalyzer.Models.AlgorithmModel
         /// <returns>List of Saccades</returns>
         public List<SaccadeModel> ExtractSaccades(List<GazeModel> positions, String eye)
         {
+            Console.WriteLine("Extract saccades");
             List<SaccadeModel> saccades = new List<SaccadeModel>();
 
             if (positions.Count == 0)
@@ -59,6 +60,8 @@ namespace WebAnalyzer.Models.AlgorithmModel
             {
                 int fixationCount = 0;
                 List<GazeModel> fixationGazes = fixations[fixationCount].RelatedGazes;
+
+                Boolean lastFixation = false;
 
                 for (int pos = 0; pos < positions.Count; pos++)
                 {
@@ -91,7 +94,11 @@ namespace WebAnalyzer.Models.AlgorithmModel
 
                         //jump to next fixation
                         fixationCount++;
-                        fixationGazes = fixations[fixationCount].RelatedGazes;
+
+                        if (fixationCount < fixations.Count)
+                        {
+                            fixationGazes = fixations[fixationCount].RelatedGazes;
+                        }
                     }
                     else
                     {
@@ -127,6 +134,7 @@ namespace WebAnalyzer.Models.AlgorithmModel
         /// </remarks>
         private List<SaccadeModel> ExtractRealSaccades(List<GazeModel> gazes, String eye)
         {
+            Console.WriteLine("Extract real saccades");
             List<SaccadeModel> saccades = new List<SaccadeModel>();
 
             if (gazes.Count == 0)
