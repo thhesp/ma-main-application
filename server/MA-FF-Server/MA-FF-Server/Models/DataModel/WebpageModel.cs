@@ -686,6 +686,8 @@ namespace WebAnalyzer.Models.DataModel
             catch (Exception e)
             {
                 Logger.Log("Exception while extracting fixations: " + e.Message);
+
+                throw (e);
             }
 
             try
@@ -699,6 +701,8 @@ namespace WebAnalyzer.Models.DataModel
             catch (Exception e)
             {
                 Logger.Log("Exception while extracting saccades: " + e.Message);
+
+                throw (e);
             }
 
         }

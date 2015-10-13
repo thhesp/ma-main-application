@@ -106,7 +106,7 @@ namespace WebAnalyzer.UI.InteractionObjects
         /// <remarks>Called from javascript</remarks>
         public void setExportFormat(String format)
         {
-            _exportFormat = (ExportController.EXPORT_FORMATS) Enum.Parse(typeof(ExportController.EXPORT_FORMATS), format, true);
+            _exportFormat = (ExportController.EXPORT_FORMATS)Enum.Parse(typeof(ExportController.EXPORT_FORMATS), format, true);
 
             if (_exportFormat == ExportController.EXPORT_FORMATS.CSV)
             {
@@ -272,7 +272,7 @@ namespace WebAnalyzer.UI.InteractionObjects
                 if (selectParticipant.ShowDialog() == System.Windows.Forms.DialogResult.OK)
                 {
                     //_form.ReloadPage();
-                    
+
                 }
             });
         }
@@ -350,7 +350,7 @@ namespace WebAnalyzer.UI.InteractionObjects
 
             _participant = _exp.GetParticipantByUID(e.UID);
 
-            this.EvaluteJavaScript("setParticipant('"+_participant.Identifier+"');");
+            this.EvaluteJavaScript("setParticipant('" + _participant.Identifier + "');");
         }
 
         /// <summary>
@@ -375,7 +375,7 @@ namespace WebAnalyzer.UI.InteractionObjects
                 this.EvaluteJavaScript("setTestrun('" + e.Created + "');");
             }
 
-            
+
         }
 
         /// <summary>
@@ -450,9 +450,20 @@ namespace WebAnalyzer.UI.InteractionObjects
             algorithm.MinimumDuration = minimumDuration;
             algorithm.AccetableDeviations = acceptableDeviation;
 
-            _testrun.ExtractFixationsAndSaccades(algorithm);
+            try
+            {
+                _testrun.ExtractFixationsAndSaccades(algorithm);
 
-            ExportData(algorithm);
+                ExportData(algorithm);
+            }
+            catch (Exception e)
+            {
+                Logger.Log("Exception while using the algorithm.");
+                Logger.Log("Abort analysis");
+
+                HideSaveIndicator();
+                DisplayError("Bei der Analyse der Daten ist ein Problem aufgetreten.");
+            }
         }
 
         /// <summary>
@@ -472,9 +483,20 @@ namespace WebAnalyzer.UI.InteractionObjects
 
                 algorithm.RawData = rawData;
 
-                _testrun.ExtractFixationsAndSaccades(algorithm);
+                try
+                {
+                    _testrun.ExtractFixationsAndSaccades(algorithm);
 
-                ExportData(algorithm);
+                    ExportData(algorithm);
+                }
+                catch (Exception e)
+                {
+                    Logger.Log("Exception while using the algorithm.");
+                    Logger.Log("Abort analysis");
+
+                    HideSaveIndicator();
+                    DisplayError("Bei der Analyse der Daten ist ein Problem aufgetreten.");
+                }
             }
             else
             {
@@ -485,7 +507,7 @@ namespace WebAnalyzer.UI.InteractionObjects
                 HideSaveIndicator();
             }
 
-            
+
         }
     }
 }
